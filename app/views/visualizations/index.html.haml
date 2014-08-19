@@ -1,0 +1,5 @@
+- @visualizations.each do |vis|
+  %h5= vis.title
+  %p=  vis.abstract
+  %p=  vis.owner_id
+  %p=  vis.sessionstate[0..110]
