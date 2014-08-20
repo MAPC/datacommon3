@@ -1,2 +1,8 @@
-<h1>Visualizations#show</h1>
-<p>Find me in app/views/visualizations/show.html.erb</p>
+%h5= @visualization.title
+
+%img{src: @visualization.preview_image_path}
+
+%p=  @visualization.abstract
+%p=  @visualization.owner.username
+%hr
+%pre=  @visualization.sessionstate

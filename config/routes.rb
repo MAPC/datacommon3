@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
 
-  resources :visualizations
+  resources :layers,         only: [:index, :show]
+  resources :visualizations, only: [:index, :show]
+  resources :institutions,   only: [:show]
+
+  constraints(:subdomain => /.+/) do
+    root to: 'institutions#show'
+  end
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

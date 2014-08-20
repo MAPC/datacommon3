@@ -1,5 +1,7 @@
 - @visualizations.each do |vis|
-  %h5= vis.title
-  %p=  vis.abstract
-  %p=  vis.owner_id
-  %p=  vis.sessionstate[0..110]
+  %h5=   vis.title
+  %img{src: vis.gallery_image_path}
+  %p=    vis.abstract
+  %p=    vis.owner.username
+  %pre=  vis.sessionstate[0..110]
+  %hr

@@ -7,8 +7,13 @@ gem 'rails', '4.1.5'
 gem 'pg'
 # Use ActiveResource to connect to GeoNode API
 gem 'activeresource', require: 'active_resource'
+# Use ActiveHash to mock out Institution
+gem 'active_hash'
 # Use HAML for views
-gem 'haml'
+gem 'haml-rails'
+
+# Use Foreman to manage the server and multiple processes
+gem 'foreman'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
