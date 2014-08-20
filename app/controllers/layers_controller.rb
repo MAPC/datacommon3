@@ -1,5 +1,8 @@
 class LayersController < ApplicationController
+  before_filter :load_institution
+
   def index
+    # @layers = Layer.order(@institution)
     @layers = Layer.all
   end
 

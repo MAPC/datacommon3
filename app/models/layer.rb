@@ -3,21 +3,24 @@ class Layer < ActiveResource::Base
   self.include_format_in_path = false
   self.collection_parser = LayerCollection
 
-  # class << self
-  #   def find_with_slash(id)
-  #     old_find("#{id}/")
-  #   end
+  # this behavior is replicated in the
+  # local copy of ActiveRecord
+  
+  # self.suffix = '/'
 
-  #   def find_with_redirect(id)
-  #     begin
-  #       old_find(id)
-  #     rescue ActiveResource::Redirection => err
-  #       old_find()
-  #     end
-  #   end
-
-  #   alias_method :old_find, :find
-  #   alias_method :find,     :find_with_slash
+  # def self.all_by_subdomain
+  #   # retrieve collection
+  #   layers = self.all.sort_by {|l| l.owner_id }
   # end
+
+
+  def name
+    title.titleize
+  end
+
+  def thumbnail_src
+    "http://66.181.92.20/media/thumbs/layer-#{id}-thumb.png"
+  end
+
 
 end

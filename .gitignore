@@ -17,3 +17,5 @@
 
 # Don't really want connection details out
 /config/database.yml
+
+.DS_Store

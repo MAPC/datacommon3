@@ -1,4 +1,5 @@
 - @layers.each do |layer|
-  %h4= layer.title.titleize
-  %img{src: layer.thumbnail_url}
-  %p Owner #{layer.owner.id}
+  %h4= layer.name
+  =image_tag layer.thumbnail_src
+  %p Owner #{layer.owner_id}
+  =link_to layer.name, layer

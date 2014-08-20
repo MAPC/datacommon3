@@ -1,6 +1,6 @@
 class InstitutionsController < ApplicationController
+  before_filter :load_institution
   
   def show
-    @institution = Institution.find_by_subdomain(request.subdomain) || Institution.find(1)
   end
 end

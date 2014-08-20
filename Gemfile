@@ -6,7 +6,7 @@ gem 'rails', '4.1.5'
 # Use sqlite3 as the database for Active Record
 gem 'pg'
 # Use ActiveResource to connect to GeoNode API
-gem 'activeresource', require: 'active_resource'
+gem 'activeresource', path: '/Users/mapcuser/Projects/activeresource', require: 'active_resource'
 # Use ActiveHash to mock out Institution
 gem 'active_hash'
 # Use HAML for views
