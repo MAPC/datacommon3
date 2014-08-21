@@ -9,6 +9,8 @@ gem 'pg'
 gem 'activeresource', path: '/Users/mapcuser/Projects/activeresource', require: 'active_resource'
 # Use ActiveHash to mock out Institution
 gem 'active_hash'
+# Lazily load large columns
+gem 'lazy_columns', github: 'jorgemanrubia/lazy_columns'
 # Use HAML for views
 gem 'haml-rails'
 

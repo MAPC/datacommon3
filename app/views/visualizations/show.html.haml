@@ -2,15 +2,23 @@
 
 %h5= @visualization.title
 
-%img{src: @visualization.preview_image_path}
-
 %div#vis-2646
   %p Weave hasn't loaded.
+  %img{src: @visualization.preview_image_path}
 
-%p=  @visualization.abstract
-%p=  @visualization.owner.username
-%hr
-%pre=  @visualization.sessionstate
+%p
+  %strong Abstract:
+  %span=  @visualization.abstract
+%p
+  Owner:
+  = @visualization.owner.username
+%p
+  Topics
+  %ul
+    - @visualization.issue_areas.each do |t|
+      %li= t.title
+
+
 
 :javascript
 
@@ -42,16 +50,15 @@
   var weaveReady = function(weave) { 
     MBDC.weaveAPI = true;
 
-    console.log('TODO: trigger spinner');
+    console.log("weave >>");
     console.dir(weave);
+    console.log("sessionstate >>");
+    console.dir(#{@visualization.sessionstate});
     
-    jQuery.getJSON("http://metrobostondatacommon.org/visualizations/2646/sessionstate", function (data) {
-      weave.setSessionState([], data);
-      weave.setSessionState(["WeaveProperties"], {
-        backgroundColor: "16777215",
-        showCopyright:    false
-      });
-      console.log('TODO: kill spinner')
+    weave.setSessionState([], #{@visualization.sessionstate});
+    weave.setSessionState(["WeaveProperties"], {
+      backgroundColor: "16777215",
+      showCopyright:    false
     });
   }
 
@@ -59,7 +66,9 @@
 
     // FlashVars and attributes
     MBDC.swfobject.vis["vis-2646"] = {
-      flashvars: {},
+      flashvars: {
+        allowDomain: "*"
+      },
       attributes: {
         id:   "vis-2646",
         name: "vis-2646"
@@ -74,11 +83,14 @@
     swfobject.embedSWF(
       "http://metrobostondatacommon.org/weave/weave.swf", // URL of flash script
       "vis-2646",                                         // id to populate with Flash
-      "800", "620",                                      // dimensions of SWF
+      "400", "310",                                      // dimensions of SWF
       "10.0.0",                                           // version
       "expressInstall.swf",                               // express install URL 
       MBDC.swfobject.vis["vis-2646"].flashvars,           // TODO: is this nothing? when is this used?
       MBDC.swfobject.params,                              // general Flash params (settings)
-      MBDC.swfobject.vis["vis-2646"].attributes           // TODO: Not sure these are used.
+      MBDC.swfobject.vis["vis-2646"].attributes,          // TODO: Not sure these are used.
+      function () {
+        console.log('swfobject.embedSWF finished')
+      }
     );
   });

@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/jorgemanrubia/lazy_columns.git
+  revision: e8264199e0bc53572ec389de61cc530f5bc1f3a1
+  specs:
+    lazy_columns (0.5.6)
+      rails (>= 3.2)
+
 PATH
   remote: /Users/mapcuser/Projects/activeresource
   specs:
@@ -145,6 +152,7 @@ DEPENDENCIES
   haml-rails
   jbuilder (~> 2.0)
   jquery-rails
+  lazy_columns!
   pg
   rails (= 4.1.5)
   sass-rails (~> 4.0.3)
