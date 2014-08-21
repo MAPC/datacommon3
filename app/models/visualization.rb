@@ -4,6 +4,10 @@ class Visualization < ActiveRecord::Base
 
   belongs_to :user, foreign_key: :owner_id
   
+  has_and_belongs_to_many :data_sources,
+    join_table: :weave_visualization_datasources,
+    association_foreign_key: :datasource_id
+
   has_and_belongs_to_many :issue_areas,
     join_table: :weave_visualization_topics,
     association_foreign_key: :topic_id
