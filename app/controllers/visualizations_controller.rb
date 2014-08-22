@@ -2,7 +2,8 @@ class VisualizationsController < ApplicationController
   before_filter :load_institution
 
   def index
-    @visualizations = Visualization.all
+    @visualizations = Visualization.all.page params[:page]
+    # @visualizations = Visualization.institution(@institution).page params[:page]
   end
 
   def show

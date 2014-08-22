@@ -1,0 +1,8 @@
+%h1 Regional Map Gallery
+%h2 Explore the maps MAPC produces to communicate the state of the region.
+
+%ul.list-group
+  = render @maps
+
+.row.center
+  = paginate @maps, window: 1, outer_window: 2

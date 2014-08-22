@@ -6,7 +6,14 @@ class IssueArea < ActiveRecord::Base
     join_table:  :weave_visualization_topics,
     foreign_key: :topic_id
 
+  default_scope { order('"order" ASC') }
+
   def sort_order
     self.send(:order)
   end
+
+  def to_s
+    title
+  end
+  
 end

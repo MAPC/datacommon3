@@ -1,2 +1,31 @@
-%h1= @institution.long_name
-%p=  "#{@institution.subdomain}.datacommon.org"
+- content_for :featured do
+  %div.featured
+    %div.container
+      %div.row
+        %div.col-md-5.featured-text
+          %h3 Downtown Lynn
+          %h4 Value in Revitalization
+          %p Lynn is a diverse and vibrant city on the North Shore with $165 million of untapped value in its downtown properties. Since the fall of 2012, MAPC has worked with Lynn to “Build on the Vision” to revitalize its downtown. MAPC engaged residents, business owners, and local government officials to define a vision of Downtown that embraces the cultural diversity of the city, attracts jobs, and provides support for local businesses.
+          %a{href: '#'} Learn more >
+
+
+
+%div.row
+  %div.col-xs-12
+    %h3 Featured Visualization
+
+%div.row
+  %div.col-md-9.col-xs-12
+    = render partial: 'visualizations/feature', locals: { vis: feature }
+  %div.col-md-3.col-xs-12
+    %h5.center Find Visualizations by Topic
+    %div.list-group
+      = render partial: 'topics/topic', collection: topics
+
+%hr
+
+%div.row
+  %div.col-xs-12
+    %h3 Recent Visualizations
+    - recent_visualizations.each do |vis|
+      = render partial: 'visualizations/preview', locals: { vis: vis }

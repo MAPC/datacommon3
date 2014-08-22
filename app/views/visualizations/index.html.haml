@@ -1,7 +1,13 @@
-- @visualizations.each do |vis|
-  %h5=   vis.title
-  %img{src: vis.gallery_image_path}
-  %p=    vis.abstract
-  %p=    vis.owner.username
-  %pre=  vis.sessionstate[0..110]
-  %hr
+%h1 Visualization Gallery
+%h2.page-header Explore maps and data visualizations created by DataCommon users.
+
+%p You are viewing All Topics and All Data Sources
+
+.row
+  = render partial: 'preview', collection: @visualizations[0..3], as: :vis
+
+.row
+  = render partial: 'preview', collection: @visualizations[4..7], as: :vis
+
+.row.center
+  = paginate @visualizations, window: 1, outer_window: 2

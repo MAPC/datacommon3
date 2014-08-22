@@ -3,22 +3,28 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.5'
-# Use sqlite3 as the database for Active Record
+# Use PostgreSQL as the database for Active Record
 gem 'pg'
 # Use ActiveResource to connect to GeoNode API
 gem 'activeresource', path: '/Users/mapcuser/Projects/activeresource', require: 'active_resource'
-# Use ActiveHash to mock out Institution
+# Use ActiveHash to mock out Institution,
+# replace later with an ActiveRecord model
 gem 'active_hash'
 # Lazily load large columns
 gem 'lazy_columns', github: 'jorgemanrubia/lazy_columns'
+# Use Kaminari for pagination
+gem 'kaminari'
 # Use HAML for views
 gem 'haml-rails'
+# Bootstrap for responsive base styles
+gem 'bootstrap-sass', '~> 3.2.0'
+# Use SCSS for stylesheets
+gem 'sass-rails', '~> 4.0.3'
+# Convenient timestamping
+gem 'stamp'
 
 # Use Foreman to manage the server and multiple processes
 gem 'foreman'
-
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views

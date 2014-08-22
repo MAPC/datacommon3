@@ -1,0 +1,40 @@
+// custom.css.scss
+
+body {
+  padding-top: 50px;
+  overflow-x:  hidden;
+}
+
+.center {
+  text-align: center;
+}
+
+.featured {
+  background: url('http://unsplash.it/1400/400?image=417') no-repeat;
+  color:      #FFFFFF;
+}
+
+.featured-text {
+  background:     rgba(0,0,0,0.5);
+  padding-top:    20px;
+  padding-bottom: 60px;
+}
+
+img.feature {
+  width:  100%;
+  height: 450px;
+}
+
+.vis-main {
+
+}
+
+.vis-sidebar {
+  padding-top: 80px;
+}
+
+.vis-abstract {
+  display:   block;
+  height:     40px;
+  min-height: 40px;
+}

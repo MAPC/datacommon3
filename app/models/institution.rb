@@ -17,4 +17,9 @@ class Institution < ActiveHash::Base
       subdomain:  "centralmass"
     }
   ]
+
+  def camel_name
+    short_name.split(' ').join('')
+  end
+  
 end

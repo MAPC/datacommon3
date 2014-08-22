@@ -4,22 +4,28 @@ class Layer < ActiveResource::Base
   self.collection_parser = LayerCollection
 
   # this behavior is replicated in the
-  # local copy of ActiveRecord
-  
+  # local copy of ActiveRecord  
   # self.suffix = '/'
 
-  # def self.all_by_subdomain
-  #   # retrieve collection
-  #   layers = self.all.sort_by {|l| l.owner_id }
-  # end
+  def owner_object
+    User.find_by(id: (owner_id || owner.id))
+  end
+
+  alias_method :_owner, :owner_object
+
+
+  def thumbnail_src
+    "http://66.181.92.20/media/thumbs/layer-#{id}-thumb.png"
+  end
 
 
   def name
     title.titleize
   end
 
-  def thumbnail_src
-    "http://66.181.92.20/media/thumbs/layer-#{id}-thumb.png"
+
+  def to_s
+    name
   end
 
 

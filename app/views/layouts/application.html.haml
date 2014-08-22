@@ -1,0 +1,22 @@
+!!! 5
+%html
+  %head
+    %title DataCommon
+    = stylesheet_link_tag    'application', 'data-turbolinks-track' => true, media: 'all'
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+  
+    = yield :featured
+    
+    %div.container
+      %div.row
+        = render 'layouts/header'
+        = render 'layouts/flash'
+
+      %div.row
+        = yield
+
+    -# outside container for full width
+    = render 'layouts/footer'
+

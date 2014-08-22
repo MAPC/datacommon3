@@ -1,0 +1,2 @@
+module StaticMapsHelper
+end

@@ -1,0 +1,9 @@
+.row
+  .col-md-3.col-xs-6
+    =link_to layer do
+      =image_tag layer.thumbnail_src, alt: layer.title
+  .col-md-9.col-xs-6
+    %h5= layer.name
+    %p
+      Uploaded by
+      = layer._owner.display_name

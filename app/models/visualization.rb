@@ -18,9 +18,26 @@ class Visualization < ActiveRecord::Base
   # the unscoped record count.
   lazy_load :sessionstate
 
+  paginates_per      8
+  max_paginates_per 16
+
   
   def self.showing # for use when showing details
     self.includes(:issue_areas)
+  end
+
+
+  def self.recent(count=4)
+    self.order('last_modified DESC').limit(count)
+  end
+
+
+  def self.random
+    Visualization.offset(rand(Visualization.count(:all))).first
+  end
+
+  def owner_display_name
+    owner.display_name
   end
 
 

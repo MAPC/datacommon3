@@ -1,5 +1,6 @@
-- @layers.each do |layer|
-  %h4= layer.name
-  =image_tag layer.thumbnail_src
-  %p Owner #{layer.owner_id}
-  =link_to layer.name, layer
+%h1 Data Catalogue
+%h2.page-header Search for data layers that fit your needs. Includes rich metadata.
+
+%p You are viewing All Topics and All Data Sources.
+
+= render @layers

@@ -1,0 +1,73 @@
+%nav.navbar.navbar-default.navbar-fixed-top{role: 'navigation'}
+  %div.container
+    %div.navbar-header
+      %button.navbar-toggle{type: "button", data: {toggle: "collapse", target: "#main-header"}}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand{href: root_path} 
+        = @institution.camel_name
+        DataCommon
+
+    %div.collapse.navbar-collapse#main-header
+      %ul.nav.navbar-nav
+        %li.dropdown
+          %a.dropdown-toggle{href: "#", data: {toggle: 'dropdown'}}
+            Explore Data
+            %b.caret
+          %ul.dropdown-menu
+            %li
+              %a{href: static_maps_path} Map Gallery
+            %li
+              %a{href: visualizations_path} Visualization Gallery
+            %li
+              %a{href: layers_path} Data Layer Catalogue
+
+        %li.dropdown
+          %a.dropdown-toggle{href: "#", data: {toggle: 'dropdown'}}
+            Community Snapshots
+            %b.caret
+          %ul.dropdown-menu
+            %li
+              %a{href: '#'} Cities & Towns
+            %li
+              %a{href: '#'} Subregions
+
+        %li.dropdown
+          %a.dropdown-toggle{href: "#", data: {toggle: 'dropdown'}}
+            Do It Yourself
+            %b.caret
+          %ul.dropdown-menu
+            %li
+              %a{href: '#'} Create a Visualization
+            %li
+              %a{href: '#'} Training Guides & Tutorials
+
+        %li.dropdown
+          %a.dropdown-toggle{href: "#", data: {toggle: 'dropdown'}}
+            Resources
+            %b.caret
+          %ul.dropdown-menu
+            %li
+              %a{href: '#'} Training Guides & Tutorials
+            %li
+              %a{href: '#'} Data Visualization & Mapping Resources
+            %li
+              %a{href: '#'} User Profiles
+
+        %li.dropdown
+          %a.dropdown-toggle{href: "#", data: {toggle: 'dropdown'}}
+            Data Day
+            %b.caret
+          %ul.dropdown-menu
+            %li
+              %a{href: '#'} Data Day 2013
+            %li
+              %a{href: '#'} Data Day 2012
+            %li
+              %a{href: '#'} Data Day 2009
+
+        = form_tag '/search', method: :post, data: { role: 'search' }, class: "navbar-form navbar-right hidden-md hidden-sm" do
+          %div.form-group
+            = text_field_tag :search, params[:search], class: "typeahead form-control", placeholder: "Search for Data"
+          = submit_tag "Search", name: nil, class: "btn btn-default"

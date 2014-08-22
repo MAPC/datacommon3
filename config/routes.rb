@@ -1,11 +1,18 @@
 Rails.application.routes.draw do
 
-  resources :layers,         only: [:index, :show]
-  resources :visualizations, only: [:index, :show]
+  concern :paginatable do
+    get '(page/:page)', :action => :index, :on => :collection, :as => ''
+  end
+
+resources :my_resources, :concerns => :paginatable
   resources :institutions,   only: [:show]
 
-  match '', to: 'institutions#show', constraints: {subdomain: /.+/}, via: [:get]
+  resources :layers,         only: [:index, :show], concerns: :paginatable
+  resources :visualizations, only: [:index, :show], concerns: :paginatable
+  resources :static_maps,    only: [:index, :show], concerns: :paginatable,
+                             path: 'gallery'
 
+  match '', to: 'institutions#show', constraints: {subdomain: /.+/}, via: [:get]
   root to: 'institutions#show'
   
   # The priority is based upon order of creation: first created -> highest priority.
