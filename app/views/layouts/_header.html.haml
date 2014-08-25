@@ -6,8 +6,7 @@
         %span.icon-bar
         %span.icon-bar
       %a.navbar-brand{href: root_path} 
-        = @institution.camel_name
-        DataCommon
+        =image_tag @institution.branding.logo_url, alt: "#{@institution} DataCommon", class: 'header-logo'
 
     %div.collapse.navbar-collapse#main-header
       %ul.nav.navbar-nav

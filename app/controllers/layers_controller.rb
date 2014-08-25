@@ -2,7 +2,7 @@ class LayersController < ApplicationController
   before_filter :load_institution
 
   def index
-    @layers = Layer.all
+    @layers = Layer.page( params[:page] || 1 )
     # @layers = Layer.institution(@institution)
   end
 

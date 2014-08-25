@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
 
+  get 'about'         => 'static_pages#about'
+  get 'data_day_2013' => 'static_pages#data_day_2013'
+  get 'data_day_2012' => 'static_pages#data_day_2012'
+  get 'data_day_2009' => 'static_pages#data_day_2009'
+  get 'resources'     => 'static_pages#resources'
+
   concern :paginatable do
     get '(page/:page)', :action => :index, :on => :collection, :as => ''
   end
 
-resources :my_resources, :concerns => :paginatable
   resources :institutions,   only: [:show]
 
   resources :layers,         only: [:index, :show], concerns: :paginatable
@@ -13,7 +18,7 @@ resources :my_resources, :concerns => :paginatable
                              path: 'gallery'
 
   match '', to: 'institutions#show', constraints: {subdomain: /.+/}, via: [:get]
-  root to: 'institutions#show'
+  root      to: 'institutions#show'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

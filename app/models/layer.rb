@@ -7,6 +7,14 @@ class Layer < ActiveResource::Base
   # local copy of ActiveRecord  
   # self.suffix = '/'
 
+  PAGINATES_PER = 10
+
+  def self.page(page_number=1)
+    limit, offset = PAGINATES_PER, (page_number * PAGINATES_PER)
+    self.all(params: {limit: limit, offset: offset})
+  end
+
+
   def owner_object
     User.find_by(id: (owner_id || owner.id))
   end

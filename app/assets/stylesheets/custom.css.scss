@@ -9,6 +9,11 @@ body {
   text-align: center;
 }
 
+img.header-logo {
+  max-width:  200px;
+  max-height:  50px;
+}
+
 .featured {
   background: url('http://unsplash.it/1400/400?image=417') no-repeat;
   color:      #FFFFFF;

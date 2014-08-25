@@ -1,7 +1,7 @@
 class Institution < ActiveHash::Base
   include ActiveHash::Associations
 
-  has_many :pages
+  has_one :branding
 
   self.data = [
     { 
@@ -19,7 +19,11 @@ class Institution < ActiveHash::Base
   ]
 
   def camel_name
-    short_name.split(' ').join('')
+    short_name.gsub(' ','') # Remove spaces
+  end
+
+  def to_s
+    camel_name
   end
   
 end
