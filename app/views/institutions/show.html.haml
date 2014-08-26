@@ -1,12 +1,11 @@
 - content_for :featured do
-  %div.featured
+  %div.featured{style: "background: url('http://unsplash.it/1400/400?random') no-repeat;"}
     %div.container
       %div.row
         %div.col-md-5.featured-text
-          %h3 Downtown Lynn
-          %h4 Value in Revitalization
-          %p Lynn is a diverse and vibrant city on the North Shore with $165 million of untapped value in its downtown properties. Since the fall of 2012, MAPC has worked with Lynn to “Build on the Vision” to revitalize its downtown. MAPC engaged residents, business owners, and local government officials to define a vision of Downtown that embraces the cultural diversity of the city, attracts jobs, and provides support for local businesses.
-          %a{href: '#'} Learn more >
+          %h3= @hero.title
+          %h4= @hero.subtitle
+          =    @hero.to_html.html_safe
 
 
 

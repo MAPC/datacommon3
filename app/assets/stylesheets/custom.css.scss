@@ -20,8 +20,13 @@ img.bottom {
 }
 
 .featured {
-  background: url('http://unsplash.it/1400/400?image=417') no-repeat;
-  color:      #FFFFFF;
+  color: #FFFFFF;
+  a a:hover a:visited {
+    color: #FFFFFF;
+  }
+  img {
+    
+  }
 }
 
 .featured-text {

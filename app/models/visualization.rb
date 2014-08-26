@@ -1,4 +1,5 @@
 class Visualization < ActiveRecord::Base
+
   self.establish_connection :datacommon
   self.table_name = 'weave_visualization'
 
@@ -22,6 +23,10 @@ class Visualization < ActiveRecord::Base
   max_paginates_per 16
 
   
+  def self.random
+    self.offset(rand(self.count(:all))).first
+  end
+
   def self.showing # for use when showing details
     self.includes(:issue_areas)
   end
@@ -31,10 +36,6 @@ class Visualization < ActiveRecord::Base
     self.order('last_modified DESC').limit(count)
   end
 
-
-  def self.random
-    Visualization.offset(rand(Visualization.count(:all))).first
-  end
 
   def owner_display_name
     owner.display_name
