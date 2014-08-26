@@ -20,6 +20,16 @@ class GeometryModel < ActiveRecord::Base
   end
 
 
+  def to_param
+    slug
+  end
+
+
+  def to_s
+    name
+  end
+
+
   private
 
 

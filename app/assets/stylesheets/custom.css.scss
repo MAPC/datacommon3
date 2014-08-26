@@ -24,9 +24,6 @@ img.bottom {
   a a:hover a:visited {
     color: #FFFFFF;
   }
-  img {
-    
-  }
 }
 
 .featured-text {
@@ -56,8 +53,20 @@ img.feature {
 
 div.static-map-preview {
   img {
-    padding: 20px 0;
+    padding:        20px 0;
     margin-right: -100px;
   }
+}
 
+.snapshot-preview {
+  margin: 20px 0px;
+}
+
+.snapshot-preview {
+  a { font-size: 1.5em; }
+}
+
+.snapshot-vis {
+  width:     100%;
+  max-width: 100%;
 }

@@ -11,10 +11,6 @@ Rails.application.routes.draw do
   resources :visualizations, only: [:index, :show], concerns: :paginatable
   resources :static_maps,    only: [:index, :show], concerns: :paginatable,
                              path: 'gallery'
-  
-  resources :page_topics, only: [:show], path: '' do
-    resources :pages, only: [:show], path: ''
-  end
 
   resources :municipalities, only: [:index, :show] do
     resources :topics, on:    :member,        path: '',
@@ -24,6 +20,10 @@ Rails.application.routes.draw do
   resources :subregions,     only: [:index, :show] do
     resources :topics, on:    :member,        path: '',
                        only: [:show], to:   'subregions#topic'
+  end
+
+  resources :page_topics, only: [:show], path: '' do
+    resources :pages, only: [:show], path: ''
   end
 
   match '', to: 'institutions#show', constraints: {subdomain: /.+/}, via: [:get]

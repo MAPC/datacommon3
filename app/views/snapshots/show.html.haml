@@ -1,0 +1,7 @@
+%h1 #{@geography}: Snapshot Overview
+
+- IssueArea.all.each do |topic|
+  .col-md-4.col-sm-6.col-xs-12.center.snapshot-preview
+    = link_to topic.title, "#{@geography.slug}/#{topic.slug}"
+    = link_to "#{@geography.slug}/#{topic.slug}" do
+      %img.snapshot-vis{src: "http://unsplash.it/400/400?random"}
