@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     get '(page/:page)', :action => :index, :on => :collection, :as => ''
   end
 
+
   resources :institutions,   only: [:show]
 
   resources :layers,         only: [:index, :show], concerns: :paginatable
@@ -13,6 +14,16 @@ Rails.application.routes.draw do
   
   resources :page_topics, only: [:show], path: '' do
     resources :pages, only: [:show], path: ''
+  end
+
+  resources :municipalities, only: [:index, :show] do
+    resources :topics, on:    :member,        path: '',
+                       only: [:show], to:   'municipalities#topic'
+  end
+
+  resources :subregions,     only: [:index, :show] do
+    resources :topics, on:    :member,        path: '',
+                       only: [:show], to:   'subregions#topic'
   end
 
   match '', to: 'institutions#show', constraints: {subdomain: /.+/}, via: [:get]
