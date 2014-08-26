@@ -15,9 +15,9 @@
     %h3 Featured Visualization
 
 %div.row
-  %div.col-md-9.col-xs-12
+  %div.col-md-7.col-md-offset-1.col-sm-12
     = render partial: 'visualizations/feature', locals: { vis: feature }
-  %div.col-md-3.col-xs-12
+  %div.col-md-3.col-md-offset-0.col-sm-8.col-sm-offset-2
     %h5.center Find Visualizations by Topic
     %div.list-group
       = render partial: 'topics/topic', collection: topics

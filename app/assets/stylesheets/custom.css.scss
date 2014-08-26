@@ -14,6 +14,11 @@ img.header-logo {
   max-height:  50px;
 }
 
+img.bottom {
+  position: relative;
+  bottom: -40px;
+}
+
 .featured {
   background: url('http://unsplash.it/1400/400?image=417') no-repeat;
   color:      #FFFFFF;

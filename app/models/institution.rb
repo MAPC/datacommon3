@@ -1,7 +1,8 @@
 class Institution < ActiveHash::Base
   include ActiveHash::Associations
 
-  has_one :branding
+  has_one  :branding
+  has_many :pages
 
   self.data = [
     { 

@@ -15,12 +15,10 @@
             Explore Data
             %b.caret
           %ul.dropdown-menu
-            %li
-              %a{href: static_maps_path} Map Gallery
-            %li
-              %a{href: visualizations_path} Visualization Gallery
-            %li
-              %a{href: layers_path} Data Layer Catalogue
+            %li= link_to 'Map Gallery',           static_maps_path
+            %li= link_to 'Visualization Gallery', visualizations_path
+            %li= link_to 'Data Layer Catalogue',  layers_path
+            %li= link_to 'Make a Visualization',  '#new_visualization_path'
 
         %li.dropdown
           %a.dropdown-toggle{href: "#", data: {toggle: 'dropdown'}}
@@ -32,41 +30,33 @@
             %li
               %a{href: '#'} Subregions
 
-        %li.dropdown
-          %a.dropdown-toggle{href: "#", data: {toggle: 'dropdown'}}
-            Do It Yourself
-            %b.caret
-          %ul.dropdown-menu
-            %li
-              %a{href: '#'} Create a Visualization
-            %li
-              %a{href: '#'} Training Guides & Tutorials
+        -# %li.dropdown
+        -#   %a.dropdown-toggle{href: "#", data: {toggle: 'dropdown'}}
+        -#     Do It Yourself
+        -#     %b.caret
+        -#   %ul.dropdown-menu
+        -#     %li
+        -#       %a{href: '#'} Create a Visualization
+        -#     %li
+        -#       %a{href: '#'} Training Guides & Tutorials
 
         %li.dropdown
           %a.dropdown-toggle{href: "#", data: {toggle: 'dropdown'}}
             Resources
             %b.caret
           %ul.dropdown-menu
-            %li
-              %a{href: '#'} Training Guides & Tutorials
-            %li
-              %a{href: '#'} Data Visualization & Mapping Resources
-            %li
-              %a{href: '#'} User Profiles
+            = render partial: 'pages/link', collection: resources_pages, as: :page
 
         %li.dropdown
           %a.dropdown-toggle{href: "#", data: {toggle: 'dropdown'}}
-            Data Day
+            Community
             %b.caret
           %ul.dropdown-menu
-            %li
-              %a{href: '#'} Data Day 2013
-            %li
-              %a{href: '#'} Data Day 2012
-            %li
-              %a{href: '#'} Data Day 2009
+            = render partial: 'pages/link', collection: community_pages, as: :page
 
-        = form_tag '/search', method: :post, data: { role: 'search' }, class: "navbar-form navbar-right hidden-md hidden-sm" do
-          %div.form-group
-            = text_field_tag :search, params[:search], class: "typeahead form-control", placeholder: "Search for Data"
-          = submit_tag "Search", name: nil, class: "btn btn-default"
+        =form_tag '/search', method: :post, data: {role: 'search'}, class: "navbar-form navbar-right" do
+          %div.input-group
+            = text_field_tag :search, params[:search], class: "typeahead form-control", placeholder: "Search for data!"
+            %span.input-group-btn
+              %button.btn.btn-success
+                %span.glyphicon.glyphicon-search

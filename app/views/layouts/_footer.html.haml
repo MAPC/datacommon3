@@ -5,60 +5,53 @@
   %div.row
     %div.container
       %div.row
-        %div.col-xs-3.links
+        %div.col-sm-3.col-sm-offset-0.col-xs-12.col-xs-offset-1.links
           %h5 About the DataCommon
           %ul
-            %li=link_to 'What is the DataCommon?', about_path
-            %li=link_to 'FAQ',                     about_path
-            %li=link_to 'Available Tools',         about_path
-            %li=link_to 'Partners',                about_path
-            %li=link_to 'Contact Us',              about_path
-            %li=link_to 'Social Media Icons',      about_path
+            = render partial: 'pages/link', collection: about_pages, as: :page
+            %li= link_to 'Social Media Icons'
 
 
-        %div.col-xs-3.links
+        %div.col-sm-3.col-sm-offset-0.col-xs-12.col-xs-offset-1.links
           %h5 Find Data
           %ul
-            %li=link_to 'Regional Maps'
-            %li=link_to 'Visualizations'
-            %li=link_to 'Data Layers'
+            %li= link_to 'Map Gallery',           static_maps_path
+            %li= link_to 'Visualization Gallery', visualizations_path
+            %li= link_to 'Data Layer Catalogue',  layers_path
+            %li= link_to 'Make a Visualization',  '#new_visualization_path'
       
 
-        %div.col-xs-3.links
+        %div.col-sm-3.col-sm-offset-0.col-xs-12.col-xs-offset-1.links
           %h5 Snapshots & Profiles
           %ul
-            %li=link_to 'Cities & Towns'
-            %li=link_to 'Subregions'
+            %li= link_to 'Cities & Towns'
+            %li= link_to 'Subregions'
 
           %h5 Do It Yourself
           %ul
-            %li=link_to 'New Visualization'
+            %li= link_to 'New Visualization'
 
 
-        %div.col-xs-3.links
+        %div.col-sm-3.col-sm-offset-0.col-xs-12.col-xs-offset-1.links
           %h5 Learning Community
           %ul
-            %li=link_to 'Data Day 2013'
-            %li=link_to 'Data Day 2012'
-            %li=link_to 'Data Day 2009'
+            = render partial: 'pages/link', collection: community_pages, as: :page
 
           %h5 Resources
           %ul
-            %li=link_to 'Training Guides & Tutorials'
-            %li=link_to 'Data Visualization & Mapping Resources'
-            %li=link_to 'User Profiles'
+            = render partial: 'pages/link', collection: resources_pages, as: :page
 
   %hr
   %div.row
-    %div.col-xs-12
-      %center
-        %p
-          =link_to do
-            %img{src: 'http://metrobostondatacommon.org/media/mbdc/img/logo-indicators.png', alt: 'The Boston Indicators Project'}
-          =link_to do
-            %img{src: 'http://www.mapc.org/sites/default/files/mapc_logo.png', alt: 'MAPC'}
-          =link_to do
-            %img{src: 'http://metrobostondatacommon.org/media/mbdc/img/logo-tbf.png', alt: 'The Boston Foundation'}
+    %div.col-sm-4.col-xs-12.center
+      = link_to do
+        %img.bottom{src: 'http://metrobostondatacommon.org/media/mbdc/img/logo-indicators.png', alt: 'The Boston Indicators Project'}
+    %div.col-sm-4.col-xs-12.center
+      = link_to do
+        %img.bottom{src: 'http://www.mapc.org/sites/default/files/mapc_logo.png', alt: 'MAPC'}
+    %div.col-sm-4.col-xs-12.center
+      = link_to do
+        %img.bottom{src: 'http://metrobostondatacommon.org/media/mbdc/img/logo-tbf.png', alt: 'The Boston Foundation'}
           
 
   %div.row

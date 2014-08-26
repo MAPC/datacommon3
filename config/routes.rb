@@ -1,11 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'about'         => 'static_pages#about'
-  get 'data_day_2013' => 'static_pages#data_day_2013'
-  get 'data_day_2012' => 'static_pages#data_day_2012'
-  get 'data_day_2009' => 'static_pages#data_day_2009'
-  get 'resources'     => 'static_pages#resources'
-
   concern :paginatable do
     get '(page/:page)', :action => :index, :on => :collection, :as => ''
   end
@@ -16,6 +10,10 @@ Rails.application.routes.draw do
   resources :visualizations, only: [:index, :show], concerns: :paginatable
   resources :static_maps,    only: [:index, :show], concerns: :paginatable,
                              path: 'gallery'
+  
+  resources :page_topics, only: [:show], path: '' do
+    resources :pages, only: [:show], path: ''
+  end
 
   match '', to: 'institutions#show', constraints: {subdomain: /.+/}, via: [:get]
   root      to: 'institutions#show'
