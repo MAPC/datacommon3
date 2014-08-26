@@ -14,5 +14,7 @@
  *= require_self
  */
 
+$grid-float-breakpoint: 994px;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
