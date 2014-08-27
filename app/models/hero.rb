@@ -4,6 +4,10 @@ class Hero < ActiveRecord::Base
 
   # belongs_to :institution
 
+
+  default_scope { where(active: true).order(:order) }
+
+
   def self.random
     self.offset(rand(self.count(:all))).first
   end
