@@ -5,9 +5,8 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      %a.navbar-brand{href: root_path} 
+      =link_to root_path, class: 'navbar-brand' do
         =image_tag @institution.branding.logo_url, alt: "#{@institution} DataCommon", class: 'header-logo'
-        -# %p.tagline= @institution.branding.tagline
 
     %div.collapse.navbar-collapse#main-header
       %ul.nav.navbar-nav
