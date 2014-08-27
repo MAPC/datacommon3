@@ -13,5 +13,17 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require jquery_ujs
+//= require chosen.jquery
 //= require turbolinks
 //= require_tree .
+
+$(document).on('ready', function () {
+
+  $('.chosen-select').chosen({
+    width:  '250px',
+    allow_single_deselect:    false,
+    disable_search_threshold: 10,
+    no_results_text:         'No results matched'
+  }); 
+
+});

@@ -11,6 +11,8 @@
 
     %div.collapse.navbar-collapse#main-header
       %ul.nav.navbar-nav
+
+
         %li.dropdown
           %a.dropdown-toggle{href: "#", data: {toggle: 'dropdown'}}
             Explore Data
@@ -21,25 +23,15 @@
             %li= link_to 'Data Layer Catalogue',  layers_path
             %li= link_to 'Make a Visualization',  '#new_visualization_path'
 
+        
         %li.dropdown
           %a.dropdown-toggle{href: "#", data: {toggle: 'dropdown'}}
             Community Snapshots
             %b.caret
           %ul.dropdown-menu
-            %li
-              %a{href: '#'} Cities & Towns
-            %li
-              %a{href: '#'} Subregions
+            %li= link_to 'Cities & Towns', municipalities_path
+            %li= link_to 'Subregions',     subregions_path
 
-        -# %li.dropdown
-        -#   %a.dropdown-toggle{href: "#", data: {toggle: 'dropdown'}}
-        -#     Do It Yourself
-        -#     %b.caret
-        -#   %ul.dropdown-menu
-        -#     %li
-        -#       %a{href: '#'} Create a Visualization
-        -#     %li
-        -#       %a{href: '#'} Training Guides & Tutorials
 
         %li.dropdown
           %a.dropdown-toggle{href: "#", data: {toggle: 'dropdown'}}
@@ -48,12 +40,14 @@
           %ul.dropdown-menu
             = render partial: 'pages/link', collection: resources_pages, as: :page
 
+
         %li.dropdown
           %a.dropdown-toggle{href: "#", data: {toggle: 'dropdown'}}
             Community
             %b.caret
           %ul.dropdown-menu
             = render partial: 'pages/link', collection: community_pages, as: :page
+
 
         =form_tag '/search', method: :post, data: {role: 'search'}, class: "navbar-form navbar-right" do
           %div.input-group

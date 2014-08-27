@@ -1,7 +1,27 @@
+- area_type_name = @geography.class.name.downcase
+
 %h1 #{@geography}: Snapshot Overview
 
+.row.different-area
+  .col-xs-12
+    =form_tag '', method: :get do
+      =select_tag :municipality_id, options_for_select(@geography.class.all.map {|g| [g.name, g.slug]}), include_blank: true, id: 'area-select', class: 'chosen-select', data: { placeholder: "Choose a different #{area_type_name}" }
+
+.row
 - IssueArea.all.each do |topic|
   .col-md-4.col-sm-6.col-xs-12.center.snapshot-preview
-    = link_to topic.title, "#{@geography.slug}/#{topic.slug}"
+    = link_to topic.title, "#{@geography.slug}/#{topic.slug}", class: 'snapshot-preview-title'
     = link_to "#{@geography.slug}/#{topic.slug}" do
       %img.snapshot-vis{src: "http://unsplash.it/400/400?random"}
+
+:javascript
+
+$(document).on('ready', function () {
+  $('#area-select').on('change', function () {
+    var url = $( this ).val(); // get selected value
+    if (url) { // require a URL
+      window.location = url; // redirect
+    }
+    return false;
+  });
+});

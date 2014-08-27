@@ -9,13 +9,14 @@
   
     = yield :featured
     
-    %div.container
-      %div.row
+    .container
+      .row
         = render 'layouts/header'
         = render 'layouts/flash'
 
-      %div.row
-        = yield
+      .row
+        .container
+          = yield
 
     -# outside container for full width
     = render 'layouts/footer'

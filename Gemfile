@@ -16,6 +16,9 @@ gem 'lazy_columns', github: 'jorgemanrubia/lazy_columns'
 gem 'kaminari'
 # Use HAML for views
 gem 'haml-rails'
+# Use Chosen for friendly dropdowns
+gem 'chosen-rails'
+gem 'compass-rails', github: 'Compass/compass-rails' # Use pre-release for Rails 4 compatibility
 # Bootstrap for responsive base styles
 gem 'bootstrap-sass', '~> 3.2.0'
 # Use SCSS for stylesheets

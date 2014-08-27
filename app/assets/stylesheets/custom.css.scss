@@ -58,8 +58,28 @@ div.static-map-preview {
   }
 }
 
+
+ul.chosen-results {
+  text-align: left;
+}
+
+.different-area {
+  display: block;
+  right: 0px;
+  padding: 20px 100px 20px 0;
+}
+
+
 .snapshot-preview {
   margin: 20px 0px;
+}
+
+.snapshot-preview-title {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  display: block;
+  float: left;
 }
 
 .snapshot-preview {
@@ -67,6 +87,6 @@ div.static-map-preview {
 }
 
 .snapshot-vis {
-  width:     100%;
-  max-width: 100%;
+  width: 100%;
+  max-width: 450px;
 }

@@ -1,4 +1,5 @@
 class SubregionsController < ApplicationController
+  before_filter :load_institution
   
   def index
     @geographies = Subregion.all.sort {|e,f| e.unitid.to_i <=> f.unitid.to_i }
@@ -11,7 +12,7 @@ class SubregionsController < ApplicationController
   end
 
   def topic
-    @geography  = Subregion.find_by(slug: params[:municipality_id])
+    @geography  = Subregion.find_by(slug: params[:subregion_id])
     @topic = IssueArea.find_by(slug: params[:id])
     render 'snapshots/topic'
   end
