@@ -16,7 +16,7 @@ img.header-logo {
 
 img.bottom {
   position: relative;
-  bottom: -40px;
+  margin: 60px 0;
 }
 
 .featured {
@@ -63,12 +63,11 @@ ul.chosen-results {
   text-align: left;
 }
 
-.different-area {
-  display: block;
-  right: 0px;
-  padding: 20px 100px 20px 0;
+#map {
+  width:        100%;
+  min-height:   200px;
+  margin:       15px 0;
 }
-
 
 .snapshot-preview {
   margin: 20px 0px;

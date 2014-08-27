@@ -4,7 +4,10 @@ class GeometryModel < ActiveRecord::Base
   self.establish_connection :datacommon
   self.table_name = 'snapshots_regionalunit'
 
-  lazy_load :geometry
+  lazy_load :geometry,
+            :short_desc,
+            :short_desc_markup_type,
+            :_short_desc_rendered
 
 
   def centroid
@@ -35,7 +38,7 @@ class GeometryModel < ActiveRecord::Base
 
   def get_query_json(q)
     result = ActiveRecord::Base.connection.execute(q)
-    result.first.to_json
+    result.first["st_asgeojson"].to_json
   end
 
 end
