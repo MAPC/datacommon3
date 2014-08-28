@@ -1,32 +1,34 @@
-- area_type_name = @geography.class.name.downcase
-
-%h1 #{@geography}: Snapshot Overview
+%h1 #{@s.geography}: Snapshot Overview
 
 .row
   .col-sm-6.col-xs-12
-    %p.area-summary= @geography.short_desc
+    %p.area-summary= @s.geography.short_desc
   .col-sm-6.col-xs-12.center
     #map
     =form_tag '', method: :get do
-      =select_tag :municipality_id, options_for_select(@geography.class.all.map {|g| [g.name, g.slug]}), include_blank: true, id: 'area-select', class: 'chosen-select', data: { placeholder: "Choose a different #{area_type_name}" }
+      =select_tag :municipality_id, options_for_select(@s.options_for_area), include_blank: true, id: 'area-select', class: 'chosen-select', data: { placeholder: "Choose a different #{@s.area_type_name}" }
 
 .row
-  - IssueArea.all.each do |topic|
+  - @s.visualizations.each do |vis|
+    -# TODO: Make this a partial
     .col-md-4.col-sm-6.col-xs-12.center.snapshot-preview
-      = link_to topic.title, "#{@geography.slug}/#{topic.slug}", class: 'snapshot-preview-title'
-      = link_to "#{@geography.slug}/#{topic.slug}" do
+      = link_to vis.title, vis.path, class: 'snapshot-preview-title'
+      = link_to vis.path do
         %img.snapshot-vis{src: "http://unsplash.it/400/400?random"}
 
 :javascript
 
 $(document).on('ready', function () {
-  
-  var map = L.map('map', {scrollWheelZoom: false}).setView([42.3580, -71.0616], 8);
-  var tls = L.tileLayer("http://tiles.mapc.org/basemap/{z}/{x}/{y}.png").addTo(map);
-  var geojson = JSON.parse(#{@geography.to_geojson});
-  console.dir(geojson);
 
-  var geojlyr = L.geoJson(geojson).addTo(map);
+  var map     = L.map('map', {scrollWheelZoom: false}).setView([42.3580, -71.0616], 8),
+      tiles   = L.tileLayer("http://tiles.mapc.org/basemap/{z}/{x}/{y}.png", {
+        attribution: 'Tiles by <a href="http://www.mapc.org/" target="_blank">Metropolitan Area Planning Council</a>.',
+        maxZoom:      17
+  }).addTo(map),
+      geojson = JSON.parse(#{@s.map_geojson}),
+      geojlyr = L.geoJson(geojson).addTo(map);
+
+
   map.fitBounds(geojlyr.getBounds());
 
   $('#area-select').on('change', function () {
