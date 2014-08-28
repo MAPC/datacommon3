@@ -16,6 +16,27 @@ class DynamicVisualization < ActiveRecord::Base
     File.open(File.expand_path file_path).read
   end
 
+
+  # Render session state for an `object` that has
+  # fields `unitid`, `name`, and `subunit_ids`.
+
+  def rendered_state(object)
+    bracketed    = /(\{{2}.*\}{2})/i
+    # Capital S is to match only non-whitespace chars
+    inside_brackets  = /\{{2}\s*(\S*)\s*\}{2}/i
+
+    captures = sessionstate.match(bracketed).captures
+    state    = sessionstate.dup
+
+    captures.each do |expression|      
+      full_method     = expression.match(inside_brackets).captures.first
+      replacer_method = full_method.partition('.').last.strip
+      state.gsub!( expression, object.send(replacer_method) )
+    end
+
+    state
+  end
+
   def sessionstate_path
     read_attribute(:sessionstate)
   end
