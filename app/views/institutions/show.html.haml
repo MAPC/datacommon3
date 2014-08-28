@@ -1,11 +1,36 @@
 - content_for :featured do
-  .featured{style: "background: url('http://unsplash.it/1400/400?random') no-repeat;"}
-    .container
-      .row
-        .col-md-5.featured-text
-          %h3= @hero.title
-          %h4= @hero.subtitle
-          %p=  @hero.to_html.html_safe
+
+  #carousel-dc.carousel.slide{data: {ride: "carousel"}}
+
+    %ol.carousel-indicators
+      %li.active{data: {target: "#carousel-dc", "slide-to" => "0"}}
+      %li{       data: {target: "#carousel-dc", "slide-to" => "1"}}
+      %li{       data: {target: "#carousel-dc", "slide-to" => "2"}}
+
+    .carousel-inner
+      .item.active
+        %img{src: 'http://unsplash.it/1400/600?image=302'}
+        .carousel-caption
+          %h3= @heros[0].title
+          %h4= @heros[0].subtitle
+          %p=  @heros[0].to_html.html_safe
+      .item
+        %img{src: 'http://unsplash.it/1400/600?image=305'}
+        .carousel-caption
+          %h3= @heros[1].title
+          %h4= @heros[1].subtitle
+          %p=  @heros[1].to_html.html_safe
+      .item
+        %img{src: 'http://unsplash.it/1400/600?image=315'}
+        .carousel-caption
+          %h3= @heros[2].title
+          %h4= @heros[2].subtitle
+          %p=  @heros[2].to_html.html_safe
+
+    %a.left.carousel-control{href: "#carousel-dc", role: "button", data: {slide: "prev"}}
+      %span.glyphicon.glyphicon-chevron-left
+    %a.right.carousel-control{href: "#carousel-dc", role: "button", data: {slide: "next"}}
+      %span.glyphicon.glyphicon-chevron-right
 
 
 

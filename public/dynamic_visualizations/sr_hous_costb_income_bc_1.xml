@@ -1,0 +1,1764 @@
+<Weave encoding="dynamic">
+  <WeaveProperties name="WeaveProperties">
+    <axisTitleTextFormat>
+      <bold>false</bold>
+      <color>0</color>
+      <font>Sophia Nubian</font>
+      <italic>false</italic>
+      <size>12</size>
+      <underline>false</underline>
+    </axisTitleTextFormat>
+    <backgroundColor>16777215</backgroundColor>
+    <collabServerIP>demo.oicweave.org</collabServerIP>
+    <collabServerName>ivpr-vm</collabServerName>
+    <collabServerPort>5222</collabServerPort>
+    <collabServerRoom/>
+    <collabSpectating>false</collabSpectating>
+    <cssStyleSheetName>weaveStyle.css</cssStyleSheetName>
+    <dashboardMode>true</dashboardMode>
+    <dashedSelectionBox>5,5</dashedSelectionBox>
+    <dataInfoURL/>
+    <debugScreenBounds>false</debugScreenBounds>
+    <enableAboutMenu>true</enableAboutMenu>
+    <enableAnnotation>true</enableAnnotation>
+    <enableAnnuliCircles>false</enableAnnuliCircles>
+    <enableAxisToolTips>true</enableAxisToolTips>
+    <enableBitmapFilters>true</enableBitmapFilters>
+    <enableBrowseData>false</enableBrowseData>
+    <enableCascadeAllWindows>true</enableCascadeAllWindows>
+    <enableClearCurrentSelection>true</enableClearCurrentSelection>
+    <enableCloseAllWindows>true</enableCloseAllWindows>
+    <enableCollaborationBar>false</enableCollaborationBar>
+    <enableCreateSubsets>true</enableCreateSubsets>
+    <enableDataMenu>true</enableDataMenu>
+    <enableDrawCircle>true</enableDrawCircle>
+    <enableDynamicTools>true</enableDynamicTools>
+    <enableExportApplicationScreenshot>true</enableExportApplicationScreenshot>
+    <enableExportCSV>true</enableExportCSV>
+    <enableExportToolImage>true</enableExportToolImage>
+    <enableFullScreen>false</enableFullScreen>
+    <enableGeometryProbing>true</enableGeometryProbing>
+    <enableLoadMyData>false</enableLoadMyData>
+    <enableManageDataSources>true</enableManageDataSources>
+    <enableManageSavedSelections>true</enableManageSavedSelections>
+    <enableManageSavedSubsets>true</enableManageSavedSubsets>
+    <enableMarker>true</enableMarker>
+    <enableMenuBar>false</enableMenuBar>
+    <enableMinimizeAllWindows>true</enableMinimizeAllWindows>
+    <enableMouseWheel>true</enableMouseWheel>
+    <enablePanelCoordsPercentageMode>true</enablePanelCoordsPercentageMode>
+    <enablePenTool>true</enablePenTool>
+    <enableProbeLines>true</enableProbeLines>
+    <enableProbeToolTip>true</enableProbeToolTip>
+    <enableRefreshHierarchies>true</enableRefreshHierarchies>
+    <enableRemoveSubsets>true</enableRemoveSubsets>
+    <enableRestoreAllMinimizedWindows>true</enableRestoreAllMinimizedWindows>
+    <enableRightClick>true</enableRightClick>
+    <enableSaveCurrentSelection>true</enableSaveCurrentSelection>
+    <enableSaveCurrentSubset>true</enableSaveCurrentSubset>
+    <enableSearchForRecord>true</enableSearchForRecord>
+    <enableSelectionSelectorBox>true</enableSelectionSelectorBox>
+    <enableSelectionsMenu>true</enableSelectionsMenu>
+    <enableSessionMenu>true</enableSessionMenu>
+    <enableShowAllRecords>true</enableShowAllRecords>
+    <enableSubsetControls>true</enableSubsetControls>
+    <enableSubsetSelectionBox>true</enableSubsetSelectionBox>
+    <enableSubsetsMenu>true</enableSubsetsMenu>
+    <enableTileAllWindows>true</enableTileAllWindows>
+    <enableToolAttributeEditing>true</enableToolAttributeEditing>
+    <enableToolControls>false</enableToolControls>
+    <enableToolProbe>true</enableToolProbe>
+    <enableToolSelection>true</enableToolSelection>
+    <enableUserPreferences>true</enableUserPreferences>
+    <enableWeaveAnalystMode>false</enableWeaveAnalystMode>
+    <enableWindowMenu>true</enableWindowMenu>
+    <eventListeners encoding="dynamic"/>
+    <geometryMetadataRequestMode>xyz</geometryMetadataRequestMode>
+    <geometryMinimumScreenArea>1</geometryMinimumScreenArea>
+    <macroLibraries>weave.api::WeaveAPI</macroLibraries>
+    <macros encoding="dynamic"/>
+    <maxComputationTimePerFrame>100</maxComputationTimePerFrame>
+    <maxTooltipRecordsShown>1</maxTooltipRecordsShown>
+    <pageTitle>Open Indicators Weave</pageTitle>
+    <panelTitleTextFormat>
+      <bold>false</bold>
+      <color>16777215</color>
+      <font>Verdana</font>
+      <italic>false</italic>
+      <size>10</size>
+      <underline>false</underline>
+    </panelTitleTextFormat>
+    <pdbServiceURL>/WeavePDBService/PDBService</pdbServiceURL>
+    <probeBufferSize>10</probeBufferSize>
+    <probeInnerGlow>
+      <alpha>1</alpha>
+      <blurX>5</blurX>
+      <blurY>5</blurY>
+      <color>16777215</color>
+      <strength>10</strength>
+    </probeInnerGlow>
+    <probeLineFormatter>str = replace(lpad(string, 8, "	"), "	", "  ");a= title.split(' ').splice(7).join(' ');str + "% (" + a + " Income and Cost Burdened)";</probeLineFormatter>
+    <probeOuterGlow>
+      <alpha>1</alpha>
+      <blurX>3</blurX>
+      <blurY>3</blurY>
+      <color>0</color>
+      <strength>3</strength>
+    </probeOuterGlow>
+    <probeToolTipBackgroundAlpha>1</probeToolTipBackgroundAlpha>
+    <probeToolTipBackgroundColor>NaN</probeToolTipBackgroundColor>
+    <probeToolTipFontColor>0</probeToolTipFontColor>
+    <probeToolTipMaxWidth>500</probeToolTipMaxWidth>
+    <recordsTooltipLocation>Lower left</recordsTooltipLocation>
+    <rServiceURL>/WeaveServices/RService</rServiceURL>
+    <searchServiceURLs>Wikipedia|http://en.wikipedia.org/wiki/Special:Search?search=
+Google|http://www.google.com/search?q=
+Google Images|http://images.google.com/images?q=
+Google Maps|http://maps.google.com/maps?t=h&amp;q=</searchServiceURLs>
+    <SecondaryKeyNumColumn_useGlobalMinMaxValues>true</SecondaryKeyNumColumn_useGlobalMinMaxValues>
+    <selectionAlphaAmount>1</selectionAlphaAmount>
+    <selectionBlurringAmount>4</selectionBlurringAmount>
+    <selectionDropShadow>
+      <alpha>0.5</alpha>
+      <angle>45</angle>
+      <blurX>4</blurX>
+      <blurY>4</blurY>
+      <color>0</color>
+      <distance>2</distance>
+      <strength>1</strength>
+    </selectionDropShadow>
+    <selectionMode>rectangle</selectionMode>
+    <showAddAllButton>true</showAddAllButton>
+    <showCollaborationEditor>false</showCollaborationEditor>
+    <showCollaborationMenuItem>true</showCollaborationMenuItem>
+    <showColorController>true</showColorController>
+    <showCopyright>false</showCopyright>
+    <showEmptyProbeRecordIdentifiers>true</showEmptyProbeRecordIdentifiers>
+    <showEquationEditor>true</showEquationEditor>
+    <showErrors>true</showErrors>
+    <showKeyTypeInColumnTitle>false</showKeyTypeInColumnTitle>
+    <showProbeToolTipEditor>true</showProbeToolTipEditor>
+    <showProbeWindow>true</showProbeWindow>
+    <showSelectedRecordsText>true</showSelectedRecordsText>
+    <showSessionHistoryControls>false</showSessionHistoryControls>
+    <showVisToolCloseDialog>false</showVisToolCloseDialog>
+    <startupJavaScript/>
+    <toolInteractions>
+      <defaultDragMode/>
+      <pan>alt,drag</pan>
+      <probe>move</probe>
+      <select>drag</select>
+      <selectAdd>ctrl,drag</selectAdd>
+      <selectAll>ctrl,dclick</selectAll>
+      <selectRemove>ctrl,shift,drag</selectRemove>
+      <zoom>shift,drag
+wheel</zoom>
+      <zoomIn>dclick</zoomIn>
+      <zoomOut>shift,dclick</zoomOut>
+      <zoomToExtent>ctrl,alt,shift,dclick</zoomToExtent>
+    </toolInteractions>
+    <toolToggles encoding="dynamic">
+      <LinkableBoolean name="CytoscapeWebTool">false</LinkableBoolean>
+      <LinkableBoolean name="CustomGraphicsTool">false</LinkableBoolean>
+      <LinkableBoolean name="DataFilter">false</LinkableBoolean>
+      <LinkableBoolean name="TransposedTableTool">true</LinkableBoolean>
+      <LinkableBoolean name="RamachandranPlotTool">false</LinkableBoolean>
+      <LinkableBoolean name="AttributeMenuTool">true</LinkableBoolean>
+      <LinkableBoolean name="CompoundBarChartTool">true</LinkableBoolean>
+      <LinkableBoolean name="ColormapHistogramTool">true</LinkableBoolean>
+      <LinkableBoolean name="ColorBinLegendTool">true</LinkableBoolean>
+      <LinkableBoolean name="CompoundRadVizTool">false</LinkableBoolean>
+      <LinkableBoolean name="CustomTool">false</LinkableBoolean>
+      <LinkableBoolean name="DataStatisticsTool">false</LinkableBoolean>
+      <LinkableBoolean name="DataTableTool">true</LinkableBoolean>
+      <LinkableBoolean name="DimensionSliderTool">false</LinkableBoolean>
+      <LinkableBoolean name="GaugeTool">false</LinkableBoolean>
+      <LinkableBoolean name="HistogramTool">true</LinkableBoolean>
+      <LinkableBoolean name="Histogram2DTool">false</LinkableBoolean>
+      <LinkableBoolean name="LineChartTool">true</LinkableBoolean>
+      <LinkableBoolean name="MapTool">true</LinkableBoolean>
+      <LinkableBoolean name="PieChartTool">false</LinkableBoolean>
+      <LinkableBoolean name="PieChartHistogramTool">false</LinkableBoolean>
+      <LinkableBoolean name="RTextEditor">true</LinkableBoolean>
+      <LinkableBoolean name="RadVizTool">false</LinkableBoolean>
+      <LinkableBoolean name="ScatterPlotTool">true</LinkableBoolean>
+      <LinkableBoolean name="SchafersMissingDataTool">false</LinkableBoolean>
+      <LinkableBoolean name="ThermometerTool">false</LinkableBoolean>
+      <LinkableBoolean name="TimeSliderTool">false</LinkableBoolean>
+      <LinkableBoolean name="GraphTool">false</LinkableBoolean>
+    </toolToggles>
+    <version>Nightly Build (Wed Jan 29 04:00:03 EST 2014)</version>
+    <visTextFormat>
+      <bold>false</bold>
+      <color>0</color>
+      <font>Sophia Nubian</font>
+      <italic>false</italic>
+      <size>12</size>
+      <underline>false</underline>
+    </visTextFormat>
+    <visTitleTextFormat>
+      <bold>false</bold>
+      <color>0</color>
+      <font>Sophia Nubian</font>
+      <italic>false</italic>
+      <size>12</size>
+      <underline>false</underline>
+    </visTitleTextFormat>
+    <windowSnapGridSize>1%</windowSnapGridSize>
+    <workspaceHeight>450</workspaceHeight>
+    <workspaceMultiplier>1</workspaceMultiplier>
+    <workspaceWidth>880</workspaceWidth>
+  </WeaveProperties>
+  <ColorColumn name="defaultColorColumn">
+    <internalDynamicColumn encoding="dynamic">
+      <GlobalObjectReference name="defaultColorBinColumn"/>
+    </internalDynamicColumn>
+    <ramp>0xffcccc,0xff0000,0x000000</ramp>
+    <recordColors/>
+  </ColorColumn>
+  <BinnedColumn name="defaultColorBinColumn">
+    <binningDefinition encoding="dynamic">
+      <CustomSplitBinningDefinition>
+        <overrideBinNames>&lt; 25%,25 &lt; 35%,35 &lt; 45%,45 &lt; 55%,55+%</overrideBinNames>
+        <splitValues>0,25,35,45,55,100</splitValues>
+      </CustomSplitBinningDefinition>
+    </binningDefinition>
+    <internalDynamicColumn encoding="dynamic">
+      <GlobalObjectReference name="defaultColorDataColumn"/>
+    </internalDynamicColumn>
+  </BinnedColumn>
+  <FilteredColumn name="defaultColorDataColumn">
+    <filter encoding="dynamic">
+      <GlobalObjectReference name="defaultSubsetKeyFilter"/>
+    </filter>
+    <internalDynamicColumn encoding="dynamic">
+      <ReferencedColumn>
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Data Tables" name="Data Tables">
+                  <category weaveEntityId="23416" title="Housing Cost Burden by Income, 5yr Avg 2008-12 (Municipal)">
+                    <attribute dataType="number" title="% Cost Burdened Occupied housing units making less than $35,000" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23441"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+    </internalDynamicColumn>
+  </FilteredColumn>
+  <KeyFilter name="defaultSubsetKeyFilter">
+    <excluded/>
+    <filters encoding="dynamic"/>
+    <included encoding="csv">MUNI_ID,{{ regionalunit.subunit_ids }},{{ regionalunit.unitid }},352</included>
+    <includeMissingKeys>false</includeMissingKeys>
+    <includeMissingKeyTypes>true</includeMissingKeyTypes>
+  </KeyFilter>
+  <KeySet name="defaultSelectionKeySet" encoding="dynamic"/>
+  <KeySet name="defaultProbeKeySet" encoding="dynamic"/>
+  <KeySet name="alwaysHighlightKeySet"/>
+  <LinkableHashMap name="savedSelections" encoding="dynamic"/>
+  <LinkableHashMap name="savedSubsets" encoding="dynamic">
+    <KeyFilter name="Inner Core">
+      <excluded/>
+      <filters encoding="dynamic"/>
+      <included encoding="csv">MUNI_ID,10,26,35,46,49,57,93,163,165,176,178,199,207,243,248,262,274,308,314,346,189,352,355</included>
+      <includeMissingKeys>false</includeMissingKeys>
+      <includeMissingKeyTypes>true</includeMissingKeyTypes>
+    </KeyFilter>
+    <KeyFilter name="MAGIC">
+      <excluded/>
+      <filters encoding="dynamic"/>
+      <included encoding="csv">MUNI_ID,2,23,34,37,51,67,141,155,157,158,174,286,288,352,356</included>
+      <includeMissingKeys>false</includeMissingKeys>
+      <includeMissingKeyTypes>true</includeMissingKeyTypes>
+    </KeyFilter>
+    <KeyFilter name="MetroWest">
+      <excluded/>
+      <filters encoding="dynamic"/>
+      <included encoding="csv">MUNI_ID,14,100,136,170,198,277,315,317,333,352,357</included>
+      <includeMissingKeys>false</includeMissingKeys>
+      <includeMissingKeyTypes>true</includeMissingKeyTypes>
+    </KeyFilter>
+    <KeyFilter name="North Suburban">
+      <excluded/>
+      <filters encoding="dynamic"/>
+      <included encoding="csv">MUNI_ID,48,164,213,246,284,305,342,344,347,352,358</included>
+      <includeMissingKeys>false</includeMissingKeys>
+      <includeMissingKeyTypes>true</includeMissingKeyTypes>
+    </KeyFilter>
+    <KeyFilter name="North Shore">
+      <excluded/>
+      <filters encoding="dynamic"/>
+      <included encoding="csv">MUNI_ID,30,71,92,107,119,144,166,168,184,196,229,252,258,291,298,320,352,359</included>
+      <includeMissingKeys>false</includeMissingKeys>
+      <includeMissingKeyTypes>true</includeMissingKeyTypes>
+    </KeyFilter>
+    <KeyFilter name="South Shore">
+      <excluded/>
+      <filters encoding="dynamic"/>
+      <included encoding="csv">MUNI_ID,40,65,82,122,131,133,142,171,219,231,251,264,336,352,360</included>
+      <includeMissingKeys>false</includeMissingKeys>
+      <includeMissingKeyTypes>true</includeMissingKeyTypes>
+    </KeyFilter>
+    <KeyFilter name="South West">
+      <excluded/>
+      <filters encoding="dynamic"/>
+      <included encoding="csv">MUNI_ID,25,78,101,139,177,185,187,208,269,350,352,361</included>
+      <includeMissingKeys>false</includeMissingKeys>
+      <includeMissingKeyTypes>true</includeMissingKeyTypes>
+    </KeyFilter>
+    <KeyFilter name="Three Rivers">
+      <excluded/>
+      <filters encoding="dynamic"/>
+      <included encoding="csv">MUNI_ID,50,73,78,99,175,189,199,220,244,266,285,307,335,352,362</included>
+      <includeMissingKeys>false</includeMissingKeys>
+      <includeMissingKeyTypes>true</includeMissingKeyTypes>
+    </KeyFilter>
+  </LinkableHashMap>
+  <WeaveDataSource name="MetroBoston DataCommon">
+    <attributeHierarchy encoding="xml">
+      <hierarchy>
+        <category title="Data Tables" name="Data Tables">
+          <category source="MassGIS" title="1Km Grid" weaveEntityId="77" subject="Grid"/>
+          <category title="1Km Grid Allocation" weaveEntityId="4605" subject="Grid"/>
+          <category weaveEntityId="79" title="1Km Grid for Eastern MA"/>
+          <category weaveEntityId="81" title="1Km Grid for MetroFuture Modelling Region"/>
+          <category source="Commonwealth Housing Tast Force" title="40R Smart Growth Zoning Dsitricts &amp; Units Approved" description="Commonwealth Housing Tast Force quarterly update" weaveEntityId="10971" subject="Housing"/>
+          <category source="MDPH" title="Adult Smokers, 2011 (Municipal)" weaveEntityId="15555" subject="Public Health"/>
+          <category source="MDPH" title="Adults Eating Fruits and Vegetables, 2011 (Municipal)" weaveEntityId="15569" subject="Public Health"/>
+          <category source="MDPH" title="Adults Lacking Daily Exercise, 2011 (Municipal)" weaveEntityId="15549" subject="Public Health"/>
+          <category source="US EPA" title="Air Pollution, 2003-10 (Boston MSA)" weaveEntityId="4055" subject="Environment"/>
+          <category source="MDPH" title="All Cancer Death Rate (Municipal)" weaveEntityId="15758" subject="Public Health"/>
+          <category description="Mass RMV, accessed via Boston.com" title="Alternative Fuels Vehicle Registrations, 2011 (Municipal)" weaveEntityId="10291" subject="Transportation"/>
+          <category title="Arts Agency Appropriations by Fiscal Year (US States)" weaveEntityId="10900" subject="Arts and Culture"/>
+          <category source="NEFA, 2007" title="Arts and Culture Points of Interest" weaveEntityId="5" subject="Arts and Culture"/>
+          <category description="Americans for the Arts, Dunn &amp; Bradstreet data" title="Arts Related Businesses, 2012 (County)" weaveEntityId="9908" subject="Arts and Culture"/>
+          <category description="Americans for the Arts, Dunn &amp; Bradstreet data" title="Arts Related Employment, 2012 (County)" weaveEntityId="9454" subject="Arts and Culture"/>
+          <category source="DESE, 2008-11" title="Arts Teachers (multi-year)" weaveEntityId="10505" subject="Education"/>
+          <category source="MADPH, 2012" title="Asthma Related Hospitalizations, 2007-09 (Municipal)" weaveEntityId="996" subject="Public Health"/>
+          <category weaveEntityId="23893" title="Average Weekly Wages by Sector and Year (Municipal)"/>
+          <category weaveEntityId="23912" title="Average Weekly Wages by Sector by Year (Municipal)"/>
+          <category source="MA EOLWD ES-202, 2011" title="Average Weekly Wages by Sector, by Municipality 2001-2010 (Municipal)" weaveEntityId="11379" subject="Economy"/>
+          <category source="MA EOLWD ES-202, 2011" title="Average Weekly Wages by Sector, by Year 2001-2010 (Municipal)" weaveEntityId="6853" subject="Economy"/>
+          <category weaveEntityId="20132" title="Bicycle Commuting in major cities"/>
+          <category source="MAPC, 2011" title="Bike and Pedestrian Facilities" weaveEntityId="7" subject="Environment"/>
+          <category source="MADPH, 2012" title="Births to Moms Age 15-44, 2007-09 (Municipal)" weaveEntityId="5498" subject="Public Health"/>
+          <category source="MDPH" title="Births, 2000-2009 (Municipal)" description="2000-2009" weaveEntityId="6879" subject="Public Health"/>
+          <category source="MDPH" title="Births, Adequate Care Rate (Municipal)" weaveEntityId="11712" subject="Public Health"/>
+          <category source="MDPH" title="Births, Low Birth Weight (Municipal)" weaveEntityId="6684" subject="Public Health"/>
+          <category source="MDPH" title="Births, No 1st Trimester Care (Municipal)" weaveEntityId="6800" subject="Public Health"/>
+          <category source="MDPH" title="Births, Recieving Public Care (Municipal)" weaveEntityId="9047" subject="Public Health"/>
+          <category source="MDPH" title="Births, Teen Rate (Municipal)" weaveEntityId="12427" subject="Public Health"/>
+          <category description="Suffolk Registry of Deeds and The Warren Group" title="Boston Annual Foreclosure Deeds (Municipal)" weaveEntityId="8096" subject="Boston"/>
+          <category description="Boston Cares" title="Boston Cares Annual Volunteer Hours, by Year" weaveEntityId="4037" subject="Civic Vitality"/>
+          <category description="Boston Cares" title="Boston Cares Annual Volunteer Hours, multi-years " weaveEntityId="4205" subject="Civic Vitality"/>
+          <category weaveEntityId="95" title="Boston Census Tracts"/>
+          <category title="Boston Day Care Providers, 2010 (points)" weaveEntityId="67" subject="Education"/>
+          <category source="BRA, 2010" title="Boston Neighborhoods" weaveEntityId="85" subject="Boundaries"/>
+          <category title="Boston Non-Profit Educational Assets (Points)" weaveEntityId="65" subject="Education"/>
+          <category weaveEntityId="63" title="Boston Outline"/>
+          <category source="City of Boston, 2010" title="Boston Parcels (Subset)" weaveEntityId="61"/>
+          <category weaveEntityId="93" title="Boston Planning Districts"/>
+          <category title="Boston Planning Districts with Census Tracts" weaveEntityId="97" subject="Boston"/>
+          <category weaveEntityId="121" title="Boston Police Districts"/>
+          <category weaveEntityId="91" title="Boston Precincts"/>
+          <category source="Timothy Smith Network" title="Boston Technology Centers, 2012" weaveEntityId="113" subject="Technology"/>
+          <category source="Boston Elections Dept, 2000-2011" title="Boston Voting Data, by Year (Ward and Precinct)" weaveEntityId="8633"/>
+          <category source="Boston Elections Dept, 2000-2011" title="Boston Voting Data, multi-year (Ward and Precinct)" weaveEntityId="8526" subject="Civic Vitality"/>
+          <category weaveEntityId="83" title="Boston_Neighborhoods"/>
+          <category source="DESE, 2011" title="BPS Circle of Promise Schools" weaveEntityId="9" subject="Education"/>
+          <category source="DESE, 2011" title="BPS Schools" weaveEntityId="59"/>
+          <category source="DESE, 2011" title="BPS Turnaround Schools" weaveEntityId="53"/>
+          <category source="MDPH" title="Breast Cancer Death Rate (Municipal)" weaveEntityId="15584" subject="Public Health&#xD;"/>
+          <category source="Census" title="Building Permits: Multi-Family Housing, by Year 2000-10 (Municipal)" weaveEntityId="7640" subject="Housing"/>
+          <category source="Census" title="Building Permits: Single Family Housing, by Year 2001-10 (Municipal)" weaveEntityId="3618" subject="Housing"/>
+          <category source="Census" title="Building Permits: Total Housing, by Year 2001-10 (Municipal)" weaveEntityId="3748" subject="Housing"/>
+          <category source="MDPH" title="Cardiovascular Death Rate (Municipal)" weaveEntityId="15986" subject="Public Health"/>
+          <category source="MDPH" title="Cardiovascular Hospitalizations, 2007-09 (Municipal)" weaveEntityId="6058" subject="Public Health"/>
+          <category source="Demographics" title="Census 2010 Tracts" weaveEntityId="55" subject="Demographics"/>
+          <category source="Census" title="Census Block Groups 2000" weaveEntityId="57" subject="Demographics"/>
+          <category source="Census, 2010" title="Census Block Groups, 2010" weaveEntityId="49" subject="Demographics"/>
+          <category source="Census" title="Census Mail Participation Rate, 2000 &amp; 2010 (Municipal)" description="2000 and 2010" weaveEntityId="2292" subject="Demographics"/>
+          <category source="Census" title="Census Tracts, 2000" weaveEntityId="51" subject="Demographics"/>
+          <category weaveEntityId="47" title="Child Care Providers with Less than High School"/>
+          <category source="ACS" title="Children in Poverty by Family Type, 5yr Avg 2005-09 (Census 2000 Tracts)" description="ACS 2005-09" weaveEntityId="2164" subject="Economy"/>
+          <category source="ACS" title="Children in Poverty by Family Type, 5yr Avg 2007-11 (Census Tracts)" weaveEntityId="20186" subject="Economy"/>
+          <category source="ACS" title="Children in Poverty by Family Type, 5yr Avg 2007-11 (Municipal)" weaveEntityId="20149" subject="Economy"/>
+          <category source="MDPH" title="Chronic Disease Death Rate (Municipal)" weaveEntityId="16214" subject="Public Health"/>
+          <category source="ACS" title="Citizenship Status by Age and Gender, 5yr Avg 2007-11 (Census Tracts)" weaveEntityId="20222" subject="Demographics"/>
+          <category source="ACS" title="Citizenship Status by Age and Gender, 5yr Avg 2007-11 (Municipal)" weaveEntityId="20358" subject="Demographics"/>
+          <category source="ACS" title="Citizenship Status, 5yr Avg 2005-09 (Municipal)" weaveEntityId="1779" subject="Demographics"/>
+          <category source="ACS" title="Citizenship Status, 5yr Avg 2006-10 (Municipal)" weaveEntityId="12497" subject="Demographics"/>
+          <category source="ACS" title="Citizenship Status, 5yr Avg 2007-11 (Census Tracts)" weaveEntityId="19557" subject="Demographics"/>
+          <category source="ACS" title="Citizenship Status, 5yr Avg 2007-11 (Municipal)" weaveEntityId="12956" subject="Demographics"/>
+          <category weaveEntityId="22984" title="Citizenship Status, 5yr Avg 2008-12 (Municipal)"/>
+          <category source="MassGIS" title="Colleges and Universities" weaveEntityId="45"/>
+          <category source="City of Boston, Climate Action Plan Greenhouse Gas Inventories" title="Commercial and Industrial Energy Use by Year (Boston)" weaveEntityId="10832" subject="Energy"/>
+          <category weaveEntityId="2494" title="Community Health Center Patient Populations"/>
+          <category weaveEntityId="87" title="Community Health Centers"/>
+          <category source="Community Preservation Coalition, 2011" title="Community Preservation Act Status (Municipal)" weaveEntityId="4635" subject="Civic Vitality ad Governance"/>
+          <category source="MAPC, 2011" title="Community Types (Municipal)" weaveEntityId="5044" subject="Boundaries"/>
+          <category source="MassGIS, 2010" title="Commuter Rail" weaveEntityId="71"/>
+          <category weaveEntityId="73" title="Commuter Rail Stations"/>
+          <category source="MDPH" title="Coronary Heart Disease Hospitalization Rates (Municipal)" date="2007-10" weaveEntityId="14978" subject="Public Health"/>
+          <category source="MDPH" title="Death Rate, Cancer 2006 (Municipal)" date="2006" weaveEntityId="5980" subject="Public Health"/>
+          <category source="MDPH" title="Death Rate, Cancer 2007 (Municipal)" date="2007" weaveEntityId="5265" subject="Public Health"/>
+          <category source="MDPH" title="Death Rate, Cancer 2008 (Municipal)" date="2008" weaveEntityId="5695" subject="Public Health"/>
+          <category source="MDPH" title="Death Rate, Cardiovascular (Municipal)" weaveEntityId="8074" subject="Public Health"/>
+          <category source="MDPH" title="Death Rate, Chronic Disease (Municipal)" weaveEntityId="7944" subject="Public Health"/>
+          <category source="DESE, 2008-11" title="District Arts Teachers (multi-year)" description="DESE, 2008-11" weaveEntityId="7552" subject="Education"/>
+          <category source="DESE, 2011" title="District Enrollment, 2010-11 (School Districts)" weaveEntityId="3307" subject="Education"/>
+          <category source="DESE, 2011" title="District Enrollment, by year 2006-11 (School Districts)" weaveEntityId="3101"/>
+          <category source="DESE, 2011" title="District Graduation Plans, by year 2006-11 (School Districts) (Dimension Slider only)" weaveEntityId="1903"/>
+          <category source="DESE, 2011" title="District Technology, by year 2003-10 (School Districts)" description="DESE" weaveEntityId="10484" subject="Education"/>
+          <category source="DESE, MAPC" title="Districts by Municipality, 2011" weaveEntityId="21"/>
+          <category source="National Science Foundation" title="Doctorate Degrees, 2011 (States)" weaveEntityId="9318" subject="Education"/>
+          <category weaveEntityId="19349" title="DPH: Environment (View)"/>
+          <category weaveEntityId="15399" title="DPH: Health Outcomes (View)"/>
+          <category weaveEntityId="2775" title="DPH: LCA (View)"/>
+          <category weaveEntityId="15561" title="DPH: Risk Factors (View)"/>
+          <category weaveEntityId="19340" title="DPH: Social Indicators (View)"/>
+          <category source="ACS" title="Educational Attainment by Age, 5yr Avg 2007-11 (Census Tracts)" weaveEntityId="20746" subject="Education"/>
+          <category source="ACS" title="Educational Attainment by Age, 5yr Avg 2007-11 (Municipal)" weaveEntityId="20618" subject="Education"/>
+          <category source="ACS" title="Educational Attainment by Employment Status, 5yr Avg 2007-11 (Census Tracts)" weaveEntityId="21030" subject="Education"/>
+          <category source="ACS" title="Educational Attainment by Employment Status, 5yr Avg 2007-11 (Municipal)" weaveEntityId="20958" subject="Education"/>
+          <category source="ACS" title="Educational Attainment by Foreign Born  5yr Avg 2006-10 (Census Tracts)" description="ACS" weaveEntityId="7027" subject="Education"/>
+          <category source="ACS" title="Educational Attainment by Foreign Born  5yr Avg 2006-10 (Municipal)" description="ACS" weaveEntityId="3245" subject="Education"/>
+          <category source="ACS" title="Educational Attainment by Place of Birth, 5yr Avg 2007-11 (Census Tracts)" weaveEntityId="20495" subject="Education"/>
+          <category source="ACS" title="Educational Attainment by Place of Birth, 5yr Avg 2007-11 (Municipal)" weaveEntityId="20556" subject="Education"/>
+          <category weaveEntityId="23711" title="Educational Attainment by Race, 5yr Avg 2008-12 (Municipal)"/>
+          <category source="ACS" title="Educational Attainment for Age 25 to 34, ACS 2006-10 (Census Tracts)" description="ACS 2006-10" weaveEntityId="3275" subject="Education"/>
+          <category source="ACS" title="Educational Attainment for Non-English Speaking, 5yr Avg 2006-10 (Census Tracts)" description="ACS" weaveEntityId="9961" subject="Education"/>
+          <category source="ACS" title="Educational Attainment, 5yr Avg 2006-10 (Census Tracts)" weaveEntityId="9924" subject="Education"/>
+          <category source="ACS" title="Educational Attainment, 5yr Avg 2006-10 (Municipal)" weaveEntityId="9203" subject="Education"/>
+          <category source="ACS" title="Educational Attainment, 5yr Avg 2007-11 (Block Groups)" weaveEntityId="17543" subject="Education"/>
+          <category source="ACS" title="Educational Attainment, 5Yr Avg 2007-11 (Census Tracts)" weaveEntityId="17579" subject="Education"/>
+          <category source="ACS" title="Educational Attainment, 5yr Avg 2007-11 (Municipal)" weaveEntityId="15346" subject="Education"/>
+          <category weaveEntityId="23674" title="Educational Attainment, 5yr Avg 2008-12 (Municipal)"/>
+          <category source="ACS" title="Educational Attainment, Population 25+ years, 5yr Avg 2005-09 (Census 2000 Tracts)" weaveEntityId="6680" subject="Education"/>
+          <category source="ACS" title="Educational Attainment, Population 25+ years, 5yr Avg 2005-09 (Municipal)" weaveEntityId="2757" subject="Education"/>
+          <category source="ES-202" title="Employment By Sector 2010 (Municipal) - Tranposed" weaveEntityId="1638" subject="Economy"/>
+          <category weaveEntityId="22374" title="Employment By Sector, Place of Work by Year (Municipal)"/>
+          <category weaveEntityId="23009" title="Employment By Sector, Place of Work by Year (Municipal) -Dimension Slider"/>
+          <category source="MA EOLWD ES-202" title="Employment By Sector, Place of Work by Year (Municipal)-old" weaveEntityId="21726" subject="Economy"/>
+          <category source="MA EOLWD ES-202, 2011" title="Employment By Sector, Place of Work, 2010 (Municipal)" weaveEntityId="1081" subject="Economy"/>
+          <category weaveEntityId="19308" title="Employment By Sector, Place of Work, 2011 (Municipal)"/>
+          <category source="MA EOLWD ES-202" title="Employment By Sector, Place of Work, 2012 (Municipal)" weaveEntityId="21695" subject="Economy"/>
+          <category source="MA EOLWD ES-202, 2011" title="Employment by Sector, Place of Work, by Year 2001-2010 (Municipal)" weaveEntityId="4225" subject="Economy"/>
+          <category source="ACS" title="Employment Characteristics by Age, Race and Education, 5yr avg 2006-10 (Census Tracts)" weaveEntityId="10714" subject="Economy"/>
+          <category source="ACS" title="Employment Characteristics by Age, Race and Education, 5yr avg 2006-10 (Municipal)" weaveEntityId="10518" subject="Economy"/>
+          <category source="DESE, 2011" title="Enrollment (multi-year)" weaveEntityId="1656"/>
+          <category source="MA DESE" title="Enrollment by Grade by Year (School Districts)" weaveEntityId="497" subject="Education"/>
+          <category source="MA DESE" title="Enrollment by Group by Year (School Districts)" weaveEntityId="4216" subject="Education"/>
+          <category weaveEntityId="22604" title="Enrollment by Year (School Municipal Districts)"/>
+          <category source="DESE, 2011" title="Enrollment, 2009-10 (School Municipal Districts)" weaveEntityId="869" subject="Education"/>
+          <category source="DESE, 2011" title="Enrollment, 2010-11 (School Municipal Districts)" weaveEntityId="3518"/>
+          <category source="DESE, 2011" title="Enrollment, 2010-11 (Schools)" weaveEntityId="4486"/>
+          <category weaveEntityId="22562" title="Enrollment, 2012-13 (School Municipal Districts)"/>
+          <category source="DESE, 2011" title="Enrollment, by year 2006-11 (School Municipal Districts)" weaveEntityId="3083"/>
+          <category weaveEntityId="22647" title="Enrollment, multi-year (School Municipal Districts)"/>
+          <category source="Northeastern study" title="Environmental Hazards Density (Municipal)" weaveEntityId="3920"/>
+          <category source="Census" title="Environmental Justice Populations, 2000 (Block Groups)" weaveEntityId="43"/>
+          <category source="Census 2000 BlockGroups" title="Environmental Justice Summary (Municipal)" weaveEntityId="773" subject="Environment"/>
+          <category source="Census" title="Environmental Justice Summary, 2000 (Municipal)" description="Census 2000 block groups" weaveEntityId="4020" subject="Environment"/>
+          <category source="MA EOLWD ES-202, 2011" title="Establishment by Sector, Place of Work, by Year 2001-2010 (Municipal)" weaveEntityId="5103" subject="Economy"/>
+          <category source="Northeast Climate Data" title="Extreme Heat Days with Projections (Boston)" weaveEntityId="11348" subject="Environment"/>
+          <category weaveEntityId="41" title="Fairmount Commuter Line"/>
+          <category title="Farmers Markets summary (Municipal)" weaveEntityId="1413" subject="Arts and Culture"/>
+          <category source="USDA" title="Food Deserts (Census 2000 Tracts)" weaveEntityId="10984" subject="Public Health"/>
+          <category source="MDPH" title="Food Establishments" weaveEntityId="6592" subject="Public Health"/>
+          <category weaveEntityId="21812" title="Foreclosures, 2011 (Municipal)"/>
+          <category source="ACS" title="Foreign Born, 5yr Avg 2006-10 (Census Tracts)" weaveEntityId="4179" subject="Demographics"/>
+          <category source="ACS" title="Foreign Born, 5yr Avg 2006-10 (Municipal)" weaveEntityId="2338" subject="Demographics"/>
+          <category source="MMA, Secretary of State, 2011" title="Forms of Municipal Governance (Municipal)" weaveEntityId="164"/>
+          <category source="Foundation Center" title="Foundation Stats by Year (Boston MSA)" weaveEntityId="9090" subject="Civic Vitality"/>
+          <category source="ACS" title="Geographic Mobility, 5yr Avg 2005-09 (Municipal)" weaveEntityId="3547" subject="Demographics"/>
+          <category source="ACS" title="Geographic Mobility: In Migration, 5yr Avg 2007-11 (Census Tracts)" weaveEntityId="19581" subject="Demographics"/>
+          <category source="ACS" title="Geographic Mobility: In Migration, 5yr Avg 2007-11 (Municipal)" weaveEntityId="19617" subject="Demographics"/>
+          <category source="ACS" title="Geographic Mobility: Out Migration, 5yr Avg 2007-11 (Municipal)" weaveEntityId="19654" subject="Demographics"/>
+          <category source="ACS" title="Gini Index, 5yr Avg 2006-10 (Census Tracts)" weaveEntityId="9896" subject="Economy"/>
+          <category source="ACS" title="Gini Index, 5yr Avg 2006-10 (Municipal)" weaveEntityId="416" subject="Economy"/>
+          <category source="DESE, 2011" title="Graduation Plans, by year 2006-11 (School Districts)" weaveEntityId="4642" subject="Education"/>
+          <category source="EPA" title="Green House Gas Emissions by Facility, 2010 (Points)" weaveEntityId="107" subject="Energy"/>
+          <category source="City of Boston" title="Greenhouse Gas Emissions, 2005-10 (Boston)" weaveEntityId="12518" subject="Environment"/>
+          <category source="Kaiser State Health Facts" title="Health Insurance Premiums, 2010 (States)" weaveEntityId="9830" subject="Public Health"/>
+          <category source="Kaiser State Health Facts" title="Health Spending per Capita by Year (MA)" weaveEntityId="9834" subject="Public Health"/>
+          <category source="BRFFS" title="Health Survey: Public Recreation Programs" description="2007" weaveEntityId="148" subject="Public Health"/>
+          <category title="Health: DPH Data" weaveEntityId="2509" subject="Public Health"/>
+          <category description="MAPC Analysis" title="Health: Latent Class Analysis (Municipal)" weaveEntityId="2904" subject="Public Health"/>
+          <category source="BRFFS" title="Health: Survey Data" description="2007" weaveEntityId="289" subject="Public Health"/>
+          <category source="MDPH" title="Heart Attack Hospitalization Rates (Municipal)" date="2007-10" weaveEntityId="14665" subject="Public Health"/>
+          <category source="Census Bureau special tabulations (2011)" title="High Tech Employment (States)" weaveEntityId="9255" subject="Economy"/>
+          <category source="Census Bureau special tabulations (2011)" title="High Tech Establishments (States)" weaveEntityId="9268" subject="Economy"/>
+          <category source="Case-Shiller" title="Home Price Index, 1990-2012 (CBSA)" weaveEntityId="11556" subject="Housing"/>
+          <category source="Boston Public Health Commission" title="Homeless Count by Year (Boston)" weaveEntityId="2635" subject="Housing"/>
+          <category source="MDPH" title="Homicide Rate (Municipal)" weaveEntityId="16420" subject="Public Health"/>
+          <category source="DPH" title="Hospitalizations 2007-11Avg (Municipal)" description="2007-11 Avg" weaveEntityId="7211" subject="Public Health"/>
+          <category source="DPH" title="Hospitalizations, 2009 (Municipal)" description="2009" weaveEntityId="7388" subject="Public Health"/>
+          <category source="MDPH" title="Hospitalizations, Coronary Heart Disease (Municipal)" date="2007-10" weaveEntityId="7358" subject="Public Health"/>
+          <category source="MDPH&#xD;" title="Hospitalizations, Heart Attack (Municipal)" weaveEntityId="11735" subject="Public Health"/>
+          <category source="MDPH" title="Hospitalizations, Injections (Municipal)" weaveEntityId="11985" subject="Public Health"/>
+          <category source="MDPH" title="Hospitalizations, Stroke (Municipal)" weaveEntityId="12107" subject="Public Health"/>
+          <category source="MDPH" title="Hospitalizations, Substance Abuse (Municipal)" weaveEntityId="930" subject="Public Health"/>
+          <category weaveEntityId="101" title="Hospitals"/>
+          <category source="Pinnacle Advisory Group" title="Hotel Occupancy by Year (Boston)" weaveEntityId="10118" subject="Economy"/>
+          <category title="Household Income Spent on Transportation, 2009 (Metro US)" weaveEntityId="9174" subject="Transportation"/>
+          <category weaveEntityId="22051" title="Household Tenure by Year Built, 5yr Avg 2008-12 (Municipal)"/>
+          <category source="Census" title="Household Type, 2000 &amp; 2010 (Municipal)" weaveEntityId="637" subject="Housing"/>
+          <category description="ACS 2006-10" title="Households By Ancestry, 5yr Avg 2006-10 (Census Tracts)" weaveEntityId="7895" subject="Housing"/>
+          <category description="ACS 2006-10" title="Households By Ancestry, 5yr Avg 2006-10 (Municipal)" weaveEntityId="2515" subject="Housing"/>
+          <category weaveEntityId="21980" title="Households by presence of people  65 years and over, 2010 (Municipal)"/>
+          <category weaveEntityId="21935" title="Households with Children by Household Type, 2010 (Municpal)"/>
+          <category title="Housing and Transportation Cost (Municipal)" weaveEntityId="6293" subject="Economy"/>
+          <category source="ACS" title="Housing Cost Burden by Age, 5yr Avg 2007-11 (Block Groups)" weaveEntityId="18060" subject="Housing"/>
+          <category source="ACS" title="Housing Cost Burden by Age, 5yr Avg 2007-11 (Census Tracts)" weaveEntityId="17898" subject="Housing"/>
+          <category source="ACS" title="Housing Cost Burden by Age, 5yr Avg 2007-11 (Municipal)" weaveEntityId="17735" subject="Housing"/>
+          <category weaveEntityId="23511" title="Housing Cost Burden by Age, 5yr Avg 2008-12 (Municipal)"/>
+          <category source="ACS" title="Housing Cost Burden by Income, 5yr Avg 2007-11 (Census Tracts)" weaveEntityId="18222" subject="Housing"/>
+          <category source="ACS" title="Housing Cost Burden by Income, 5yr Avg 2007-11 (Municipal)" weaveEntityId="18318" subject="Housing"/>
+          <category weaveEntityId="23416" title="Housing Cost Burden by Income, 5yr Avg 2008-12 (Municipal)">
+            <attribute dataType="number" title="Municipal ID" keyType="MUNI_ID" weaveEntityId="23418"/>
+            <attribute dataType="string" title="Municipality" keyType="MUNI_ID" weaveEntityId="23419"/>
+            <attribute dataType="string" title="Censu GeoID" keyType="MUNI_ID" weaveEntityId="23420"/>
+            <attribute dataType="string" title="ACS Year" keyType="MUNI_ID" weaveEntityId="23422"/>
+            <attribute dataType="number" title="Occupied housing units" keyType="MUNI_ID" weaveEntityId="23423"/>
+            <attribute dataType="number" title="Occupied housing units, Margin of Error" keyType="MUNI_ID" weaveEntityId="23424"/>
+            <attribute dataType="number" title="Occupied housing units (less those for which housing cost burden not computed)" keyType="MUNI_ID" weaveEntityId="23425"/>
+            <attribute dataType="number" title="Occupied housing units (less those for which housing cost burden not computed), Margin of Error" keyType="MUNI_ID" weaveEntityId="23426"/>
+            <attribute dataType="number" title="Occupied housing units making less than $35,000" keyType="MUNI_ID" weaveEntityId="23427"/>
+            <attribute dataType="number" title="Occupied housing units making less than $35,000, Margin of Error" keyType="MUNI_ID" weaveEntityId="23428"/>
+            <attribute dataType="number" title="Cost Burdened Occupied housing units making less than $35,000" keyType="MUNI_ID" weaveEntityId="23429"/>
+            <attribute dataType="number" title="Cost Burdened Occupied housing units making less than $35,000, Margin of Error" keyType="MUNI_ID" weaveEntityId="23430"/>
+            <attribute dataType="number" title="Occupied housing units making $35,000-$75,000" keyType="MUNI_ID" weaveEntityId="23431"/>
+            <attribute dataType="number" title="Occupied housing units making $35,000-$75,000, Margin of Error" keyType="MUNI_ID" weaveEntityId="23432"/>
+            <attribute dataType="number" title="Cost Burdened Occupied housing units making  $35,000-$75,000" keyType="MUNI_ID" weaveEntityId="23433"/>
+            <attribute dataType="number" title="Cost Burdened Occupied housing units making  $35,000-$75,000, Margin of Error" keyType="MUNI_ID" weaveEntityId="23434"/>
+            <attribute dataType="number" title="Occupied housing units making $75,000+" keyType="MUNI_ID" weaveEntityId="23435"/>
+            <attribute dataType="number" title="Occupied housing units making $75,000+, Margin of Error" keyType="MUNI_ID" weaveEntityId="23436"/>
+            <attribute dataType="number" title="Cost Burdened Occupied housing units making $75,000+" keyType="MUNI_ID" weaveEntityId="23437"/>
+            <attribute dataType="number" title="Cost Burdened Occupied housing units making $75,000+, Margin of Error" keyType="MUNI_ID" weaveEntityId="23438"/>
+            <attribute dataType="number" title="% Occupied housing units making less than $35,000" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23439"/>
+            <attribute dataType="number" title="% Occupied housing units making less than $35,000, Margin of Error" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23440"/>
+            <attribute dataType="number" title="% Cost Burdened Occupied housing units making less than $35,000" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23441"/>
+            <attribute dataType="number" title="% Cost Burdened Occupied housing units making less than $35,000, Margin of Error" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23442"/>
+            <attribute dataType="number" title="% Occupied housing units making $35,000-$75,000" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23443"/>
+            <attribute dataType="number" title="% Occupied housing units making $35,000-$75,000, Margin of Error" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23444"/>
+            <attribute dataType="number" title="% Cost Burdened Occupied housing units making  $35,000-$75,000" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23445"/>
+            <attribute dataType="number" title="% Cost Burdened Occupied housing units making  $35,000-$75,000, Margin of Error" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23446"/>
+            <attribute dataType="number" title="% Occupied housing units making $75,000+" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23447"/>
+            <attribute dataType="number" title="% Occupied housing units making $75,000+, Margin of Error" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23448"/>
+            <attribute dataType="number" title="% Cost Burdened Occupied housing units making  $75,000+" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23449"/>
+            <attribute dataType="number" title="% Cost Burdened Occupied housing units making  $75,000+, Margin of Error" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23450"/>
+            <attribute dataType="number" title="Owner-Occupied housing units" keyType="MUNI_ID" weaveEntityId="23451"/>
+            <attribute dataType="number" title="Owner-Occupied housing units, Margin of Error" keyType="MUNI_ID" weaveEntityId="23452"/>
+            <attribute dataType="number" title="Owner-Occupied housing units (less those for which housing cost burden not computed)" keyType="MUNI_ID" weaveEntityId="23453"/>
+            <attribute dataType="number" title="Owner-Occupied housing units (less those for which housing cost burden not computed), Margin of Error" keyType="MUNI_ID" weaveEntityId="23454"/>
+            <attribute dataType="number" title="Owner-Occupied housing units making less than $35,000" keyType="MUNI_ID" weaveEntityId="23455"/>
+            <attribute dataType="number" title="Owner-Occupied housing units making less than $35,000, Margin of Error" keyType="MUNI_ID" weaveEntityId="23456"/>
+            <attribute dataType="number" title="Cost Burdened Owner-Occupied housing units making less than $35,000" keyType="MUNI_ID" weaveEntityId="23457"/>
+            <attribute dataType="number" title="Cost Burdened Owner-Occupied housing units making less than $35,000, Margin of Error" keyType="MUNI_ID" weaveEntityId="23458"/>
+            <attribute dataType="number" title="Owner-Occupied housing units making $35,000-$75,000" keyType="MUNI_ID" weaveEntityId="23459"/>
+            <attribute dataType="number" title="Owner-Occupied housing units making $35,000-$75,000, Margin of Error" keyType="MUNI_ID" weaveEntityId="23460"/>
+            <attribute dataType="number" title="Cost Burdened Owner-Occupied housing units making  $35,000-$75,000" keyType="MUNI_ID" weaveEntityId="23461"/>
+            <attribute dataType="number" title="Cost Burdened Owner-Occupied housing units making  $35,000-$75,000, Margin of Error" keyType="MUNI_ID" weaveEntityId="23462"/>
+            <attribute dataType="number" title="Owner-Occupied housing units making $75,000+" keyType="MUNI_ID" weaveEntityId="23463"/>
+            <attribute dataType="number" title="Owner-Occupied housing units making $75,000+, Margin of Error" keyType="MUNI_ID" weaveEntityId="23464"/>
+            <attribute dataType="number" title="Cost Burdened Owner-Occupied housing units making  $75,000+" keyType="MUNI_ID" weaveEntityId="23465"/>
+            <attribute dataType="number" title="Cost Burdened Owner-Occupied housing units making  $75,000+, Margin of Error" keyType="MUNI_ID" weaveEntityId="23466"/>
+            <attribute dataType="number" title="% Owner-Occupied housing units" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23467"/>
+            <attribute dataType="number" title="% Owner-Occupied housing units, Margin of Error" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23468"/>
+            <attribute dataType="number" title="% Owner-Occupied housing units making less than $35,000" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23469"/>
+            <attribute dataType="number" title="% Owner-Occupied housing units making less than $35,000, Margin of Error" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23470"/>
+            <attribute dataType="number" title="% Cost Burdened Owner-Occupied housing units making less than $35,000" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23471"/>
+            <attribute dataType="number" title="% Cost Burdened Owner-Occupied housing units making less than $35,000, Margin of Error" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23472"/>
+            <attribute dataType="number" title="% Owner-Occupied housing units making $35,000-$75,000" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23473"/>
+            <attribute dataType="number" title="% Owner-Occupied housing units making $35,000-$75,000, Margin of Error" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23474"/>
+            <attribute dataType="number" title="% Cost Burdened Owner-Occupied housing units making  $35,000-$75,000" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23475"/>
+            <attribute dataType="number" title="% Cost Burdened Owner-Occupied housing units making  $35,000-$75,000, Margin of Error" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23476"/>
+            <attribute dataType="number" title="% Owner-Occupied housing units making $75,000+" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23477"/>
+            <attribute dataType="number" title="% Owner-Occupied housing units making $75,000+, Margin of Error" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23478"/>
+            <attribute dataType="number" title="% Cost Burdened Owner-Occupied housing units making  $75,000+" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23479"/>
+            <attribute dataType="number" title="% Cost Burdened Owner-Occupied housing units making  $75,000+, Margin of Error" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23480"/>
+            <attribute dataType="number" title="Renter-Occupied housing units" keyType="MUNI_ID" weaveEntityId="23481"/>
+            <attribute dataType="number" title="Renter-Occupied housing units, Margin of Error" keyType="MUNI_ID" weaveEntityId="23482"/>
+            <attribute dataType="number" title="Renter-Occupied housing units (less those for which housing cost burden not computed)" keyType="MUNI_ID" weaveEntityId="23483"/>
+            <attribute dataType="number" title="Renter-Occupied housing units (less those for which housing cost burden not computed), Margin of Error" keyType="MUNI_ID" weaveEntityId="23484"/>
+            <attribute dataType="number" title="Renter-Occupied housing units making less than $35,000" keyType="MUNI_ID" weaveEntityId="23485"/>
+            <attribute dataType="number" title="Renter-Occupied housing units making less than $35,000, Margin of Error" keyType="MUNI_ID" weaveEntityId="23486"/>
+            <attribute dataType="number" title="Cost Burdened Renter-Occupied housing units making less than $35,000" keyType="MUNI_ID" weaveEntityId="23487"/>
+            <attribute dataType="number" title="Cost Burdened Renter-Occupied housing units making less than $35,000, Margin of Error" keyType="MUNI_ID" weaveEntityId="23488"/>
+            <attribute dataType="number" title="Renter-Occupied housing units making $35,000-$75,000" keyType="MUNI_ID" weaveEntityId="23489"/>
+            <attribute dataType="number" title="Renter-Occupied housing units making $35,000-$75,000, Margin of Error" keyType="MUNI_ID" weaveEntityId="23490"/>
+            <attribute dataType="number" title="Cost Burdened Renter-Occupied housing units making  $35,000-$75,000" keyType="MUNI_ID" weaveEntityId="23491"/>
+            <attribute dataType="number" title="Cost Burdened Renter-Occupied housing units making  $35,000-$75,000, Margin of Error" keyType="MUNI_ID" weaveEntityId="23492"/>
+            <attribute dataType="number" title="Renter-Occupied housing units making $75,000+" keyType="MUNI_ID" weaveEntityId="23493"/>
+            <attribute dataType="number" title="Renter-Occupied housing units making $75,000+, Margin of Error" keyType="MUNI_ID" weaveEntityId="23494"/>
+            <attribute dataType="number" title="Cost Burdened Renter-Occupied housing units making  $75,000+" keyType="MUNI_ID" weaveEntityId="23495"/>
+            <attribute dataType="number" title="Cost Burdened Renter-Occupied housing units making  $75,000+, Margin of Error" keyType="MUNI_ID" weaveEntityId="23496"/>
+            <attribute dataType="number" title="% Renter-Occupied housing units" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23497"/>
+            <attribute dataType="number" title="% Renter-Occupied housing units, Margin of Error" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23498"/>
+            <attribute dataType="number" title="% Renter-Occupied housing units making less than $35,000" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23499"/>
+            <attribute dataType="number" title="% Renter-Occupied housing units making less than $35,000, Margin of Error" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23500"/>
+            <attribute dataType="number" title="% Cost Burdened Renter-Occupied housing units making less than $35,000" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23501"/>
+            <attribute dataType="number" title="% Cost Burdened Renter-Occupied housing units making less than $35,000, Margin of Error" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23502"/>
+            <attribute dataType="number" title="% Renter-Occupied housing units making $35,000-$75,000" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23503"/>
+            <attribute dataType="number" title="% Renter-Occupied housing units making $35,000-$75,000, Margin of Error" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23504"/>
+            <attribute dataType="number" title="% Cost Burdened Renter-Occupied housing units making  $35,000-$75,000" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23505"/>
+            <attribute dataType="number" title="% Cost Burdened Renter-Occupied housing units making  $35,000-$75,000, Margin of Error" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23506"/>
+            <attribute dataType="number" title="% Renter-Occupied housing units making $75,000+" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23507"/>
+            <attribute dataType="number" title="% Renter-Occupied housing units making $75,000+, Margin of Error" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23508"/>
+            <attribute dataType="number" title="% Cost Burdened Renter-Occupied housing units making  $75,000+" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23509"/>
+            <attribute dataType="number" title="% Cost Burdened Renter-Occupied housing units making  $75,000+, Margin of Error" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23510"/>
+          </category>
+          <category source="ACS" title="Housing Cost Burden for Owner, 5yr Avg 2005-09 (Municipal)" weaveEntityId="3576" subject="Housing"/>
+          <category source="ACS" title="Housing Cost Burden for Owners, 5yr Avg 2006-10 (Census Tracts)" weaveEntityId="11155" subject="Housing"/>
+          <category source="ACS" title="Housing Cost Burden for Owners, 5yr Avg 2007-11 (Municipal)" weaveEntityId="13965" subject="Housing"/>
+          <category source="ACS" title="Housing Cost Burden for Renters, 5yr Avg 2005-09 (Census 2000 Tracts)" weaveEntityId="4914" subject="Housing"/>
+          <category source="ACS" title="Housing Cost Burden for Renters, 5yr Avg 2005-09 (Municipal)" weaveEntityId="4882" subject="Housing"/>
+          <category source="ACS" title="Housing Cost Burden for Renters, 5yr Avg 2006-10 (Census Tracts)" weaveEntityId="552" subject="Housing"/>
+          <category source="ACS" title="Housing Cost Burden, 5yr Avg 2007-11 (Block Groups)" weaveEntityId="17675" subject="Housing"/>
+          <category source="ACS" title="Housing Cost Burden, 5yr Avg 2007-11 (Census Tracts)" weaveEntityId="17615" subject="Housing"/>
+          <category source="ACS" title="Housing Cost Burden, 5yr Avg 2007-11 (Municipal)" weaveEntityId="17369" subject="Housing"/>
+          <category weaveEntityId="23395" title="Housing Occupancy with Tenure, 2010 (Municipal)"/>
+          <category title="Housing Occupancy, 2000 &amp; 2010 (Municipal)" weaveEntityId="913" subject="Housing"/>
+          <category source="Boston DND" title="Housing Stats, 2011 (Boston Planning Districts)" weaveEntityId="9310" subject="Housing"/>
+          <category source="Census" title="Housing Summary, 2000 (Municipal)" description="Census 2000" weaveEntityId="1009" subject="Housing"/>
+          <category source="ACS" title="Housing Tenure by Heating Fuel, 5yr Avg 2007-11 (Census Tracts)" weaveEntityId="18413" subject="Housing"/>
+          <category source="ACS" title="Housing Tenure by Heating Fuel, 5yr Avg 2007-11 (Municipal)" weaveEntityId="18537" subject="Housing"/>
+          <category weaveEntityId="23041" title="Housing Tenure by Heating Fuel, 5yr Avg 2008-12 (Municipal)"/>
+          <category source="ACS" title="Housing Tenure by Race, 5yr Avg 2006-10 (Census Tracts)" weaveEntityId="12051" subject="Housing"/>
+          <category source="ACS" title="Housing Tenure by Race, 5yr Avg 2006-10 (Municipal)" weaveEntityId="11989" subject="Housing"/>
+          <category source="ACS" title="Housing Tenure by Unit Type, 5yr Avg 2007-11 (Block Groups)" weaveEntityId="18767" subject="Housing"/>
+          <category source="ACS" title="Housing Tenure by Unit Type, 5yr Avg 2007-11 (Census Tracts)" weaveEntityId="18715" subject="Housing"/>
+          <category source="ACS" title="Housing Tenure by Unit Type, 5yr Avg 2007-11 (Municipal)" weaveEntityId="18662" subject="Housing"/>
+          <category source="ACS" title="Housing Tenure by Year of Occupancy, 5yr Avg 2006-10 (Census Tracts)" description="ACS" weaveEntityId="7699" subject="Housing"/>
+          <category source="ACS" title="Housing Tenure by Year of Occupancy, 5yr Avg 2006-10 (Municipal)" description="ACS" weaveEntityId="3933" subject="Housing"/>
+          <category source="ACS" title="Housing Type, 5yr Avg 2006-10 (Municipal)" description="2006-10 ACS" weaveEntityId="15410" subject="Housing"/>
+          <category description="Commonwealth Housing Tast Force quarterly update" title="Housing: 40R Smart Growth Zoning Dsitricts &amp; Units Approved" weaveEntityId="4227" subject="Housing"/>
+          <category source="Department of Neighborhood Development" title="Housing: Abandoned Buildings by Year (Boston)" description="Department of Neighborhood Development" weaveEntityId="2581" subject="Housing"/>
+          <category source="Department of Neighborhood Development" title="Housing: Abandoned Buildings multi-year (Boston)" weaveEntityId="3494" subject="Housing"/>
+          <category source="The Warren Group, Suffolk Registry of Deeds" title="Housing: Annual Foreclosure Deeds by Year (Boston)" description="1990-2011" weaveEntityId="3610" subject="Housing"/>
+          <category source="The Warren Group, Suffolk Registry of Deeds" title="Housing: Annual Foreclosure Deeds, multi-year (Boston)" description="1990-2011" weaveEntityId="3905" subject="Housing"/>
+          <category weaveEntityId="22248" title="Impervious Surface, 2007 (Municipal)"/>
+          <category source="MDPH" title="Injection Hospitalization Rates (Municipal)" date="2007-10" weaveEntityId="14470" subject="Public Health"/>
+          <category weaveEntityId="111" title="Intel Computer Clubhouse, 2012"/>
+          <category source="MA EOLWD ES-202, 2011" title="Labor Force and Unemployment, Place of Residence, by Year 2006-10 (Municipal)" weaveEntityId="528"/>
+          <category source="MA EOLWD ES-202, 2012" title="Labor Force and Unemployment, Place of Residence, by Year 2006-11 (Municipal)" weaveEntityId="9321" subject="Economy"/>
+          <category source="MA EOLWD ES-202, 2013" title="Labor Force and Unemployment, Place of Residence, by Year 2006-12 (Municipal)" weaveEntityId="21822" subject="Economy"/>
+          <category source="MassGIS, 2009" title="Land Use Summary Statistics, 2005 (Municipal)" weaveEntityId="5839"/>
+          <category source="ACS" title="Language Spoken at Home by Ability to Speak English, 5yr Avg 2007-11 (Block Groups)" weaveEntityId="19679" subject="Demographics"/>
+          <category source="ACS" title="Language Spoken at Home by Ability to Speak English, 5yr Avg 2007-11 (Census Tracts)" weaveEntityId="19747" subject="Demographics"/>
+          <category source="ACS" title="Language Spoken at Home by Ability to Speak English, 5yr Avg 2007-11 (Municipal)" weaveEntityId="19815" subject="Demographics"/>
+          <category weaveEntityId="24039" title="Language Spoken at Home by Ability to Speak English, 5yr Avg 2008-12 (Municipal)"/>
+          <category source="DPH" title="Lead Poisoning in Children, 2010 (Municipal)" description="2010" weaveEntityId="7444" subject="Public Health"/>
+          <category source="USGBC, 2012" title="LEED Certified Buildings (Points)" weaveEntityId="69"/>
+          <category source="MassGIS, 2005" title="Libraries" weaveEntityId="117"/>
+          <category source="BPL" title="Library Characteristics, 2011 (Boston)" weaveEntityId="11936" subject="Education"/>
+          <category source="Boston Public Library" title="Library Circulation by Year (Boston)" weaveEntityId="12123" subject="Education"/>
+          <category source="ACS" title="Linguistic Isolation, 5yr Avg 2005-09 (Municipal)" weaveEntityId="229" subject="Demographics"/>
+          <category source="ACS" title="Linguistic Isolation, 5yr Avg 2006-10 (Cenus Tracts)" weaveEntityId="7083" subject="Demographics"/>
+          <category source="ACS" title="Linguistic Isolation, 5yr Avg 2006-10 (Municipal)" weaveEntityId="15476" subject="Demographics"/>
+          <category source="ACS" title="Linguistic Isolation, 5yr Avg 2007-11 (Block Groups)" weaveEntityId="18819" subject="Demographics"/>
+          <category source="ACS" title="Linguistic Isolation, 5yr Avg 2007-11 (Census Tracts)" weaveEntityId="18889" subject="Demographics"/>
+          <category source="ACS" title="Linguistic Isolation, 5yr Avg 2007-11 (Municipal)" weaveEntityId="18959" subject="Demographics"/>
+          <category weaveEntityId="23968" title="Linguistic Isolation, 5yr Avg 2008-12 (Municipal)"/>
+          <category source="MA EOLWD, 2006-2010" title="Local Area Unemployment Statistics (Municipal)" weaveEntityId="3341"/>
+          <category weaveEntityId="11536" title="Logan Airport Traffic"/>
+          <category source="MassPort&#xD;" title="Logan Airport Traffic, 1998-2011" weaveEntityId="11654" subject="Transportation"/>
+          <category source="MADPH, 2012" title="Low Birth Weight (Municipal)" weaveEntityId="4771" subject="Public Health"/>
+          <category source="MDPH" title="Lung Cancer Death Rate (Municipal)" weaveEntityId="16670" subject="Public Health"/>
+          <category weaveEntityId="119" title="Lynn Downtown Parcels"/>
+          <category weaveEntityId="9685" title="Lynn parcel survey"/>
+          <category weaveEntityId="22427" title="lynn_parcel_survey_2013"/>
+          <category source="MassGIS" title="MA Counties" weaveEntityId="37"/>
+          <category weaveEntityId="99" title="MA House Legislative Districts (2012)"/>
+          <category title="MA House Legislative Districts (2012)" weaveEntityId="4260" subject="Civic Vitality"/>
+          <category source="DPH" title="MA Physical Acitvity by Race and Year (Municipal)" weaveEntityId="7572" subject="Public Health"/>
+          <category weaveEntityId="103" title="MA Senate Legislative Districts (2012)"/>
+          <category title="MA Senate Legislative Districts (2012)" weaveEntityId="4417" subject="Civic Vitality"/>
+          <category source="PricewaterhouseCoopers Moneytree Survey" title="MA Venture Capital Share, 1995-2011 (MA)" weaveEntityId="11313" subject="Technology"/>
+          <category weaveEntityId="22256" title="MA with summary"/>
+          <category source="MassDOT" title="Major Roads" weaveEntityId="6036"/>
+          <category source="MassDOT, 2010" title="Major Roads (MassDOT)" weaveEntityId="31"/>
+          <category source="MassDOT" title="Major Routes" weaveEntityId="3037"/>
+          <category source="MassDOT, 2010" title="Major Routes (MassDOT)" weaveEntityId="29"/>
+          <category source="MAPC" title="MAPC Municipalities" weaveEntityId="3"/>
+          <category weaveEntityId="22371" title="MAPC Outline (no coast)"/>
+          <category weaveEntityId="22261" title="MAPC Subregions"/>
+          <category weaveEntityId="21806" title="MAPC Subregions, 2013"/>
+          <category weaveEntityId="89" title="Mass in Motion Communities"/>
+          <category description="2001-2012" title="Mass. Budget Funding" weaveEntityId="7055" subject="Economy"/>
+          <category source="Mass Budget and Policy Center, 2001-12" title="Mass. Budget Funding by Year" description="2001-2012" weaveEntityId="9029" subject="Economy"/>
+          <category source="MassGIS" title="Massachusetts Municipalities" weaveEntityId="1"/>
+          <category source="City of Boston, Climate Action Plan Greenhouse Gas Inventories" title="MBTA Energy Use by Year (Boston)" weaveEntityId="11060" subject="Energy"/>
+          <category description="MBTA FY" title="MBTA Expenses by Year" weaveEntityId="5764" subject="Transportation"/>
+          <category description="MBTA FY" title="MBTA Revenue by Year" weaveEntityId="5921" subject="Transportation"/>
+          <category source="MassDOT" title="MBTA Subway Lines" weaveEntityId="27"/>
+          <category weaveEntityId="75" title="MBTA Subway Stops"/>
+          <category source="DESE" title="MCAS Grade 03 Math Proficiency by Group, 2010-11 (School Municipal Districts)" description="MCAS, 2011" weaveEntityId="2868" subject="Education"/>
+          <category source="DESE, 2011" title="MCAS Grade 03 Math Proficiency by Group, 2010-11 (Schools)" weaveEntityId="3067"/>
+          <category title="MCAS Grade 03 Math Proficiency by Year (School Districts)" weaveEntityId="799" subject="Education"/>
+          <category source="DESE, 2011" title="MCAS Grade 03 Reading Proficiency by Group, 2010-11 (School Municipal Districts)" weaveEntityId="125"/>
+          <category source="DESE, 2011" title="MCAS Grade 03 Reading Proficiency by Group, 2010-11 (Schools)" weaveEntityId="3293"/>
+          <category title="MCAS Grade 03 Reading Proficiency by Year (School Districts)" weaveEntityId="6899" subject="Education"/>
+          <category source="DESE, 2011" title="MCAS Grade 03 Total Math Proficiency, by Year 2006-11 (School Municipal Districts)" description="2005-06 thru 2010-11" weaveEntityId="4373" subject="Education"/>
+          <category source="DESE, 2011" title="MCAS Grade 03 Total Reading Proficiency, 2010-11 (School Municipal Districts)" weaveEntityId="3392"/>
+          <category source="DESE, 2011" title="MCAS Grade 03 Total Reading Proficiency, 2010-11 (Schools)" weaveEntityId="3664"/>
+          <category source="DESE, 2011" title="MCAS Grade 03 Total Reading Proficiency, by Year 2006-11 (School Municipal Districts)" weaveEntityId="4262"/>
+          <category source="DESE, 2011" title="MCAS Grade 08 Math Proficiency by Group, 2010-11 (School Municipal Districts)" weaveEntityId="5250" subject="Education"/>
+          <category source="DESE, 2011" title="MCAS Grade 08 Math Proficiency by Group, 2010-11 (Schools)" weaveEntityId="4629" subject="Education"/>
+          <category title="MCAS Grade 08 Math Proficiency by Year (School Districts)" weaveEntityId="10053" subject="Education"/>
+          <category source="DESE, 2011" title="MCAS Grade 08 Reading Proficiency by Group, 2010-11 (School Municipal Districts)" weaveEntityId="6551" subject="Education"/>
+          <category source="DESE, 2011" title="MCAS Grade 08 Reading Proficiency by Group, 2010-11 (Schools)" weaveEntityId="4554" subject="Education"/>
+          <category source="DESE, 2011" title="MCAS Grade 08 Science Proficiency by Group, 2010-11 (School Municipal Districts)" description="MCAS" weaveEntityId="521" subject="Education"/>
+          <category source="DESE, 2011" title="MCAS Grade 08 Science Proficiency by Group, 2010-11 (Schools)" weaveEntityId="4342" subject="Education"/>
+          <category source="DESE, 2011" title="MCAS Grade 10 Math Proficiency by Group, 2010-11 (School Municipal Districts)" description=" MCAS" weaveEntityId="2232"/>
+          <category source="DESE, 2011" title="MCAS Grade 10 Math Proficiency by Group, 2010-11 (Schools)" weaveEntityId="3597"/>
+          <category source="DESE, 2011" title="MCAS Grade 10 Reading Proficiency by Group, 2010-11 (School Municipal Districts)" weaveEntityId="6075"/>
+          <category source="DESE, 2011" title="MCAS Grade 10 Reading Proficiency by Group, 2010-11 (Schools)" weaveEntityId="3836"/>
+          <category source="DESE, 2011" title="MCAS Grade 10 Science Proficiency by Group, 2010-11 (School Municipal Districts)" weaveEntityId="5868"/>
+          <category source="DESE, 2011" title="MCAS Grade 10 Science Proficiency by Group, 2010-11 (Schools)" weaveEntityId="4253"/>
+          <category source="DESE" title="MCAS High School Biology Proficiency by Group, 2010-11 (Schools)" weaveEntityId="12185" subject="Education"/>
+          <category source="DESE" title="MCAS High School Chemistry Proficiency by Group, 2010-11 (Schools)" weaveEntityId="12234" subject="Education"/>
+          <category source="DESE" title="MCAS High School Physics Proficiency by Group, 2010-11 (Schools)" weaveEntityId="12283" subject="Education"/>
+          <category source="DESE" title="MCAS High School Tech Proficiency by Group, 2010-11 (Schools)" weaveEntityId="12118" subject="Education"/>
+          <category source="ACS" title="Median Age, 5yr Avg 2007-11 (Block Groups)" weaveEntityId="19358" subject="Demographics"/>
+          <category source="ACS" title="Median Age, 5yr Avg 2007-11 (Census Tracts)" weaveEntityId="19424" subject="Demographics"/>
+          <category source="ACS" title="Median Age, 5yr Avg 2007-11 (Municipal)" weaveEntityId="19490" subject="Demographics"/>
+          <category weaveEntityId="23880" title="Median Household Income by Family/Non-Family 5yr Avg 2008-12 (Municipal)"/>
+          <category source="ACS" title="Median Household Income by Race, 5yr Avg 2005-09 (Municipal)" description="ACS 2005-09" weaveEntityId="2683" subject="Housing"/>
+          <category source="ACS" title="Median Household Income by Race, 5yr Avg 2006-10 (Census Tracts)" weaveEntityId="9900" subject="Housing"/>
+          <category source="ACS" title="Median Household Income by Race, 5yr Avg 2006-10 (Municipal)" weaveEntityId="10145" subject="Housing"/>
+          <category source="ACS" title="Median Household Income by Race, 5yr Avg 2007-11 (Block Groups)" weaveEntityId="20053" subject="Housing"/>
+          <category source="ACS" title="Median Household Income by Race, 5yr Avg 2007-11 (Census Tracts)" weaveEntityId="20079" subject="Housing"/>
+          <category source="ACS" title="Median Household Income by Race, 5yr Avg 2007-11 (Municipal)" weaveEntityId="20105" subject="Housing"/>
+          <category weaveEntityId="22267" title="Median Household Income by Race, 5yr Avg 2008-12 (Block Groups)"/>
+          <category weaveEntityId="22293" title="Median Household Income by Race, 5yr Avg 2008-12 (Census Tracts)"/>
+          <category weaveEntityId="22319" title="Median Household Income by Race, 5yr Avg 2008-12 (Municipal)"/>
+          <category weaveEntityId="22346" title="Median Household Income by Tenure, 5yr Avg 2008-12 (Census Tracts)"/>
+          <category weaveEntityId="22358" title="Median Household Income by Tenure, 5yr Avg 2008-12 (Municipal)"/>
+          <category source="ACS" title="Median Household Income, 5yr Avg 2007-11 (Census Tracts)" weaveEntityId="14048" subject="Housing"/>
+          <category source="ACS" title="Median Household Income, 5yr Avg 2007-11 (Municipal)" weaveEntityId="14039" subject="Housing"/>
+          <category source="MAPC, 2008" title="MetroFuture Region" weaveEntityId="25"/>
+          <category source="Census" title="Minority Population, 2000 &amp; 2010 (Municipal)" weaveEntityId="8947" subject="Demographics" year="2010"/>
+          <category source="DESE, 2010" title="Mobility, 2010 (Schools)" weaveEntityId="3606" subject="Education"/>
+          <category source="MPDH" title="Moter Vehicle Death Rate (Municipal)" weaveEntityId="16898" subject="Public Health"/>
+          <category source="DPH" title="Mothers that Smoked during Pregnancy, 2004-10avg (Municipal)" description="DPH" weaveEntityId="2984" subject="Public Health"/>
+          <category weaveEntityId="11401" title="n/a"/>
+          <category source="MDPH" title="Obese Adults, 2011 (Municipal)" weaveEntityId="15543" subject="Public Health"/>
+          <category weaveEntityId="23" title="Open Space"/>
+          <category source="MassGIS" title="Open Space by Municipal Summary" weaveEntityId="9398" year="2012"/>
+          <category source="MassGIS" title="Open Space Municipal Summary" weaveEntityId="282" subject="Environment" year="2012"/>
+          <category source="MassGIS, 2007" title="Police Stations" weaveEntityId="123" subject="Public Safety"/>
+          <category source="Census" title="Population By Age, 2000 &amp; 2010 (Municipality)" weaveEntityId="7166" subject="Demographics"/>
+          <category weaveEntityId="21872" title="Population by Age, 2010 (Municipal)"/>
+          <category source="Census" title="Population by Decade (Municipal)" description="Census 2000" weaveEntityId="21757" subject="Demographics"/>
+          <category source="Census" title="Population By Gender and Age with Change, 2000 &amp; 2010 (Municipal)" weaveEntityId="7181" subject="Demogrpahics"/>
+          <category source="Census" title="Population By Gender and Age, 2000 (Census Tracts)" description="Census 2000" weaveEntityId="2862" subject="Demographics"/>
+          <category source="Census" title="Population By Gender and Age, 2010 (Census Tracts)" description="Census" weaveEntityId="7463" subject="Demographics"/>
+          <category source="Census" title="Population by Household and Group Qaurters (MetroFuture Municipalities)" weaveEntityId="17226" subject="Demographics"/>
+          <category description="Census 2010" title="Population by Race and Age, 2010 (Census Tract)" weaveEntityId="4236" subject="Demographics"/>
+          <category description="Census 2010" title="Population by Race and Age, 2010 (Municipal)" weaveEntityId="8739" subject="Demographics"/>
+          <category source="Census" title="Population by Race with Change, 2000-2010 (Municipal)" weaveEntityId="1560" subject="Demographics"/>
+          <category title="Population by Race with Change, 2000-2010 (Municipal) - Transposed" weaveEntityId="968" subject="Census 2000,2010"/>
+          <category source="Census 2010" title="Population by Race, 2010 (Block Group)" description="Census 2010" weaveEntityId="17206" subject="Demographics"/>
+          <category source="Census" title="Population by Race, 2010 (Census Tract)" description="Census 2010" weaveEntityId="5803" subject="Demographics"/>
+          <category source="Census" title="Population by Race/Ethnicity, 2000 (Census Tract)" description="Census 2000" weaveEntityId="385" subject="Demographics"/>
+          <category source="ACS" title="Population in Poverty, 5yr Avg 2006-10 (Municipal)" description="ACS" weaveEntityId="15390" subject="Economy"/>
+          <category source="ACS" title="Population in Poverty, 5yr Avg 2007-11 (Census Tracts)" weaveEntityId="19284" subject="Economy"/>
+          <category source="ACS" title="Population in Poverty, 5yr Avg 2007-11 (Municipal)" weaveEntityId="15575" subject="Economy"/>
+          <category description="Census 2010" title="Population Over/Under 18, 2010 (Census Tract)" weaveEntityId="554" subject="Demographics"/>
+          <category source="Census" weaveEntityId="7004" year="2010" description="Census, 2010" title="Population Over/Under 18, 2010 (Municipal)" subject="Demographics"/>
+          <category source="ACS" title="Poverty by Age and Gender, 5yr Avg 2007-11 (Census Tracts)" weaveEntityId="21230" subject="Economy"/>
+          <category source="ACS" title="Poverty by Age and Gender, 5yr Avg 2007-11 (Municipal)" weaveEntityId="21101" subject="Economy"/>
+          <category source="ACS" title="Poverty by Family Type with Children, 5yr Avg 2006-10 (Census Tracts)" weaveEntityId="13989" subject="Economy"/>
+          <category source="ACS" title="Poverty by Family Type with Children, 5yr Avg 2006-10 (Municipal)" weaveEntityId="14014" subject="Economy"/>
+          <category source="ACS" title="Poverty by Household Type, 5yr Avg 2007-11 (Block Groups)" weaveEntityId="19884" subject="Economy"/>
+          <category source="ACS" title="Poverty by Household Type, 5yr Avg 2007-11 (Census Tracts)" weaveEntityId="19997" subject="Economy"/>
+          <category weaveEntityId="21769" title="Poverty by Household Type, 5yr Avg 2007-11 (Municipal)"/>
+          <category source="ACS" title="Poverty by Household Type, 5yr Avg 2007-11 (Municipal) -old" weaveEntityId="19940" subject="Economy"/>
+          <category weaveEntityId="23931" title="Poverty by Household Type, 5yr Avg 2008-12 (Municipal)"/>
+          <category source="ACS" title="Poverty by Race and Age, 5yr Avg 2007-11 (Census Tracts)" weaveEntityId="21527" subject="Economy"/>
+          <category source="ACS" title="Poverty by Race and Age, 5yr Avg 2007-11 (Municipal)" weaveEntityId="21358" subject="Economy"/>
+          <category source="ACS" title="Poverty by Race, 5yr Avg 2006-10 (Census Tracts)" weaveEntityId="9347" subject="Economy"/>
+          <category source="ACS" title="Poverty by Race, 5yr Avg 2006-10 (Municipal)" weaveEntityId="10233" subject="Economy"/>
+          <category source="MAPC, 2008" title="Projected Employment, Current Trends/MetroFuture, 2030 (Municipal)" weaveEntityId="1364" subject="MetroFuture"/>
+          <category source="MAPC, 2008" title="Projected Employment, Current Trends/MetroFuture, 2030 (TAZ)" weaveEntityId="3063" subject="MetroFuture"/>
+          <category source="MAPC, 2008" title="Projected Population by Age Group, Current Trends, 2030 (Municipal)" weaveEntityId="4540" subject="MetroFuture"/>
+          <category source="MAPC, 2008" title="Projected Population by Age Group, MetroFuture, 2030 (Municipal)" weaveEntityId="3829" subject="MetroFuture"/>
+          <category source="MAPC, 2008" title="Projected Population, Households and Employment, Current Trends/MetroFuture 2030 (Municipal)" weaveEntityId="4829" subject="MetroFuture"/>
+          <category source="MAPC, 2008" title="Projected Population, Households and Employment, Current Trends/MetroFuture 2030 (TAZ)" weaveEntityId="4851" subject="MetroFuture"/>
+          <category source="MAPC, 2013" title="Projections, 2020-2030: Household Size (Municipal)" weaveEntityId="20883" subject="Projections"/>
+          <category source="MAPC, 2013" title="Projections, 2020-2030: Households (Municipal)" weaveEntityId="20873" subject="Projections"/>
+          <category source="MAPC, 2013" title="Projections, 2020-2030: Housing Units (Municipal)" weaveEntityId="20893" subject="Projections"/>
+          <category source="MAPC, 2013" title="Projections, 2020-2030: Median Age (Municipal)" weaveEntityId="20908" subject="Projections"/>
+          <category source="MAPC, 2013" title="Projections, 2020-2030: Population (Municipal)" weaveEntityId="22013" subject="Projections"/>
+          <category source="MAPC, 2013" title="Projections, 2020-2030: Population Age 5 - 14 (Municipal)" weaveEntityId="20917" subject="Projections"/>
+          <category source="MAPC, 2013" title="Projections, 2020-2030: Population Age 65 and Over (Municipal)" weaveEntityId="20931" subject="Projections"/>
+          <category source="MAPC, 2013" title="Projections, 2020-2030: Population by Age Group (Municipal)" weaveEntityId="20944" subject="Projections"/>
+          <category source="FBI UCR, 2012" title="Property Crimes, 2001-09 (Municipal)" weaveEntityId="1977" subject="Public Safety"/>
+          <category source="MassGIS and MAPC, 2011" title="Protected Open Space" weaveEntityId="39"/>
+          <category weaveEntityId="17181" title="Public Assistance, 5yr Avg 2007-11 (Census Tracts)"/>
+          <category weaveEntityId="17193" title="Public Assistance, 5yr Avg 2007-11 (Municipal)"/>
+          <category source="Boston Police Dept." title="Public Safety: Hate Crimes by Offense (Boston)" weaveEntityId="4127" subject="Public Safety"/>
+          <category source="Boston Police Dept" title="Public Safety: Hate Crimes by Perpetrator Race/Ethnicity (Boston)" description="All incidents investigated by the BPD Community Disorders unit" weaveEntityId="8027" subject="Public Safety"/>
+          <category source="Boston Police Dept." title="Public Safety: Hate Crimes by Victim Race/Ethnicity (Boston)" weaveEntityId="4151" subject="Public Safety"/>
+          <category source="Boston Police Dept." title="Public Safety: Youth Crime (under age 16) by Type (Boston)" weaveEntityId="4210" subject="Public Safety"/>
+          <category source="National Science Foundation" title="R&amp;D Academic Expenditures, FY09 (States)" weaveEntityId="11697" subject="Technology"/>
+          <category source="MA DEP" title="Recycling and Waste Survey, 2009 (Municipal)" weaveEntityId="8366" subject="Environment"/>
+          <category source="MA DEP" title="Recycling and Waste Survey, 2010 (Municipal)" weaveEntityId="3484" subject="Environment"/>
+          <category source="State Elections Division 2004-2010" title="Registered Voters, by Year 2004-2010 (Municipal)" weaveEntityId="1230" subject="Civic Vitality ad Governance"/>
+          <category weaveEntityId="22036" title="Renewable Energy Projects (Municipal)"/>
+          <category source="City of Boston, Climate Action Plan Greenhouse Gas Inventories" title="Residential Energy Use by Year (Boston)" weaveEntityId="9467" subject="Energy"/>
+          <category source="DESE, 2011" title="Risk Indicators (multi-year) (Schools)" weaveEntityId="4803"/>
+          <category source="DESE,2011" title="Risk Indicators by Year 2006-11 (Schools)" weaveEntityId="3936" subject="Education"/>
+          <category source="DESE, 2011" title="School Districts" weaveEntityId="105" subject="DESE, 2011"/>
+          <category weaveEntityId="3742" title="School Municipal Districts: Teacher Data (multi-year)"/>
+          <category source="DESE, 2011" title="Schools" weaveEntityId="19"/>
+          <category source="DESE, 2012" title="Schools (points)" weaveEntityId="9362" subject="Education"/>
+          <category description="DESE, 2006-11" title="Schools: MCAS Grade 03 Math Proficiency by Year" weaveEntityId="7534" subject="Education"/>
+          <category description="DESE, 2006-11" title="Schools: MCAS Grade 03 Reading Proficiency (multi-year)" weaveEntityId="6766" subject="Education"/>
+          <category weaveEntityId="132" title="Schools: MCAS Grade 03 Reading Proficiency by Year"/>
+          <category source="MDPH" title="Small Area Estimates, 2009 (Municipal)" date="2009" weaveEntityId="7617" subject="Public Health"/>
+          <category description="2010" title="Special Senate Election 2010 Results (Municipal)" weaveEntityId="4146" subject="Civic Vitality"/>
+          <category source="MassGIS, 2011" title="State Representatives (MA House Districts)" weaveEntityId="35"/>
+          <category source="MassGIS, 2011" title="State Senators (MA Senate Districts)" weaveEntityId="33"/>
+          <category source="MDPH" title="Stroke Hospitalization Rates (Municipal) " description="Public Health" weaveEntityId="13823"/>
+          <category title="Student Risk Indicators By Year (School Districts)" weaveEntityId="8572" subject="Education"/>
+          <category description="DESE" title="Student Risk Indicators By Year 2006-11 (Schools)" weaveEntityId="6480" subject="Education"/>
+          <category source="Arts Expansion Initiative" title="Students Receiving Weekly Arts Programming by Year (Boston Schools)" weaveEntityId="10078" subject="Education"/>
+          <category source="DHCD, 2011" title="Subsidized Housing Inventory, by Year 2006-11 (Municipal) " weaveEntityId="5333" subject="Housing"/>
+          <category weaveEntityId="17" title="Success Boston Student Cohorts (2010)"/>
+          <category weaveEntityId="5725" title="TBF: Demographics"/>
+          <category weaveEntityId="6921" title="TBF: Housing"/>
+          <category source="DESE" title="Teacher Data By Year (Schools)" weaveEntityId="9796" subject="Education"/>
+          <category source="DESE" title="Teacher Data by Year, 2006-11 (School Municipal Districts)" weaveEntityId="3434" subject="Education"/>
+          <category source="DESE" title="Teacher Program Area by Year (Schools)" weaveEntityId="9856" subject="Education"/>
+          <category source="DESE" title="Teachers by Race and Gender by Year (Schools)" weaveEntityId="12347" subject="Education"/>
+          <category source="MA EOLWD ES-202, 2011" title="Total Employment, Place of Work, by Year 1986-2010 (Municipal)" weaveEntityId="934"/>
+          <category source="HUD" title="Traffic Analysis Zones (TAZ) " weaveEntityId="15"/>
+          <category source="HUD" title="Traffic Analysis Zones (TAZ) " weaveEntityId="8599"/>
+          <category source="MAPC" title="Transit Oriented Development Stations, 2012" weaveEntityId="115" subject="Transportation"/>
+          <category source="ACS" title="Transportation to Work by Residence, 5yr Avg 2007-11 (Block Groups)" weaveEntityId="17248" subject="Transportation"/>
+          <category source="ACS" title="Transportation to Work by Residence, 5yr Avg 2007-11 (Census Tracts)" weaveEntityId="17288" subject="Transportation"/>
+          <category source="ACS" title="Transportation to Work by Residence, 5yr Avg 2007-11 (Municipal)" weaveEntityId="17328" subject="Transportation"/>
+          <category weaveEntityId="23166" title="Transportation to Work by Residence, 5yr Avg 2008-12 (Municipal)"/>
+          <category source="ACS" title="Transportation to Work by Work Place, 5yr Avg 2007-11 (Municipal)" weaveEntityId="17502" subject="Transportation"/>
+          <category weaveEntityId="23354" title="Transportation to Work by Work Place, 5yr Avg 2008-12 (Municipal)"/>
+          <category source="ACS" title="Transportation to Work, 5yr Avg 2005-09 (Municipal)" weaveEntityId="15376" subject="Transportation"/>
+          <category source="ACS" title="Transportation to Work, 5yr Avg 2006-10 (Census Tracts)" weaveEntityId="11179" subject="Transportation"/>
+          <category source="ACS" title="Transportation to Work, ACS 2005-09 (Municipality)-Transposed" description="ACS" weaveEntityId="129" subject="Transportation"/>
+          <category source="ACS" title="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" description="ACS" weaveEntityId="960" subject="Transportation"/>
+          <category source="ACS" title="Travel Time to Work by Residence, 5yr Avg 2007-11 (Block Groups)" weaveEntityId="17430" subject="Transportation"/>
+          <category source="ACS" title="Travel Time to Work by Residence, 5yr Avg 2007-11 (Census Tracts)" weaveEntityId="17466" subject="Transportation"/>
+          <category source="ACS" title="Travel Time to Work by Residence, 5yr Avg 2007-11 (Municipal)" weaveEntityId="12461" subject="Transportation"/>
+          <category weaveEntityId="23207" title="Travel Time to Work by Residence, 5yr Avg 2008-12 (Municipal)"/>
+          <category source="ACS" title="Travel Time to Work by Work Place, 5yr Avg 2007-11 (Municipal)" weaveEntityId="19247" subject="Transportation"/>
+          <category weaveEntityId="23317" title="Travel Time to Work by Work Place, 5yr Avg 2008-12 (Municipal)"/>
+          <category source="ACS" title="Travel Time to Work, 5yr Avg 2005-09 (Municipal)" weaveEntityId="849" subject="Transportation"/>
+          <category source="ACS" title="Travel Time to Work, 5yr Avg 2006-10 (Census Tracts)" weaveEntityId="222" subject="Transportation"/>
+          <category source="ACS" title="Travel Time to Work, 5yr Avg 2006-10 (Municipal)" weaveEntityId="12494" subject="Transportation"/>
+          <category source="MassGIS, 2007" title="US Representatives (US Congressional Districts)" weaveEntityId="13"/>
+          <category weaveEntityId="109" title="US States"/>
+          <category source="MassGIS" title="Vehicle Miles Traveled, 2005-2007" weaveEntityId="453" subject="Transportation"/>
+          <category source="ACS" title="Vehicles by Household, 5yr Avg 2006-10 (Census 2010 Tracts)" weaveEntityId="10398" subject="Transportation"/>
+          <category source="ACS" title="Vehicles by Household, 5yr Avg 2006-10 (Municipal)" description="ACS 2006-10" weaveEntityId="10173" subject="Transportation"/>
+          <category source="ACS" title="Vehicles by Household, 5yr Avg 2007-11 (Block Groups)" weaveEntityId="19030" subject="Transportation"/>
+          <category source="ACS" title="Vehicles by Household, 5yr Avg 2007-11 (Census Tracts)" weaveEntityId="19102" subject="Transportation"/>
+          <category source="ACS" title="Vehicles by Household, 5yr Avg 2007-11 (Municipal)" weaveEntityId="19174" subject="Transportation"/>
+          <category weaveEntityId="23244" title="Vehicles by Household, 5yr Avg 2008-12 (Municipal)"/>
+          <category source="PricewaterhouseCoopers Moneytree Survey" title="Venture Capital, 2011 (States)" weaveEntityId="11303" subject="Technology"/>
+          <category source="FBI URC, 2012" title="Violent Crimes, 2001-09 (Municipal)" weaveEntityId="7671" subject="Public Safety"/>
+          <category weaveEntityId="11" title="Water Bodies (100k Hydro)"/>
+          <category title="Water, Sewer and Energy Use by Source and Year (Boston)" weaveEntityId="7718" subject="Energy"/>
+          <category title="Women Board of Directors (Massachusetts)" weaveEntityId="3834" subject="Economy"/>
+          <category source="YRBSS" title="Youth Alcohol Consumption, 1993-11 (Boston)" weaveEntityId="7974" subject="Public Health"/>
+          <category description="Teens who attempted suicide in the last 12 months" title="Youth Attempted Suicide, 1993-11 (Boston)" weaveEntityId="9123" subject="Public Health"/>
+          <category source="Boston Police Dept." title="Youth Crime (age 14 to 24) by Type (Boston)" description="Youth Population aged 14 to 24" weaveEntityId="7965" subject="Public Safety"/>
+          <category source="YRBSS" title="Youth Diagnosed with Asthma, 2005-11 (Boston)" weaveEntityId="8380" subject="Public Health"/>
+          <category source="YRBSS" title="Youth Marijuana Use 1993-11 (Boston)" weaveEntityId="8297" subject="Public Health"/>
+          <category source="YRBSS" title="Youth Overweight/Obese, 1999-2011 (Boston)" weaveEntityId="11946" subject="Public Health"/>
+          <category source="YRBSS" title="Youth Physical Activity 1993-11 (Boston)" weaveEntityId="7669" subject="Public Health"/>
+          <category source="YRBSS" title="Youth Physical Education 1993-11 (Boston)" weaveEntityId="7904" subject="Public Health"/>
+          <category source="YRBSS" title="Youth Smoking, 1993-11 (Boston)" weaveEntityId="9706" subject="Public Health"/>
+          <category source="YRBSS" title="Youth Soda Consumption, 2007-11 (Boston)" weaveEntityId="1681" subject="Public Health"/>
+        </category>
+        <category title="Geometry Collections" name="Geometry Collections">
+          <attribute dataType="geometry" keyType="Grid_1Km_ID" projection="EPSG:26986" title="1Km Grid" weaveEntityId="78" name="1Km Grid"/>
+          <attribute dataType="geometry" keyType="Grid_1Km_ID" projection="EPSG:26986" title="1Km Grid for Eastern MA" weaveEntityId="80" name="1Km Grid for Eastern MA"/>
+          <attribute dataType="geometry" keyType="Grid_1Km_ID" projection="EPSG:26986" title="1Km Grid for MetroFuture Modelling Region" weaveEntityId="82" name="1Km Grid for MetroFuture Modelling Region"/>
+          <attribute dataType="geometry" keyType="Arts and Culture Points" projection="EPSG:26986" title="Arts and Culture Points" weaveEntityId="6" name="Arts and Culture Points"/>
+          <attribute dataType="geometry" keyType="ObjectID" projection="EPSG:26986" title="Bike and Pedestrian Facilities" weaveEntityId="8" name="Bike and Pedestrian Facilities"/>
+          <attribute dataType="geometry" keyType="ct10_id" projection="EPSG:26986" title="Boston Census Tracts" weaveEntityId="96" name="Boston Census Tracts"/>
+          <attribute dataType="geometry" keyType="SchoolID" projection="EPSG:26986" title="Boston Circle of Promise Schools" weaveEntityId="10" name="Boston Circle of Promise Schools"/>
+          <attribute dataType="geometry" keyType="ObjectID" projection="EPSG:26986" title="Boston Daycares" weaveEntityId="68" name="Boston Daycares"/>
+          <attribute dataType="geometry" keyType="Boston Neighborhoods" projection="EPSG:26986" title="Boston Neighborhoods" weaveEntityId="86" name="Boston Neighborhoods"/>
+          <attribute dataType="geometry" keyType="ObjectID" projection="EPSG:26986" title="Boston Non-Profit Educational Assets (Points)" weaveEntityId="66" name="Boston Non-Profit Educational Assets (Points)"/>
+          <attribute dataType="geometry" keyType="MUNI_ID" projection="EPSG:26986" title="Boston Outline" weaveEntityId="64" name="Boston Outline"/>
+          <attribute dataType="geometry" keyType="BostonParcelID" projection="EPSG:26986" title="Boston Parcels (Subset)" weaveEntityId="62" name="Boston Parcels (Subset)"/>
+          <attribute dataType="geometry" keyType="Boston_Planning_Districts" projection="EPSG:26986" title="Boston Planning Districts" weaveEntityId="94" name="Boston Planning Districts"/>
+          <attribute dataType="geometry" keyType="ct10_id" projection="EPSG:26986" title="Boston Planning Districts with Census Tracts" weaveEntityId="98" name="Boston Planning Districts with Census Tracts"/>
+          <attribute dataType="geometry" keyType="boston_police_districts_id" projection="EPSG:26986" title="Boston Police Districts" weaveEntityId="122" name="Boston Police Districts"/>
+          <attribute dataType="geometry" keyType="Boston_Wards_Precincts" projection="EPSG:26986" title="Boston Precincts" weaveEntityId="92" name="Boston Precincts"/>
+          <attribute dataType="geometry" keyType="SchoolID" projection="EPSG:26986" title="Boston Schools" weaveEntityId="60" name="Boston Schools"/>
+          <attribute dataType="geometry" keyType="Boston_TechCenters" projection="EPSG:26986" title="Boston Tech Centers" weaveEntityId="114" name="Boston Tech Centers"/>
+          <attribute dataType="geometry" keyType="SchoolID" projection="EPSG:26986" title="Boston Turnaround Schools" weaveEntityId="54" name="Boston Turnaround Schools"/>
+          <attribute dataType="geometry" keyType="Boston_Neighborhoods" projection="EPSG:26986" title="Boston_Neighborhoods" weaveEntityId="84" name="Boston_Neighborhoods"/>
+          <attribute dataType="geometry" keyType="BG_00_ID" projection="EPSG:26986" title="Census 2000 Block Groups" weaveEntityId="58" name="Census 2000 Block Groups"/>
+          <attribute dataType="geometry" keyType="CT_ID" projection="EPSG:26986" title="Census 2000 Tracts" weaveEntityId="52" name="Census 2000 Tracts"/>
+          <attribute dataType="geometry" keyType="BG_10_ID" projection="EPSG:26986" title="Census 2010 Block Groups" weaveEntityId="50" name="Census 2010 Block Groups"/>
+          <attribute dataType="geometry" keyType="ct10_id" projection="EPSG:26986" title="Census 2010 Tracts" weaveEntityId="56" name="Census 2010 Tracts"/>
+          <attribute dataType="geometry" keyType="ObjectID" projection="EPSG:26986" title="Child Care Providers with Less than High School" weaveEntityId="48" name="Child Care Providers with Less than High School"/>
+          <attribute dataType="geometry" keyType="College_ID" projection="EPSG:26986" title="Colleges and Universities" weaveEntityId="46" name="Colleges and Universities"/>
+          <attribute dataType="geometry" keyType="chc_id" projection="EPSG:26986" title="Community Health Centers" weaveEntityId="88" name="Community Health Centers"/>
+          <attribute dataType="geometry" keyType="Commuter Rail" projection="EPSG:26986" title="Commuter Rail" weaveEntityId="72" name="Commuter Rail"/>
+          <attribute dataType="geometry" keyType="Commuter Rail Stations" projection="EPSG:26986" title="Commuter Rail Stations" weaveEntityId="74" name="Commuter Rail Stations"/>
+          <attribute dataType="geometry" keyType="BG_00_ID" projection="EPSG:26986" title="Environmental Justice Populations (Block Groups)" weaveEntityId="44" name="Environmental Justice Populations (Block Groups)"/>
+          <attribute dataType="geometry" keyType="ObjectID" projection="EPSG:26986" title="Fairmount Commuter Line" weaveEntityId="42" name="Fairmount Commuter Line"/>
+          <attribute dataType="geometry" keyType="frs_id" projection="EPSG:26986" title="Green House Gas Emissions by Facility, 2010 (pts)" weaveEntityId="108" name="Green House Gas Emissions by Facility, 2010 (pts)"/>
+          <attribute dataType="geometry" keyType="hospital_id" projection="EPSG:26986" title="Hospitals" weaveEntityId="102" name="Hospitals"/>
+          <attribute dataType="geometry" keyType="Intel_Clubhouses" projection="EPSG:26986" title="Intel Clubhouses" weaveEntityId="112" name="Intel Clubhouses"/>
+          <attribute dataType="geometry" keyType="LEED_ID" projection="EPSG:26986" title="LEED Certified Buildings (Points)" weaveEntityId="70" name="LEED Certified Buildings (Points)"/>
+          <attribute dataType="geometry" keyType="LibraryID" projection="EPSG:26986" title="Libraries" weaveEntityId="118" name="Libraries"/>
+          <attribute dataType="geometry" keyType="map_par_id" projection="EPSG:26986" title="Lynn Downtown Parcels" weaveEntityId="120" name="Lynn Downtown Parcels"/>
+          <attribute dataType="geometry" keyType="FIPS_ID" projection="EPSG:26986" title="MA Counties" weaveEntityId="38" name="MA Counties"/>
+          <attribute dataType="geometry" keyType="MA_HOUSE02_ID" projection="EPSG:26986" title="MA House Districts" weaveEntityId="36" name="MA House Districts"/>
+          <attribute dataType="geometry" keyType="MA_HOUSE12_ID" projection="EPSG:26986" title="MA House Legislative Districts (2012)" weaveEntityId="100" name="MA House Legislative Districts (2012)"/>
+          <attribute dataType="geometry" keyType="MA_SENATE02_ID" projection="EPSG:26986" title="MA Senate Districts" weaveEntityId="34" name="MA Senate Districts"/>
+          <attribute dataType="geometry" keyType="MA_SENATE12_ID" projection="EPSG:26986" title="MA Senate Legislative Districts (2012)" weaveEntityId="104" name="MA Senate Legislative Districts (2012)"/>
+          <attribute dataType="geometry" title="MA with summary" projection="EPSG:26986" keyType="MUNI_ID" weaveEntityId="22260"/>
+          <attribute dataType="geometry" keyType="ObjectID" projection="EPSG:26986" title="Major Roads (MassDOT)" weaveEntityId="32" name="Major Roads (MassDOT)"/>
+          <attribute dataType="geometry" keyType="ObjectID" projection="EPSG:26986" title="Major Routes (MassDOT)" weaveEntityId="30" name="Major Routes (MassDOT)"/>
+          <attribute dataType="geometry" keyType="MUNI_ID" projection="EPSG:26986" title="MAPC Municipalities" weaveEntityId="4" name="MAPC Municipalities"/>
+          <attribute dataType="geometry" title="MAPC Outline (no coast)" projection="EPSG:26986" keyType="mapc_outline_nocoast" weaveEntityId="22372"/>
+          <attribute dataType="geometry" title="MAPC Subregions" projection="EPSG:26986" keyType="MUNI_ID" weaveEntityId="22266"/>
+          <attribute dataType="geometry" title="MAPC Subregions, 2013" projection="EPSG:26986" keyType="subregions" weaveEntityId="21811"/>
+          <attribute dataType="geometry" keyType="MUNI_ID" projection="EPSG:26986" title="Mass in Motion Communities" weaveEntityId="90" name="Mass in Motion Communities"/>
+          <attribute dataType="geometry" keyType="MUNI_ID" projection="EPSG:26986" title="Massachusetts Municipalities" weaveEntityId="2" name="Massachusetts Municipalities"/>
+          <attribute dataType="geometry" keyType="MBTA Subway Lines" projection="EPSG:26986" title="MBTA Subway Lines" weaveEntityId="28" name="MBTA Subway Lines"/>
+          <attribute dataType="geometry" keyType="MBTA Subway Stops" projection="EPSG:26986" title="MBTA Subway Stops" weaveEntityId="76" name="MBTA Subway Stops"/>
+          <attribute dataType="geometry" keyType="MUNI_ID" projection="EPSG:26986" title="MetroFuture Region" weaveEntityId="26" name="MetroFuture Region"/>
+          <attribute dataType="geometry" keyType="OS_ID" projection="EPSG:26986" title="Open Space" weaveEntityId="24" name="Open Space"/>
+          <attribute dataType="geometry" keyType="PoliceStations_id" projection="EPSG:26986" title="Police Stations" weaveEntityId="124" name="Police Stations"/>
+          <attribute dataType="geometry" keyType="OS_ID" projection="EPSG:26986" title="Protected Open Space" weaveEntityId="40" name="Protected Open Space"/>
+          <attribute dataType="geometry" keyType="SchoolDistrictID" projection="EPSG:26986" title="School Districts" weaveEntityId="106" name="School Districts"/>
+          <attribute dataType="geometry" keyType="MUNI_ID" projection="EPSG:26986" title="School Districts by Town" weaveEntityId="22" name="School Districts by Town"/>
+          <attribute dataType="geometry" keyType="SchoolID" projection="EPSG:26986" title="Schools" weaveEntityId="20" name="Schools"/>
+          <attribute dataType="geometry" keyType="ObjectID" projection="EPSG:26986" title="Success Boston Student Cohorts (2010)" weaveEntityId="18" name="Success Boston Student Cohorts (2010)"/>
+          <attribute dataType="geometry" keyType="TAZ_ID" projection="EPSG:26986" title="Traffic Analysis Zones (TAZ) " weaveEntityId="16" name="Traffic Analysis Zones (TAZ) "/>
+          <attribute dataType="geometry" keyType="TOD_Station" projection="EPSG:26986" title="Transit Oriented Development Stations" weaveEntityId="116" name="Transit Oriented Development Stations"/>
+          <attribute dataType="geometry" keyType="US_CONGRESS_ID" projection="EPSG:26986" title="US Congressional Districts" weaveEntityId="14" name="US Congressional Districts"/>
+          <attribute dataType="geometry" keyType="FIPS_ID" projection="EPSG:26986" title="US States" weaveEntityId="110" name="US States"/>
+          <attribute dataType="geometry" keyType="PALIS_ID" projection="EPSG:26986" title="Water Bodies (100k Hydro)" weaveEntityId="12" name="Water Bodies (100k Hydro)"/>
+        </category>
+      </hierarchy>
+    </attributeHierarchy>
+    <hierarchyURL/>
+    <idFields/>
+    <url>/WeaveServices/DataService</url>
+  </WeaveDataSource>
+  <LinkableHashMap name="Probe Header Columns" encoding="dynamic">
+    <ReferencedColumn name="ReferencedColumn2">
+      <dynamicColumnReference encoding="dynamic">
+        <HierarchyColumnReference>
+          <dataSourceName>MetroBoston DataCommon</dataSourceName>
+          <hierarchyPath encoding="xml">
+            <hierarchy>
+              <category title="Data Tables" name="Data Tables">
+                <category weaveEntityId="23416" title="Housing Cost Burden by Income, 5yr Avg 2008-12 (Municipal)">
+                  <attribute dataType="string" title="Municipality" weaveEntityId="23419" keyType="MUNI_ID"/>
+                </category>
+              </category>
+            </hierarchy>
+          </hierarchyPath>
+        </HierarchyColumnReference>
+      </dynamicColumnReference>
+    </ReferencedColumn>
+  </LinkableHashMap>
+  <LinkableHashMap name="Probed Columns" encoding="dynamic"/>
+  <CompoundBarChartTool name="CompoundBarChartTool">
+    <attributesToIncludeInProbe encoding="json">[
+  false,
+  false,
+  false,
+  true,
+  true,
+  true
+]</attributesToIncludeInProbe>
+    <buttonRadius>3</buttonRadius>
+    <children encoding="dynamic">
+      <SimpleInteractiveVisualization name="visualization">
+        <axesAlpha>1</axesAlpha>
+        <axesColor>11579568</axesColor>
+        <axesThickness>1</axesThickness>
+        <enableAutoZoomXToNiceNumbers>false</enableAutoZoomXToNiceNumbers>
+        <enableAutoZoomYToNiceNumbers>false</enableAutoZoomYToNiceNumbers>
+        <enableProbe>true</enableProbe>
+        <enableSelection>true</enableSelection>
+        <enableZoomAndPan>false</enableZoomAndPan>
+        <gridLineAlpha>1</gridLineAlpha>
+        <gridLineColor>14540253</gridLineColor>
+        <gridLineThickness>1</gridLineThickness>
+        <plotManager>
+          <enableAutoZoomToExtent>true</enableAutoZoomToExtent>
+          <enableAutoZoomToSelection>false</enableAutoZoomToSelection>
+          <enableFixedAspectRatio>false</enableFixedAspectRatio>
+          <includeNonSelectableLayersInAutoZoom>false</includeNonSelectableLayersInAutoZoom>
+          <layerSettings encoding="dynamic">
+            <LayerSettings name="yAxis">
+              <alwaysRenderSelection>false</alwaysRenderSelection>
+              <maxVisibleScale>Infinity</maxVisibleScale>
+              <minVisibleScale>0</minVisibleScale>
+              <selectable>false</selectable>
+              <visible>true</visible>
+            </LayerSettings>
+            <LayerSettings name="xAxis">
+              <alwaysRenderSelection>false</alwaysRenderSelection>
+              <maxVisibleScale>Infinity</maxVisibleScale>
+              <minVisibleScale>0</minVisibleScale>
+              <selectable>false</selectable>
+              <visible>true</visible>
+            </LayerSettings>
+            <LayerSettings name="plot">
+              <alwaysRenderSelection>false</alwaysRenderSelection>
+              <maxVisibleScale>Infinity</maxVisibleScale>
+              <minVisibleScale>0</minVisibleScale>
+              <selectable>true</selectable>
+              <visible>true</visible>
+            </LayerSettings>
+            <LayerSettings name="probeLine">
+              <alwaysRenderSelection>false</alwaysRenderSelection>
+              <maxVisibleScale>Infinity</maxVisibleScale>
+              <minVisibleScale>0</minVisibleScale>
+              <selectable>false</selectable>
+              <visible>true</visible>
+            </LayerSettings>
+          </layerSettings>
+          <marginBottom>60</marginBottom>
+          <marginLeft>50</marginLeft>
+          <marginRight>5</marginRight>
+          <marginTop>25</marginTop>
+          <maxZoomLevel>16</maxZoomLevel>
+          <minScreenSize>128</minScreenSize>
+          <minZoomLevel>0</minZoomLevel>
+          <overrideXMax>NaN</overrideXMax>
+          <overrideXMin>NaN</overrideXMin>
+          <overrideYMax>NaN</overrideYMax>
+          <overrideYMin>NaN</overrideYMin>
+          <plotters encoding="dynamic">
+            <SimpleAxisPlotter name="yAxis">
+              <axisLabelHorizontalDistance>0</axisLabelHorizontalDistance>
+              <axisLabelRelativeAngle>90</axisLabelRelativeAngle>
+              <axisLabelVerticalDistance>0</axisLabelVerticalDistance>
+              <axisLineDataBounds>
+                <xMax>-0.5</xMax>
+                <xMin>-0.5</xMin>
+                <yMax>103.1027</yMax>
+                <yMin>0</yMin>
+              </axisLineDataBounds>
+              <axisLineMaxValue>103.1027</axisLineMaxValue>
+              <axisLineMinValue>0</axisLineMinValue>
+              <filteredKeySet>
+                <keyFilter encoding="dynamic">
+                  <GlobalObjectReference name="defaultSubsetKeyFilter"/>
+                </keyFilter>
+              </filteredKeySet>
+              <forceTickCount>false</forceTickCount>
+              <labelFunction>number+'%'</labelFunction>
+              <labelHorizontalAlign>right</labelHorizontalAlign>
+              <labelNumberFormatter>
+                <decimalSeparatorFrom>.</decimalSeparatorFrom>
+                <decimalSeparatorTo>.</decimalSeparatorTo>
+                <precision>0</precision>
+                <rounding>none</rounding>
+                <thousandsSeparatorFrom>,</thousandsSeparatorFrom>
+                <thousandsSeparatorTo>,</thousandsSeparatorTo>
+                <useNegativeSign>true</useNegativeSign>
+                <useThousandsSeparator>true</useThousandsSeparator>
+              </labelNumberFormatter>
+              <labelTextAlignment>left</labelTextAlignment>
+              <labelVerticalAlign>middle</labelVerticalAlign>
+              <labelWordWrapSize>80</labelWordWrapSize>
+              <overrideAxisName>% Cost Burdened Households</overrideAxisName>
+              <showAxisName>true</showAxisName>
+              <showLabels>true</showLabels>
+              <tickCountRequested>10</tickCountRequested>
+              <tickMaxValue>NaN</tickMaxValue>
+              <tickMinValue>NaN</tickMinValue>
+            </SimpleAxisPlotter>
+            <SimpleAxisPlotter name="xAxis">
+              <axisLabelHorizontalDistance>-30</axisLabelHorizontalDistance>
+              <axisLabelRelativeAngle>-30</axisLabelRelativeAngle>
+              <axisLabelVerticalDistance>5</axisLabelVerticalDistance>
+              <axisLineDataBounds>
+                <xMax>14.5</xMax>
+                <xMin>-0.5</xMin>
+                <yMax>0</yMax>
+                <yMin>0</yMin>
+              </axisLineDataBounds>
+              <axisLineMaxValue>14.5</axisLineMaxValue>
+              <axisLineMinValue>-0.5</axisLineMinValue>
+              <filteredKeySet>
+                <keyFilter encoding="dynamic">
+                  <GlobalObjectReference name="defaultSubsetKeyFilter"/>
+                </keyFilter>
+              </filteredKeySet>
+              <forceTickCount>true</forceTickCount>
+              <labelFunction>string.split(' ').slice(0,2).join(' ')</labelFunction>
+              <labelHorizontalAlign>center</labelHorizontalAlign>
+              <labelNumberFormatter>
+                <decimalSeparatorFrom>.</decimalSeparatorFrom>
+                <decimalSeparatorTo>.</decimalSeparatorTo>
+                <precision>0</precision>
+                <rounding>none</rounding>
+                <thousandsSeparatorFrom>,</thousandsSeparatorFrom>
+                <thousandsSeparatorTo>,</thousandsSeparatorTo>
+                <useNegativeSign>true</useNegativeSign>
+                <useThousandsSeparator>true</useThousandsSeparator>
+              </labelNumberFormatter>
+              <labelTextAlignment>left</labelTextAlignment>
+              <labelVerticalAlign>top</labelVerticalAlign>
+              <labelWordWrapSize>90</labelWordWrapSize>
+              <overrideAxisName/>
+              <showAxisName>false</showAxisName>
+              <showLabels>true</showLabels>
+              <tickCountRequested>15</tickCountRequested>
+              <tickMaxValue>14</tickMaxValue>
+              <tickMinValue>0</tickMinValue>
+            </SimpleAxisPlotter>
+            <CompoundBarChartPlotter name="plot">
+              <barSpacing>0.3620689655172414</barSpacing>
+              <chartColors>0xB2CAE0,0x004E98,0x00274C</chartColors>
+              <colorColumn>
+                <defaultValue/>
+                <internalDynamicColumn encoding="dynamic">
+                  <GlobalObjectReference name="defaultColorColumn"/>
+                </internalDynamicColumn>
+              </colorColumn>
+              <filteredKeySet>
+                <keyFilter encoding="dynamic">
+                  <GlobalObjectReference name="defaultSubsetKeyFilter"/>
+                </keyFilter>
+              </filteredKeySet>
+              <groupBySortColumn>false</groupBySortColumn>
+              <groupingMode>group</groupingMode>
+              <heightColumns encoding="dynamic">
+                <ReferencedColumn name="ReferencedColumn">
+                  <dynamicColumnReference encoding="dynamic">
+                    <HierarchyColumnReference>
+                      <dataSourceName>MetroBoston DataCommon</dataSourceName>
+                      <hierarchyPath encoding="xml">
+                        <hierarchy>
+                          <category title="Data Tables" name="Data Tables">
+                            <category weaveEntityId="23416" title="Housing Cost Burden by Income, 5yr Avg 2008-12 (Municipal)">
+                              <attribute dataType="number" title="% Cost Burdened Occupied housing units making less than $35,000" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23441"/>
+                            </category>
+                          </category>
+                        </hierarchy>
+                      </hierarchyPath>
+                    </HierarchyColumnReference>
+                  </dynamicColumnReference>
+                </ReferencedColumn>
+                <ReferencedColumn name="ReferencedColumn2">
+                  <dynamicColumnReference encoding="dynamic">
+                    <HierarchyColumnReference>
+                      <dataSourceName>MetroBoston DataCommon</dataSourceName>
+                      <hierarchyPath encoding="xml">
+                        <hierarchy>
+                          <category title="Data Tables" name="Data Tables">
+                            <category weaveEntityId="23416" title="Housing Cost Burden by Income, 5yr Avg 2008-12 (Municipal)">
+                              <attribute dataType="number" title="% Cost Burdened Occupied housing units making  $35,000-$75,000" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23445"/>
+                            </category>
+                          </category>
+                        </hierarchy>
+                      </hierarchyPath>
+                    </HierarchyColumnReference>
+                  </dynamicColumnReference>
+                </ReferencedColumn>
+                <ReferencedColumn name="ReferencedColumn3">
+                  <dynamicColumnReference encoding="dynamic">
+                    <HierarchyColumnReference>
+                      <dataSourceName>MetroBoston DataCommon</dataSourceName>
+                      <hierarchyPath encoding="xml">
+                        <hierarchy>
+                          <category title="Data Tables" name="Data Tables">
+                            <category weaveEntityId="23416" title="Housing Cost Burden by Income, 5yr Avg 2008-12 (Municipal)">
+                              <attribute dataType="number" title="% Cost Burdened Occupied housing units making  $75,000+" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23449"/>
+                            </category>
+                          </category>
+                        </hierarchy>
+                      </hierarchyPath>
+                    </HierarchyColumnReference>
+                  </dynamicColumnReference>
+                </ReferencedColumn>
+              </heightColumns>
+              <horizontalMode>false</horizontalMode>
+              <labelColor>0</labelColor>
+              <labelColumn encoding="dynamic">
+                <ReferencedColumn>
+                  <dynamicColumnReference encoding="dynamic">
+                    <HierarchyColumnReference>
+                      <dataSourceName>MetroBoston DataCommon</dataSourceName>
+                      <hierarchyPath encoding="xml">
+                        <hierarchy>
+                          <category title="Housing" name="Data Tables">
+                            <category source="ACS" title="Housing Cost Burden by Income, 5yr Avg 2007-11 (Municipal)" weaveEntityId="18318" subject="Housing">
+                              <attribute dataType="string" title="Municipality" weaveEntityId="18321" keyType="MUNI_ID"/>
+                            </category>
+                          </category>
+                        </hierarchy>
+                      </hierarchyPath>
+                    </HierarchyColumnReference>
+                  </dynamicColumnReference>
+                </ReferencedColumn>
+              </labelColumn>
+              <labelDataCoordinate>NaN</labelDataCoordinate>
+              <labelFormatter>string</labelFormatter>
+              <labelHorizontalAlign>right</labelHorizontalAlign>
+              <labelMaxWidth>200</labelMaxWidth>
+              <labelRelativeAngle>NaN</labelRelativeAngle>
+              <labelVerticalAlign>middle</labelVerticalAlign>
+              <lineStyle encoding="dynamic">
+                <SolidLineStyle>
+                  <alpha>
+                    <defaultValue>0.5</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </alpha>
+                  <caps>
+                    <defaultValue/>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </caps>
+                  <color>
+                    <defaultValue>0</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </color>
+                  <enabled>
+                    <defaultValue>true</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </enabled>
+                  <joints>
+                    <defaultValue/>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </joints>
+                  <miterLimit>
+                    <defaultValue>3</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </miterLimit>
+                  <pixelHinting>
+                    <defaultValue>false</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </pixelHinting>
+                  <scaleMode>
+                    <defaultValue>normal</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </scaleMode>
+                  <weight>
+                    <defaultValue>1</defaultValue>
+                    <internalDynamicColumn encoding="dynamic">
+                      <NormalizedColumn>
+                        <internalDynamicColumn encoding="dynamic"/>
+                        <max>5</max>
+                        <min>1</min>
+                      </NormalizedColumn>
+                    </internalDynamicColumn>
+                  </weight>
+                </SolidLineStyle>
+              </lineStyle>
+              <negativeErrorColumns encoding="dynamic">
+                <ReferencedColumn name="ReferencedColumn">
+                  <dynamicColumnReference encoding="dynamic">
+                    <HierarchyColumnReference>
+                      <dataSourceName>MetroBoston DataCommon</dataSourceName>
+                      <hierarchyPath encoding="xml">
+                        <hierarchy>
+                          <category title="Data Tables" name="Data Tables">
+                            <category weaveEntityId="23416" title="Housing Cost Burden by Income, 5yr Avg 2008-12 (Municipal)">
+                              <attribute dataType="number" title="% Cost Burdened Occupied housing units making less than $35,000, Margin of Error" weaveEntityId="23442" keyType="MUNI_ID"/>
+                            </category>
+                          </category>
+                        </hierarchy>
+                      </hierarchyPath>
+                    </HierarchyColumnReference>
+                  </dynamicColumnReference>
+                </ReferencedColumn>
+                <ReferencedColumn name="ReferencedColumn2">
+                  <dynamicColumnReference encoding="dynamic">
+                    <HierarchyColumnReference>
+                      <dataSourceName>MetroBoston DataCommon</dataSourceName>
+                      <hierarchyPath encoding="xml">
+                        <hierarchy>
+                          <category title="Data Tables" name="Data Tables">
+                            <category weaveEntityId="23416" title="Housing Cost Burden by Income, 5yr Avg 2008-12 (Municipal)">
+                              <attribute dataType="number" title="% Cost Burdened Occupied housing units making  $35,000-$75,000, Margin of Error" weaveEntityId="23446" keyType="MUNI_ID"/>
+                            </category>
+                          </category>
+                        </hierarchy>
+                      </hierarchyPath>
+                    </HierarchyColumnReference>
+                  </dynamicColumnReference>
+                </ReferencedColumn>
+                <ReferencedColumn name="ReferencedColumn4">
+                  <dynamicColumnReference encoding="dynamic">
+                    <HierarchyColumnReference>
+                      <dataSourceName>MetroBoston DataCommon</dataSourceName>
+                      <hierarchyPath encoding="xml">
+                        <hierarchy>
+                          <category title="Data Tables" name="Data Tables">
+                            <category weaveEntityId="23416" title="Housing Cost Burden by Income, 5yr Avg 2008-12 (Municipal)">
+                              <attribute dataType="number" title="% Cost Burdened Occupied housing units making  $75,000+, Margin of Error" weaveEntityId="23450" keyType="MUNI_ID"/>
+                            </category>
+                          </category>
+                        </hierarchy>
+                      </hierarchyPath>
+                    </HierarchyColumnReference>
+                  </dynamicColumnReference>
+                </ReferencedColumn>
+              </negativeErrorColumns>
+              <positiveErrorColumns encoding="dynamic">
+                <ReferencedColumn name="ReferencedColumn">
+                  <dynamicColumnReference encoding="dynamic">
+                    <HierarchyColumnReference>
+                      <dataSourceName>MetroBoston DataCommon</dataSourceName>
+                      <hierarchyPath encoding="xml">
+                        <hierarchy>
+                          <category title="Data Tables" name="Data Tables">
+                            <category weaveEntityId="23416" title="Housing Cost Burden by Income, 5yr Avg 2008-12 (Municipal)">
+                              <attribute dataType="number" title="% Cost Burdened Occupied housing units making less than $35,000, Margin of Error" weaveEntityId="23442" keyType="MUNI_ID"/>
+                            </category>
+                          </category>
+                        </hierarchy>
+                      </hierarchyPath>
+                    </HierarchyColumnReference>
+                  </dynamicColumnReference>
+                </ReferencedColumn>
+                <ReferencedColumn name="ReferencedColumn2">
+                  <dynamicColumnReference encoding="dynamic">
+                    <HierarchyColumnReference>
+                      <dataSourceName>MetroBoston DataCommon</dataSourceName>
+                      <hierarchyPath encoding="xml">
+                        <hierarchy>
+                          <category title="Data Tables" name="Data Tables">
+                            <category weaveEntityId="23416" title="Housing Cost Burden by Income, 5yr Avg 2008-12 (Municipal)">
+                              <attribute dataType="number" title="% Cost Burdened Occupied housing units making  $35,000-$75,000, Margin of Error" weaveEntityId="23446" keyType="MUNI_ID"/>
+                            </category>
+                          </category>
+                        </hierarchy>
+                      </hierarchyPath>
+                    </HierarchyColumnReference>
+                  </dynamicColumnReference>
+                </ReferencedColumn>
+                <ReferencedColumn name="ReferencedColumn3">
+                  <dynamicColumnReference encoding="dynamic">
+                    <HierarchyColumnReference>
+                      <dataSourceName>MetroBoston DataCommon</dataSourceName>
+                      <hierarchyPath encoding="xml">
+                        <hierarchy>
+                          <category title="Data Tables" name="Data Tables">
+                            <category weaveEntityId="23416" title="Housing Cost Burden by Income, 5yr Avg 2008-12 (Municipal)">
+                              <attribute dataType="number" title="% Cost Burdened Occupied housing units making  $75,000+, Margin of Error" weaveEntityId="23450" keyType="MUNI_ID"/>
+                            </category>
+                          </category>
+                        </hierarchy>
+                      </hierarchyPath>
+                    </HierarchyColumnReference>
+                  </dynamicColumnReference>
+                </ReferencedColumn>
+              </positiveErrorColumns>
+              <recordLabelColoring>false</recordLabelColoring>
+              <recordValueLabelColoring>false</recordValueLabelColoring>
+              <showLabels>false</showLabels>
+              <showValueLabels>false</showValueLabels>
+              <sortColumn encoding="dynamic">
+                <ReferencedColumn>
+                  <dynamicColumnReference encoding="dynamic">
+                    <HierarchyColumnReference>
+                      <dataSourceName>MetroBoston DataCommon</dataSourceName>
+                      <hierarchyPath encoding="xml">
+                        <hierarchy>
+                          <category title="Housing" name="Data Tables">
+                            <category source="ACS" title="Housing Cost Burden by Income, 5yr Avg 2007-11 (Municipal)" weaveEntityId="18318" subject="Housing">
+                              <attribute dataType="number" title="Municipal ID" weaveEntityId="18320" keyType="MUNI_ID"/>
+                            </category>
+                          </category>
+                        </hierarchy>
+                      </hierarchyPath>
+                    </HierarchyColumnReference>
+                  </dynamicColumnReference>
+                </ReferencedColumn>
+              </sortColumn>
+              <stackedMissingDataGap>true</stackedMissingDataGap>
+              <valueLabelColor>0</valueLabelColor>
+              <valueLabelDataCoordinate>NaN</valueLabelDataCoordinate>
+              <valueLabelHorizontalAlign>left</valueLabelHorizontalAlign>
+              <valueLabelMaxWidth>200</valueLabelMaxWidth>
+              <valueLabelRelativeAngle>NaN</valueLabelRelativeAngle>
+              <valueLabelVerticalAlign>middle</valueLabelVerticalAlign>
+              <zoomToSubset>true</zoomToSubset>
+              <zoomToSubsetBars>false</zoomToSubsetBars>
+            </CompoundBarChartPlotter>
+            <ProbeLinePlotter name="probeLine">
+              <filteredKeySet>
+                <keyFilter encoding="dynamic">
+                  <GlobalObjectReference name="defaultSubsetKeyFilter"/>
+                </keyFilter>
+              </filteredKeySet>
+              <lineStyle encoding="dynamic">
+                <SolidLineStyle>
+                  <alpha>
+                    <defaultValue>0.5</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </alpha>
+                  <caps>
+                    <defaultValue/>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </caps>
+                  <color>
+                    <defaultValue>0</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </color>
+                  <enabled>
+                    <defaultValue>true</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </enabled>
+                  <joints>
+                    <defaultValue/>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </joints>
+                  <miterLimit>
+                    <defaultValue>3</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </miterLimit>
+                  <pixelHinting>
+                    <defaultValue>false</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </pixelHinting>
+                  <scaleMode>
+                    <defaultValue>normal</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </scaleMode>
+                  <weight>
+                    <defaultValue>1</defaultValue>
+                    <internalDynamicColumn encoding="dynamic">
+                      <NormalizedColumn>
+                        <internalDynamicColumn encoding="dynamic"/>
+                        <max>5</max>
+                        <min>1</min>
+                      </NormalizedColumn>
+                    </internalDynamicColumn>
+                  </weight>
+                </SolidLineStyle>
+              </lineStyle>
+            </ProbeLinePlotter>
+          </plotters>
+          <zoomBounds>
+            <xMax>14.5</xMax>
+            <xMin>-0.5</xMin>
+            <yMax>103.1027</yMax>
+            <yMin>0</yMin>
+          </zoomBounds>
+        </plotManager>
+        <zoomFactor>2</zoomFactor>
+      </SimpleInteractiveVisualization>
+    </children>
+    <closeable>true</closeable>
+    <enableBorders>false</enableBorders>
+    <enableMoveResize>true</enableMoveResize>
+    <enableSubMenu>false</enableSubMenu>
+    <enableTitle>false</enableTitle>
+    <enableZOrder>true</enableZOrder>
+    <linkHeightAndSortColumns>false</linkHeightAndSortColumns>
+    <maximizable>true</maximizable>
+    <maximized>true</maximized>
+    <minimizable>true</minimizable>
+    <minimized>false</minimized>
+    <panelBackgroundColor>NaN</panelBackgroundColor>
+    <panelBorderColor>NaN</panelBorderColor>
+    <panelHeight>50%</panelHeight>
+    <panelStyleList/>
+    <panelTitle/>
+    <panelWidth>50%</panelWidth>
+    <panelX>6%</panelX>
+    <panelY>4%</panelY>
+    <showAllLabels>true</showAllLabels>
+    <sizeAxisTickCountRequested>10</sizeAxisTickCountRequested>
+    <zOrder>-1</zOrder>
+  </CompoundBarChartTool>
+  <BarChartLegendTool name="BarChartLegendTool">
+    <buttonRadius>3</buttonRadius>
+    <children encoding="dynamic">
+      <SimpleInteractiveVisualization name="visualization">
+        <axesAlpha>NaN</axesAlpha>
+        <axesColor>NaN</axesColor>
+        <axesThickness>NaN</axesThickness>
+        <enableAutoZoomXToNiceNumbers>false</enableAutoZoomXToNiceNumbers>
+        <enableAutoZoomYToNiceNumbers>false</enableAutoZoomYToNiceNumbers>
+        <enableProbe>true</enableProbe>
+        <enableSelection>true</enableSelection>
+        <enableZoomAndPan>false</enableZoomAndPan>
+        <gridLineAlpha>NaN</gridLineAlpha>
+        <gridLineColor>NaN</gridLineColor>
+        <gridLineThickness>NaN</gridLineThickness>
+        <plotManager>
+          <enableAutoZoomToExtent>true</enableAutoZoomToExtent>
+          <enableAutoZoomToSelection>false</enableAutoZoomToSelection>
+          <enableFixedAspectRatio>false</enableFixedAspectRatio>
+          <includeNonSelectableLayersInAutoZoom>false</includeNonSelectableLayersInAutoZoom>
+          <layerSettings encoding="dynamic">
+            <LayerSettings name="plot">
+              <alwaysRenderSelection>false</alwaysRenderSelection>
+              <maxVisibleScale>Infinity</maxVisibleScale>
+              <minVisibleScale>0</minVisibleScale>
+              <selectable>true</selectable>
+              <visible>true</visible>
+            </LayerSettings>
+            <LayerSettings name="color legend">
+              <alwaysRenderSelection>false</alwaysRenderSelection>
+              <maxVisibleScale>Infinity</maxVisibleScale>
+              <minVisibleScale>0</minVisibleScale>
+              <selectable>true</selectable>
+              <visible>false</visible>
+            </LayerSettings>
+          </layerSettings>
+          <marginBottom>5</marginBottom>
+          <marginLeft>5</marginLeft>
+          <marginRight>5</marginRight>
+          <marginTop>0</marginTop>
+          <maxZoomLevel>16</maxZoomLevel>
+          <minScreenSize>128</minScreenSize>
+          <minZoomLevel>0</minZoomLevel>
+          <overrideXMax>NaN</overrideXMax>
+          <overrideXMin>NaN</overrideXMin>
+          <overrideYMax>NaN</overrideYMax>
+          <overrideYMin>NaN</overrideYMin>
+          <plotters encoding="dynamic">
+            <BarChartLegendPlotter name="plot">
+              <ascendingOrder>false</ascendingOrder>
+              <chartColors>0xB2CAE0,0x004E98,0x00274C</chartColors>
+              <columns encoding="dynamic">
+                <ReferencedColumn name="ReferencedColumn">
+                  <dynamicColumnReference encoding="dynamic">
+                    <HierarchyColumnReference>
+                      <dataSourceName>MetroBoston DataCommon</dataSourceName>
+                      <hierarchyPath encoding="xml">
+                        <hierarchy>
+                          <category title="Data Tables" name="Data Tables">
+                            <category weaveEntityId="23416" title="Housing Cost Burden by Income, 5yr Avg 2008-12 (Municipal)">
+                              <attribute dataType="number" title="% Cost Burdened Occupied housing units making less than $35,000" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23441"/>
+                            </category>
+                          </category>
+                        </hierarchy>
+                      </hierarchyPath>
+                    </HierarchyColumnReference>
+                  </dynamicColumnReference>
+                </ReferencedColumn>
+                <ReferencedColumn name="ReferencedColumn2">
+                  <dynamicColumnReference encoding="dynamic">
+                    <HierarchyColumnReference>
+                      <dataSourceName>MetroBoston DataCommon</dataSourceName>
+                      <hierarchyPath encoding="xml">
+                        <hierarchy>
+                          <category title="Data Tables" name="Data Tables">
+                            <category weaveEntityId="23416" title="Housing Cost Burden by Income, 5yr Avg 2008-12 (Municipal)">
+                              <attribute dataType="number" title="% Cost Burdened Occupied housing units making  $35,000-$75,000" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23445"/>
+                            </category>
+                          </category>
+                        </hierarchy>
+                      </hierarchyPath>
+                    </HierarchyColumnReference>
+                  </dynamicColumnReference>
+                </ReferencedColumn>
+                <ReferencedColumn name="ReferencedColumn3">
+                  <dynamicColumnReference encoding="dynamic">
+                    <HierarchyColumnReference>
+                      <dataSourceName>MetroBoston DataCommon</dataSourceName>
+                      <hierarchyPath encoding="xml">
+                        <hierarchy>
+                          <category title="Data Tables" name="Data Tables">
+                            <category weaveEntityId="23416" title="Housing Cost Burden by Income, 5yr Avg 2008-12 (Municipal)">
+                              <attribute dataType="number" title="% Cost Burdened Occupied housing units making  $75,000+" keyType="MUNI_ID" string="formatNumber(number, 2)" weaveEntityId="23449"/>
+                            </category>
+                          </category>
+                        </hierarchy>
+                      </hierarchyPath>
+                    </HierarchyColumnReference>
+                  </dynamicColumnReference>
+                </ReferencedColumn>
+              </columns>
+              <filteredKeySet>
+                <keyFilter encoding="dynamic">
+                  <GlobalObjectReference name="defaultSubsetKeyFilter"/>
+                </keyFilter>
+              </filteredKeySet>
+              <itemLabelFunction>string.split(' ').splice(7).join(' ')</itemLabelFunction>
+              <legendTitleFunction>string</legendTitleFunction>
+              <lineStyle>
+                <alpha>
+                  <defaultValue>0.5</defaultValue>
+                  <internalDynamicColumn encoding="dynamic"/>
+                </alpha>
+                <caps>
+                  <defaultValue/>
+                  <internalDynamicColumn encoding="dynamic"/>
+                </caps>
+                <color>
+                  <defaultValue>0</defaultValue>
+                  <internalDynamicColumn encoding="dynamic"/>
+                </color>
+                <enabled>
+                  <defaultValue>true</defaultValue>
+                  <internalDynamicColumn encoding="dynamic"/>
+                </enabled>
+                <joints>
+                  <defaultValue/>
+                  <internalDynamicColumn encoding="dynamic"/>
+                </joints>
+                <miterLimit>
+                  <defaultValue>3</defaultValue>
+                  <internalDynamicColumn encoding="dynamic"/>
+                </miterLimit>
+                <pixelHinting>
+                  <defaultValue>false</defaultValue>
+                  <internalDynamicColumn encoding="dynamic"/>
+                </pixelHinting>
+                <scaleMode>
+                  <defaultValue>normal</defaultValue>
+                  <internalDynamicColumn encoding="dynamic"/>
+                </scaleMode>
+                <weight>
+                  <defaultValue>1</defaultValue>
+                  <internalDynamicColumn encoding="dynamic">
+                    <NormalizedColumn>
+                      <internalDynamicColumn encoding="dynamic"/>
+                      <max>5</max>
+                      <min>1</min>
+                    </NormalizedColumn>
+                  </internalDynamicColumn>
+                </weight>
+              </lineStyle>
+              <maxColumns>4</maxColumns>
+              <shapeSize>12</shapeSize>
+            </BarChartLegendPlotter>
+            <ColorBinLegendPlotter name="color legend">
+              <ascendingOrder>false</ascendingOrder>
+              <dynamicColorColumn encoding="dynamic">
+                <GlobalObjectReference name="defaultColorColumn"/>
+              </dynamicColorColumn>
+              <filteredKeySet>
+                <keyFilter encoding="dynamic">
+                  <GlobalObjectReference name="defaultSubsetKeyFilter"/>
+                </keyFilter>
+              </filteredKeySet>
+              <itemLabelFunction>string.split(' ').splice(7).join(' ')</itemLabelFunction>
+              <legendTitleFunction>string</legendTitleFunction>
+              <lineStyle>
+                <alpha>
+                  <defaultValue>0.5</defaultValue>
+                  <internalDynamicColumn encoding="dynamic"/>
+                </alpha>
+                <caps>
+                  <defaultValue/>
+                  <internalDynamicColumn encoding="dynamic"/>
+                </caps>
+                <color>
+                  <defaultValue>0</defaultValue>
+                  <internalDynamicColumn encoding="dynamic"/>
+                </color>
+                <enabled>
+                  <defaultValue>true</defaultValue>
+                  <internalDynamicColumn encoding="dynamic"/>
+                </enabled>
+                <joints>
+                  <defaultValue/>
+                  <internalDynamicColumn encoding="dynamic"/>
+                </joints>
+                <miterLimit>
+                  <defaultValue>3</defaultValue>
+                  <internalDynamicColumn encoding="dynamic"/>
+                </miterLimit>
+                <pixelHinting>
+                  <defaultValue>false</defaultValue>
+                  <internalDynamicColumn encoding="dynamic"/>
+                </pixelHinting>
+                <scaleMode>
+                  <defaultValue>normal</defaultValue>
+                  <internalDynamicColumn encoding="dynamic"/>
+                </scaleMode>
+                <weight>
+                  <defaultValue>1</defaultValue>
+                  <internalDynamicColumn encoding="dynamic">
+                    <NormalizedColumn>
+                      <internalDynamicColumn encoding="dynamic"/>
+                      <max>5</max>
+                      <min>1</min>
+                    </NormalizedColumn>
+                  </internalDynamicColumn>
+                </weight>
+              </lineStyle>
+              <maxColumns>4</maxColumns>
+              <shapeSize>20</shapeSize>
+              <shapeType>circle</shapeType>
+            </ColorBinLegendPlotter>
+          </plotters>
+          <zoomBounds>
+            <xMax>1</xMax>
+            <xMin>0</xMin>
+            <yMax>1</yMax>
+            <yMin>0</yMin>
+          </zoomBounds>
+        </plotManager>
+        <zoomFactor>2</zoomFactor>
+      </SimpleInteractiveVisualization>
+    </children>
+    <closeable>true</closeable>
+    <dynamicBarChartTool encoding="dynamic">
+      <GlobalObjectReference name="CompoundBarChartTool"/>
+    </dynamicBarChartTool>
+    <enableBorders>false</enableBorders>
+    <enableMoveResize>true</enableMoveResize>
+    <enableSubMenu>false</enableSubMenu>
+    <enableTitle>false</enableTitle>
+    <enableZOrder>true</enableZOrder>
+    <maximizable>true</maximizable>
+    <maximized>false</maximized>
+    <minimizable>true</minimizable>
+    <minimized>false</minimized>
+    <panelBackgroundColor>NaN</panelBackgroundColor>
+    <panelBorderColor>NaN</panelBorderColor>
+    <panelHeight>6%</panelHeight>
+    <panelStyleList/>
+    <panelTitle>Housing Cost Burden by Income</panelTitle>
+    <panelWidth>58%</panelWidth>
+    <panelX>18%</panelX>
+    <panelY>0%</panelY>
+    <zOrder>0</zOrder>
+  </BarChartLegendTool>
+  <SubsetSelector name="SubsetSelector">
+    <buttonRadius>3</buttonRadius>
+    <closeable>true</closeable>
+    <displayRecordInfo>true</displayRecordInfo>
+    <enableBorders>false</enableBorders>
+    <enableMoveResize>true</enableMoveResize>
+    <enableSubMenu>false</enableSubMenu>
+    <enableZOrder>true</enableZOrder>
+    <includeAllRecordsOption>false</includeAllRecordsOption>
+    <maximizable>false</maximizable>
+    <maximized>false</maximized>
+    <minimizable>false</minimizable>
+    <minimized>false</minimized>
+    <panelBackgroundColor>NaN</panelBackgroundColor>
+    <panelBorderColor>NaN</panelBorderColor>
+    <panelHeight>5%</panelHeight>
+    <panelStyleList/>
+    <panelTitle/>
+    <panelWidth>25%</panelWidth>
+    <panelX>75%</panelX>
+    <panelY>0%</panelY>
+    <prompt>Select a Subregion...</prompt>
+    <sliderMode>false</sliderMode>
+    <zOrder>0</zOrder>
+  </SubsetSelector>
+</Weave>

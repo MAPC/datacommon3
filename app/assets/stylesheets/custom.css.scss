@@ -38,10 +38,17 @@ img.header-logo {
   height: inherit;
 }
 
-img.bottom {
-  position: relative;
-  margin: 60px 0;
+
+.item img {
+  height: inherit;
+  min-height: 100%;
 }
+
+
+.carousel-caption {
+  text-align: left !important;
+}
+
 
 .featured {
   color: #FFFFFF;
@@ -73,6 +80,11 @@ img.feature {
   display:   block;
   height:     40px;
   min-height: 40px;
+}
+
+
+.area-summary {
+  padding: 20px 0;
 }
 
 div.static-map-preview {
@@ -112,4 +124,10 @@ ul.chosen-results {
 .snapshot-vis {
   width: 100%;
   max-width: 450px;
+}
+
+
+img.bottom {
+  position: relative;
+  margin: 60px 0;
 }

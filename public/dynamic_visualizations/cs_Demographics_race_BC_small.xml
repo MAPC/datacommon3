@@ -1,0 +1,964 @@
+<Weave encoding="dynamic">
+  <KeySet name="alwaysHighlightKeySet"/>
+  <WeaveProperties name="WeaveProperties">
+    <backgroundColor>13421772</backgroundColor>
+    <cssStyleSheetName>weaveStyle.css</cssStyleSheetName>
+    <dashboardMode>true</dashboardMode>
+    <dashedSelectionBox>5,5</dashedSelectionBox>
+    <dataInfoURL/>
+    <debugScreenBounds>false</debugScreenBounds>
+    <defaultTextFormat>
+      <bold>false</bold>
+      <color>0</color>
+      <font>Sophia Nubian</font>
+      <italic>false</italic>
+      <size>11</size>
+      <underline>false</underline>
+    </defaultTextFormat>
+    <enableAboutMenu>true</enableAboutMenu>
+    <enableAdd2DHistogram>true</enableAdd2DHistogram>
+    <enableAddAttributeMenuTool>true</enableAddAttributeMenuTool>
+    <enableAddBarChart>true</enableAddBarChart>
+    <enableAddCollaborationTool>false</enableAddCollaborationTool>
+    <enableAddColorLegend>true</enableAddColorLegend>
+    <enableAddColormapHistogram>true</enableAddColormapHistogram>
+    <enableAddCompoundRadViz>true</enableAddCompoundRadViz>
+    <enableAddCustomTool>true</enableAddCustomTool>
+    <enableAddDataFilter>true</enableAddDataFilter>
+    <enableAddDataSource>true</enableAddDataSource>
+    <enableAddDataTable>true</enableAddDataTable>
+    <enableAddDimensionSliderTool>true</enableAddDimensionSliderTool>
+    <enableAddGaugeTool>true</enableAddGaugeTool>
+    <enableAddGraphTool>true</enableAddGraphTool>
+    <enableAddHistogram>true</enableAddHistogram>
+    <enableAddLineChart>true</enableAddLineChart>
+    <enableAddMap>true</enableAddMap>
+    <enableAddPieChart>true</enableAddPieChart>
+    <enableAddPieChartHistogram>true</enableAddPieChartHistogram>
+    <enableAddRadViz>true</enableAddRadViz>
+    <enableAddRamachandranPlot>false</enableAddRamachandranPlot>
+    <enableAddRScriptEditor>true</enableAddRScriptEditor>
+    <enableAddScatterplot>true</enableAddScatterplot>
+    <enableAddThermometerTool>true</enableAddThermometerTool>
+    <enableAddTimeSliderTool>true</enableAddTimeSliderTool>
+    <enableAddWeaveDataSource>true</enableAddWeaveDataSource>
+    <enableBitmapFilters>true</enableBitmapFilters>
+    <enableCascadeAllWindows>true</enableCascadeAllWindows>
+    <enableClearCurrentSelection>true</enableClearCurrentSelection>
+    <enableCloseAllWindows>true</enableCloseAllWindows>
+    <enableCreateSubsets>true</enableCreateSubsets>
+    <enableDataMenu>true</enableDataMenu>
+    <enableDebugAlert>false</enableDebugAlert>
+    <enableDrawCircle>true</enableDrawCircle>
+    <enableDynamicTools>true</enableDynamicTools>
+    <enableEditDataSource>true</enableEditDataSource>
+    <enableExportApplicationScreenshot>true</enableExportApplicationScreenshot>
+    <enableExportCSV>true</enableExportCSV>
+    <enableExportDataTable>true</enableExportDataTable>
+    <enableExportToolImage>true</enableExportToolImage>
+    <enableFullscreen>true</enableFullscreen>
+    <enableGeometryProbing>true</enableGeometryProbing>
+    <enableGoFullscreen>true</enableGoFullscreen>
+    <enableManageSavedSelections>true</enableManageSavedSelections>
+    <enableManageSavedSubsets>true</enableManageSavedSubsets>
+    <enableMarker>true</enableMarker>
+    <enableMenuBar>false</enableMenuBar>
+    <enableMinimizeAllWindows>true</enableMinimizeAllWindows>
+    <enableMouseWheel>true</enableMouseWheel>
+    <enableNewDataset>true</enableNewDataset>
+    <enableNewUserWizard>true</enableNewUserWizard>
+    <enablePanelCoordsPercentageMode>true</enablePanelCoordsPercentageMode>
+    <enableProbeAnimation>true</enableProbeAnimation>
+    <enableProbeLines>true</enableProbeLines>
+    <enableProbeToolTip>true</enableProbeToolTip>
+    <enableRefreshHierarchies>true</enableRefreshHierarchies>
+    <enableRemoveSubsets>true</enableRemoveSubsets>
+    <enableRestoreAllMinimizedWindows>true</enableRestoreAllMinimizedWindows>
+    <enableRightClick>true</enableRightClick>
+    <enableSaveCurrentSelection>true</enableSaveCurrentSelection>
+    <enableSaveCurrentSubset>true</enableSaveCurrentSubset>
+    <enableSearchForRecord>true</enableSearchForRecord>
+    <enableSelectionSelectorBox>true</enableSelectionSelectorBox>
+    <enableSelectionsMenu>true</enableSelectionsMenu>
+    <enableSessionMenu>false</enableSessionMenu>
+    <enableShowAllRecords>true</enableShowAllRecords>
+    <enableSubsetControls>true</enableSubsetControls>
+    <enableSubsetSelectionBox>true</enableSubsetSelectionBox>
+    <enableSubsetsMenu>true</enableSubsetsMenu>
+    <enableTileAllWindows>true</enableTileAllWindows>
+    <enableToolAttributeEditing>true</enableToolAttributeEditing>
+    <enableToolControls>true</enableToolControls>
+    <enableToolProbe>true</enableToolProbe>
+    <enableToolSelection>true</enableToolSelection>
+    <enableUserPreferences>true</enableUserPreferences>
+    <enableWindowMenu>true</enableWindowMenu>
+    <eventListeners encoding="dynamic"/>
+    <geometryMetadataRequestMode>xyz</geometryMetadataRequestMode>
+    <geometryMinimumScreenArea>1</geometryMinimumScreenArea>
+    <jriServiceURL>/WeaveServices/JRIService</jriServiceURL>
+    <macroLibraries>weave.api::WeaveAPI</macroLibraries>
+    <macros encoding="dynamic"/>
+    <maxTooltipRecordsShown>1</maxTooltipRecordsShown>
+    <pageTitle>Open Indicators Weave</pageTitle>
+    <panelTitleTextFormat>
+      <bold>false</bold>
+      <color>16777215</color>
+      <font>Verdana</font>
+      <italic>false</italic>
+      <size>10</size>
+      <underline>false</underline>
+    </panelTitleTextFormat>
+    <pdbServiceURL>/WeavePDBService/PDBService</pdbServiceURL>
+    <probeInnerGlowAlpha>1</probeInnerGlowAlpha>
+    <probeInnerGlowBlur>5</probeInnerGlowBlur>
+    <probeInnerGlowColor>16777215</probeInnerGlowColor>
+    <probeInnerGlowStrength>10</probeInnerGlowStrength>
+    <probeOuterGlowAlpha>1</probeOuterGlowAlpha>
+    <probeOuterGlowBlur>3</probeOuterGlowBlur>
+    <probeOuterGlowColor>0</probeOuterGlowColor>
+    <probeOuterGlowStrength>3</probeOuterGlowStrength>
+    <probeToolTipBackgroundAlpha>1</probeToolTipBackgroundAlpha>
+    <probeToolTipBackgroundColor>NaN</probeToolTipBackgroundColor>
+    <probeToolTipFontColor>0</probeToolTipFontColor>
+    <probeToolTipMaxWidth>400</probeToolTipMaxWidth>
+    <rServiceURL>/WeaveServices/RService</rServiceURL>
+    <searchServiceURLs>Wikipedia|http://en.wikipedia.org/wiki/Special:Search?search=
+Google|http://www.google.com/search?q=
+Google Images|http://images.google.com/images?q=
+Google Maps|http://maps.google.com/maps?t=h&amp;q=</searchServiceURLs>
+    <selectionAlphaAmount>0.5</selectionAlphaAmount>
+    <selectionBlurringAmount>4</selectionBlurringAmount>
+    <shadowAlpha>0.5</shadowAlpha>
+    <shadowAngle>45</shadowAngle>
+    <shadowBlur>4</shadowBlur>
+    <shadowColor>0</shadowColor>
+    <shadowDistance>2</shadowDistance>
+    <showAttributeSelector>true</showAttributeSelector>
+    <showColorController>true</showColorController>
+    <showCopyright>false</showCopyright>
+    <showEquationEditor>true</showEquationEditor>
+    <showKeyTypeInColumnTitle>false</showKeyTypeInColumnTitle>
+    <showProbeToolTipEditor>true</showProbeToolTipEditor>
+    <showVisToolCloseDialog>false</showVisToolCloseDialog>
+    <startupJavaScript/>
+    <toolInteractions>
+      <defaultDragMode/>
+      <pan>alt,drag</pan>
+      <probe>move</probe>
+      <select>drag</select>
+      <selectAdd>ctrl,drag</selectAdd>
+      <selectRemove>ctrl,shift,drag</selectRemove>
+      <zoom>shift,drag
+wheel</zoom>
+      <zoomIn>dclick</zoomIn>
+      <zoomOut>shift,dclick</zoomOut>
+      <zoomToExtent>ctrl,alt,shift,dclick</zoomToExtent>
+    </toolInteractions>
+    <version>1.0 Beta (Sat Jan 14 04:00:04 EST 2012)</version>
+    <windowSnapGridSize>5</windowSnapGridSize>
+    <workspaceHeight>252</workspaceHeight>
+    <workspaceMultiplier>1</workspaceMultiplier>
+    <workspaceWidth>333</workspaceWidth>
+  </WeaveProperties>
+  <ColorColumn name="defaultColorColumn">
+    <internalDynamicColumn encoding="dynamic">
+      <GlobalObjectReference name="defaultColorBinColumn"/>
+    </internalDynamicColumn>
+    <ramp>0xFF7F00,0x984EA3,0x4DAF4A,0x377EB8,0xE41A1C</ramp>
+    <recordColors/>
+  </ColorColumn>
+  <BinnedColumn name="defaultColorBinColumn">
+    <binningDefinition encoding="dynamic">
+      <CustomSplitBinningDefinition>
+        <overrideBinNames>% White,% Black,% Asian,% Other,% Latino</overrideBinNames>
+        <splitValues>1,2,3,4,5,6</splitValues>
+      </CustomSplitBinningDefinition>
+    </binningDefinition>
+    <internalDynamicColumn encoding="dynamic">
+      <GlobalObjectReference name="defaultColorDataColumn"/>
+    </internalDynamicColumn>
+  </BinnedColumn>
+  <FilteredColumn name="defaultColorDataColumn">
+    <filter encoding="dynamic">
+      <GlobalObjectReference name="defaultSubsetKeyFilter"/>
+    </filter>
+    <internalDynamicColumn encoding="dynamic">
+      <ReferencedColumn>
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>WeaveDataSource</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Data Tables" name="Data Tables">
+                  <category title="Population by Race with Change, 2000-2010 (Municipal)" name="Population by Race with Change, 2000-2010 (Municipal)">
+                    <attribute name="municipal" dataType="string" dataTable="Population by Race with Change, 2000-2010 (Municipal)" title="Municipal" keyType="MUNI_ID"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+    </internalDynamicColumn>
+  </FilteredColumn>
+  <KeyFilter name="defaultSubsetKeyFilter">
+    <excluded/>
+    <included>MUNI_ID,{{ regionalunit.unitid }},352,353</included>
+    <includeMissingKeys>false</includeMissingKeys>
+    <includeMissingKeyTypes>true</includeMissingKeyTypes>
+  </KeyFilter>
+  <KeySet name="defaultSelectionKeySet"/>
+  <KeySet name="defaultProbeKeySet">MUNI_ID,353</KeySet>
+  <LinkableHashMap encoding="dynamic" name="savedSelections"/>
+  <LinkableHashMap encoding="dynamic" name="savedSubsets"/>
+  <LinkableHashMap encoding="dynamic" name="Probe Header Columns"/>
+  <LinkableHashMap encoding="dynamic" name="Probed Columns"/>
+  <WeaveDataSource name="WeaveDataSource">
+    <attributeHierarchy encoding="xml">
+      <hierarchy name="Open Indicators Server">
+        <category title="Data Tables" name="Data Tables">
+          <category title="Arts and Culture Points" name="Arts and Culture Points"/>
+          <category title="Boston Circle of Promise Schools" name="Boston Circle of Promise Schools"/>
+          <category title="Boston Daycares" name="Boston Daycares"/>
+          <category title="Boston Neighborhoods" name="Boston Neighborhoods"/>
+          <category title="Boston Non-Profit Educational Assets (Points)" name="Boston Non-Profit Educational Assets (Points)"/>
+          <category title="Boston Outline" name="Boston Outline"/>
+          <category title="Boston Parcels (Subset)" name="Boston Parcels (Subset)"/>
+          <category title="Boston Schools" name="Boston Schools"/>
+          <category title="Boston Turnaround Schools" name="Boston Turnaround Schools"/>
+          <category title="Census 2000 Block Groups" name="Census 2000 Block Groups"/>
+          <category title="Census 2000 Tracts" name="Census 2000 Tracts"/>
+          <category title="Census Mail Participation Rate (Municipal)" name="Census Mail Participation Rate (Municipal)"/>
+          <category title="Child Care Providers with Less than High School" name="Child Care Providers with Less than High School"/>
+          <category title="Children in Poverty by Family Type (Census Tracts)" name="Children in Poverty by Family Type (Census Tracts)"/>
+          <category title="Citizenship Status (Municipality)" name="Citizenship Status (Municipality)"/>
+          <category title="Colleges and Universities" name="Colleges and Universities"/>
+          <category title="Community Preservation Act votes (Municipal)" name="Community Preservation Act votes (Municipal)"/>
+          <category title="Commuter Rail" name="Commuter Rail"/>
+          <category title="Educational Attainment over 25 2005-09 (Census tracts)" name="Educational Attainment over 25 2005-09 (Census tracts)"/>
+          <category title="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" name="Educational Attainment over 25 years, ACS 2005-09 (Municipal)"/>
+          <category title="Employment By Sector 2010 (Municipal)" name="Employment By Sector 2010 (Municipal)"/>
+          <category title="Employment By Sector 2010 (Municipal) - Tranposed" name="Employment By Sector 2010 (Municipal) - Tranposed"/>
+          <category title="Geographic Mobility, ACS 2005-09 (Municipal)" name="Geographic Mobility, ACS 2005-09 (Municipal)"/>
+          <category title="Housing Cost Burden for Owners (Municipal)" name="Housing Cost Burden for Owners (Municipal)"/>
+          <category title="Housing Cost Burden for Renters (Census Tracts)" name="Housing Cost Burden for Renters (Census Tracts)"/>
+          <category title="Housing Cost Burden for Renters (Municipal)" name="Housing Cost Burden for Renters (Municipal)"/>
+          <category title="Housing Occupancy, 2000-2010 (Municipal)" name="Housing Occupancy, 2000-2010 (Municipal)"/>
+          <category title="Housing: Census 2000 (Municipal)" name="Housing: Census 2000 (Municipal)"/>
+          <category title="Housing: Household Type 2000-2010 (Municipal)" name="Housing: Household Type 2000-2010 (Municipal)"/>
+          <category title="Indigo Commuter Line" name="Indigo Commuter Line"/>
+          <category title="Landuse Summary Statistics 2005, Municipal" name="Landuse Summary Statistics 2005, Municipal"/>
+          <category title="Libraries" name="Libraries"/>
+          <category title="Linguistic Isolation (Municipal)" name="Linguistic Isolation (Municipal)"/>
+          <category title="MA Counties" name="MA Counties"/>
+          <category title="Massachusetts Municipalities" name="Massachusetts Municipalities"/>
+          <category title="MBTA Subway Lines" name="MBTA Subway Lines"/>
+          <category title="Median Household Income by Race (Municipal)" name="Median Household Income by Race (Municipal)"/>
+          <category title="MetroFuture Region" name="MetroFuture Region"/>
+          <category title="Population By Age 2000 - 2010 (Municipality)" name="Population By Age 2000 - 2010 (Municipality)"/>
+          <category title="Population By Gender and Age with Change, 2000 - 2010 (Municipal)" name="Population By Gender and Age with Change, 2000 - 2010 (Municipal)"/>
+          <category title="Population by Race with Change, 2000-2010 (Municipal)" name="Population by Race with Change, 2000-2010 (Municipal)">
+            <attribute name="muni_id" dataTable="Population by Race with Change, 2000-2010 (Municipal)" dataType="string" title="Municipal ID" keyType="MUNI_ID"/>
+            <attribute name="municipal" dataTable="Population by Race with Change, 2000-2010 (Municipal)" dataType="string" title="Municipal" keyType="MUNI_ID"/>
+            <attribute name="totpop00" dataTable="Population by Race with Change, 2000-2010 (Municipal)" dataType="number" title="Total Population, 2000" keyType="MUNI_ID"/>
+            <attribute name="nh_whi_00" dataTable="Population by Race with Change, 2000-2010 (Municipal)" dataType="number" title="White Population, 2000" keyType="MUNI_ID"/>
+            <attribute name="nh_aa_00" dataTable="Population by Race with Change, 2000-2010 (Municipal)" dataType="number" title="Black Population, 2000" keyType="MUNI_ID"/>
+            <attribute name="nh_na_00" dataTable="Population by Race with Change, 2000-2010 (Municipal)" dataType="number" title="Native American Population, 2000" keyType="MUNI_ID"/>
+            <attribute name="nh_as_00" dataTable="Population by Race with Change, 2000-2010 (Municipal)" dataType="number" title="Asian Population, 2000" keyType="MUNI_ID"/>
+            <attribute name="nh_pi_00" dataTable="Population by Race with Change, 2000-2010 (Municipal)" dataType="number" title="Pacific Islander Population, 2000" keyType="MUNI_ID"/>
+            <attribute name="nh_api_00" dataTable="Population by Race with Change, 2000-2010 (Municipal)" dataType="number" title="Asian/Pacific Islander Population, 2000" keyType="MUNI_ID"/>
+            <attribute name="nh_oth_00" dataTable="Population by Race with Change, 2000-2010 (Municipal)" dataType="number" title="Other One Race Population, 2000" keyType="MUNI_ID"/>
+            <attribute name="nh_two_00" dataTable="Population by Race with Change, 2000-2010 (Municipal)" dataType="number" title="Multi-Race Population, 2000" keyType="MUNI_ID"/>
+            <attribute name="lat_00" dataTable="Population by Race with Change, 2000-2010 (Municipal)" dataType="number" title="Latino Population, 2000" keyType="MUNI_ID"/>
+            <attribute min="0" dataType="number" string="formatNumber(number, 1)+'%'" title="% White Population, 2000" keyType="MUNI_ID" name="nh_whi_00p" dataTable="Population by Race with Change, 2000-2010 (Municipal)" max="100"/>
+            <attribute min="0" dataType="number" string="formatNumber(number, 1)+'%'" title="% Black Population, 2000" keyType="MUNI_ID" name="nh_aa_00p" dataTable="Population by Race with Change, 2000-2010 (Municipal)" max="100"/>
+            <attribute min="0" dataType="number" string="formatNumber(number, 1)+'%'" title="% Native American Population, 2000" keyType="MUNI_ID" name="nh_na_00p" dataTable="Population by Race with Change, 2000-2010 (Municipal)" max="100"/>
+            <attribute min="0" dataType="number" string="formatNumber(number, 1)+'%'" title="% Asian Population, 2000" keyType="MUNI_ID" name="nh_as_00p" dataTable="Population by Race with Change, 2000-2010 (Municipal)" max="100"/>
+            <attribute min="0" dataType="number" string="formatNumber(number, 1)+'%'" title="% Pacific Islander Population, 2000" keyType="MUNI_ID" name="nh_pi_00p" dataTable="Population by Race with Change, 2000-2010 (Municipal)" max="100"/>
+            <attribute min="0" dataType="number" string="formatNumber(number, 1)+'%'" title="% Asian/Pacific Islander Population, 2000" keyType="MUNI_ID" name="nh_api_00p" dataTable="Population by Race with Change, 2000-2010 (Municipal)" max="100"/>
+            <attribute min="0" dataType="number" string="formatNumber(number, 1)+'%'" title="% Other One Race Population, 2000" keyType="MUNI_ID" name="nh_oth_00p" dataTable="Population by Race with Change, 2000-2010 (Municipal)" max="100"/>
+            <attribute min="0" dataType="number" string="formatNumber(number, 1)+'%'" title="% Multi-Race Population, 2000" keyType="MUNI_ID" name="nh_two_00p" dataTable="Population by Race with Change, 2000-2010 (Municipal)" max="100"/>
+            <attribute min="0" dataType="number" string="formatNumber(number, 1)+'%'" title="% Latino Population, 2000" keyType="MUNI_ID" name="lat_00p" dataTable="Population by Race with Change, 2000-2010 (Municipal)" max="100"/>
+            <attribute name="totpop10" dataTable="Population by Race with Change, 2000-2010 (Municipal)" dataType="number" title="Total Population, 2010" keyType="MUNI_ID"/>
+            <attribute min=" " dataType="number" name="nh_whi_10" dataTable="Population by Race with Change, 2000-2010 (Municipal)" title="White Population, 2010" keyType="MUNI_ID"/>
+            <attribute name="nh_aa_10" dataTable="Population by Race with Change, 2000-2010 (Municipal)" dataType="number" title="Black Population, 2010" keyType="MUNI_ID"/>
+            <attribute name="nh_na_10" dataTable="Population by Race with Change, 2000-2010 (Municipal)" dataType="number" title="Native American Population, 2010" keyType="MUNI_ID"/>
+            <attribute name="nh_as_10" dataTable="Population by Race with Change, 2000-2010 (Municipal)" dataType="number" title="Asian Population, 2010" keyType="MUNI_ID"/>
+            <attribute name="nh_pi_10" dataTable="Population by Race with Change, 2000-2010 (Municipal)" dataType="number" title="Pacific Islander Population, 2010" keyType="MUNI_ID"/>
+            <attribute name="nh_api_10" dataTable="Population by Race with Change, 2000-2010 (Municipal)" dataType="number" title="Asian/Pacific Islander Population, 2010" keyType="MUNI_ID"/>
+            <attribute name="nh_oth_10" dataTable="Population by Race with Change, 2000-2010 (Municipal)" dataType="number" title="Other One Race Population, 2010" keyType="MUNI_ID"/>
+            <attribute name="nh_two_10" dataTable="Population by Race with Change, 2000-2010 (Municipal)" dataType="number" title="Multi-Race Population, 2010" keyType="MUNI_ID"/>
+            <attribute name="lat_10" dataTable="Population by Race with Change, 2000-2010 (Municipal)" dataType="number" title="Latino Population, 2010" keyType="MUNI_ID"/>
+            <attribute min="0" dataType="number" string="formatNumber(number, 1)+'%'" title="% White Population, 2010" keyType="MUNI_ID" name="nh_whi_10p" dataTable="Population by Race with Change, 2000-2010 (Municipal)" max="100"/>
+            <attribute min="0" dataType="number" string="formatNumber(number, 1)+'%'" title="% Black Population, 2010" keyType="MUNI_ID" name="nh_aa_10p" dataTable="Population by Race with Change, 2000-2010 (Municipal)" max="100"/>
+            <attribute min="0" dataType="number" string="formatNumber(number, 1)+'%'" title="% Native American Population, 2010" keyType="MUNI_ID" name="nh_na_10p" dataTable="Population by Race with Change, 2000-2010 (Municipal)" max="100"/>
+            <attribute min="0" dataType="number" string="formatNumber(number, 1)+'%'" title="% Asian Population, 2010" keyType="MUNI_ID" name="nh_as_10p" dataTable="Population by Race with Change, 2000-2010 (Municipal)" max="100"/>
+            <attribute min="0" dataType="number" string="formatNumber(number, 1)+'%'" title="% Pacific Islander Population, 2010" keyType="MUNI_ID" name="nh_pi_10p" dataTable="Population by Race with Change, 2000-2010 (Municipal)" max="100"/>
+            <attribute min="0" dataType="number" string="formatNumber(number, 1)+'%'" title="% Asian/Pacific Islander Population, 2010" keyType="MUNI_ID" name="nh_api_10p" dataTable="Population by Race with Change, 2000-2010 (Municipal)" max="100"/>
+            <attribute min="0" dataType="number" string="formatNumber(number, 1)+'%'" title="% Other One Race Population, 2010" keyType="MUNI_ID" name="nh_oth_10p" dataTable="Population by Race with Change, 2000-2010 (Municipal)" max="100"/>
+            <attribute min="0" dataType="number" string="formatNumber(number, 1)+'%'" title="% Multi-Race Population, 2010" keyType="MUNI_ID" name="nh_two_10p" dataTable="Population by Race with Change, 2000-2010 (Municipal)" max="100"/>
+            <attribute min="0" dataType="number" string="formatNumber(number, 1)+'%'" title="% Latino Population, 2010" keyType="MUNI_ID" name="lat_10p" dataTable="Population by Race with Change, 2000-2010 (Municipal)" max="100"/>
+            <attribute name="totpopdif" dataTable="Population by Race with Change, 2000-2010 (Municipal)" dataType="number" title="Difference in Total Population, 2000-2010" keyType="MUNI_ID"/>
+            <attribute name="nh_whi_dif" dataTable="Population by Race with Change, 2000-2010 (Municipal)" dataType="number" title="Difference in White Population, 2000-2010" keyType="MUNI_ID"/>
+            <attribute name="nh_aa_dif" dataTable="Population by Race with Change, 2000-2010 (Municipal)" dataType="number" title="Difference in Black Population, 2000-2010" keyType="MUNI_ID"/>
+            <attribute name="nh_na_dif" dataTable="Population by Race with Change, 2000-2010 (Municipal)" dataType="number" title="Difference in Native American Population, 2000-2010" keyType="MUNI_ID"/>
+            <attribute name="nh_as_dif" dataTable="Population by Race with Change, 2000-2010 (Municipal)" dataType="number" title="Difference in Asian Population, 2000-2010" keyType="MUNI_ID"/>
+            <attribute name="nh_pi_dif" dataTable="Population by Race with Change, 2000-2010 (Municipal)" dataType="number" title="Difference in Pacific Islander Population, 2000-2010" keyType="MUNI_ID"/>
+            <attribute name="nh_api_dif" dataTable="Population by Race with Change, 2000-2010 (Municipal)" dataType="number" title="Difference in Asian/Pacific Islander Population, 2000-2010" keyType="MUNI_ID"/>
+            <attribute name="nh_oth_dif" dataTable="Population by Race with Change, 2000-2010 (Municipal)" dataType="number" title="Difference in Other One Race Population, 2000-2010" keyType="MUNI_ID"/>
+            <attribute name="nh_two_dif" dataTable="Population by Race with Change, 2000-2010 (Municipal)" dataType="number" title="Difference in Multi-Race Population, 2000-2010" keyType="MUNI_ID"/>
+            <attribute name="lat_dif" dataTable="Population by Race with Change, 2000-2010 (Municipal)" dataType="number" title="Difference in Latino Population, 2000-2010" keyType="MUNI_ID"/>
+            <attribute dataType="number" name="nh_wh_pdif" string="formatNumber(number, 1)+'%'" title="Difference in % White Population, 2000-2010" dataTable="Population by Race with Change, 2000-2010 (Municipal)" keyType="MUNI_ID"/>
+            <attribute dataType="number" name="nh_aa_pdif" string="formatNumber(number, 1)+'%'" title="Difference in % Black Population, 2000-2010" dataTable="Population by Race with Change, 2000-2010 (Municipal)" keyType="MUNI_ID"/>
+            <attribute dataType="number" name="nh_na_pdif" string="formatNumber(number, 1)+'%'" title="Difference in % Native American Population, 2000-2010" dataTable="Population by Race with Change, 2000-2010 (Municipal)" keyType="MUNI_ID"/>
+            <attribute dataType="number" name="nh_as_pdif" string="formatNumber(number, 1)+'%'" title="Difference in % Asian Population, 2000-2010" dataTable="Population by Race with Change, 2000-2010 (Municipal)" keyType="MUNI_ID"/>
+            <attribute dataType="number" name="nh_pi_pdif" string="formatNumber(number, 1)+'%'" title="Difference in % Pacific Islander Population, 2000-2010" dataTable="Population by Race with Change, 2000-2010 (Municipal)" keyType="MUNI_ID"/>
+            <attribute dataType="number" name="nhapi_pdif" string="formatNumber(number, 1)+'%'" title="Difference in % Asian/Pacific Islander Population, 2000-2010" dataTable="Population by Race with Change, 2000-2010 (Municipal)" keyType="MUNI_ID"/>
+            <attribute dataType="number" name="nhoth_pdif" string="formatNumber(number, 1)+'%'" title="Difference in % Other One Race Population, 2000-2010" dataTable="Population by Race with Change, 2000-2010 (Municipal)" keyType="MUNI_ID"/>
+            <attribute dataType="number" name="nhtwo_pdif" string="formatNumber(number, 1)+'%'" title="Difference in % Multi-Race Population, 2000-2010" dataTable="Population by Race with Change, 2000-2010 (Municipal)" keyType="MUNI_ID"/>
+            <attribute dataType="number" name="lat_pdif" string="formatNumber(number, 1)+'%'" title="Difference in % Latino Population, 2000-2010" dataTable="Population by Race with Change, 2000-2010 (Municipal)" keyType="MUNI_ID"/>
+            <attribute dataType="number" name="nh_wh_pch" string="formatNumber(number, 1)+'%'" title="% Change in White Population, 2000-2010" dataTable="Population by Race with Change, 2000-2010 (Municipal)" keyType="MUNI_ID"/>
+            <attribute dataType="number" name="nh_aa_pch" string="formatNumber(number, 1)+'%'" title="% Change in Black Population, 2000-2010" dataTable="Population by Race with Change, 2000-2010 (Municipal)" keyType="MUNI_ID"/>
+            <attribute dataType="number" name="nh_na_pch" string="formatNumber(number, 1)+'%'" title="% Change in Native American Population, 2000-2010" dataTable="Population by Race with Change, 2000-2010 (Municipal)" keyType="MUNI_ID"/>
+            <attribute dataType="number" name="nh_as_pch" string="formatNumber(number, 1)+'%'" title="% Change in Asian Population, 2000-2010" dataTable="Population by Race with Change, 2000-2010 (Municipal)" keyType="MUNI_ID"/>
+            <attribute dataType="number" name="nh_pi_pch" string="formatNumber(number, 1)+'%'" title="% Change in Pacific Islander Population, 2000-2010" dataTable="Population by Race with Change, 2000-2010 (Municipal)" keyType="MUNI_ID"/>
+            <attribute dataType="number" name="nhapi_pch" string="formatNumber(number, 1)+'%'" title="% Change in Asian/Pacific Islander Population, 2000-2010" dataTable="Population by Race with Change, 2000-2010 (Municipal)" keyType="MUNI_ID"/>
+            <attribute dataType="number" name="nhoth_pch" string="formatNumber(number, 1)+'%'" title="% Change in Other One Race Population, 2000-2010" dataTable="Population by Race with Change, 2000-2010 (Municipal)" keyType="MUNI_ID"/>
+            <attribute dataType="number" name="nhtwo_pch" string="formatNumber(number, 1)+'%'" title="% Change in Multi-Race Population, 2000-2010" dataTable="Population by Race with Change, 2000-2010 (Municipal)" keyType="MUNI_ID"/>
+            <attribute dataType="number" name="lat_pch" string="formatNumber(number, 1)+'%'" title="% Change in Latino Population, 2000-2010" dataTable="Population by Race with Change, 2000-2010 (Municipal)" keyType="MUNI_ID"/>
+          </category>
+          <category title="Population by Race with Change, 2010-2011 (Municipal) - Transposed" name="Population by Race with Change, 2010-2011 (Municipal) - Transposed"/>
+          <category title="School Districts" name="School Districts"/>
+          <category title="School Districts by Town" name="School Districts by Town"/>
+          <category title="School Districts: Enrollment" name="School Districts: Enrollment"/>
+          <category title="School Districts: Enrollment (multi-year)" name="School Districts: Enrollment (multi-year)"/>
+          <category title="School Districts: Enrollment, 2010-11" name="School Districts: Enrollment, 2010-11"/>
+          <category title="School Districts: Graduation Plans" name="School Districts: Graduation Plans"/>
+          <category title="School Districts: Graduation Plans (multi-year)" name="School Districts: Graduation Plans (multi-year)"/>
+          <category title="School Districts: Graduation Plans by year" name="School Districts: Graduation Plans by year"/>
+          <category title="School Municipal Districts: Enrollment (multi-year)" name="School Municipal Districts: Enrollment (multi-year)"/>
+          <category title="School Municipal Districts: Enrollment, 2009-10" name="School Municipal Districts: Enrollment, 2009-10"/>
+          <category title="School Municipal Districts: Enrollment, 2010-11" name="School Municipal Districts: Enrollment, 2010-11"/>
+          <category title="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" name="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011"/>
+          <category title="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" name="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011"/>
+          <category title="School Municipal Districts: MCAS Grade 03 Reading Proficiency, 2011" name="School Municipal Districts: MCAS Grade 03 Reading Proficiency, 2011"/>
+          <category title="School Municipal Districts: MCAS Grade 08 Math Proficiency for Student Groups, 2011" name="School Municipal Districts: MCAS Grade 08 Math Proficiency for Student Groups, 2011"/>
+          <category title="School Municipal Districts: MCAS Grade 08 Reading Proficiency for Student Groups, 2011" name="School Municipal Districts: MCAS Grade 08 Reading Proficiency for Student Groups, 2011"/>
+          <category title="School Municipal Districts: MCAS Grade 08 Science Proficiency for Student Groups, 2011" name="School Municipal Districts: MCAS Grade 08 Science Proficiency for Student Groups, 2011"/>
+          <category title="School Municipal Districts: MCAS Grade 10 Math Proficiency for Student Groups, 2011" name="School Municipal Districts: MCAS Grade 10 Math Proficiency for Student Groups, 2011"/>
+          <category title="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" name="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011"/>
+          <category title="School Municipal Districts: MCAS Grade 10 Science Proficiency for Student Groups, 2011" name="School Municipal Districts: MCAS Grade 10 Science Proficiency for Student Groups, 2011"/>
+          <category title="School Municipal Districts: MCAS Grade 3 All Students Math Proficiency (multi-year)" name="School Municipal Districts: MCAS Grade 3 All Students Math Proficiency (multi-year)"/>
+          <category title="School Municipal Districts: MCAS Grade 3 All Students Reading Proficiency (multi-year)" name="School Municipal Districts: MCAS Grade 3 All Students Reading Proficiency (multi-year)"/>
+          <category title="Schools" name="Schools"/>
+          <category title="Schools: Enrollment (multi-year)" name="Schools: Enrollment (multi-year)"/>
+          <category title="Schools: Enrollment, 2010-11" name="Schools: Enrollment, 2010-11"/>
+          <category title="Schools: MCAS Grade 03 Math Proficiency for Student Groups, 2011" name="Schools: MCAS Grade 03 Math Proficiency for Student Groups, 2011"/>
+          <category title="Schools: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" name="Schools: MCAS Grade 03 Reading Proficiency for Student Groups, 2011"/>
+          <category title="Schools: MCAS Grade 03 Reading Proficiency, 2011" name="Schools: MCAS Grade 03 Reading Proficiency, 2011"/>
+          <category title="Schools: MCAS Grade 08 Math Proficiency for Student Groups, 2011" name="Schools: MCAS Grade 08 Math Proficiency for Student Groups, 2011"/>
+          <category title="Schools: MCAS Grade 08 Reading Proficiency for Student Groups, 2011" name="Schools: MCAS Grade 08 Reading Proficiency for Student Groups, 2011"/>
+          <category title="Schools: MCAS Grade 08 Science Proficiency for Student Groups, 2011" name="Schools: MCAS Grade 08 Science Proficiency for Student Groups, 2011"/>
+          <category title="Schools: MCAS Grade 10 Math Proficiency for Student Groups, 2011" name="Schools: MCAS Grade 10 Math Proficiency for Student Groups, 2011"/>
+          <category title="Schools: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" name="Schools: MCAS Grade 10 Reading Proficiency for Student Groups, 2011"/>
+          <category title="Schools: MCAS Grade 10 Science Proficiency for Student Groups, 2011" name="Schools: MCAS Grade 10 Science Proficiency for Student Groups, 2011"/>
+          <category title="Schools: Mobility, 2010" name="Schools: Mobility, 2010"/>
+          <category title="Schools: Risk Indicators" name="Schools: Risk Indicators"/>
+          <category title="Subsidized Housing Inventory" name="Subsidized Housing Inventory"/>
+          <category title="Success Boston Student Cohorts (2010)" name="Success Boston Student Cohorts (2010)"/>
+          <category title="Transportation to Work, ACS 2005-09 (Municipal)" name="Transportation to Work, ACS 2005-09 (Municipal)"/>
+          <category title="Transportation to Work, ACS 2005-09 (Municipality)-Transposed" name="Transportation to Work, ACS 2005-09 (Municipality)-Transposed"/>
+          <category title="Travel Time to Work 2005-09 ACS (Municipal)" name="Travel Time to Work 2005-09 ACS (Municipal)"/>
+          <category title="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+          <category title="Unemployment (Municipality)" name="Unemployment (Municipality)"/>
+          <category title="US States" name="US States"/>
+          <category title="Voters (Municipal)" name="Voters (Municipal)"/>
+        </category>
+        <category title="Geometry Collections" name="Geometry Collections">
+          <attribute dataType="geometry" name="Arts and Culture Points" title="Arts and Culture Points" keyType="Arts and Culture Points"/>
+          <attribute dataType="geometry" name="Boston Circle of Promise Schools" title="Boston Circle of Promise Schools" keyType="SchoolID"/>
+          <attribute dataType="geometry" name="Boston Daycares" title="Boston Daycares" keyType="ObjectID"/>
+          <attribute dataType="geometry" name="Boston Neighborhoods" title="Boston Neighborhoods" keyType="ObjectID"/>
+          <attribute dataType="geometry" name="Boston Non-Profit Educational Assets (Points)" title="Boston Non-Profit Educational Assets (Points)" keyType="ObjectID"/>
+          <attribute dataType="geometry" name="Boston Outline" title="Boston Outline" keyType="MUNI_ID"/>
+          <attribute dataType="geometry" name="Boston Parcels (Subset)" title="Boston Parcels (Subset)" keyType="BostonParcelID"/>
+          <attribute dataType="geometry" name="Boston Schools" title="Boston Schools" keyType="SchoolID"/>
+          <attribute dataType="geometry" name="Boston Turnaround Schools" title="Boston Turnaround Schools" keyType="SchoolID"/>
+          <attribute dataType="geometry" name="Census 2000 Block Groups" title="Census 2000 Block Groups" keyType="BG_00_ID"/>
+          <attribute dataType="geometry" name="Census 2000 Tracts" title="Census 2000 Tracts" keyType="CT_ID"/>
+          <attribute dataType="geometry" name="Child Care Providers with Less than High School" title="Child Care Providers with Less than High School" keyType="ObjectID"/>
+          <attribute dataType="geometry" name="Colleges and Universities" title="Colleges and Universities" keyType="College_ID"/>
+          <attribute dataType="geometry" name="Commuter Rail" title="Commuter Rail" keyType="Commuter Rail"/>
+          <attribute dataType="geometry" name="Indigo Commuter Line" title="Indigo Commuter Line" keyType="ObjectID"/>
+          <attribute dataType="geometry" name="Libraries" title="Libraries" keyType="ObjectID"/>
+          <attribute dataType="geometry" name="MA Counties" title="MA Counties" keyType="FIPS_ID"/>
+          <attribute dataType="geometry" name="Massachusetts Municipalities" title="Massachusetts Municipalities" keyType="MUNI_ID"/>
+          <attribute dataType="geometry" name="MBTA Subway Lines" title="MBTA Subway Lines" keyType="MBTA Subway Lines"/>
+          <attribute dataType="geometry" name="MetroFuture Region" title="MetroFuture Region" keyType="MUNI_ID"/>
+          <attribute dataType="geometry" name="School Districts" title="School Districts" keyType="SchoolDistrictID"/>
+          <attribute dataType="geometry" name="School Districts by Town" title="School Districts by Town" keyType="MUNI_ID"/>
+          <attribute dataType="geometry" name="Schools" title="Schools" keyType="SchoolID"/>
+          <attribute dataType="geometry" name="Success Boston Student Cohorts (2010)" title="Success Boston Student Cohorts (2010)" keyType="ObjectID"/>
+          <attribute dataType="geometry" name="US States" title="US States" keyType="State_ID"/>
+        </category>
+      </hierarchy>
+    </attributeHierarchy>
+    <hierarchyURL/>
+    <url>/WeaveServices/DataService</url>
+  </WeaveDataSource>
+  <ColorBinLegendTool name="ColorBinLegendTool">
+    <buttonRadius>3</buttonRadius>
+    <children encoding="dynamic">
+      <SimpleInteractiveVisualization name="visualization">
+        <axesAlpha>NaN</axesAlpha>
+        <axesColor>0</axesColor>
+        <axesThickness>NaN</axesThickness>
+        <enableAutoZoomToExtent>true</enableAutoZoomToExtent>
+        <enableAutoZoomXToNiceNumbers>false</enableAutoZoomXToNiceNumbers>
+        <enableAutoZoomYToNiceNumbers>false</enableAutoZoomYToNiceNumbers>
+        <enableFixedAspectRatio>false</enableFixedAspectRatio>
+        <enableProbe>true</enableProbe>
+        <enableSelection>true</enableSelection>
+        <enableZoomAndPan>false</enableZoomAndPan>
+        <gridLineAlpha>NaN</gridLineAlpha>
+        <gridLineColor>0</gridLineColor>
+        <gridLineThickness>NaN</gridLineThickness>
+        <includeNonSelectableLayersInAutoZoom>false</includeNonSelectableLayersInAutoZoom>
+        <layers encoding="dynamic">
+          <SelectablePlotLayer name="plot">
+            <backgroundIsVisible>true</backgroundIsVisible>
+            <layerIsSelectable>false</layerIsSelectable>
+            <layerIsVisible>true</layerIsVisible>
+            <maxVisibleScale>Infinity</maxVisibleScale>
+            <minVisibleScale>0</minVisibleScale>
+            <plotter encoding="dynamic">
+              <ColorBinLegendPlotter>
+                <ascendingOrder>true</ascendingOrder>
+                <dynamicColorColumn encoding="dynamic">
+                  <GlobalObjectReference name="defaultColorColumn"/>
+                </dynamicColorColumn>
+                <itemLabelFunction>string</itemLabelFunction>
+                <keySet>
+                  <keyFilter encoding="dynamic">
+                    <GlobalObjectReference name="defaultSubsetKeyFilter"/>
+                  </keyFilter>
+                </keySet>
+                <legendTitleFunction>string</legendTitleFunction>
+                <lineStyle>
+                  <alpha>
+                    <defaultValue>0.5</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </alpha>
+                  <caps>
+                    <defaultValue/>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </caps>
+                  <color>
+                    <defaultValue>0</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </color>
+                  <enabled>
+                    <defaultValue>true</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </enabled>
+                  <joints>
+                    <defaultValue/>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </joints>
+                  <miterLimit>
+                    <defaultValue>3</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </miterLimit>
+                  <pixelHinting>
+                    <defaultValue>false</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </pixelHinting>
+                  <scaleMode>
+                    <defaultValue>normal</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </scaleMode>
+                  <weight>
+                    <defaultValue>1</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </weight>
+                </lineStyle>
+                <maxColumns>5</maxColumns>
+                <shapeSize>10</shapeSize>
+              </ColorBinLegendPlotter>
+            </plotter>
+            <probeFilter encoding="dynamic">
+              <GlobalObjectReference name="defaultProbeKeySet"/>
+            </probeFilter>
+            <selectionFilter encoding="dynamic">
+              <GlobalObjectReference name="defaultSelectionKeySet"/>
+            </selectionFilter>
+            <subsetFilter encoding="dynamic">
+              <GlobalObjectReference name="defaultSubsetKeyFilter"/>
+            </subsetFilter>
+            <useTextBitmapFilters>true</useTextBitmapFilters>
+          </SelectablePlotLayer>
+        </layers>
+        <marginBottom>5</marginBottom>
+        <marginLeft>5</marginLeft>
+        <marginRight>5</marginRight>
+        <marginTop>0</marginTop>
+        <maxZoomLevel>16</maxZoomLevel>
+        <minScreenSize>128</minScreenSize>
+        <minZoomLevel>0</minZoomLevel>
+        <overrideXMax>NaN</overrideXMax>
+        <overrideXMin>NaN</overrideXMin>
+        <overrideYMax>NaN</overrideYMax>
+        <overrideYMin>NaN</overrideYMin>
+        <zoomBounds>
+          <xMax>1</xMax>
+          <xMin>0</xMin>
+          <yMax>1</yMax>
+          <yMin>0</yMin>
+        </zoomBounds>
+      </SimpleInteractiveVisualization>
+    </children>
+    <closeable>false</closeable>
+    <draggable>false</draggable>
+    <enableBorders>false</enableBorders>
+    <enableTitle>false</enableTitle>
+    <maximizable>false</maximizable>
+    <maximized>false</maximized>
+    <minimizable>false</minimizable>
+    <minimized>false</minimized>
+    <panelBackgroundColor>NaN</panelBackgroundColor>
+    <panelBorderColor>NaN</panelBorderColor>
+    <panelHeight>20%</panelHeight>
+    <panelStyleList/>
+    <panelTitle/>
+    <panelWidth>99%</panelWidth>
+    <panelX>0%</panelX>
+    <panelY>79%</panelY>
+    <pinnable>true</pinnable>
+    <pinnableToBack>false</pinnableToBack>
+    <pinned>false</pinned>
+    <pinnedToBack>false</pinnedToBack>
+    <resizeable>false</resizeable>
+  </ColorBinLegendTool>
+  <CompoundBarChartTool name="CompoundBarChartTool">
+    <buttonRadius>3</buttonRadius>
+    <children encoding="dynamic">
+      <SimpleInteractiveVisualization name="visualization">
+        <axesAlpha>1</axesAlpha>
+        <axesColor>11579568</axesColor>
+        <axesThickness>3</axesThickness>
+        <enableAutoZoomToExtent>true</enableAutoZoomToExtent>
+        <enableAutoZoomXToNiceNumbers>false</enableAutoZoomXToNiceNumbers>
+        <enableAutoZoomYToNiceNumbers>false</enableAutoZoomYToNiceNumbers>
+        <enableFixedAspectRatio>false</enableFixedAspectRatio>
+        <enableProbe>true</enableProbe>
+        <enableSelection>true</enableSelection>
+        <enableZoomAndPan>false</enableZoomAndPan>
+        <gridLineAlpha>0.4</gridLineAlpha>
+        <gridLineColor>10066329</gridLineColor>
+        <gridLineThickness>1</gridLineThickness>
+        <includeNonSelectableLayersInAutoZoom>false</includeNonSelectableLayersInAutoZoom>
+        <layers encoding="dynamic">
+          <AxisLayer name="yAxis">
+            <isOverlay>false</isOverlay>
+            <layerIsVisible>true</layerIsVisible>
+            <maxVisibleScale>Infinity</maxVisibleScale>
+            <minVisibleScale>0</minVisibleScale>
+            <plotter encoding="dynamic">
+              <SimpleAxisPlotter>
+                <axisLabelDistance>-5</axisLabelDistance>
+                <axisLabelRelativeAngle>90</axisLabelRelativeAngle>
+                <axisLineDataBounds>
+                  <xMax>-0.3706896551724138</xMax>
+                  <xMin>-0.3706896551724138</xMin>
+                  <yMax>2.8334</yMax>
+                  <yMin>-6.3444</yMin>
+                </axisLineDataBounds>
+                <axisLineMaxValue>2.8334</axisLineMaxValue>
+                <axisLineMinValue>-6.3444</axisLineMinValue>
+                <forceTickCount>false</forceTickCount>
+                <keySet>
+                  <keyFilter encoding="dynamic"/>
+                </keySet>
+                <labelDistanceIsVertical>false</labelDistanceIsVertical>
+                <labelFunction>number + '%'</labelFunction>
+                <labelHorizontalAlign>right</labelHorizontalAlign>
+                <labelNumberFormatter>
+                  <decimalSeparatorFrom>.</decimalSeparatorFrom>
+                  <decimalSeparatorTo>.</decimalSeparatorTo>
+                  <precision>0</precision>
+                  <rounding>none</rounding>
+                  <thousandsSeparatorFrom>,</thousandsSeparatorFrom>
+                  <thousandsSeparatorTo>,</thousandsSeparatorTo>
+                  <useNegativeSign>true</useNegativeSign>
+                  <useThousandsSeparator>true</useThousandsSeparator>
+                </labelNumberFormatter>
+                <labelTextAlignment>left</labelTextAlignment>
+                <labelVerticalAlign>middle</labelVerticalAlign>
+                <labelWordWrapSize>40</labelWordWrapSize>
+                <overrideAxisName>Difference in Percentage between 2000 - 2010 (%)</overrideAxisName>
+                <showAxisName>false</showAxisName>
+                <showLabels>true</showLabels>
+                <tickCountRequested>5</tickCountRequested>
+                <tickMaxValue>NaN</tickMaxValue>
+                <tickMinValue>NaN</tickMinValue>
+              </SimpleAxisPlotter>
+            </plotter>
+            <selectionFilter encoding="dynamic"/>
+          </AxisLayer>
+          <AxisLayer name="xAxis">
+            <isOverlay>false</isOverlay>
+            <layerIsVisible>true</layerIsVisible>
+            <maxVisibleScale>Infinity</maxVisibleScale>
+            <minVisibleScale>0</minVisibleScale>
+            <plotter encoding="dynamic">
+              <SimpleAxisPlotter>
+                <axisLabelDistance>-10</axisLabelDistance>
+                <axisLabelRelativeAngle>0</axisLabelRelativeAngle>
+                <axisLineDataBounds>
+                  <xMax>2.3706896551724137</xMax>
+                  <xMin>-0.3706896551724138</xMin>
+                  <yMax>-6.3444</yMax>
+                  <yMin>-6.3444</yMin>
+                </axisLineDataBounds>
+                <axisLineMaxValue>2.3706896551724137</axisLineMaxValue>
+                <axisLineMinValue>-0.3706896551724138</axisLineMinValue>
+                <forceTickCount>false</forceTickCount>
+                <keySet>
+                  <keyFilter encoding="dynamic"/>
+                </keySet>
+                <labelDistanceIsVertical>false</labelDistanceIsVertical>
+                <labelFunction>string</labelFunction>
+                <labelHorizontalAlign>center</labelHorizontalAlign>
+                <labelNumberFormatter>
+                  <decimalSeparatorFrom>.</decimalSeparatorFrom>
+                  <decimalSeparatorTo>.</decimalSeparatorTo>
+                  <precision>0</precision>
+                  <rounding>none</rounding>
+                  <thousandsSeparatorFrom>,</thousandsSeparatorFrom>
+                  <thousandsSeparatorTo>,</thousandsSeparatorTo>
+                  <useNegativeSign>true</useNegativeSign>
+                  <useThousandsSeparator>true</useThousandsSeparator>
+                </labelNumberFormatter>
+                <labelTextAlignment>left</labelTextAlignment>
+                <labelVerticalAlign>top</labelVerticalAlign>
+                <labelWordWrapSize>202</labelWordWrapSize>
+                <overrideAxisName/>
+                <showAxisName>false</showAxisName>
+                <showLabels>true</showLabels>
+                <tickCountRequested>3</tickCountRequested>
+                <tickMaxValue>2</tickMaxValue>
+                <tickMinValue>0</tickMinValue>
+              </SimpleAxisPlotter>
+            </plotter>
+            <selectionFilter encoding="dynamic"/>
+          </AxisLayer>
+          <SelectablePlotLayer name="plot">
+            <backgroundIsVisible>true</backgroundIsVisible>
+            <layerIsSelectable>true</layerIsSelectable>
+            <layerIsVisible>true</layerIsVisible>
+            <maxVisibleScale>Infinity</maxVisibleScale>
+            <minVisibleScale>0</minVisibleScale>
+            <plotter encoding="dynamic">
+              <CompoundBarChartPlotter>
+                <barSpacing>0.5172413793103449</barSpacing>
+                <chartColors encoding="xml">
+                  <colorRamp singlehue="true" source="ColorBrewer" name="Blues" colorblindSafe="true" category="basic" dataFormat="sequential">
+                    <node position="0" color="0xFF7F00"/>
+                    <node position="0.25" color="0x984EA3"/>
+                    <node position="0.5" color="0x4DAF4A"/>
+                    <node position="0.75" color="0x377EB8"/>
+                    <node position="1.0" color="0xE41A1C"/>
+                  </colorRamp>
+                </chartColors>
+                <colorColumn>
+                  <defaultValue>NaN</defaultValue>
+                  <internalDynamicColumn encoding="dynamic">
+                    <GlobalObjectReference name="defaultColorColumn"/>
+                  </internalDynamicColumn>
+                </colorColumn>
+                <groupBySortColumn>false</groupBySortColumn>
+                <groupingMode>group</groupingMode>
+                <heightColumns encoding="dynamic">
+                  <ReferencedColumn name="ReferencedColumn">
+                    <dynamicColumnReference encoding="dynamic">
+                      <HierarchyColumnReference>
+                        <dataSourceName>WeaveDataSource</dataSourceName>
+                        <hierarchyPath encoding="xml">
+                          <hierarchy>
+                            <category title="Data Tables" name="Data Tables">
+                              <category title="Population by Race with Change, 2000-2010 (Municipal)" name="Population by Race with Change, 2000-2010 (Municipal)">
+                                <attribute dataType="number" dataTable="Population by Race with Change, 2000-2010 (Municipal)" name="nh_wh_pdif" title="Difference in % White Population, 2000-2010" keyType="MUNI_ID"/>
+                              </category>
+                            </category>
+                          </hierarchy>
+                        </hierarchyPath>
+                      </HierarchyColumnReference>
+                    </dynamicColumnReference>
+                  </ReferencedColumn>
+                  <ReferencedColumn name="ReferencedColumn2">
+                    <dynamicColumnReference encoding="dynamic">
+                      <HierarchyColumnReference>
+                        <dataSourceName>WeaveDataSource</dataSourceName>
+                        <hierarchyPath encoding="xml">
+                          <hierarchy>
+                            <category title="Data Tables" name="Data Tables">
+                              <category title="Population by Race with Change, 2000-2010 (Municipal)" name="Population by Race with Change, 2000-2010 (Municipal)">
+                                <attribute dataType="number" dataTable="Population by Race with Change, 2000-2010 (Municipal)" name="nh_aa_pdif" title="Difference in % Black Population, 2000-2010" keyType="MUNI_ID"/>
+                              </category>
+                            </category>
+                          </hierarchy>
+                        </hierarchyPath>
+                      </HierarchyColumnReference>
+                    </dynamicColumnReference>
+                  </ReferencedColumn>
+                  <ReferencedColumn name="ReferencedColumn3">
+                    <dynamicColumnReference encoding="dynamic">
+                      <HierarchyColumnReference>
+                        <dataSourceName>WeaveDataSource</dataSourceName>
+                        <hierarchyPath encoding="xml">
+                          <hierarchy>
+                            <category title="Data Tables" name="Data Tables">
+                              <category title="Population by Race with Change, 2000-2010 (Municipal)" name="Population by Race with Change, 2000-2010 (Municipal)">
+                                <attribute dataType="number" dataTable="Population by Race with Change, 2000-2010 (Municipal)" name="nh_as_pdif" title="Difference in % Asian Population, 2000-2010" keyType="MUNI_ID"/>
+                              </category>
+                            </category>
+                          </hierarchy>
+                        </hierarchyPath>
+                      </HierarchyColumnReference>
+                    </dynamicColumnReference>
+                  </ReferencedColumn>
+                  <ReferencedColumn name="ReferencedColumn4">
+                    <dynamicColumnReference encoding="dynamic">
+                      <HierarchyColumnReference>
+                        <dataSourceName>WeaveDataSource</dataSourceName>
+                        <hierarchyPath encoding="xml">
+                          <hierarchy>
+                            <category title="Data Tables" name="Data Tables">
+                              <category title="Population by Race with Change, 2000-2010 (Municipal)" name="Population by Race with Change, 2000-2010 (Municipal)">
+                                <attribute dataType="number" dataTable="Population by Race with Change, 2000-2010 (Municipal)" name="nhoth_pdif" title="Difference in % Other One Race Population, 2000-2010" keyType="MUNI_ID"/>
+                              </category>
+                            </category>
+                          </hierarchy>
+                        </hierarchyPath>
+                      </HierarchyColumnReference>
+                    </dynamicColumnReference>
+                  </ReferencedColumn>
+                  <ReferencedColumn name="ReferencedColumn5">
+                    <dynamicColumnReference encoding="dynamic">
+                      <HierarchyColumnReference>
+                        <dataSourceName>WeaveDataSource</dataSourceName>
+                        <hierarchyPath encoding="xml">
+                          <hierarchy>
+                            <category title="Data Tables" name="Data Tables">
+                              <category title="Population by Race with Change, 2000-2010 (Municipal)" name="Population by Race with Change, 2000-2010 (Municipal)">
+                                <attribute dataType="number" dataTable="Population by Race with Change, 2000-2010 (Municipal)" name="lat_pdif" title="Difference in % Latino Population, 2000-2010" keyType="MUNI_ID"/>
+                              </category>
+                            </category>
+                          </hierarchy>
+                        </hierarchyPath>
+                      </HierarchyColumnReference>
+                    </dynamicColumnReference>
+                  </ReferencedColumn>
+                </heightColumns>
+                <horizontalMode>false</horizontalMode>
+                <keySet>
+                  <keyFilter encoding="dynamic">
+                    <GlobalObjectReference name="defaultSubsetKeyFilter"/>
+                  </keyFilter>
+                </keySet>
+                <labelColor>0</labelColor>
+                <labelColumn encoding="dynamic">
+                  <ReferencedColumn>
+                    <dynamicColumnReference encoding="dynamic">
+                      <HierarchyColumnReference>
+                        <dataSourceName>WeaveDataSource</dataSourceName>
+                        <hierarchyPath encoding="xml">
+                          <hierarchy>
+                            <category title="Data Tables" name="Data Tables">
+                              <category title="Population by Race with Change, 2000-2010 (Municipal)" name="Population by Race with Change, 2000-2010 (Municipal)">
+                                <attribute dataType="string" name="municipal" dataTable="Population by Race with Change, 2000-2010 (Municipal)" title="Municipal" keyType="MUNI_ID"/>
+                              </category>
+                            </category>
+                          </hierarchy>
+                        </hierarchyPath>
+                      </HierarchyColumnReference>
+                    </dynamicColumnReference>
+                  </ReferencedColumn>
+                </labelColumn>
+                <labelDataCoordinate>NaN</labelDataCoordinate>
+                <labelHorizontalAlign>center</labelHorizontalAlign>
+                <labelMaxWidth>200</labelMaxWidth>
+                <labelRelativeAngle>NaN</labelRelativeAngle>
+                <labelVerticalAlign>bottom</labelVerticalAlign>
+                <lineStyle encoding="dynamic">
+                  <SolidLineStyle>
+                    <alpha>
+                      <defaultValue>0.5</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </alpha>
+                    <caps>
+                      <defaultValue/>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </caps>
+                    <color>
+                      <defaultValue>0</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </color>
+                    <enabled>
+                      <defaultValue>true</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </enabled>
+                    <joints>
+                      <defaultValue/>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </joints>
+                    <miterLimit>
+                      <defaultValue>3</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </miterLimit>
+                    <pixelHinting>
+                      <defaultValue>false</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </pixelHinting>
+                    <scaleMode>
+                      <defaultValue>normal</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </scaleMode>
+                    <weight>
+                      <defaultValue>1</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </weight>
+                  </SolidLineStyle>
+                </lineStyle>
+                <negativeErrorColumns encoding="dynamic"/>
+                <positiveErrorColumns encoding="dynamic"/>
+                <recordLabelColoring>false</recordLabelColoring>
+                <recordValueLabelColoring>false</recordValueLabelColoring>
+                <showLabels>false</showLabels>
+                <showValueLabels>false</showValueLabels>
+                <sortColumn encoding="dynamic">
+                  <GlobalObjectReference name="defaultColorBinColumn"/>
+                </sortColumn>
+                <valueLabelColor>0</valueLabelColor>
+                <valueLabelDataCoordinate>NaN</valueLabelDataCoordinate>
+                <valueLabelHorizontalAlign>center</valueLabelHorizontalAlign>
+                <valueLabelMaxWidth>200</valueLabelMaxWidth>
+                <valueLabelRelativeAngle>NaN</valueLabelRelativeAngle>
+                <valueLabelVerticalAlign>bottom</valueLabelVerticalAlign>
+                <zoomToSubset>true</zoomToSubset>
+              </CompoundBarChartPlotter>
+            </plotter>
+            <probeFilter encoding="dynamic">
+              <GlobalObjectReference name="defaultProbeKeySet"/>
+            </probeFilter>
+            <selectionFilter encoding="dynamic">
+              <GlobalObjectReference name="defaultSelectionKeySet"/>
+            </selectionFilter>
+            <subsetFilter encoding="dynamic">
+              <GlobalObjectReference name="defaultSubsetKeyFilter"/>
+            </subsetFilter>
+            <useTextBitmapFilters>false</useTextBitmapFilters>
+          </SelectablePlotLayer>
+          <PlotLayer name="probeLine">
+            <isOverlay>false</isOverlay>
+            <layerIsVisible>true</layerIsVisible>
+            <maxVisibleScale>Infinity</maxVisibleScale>
+            <minVisibleScale>0</minVisibleScale>
+            <plotter encoding="dynamic">
+              <ProbeLinePlotter>
+                <keySet>
+                  <keyFilter encoding="dynamic">
+                    <GlobalObjectReference name="defaultSubsetKeyFilter"/>
+                  </keyFilter>
+                </keySet>
+                <lineStyle encoding="dynamic">
+                  <SolidLineStyle>
+                    <alpha>
+                      <defaultValue>0.5</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </alpha>
+                    <caps>
+                      <defaultValue/>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </caps>
+                    <color>
+                      <defaultValue>0</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </color>
+                    <enabled>
+                      <defaultValue>true</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </enabled>
+                    <joints>
+                      <defaultValue/>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </joints>
+                    <miterLimit>
+                      <defaultValue>3</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </miterLimit>
+                    <pixelHinting>
+                      <defaultValue>false</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </pixelHinting>
+                    <scaleMode>
+                      <defaultValue>normal</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </scaleMode>
+                    <weight>
+                      <defaultValue>1</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </weight>
+                  </SolidLineStyle>
+                </lineStyle>
+              </ProbeLinePlotter>
+            </plotter>
+            <selectionFilter encoding="dynamic"/>
+          </PlotLayer>
+        </layers>
+        <marginBottom>20</marginBottom>
+        <marginLeft>35</marginLeft>
+        <marginRight>30</marginRight>
+        <marginTop>10</marginTop>
+        <maxZoomLevel>16</maxZoomLevel>
+        <minScreenSize>128</minScreenSize>
+        <minZoomLevel>0</minZoomLevel>
+        <overrideXMax>NaN</overrideXMax>
+        <overrideXMin>NaN</overrideXMin>
+        <overrideYMax>NaN</overrideYMax>
+        <overrideYMin>NaN</overrideYMin>
+        <zoomBounds>
+          <xMax>2.3706896551724137</xMax>
+          <xMin>-0.3706896551724138</xMin>
+          <yMax>2.8334</yMax>
+          <yMin>-6.3444</yMin>
+        </zoomBounds>
+      </SimpleInteractiveVisualization>
+    </children>
+    <closeable>true</closeable>
+    <draggable>true</draggable>
+    <enableBorders>false</enableBorders>
+    <enableTitle>false</enableTitle>
+    <includeToolAttributesInProbe>true</includeToolAttributesInProbe>
+    <linkHeightAndSortColumns>false</linkHeightAndSortColumns>
+    <maximizable>true</maximizable>
+    <maximized>false</maximized>
+    <minimizable>true</minimizable>
+    <minimized>false</minimized>
+    <panelBackgroundColor>NaN</panelBackgroundColor>
+    <panelBorderColor>NaN</panelBorderColor>
+    <panelHeight>80%</panelHeight>
+    <panelStyleList/>
+    <panelTitle>Change in Racial / Ethnic Share</panelTitle>
+    <panelWidth>99%</panelWidth>
+    <panelX>0%</panelX>
+    <panelY>0%</panelY>
+    <pinnable>true</pinnable>
+    <pinnableToBack>false</pinnableToBack>
+    <pinned>false</pinned>
+    <pinnedToBack>false</pinnedToBack>
+    <resizeable>true</resizeable>
+    <showAllLabels>false</showAllLabels>
+    <sizeAxisTickCountRequested>5</sizeAxisTickCountRequested>
+  </CompoundBarChartTool>
+</Weave>

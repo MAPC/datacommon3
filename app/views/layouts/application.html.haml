@@ -4,12 +4,13 @@
     %title DataCommon
     = stylesheet_link_tag    'application', 'data-turbolinks-track' => true, media: 'all'
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
-    = stylesheet_link_tag "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"
-    = javascript_include_tag "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"
+    = stylesheet_link_tag    'http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css'
+    = javascript_include_tag 'http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js'
     = csrf_meta_tags
   %body
-  
-    = yield :featured
+
+    .row.featured
+      = yield :featured
     
     .container
       .row

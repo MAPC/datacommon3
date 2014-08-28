@@ -2,6 +2,6 @@ class InstitutionsController < ApplicationController
   before_filter :load_institution
   
   def show
-    @hero = Hero.random
+    @heros = Hero.all
   end
 end

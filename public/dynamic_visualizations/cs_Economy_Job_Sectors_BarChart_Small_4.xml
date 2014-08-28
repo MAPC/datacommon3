@@ -1,0 +1,1176 @@
+<Weave encoding="dynamic">
+  <KeySet name="alwaysHighlightKeySet"/>
+  <WeaveProperties name="WeaveProperties">
+    <backgroundColor>16777215</backgroundColor>
+    <cssStyleSheetName>weaveStyle.css</cssStyleSheetName>
+    <dashboardMode>true</dashboardMode>
+    <dashedSelectionBox>5,5</dashedSelectionBox>
+    <dataInfoURL/>
+    <debugScreenBounds>false</debugScreenBounds>
+    <defaultTextFormat>
+      <bold>false</bold>
+      <color>0</color>
+      <font>Sophia Nubian</font>
+      <italic>false</italic>
+      <size>11</size>
+      <underline>false</underline>
+    </defaultTextFormat>
+    <enableAboutMenu>true</enableAboutMenu>
+    <enableAdd2DHistogram>true</enableAdd2DHistogram>
+    <enableAddAttributeMenuTool>true</enableAddAttributeMenuTool>
+    <enableAddBarChart>true</enableAddBarChart>
+    <enableAddCollaborationTool>false</enableAddCollaborationTool>
+    <enableAddColorLegend>true</enableAddColorLegend>
+    <enableAddColormapHistogram>true</enableAddColormapHistogram>
+    <enableAddCompoundRadViz>true</enableAddCompoundRadViz>
+    <enableAddCustomTool>true</enableAddCustomTool>
+    <enableAddDataFilter>true</enableAddDataFilter>
+    <enableAddDataSource>true</enableAddDataSource>
+    <enableAddDataTable>true</enableAddDataTable>
+    <enableAddDimensionSliderTool>true</enableAddDimensionSliderTool>
+    <enableAddGaugeTool>true</enableAddGaugeTool>
+    <enableAddGraphTool>true</enableAddGraphTool>
+    <enableAddHistogram>true</enableAddHistogram>
+    <enableAddLineChart>true</enableAddLineChart>
+    <enableAddMap>true</enableAddMap>
+    <enableAddPieChart>true</enableAddPieChart>
+    <enableAddPieChartHistogram>true</enableAddPieChartHistogram>
+    <enableAddRadViz>true</enableAddRadViz>
+    <enableAddRamachandranPlot>false</enableAddRamachandranPlot>
+    <enableAddRScriptEditor>true</enableAddRScriptEditor>
+    <enableAddScatterplot>true</enableAddScatterplot>
+    <enableAddThermometerTool>true</enableAddThermometerTool>
+    <enableAddTimeSliderTool>true</enableAddTimeSliderTool>
+    <enableAddWeaveDataSource>true</enableAddWeaveDataSource>
+    <enableBitmapFilters>true</enableBitmapFilters>
+    <enableCascadeAllWindows>true</enableCascadeAllWindows>
+    <enableClearCurrentSelection>true</enableClearCurrentSelection>
+    <enableCloseAllWindows>true</enableCloseAllWindows>
+    <enableCreateSubsets>true</enableCreateSubsets>
+    <enableDataMenu>true</enableDataMenu>
+    <enableDebugAlert>false</enableDebugAlert>
+    <enableDrawCircle>true</enableDrawCircle>
+    <enableDynamicTools>true</enableDynamicTools>
+    <enableEditDataSource>true</enableEditDataSource>
+    <enableExportApplicationScreenshot>true</enableExportApplicationScreenshot>
+    <enableExportCSV>true</enableExportCSV>
+    <enableExportToolImage>true</enableExportToolImage>
+    <enableFullScreen>false</enableFullScreen>
+    <enableFullscreen>true</enableFullscreen>
+    <enableGeometryProbing>true</enableGeometryProbing>
+    <enableManageSavedSelections>true</enableManageSavedSelections>
+    <enableManageSavedSubsets>true</enableManageSavedSubsets>
+    <enableMarker>true</enableMarker>
+    <enableMenuBar>false</enableMenuBar>
+    <enableMinimizeAllWindows>true</enableMinimizeAllWindows>
+    <enableMouseWheel>true</enableMouseWheel>
+    <enableNewDataset>true</enableNewDataset>
+    <enableNewUserWizard>true</enableNewUserWizard>
+    <enablePanelCoordsPercentageMode>true</enablePanelCoordsPercentageMode>
+    <enableProbeAnimation>true</enableProbeAnimation>
+    <enableProbeLines>true</enableProbeLines>
+    <enableProbeToolTip>true</enableProbeToolTip>
+    <enableRefreshHierarchies>true</enableRefreshHierarchies>
+    <enableRemoveSubsets>true</enableRemoveSubsets>
+    <enableRestoreAllMinimizedWindows>true</enableRestoreAllMinimizedWindows>
+    <enableRightClick>true</enableRightClick>
+    <enableSaveCurrentSelection>true</enableSaveCurrentSelection>
+    <enableSaveCurrentSubset>true</enableSaveCurrentSubset>
+    <enableSearchForRecord>true</enableSearchForRecord>
+    <enableSelectionSelectorBox>true</enableSelectionSelectorBox>
+    <enableSelectionsMenu>true</enableSelectionsMenu>
+    <enableSessionMenu>false</enableSessionMenu>
+    <enableShowAllRecords>true</enableShowAllRecords>
+    <enableSubsetControls>true</enableSubsetControls>
+    <enableSubsetSelectionBox>true</enableSubsetSelectionBox>
+    <enableSubsetsMenu>true</enableSubsetsMenu>
+    <enableTileAllWindows>true</enableTileAllWindows>
+    <enableToolAttributeEditing>true</enableToolAttributeEditing>
+    <enableToolControls>true</enableToolControls>
+    <enableToolProbe>true</enableToolProbe>
+    <enableToolSelection>true</enableToolSelection>
+    <enableUserPreferences>true</enableUserPreferences>
+    <enableWindowMenu>true</enableWindowMenu>
+    <eventListeners encoding="dynamic"/>
+    <geometryMetadataRequestMode>xyz</geometryMetadataRequestMode>
+    <geometryMinimumScreenArea>1</geometryMinimumScreenArea>
+    <jriServiceURL>/WeaveServices/JRIService</jriServiceURL>
+    <macroLibraries>weave.api::WeaveAPI</macroLibraries>
+    <macros encoding="dynamic"/>
+    <maxTooltipRecordsShown>1</maxTooltipRecordsShown>
+    <pageTitle>Open Indicators Weave</pageTitle>
+    <panelTitleTextFormat>
+      <bold>false</bold>
+      <color>16777215</color>
+      <font>Verdana</font>
+      <italic>false</italic>
+      <size>10</size>
+      <underline>false</underline>
+    </panelTitleTextFormat>
+    <pdbServiceURL>/WeavePDBService/PDBService</pdbServiceURL>
+    <probeInnerGlowAlpha>1</probeInnerGlowAlpha>
+    <probeInnerGlowBlur>5</probeInnerGlowBlur>
+    <probeInnerGlowColor>16777215</probeInnerGlowColor>
+    <probeInnerGlowStrength>10</probeInnerGlowStrength>
+    <probeOuterGlowAlpha>1</probeOuterGlowAlpha>
+    <probeOuterGlowBlur>3</probeOuterGlowBlur>
+    <probeOuterGlowColor>0</probeOuterGlowColor>
+    <probeOuterGlowStrength>3</probeOuterGlowStrength>
+    <probeToolTipBackgroundAlpha>1</probeToolTipBackgroundAlpha>
+    <probeToolTipBackgroundColor>NaN</probeToolTipBackgroundColor>
+    <probeToolTipFontColor>0</probeToolTipFontColor>
+    <probeToolTipMaxWidth>400</probeToolTipMaxWidth>
+    <rServiceURL>/WeaveServices/RService</rServiceURL>
+    <searchServiceURLs>Wikipedia|http://en.wikipedia.org/wiki/Special:Search?search=
+Google|http://www.google.com/search?q=
+Google Images|http://images.google.com/images?q=
+Google Maps|http://maps.google.com/maps?t=h&amp;q=</searchServiceURLs>
+    <selectionAlphaAmount>0.5</selectionAlphaAmount>
+    <selectionBlurringAmount>4</selectionBlurringAmount>
+    <shadowAlpha>0.5</shadowAlpha>
+    <shadowAngle>45</shadowAngle>
+    <shadowBlur>4</shadowBlur>
+    <shadowColor>0</shadowColor>
+    <shadowDistance>2</shadowDistance>
+    <showAttributeSelector>true</showAttributeSelector>
+    <showColorController>true</showColorController>
+    <showCopyright>false</showCopyright>
+    <showEquationEditor>true</showEquationEditor>
+    <showKeyTypeInColumnTitle>false</showKeyTypeInColumnTitle>
+    <showProbeToolTipEditor>true</showProbeToolTipEditor>
+    <showSelectedRecordsText>true</showSelectedRecordsText>
+    <showVisToolCloseDialog>false</showVisToolCloseDialog>
+    <startupJavaScript/>
+    <toolInteractions>
+      <defaultDragMode/>
+      <pan>alt,drag</pan>
+      <probe>move</probe>
+      <select>drag</select>
+      <selectAdd>ctrl,drag</selectAdd>
+      <selectRemove>ctrl,shift,drag</selectRemove>
+      <zoom>shift,drag
+wheel</zoom>
+      <zoomIn>dclick</zoomIn>
+      <zoomOut>shift,dclick</zoomOut>
+      <zoomToExtent>ctrl,alt,shift,dclick</zoomToExtent>
+    </toolInteractions>
+    <version>1.0 Beta (Tue Jan 24 10:05:07 EST 2012)</version>
+    <windowSnapGridSize>5</windowSnapGridSize>
+    <workspaceHeight>252</workspaceHeight>
+    <workspaceMultiplier>1</workspaceMultiplier>
+    <workspaceWidth>333</workspaceWidth>
+  </WeaveProperties>
+  <ColorColumn name="defaultColorColumn">
+    <internalDynamicColumn encoding="dynamic">
+      <GlobalObjectReference name="defaultColorBinColumn"/>
+    </internalDynamicColumn>
+    <ramp>0xEDF8E9,0xBAE4B3,0x74C476,0x31A354,0x006D2C</ramp>
+    <recordColors/>
+  </ColorColumn>
+  <BinnedColumn name="defaultColorBinColumn">
+    <binningDefinition encoding="dynamic">
+      <CategoryBinningDefinition>
+        <overrideBinNames>Const,Ed/Health,Finance,Info,Leisure,Manuf,Other,Business,Public,Transp.,Nat.Res.</overrideBinNames>
+      </CategoryBinningDefinition>
+    </binningDefinition>
+    <internalDynamicColumn encoding="dynamic">
+      <GlobalObjectReference name="defaultColorDataColumn"/>
+    </internalDynamicColumn>
+  </BinnedColumn>
+  <FilteredColumn name="defaultColorDataColumn">
+    <filter encoding="dynamic">
+      <GlobalObjectReference name="defaultSubsetKeyFilter"/>
+    </filter>
+    <internalDynamicColumn encoding="dynamic">
+      <ReferencedColumn>
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>WeaveDataSource</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Data Tables" name="Data Tables">
+                  <category title="Employment By Sector 2010 (Municipal) - Tranposed" name="Employment By Sector 2010 (Municipal) - Tranposed">
+                    <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="TYPE" keyType="Employment By Sector 2010 (Municipal) - Tranposed" dataType="string" title="TYPE"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+    </internalDynamicColumn>
+  </FilteredColumn>
+  <KeyFilter name="defaultSubsetKeyFilter">
+    <excluded>Employment By Sector 2010 (Municipal) - Tranposed,row11,row4,row25,row17,row23,row5,row1,row9,row21,row13,row3,row15,row19,row7,row2</excluded>
+    <included/>
+    <includeMissingKeys>true</includeMissingKeys>
+    <includeMissingKeyTypes>true</includeMissingKeyTypes>
+  </KeyFilter>
+  <KeySet name="defaultSelectionKeySet"/>
+  <KeySet name="defaultProbeKeySet"/>
+  <LinkableHashMap encoding="dynamic" name="savedSelections"/>
+  <LinkableHashMap encoding="dynamic" name="savedSubsets"/>
+  <LinkableHashMap encoding="dynamic" name="Probe Header Columns"/>
+  <LinkableHashMap encoding="dynamic" name="Probed Columns"/>
+  <WeaveDataSource name="WeaveDataSource">
+    <attributeHierarchy encoding="xml">
+      <hierarchy name="Open Indicators Server">
+        <category title="Data Tables" name="Data Tables">
+          <category title="Arts and Culture Points" name="Arts and Culture Points"/>
+          <category title="Boston Circle of Promise Schools" name="Boston Circle of Promise Schools"/>
+          <category title="Boston Daycares" name="Boston Daycares"/>
+          <category title="Boston Neighborhoods" name="Boston Neighborhoods"/>
+          <category title="Boston Non-Profit Educational Assets (Points)" name="Boston Non-Profit Educational Assets (Points)"/>
+          <category title="Boston Outline" name="Boston Outline"/>
+          <category title="Boston Parcels (Subset)" name="Boston Parcels (Subset)"/>
+          <category title="Boston Schools" name="Boston Schools"/>
+          <category title="Census 2000 Block Groups" name="Census 2000 Block Groups"/>
+          <category title="Census 2000 Tracts" name="Census 2000 Tracts"/>
+          <category title="Child Care Providers with Less than High School" name="Child Care Providers with Less than High School"/>
+          <category title="Children in Poverty by Family Type (Census Tracts)" name="Children in Poverty by Family Type (Census Tracts)"/>
+          <category title="Citizenship Status (Municipality)" name="Citizenship Status (Municipality)"/>
+          <category title="Colleges and Universities" name="Colleges and Universities"/>
+          <category title="Commuter Rail" name="Commuter Rail"/>
+          <category title="Educational Attainment over 25 2005-09 (Census tracts)" name="Educational Attainment over 25 2005-09 (Census tracts)"/>
+          <category title="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" name="Educational Attainment over 25 years, ACS 2005-09 (Municipal)"/>
+          <category title="Employment By Sector 2010 (Municipal)" name="Employment By Sector 2010 (Municipal)"/>
+          <category title="Employment By Sector 2010 (Municipal) - Tranposed" name="Employment By Sector 2010 (Municipal) - Tranposed">
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="SALEM" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="SALEM"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="SALISBURY" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="SALISBURY"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="SANDISFIELD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="SANDISFIELD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="SANDWICH" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="SANDWICH"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="SAUGUS" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="SAUGUS"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="SAVOY" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="SAVOY"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="SCITUATE" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="SCITUATE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="SEEKONK" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="SEEKONK"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="SHARON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="SHARON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="SHEFFIELD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="SHEFFIELD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="SHELBURNE" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="SHELBURNE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="SHERBORN" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="SHERBORN"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="SHIRLEY" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="SHIRLEY"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="SHREWSBURY" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="SHREWSBURY"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="SHUTESBURY" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="SHUTESBURY"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="SOMERSET" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="SOMERSET"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="SOMERVILLE" dataType="number" string="formatNumber(number, 1)" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="SOMERVILLE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="SOUTH HADLEY" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="SOUTH HADLEY"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="SOUTHAMPTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="SOUTHAMPTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="SOUTHBOROUGH" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="SOUTHBOROUGH"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="SOUTHBRIDGE" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="SOUTHBRIDGE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="SOUTHWICK" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="SOUTHWICK"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="SPENCER" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="SPENCER"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="SPRINGFIELD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="SPRINGFIELD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="STERLING" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="STERLING"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="STOCKBRIDGE" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="STOCKBRIDGE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="STONEHAM" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="STONEHAM"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="STOUGHTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="STOUGHTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="STOW" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="STOW"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="STURBRIDGE" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="STURBRIDGE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="SUDBURY" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="SUDBURY"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="SUNDERLAND" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="SUNDERLAND"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="SUTTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="SUTTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="SWAMPSCOTT" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="SWAMPSCOTT"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="SWANSEA" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="SWANSEA"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="TAUNTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="TAUNTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="TLETON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="TLETON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="TEWKSBURY" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="TEWKSBURY"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="TISBURY" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="TISBURY"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="TOLLAND" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="TOLLAND"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="TOPSFIELD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="TOPSFIELD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="TOWNSEND" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="TOWNSEND"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="TRURO" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="TRURO"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="TYNGSBOROUGH" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="TYNGSBOROUGH"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="TYRINGHAM" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="TYRINGHAM"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="UPTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="UPTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="UXBRIDGE" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="UXBRIDGE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WAKEFIELD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WAKEFIELD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WALES" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WALES"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WALPOLE" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WALPOLE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WALTHAM" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WALTHAM"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WARE" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WARE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="ID" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="ID"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="TYPE" dataType="string" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="TYPE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="ABINGTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="ABINGTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="ACTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="ACTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="ACUSHNET" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="ACUSHNET"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="ADAMS" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="ADAMS"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="AGAWAM" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="AGAWAM"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="ALFORD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="ALFORD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="AMESBURY" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="AMESBURY"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="AMHERST" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="AMHERST"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="ANDOVER" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="ANDOVER"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="ARLINGTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="ARLINGTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="ASHBURNHAM" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="ASHBURNHAM"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="ASHBY" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="ASHBY"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="ASHFIELD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="ASHFIELD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="ASHLAND" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="ASHLAND"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="ATHOL" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="ATHOL"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="ATTLEBOROUGH" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="ATTLEBOROUGH"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="AUBURN" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="AUBURN"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="AVON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="AVON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="AYER" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="AYER"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="BARNSTABLE" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="BARNSTABLE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="BARRE" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="BARRE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="BECKET" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="BECKET"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="BEDFORD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="BEDFORD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="BELCHERTOWN" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="BELCHERTOWN"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="BELLINGHAM" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="BELLINGHAM"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="BELMONT" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="BELMONT"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="BERKLEY" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="BERKLEY"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="BERLIN" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="BERLIN"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="BERNARDSTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="BERNARDSTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="BEVERLY" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="BEVERLY"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="BILLERICA" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="BILLERICA"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="BLACKSTONE" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="BLACKSTONE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="BLANDFORD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="BLANDFORD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="BOLTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="BOLTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="BOSTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="BOSTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="BOURNE" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="BOURNE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="BOXBOROUGH" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="BOXBOROUGH"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="BOXFORD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="BOXFORD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="BOYLSTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="BOYLSTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="BRAINTREE" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="BRAINTREE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="BREWSTER" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="BREWSTER"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="BRIDGEWATER" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="BRIDGEWATER"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="BRIMFIELD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="BRIMFIELD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="BROCKTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="BROCKTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="BROOKFIELD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="BROOKFIELD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="BROOKLINE" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="BROOKLINE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="BUCKLAND" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="BUCKLAND"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="BURLINGTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="BURLINGTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="CAMBRIDGE" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="CAMBRIDGE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="CANTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="CANTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="CARLISLE" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="CARLISLE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="CARVER" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="CARVER"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="CHARLEMONT" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="CHARLEMONT"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="CHARLTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="CHARLTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="CHATHAM" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="CHATHAM"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="CHELMSFORD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="CHELMSFORD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="CHELSEA" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="CHELSEA"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="CHESHIRE" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="CHESHIRE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="CHESTER" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="CHESTER"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="CHESTERFIELD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="CHESTERFIELD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="CHICOPEE" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="CHICOPEE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="CHILMARK" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="CHILMARK"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="CLARKSBURG" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="CLARKSBURG"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="CLINTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="CLINTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="COHASSET" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="COHASSET"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="COLRAIN" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="COLRAIN"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="CONCORD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="CONCORD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="CONWAY" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="CONWAY"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="CUMMINGTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="CUMMINGTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="DALTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="DALTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="DANVERS" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="DANVERS"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="DARTMOUTH" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="DARTMOUTH"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="DEDHAM" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="DEDHAM"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="DEERFIELD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="DEERFIELD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="DENNIS" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="DENNIS"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="DIGHTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="DIGHTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="DOUGLAS" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="DOUGLAS"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="DOVER" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="DOVER"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="DRACUT" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="DRACUT"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="DUDLEY" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="DUDLEY"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="DUNSTABLE" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="DUNSTABLE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="DUXBURY" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="DUXBURY"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="EAST BRIDGEWATER" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="EAST BRIDGEWATER"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="EAST BROOKFIELD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="EAST BROOKFIELD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="EAST LONGMEADOW" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="EAST LONGMEADOW"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="EASTHAM" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="EASTHAM"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="EASTHAMPTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="EASTHAMPTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="EASTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="EASTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="EDGARTOWN" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="EDGARTOWN"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="EGREMONT" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="EGREMONT"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="ERVING" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="ERVING"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="ESSEX" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="ESSEX"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="EVERETT" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="EVERETT"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="FAIRHAVEN" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="FAIRHAVEN"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="FALL RIVER" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="FALL RIVER"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="FALMOUTH" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="FALMOUTH"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="FITCHBURG" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="FITCHBURG"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="FLORIDA" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="FLORIDA"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="FOXBOROUGH" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="FOXBOROUGH"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="FRAMINGHAM" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="FRAMINGHAM"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="FRANKLIN" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="FRANKLIN"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="FREETOWN" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="FREETOWN"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="GARDNER" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="GARDNER"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="AQUINNAH" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="AQUINNAH"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="GEORGETOWN" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="GEORGETOWN"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="GILL" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="GILL"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="GLOUCESTER" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="GLOUCESTER"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="GOSHEN" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="GOSHEN"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="GOSNOLD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="GOSNOLD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="GRAFTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="GRAFTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="GRANBY" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="GRANBY"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="GRANVILLE" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="GRANVILLE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="GREAT BARRINGTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="GREAT BARRINGTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="GREENFIELD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="GREENFIELD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="GROTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="GROTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="GROVELAND" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="GROVELAND"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="HADLEY" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="HADLEY"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="HALIFAX" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="HALIFAX"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="HAMILTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="HAMILTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="HAMPDEN" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="HAMPDEN"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="HANCOCK" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="HANCOCK"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="HANOVER" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="HANOVER"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="HANSON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="HANSON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="HARDWICK" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="HARDWICK"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="HARVARD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="HARVARD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="HARWICH" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="HARWICH"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="HATFIELD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="HATFIELD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="HAVERHILL" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="HAVERHILL"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="HAWLEY" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="HAWLEY"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="HEATH" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="HEATH"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="HINGHAM" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="HINGHAM"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="HINSDALE" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="HINSDALE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="HOLBROOK" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="HOLBROOK"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="HOLDEN" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="HOLDEN"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="HOLLAND" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="HOLLAND"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="HOLLISTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="HOLLISTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="HOLYOKE" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="HOLYOKE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="HOPEDALE" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="HOPEDALE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="HOPKINTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="HOPKINTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="HUBBARDSTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="HUBBARDSTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="HUDSON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="HUDSON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="HULL" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="HULL"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="HUNTINGTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="HUNTINGTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="IPSWICH" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="IPSWICH"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="KINGSTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="KINGSTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="LAKEVILLE" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="LAKEVILLE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="LANCASTER" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="LANCASTER"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="LANESBOROUGH" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="LANESBOROUGH"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="LAWRENCE" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="LAWRENCE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="LEE" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="LEE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="LEICESTER" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="LEICESTER"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="LENOX" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="LENOX"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="LEOMINSTER" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="LEOMINSTER"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="LEVERETT" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="LEVERETT"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="LEXINGTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="LEXINGTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="LEYDEN" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="LEYDEN"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="LINCOLN" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="LINCOLN"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="LITTLETON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="LITTLETON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="LONGMEADOW" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="LONGMEADOW"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="LOWELL" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="LOWELL"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="LUDLOW" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="LUDLOW"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="LUNENBURG" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="LUNENBURG"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="LYNN" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="LYNN"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="LYNNFIELD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="LYNNFIELD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="MALDEN" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="MALDEN"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="MANCHESTER" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="MANCHESTER"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="MANSFIELD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="MANSFIELD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="MARBLEHEAD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="MARBLEHEAD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="MARION" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="MARION"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="MARLBOROUGH" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="MARLBOROUGH"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="MARSHFIELD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="MARSHFIELD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="MASHPEE" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="MASHPEE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="MATTAPOISETT" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="MATTAPOISETT"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="MAYNARD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="MAYNARD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="MEDFIELD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="MEDFIELD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="MEDFORD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="MEDFORD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="MEDWAY" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="MEDWAY"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="MELROSE" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="MELROSE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="MENDON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="MENDON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="MERRIMAC" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="MERRIMAC"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="METHUEN" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="METHUEN"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="MIDDLEBOROUGH" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="MIDDLEBOROUGH"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="MIDDLEFIELD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="MIDDLEFIELD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="MIDDLETON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="MIDDLETON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="MILFORD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="MILFORD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="MILLBURY" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="MILLBURY"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="MILLIS" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="MILLIS"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="MILLVILLE" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="MILLVILLE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="MILTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="MILTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="MONROE" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="MONROE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="MONSON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="MONSON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="MONTAGUE" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="MONTAGUE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="MONTEREY" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="MONTEREY"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="MONTGOMERY" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="MONTGOMERY"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="MOUNT WASHINGTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="MOUNT WASHINGTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="NAHANT" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="NAHANT"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="NANTUCKET" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="NANTUCKET"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="NATICK" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="NATICK"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="NEEDHAM" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="NEEDHAM"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="NEW ASHFORD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="NEW ASHFORD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="NEW BEDFORD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="NEW BEDFORD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="NEW BRAINTREE" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="NEW BRAINTREE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="NEW MARLBOROUGH" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="NEW MARLBOROUGH"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="NEW SALEM" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="NEW SALEM"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="NEWBURY" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="NEWBURY"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="NEWBURYPORT" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="NEWBURYPORT"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="NEWTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="NEWTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="NORFOLK" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="NORFOLK"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="NORTH ADAMS" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="NORTH ADAMS"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="NORTH ANDOVER" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="NORTH ANDOVER"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="NORTH ATTLEBOROUGH" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="NORTH ATTLEBOROUGH"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="NORTH BROOKFIELD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="NORTH BROOKFIELD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="NORTH READING" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="NORTH READING"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="NORTHAMPTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="NORTHAMPTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="NORTHBOROUGH" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="NORTHBOROUGH"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="NORTHBRIDGE" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="NORTHBRIDGE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="NORTHFIELD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="NORTHFIELD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="NORTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="NORTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="NORWELL" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="NORWELL"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="NORWOOD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="NORWOOD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="OAK BLUFFS" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="OAK BLUFFS"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="OAKHAM" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="OAKHAM"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="ORANGE" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="ORANGE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="ORLEANS" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="ORLEANS"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="OTIS" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="OTIS"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="RANDOLPH" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="RANDOLPH"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="OXFORD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="OXFORD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="PALMER" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="PALMER"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="PAXTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="PAXTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="PEABODY" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="PEABODY"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="PELHAM" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="PELHAM"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="PEMBROKE" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="PEMBROKE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="PEPPERELL" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="PEPPERELL"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="PERU" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="PERU"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="PETERSHAM" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="PETERSHAM"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="PHILLIPSTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="PHILLIPSTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="PITTSFIELD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="PITTSFIELD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="PLAINFIELD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="PLAINFIELD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="PLAINVILLE" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="PLAINVILLE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="PLYMOUTH" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="PLYMOUTH"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="PLYMPTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="PLYMPTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="PRINCETON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="PRINCETON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="PROVINCETOWN" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="PROVINCETOWN"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="QUINCY" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="QUINCY"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="RAYNHAM" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="RAYNHAM"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="READING" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="READING"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="REHOBOTH" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="REHOBOTH"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="REVERE" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="REVERE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="RICHMOND" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="RICHMOND"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="ROCHESTER" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="ROCHESTER"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="ROCKLAND" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="ROCKLAND"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="ROCKPORT" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="ROCKPORT"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="ROWE" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="ROWE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="ROWLEY" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="ROWLEY"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="ROYALSTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="ROYALSTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="RUSSELL" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="RUSSELL"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="RUTLAND" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="RUTLAND"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WAREHAM" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WAREHAM"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WARREN" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WARREN"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WARWICK" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WARWICK"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WASHINGTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WASHINGTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WATERTOWN" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WATERTOWN"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WAYLAND" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WAYLAND"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WEBSTER" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WEBSTER"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WELLESLEY" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WELLESLEY"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WELLFLEET" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WELLFLEET"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WENDELL" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WENDELL"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WENHAM" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WENHAM"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WEST BOYLSTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WEST BOYLSTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WEST BRIDGEWATER" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WEST BRIDGEWATER"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WEST BROOKFIELD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WEST BROOKFIELD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WEST NEWBURY" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WEST NEWBURY"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WEST SPRINGFIELD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WEST SPRINGFIELD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WEST STOCKBRIDGE" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WEST STOCKBRIDGE"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WEST TISBURY" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WEST TISBURY"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WESTBOROUGH" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WESTBOROUGH"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WESTFIELD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WESTFIELD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WESTFORD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WESTFORD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WESTHAMPTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WESTHAMPTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WESTMINSTER" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WESTMINSTER"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WESTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WESTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WESTPORT" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WESTPORT"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WESTWOOD" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WESTWOOD"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WEYMOUTH" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WEYMOUTH"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WHATELY" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WHATELY"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WHITMAN" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WHITMAN"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WILBRAHAM" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WILBRAHAM"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WILLIAMSBURG" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WILLIAMSBURG"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WILLIAMSTOWN" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WILLIAMSTOWN"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WILMINGTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WILMINGTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WINCHENDON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WINCHENDON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WINCHESTER" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WINCHESTER"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WINDSOR" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WINDSOR"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WINTHROP" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WINTHROP"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WOBURN" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WOBURN"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WORCESTER" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WORCESTER"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WORTHINGTON" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WORTHINGTON"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="WRENTHAM" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="WRENTHAM"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="YARMOUTH" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="YARMOUTH"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="MAPC" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="MAPC"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="MASSACHUSETTS" dataType="number" keyType="Employment By Sector 2010 (Municipal) - Tranposed" title="MASSACHUSETTS"/>
+          </category>
+          <category title="Geographic Mobility, ACS 2005-09 (Municipal)" name="Geographic Mobility, ACS 2005-09 (Municipal)"/>
+          <category title="Housing Occupancy, 2000-2010 (Municipal)" name="Housing Occupancy, 2000-2010 (Municipal)"/>
+          <category title="Housing: Census 2000 (Municipal)" name="Housing: Census 2000 (Municipal)"/>
+          <category title="Housing: Household Type 2000-2010 (Municipal)" name="Housing: Household Type 2000-2010 (Municipal)"/>
+          <category title="Indigo Commuter Line" name="Indigo Commuter Line"/>
+          <category title="Landuse Summary Statistics 2005, Municipal" name="Landuse Summary Statistics 2005, Municipal"/>
+          <category title="Libraries" name="Libraries"/>
+          <category title="Linguistic Isolation (Municipal)" name="Linguistic Isolation (Municipal)"/>
+          <category title="MA Counties" name="MA Counties"/>
+          <category title="Massachusetts Municipalities" name="Massachusetts Municipalities"/>
+          <category title="MBTA Subway Lines" name="MBTA Subway Lines"/>
+          <category title="MetroFuture Region" name="MetroFuture Region"/>
+          <category title="Population By Age 2000 - 2010 (Municipality)" name="Population By Age 2000 - 2010 (Municipality)"/>
+          <category title="Population By Gender and Age with Change, 2000 - 2010 (Municipal)" name="Population By Gender and Age with Change, 2000 - 2010 (Municipal)"/>
+          <category title="Population by Race with Change, 2000-2010 (Municipal)" name="Population by Race with Change, 2000-2010 (Municipal)"/>
+          <category title="Population by Race with Change, 2010-2011 (Municipal) - Transposed" name="Population by Race with Change, 2010-2011 (Municipal) - Transposed"/>
+          <category title="School Districts" name="School Districts"/>
+          <category title="School Districts by Town" name="School Districts by Town"/>
+          <category title="School Districts MCAS: Grade 3 Reading All Students by Municipality" name="School Districts MCAS: Grade 3 Reading All Students by Municipality"/>
+          <category title="School Districts MCAS: Grade 3 Reading groups by Municipality, 2011" name="School Districts MCAS: Grade 3 Reading groups by Municipality, 2011"/>
+          <category title="School Districts: Enrollment by Municipality" name="School Districts: Enrollment by Municipality"/>
+          <category title="School Districts: Graduation Plans" name="School Districts: Graduation Plans"/>
+          <category title="Schools" name="Schools"/>
+          <category title="Schools MCAS Grade3 Reading 2011" name="Schools MCAS Grade3 Reading 2011"/>
+          <category title="Schools MCAS: Grade3 Reading 2011" name="Schools MCAS: Grade3 Reading 2011"/>
+          <category title="Schools: Enrollment" name="Schools: Enrollment"/>
+          <category title="Subsidized Housing Inventory" name="Subsidized Housing Inventory"/>
+          <category title="Success Boston Student Cohorts (2010)" name="Success Boston Student Cohorts (2010)"/>
+          <category title="Transportation to Work, ACS 2005-09 (Municipal)" name="Transportation to Work, ACS 2005-09 (Municipal)"/>
+          <category title="Transportation to Work, ACS 2005-09 (Municipality)-Transposed" name="Transportation to Work, ACS 2005-09 (Municipality)-Transposed"/>
+          <category title="Travel Time to Work 2005-09 ACS (Municipal)" name="Travel Time to Work 2005-09 ACS (Municipal)"/>
+          <category title="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+          <category title="Unemployment (Municipality)" name="Unemployment (Municipality)"/>
+          <category title="US States" name="US States"/>
+        </category>
+        <category title="Geometry Collections" name="Geometry Collections">
+          <attribute keyType="Arts and Culture Points" name="Arts and Culture Points" dataType="geometry" title="Arts and Culture Points"/>
+          <attribute keyType="SchoolID" name="Boston Circle of Promise Schools" dataType="geometry" title="Boston Circle of Promise Schools"/>
+          <attribute keyType="ObjectID" name="Boston Daycares" dataType="geometry" title="Boston Daycares"/>
+          <attribute keyType="ObjectID" name="Boston Neighborhoods" dataType="geometry" title="Boston Neighborhoods"/>
+          <attribute keyType="ObjectID" name="Boston Non-Profit Educational Assets (Points)" dataType="geometry" title="Boston Non-Profit Educational Assets (Points)"/>
+          <attribute keyType="MUNI_ID" name="Boston Outline" dataType="geometry" title="Boston Outline"/>
+          <attribute keyType="BostonParcelID" name="Boston Parcels (Subset)" dataType="geometry" title="Boston Parcels (Subset)"/>
+          <attribute keyType="SchoolID" name="Boston Schools" dataType="geometry" title="Boston Schools"/>
+          <attribute keyType="BG_00_ID" name="Census 2000 Block Groups" dataType="geometry" title="Census 2000 Block Groups"/>
+          <attribute keyType="CT_ID" name="Census 2000 Tracts" dataType="geometry" title="Census 2000 Tracts"/>
+          <attribute keyType="ObjectID" name="Child Care Providers with Less than High School" dataType="geometry" title="Child Care Providers with Less than High School"/>
+          <attribute keyType="College_ID" name="Colleges and Universities" dataType="geometry" title="Colleges and Universities"/>
+          <attribute keyType="Commuter Rail" name="Commuter Rail" dataType="geometry" title="Commuter Rail"/>
+          <attribute keyType="ObjectID" name="Indigo Commuter Line" dataType="geometry" title="Indigo Commuter Line"/>
+          <attribute keyType="ObjectID" name="Libraries" dataType="geometry" title="Libraries"/>
+          <attribute keyType="FIPS_ID" name="MA Counties" dataType="geometry" title="MA Counties"/>
+          <attribute keyType="MUNI_ID" name="Massachusetts Municipalities" dataType="geometry" title="Massachusetts Municipalities"/>
+          <attribute keyType="MBTA Subway Lines" name="MBTA Subway Lines" dataType="geometry" title="MBTA Subway Lines"/>
+          <attribute keyType="MUNI_ID" name="MetroFuture Region" dataType="geometry" title="MetroFuture Region"/>
+          <attribute keyType="SchoolDistrictID" name="School Districts" dataType="geometry" title="School Districts"/>
+          <attribute keyType="MUNI_ID" name="School Districts by Town" dataType="geometry" title="School Districts by Town"/>
+          <attribute keyType="SchoolID" name="Schools" dataType="geometry" title="Schools"/>
+          <attribute keyType="ObjectID" name="Success Boston Student Cohorts (2010)" dataType="geometry" title="Success Boston Student Cohorts (2010)"/>
+          <attribute keyType="State_ID" name="US States" dataType="geometry" title="US States"/>
+        </category>
+      </hierarchy>
+    </attributeHierarchy>
+    <hierarchyURL/>
+    <url>/WeaveServices/DataService</url>
+  </WeaveDataSource>
+  <CompoundBarChartTool name="CompoundBarChartTool">
+    <buttonRadius>3</buttonRadius>
+    <children encoding="dynamic">
+      <SimpleInteractiveVisualization name="visualization">
+        <axesAlpha>1</axesAlpha>
+        <axesColor>11579568</axesColor>
+        <axesThickness>4</axesThickness>
+        <enableAutoZoomToExtent>true</enableAutoZoomToExtent>
+        <enableAutoZoomToSelection>false</enableAutoZoomToSelection>
+        <enableAutoZoomXToNiceNumbers>false</enableAutoZoomXToNiceNumbers>
+        <enableAutoZoomYToNiceNumbers>false</enableAutoZoomYToNiceNumbers>
+        <enableFixedAspectRatio>false</enableFixedAspectRatio>
+        <enableProbe>true</enableProbe>
+        <enableSelection>true</enableSelection>
+        <enableZoomAndPan>false</enableZoomAndPan>
+        <gridLineAlpha>1</gridLineAlpha>
+        <gridLineColor>14540253</gridLineColor>
+        <gridLineThickness>1</gridLineThickness>
+        <includeNonSelectableLayersInAutoZoom>false</includeNonSelectableLayersInAutoZoom>
+        <layers encoding="dynamic">
+          <AxisLayer name="yAxis">
+            <isOverlay>false</isOverlay>
+            <layerIsVisible>false</layerIsVisible>
+            <maxVisibleScale>Infinity</maxVisibleScale>
+            <minVisibleScale>0</minVisibleScale>
+            <plotter encoding="dynamic">
+              <SimpleAxisPlotter>
+                <axisLabelDistance>-10</axisLabelDistance>
+                <axisLabelRelativeAngle>45</axisLabelRelativeAngle>
+                <axisLineDataBounds>
+                  <xMax>0</xMax>
+                  <xMin>0</xMin>
+                  <yMax>10.5</yMax>
+                  <yMin>-0.5</yMin>
+                </axisLineDataBounds>
+                <axisLineMaxValue>10.5</axisLineMaxValue>
+                <axisLineMinValue>-0.5</axisLineMinValue>
+                <forceTickCount>false</forceTickCount>
+                <keySet>
+                  <keyFilter encoding="dynamic"/>
+                </keySet>
+                <labelDistanceIsVertical>false</labelDistanceIsVertical>
+                <labelFunction>string.substring(0, (string.length - 6))</labelFunction>
+                <labelHorizontalAlign>right</labelHorizontalAlign>
+                <labelNumberFormatter>
+                  <decimalSeparatorFrom>.</decimalSeparatorFrom>
+                  <decimalSeparatorTo>.</decimalSeparatorTo>
+                  <precision>0</precision>
+                  <rounding>none</rounding>
+                  <thousandsSeparatorFrom>,</thousandsSeparatorFrom>
+                  <thousandsSeparatorTo>,</thousandsSeparatorTo>
+                  <useNegativeSign>true</useNegativeSign>
+                  <useThousandsSeparator>true</useThousandsSeparator>
+                </labelNumberFormatter>
+                <labelTextAlignment>left</labelTextAlignment>
+                <labelVerticalAlign>bottom</labelVerticalAlign>
+                <labelWordWrapSize>10</labelWordWrapSize>
+                <overrideAxisName/>
+                <showAxisName>true</showAxisName>
+                <showLabels>true</showLabels>
+                <tickCountRequested>11</tickCountRequested>
+                <tickMaxValue>10</tickMaxValue>
+                <tickMinValue>0</tickMinValue>
+              </SimpleAxisPlotter>
+            </plotter>
+            <selectionFilter encoding="dynamic"/>
+          </AxisLayer>
+          <AxisLayer name="xAxis">
+            <isOverlay>false</isOverlay>
+            <layerIsVisible>true</layerIsVisible>
+            <maxVisibleScale>Infinity</maxVisibleScale>
+            <minVisibleScale>0</minVisibleScale>
+            <plotter encoding="dynamic">
+              <SimpleAxisPlotter>
+                <axisLabelDistance>5</axisLabelDistance>
+                <axisLabelRelativeAngle>0</axisLabelRelativeAngle>
+                <axisLineDataBounds>
+                  <xMax>25.2376</xMax>
+                  <xMin>0</xMin>
+                  <yMax>-0.5</yMax>
+                  <yMin>-0.5</yMin>
+                </axisLineDataBounds>
+                <axisLineMaxValue>25.2376</axisLineMaxValue>
+                <axisLineMinValue>0</axisLineMinValue>
+                <forceTickCount>false</forceTickCount>
+                <keySet>
+                  <keyFilter encoding="dynamic"/>
+                </keySet>
+                <labelDistanceIsVertical>true</labelDistanceIsVertical>
+                <labelFunction>number + '%'</labelFunction>
+                <labelHorizontalAlign>center</labelHorizontalAlign>
+                <labelNumberFormatter>
+                  <decimalSeparatorFrom>.</decimalSeparatorFrom>
+                  <decimalSeparatorTo>.</decimalSeparatorTo>
+                  <precision>0</precision>
+                  <rounding>none</rounding>
+                  <thousandsSeparatorFrom>,</thousandsSeparatorFrom>
+                  <thousandsSeparatorTo>,</thousandsSeparatorTo>
+                  <useNegativeSign>true</useNegativeSign>
+                  <useThousandsSeparator>true</useThousandsSeparator>
+                </labelNumberFormatter>
+                <labelTextAlignment>left</labelTextAlignment>
+                <labelVerticalAlign>top</labelVerticalAlign>
+                <labelWordWrapSize>40</labelWordWrapSize>
+                <overrideAxisName>Percent of Jobs</overrideAxisName>
+                <showAxisName>false</showAxisName>
+                <showLabels>true</showLabels>
+                <tickCountRequested>5</tickCountRequested>
+                <tickMaxValue>NaN</tickMaxValue>
+                <tickMinValue>NaN</tickMinValue>
+              </SimpleAxisPlotter>
+            </plotter>
+            <selectionFilter encoding="dynamic"/>
+          </AxisLayer>
+          <SelectablePlotLayer name="plot">
+            <backgroundIsVisible>true</backgroundIsVisible>
+            <layerIsSelectable>true</layerIsSelectable>
+            <layerIsVisible>true</layerIsVisible>
+            <maxVisibleScale>Infinity</maxVisibleScale>
+            <minVisibleScale>0</minVisibleScale>
+            <plotter encoding="dynamic">
+              <CompoundBarChartPlotter>
+                <barSpacing>0</barSpacing>
+                <chartColors encoding="xml">
+                  <colorRamp source="OIC" category="aesthetic" name="Doppler Radar" dataFormat="qualitative">
+                    <node position="0" color="0x04E9E7"/>
+                    <node position="0.08" color="0x009DF4"/>
+                    <node position="0.16" color="0x0201F4"/>
+                    <node position="0.24" color="0x01FC01"/>
+                    <node position="0.32" color="0x00C400"/>
+                    <node position="0.4" color="0x008C00"/>
+                    <node position="0.48" color="0x0FDF801"/>
+                    <node position="0.56" color="0xF99200"/>
+                    <node position="0.64" color="0xFD0000"/>
+                    <node position="0.72" color="0xBC0000"/>
+                    <node position="0.8" color="0xBC0000"/>
+                    <node position="0.88" color="0xF800FD"/>
+                    <node position="1.0" color="0x9854C6"/>
+                  </colorRamp>
+                </chartColors>
+                <colorColumn>
+                  <defaultValue>NaN</defaultValue>
+                  <internalDynamicColumn encoding="dynamic">
+                    <GlobalObjectReference name="defaultColorColumn"/>
+                  </internalDynamicColumn>
+                </colorColumn>
+                <groupBySortColumn>false</groupBySortColumn>
+                <groupingMode>stack</groupingMode>
+                <heightColumns encoding="dynamic">
+                  <ReferencedColumn name="ReferencedColumn">
+                    <dynamicColumnReference encoding="dynamic">
+                      <HierarchyColumnReference>
+                        <dataSourceName>WeaveDataSource</dataSourceName>
+                        <hierarchyPath encoding="xml">
+                          <hierarchy>
+                            <category title="Data Tables" name="Data Tables">
+                              <category title="Employment By Sector 2010 (Municipal) - Tranposed" name="Employment By Sector 2010 (Municipal) - Tranposed">
+                                <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" keyType="Employment By Sector 2010 (Municipal) - Tranposed" name="{{ regionalunit.name|upper }}" dataType="number" title="{{ regionalunit.name|upper }}"/>
+                              </category>
+                            </category>
+                          </hierarchy>
+                        </hierarchyPath>
+                      </HierarchyColumnReference>
+                    </dynamicColumnReference>
+                  </ReferencedColumn>
+                </heightColumns>
+                <horizontalMode>true</horizontalMode>
+                <keySet>
+                  <keyFilter encoding="dynamic">
+                    <GlobalObjectReference name="defaultSubsetKeyFilter"/>
+                  </keyFilter>
+                </keySet>
+                <labelColor>0</labelColor>
+                <labelColumn encoding="dynamic">
+                  <ReferencedColumn>
+                    <dynamicColumnReference encoding="dynamic">
+                      <HierarchyColumnReference>
+                        <dataSourceName>WeaveDataSource</dataSourceName>
+                        <hierarchyPath encoding="xml">
+                          <hierarchy>
+                            <category title="Data Tables" name="Data Tables">
+                              <category title="Employment By Sector 2010 (Municipal) - Tranposed" name="Employment By Sector 2010 (Municipal) - Tranposed">
+                                <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" keyType="Employment By Sector 2010 (Municipal) - Tranposed" name="TYPE" dataType="string" title="TYPE"/>
+                              </category>
+                            </category>
+                          </hierarchy>
+                        </hierarchyPath>
+                      </HierarchyColumnReference>
+                    </dynamicColumnReference>
+                  </ReferencedColumn>
+                </labelColumn>
+                <labelDataCoordinate>NaN</labelDataCoordinate>
+                <labelHorizontalAlign>right</labelHorizontalAlign>
+                <labelMaxWidth>200</labelMaxWidth>
+                <labelRelativeAngle>NaN</labelRelativeAngle>
+                <labelVerticalAlign>middle</labelVerticalAlign>
+                <lineStyle encoding="dynamic">
+                  <SolidLineStyle>
+                    <alpha>
+                      <defaultValue>0.5</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </alpha>
+                    <caps>
+                      <defaultValue/>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </caps>
+                    <color>
+                      <defaultValue>0</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </color>
+                    <enabled>
+                      <defaultValue>true</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </enabled>
+                    <joints>
+                      <defaultValue/>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </joints>
+                    <miterLimit>
+                      <defaultValue>3</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </miterLimit>
+                    <pixelHinting>
+                      <defaultValue>false</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </pixelHinting>
+                    <scaleMode>
+                      <defaultValue>normal</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </scaleMode>
+                    <weight>
+                      <defaultValue>1</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </weight>
+                  </SolidLineStyle>
+                </lineStyle>
+                <negativeErrorColumns encoding="dynamic"/>
+                <positiveErrorColumns encoding="dynamic"/>
+                <recordLabelColoring>false</recordLabelColoring>
+                <recordValueLabelColoring>false</recordValueLabelColoring>
+                <showLabels>false</showLabels>
+                <showValueLabels>false</showValueLabels>
+                <sortColumn encoding="dynamic">
+                  <ReferencedColumn>
+                    <dynamicColumnReference encoding="dynamic">
+                      <HierarchyColumnReference>
+                        <dataSourceName>WeaveDataSource</dataSourceName>
+                        <hierarchyPath encoding="xml">
+                          <hierarchy>
+                            <category title="Data Tables" name="Data Tables">
+                              <category title="Employment By Sector 2010 (Municipal) - Tranposed" name="Employment By Sector 2010 (Municipal) - Tranposed">
+                                <attribute dataTable="Employment By Sector 2010 (Municipal) - Tranposed" name="TYPE" keyType="Employment By Sector 2010 (Municipal) - Tranposed" dataType="string" title="TYPE"/>
+                              </category>
+                            </category>
+                          </hierarchy>
+                        </hierarchyPath>
+                      </HierarchyColumnReference>
+                    </dynamicColumnReference>
+                  </ReferencedColumn>
+                </sortColumn>
+                <valueLabelColor>0</valueLabelColor>
+                <valueLabelDataCoordinate>NaN</valueLabelDataCoordinate>
+                <valueLabelHorizontalAlign>left</valueLabelHorizontalAlign>
+                <valueLabelMaxWidth>200</valueLabelMaxWidth>
+                <valueLabelRelativeAngle>NaN</valueLabelRelativeAngle>
+                <valueLabelVerticalAlign>middle</valueLabelVerticalAlign>
+                <zoomToSubset>true</zoomToSubset>
+              </CompoundBarChartPlotter>
+            </plotter>
+            <probeFilter encoding="dynamic">
+              <GlobalObjectReference name="defaultProbeKeySet"/>
+            </probeFilter>
+            <selectionFilter encoding="dynamic">
+              <GlobalObjectReference name="defaultSelectionKeySet"/>
+            </selectionFilter>
+            <subsetFilter encoding="dynamic">
+              <GlobalObjectReference name="defaultSubsetKeyFilter"/>
+            </subsetFilter>
+            <useTextBitmapFilters>false</useTextBitmapFilters>
+          </SelectablePlotLayer>
+          <PlotLayer name="probeLine">
+            <isOverlay>false</isOverlay>
+            <layerIsVisible>true</layerIsVisible>
+            <maxVisibleScale>Infinity</maxVisibleScale>
+            <minVisibleScale>0</minVisibleScale>
+            <plotter encoding="dynamic">
+              <ProbeLinePlotter>
+                <keySet>
+                  <keyFilter encoding="dynamic">
+                    <GlobalObjectReference name="defaultSubsetKeyFilter"/>
+                  </keyFilter>
+                </keySet>
+                <lineStyle encoding="dynamic">
+                  <SolidLineStyle>
+                    <alpha>
+                      <defaultValue>0.5</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </alpha>
+                    <caps>
+                      <defaultValue/>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </caps>
+                    <color>
+                      <defaultValue>0</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </color>
+                    <enabled>
+                      <defaultValue>true</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </enabled>
+                    <joints>
+                      <defaultValue/>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </joints>
+                    <miterLimit>
+                      <defaultValue>3</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </miterLimit>
+                    <pixelHinting>
+                      <defaultValue>false</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </pixelHinting>
+                    <scaleMode>
+                      <defaultValue>normal</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </scaleMode>
+                    <weight>
+                      <defaultValue>1</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </weight>
+                  </SolidLineStyle>
+                </lineStyle>
+              </ProbeLinePlotter>
+            </plotter>
+            <selectionFilter encoding="dynamic"/>
+          </PlotLayer>
+        </layers>
+        <marginBottom>20</marginBottom>
+        <marginLeft>10</marginLeft>
+        <marginRight>5</marginRight>
+        <marginTop>5</marginTop>
+        <maxZoomLevel>16</maxZoomLevel>
+        <minScreenSize>128</minScreenSize>
+        <minZoomLevel>0</minZoomLevel>
+        <overrideXMax>NaN</overrideXMax>
+        <overrideXMin>NaN</overrideXMin>
+        <overrideYMax>NaN</overrideYMax>
+        <overrideYMin>NaN</overrideYMin>
+        <zoomBounds>
+          <xMax>25.2376</xMax>
+          <xMin>0</xMin>
+          <yMax>10.5</yMax>
+          <yMin>-0.5</yMin>
+        </zoomBounds>
+      </SimpleInteractiveVisualization>
+    </children>
+    <closeable>true</closeable>
+    <draggable>true</draggable>
+    <enableBorders>true</enableBorders>
+    <enableTitle>false</enableTitle>
+    <includeToolAttributesInProbe>true</includeToolAttributesInProbe>
+    <linkHeightAndSortColumns>false</linkHeightAndSortColumns>
+    <maximizable>true</maximizable>
+    <maximized>false</maximized>
+    <minimizable>true</minimizable>
+    <minimized>false</minimized>
+    <panelBackgroundColor>NaN</panelBackgroundColor>
+    <panelBorderColor>NaN</panelBorderColor>
+    <panelHeight>99%</panelHeight>
+    <panelStyleList/>
+    <panelTitle>Employment by Sectors, 2010</panelTitle>
+    <panelWidth>75%</panelWidth>
+    <panelX>24%</panelX>
+    <panelY>0%</panelY>
+    <pinnable>true</pinnable>
+    <pinnableToBack>false</pinnableToBack>
+    <pinned>true</pinned>
+    <pinnedToBack>false</pinnedToBack>
+    <resizeable>true</resizeable>
+    <showAllLabels>false</showAllLabels>
+    <sizeAxisTickCountRequested>5</sizeAxisTickCountRequested>
+  </CompoundBarChartTool>
+  <ColorBinLegendTool name="ColorBinLegendTool">
+    <buttonRadius>3</buttonRadius>
+    <children encoding="dynamic">
+      <SimpleInteractiveVisualization name="visualization">
+        <axesAlpha>NaN</axesAlpha>
+        <axesColor>0</axesColor>
+        <axesThickness>NaN</axesThickness>
+        <enableAutoZoomToExtent>true</enableAutoZoomToExtent>
+        <enableAutoZoomToSelection>false</enableAutoZoomToSelection>
+        <enableAutoZoomXToNiceNumbers>false</enableAutoZoomXToNiceNumbers>
+        <enableAutoZoomYToNiceNumbers>false</enableAutoZoomYToNiceNumbers>
+        <enableFixedAspectRatio>false</enableFixedAspectRatio>
+        <enableProbe>true</enableProbe>
+        <enableSelection>true</enableSelection>
+        <enableZoomAndPan>false</enableZoomAndPan>
+        <gridLineAlpha>NaN</gridLineAlpha>
+        <gridLineColor>0</gridLineColor>
+        <gridLineThickness>NaN</gridLineThickness>
+        <includeNonSelectableLayersInAutoZoom>false</includeNonSelectableLayersInAutoZoom>
+        <layers encoding="dynamic">
+          <SelectablePlotLayer name="plot">
+            <backgroundIsVisible>true</backgroundIsVisible>
+            <layerIsSelectable>true</layerIsSelectable>
+            <layerIsVisible>true</layerIsVisible>
+            <maxVisibleScale>Infinity</maxVisibleScale>
+            <minVisibleScale>0</minVisibleScale>
+            <plotter encoding="dynamic">
+              <ColorBinLegendPlotter>
+                <ascendingOrder>false</ascendingOrder>
+                <dynamicColorColumn encoding="dynamic">
+                  <GlobalObjectReference name="defaultColorColumn"/>
+                </dynamicColorColumn>
+                <itemLabelFunction>string</itemLabelFunction>
+                <keySet>
+                  <keyFilter encoding="dynamic">
+                    <GlobalObjectReference name="defaultSubsetKeyFilter"/>
+                  </keyFilter>
+                </keySet>
+                <legendTitleFunction>string</legendTitleFunction>
+                <lineStyle>
+                  <alpha>
+                    <defaultValue>0.5</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </alpha>
+                  <caps>
+                    <defaultValue/>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </caps>
+                  <color>
+                    <defaultValue>0</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </color>
+                  <enabled>
+                    <defaultValue>true</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </enabled>
+                  <joints>
+                    <defaultValue/>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </joints>
+                  <miterLimit>
+                    <defaultValue>3</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </miterLimit>
+                  <pixelHinting>
+                    <defaultValue>false</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </pixelHinting>
+                  <scaleMode>
+                    <defaultValue>normal</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </scaleMode>
+                  <weight>
+                    <defaultValue>1</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </weight>
+                </lineStyle>
+                <maxColumns>1</maxColumns>
+                <shapeSize>10</shapeSize>
+              </ColorBinLegendPlotter>
+            </plotter>
+            <probeFilter encoding="dynamic">
+              <GlobalObjectReference name="defaultProbeKeySet"/>
+            </probeFilter>
+            <selectionFilter encoding="dynamic">
+              <GlobalObjectReference name="defaultSelectionKeySet"/>
+            </selectionFilter>
+            <subsetFilter encoding="dynamic">
+              <GlobalObjectReference name="defaultSubsetKeyFilter"/>
+            </subsetFilter>
+            <useTextBitmapFilters>true</useTextBitmapFilters>
+          </SelectablePlotLayer>
+        </layers>
+        <marginBottom>5</marginBottom>
+        <marginLeft>5</marginLeft>
+        <marginRight>5</marginRight>
+        <marginTop>0</marginTop>
+        <maxZoomLevel>16</maxZoomLevel>
+        <minScreenSize>128</minScreenSize>
+        <minZoomLevel>0</minZoomLevel>
+        <overrideXMax>NaN</overrideXMax>
+        <overrideXMin>NaN</overrideXMin>
+        <overrideYMax>NaN</overrideYMax>
+        <overrideYMin>NaN</overrideYMin>
+        <zoomBounds>
+          <xMax>1</xMax>
+          <xMin>0</xMin>
+          <yMax>1</yMax>
+          <yMin>0</yMin>
+        </zoomBounds>
+      </SimpleInteractiveVisualization>
+    </children>
+    <closeable>true</closeable>
+    <draggable>true</draggable>
+    <enableBorders>false</enableBorders>
+    <enableTitle>false</enableTitle>
+    <maximizable>true</maximizable>
+    <maximized>false</maximized>
+    <minimizable>true</minimizable>
+    <minimized>false</minimized>
+    <panelBackgroundColor>NaN</panelBackgroundColor>
+    <panelBorderColor>NaN</panelBorderColor>
+    <panelHeight>93%</panelHeight>
+    <panelStyleList/>
+    <panelTitle/>
+    <panelWidth>26%</panelWidth>
+    <panelX>0%</panelX>
+    <panelY>0%</panelY>
+    <pinnable>true</pinnable>
+    <pinnableToBack>false</pinnableToBack>
+    <pinned>true</pinned>
+    <pinnedToBack>false</pinnedToBack>
+    <resizeable>true</resizeable>
+  </ColorBinLegendTool>
+</Weave>

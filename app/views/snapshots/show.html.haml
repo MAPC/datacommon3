@@ -2,8 +2,9 @@
 
 %h1 #{@geography}: Snapshot Overview
 
-.row.different-area
-  .col-sm-6.col-xs-12= @geography.short_desc
+.row
+  .col-sm-6.col-xs-12
+    %p.area-summary= @geography.short_desc
   .col-sm-6.col-xs-12.center
     #map
     =form_tag '', method: :get do

@@ -1,0 +1,1078 @@
+<Weave encoding="dynamic">
+  <WeaveProperties name="WeaveProperties">
+    <backgroundColor>16777215</backgroundColor>
+    <collabServerIP>demo.oicweave.org</collabServerIP>
+    <collabServerName>ivpr-vm</collabServerName>
+    <collabServerPort>5222</collabServerPort>
+    <collabServerRoom/>
+    <collabSpectating>false</collabSpectating>
+    <cssStyleSheetName>weaveStyle.css</cssStyleSheetName>
+    <dashboardMode>false</dashboardMode>
+    <dashedSelectionBox>5,5</dashedSelectionBox>
+    <dataInfoURL/>
+    <debugScreenBounds>false</debugScreenBounds>
+    <defaultTextFormat>
+      <bold>false</bold>
+      <color>0</color>
+      <font>Sophia Nubian</font>
+      <italic>false</italic>
+      <size>11</size>
+      <underline>false</underline>
+    </defaultTextFormat>
+    <enableAboutMenu>true</enableAboutMenu>
+    <enableAdd2DHistogram>false</enableAdd2DHistogram>
+    <enableAddAttributeMenuTool>false</enableAddAttributeMenuTool>
+    <enableAddBarChart>true</enableAddBarChart>
+    <enableAddColorLegend>true</enableAddColorLegend>
+    <enableAddColormapHistogram>true</enableAddColormapHistogram>
+    <enableAddCompoundRadViz>false</enableAddCompoundRadViz>
+    <enableAddCustomTool>false</enableAddCustomTool>
+    <enableAddDataSource>true</enableAddDataSource>
+    <enableAddDataTable>true</enableAddDataTable>
+    <enableAddDimensionSliderTool>false</enableAddDimensionSliderTool>
+    <enableAddGaugeTool>false</enableAddGaugeTool>
+    <enableAddGraphTool>true</enableAddGraphTool>
+    <enableAddHistogram>true</enableAddHistogram>
+    <enableAddLineChart>true</enableAddLineChart>
+    <enableAddMap>true</enableAddMap>
+    <enableAddNewDatasource>true</enableAddNewDatasource>
+    <enableAddPieChart>true</enableAddPieChart>
+    <enableAddPieChartHistogram>false</enableAddPieChartHistogram>
+    <enableAddRadViz>false</enableAddRadViz>
+    <enableAddRamachandranPlot>false</enableAddRamachandranPlot>
+    <enableAddRScriptEditor>true</enableAddRScriptEditor>
+    <enableAddScatterplot>true</enableAddScatterplot>
+    <enableAddThermometerTool>false</enableAddThermometerTool>
+    <enableAddTimeSliderTool>false</enableAddTimeSliderTool>
+    <enableAddWeaveDataSource>true</enableAddWeaveDataSource>
+    <enableAnnotation>true</enableAnnotation>
+    <enableAxisToolTips>true</enableAxisToolTips>
+    <enableBitmapFilters>true</enableBitmapFilters>
+    <enableBrowseData>true</enableBrowseData>
+    <enableCascadeAllWindows>true</enableCascadeAllWindows>
+    <enableClearCurrentSelection>true</enableClearCurrentSelection>
+    <enableCloseAllWindows>true</enableCloseAllWindows>
+    <enableCollaborationBar>false</enableCollaborationBar>
+    <enableCreateSubsets>true</enableCreateSubsets>
+    <enableDataMenu>true</enableDataMenu>
+    <enableDrawCircle>true</enableDrawCircle>
+    <enableDynamicTools>true</enableDynamicTools>
+    <enableEditDataSource>true</enableEditDataSource>
+    <enableEditDatasources>true</enableEditDatasources>
+    <enableExportApplicationScreenshot>true</enableExportApplicationScreenshot>
+    <enableExportCSV>true</enableExportCSV>
+    <enableExportToolImage>true</enableExportToolImage>
+    <enableFullScreen>false</enableFullScreen>
+    <enableGeometryProbing>true</enableGeometryProbing>
+    <enableLoadMyData>true</enableLoadMyData>
+    <enableManageSavedSelections>true</enableManageSavedSelections>
+    <enableManageSavedSubsets>true</enableManageSavedSubsets>
+    <enableMarker>true</enableMarker>
+    <enableMenuBar>true</enableMenuBar>
+    <enableMinimizeAllWindows>true</enableMinimizeAllWindows>
+    <enableMouseWheel>true</enableMouseWheel>
+    <enableNewDataset>true</enableNewDataset>
+    <enableNewUserWizard>false</enableNewUserWizard>
+    <enablePanelCoordsPercentageMode>true</enablePanelCoordsPercentageMode>
+    <enablePenTool>true</enablePenTool>
+    <enableProbeAnimation>true</enableProbeAnimation>
+    <enableProbeLines>true</enableProbeLines>
+    <enableProbeToolTip>true</enableProbeToolTip>
+    <enableRefreshHierarchies>false</enableRefreshHierarchies>
+    <enableRemoveSubsets>true</enableRemoveSubsets>
+    <enableRestoreAllMinimizedWindows>true</enableRestoreAllMinimizedWindows>
+    <enableRightClick>true</enableRightClick>
+    <enableSaveCurrentSelection>true</enableSaveCurrentSelection>
+    <enableSaveCurrentSubset>true</enableSaveCurrentSubset>
+    <enableSearchForRecord>true</enableSearchForRecord>
+    <enableSelectionSelectorBox>true</enableSelectionSelectorBox>
+    <enableSelectionsMenu>true</enableSelectionsMenu>
+    <enableSessionMenu>true</enableSessionMenu>
+    <enableShowAllRecords>true</enableShowAllRecords>
+    <enableSubsetControls>true</enableSubsetControls>
+    <enableSubsetSelectionBox>true</enableSubsetSelectionBox>
+    <enableSubsetsMenu>true</enableSubsetsMenu>
+    <enableThreadPriorities>false</enableThreadPriorities>
+    <enableTileAllWindows>true</enableTileAllWindows>
+    <enableToolAttributeEditing>true</enableToolAttributeEditing>
+    <enableToolControls>true</enableToolControls>
+    <enableToolProbe>true</enableToolProbe>
+    <enableToolSelection>true</enableToolSelection>
+    <enableUserPreferences>true</enableUserPreferences>
+    <enableWindowMenu>true</enableWindowMenu>
+    <eventListeners encoding="dynamic"/>
+    <geometryMetadataRequestMode>xyz</geometryMetadataRequestMode>
+    <geometryMinimumScreenArea>1</geometryMinimumScreenArea>
+    <macroLibraries>weave.api::WeaveAPI</macroLibraries>
+    <macros encoding="dynamic"/>
+    <maxComputationTimePerFrame>100</maxComputationTimePerFrame>
+    <maxTooltipRecordsShown>1</maxTooltipRecordsShown>
+    <pageTitle>Open Indicators Weave</pageTitle>
+    <panelTitleTextFormat>
+      <bold>false</bold>
+      <color>16777215</color>
+      <font>Verdana</font>
+      <italic>false</italic>
+      <size>10</size>
+      <underline>false</underline>
+    </panelTitleTextFormat>
+    <pdbServiceURL>/WeavePDBService/PDBService</pdbServiceURL>
+    <probeInnerGlow>
+      <alpha>1</alpha>
+      <blurX>5</blurX>
+      <blurY>5</blurY>
+      <color>16777215</color>
+      <strength>10</strength>
+    </probeInnerGlow>
+    <probeLineFormatter>str = replace(lpad(string, 8, "\t"), "\t", "  ");
+str + " (" + title + ")"</probeLineFormatter>
+    <probeOuterGlow>
+      <alpha>1</alpha>
+      <blurX>3</blurX>
+      <blurY>3</blurY>
+      <color>0</color>
+      <strength>3</strength>
+    </probeOuterGlow>
+    <probeToolTipBackgroundAlpha>1</probeToolTipBackgroundAlpha>
+    <probeToolTipBackgroundColor>NaN</probeToolTipBackgroundColor>
+    <probeToolTipFontColor>0</probeToolTipFontColor>
+    <probeToolTipMaxWidth>400</probeToolTipMaxWidth>
+    <recordsTooltipLocation>Lower left</recordsTooltipLocation>
+    <rServiceURL>/WeaveServices/RService</rServiceURL>
+    <searchServiceURLs>Wikipedia|http://en.wikipedia.org/wiki/Special:Search?search=
+Google|http://www.google.com/search?q=
+Google Images|http://images.google.com/images?q=
+Google Maps|http://maps.google.com/maps?t=h&amp;q=</searchServiceURLs>
+    <SecondaryKeyNumColumn_useGlobalMinMaxValues>true</SecondaryKeyNumColumn_useGlobalMinMaxValues>
+    <selectionAlphaAmount>0.5</selectionAlphaAmount>
+    <selectionBlurringAmount>4</selectionBlurringAmount>
+    <selectionDropShadow>
+      <alpha>0.5</alpha>
+      <angle>45</angle>
+      <blurX>4</blurX>
+      <blurY>4</blurY>
+      <color>0</color>
+      <distance>2</distance>
+      <strength>1</strength>
+    </selectionDropShadow>
+    <selectionMode>rectangle</selectionMode>
+    <showCollaborationEditor>false</showCollaborationEditor>
+    <showCollaborationMenuItem>true</showCollaborationMenuItem>
+    <showColorController>true</showColorController>
+    <showCopyright>false</showCopyright>
+    <showDisabilityOptions>true</showDisabilityOptions>
+    <showEquationEditor>true</showEquationEditor>
+    <showKeyTypeInColumnTitle>false</showKeyTypeInColumnTitle>
+    <showProbeToolTipEditor>true</showProbeToolTipEditor>
+    <showProbeWindow>true</showProbeWindow>
+    <showSelectedRecordsText>true</showSelectedRecordsText>
+    <showSessionHistoryControls>false</showSessionHistoryControls>
+    <showVisToolCloseDialog>false</showVisToolCloseDialog>
+    <startupJavaScript/>
+    <toolInteractions>
+      <pan>alt,drag</pan>
+      <probe>move</probe>
+      <select>drag</select>
+      <selectAdd>ctrl,drag</selectAdd>
+      <selectAll>ctrl,dclick</selectAll>
+      <selectRemove>ctrl,shift,drag</selectRemove>
+      <zoom>shift,drag
+wheel</zoom>
+      <zoomIn>dclick</zoomIn>
+      <zoomOut>shift,dclick</zoomOut>
+      <zoomToExtent>ctrl,alt,shift,dclick</zoomToExtent>
+    </toolInteractions>
+    <version>1.0 Beta (Tue Sep  4 04:00:05 EDT 2012)</version>
+    <windowSnapGridSize>1%</windowSnapGridSize>
+    <workspaceHeight>252</workspaceHeight>
+    <workspaceMultiplier>1</workspaceMultiplier>
+    <workspaceWidth>333</workspaceWidth>
+  </WeaveProperties>
+  <ColorColumn name="defaultColorColumn">
+    <internalDynamicColumn encoding="dynamic">
+      <GlobalObjectReference name="defaultColorBinColumn"/>
+    </internalDynamicColumn>
+    <ramp>&lt;colorRamp category="basic" name="5-Color" source="OIC"&gt;
+  &lt;node position="0" color="0xEFF3FF"/&gt;
+  &lt;node position="0.25" color="0xBDD7E7"/&gt;
+  &lt;node position="0.5" color="0x6BAED6"/&gt;
+  &lt;node position="0.75" color="0x3182BD"/&gt;
+  &lt;node position="1" color="0x08519C"/&gt;
+&lt;/colorRamp&gt;</ramp>
+    <recordColors/>
+  </ColorColumn>
+  <BinnedColumn name="defaultColorBinColumn">
+    <binningDefinition encoding="dynamic">
+      <SimpleBinningDefinition>
+        <numberOfBins>10</numberOfBins>
+        <overrideBinNames/>
+      </SimpleBinningDefinition>
+    </binningDefinition>
+    <internalDynamicColumn encoding="dynamic">
+      <GlobalObjectReference name="defaultColorDataColumn"/>
+    </internalDynamicColumn>
+  </BinnedColumn>
+  <FilteredColumn name="defaultColorDataColumn">
+    <filter encoding="dynamic">
+      <GlobalObjectReference name="defaultSubsetKeyFilter"/>
+    </filter>
+    <internalDynamicColumn encoding="dynamic"/>
+  </FilteredColumn>
+  <KeyFilter name="defaultSubsetKeyFilter">
+    <excluded/>
+    <included/>
+    <includeMissingKeys>true</includeMissingKeys>
+    <includeMissingKeyTypes>true</includeMissingKeyTypes>
+  </KeyFilter>
+  <KeySet name="defaultSelectionKeySet"/>
+  <KeySet name="defaultProbeKeySet"/>
+  <KeySet name="alwaysHighlightKeySet"/>
+  <LinkableHashMap name="savedSelections" encoding="dynamic"/>
+  <LinkableHashMap name="savedSubsets" encoding="dynamic"/>
+  <WeaveDataSource name="MetroBoston DataCommon">
+    <attributeHierarchy encoding="xml">
+      <hierarchy name="MetroBoston DataCommon">
+        <category name="Data Tables" title="Demographics">
+          <category name="Data Tables" title="Census Tract Data">
+            <category name="Foreign Born (Census Tracts)" title="Foreign Born, 5yr Avg 2006-10 (Census Tracts)" source="ACS" subject="Demographics"/>
+            <category name="Linguistic Isolation acs0610 (Census Tracts)" title="Linguistic Isolation, 5yr Avg 2006-10 (Cenus Tracts)" source="ACS" subject="Demographics"/>
+            <category name="Population By Gender and Age, 2000 (Census Tracts)" description="Census 2000" title="Population By Gender and Age, 2000 (Census Tracts)" source="Census" subject="Demographics"/>
+            <category name="Population By Gender and Age, 2010 (Census Tracts)" description="Census" title="Population By Gender and Age, 2010 (Census Tracts)" source="Census" subject="Demographics"/>
+            <category name="Population by Race, 2000 (Census Tract)" description="Census 2000" title="Population by Race/Ethnicity, 2000 (Census Tract)" source="Census" subject="Demographics"/>
+            <category name="Population by Race, 2010 (Census Tract)" description="Census 2010" title="Population by Race/Ethnicity, 2010 (Census Tract)" source="Census" subject="Demographics"/>
+            <category name="Population Over/Under 18, 2010 (Census Tract)" description="Census 2010" title="Population Over/Under 18, 2010 (Census Tract)" subject="Demographics"/>
+          </category>
+          <category name="Data Tables" title="Municipal Data">
+            <category name="Census Mail Participation Rate (Municipal)" description="2000 and 2010" title="Census Mail Participation Rate, 2000 &amp; 2010 (Municipal)" source="Census" subject="Demographics"/>
+            <category name="Citizenship Status (Municipality)" title="Citizenship Status, 5yr Avg 2005-09 (Municipal)" source="ACS" subject="Demographics"/>
+            <category name="Foreign Born (Municipal)" title="Foreign Born, 5yr Avg 2006-10 (Municipal)" source="ACS" subject="Demographics"/>
+            <category name="Geographic Mobility (Municipal)" title="Geographic Mobility, 5yr Avg 2005-09 (Municipal)" source="ACS" subject="Demographics"/>
+            <category name="Linguistic Isolation acs0610 (Municipal)" title="Linguistic Isolation, 5yr Avg 2006-10 (Municipal)" source="ACS" subject="Demographics"/>
+            <category name="Population By Age 2000 - 2010 (Municipality)" title="Population By Age, 2000 &amp; 2010 (Municipality)" source="Census" subject="Demographics"/>
+            <category name="Population By Gender and Age with Change, 2000 - 2010 (Municipal)" title="Population By Gender and Age with Change, 2000 &amp; 2010 (Municipal)" source="Census" subject="Demographics"/>
+            <category name="Population by Race with Change, 2000-2010 (Municipal)" title="Population by Race/Ethnicity with Change, 2000 &amp; 2010 (Municipal)" source="Census" subject="Demographics"/>
+            <category name="Population by Minorities, 2000-2010 (Municipal)" title="Minority Population, 2000 &amp; 2010 (Municipal)" source="Census" subject="Demographics"/>
+            <category name="Population in Poverty (Municipal)" description="ACS" title="Population in Poverty (Municipal)" subject="Demographics"/>
+            <category name="Population Over/Under 18, 2010 (Municipal)" description="Census, 2010" title="Population Over/Under 18, 2010 (Municipal)" subject="Demographics"/>
+          </category>
+          <category name="Data Tables" title="Population Projections, 2000-2030">
+            <category name="Employment Projections by Sector, Current Trends/MetroFuture (Municipal)" title="Projected Employment, Current Trends/MetroFuture, 2030 (Municipal)" source="MAPC, 2008" subject="MetroFuture"/>
+            <category name="Employment Projections by Sector, Current Trends/MetroFuture (TAZ)" title="Projected Employment, Current Trends/MetroFuture, 2030 (TAZ)" source="MAPC, 2008" subject="MetroFuture"/>
+            <category name="Population Projection by Age Group, Current Trends, (Municipal)" title="Projected Population by Age Group, Current Trends, 2030 (Municipal)" source="MAPC, 2008" subject="MetroFuture"/>
+            <category name="Population Projection by Age Group, MetroFuture (Municipal)" title="Projected Population by Age Group, MetroFuture, 2030 (Municipal)" source="MAPC, 2008" subject="MetroFuture"/>
+            <category name="Population, Household and Employment Projection, Current Trends/MetroFuture (Municipal)" title="Projected Population, Households and Employment, Current Trends/MetroFuture 2030 (Municipal)" source="MAPC, 2008" subject="MetroFuture"/>
+            <category name="Population, Household and Employment Projection, Current Trends/MetroFuture (TAZ)" title="Projected Population, Households and Employment, Current Trends/MetroFuture 2030 (TAZ)" source="MAPC, 2008" subject="MetroFuture"/>
+          </category>
+        </category>
+        <category name="Data Tables" title="Civic Vitality and Governance">
+          <category name="Arts and Culture Points" title="Arts and Culture Points of Interest" source="NEFA, 2007" subject="Arts and Culture"/>
+          <category name="Arts Related Businesses, 2012 (County)" description="Americans for the Arts, Dunn &amp; Bradstreet data" title="Arts Related Businesses, 2012 (County)" subject="Arts and Culture"/>
+          <category name="Arts Related Employment, 2012 (County)" description="Americans for the Arts, Dunn &amp; Bradstreet data" title="Arts Related Employment, 2012 (County)" subject="Arts and Culture"/>
+          <category name="Community Preservation Act votes (Municipal)" title="Community Preservation Act Status (Municipal)" source="Community Preservation Coalition, 2011" subject="Civic Vitality ad Governance"/>
+          <category name="Forms of Municipal Governance (Municipal)" title="Forms of Municipal Governance (Municipal)" source="MMA, Secretary of State, 2011"/>
+          <category name="Civic: Foundation Stats by Year (MSA)" title="Foundation Stats by Year (Boston MSA)" source="Foundation Center" subject="Civic Vitality"/>
+          <category name="Voters (Municipal)" title="Registered Voters, by Year 2004-2010 (Municipal)" source="State Elections Division 2004-2010" subject="Civic Vitality ad Governance"/>
+          <category name="MA House Districts" title="MA House Legislative Districts (2002)" source="MassGIS, 2011"/>
+          <category name="MA House Districts (2012)" title="MA House Legislative Districts (2012)" subject="Civic Vitality"/>
+          <category name="MA Senate Districts" title="MA Senate Legislative Districts (2002)" source="MassGIS, 2011"/>
+          <category name="MA Senate Districts (2012)" title="MA Senate Legislative Districts (2012)" subject="Civic Vitality"/>
+          <category name="US Congressional Districts" title="US Representatives (US Congressional Districts)" source="MassGIS, 2007"/>
+          <category name="Property Crimes (Municipal)" title="Property Crimes, 2001-09 (Municipal)" subject="Public Safety"/>
+          <category name="Violent Crimes (Municipal)" title="Violent Crimes, 2001-09 (Municipal)" subject="Public Safety"/>
+        </category>
+        <category name="Data Tables" title="Economy">
+          <category name="Average Weekly Wages by Sector (Municipal)" title="Average Weekly Wages by Sector, by Municipality 2001-2010 (Municipal)" source="MA EOLWD ES-202, 2011" subject="Economy"/>
+          <category name="Average Weekly Wages by Sector by Year (Municipal)" title="Average Weekly Wages by Sector, by Year 2001-2010 (Municipal)" source="MA EOLWD ES-202, 2011" subject="Economy"/>
+          <category name="Employment By Sector 2010 (Municipal) - Tranposed" title="Employment By Sector 2010 (Municipal) - Tranposed" source="ES-202" subject="Economy"/>
+          <category name="Housing and Transportation Cost (Municipal)" title="Housing and Transportation Cost (Municipal)" subject="Economy"/>
+          <category name="Employment By Sector 2010 (Municipal)" title="Employment By Sector, Place of Work, 2010 (Municipal)" source="MA EOLWD ES-202, 2011" subject="Economy"/>
+          <category name="Employment by Sector (Municipal)" title="Employment by Sector, Place of Work, by Year 2001-2010 (Municipal)" source="MA EOLWD ES-202, 2011" subject="Economy"/>
+          <category name="Establishment by Sector (Municipal)" title="Establishment by Sector, Place of Work, by Year 2001-2010 (Municipal)" source="MA EOLWD ES-202, 2011" subject="Economy"/>
+          <category name="Employment Characteristics by Age, Race and Education, 5yr avg 2006-10 (Census Tracts)" title="Employment Characteristics by Age, Race and Education, 5yr avg 2006-10 (Census Tracts)" source="ACS" subject="Economy"/>
+          <category name="Employment Characteristics by Age, Race and Education, 5yr avg 2006-10 (Municipal)" title="Employment Characteristics by Age, Race and Education, 5yr avg 2006-10 (Municipal)" source="ACS" subject="Economy"/>
+          <category name="GINI Index, ACS 2006-10 (Census Tracts)" title="Gini Index, 5yr Avg 2006-10 (Census Tracts)" source="ACS" subject="Economy"/>
+          <category name="Economy: High Tech Employment (States)" title="High Tech Employment (States)" source="Census Bureau special tabulations (2011)" subject="Economy"/>
+          <category name="Economy: High Tech Establishments (States)" title="High Tech Establishments (States)" source="Census Bureau special tabulations (2011)" subject="Economy">
+            <attribute name="state_fips" keyType="FIPS_ID" title="State FIPS code" dataTable="Economy: High Tech Establishments (States)" dataType="string"/>
+            <attribute name="state_name" keyType="FIPS_ID" title="State Name" dataTable="Economy: High Tech Establishments (States)" dataType="string"/>
+            <attribute name="est2003" keyType="FIPS_ID" title="High Tech Establishments, 2003" dataTable="Economy: High Tech Establishments (States)" dataType="number"/>
+            <attribute name="est2004" keyType="FIPS_ID" title="High Tech Establishments, 2004" dataTable="Economy: High Tech Establishments (States)" dataType="number"/>
+            <attribute name="est2006" keyType="FIPS_ID" title="High Tech Establishments, 2006" dataTable="Economy: High Tech Establishments (States)" dataType="number"/>
+            <attribute name="est2007" keyType="FIPS_ID" title="High Tech Establishments, 2007" dataTable="Economy: High Tech Establishments (States)" dataType="number"/>
+            <attribute name="est2008" keyType="FIPS_ID" title="High Tech Establishments, 2008" dataTable="Economy: High Tech Establishments (States)" dataType="number"/>
+            <attribute name="pct2003" keyType="FIPS_ID" title="% High Tech Establishments, 2003" dataTable="Economy: High Tech Establishments (States)" dataType="number"/>
+            <attribute name="pct2004" keyType="FIPS_ID" title="% High Tech Establishments, 2004" dataTable="Economy: High Tech Establishments (States)" dataType="number"/>
+            <attribute name="pct2006" keyType="FIPS_ID" title="% High Tech Establishments, 2006" dataTable="Economy: High Tech Establishments (States)" dataType="number"/>
+            <attribute name="pct2007" keyType="FIPS_ID" title="% High Tech Establishments, 2007" dataTable="Economy: High Tech Establishments (States)" dataType="number"/>
+            <attribute name="pct2008" keyType="FIPS_ID" title="% High Tech Establishments, 2008" dataTable="Economy: High Tech Establishments (States)" dataType="number"/>
+          </category>
+          <category name="Labor Force and Unemployment by Year, Place of Residence (Municipal)" title="Labor Force and Unemployment, Place of Residence, by Year 2006-11 (Municipal)" subject="Economy" source="MA EOLWD ES-202, 2012">
+            <attribute name="muni_id" keyType="MUNI_ID" title="Municipal ID" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+            <attribute name="municipal" keyType="MUNI_ID" title="Municipality" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="string"/>
+            <attribute name="tot_lf (2006)" keyType="MUNI_ID" title="Labor Force, 2006" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+            <attribute name="tot_lf (2007)" keyType="MUNI_ID" title="Labor Force, 2007" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+            <attribute name="tot_lf (2008)" keyType="MUNI_ID" title="Labor Force, 2008" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+            <attribute name="tot_lf (2009)" keyType="MUNI_ID" title="Labor Force, 2009" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+            <attribute name="tot_lf (2010)" keyType="MUNI_ID" title="Labor Force, 2010" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+            <attribute name="tot_lf (2011)" keyType="MUNI_ID" title="Labor Force, 2011" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+            <attribute name="emp_lf (2006)" keyType="MUNI_ID" title="Employed Population, 2006" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+            <attribute name="emp_lf (2007)" keyType="MUNI_ID" title="Employed Population, 2007" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+            <attribute name="emp_lf (2008)" keyType="MUNI_ID" title="Employed Population, 2008" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+            <attribute name="emp_lf (2009)" keyType="MUNI_ID" title="Employed Population, 2009" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+            <attribute name="emp_lf (2010)" keyType="MUNI_ID" title="Employed Population, 2010" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+            <attribute name="emp_lf (2011)" keyType="MUNI_ID" title="Employed Population, 2011" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+            <attribute name="unemp_num (2006)" keyType="MUNI_ID" title="Unemployed Population, 2006" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+            <attribute name="unemp_num (2007)" keyType="MUNI_ID" title="Unemployed Population, 2007" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+            <attribute name="unemp_num (2008)" keyType="MUNI_ID" title="Unemployed Population, 2008" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+            <attribute name="unemp_num (2009)" keyType="MUNI_ID" title="Unemployed Population, 2009" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+            <attribute name="unemp_num (2010)" keyType="MUNI_ID" title="Unemployed Population, 2010" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+            <attribute name="unemp_num (2011)" keyType="MUNI_ID" title="Unemployed Population, 2011" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+            <attribute name="unemp_rt (2006)" keyType="MUNI_ID" title="Unemployed Rate, 2006" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+            <attribute name="unemp_rt (2007)" keyType="MUNI_ID" title="Unemployed Rate, 2007" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+            <attribute name="unemp_rt (2008)" keyType="MUNI_ID" title="Unemployed Rate, 2008" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+            <attribute name="unemp_rt (2009)" keyType="MUNI_ID" title="Unemployed Rate, 2009" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+            <attribute name="unemp_rt (2010)" keyType="MUNI_ID" title="Unemployed Rate, 2010" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+            <attribute name="unemp_rt (2011)" keyType="MUNI_ID" title="Unemployed Rate, 2011" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+          </category>
+          <category name="Local Area Unemployment Statistics (Municipality)" title="Local Area Unemployment Statistics (Municipal)" source="MA EOLWD, 2006-2010"/>
+          <category name="Mass. Budget Funding by Year" description="2001-2012" title="Mass. Budget Funding by Year" source="Mass Budget and Policy Center, 2001-12" subject="Economy"/>
+          <category name="Poverty by Family Type with Children, ACS06-10 (Census Tract)" title="Poverty by Family Type with Children, 5yr Avg 2006-10 (Census Tracts)" source="ACS" subject="Economy"/>
+          <category name="Poverty by Family Type with Children, ACS06-10 (Municipal)" title="Poverty by Family Type with Children, 5yr Avg 2006-10 (Municipal)" source="ACS" subject="Economy"/>
+          <category name="Poverty by Race, ACS 2006-10 (Census Tracts)" title="Poverty by Race, 5yr Avg 2006-10 (Census Tracts)" source="ACS" subject="Economy"/>
+          <category name="Poverty by Race, ACS 2006-10 (Municipal)" title="Poverty by Race, 5yr Avg 2006-10 (Municipal)" source="ACS" subject="Economy"/>
+          <category name="Employment (Municipal)" title="Total Employment, Place of Work, by Year 1986-2010 (Municipal)" source="MA EOLWD ES-202, 2011"/>
+          <category name="Women Board of Directors (Massachusetts)" title="Women Board of Directors (Massachusetts)" subject="Economy"/>
+        </category>
+        <category name="Data Tables" title="Education">
+          <category name="Data Tables" title="School Districts data">
+            <category name="School Districts" title="School Districts" source="DESE"/>
+            <category name="School Districts: Arts Teachers (multi-year)" description="DESE, 2008-11" title="District Arts Teachers (multi-year)" source="DESE, 2008-11" subject="Education"/>
+            <category name="School Districts: Enrollment by Grade by Year" title="Enrollment by Grade by Year (School Districts)" source="MA DESE" subject="Education"/>
+            <category name="School Districts: Enrollment by Group by Year" title="Enrollment by Group by Year (School Districts)" source="MA DESE" subject="Education"/>
+            <category name="School Districts: Graduation Plans by year" title="Graduation Plans, by year 2006-11 (School Districts)" source="DESE, 2011" subject="Education"/>
+            <category name="School Districts: Graduation Plans (multi-year)" title="District Graduation Plans, by year 2006-11 (School Districts) (Dimension Slider only)" source="DESE, 2011"/>
+            <category name="School Districts: MCAS Grade 03 Math Proficiency by Year" title="MCAS Grade 03 Math Proficiency by Year (School Districts)" subject="Education"/>
+            <category name="School Districts: MCAS Grade 03 Reading Proficiency by Year" title="MCAS Grade 03 Reading Proficiency by Year (School Districts)" subject="Education"/>
+            <category name="School Districts: MCAS Grade 08 Math Proficiency by Year" title="MCAS Grade 08 Math Proficiency by Year (School Districts)" subject="Education"/>
+            <category name="School Districts: Student Risk Indicators By Year" title="Student Risk Indicators By Year (School Districts)" subject="Education"/>
+            <category name="School Districts: Technology by year" description="DESE" title="District Technology, by year 2003-10 (School Districts)" source="DESE, 2011" subject="Education"/>
+            <category name="School Districts by Town" title="Districts by Municipality, 2011" source="DESE, MAPC"/>
+          </category>
+          <category name="Data Tables" title="School Municipal Districts data">
+            <category name="School Municipal Districts: Enrollment, 2009-10" title="Enrollment, 2009-10 (School Municipal Districts)" source="DESE, 2011" subject="Education"/>
+            <category name="School Municipal Districts: Enrollment, 2010-11" title="Enrollment, 2010-11 (School Municipal Districts)" source="DESE, 2011"/>
+            <category name="School Municipal Districts: Enrollment (multi-year)" title="Enrollment, by year 2006-11 (School Municipal Districts)" source="DESE, 2011"/>
+            <category name="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" description="MCAS, 2011" title="MCAS Grade 03 Math Proficiency by Group, 2010-11 (School Municipal Districts)" source="DESE" subject="Education"/>
+            <category name="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" title="MCAS Grade 03 Reading Proficiency by Group, 2010-11 (School Municipal Districts)" source="DESE, 2011"/>
+            <category name="School Municipal Districts: MCAS Grade 3 All Students Math Proficiency (multi-year)" description="2005-06 thru 2010-11" title="MCAS Grade 03 Total Math Proficiency, by Year 2006-11 (School Municipal Districts)" source="DESE, 2011" subject="Education"/>
+            <category name="School Municipal Districts: MCAS Grade 03 Reading Proficiency, 2011" title="MCAS Grade 03 Total Reading Proficiency, 2010-11 (School Municipal Districts)" source="DESE, 2011"/>
+            <category name="School Municipal Districts: MCAS Grade 3 All Students Reading Proficiency (multi-year)" title="MCAS Grade 03 Total Reading Proficiency, by Year 2006-11 (School Municipal Districts)" source="DESE, 2011"/>
+            <category name="School Municipal Districts: MCAS Grade 08 Math Proficiency for Student Groups, 2011" title="MCAS Grade 08 Math Proficiency by Group, 2010-11 (School Municipal Districts)" source="DESE, 2011" subject="Education"/>
+            <category name="School Municipal Districts: MCAS Grade 08 Reading Proficiency for Student Groups, 2011" title="MCAS Grade 08 Reading Proficiency by Group, 2010-11 (School Municipal Districts)" source="DESE, 2011" subject="Education"/>
+            <category name="School Municipal Districts: MCAS Grade 08 Science Proficiency for Student Groups, 2011" description="MCAS" title="MCAS Grade 08 Science Proficiency by Group, 2010-11 (School Municipal Districts)" source="DESE, 2011" subject="Education"/>
+            <category name="School Municipal Districts: MCAS Grade 10 Math Proficiency for Student Groups, 2011" description=" MCAS" title="MCAS Grade 10 Math Proficiency by Group, 2010-11 (School Municipal Districts)" source="DESE, 2011"/>
+            <category name="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="MCAS Grade 10 Reading Proficiency by Group, 2010-11 (School Municipal Districts)" source="DESE, 2011"/>
+            <category name="School Municipal Districts: MCAS Grade 10 Science Proficiency for Student Groups, 2011" title="MCAS Grade 10 Science Proficiency by Group, 2010-11 (School Municipal Districts)" source="DESE, 2011"/>
+            <category name="School Municipal Districts: Teacher Data by Year" title="Teacher Data by Year, 2006-11 (School Municipal Districts)" source="DESE" subject="Education"/>
+          </category>
+          <category name="Data Tables" title="Schools data">
+            <category name="Schools: Arts Teachers (multi-year)" title="Arts Teachers (multi-year)" source="DESE, 2008-11" subject="Education"/>
+            <category name="Boston Circle of Promise Schools" title="BPS Circle of Promise Schools" source="DESE, 2011" subject="Education"/>
+            <category name="Boston Schools" title="BPS Schools" source="DESE, 2011"/>
+            <category name="Boston Turnaround Schools" title="BPS Turnaround Schools" source="DESE, 2011"/>
+            <category name="Schools:2012" title="Schools (points)" source="DESE, 2012" subject="Education"/>
+            <category name="Schools: Enrollment, 2010-11" title="Enrollment, 2010-11 (Schools)" source="DESE, 2011"/>
+            <category name="Schools: Enrollment (multi-year)" title="Enrollment (multi-year)" source="DESE, 2011"/>
+            <category name="Schools: MCAS Grade 03 Math Proficiency for Student Groups, 2011" title="MCAS Grade 03 Math Proficiency by Group, 2010-11 (Schools)" source="DESE, 2011"/>
+            <category name="Schools: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" title="MCAS Grade 03 Reading Proficiency by Group, 2010-11 (Schools)" source="DESE, 2011"/>
+            <category name="Schools: MCAS Grade 03 Reading Proficiency, 2011" title="MCAS Grade 03 Total Reading Proficiency, 2010-11 (Schools)" source="DESE, 2011"/>
+            <category name="Schools: MCAS Grade 08 Math Proficiency for Student Groups, 2011" title="MCAS Grade 08 Math Proficiency by Group, 2010-11 (Schools)" source="DESE, 2011" subject="Education"/>
+            <category name="Schools: MCAS Grade 08 Reading Proficiency for Student Groups, 2011" title="MCAS Grade 08 Reading Proficiency by Group, 2010-11 (Schools)" source="DESE, 2011" subject="Education"/>
+            <category name="Schools: MCAS Grade 08 Science Proficiency for Student Groups, 2011" title="MCAS Grade 08 Science Proficiency by Group, 2010-11 (Schools)" source="DESE, 2011" subject="Education"/>
+            <category name="Schools: MCAS Grade 10 Math Proficiency for Student Groups, 2011" title="MCAS Grade 10 Math Proficiency by Group, 2010-11 (Schools)" source="DESE, 2011"/>
+            <category name="Schools: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="MCAS Grade 10 Reading Proficiency by Group, 2010-11 (Schools)" source="DESE, 2011"/>
+            <category name="Schools: MCAS Grade 10 Science Proficiency for Student Groups, 2011" title="MCAS Grade 10 Science Proficiency by Group, 2010-11 (Schools)" source="DESE, 2011"/>
+            <category name="Schools: MCAS High School Science - Biology" title="MCAS High School Biology Proficiency by Group, 2010-11 (Schools)" source="DESE" subject="Education"/>
+            <category name="Schools: MCAS High School Science - Chemistry" title="MCAS High School Chemistry Proficiency by Group, 2010-11 (Schools)" source="DESE" subject="Education"/>
+            <category name="Schools: MCAS High School Science - Physics" title="MCAS High School Physics Proficiency by Group, 2010-11 (Schools)" source="DESE" subject="Education"/>
+            <category name="Schools: MCAS High School Science - Tech" title="MCAS High School Tech Proficiency by Group, 2010-11 (Schools)" source="DESE" subject="Education"/>
+            <category name="Schools: Mobility, 2010" title="Mobility, 2010 (Schools)" source="DESE, 2010" subject="Education"/>
+            <category name="Schools: Risk Indicators By Year" description="DESE" title="Student Risk Indicators By Year 2006-11 (Schools)" subject="Education"/>
+            <category name="Schools: Teachers by Race and Gender by Year" title="Teachers by Race and Gender by Year (Schools)" source="DESE" subject="Education"/>
+            <category name="Schools: Teacher Data By Year" title="Teacher Data By Year (Schools)" source="DESE" subject="Education"/>
+            <category name="Schools: Teacher Program Area by Year" title="Teacher Program Area by Year (Schools)" source="DESE" subject="Education"/>
+          </category>
+          <category name="Colleges and Universities" title="Colleges and Universities" source="MassGIS"/>
+          <category name="Doctorate Degrees (States)" title="Doctorate Degrees, 2011 (States)" source="National Science Foundation" subject="Education"/>
+          <category name="Educational Attainment for Age 25 to 34, ACS 2006-10 (Census Tracts)" description="ACS 2006-10" title="Educational Attainment for Age 25 to 34, ACS 2006-10 (Census Tracts)" subject="Education"/>
+          <category name="Educational Attainment by Foreign Born  5yr Avg 2006-10 (Census Tracts)" description="ACS, 2006-10" title="Educational Attainment by Foreign Born  5yr Avg 2006-10 (Census Tracts)" subject="Education"/>
+          <category name="Educational Attainment by Foreign Born  5yr Avg 2006-10 (Municipal)" description="ACS" title="Educational Attainment by Foreign Born  5yr Avg 2006-10 (Municipal)" subject="Education"/>
+          <category name="Educational Attainment in Labor Force, ACS 2006-10 (Census Tracts)" description="ACS" title="Educational Attainment for Non-English Speaking, 5yr Avg 2006-10 (Census Tracts)" source="ACS" subject="Education"/>
+          <category name="Educational Attainment, ACS0610 (Census Tracts)" title="Educational Attainment, 5yr Avg 2006-10 (Census Tracts)" source="ACS" subject="Education"/>
+          <category name="Educational Attainment, ACS0610 (Municipal)" title="Educational Attainment, 5yr Avg 2006-10 (Municipal)" source="ACS" subject="Education"/>
+          <category name="Libraries" title="Libraries" source="MassGIS, 2005"/>
+        </category>
+        <category name="Data Tables" title="Environment &amp; Energy">
+          <category name="Air Pollution, 2003-10 (MSA)" title="Air Pollution, 2003-10 (Boston MSA)" source="US EPA" subject="Environment"/>
+          <category name="Environmental Hazards Density (Municipal)" title="Environmental Hazards Density (Municipal)" source="Northeastern study"/>
+          <category name="Environmental Justice Populations (Block Groups)" title="Environmental Justice Populations, 2000 (Block Groups)" source="Census"/>
+          <category name="Environmental Justice Criteria (Municipal)" description="Census 2000 block groups" title="Environmental Justice Summary, 2000 (Municipal)" source="Census" subject="Environment"/>
+          <category name="Green House Gas Emissions by Facility, 2010 (pts)" title="Green House Gas Emissions by Facility, 2010 (Points)" source="EPA" subject="Energy"/>
+          <category name="Land Use Summary Statistics 2005 (Municipal)" title="Land Use Summary Statistics, 2005 (Municipal)" source="MassGIS, 2009"/>
+          <category name="LEED Certified Buildings (Points)" title="LEED Certified Buildings (Points)" source="USGBC, 2012"/>
+          <category name="Open Space" title="Open Space" source="MassGIS"/>
+          <category name="Open Space by Municipal Summary" title="Open Space by Municipal Summary"/>
+          <category name="Protected Open Space" title="Protected Open Space" source="MassGIS"/>
+          <category name="Recycling and Waste Survey, 2009 (Municipal)" title="Recycling and Waste Survey, 2009 (Municipal)" subject="Environment"/>
+          <category name="Recycling and Waste Survey, 2010 (Municipal)" title="Recycling and Waste Survey, 2010 (Municipal)" subject="Environment"/>
+          <category name="Water Bodies (100k Hydro)" title="Water Bodies (100k Hydro)"/>
+        </category>
+        <category name="Data Tables" title="Grid">
+          <category name="1Km Grid" title="1Km Grid"/>
+          <category name="1Km Grid Allocation" title="1Km Grid Allocation" subject="Grid"/>
+        </category>
+        <category name="Data Tables" title="Housing">
+          <category name="Housing: 40R Zoning Districts and Units Approved" title="40R Smart Growth Zoning Dsitricts &amp; Units Approved" source="Commonwealth Housing Tast Force" subject="Housing"/>
+          <category name="Housing Building Permits: Multi-Family Units (Municipal)" title="Building Permits: Multi-Family Housing, by Year 2000-10 (Municipal)" source="Census" subject="Housing"/>
+          <category name="Housing Building Permits: Single Family Units (Municipal)" title="Building Permits: Single Family Housing, by Year 2001-10 (Municipal)" source="Census" subject="Housing"/>
+          <category name="Housing Building Permits: Total Units (Municipal)" title="Building Permits: Total Housing, by Year 2001-10 (Municipal)" source="Census" subject="Housing"/>
+          <category name="Housing: Home Price Index " title="Home Price Index, 1990-2012 (CBSA)" source="Case-Shiller" subject="Housing"/>
+          <category name="Housing: Household Type 2000-2010 (Municipal)" title="Household Type, 2000 &amp; 2010 (Municipal)" source="Census" subject="Housing"/>
+          <category name="Households By Ancestry, ACS06-10 (Census Tracts)" description="ACS 2006-10" title="Households By Ancestry, 5yr Avg 2006-10 (Census Tracts)" subject="Housing"/>
+          <category name="Households By Ancestry, 5yr Avg 2006-10 (Municipal)" description="ACS 2006-10" title="Households By Ancestry, 5yr Avg 2006-10 (Municipal)" subject="Housing"/>
+          <category name="Housing Cost Burden for Owner (Municipal)" title="Housing Cost Burden for Owner, 5yr Avg 2005-09 (Municipal)" source="ACS" subject="Housing"/>
+          <category name="Housing Cost Burden for Owners, ACS 2006-10 (Census Tracts)" title="Housing Cost Burden for Owners, 5yr Avg 2006-10 (Census Tracts)" source="ACS" subject="Housing"/>
+          <category name="Housing Cost Burden for Renters, 2006-10 ACS (Census Tracts)" title="Housing Cost Burden for Renters, 5yr Avg 2006-10 (Census Tracts)" source="ACS" subject="Housing"/>
+          <category name="Housing Cost Burden for Renters (Municipal)" title="Housing Cost Burden for Renters, 5yr Avg 2005-09 (Municipal)" source="ACS" subject="Housing"/>
+          <category name="Housing Tenure by Race ACS 2006-10 (Census Tracts)" title="Housing Tenure by Race, 5yr Avg 2006-10 (Census Tracts)" source="ACS" subject="Housing"/>
+          <category name="Housing Tenure by Race ACS 2006-10 (Municipal)" title="Housing Tenure by Race, 5yr Avg 2006-10 (Municipal)" source="ACS" subject="Housing"/>
+          <category name="Housing Tenure by Year of Occupancy (Census Tracts)" description="ACS" title="Housing Tenure by Year of Occupancy, 5yr Avg 2006-10 (Census Tracts)" subject="Housing"/>
+          <category name="Housing Tenure by Year of Occupancy (Municipal)" description="ACS" title="Housing Tenure by Year of Occupancy, 5yr Avg 2006-10 (Municipal)" subject="Housing"/>
+          <category name="Housing Occupancy, 2000-2010 (Municipal)" title="Housing Occupancy, 2000 &amp; 2010 (Municipal)" source="Census" subject="Housing"/>
+          <category name="Housing: Census 2000 (Municipal)" description="Census 2000" title="Housing Summary, 2000 (Municipal)" source="Census" subject="Housing"/>
+          <category name="Housing Type (Municipal)" description="2006-10 ACS" title="Housing Type (Municipal)" source="ACS" subject="Housing"/>
+          <category name="Median Household Income by Race, ACS 2006-10 (Census Tracts)" title="Median Household Income by Race, 5yr Avg 2006-10 (Census Tracts)" source="ACS" subject="Housing"/>
+          <category name="Median Household Income by Race, ACS 2006-10 (Municipal)" title="Median Household Income by Race, 5yr Avg 2006-10 (Municipal)" source="ACS" subject="Housing"/>
+          <category name="Subsidized Housing Inventory" title="Subsidized Housing Inventory, by Year 2006-11 (Municipal) " source="DHCD, 2011" subject="Housing"/>
+        </category>
+        <category name="Data Tables" title="Public Health">
+          <category name="Asthma Related Hospitalizations" title="Asthma Related Hospitalizations, 2007-09 (Municipal)" source="MADPH, 2012" subject="Public Health"/>
+          <category name="Health: Births, 2000-2009 (Municipal)" description="2000-2009" title="Births, 2000-2009 (Municipal)" source="DPH" subject="Public Health"/>
+          <category name="Total Births" title="Births to Moms Age 15-44, 2007-09 (Municipal)" source="MADPH, 2012" subject="Public Health"/>
+          <category name="Cancer Mortality, 2006 (Municipal)" title="Cancer Mortality, 2006 (Municipal)" source="MADPH, 2012" subject="Public Health"/>
+          <category name="Cancer Mortality, 2007 (Municipal)" title="Cancer Mortality, 2007 (Municipal)" source="MADPH, 2012" subject="Public Health"/>
+          <category name="Cancer Mortality, 2008 (Municipal)" title="Cancer Mortality, 2008 (Municipal)" source="MADPH, 2012" subject="Public Health"/>
+          <category name="Cardiovascular Hospitalizations (Municipal)" title="Cardiovascular Hospitalizations, 2007-09 (Municipal)" source="MADPH, 2012" subject="Public Health"/>
+          <category name="Food Deserts (Census 2000 Tracts)" title="Food Deserts (Census 2000 Tracts)" source="USDA" subject="Public Health"/>
+          <category name="Health: Food Establishments" title="Food Establishments" source="DPH" subject="Public Health"/>
+          <category name="Health: Survey Data" title="Health Survey Data" source="BRFFS" subject="Public Health"/>
+          <category name="Health: Hospitalizations 2007-11Avg (Municipal)" description="2007-11 Avg" title="Hospitalizations 2007-11Avg (Municipal)" source="DPH" subject="Public Health"/>
+          <category name="Health: Hospitalizations, 2009 (Municipal)" description="2009" title="Hospitalizations, 2009 (Municipal)" source="DPH" subject="Public Health"/>
+          <category name="Health: Lead Poisoning in Children, 2010 (Municipal)" description="2010" title="Lead Poisoning in Children, 2010 (Municipal)" source="DPH" subject="Public Health"/>
+          <category name="Health: MA Physical Acitvity by Race and Year (Municipal)" title="MA Physical Acitvity by Race and Year (Municipal)" source="DPH" subject="Public Health"/>
+          <category name="Health: Small Area Estimates, 2009 (Municipal)" description="2009, DPH" title="Small Area Estimates, 2009 (Municipal)" source="DPH" subject="Public Health"/>
+          <category name="Low Birth Weight (Municipal)" title="Low Birth Weight (Municipal)" subject="Public Health"/>
+          <category name="Smoking Mothers during Pregnancy, 2004-10avg (Municipal)" description="DPH" title="Mothers that Smoked during Pregnancy, 2004-10avg (Municipal)" subject="Public Health"/>
+          <category name="Health Insurance Premiums, 2010 (States)" title="Health Insurance Premiums, 2010 (States)" source="Kaiser State Health Facts" subject="Public Health"/>
+          <category name="Health Spending per Capita (MA)" title="Health Spending per Capita by Year (MA)" source="Kaiser State Health Facts" subject="Public Health"/>
+        </category>
+        <category name="Data Tables" title="Technology">
+          <category name="Intel Clubhouses" title="Intel Computer Clubhouse, 2012"/>
+          <category name="R_D Academic Expenditures, FY09 (States)" title="R&amp;D Academic Expenditures, FY09 (States)" source="National Science Foundation" subject="Technology"/>
+          <category name="Technology: Venture Capital Share, 1995-2011 (MA)" title="MA Venture Capital Share, 1995-2011 (MA)" source="PricewaterhouseCoopers Moneytree Survey" subject="Technology"/>
+          <category name="Technology: Venture Capital, 2011 (States)" title="Venture Capital, 2011 (States)" source="PricewaterhouseCoopers Moneytree Survey" subject="Technology"/>
+        </category>
+        <category name="Data Tables" title="Transportation">
+          <category name="Trasnportation: Alternative Fuels Vehicle Registrations by Municipality" description="Mass RMV, accessed via Boston.com" title="Alternative Fuels Vehicle Registrations, 2011 (Municipal)" subject="Transportation"/>
+          <category name="Bike and Pedestrian Facilities" title="Bike and Pedestrian Facilities" source="MAPC, 2011" subject="Environment"/>
+          <category name="Commuter Rail" title="Commuter Rail" source="MassGIS, 2010"/>
+          <category name="Commuter Rail Stations" title="Commuter Rail Stations" source="MassGIS, 2008"/>
+          <category name="Fairmount Commuter Line" title="Fairmount Commuter Line"/>
+          <category name="Transportation Cost (Metro US)" title="Household Income Spent on Transportation, 2009 (Metro US)" subject="Transportation"/>
+          <category name="Logan Airport Traffic, 1998-2011" title="Logan Airport Traffic, 1998-2011" source="MassPort&#xD;" subject="Transportation"/>
+          <category name="Major Roads" title="Major Roads" source="MassDOT"/>
+          <category name="Major Routes" title="Major Routes" source="MassDOT"/>
+          <category name="MBTA Subway Lines" title="MBTA Subway Lines" source="MassDOT"/>
+          <category name="MBTA Subway Stops" title="MBTA Subway Stops"/>
+          <category name="Transit Oriented Development Stations" title="Transit Oriented Development Stations, 2012" source="MAPC" subject="Transportation"/>
+          <category name="Transportation: MBTA Expenses by Year" description="MBTA FY" title="MBTA Expenses by Year" subject="Transportation"/>
+          <category name="Transportation: MBTA Revenue by Year" description="MBTA FY" title="MBTA Revenue by Year" subject="Transportation"/>
+          <category name="Transportation to Work (Municipal)" title="Transportation to Work, 5yr Avg 2005-09 (Municipal)" source="ACS"/>
+          <category name="Transportation to Work, ACS 2006-10 (Census Tracts)" title="Transportation to Work, 5yr Avg 2006-10 (Census Tracts)" source="ACS" subject="Transportation"/>
+          <category name="Travel Time to Work, ACS0610 (Census Tracts)" title="Travel Time to Work, 5yr Avg 2006-10 (Census Tracts)" subject="Transportation"/>
+          <category name="Travel Time to Work, ACS0610 (Municipal)" title="Travel Time to Work, 5yr Avg 2006-10 (Municipal)" subject="Transportation"/>
+          <category name="Vehicle Miles Traveled, 2005-2007" title="Vehicle Miles Traveled, 2005-2007" source="MassGIS" subject="Transportation"/>
+          <category name="Vehicles by Household, 5yr Avg 2006-10 (Census 2010 Tracts)" title="Vehicles by Household, 5yr Avg 2006-10 (Census 2010 Tracts)" source="ACS" subject="Transportation"/>
+          <category name="Vehicles by Household, 5yr Avg 2006-10 (Municipal)" description="ACS 2006-10" title="Vehicles by Household, 5yr Avg 2006-10 (Municipal)" source="ACS" subject="Transportation"/>
+        </category>
+        <category name="Data Tables" title="Municipal Subset">
+          <category name="Data Tables" title="Boston">
+            <category name="Data Tables" title="Boundaries">
+              <category name="Boston Census Tracts" title="Boston Census Tracts"/>
+              <category name="Boston Neighborhoods" title="Boston Neighborhoods" source="BRA, 2010" subject="Boundaries"/>
+              <category name="Boston Outline" title="Boston Outline"/>
+              <category name="Boston Parcels (Subset)" title="Boston Parcels (Subset)" source="City of Boston, 2010"/>
+              <category name="Boston Planning Districts" title="Boston Planning Districts"/>
+              <category name="Boston Precincts" title="Boston Precincts"/>
+            </category>
+            <category name="Data Tables" title="Civic Vitality and Governance">
+              <category name="Boston Cares Annual Volunteer Hours, by Year" description="Boston Cares" title="Boston Cares Annual Volunteer Hours, by Year" subject="Civic Vitality"/>
+              <category name="Boston Voting by Year (Wards and Precincts)" title="Boston Voting Data by Year (Ward and Precinct)" source="Boston Elections Dept, 2000-2011"/>
+            </category>
+            <category name="Data Tables" title="Economy">
+              <category name="Hotel Occupancy by Year (Municipal)" title="Hotel Occupancy by Year (Boston)" source="Pinnacle Advisory Group" subject="Economy"/>
+            </category>
+            <category name="Data Tables" title="Education">
+              <category name="Boston Daycares" title="Boston Day Care Providers, 2010 (points)" subject="Education"/>
+              <category name="Boston Non-Profit Educational Assets (Points)" title="Boston Non-Profit Educational Assets (Points)" subject="Education"/>
+              <category name="Boston Circle of Promise Schools" title="BPS Circle of Promise Schools" source="DESE, 2011" subject="Education"/>
+              <category name="Boston Schools" title="BPS Schools" source="DESE, 2011"/>
+              <category name="Boston Turnaround Schools" title="BPS Turnaround Schools" source="DESE, 2011"/>
+              <category name="Library Characteristics" title="Library Characteristics, 2011 (Boston)" source="BPL" subject="Education"/>
+              <category name="Library Circulation by Year (Municipal)" title="Library Circulation by Year (Boston)" source="Boston Public Library" subject="Education"/>
+              <category name="Schools: Students Receiving Weekly Arts Programming by Year" title="Students Receiving Weekly Arts Programming by Year (Boston Schools)" source="Arts Expansion Initiative" subject="Education"/>
+            </category>
+            <category name="Data Tables" title="Environment &amp; Energy">
+              <category name="Energy: Commercial and Industrial Energy Use by Source (Municipal)" title="Commercial and Industrial Energy Use by Year (Boston)" source="City of Boston, Climate Action Plan Greenhouse Gas Inventories" subject="Energy"/>
+              <category name="Environment: Extreme Heat with Projections (Municipal)" title="Extreme Heat Days with Projections (Boston)" source="Northeast Climate Data" subject="Environment"/>
+              <category name="Greenhouse Gas Emissions (Municipal)" title="Greenhouse Gas Emissions, 2005-10 (Boston)" source="City of Boston" subject="Environment"/>
+              <category name="Energy: MBTA Transportation Use (municipal)" title="MBTA Energy Use by Year (Boston)" source="City of Boston, Climate Action Plan Greenhouse Gas Inventories" subject="Energy"/>
+              <category name="Energy: Residential Use (municipal)" title="Residential Energy Use by Year (Boston)" source="City of Boston, Climate Action Plan Greenhouse Gas Inventories" subject="Energy"/>
+              <category name="Water, Sewer and Energy Use by Source (Boston)" title="Water, Sewer and Energy Use by Source and Year (Boston)" source="City of Boston, Climate Action Plan Greenhouse Gas Inventories" subject="Energy"/>
+            </category>
+            <category name="Data Tables" title="Housing">
+              <category name="Housing: Abandoned Buildings by Year (Boston)" title="Abandoned Buildings by Year (Boston)" source="Department of Neighborhood Development" subject="Housing"/>
+              <category name="Housing: Annual Foreclosure Deeds by Year (Boston)" description="1990-2011" title="Annual Foreclosure Deeds by Year (Boston)" subject="Housing"/>
+              <category name="Homeless Count by Year (Boston)" title="Homeless Count by Year (Boston)" source="Boston Public Health Commission" subject="Housing"/>
+              <category name="Housing stats, 2011 (Boston Planning Districts)" title="Housing Stats, 2011 (Boston Planning Districts)" source="Boston DND" subject="Housing"/>
+            </category>
+            <category name="Data Tables" title="Public Health">
+              <category name="Health: Youth Alcohol Consumption, 1993-11 (Boston)" title="Youth Alcohol Consumption, 1993-11 (Boston)" source="YRBSS" subject="Public Health"/>
+              <category name="Health: Youth Attempted Suicide, 1993-11 (Boston)" description="Teens who attempted suicide in the last 12 months" title="Youth Attempted Suicide, 1993-11 (Boston)" subject="Public Health"/>
+              <category name="Health: Youth Diagnosed with Asthma, 2005-11 (Boston)" title="Youth Diagnosed with Asthma, 2005-11 (Boston)" source="YRBSS" subject="Public Health"/>
+              <category name="Health: Youth Marijuana Use 1993-11 (Boston)" title="Youth Marijuana Use 1993-11 (Boston)" source="YRBSS" subject="Public Health"/>
+              <category name="Health: Youth Weight (Municipal)" title="Youth Overweight/Obese, 1999-2011 (Boston)" source="YRBSS" subject="Public Health"/>
+              <category name="Health: Youth Physical Activity (Municipal)" title="Youth Physical Activity 1993-11 (Boston)" source="YRBSS" subject="Public Health"/>
+              <category name="Health: Youth Phys. Ed. (Municipal)" title="Youth Physical Education 1993-11 (Boston)" source="YRBSS" subject="Public Health"/>
+              <category name="Health: Youth Smoking, 1993-11 (Boston)" title="Youth Smoking, 1993-11 (Boston)" source="YRBSS" subject="Public Health"/>
+              <category name="Health: Youth Soda Consumption (Municipal)" title="Youth Soda Consumption, 2007-11 (Boston)" source="YRBSS" subject="Public Health"/>
+            </category>
+            <category name="Data Tables" title="Public Safety">
+              <category name="Public Safety: Hate Crimes by Offense (Boston)" title="Public Safety: Hate Crimes by Offense (Boston)" source="Boston Police Dept." subject="Public Safety"/>
+              <category name="Public Safety: Hate Crimes by Perpetrator Race/Ethnicity (Boston)" description="All incidents investigated by the BPD Community Disorders unit" title="Public Safety: Hate Crimes by Perpetrator Race/Ethnicity (Boston)" source="Boston Police Dept" subject="Public Safety"/>
+              <category name="Public Safety: Hate Crimes by Victim Race/Ethnicity (Boston)" title="Public Safety: Hate Crimes by Victim Race/Ethnicity (Boston)" source="Boston Police Dept." subject="Public Safety"/>
+              <category name="Public Safety: Youth Crime (under age 16) by Type (Boston)" title="Public Safety: Youth Crime (under age 16) by Type (Boston)" source="Boston Police Dept." subject="Public Safety"/>
+              <category name="Public Safety: Youth Crime (age 14 to 24) by Type (Boston)" description="Youth Population aged 14 to 24" title="Youth Crime (age 14 to 24) by Type (Boston)" subject="Public Safety"/>
+            </category>
+            <category name="Data Tables" title="Technology">
+              <category name="Boston Tech Centers" title="Boston Technology Centers, 2012" source="Timothy Smith Network" subject="Technology"/>
+            </category>
+          </category>
+        </category>
+        <category name="Data Tables" title="Boundaries">
+          <category name="MAPC Municipalities" title="MAPC Municipalities" source="MAPC"/>
+          <category name="Massachusetts Municipalities" title="Massachusetts Municipalities" source="MassGIS"/>
+          <category name="Boston Neighborhoods" title="Boston Neighborhoods" source="BRA, 2010"/>
+          <category name="Boston Parcels (Subset)" title="Boston Parcels (Subset)" source="City of Boston, 2010"/>
+          <category name="Census 2010 Tracts" title="Census 2010 Tracts" source="Demographics" subject="Demographics"/>
+          <category name="Census 2000 Block Groups" title="Census Block Groups 2000" source="Census" subject="Demographics"/>
+          <category name="Census 2010 Block Groups" title="Census Block Groups, 2010" source="Census, 2010" subject="Demographics"/>
+          <category name="Census 2000 Tracts" title="Census Tracts, 2000" source="Census" subject="Demographics"/>
+          <category name="Community Types (Municipal)" title="Community Types (Municipal)" source="MAPC, 2011" subject="Boundaries"/>
+          <category name="MA Counties" title="MA Counties" source="MassGIS"/>
+          <category name="MetroFuture Region" title="MetroFuture Region" source="MAPC, 2008"/>
+          <category name="Traffic Analysis Zones (TAZ)" title="Traffic Analysis Zones (TAZ) " source="HUD"/>
+          <category name="US States" title="US States"/>
+        </category>
+        <category name="Geometry Collections" title="Spatial Geography for Maps">
+          <attribute name="1Km Grid" keyType="Grid_1Km_ID" title="1Km Grid" dataType="geometry"/>
+          <attribute name="1Km Grid for MetroFuture Modelling Region" keyType="Grid_1Km_ID" title="1Km Grid for MetroFuture Modelling Region" dataType="geometry"/>
+          <attribute name="Arts and Culture Points" keyType="Arts and Culture Points" title="Arts and Culture Points" dataType="geometry"/>
+          <attribute name="Bike and Pedestrian Facilities" keyType="ObjectID" title="Bike and Pedestrian Facilities" dataType="geometry"/>
+          <attribute name="Boston Circle of Promise Schools" keyType="SchoolID" title="Boston Circle of Promise Schools" dataType="geometry"/>
+          <attribute name="Boston Daycares" keyType="ObjectID" title="Boston Daycares" dataType="geometry"/>
+          <attribute name="Boston Neighborhoods" keyType="ObjectID" title="Boston Neighborhoods" dataType="geometry"/>
+          <attribute name="Boston Non-Profit Educational Assets (Points)" keyType="ObjectID" title="Boston Non-Profit Educational Assets (Points)" dataType="geometry"/>
+          <attribute name="Boston Outline" keyType="MUNI_ID" title="Boston Outline" dataType="geometry"/>
+          <attribute name="Boston Parcels (Subset)" keyType="BostonParcelID" title="Boston Parcels (Subset)" dataType="geometry"/>
+          <attribute name="Boston Planning Districts" keyType="Boston_Planning_Districts" title="Boston Planning Districts" dataType="geometry"/>
+          <attribute name="Boston Precincts" keyType="Boston_Wards_Precincts" title="Boston Precincts" dataType="geometry"/>
+          <attribute name="Boston Schools" keyType="SchoolID" title="Boston Schools" dataType="geometry"/>
+          <attribute name="Boston Tech Centers" keyType="Boston_TechCenters" title="Boston Tech Centers" dataType="geometry"/>
+          <attribute name="Boston Turnaround Schools" keyType="SchoolID" title="Boston Turnaround Schools" dataType="geometry"/>
+          <attribute name="Census 2000 Block Groups" keyType="BG_00_ID" title="Census 2000 Block Groups" dataType="geometry"/>
+          <attribute name="Census 2000 Tracts" keyType="CT_ID" title="Census 2000 Tracts" dataType="geometry"/>
+          <attribute name="Census 2010 Block Groups" keyType="BG_10_ID" title="Census 2010 Block Groups" dataType="geometry"/>
+          <attribute name="Census 2010 Tracts" keyType="ct10_id" title="Census 2010 Tracts" dataType="geometry"/>
+          <attribute name="Child Care Providers with Less than High School" keyType="ObjectID" title="Child Care Providers with Less than High School" dataType="geometry"/>
+          <attribute name="Colleges and Universities" keyType="College_ID" title="Colleges and Universities" dataType="geometry"/>
+          <attribute name="Commuter Rail" keyType="Commuter Rail" title="Commuter Rail" dataType="geometry"/>
+          <attribute name="Commuter Rail Stations" keyType="Commuter Rail Stations" title="Commuter Rail Stations" dataType="geometry"/>
+          <attribute name="Environmental Justice Populations (Block Groups)" keyType="BG_00_ID" title="Environmental Justice Populations (Block Groups)" dataType="geometry"/>
+          <attribute name="Fairmount Commuter Line" keyType="ObjectID" title="Fairmount Commuter Line" dataType="geometry"/>
+          <attribute name="Green House Gas Emissions by Facility, 2010 (pts)" keyType="frs_id" title="Green House Gas Emissions by Facility, 2010 (pts)" dataType="geometry"/>
+          <attribute name="Intel Clubhouses" keyType="Intel_Clubhouses" title="Intel Clubhouses" dataType="geometry"/>
+          <attribute name="LEED Certified Buildings (Points)" keyType="LEED_ID" title="LEED Certified Buildings (Points)" dataType="geometry"/>
+          <attribute name="Libraries" keyType="LibraryID" title="Libraries" dataType="geometry"/>
+          <attribute name="MA Counties" keyType="FIPS_ID" title="MA Counties" dataType="geometry"/>
+          <attribute name="MA House Districts" keyType="MA_HOUSE02_ID" title="MA House Districts" dataType="geometry"/>
+          <attribute name="MA Senate Districts" keyType="MA_SENATE02_ID" title="MA Senate Districts" dataType="geometry"/>
+          <attribute name="Major Roads (MassDOT)" keyType="ObjectID" title="Major Roads (MassDOT)" dataType="geometry"/>
+          <attribute name="Major Routes (MassDOT)" keyType="ObjectID" title="Major Routes (MassDOT)" dataType="geometry"/>
+          <attribute name="MAPC Municipalities" keyType="MUNI_ID" title="MAPC Municipalities" dataType="geometry"/>
+          <attribute name="Massachusetts Municipalities" keyType="MUNI_ID" title="Massachusetts Municipalities" dataType="geometry"/>
+          <attribute name="MBTA Subway Lines" keyType="MBTA Subway Lines" title="MBTA Subway Lines" dataType="geometry"/>
+          <attribute name="MBTA Subway Stops" keyType="MBTA Subway Stops" title="MBTA Subway Stops" dataType="geometry"/>
+          <attribute name="MetroFuture Region" keyType="MUNI_ID" title="MetroFuture Region" dataType="geometry"/>
+          <attribute name="Open Space" keyType="OS_ID" title="Open Space" dataType="geometry"/>
+          <attribute name="Protected Open Space" keyType="OS_ID" title="Protected Open Space" dataType="geometry"/>
+          <attribute name="School Districts" keyType="SchoolDistrictID" title="School Districts" dataType="geometry"/>
+          <attribute name="School Districts by Town" keyType="MUNI_ID" title="School Districts by Town" dataType="geometry"/>
+          <attribute name="Schools" keyType="SchoolID" title="Schools" dataType="geometry"/>
+          <attribute name="Success Boston Student Cohorts (2010)" keyType="ObjectID" title="Success Boston Student Cohorts (2010)" dataType="geometry"/>
+          <attribute name="Traffic Analysis Zones (TAZ) " keyType="TAZ_ID" title="Traffic Analysis Zones (TAZ) " dataType="geometry"/>
+          <attribute name="Transit Oriented Development Stations" keyType="TOD_Station" title="Transit Oriented Development Stations" dataType="geometry"/>
+          <attribute name="US Congressional Districts" keyType="US_CONGRESS_ID" title="US Congressional Districts" dataType="geometry"/>
+          <attribute name="US States" keyType="Arts and Culture Points" title="US States" dataType="geometry"/>
+          <attribute name="Water Bodies (100k Hydro)" keyType="PALIS_ID" title="Water Bodies (100k Hydro)" dataType="geometry"/>
+        </category>
+      </hierarchy>
+    </attributeHierarchy>
+    <hierarchyURL/>
+    <url>/WeaveServices/DataService</url>
+  </WeaveDataSource>
+  <LinkableHashMap name="Probe Header Columns" encoding="dynamic"/>
+  <LinkableHashMap name="Probed Columns" encoding="dynamic"/>
+  <TransposedTableTool name="TransposedTableTool">
+    <buttonRadius>3</buttonRadius>
+    <closeable>true</closeable>
+    <columns encoding="dynamic">
+      <ReferencedColumn name="ReferencedColumn52">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category name="Data Tables" title="Economy">
+                  <category name="Labor Force and Unemployment by Year, Place of Residence (Municipal)" title="Labor Force and Unemployment, Place of Residence, by Year 2006-11 (Municipal)" subject="Economy" source="MA EOLWD ES-202, 2012">
+                    <attribute name="unemp_rt (2011)" keyType="MUNI_ID" title="Unemployed Rate, 2011" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn51">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category name="Data Tables" title="Economy">
+                  <category name="Labor Force and Unemployment by Year, Place of Residence (Municipal)" title="Labor Force and Unemployment, Place of Residence, by Year 2006-11 (Municipal)" subject="Economy" source="MA EOLWD ES-202, 2012">
+                    <attribute name="unemp_rt (2010)" keyType="MUNI_ID" title="Unemployed Rate, 2010" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn50">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category name="Data Tables" title="Economy">
+                  <category name="Labor Force and Unemployment by Year, Place of Residence (Municipal)" title="Labor Force and Unemployment, Place of Residence, by Year 2006-11 (Municipal)" subject="Economy" source="MA EOLWD ES-202, 2012">
+                    <attribute name="unemp_rt (2009)" keyType="MUNI_ID" title="Unemployed Rate, 2009" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn49">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category name="Data Tables" title="Economy">
+                  <category name="Labor Force and Unemployment by Year, Place of Residence (Municipal)" title="Labor Force and Unemployment, Place of Residence, by Year 2006-11 (Municipal)" subject="Economy" source="MA EOLWD ES-202, 2012">
+                    <attribute name="unemp_rt (2008)" keyType="MUNI_ID" title="Unemployed Rate, 2008" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn48">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category name="Data Tables" title="Economy">
+                  <category name="Labor Force and Unemployment by Year, Place of Residence (Municipal)" title="Labor Force and Unemployment, Place of Residence, by Year 2006-11 (Municipal)" subject="Economy" source="MA EOLWD ES-202, 2012">
+                    <attribute name="unemp_rt (2007)" keyType="MUNI_ID" title="Unemployed Rate, 2007" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn47">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category name="Data Tables" title="Economy">
+                  <category name="Labor Force and Unemployment by Year, Place of Residence (Municipal)" title="Labor Force and Unemployment, Place of Residence, by Year 2006-11 (Municipal)" subject="Economy" source="MA EOLWD ES-202, 2012">
+                    <attribute name="unemp_rt (2006)" keyType="MUNI_ID" title="Unemployed Rate, 2006" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn46">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category name="Data Tables" title="Economy">
+                  <category name="Labor Force and Unemployment by Year, Place of Residence (Municipal)" title="Labor Force and Unemployment, Place of Residence, by Year 2006-11 (Municipal)" subject="Economy" source="MA EOLWD ES-202, 2012">
+                    <attribute name="unemp_num (2011)" keyType="MUNI_ID" title="Unemployed Population, 2011" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn45">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category name="Data Tables" title="Economy">
+                  <category name="Labor Force and Unemployment by Year, Place of Residence (Municipal)" title="Labor Force and Unemployment, Place of Residence, by Year 2006-11 (Municipal)" subject="Economy" source="MA EOLWD ES-202, 2012">
+                    <attribute name="unemp_num (2010)" keyType="MUNI_ID" title="Unemployed Population, 2010" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn44">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category name="Data Tables" title="Economy">
+                  <category name="Labor Force and Unemployment by Year, Place of Residence (Municipal)" title="Labor Force and Unemployment, Place of Residence, by Year 2006-11 (Municipal)" subject="Economy" source="MA EOLWD ES-202, 2012">
+                    <attribute name="unemp_num (2009)" keyType="MUNI_ID" title="Unemployed Population, 2009" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn43">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category name="Data Tables" title="Economy">
+                  <category name="Labor Force and Unemployment by Year, Place of Residence (Municipal)" title="Labor Force and Unemployment, Place of Residence, by Year 2006-11 (Municipal)" subject="Economy" source="MA EOLWD ES-202, 2012">
+                    <attribute name="unemp_num (2008)" keyType="MUNI_ID" title="Unemployed Population, 2008" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn42">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category name="Data Tables" title="Economy">
+                  <category name="Labor Force and Unemployment by Year, Place of Residence (Municipal)" title="Labor Force and Unemployment, Place of Residence, by Year 2006-11 (Municipal)" subject="Economy" source="MA EOLWD ES-202, 2012">
+                    <attribute name="unemp_num (2007)" keyType="MUNI_ID" title="Unemployed Population, 2007" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn41">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category name="Data Tables" title="Economy">
+                  <category name="Labor Force and Unemployment by Year, Place of Residence (Municipal)" title="Labor Force and Unemployment, Place of Residence, by Year 2006-11 (Municipal)" subject="Economy" source="MA EOLWD ES-202, 2012">
+                    <attribute name="unemp_num (2006)" keyType="MUNI_ID" title="Unemployed Population, 2006" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn40">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category name="Data Tables" title="Economy">
+                  <category name="Labor Force and Unemployment by Year, Place of Residence (Municipal)" title="Labor Force and Unemployment, Place of Residence, by Year 2006-11 (Municipal)" subject="Economy" source="MA EOLWD ES-202, 2012">
+                    <attribute name="emp_lf (2011)" keyType="MUNI_ID" title="Employed Population, 2011" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn39">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category name="Data Tables" title="Economy">
+                  <category name="Labor Force and Unemployment by Year, Place of Residence (Municipal)" title="Labor Force and Unemployment, Place of Residence, by Year 2006-11 (Municipal)" subject="Economy" source="MA EOLWD ES-202, 2012">
+                    <attribute name="emp_lf (2010)" keyType="MUNI_ID" title="Employed Population, 2010" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn38">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category name="Data Tables" title="Economy">
+                  <category name="Labor Force and Unemployment by Year, Place of Residence (Municipal)" title="Labor Force and Unemployment, Place of Residence, by Year 2006-11 (Municipal)" subject="Economy" source="MA EOLWD ES-202, 2012">
+                    <attribute name="emp_lf (2009)" keyType="MUNI_ID" title="Employed Population, 2009" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn37">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category name="Data Tables" title="Economy">
+                  <category name="Labor Force and Unemployment by Year, Place of Residence (Municipal)" title="Labor Force and Unemployment, Place of Residence, by Year 2006-11 (Municipal)" subject="Economy" source="MA EOLWD ES-202, 2012">
+                    <attribute name="emp_lf (2008)" keyType="MUNI_ID" title="Employed Population, 2008" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn36">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category name="Data Tables" title="Economy">
+                  <category name="Labor Force and Unemployment by Year, Place of Residence (Municipal)" title="Labor Force and Unemployment, Place of Residence, by Year 2006-11 (Municipal)" subject="Economy" source="MA EOLWD ES-202, 2012">
+                    <attribute name="emp_lf (2007)" keyType="MUNI_ID" title="Employed Population, 2007" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn35">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category name="Data Tables" title="Economy">
+                  <category name="Labor Force and Unemployment by Year, Place of Residence (Municipal)" title="Labor Force and Unemployment, Place of Residence, by Year 2006-11 (Municipal)" subject="Economy" source="MA EOLWD ES-202, 2012">
+                    <attribute name="emp_lf (2006)" keyType="MUNI_ID" title="Employed Population, 2006" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn34">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category name="Data Tables" title="Economy">
+                  <category name="Labor Force and Unemployment by Year, Place of Residence (Municipal)" title="Labor Force and Unemployment, Place of Residence, by Year 2006-11 (Municipal)" subject="Economy" source="MA EOLWD ES-202, 2012">
+                    <attribute name="tot_lf (2011)" keyType="MUNI_ID" title="Labor Force, 2011" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn33">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category name="Data Tables" title="Economy">
+                  <category name="Labor Force and Unemployment by Year, Place of Residence (Municipal)" title="Labor Force and Unemployment, Place of Residence, by Year 2006-11 (Municipal)" subject="Economy" source="MA EOLWD ES-202, 2012">
+                    <attribute name="tot_lf (2010)" keyType="MUNI_ID" title="Labor Force, 2010" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn32">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category name="Data Tables" title="Economy">
+                  <category name="Labor Force and Unemployment by Year, Place of Residence (Municipal)" title="Labor Force and Unemployment, Place of Residence, by Year 2006-11 (Municipal)" subject="Economy" source="MA EOLWD ES-202, 2012">
+                    <attribute name="tot_lf (2009)" keyType="MUNI_ID" title="Labor Force, 2009" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn31">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category name="Data Tables" title="Economy">
+                  <category name="Labor Force and Unemployment by Year, Place of Residence (Municipal)" title="Labor Force and Unemployment, Place of Residence, by Year 2006-11 (Municipal)" subject="Economy" source="MA EOLWD ES-202, 2012">
+                    <attribute name="tot_lf (2008)" keyType="MUNI_ID" title="Labor Force, 2008" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn30">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category name="Data Tables" title="Economy">
+                  <category name="Labor Force and Unemployment by Year, Place of Residence (Municipal)" title="Labor Force and Unemployment, Place of Residence, by Year 2006-11 (Municipal)" subject="Economy" source="MA EOLWD ES-202, 2012">
+                    <attribute name="tot_lf (2007)" keyType="MUNI_ID" title="Labor Force, 2007" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn29">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category name="Data Tables" title="Economy">
+                  <category name="Labor Force and Unemployment by Year, Place of Residence (Municipal)" title="Labor Force and Unemployment, Place of Residence, by Year 2006-11 (Municipal)" subject="Economy" source="MA EOLWD ES-202, 2012">
+                    <attribute name="tot_lf (2006)" keyType="MUNI_ID" title="Labor Force, 2006" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+    </columns>
+    <dataColumnWidth>10%</dataColumnWidth>
+    <enableBorders>true</enableBorders>
+    <enableMoveResize>true</enableMoveResize>
+    <enableSubMenu>false</enableSubMenu>
+    <filterKeySet encoding="csv">MUNI_ID,{{ regionalunit.unitid }}</filterKeySet>
+    <fontSize>10</fontSize>
+    <headerAttributeColumn encoding="dynamic">
+      <ReferencedColumn>
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category name="Data Tables" title="Economy">
+                  <category name="Labor Force and Unemployment by Year, Place of Residence (Municipal)" title="Labor Force and Unemployment, Place of Residence, by Year 2006-11 (Municipal)" subject="Economy" source="MA EOLWD ES-202, 2012">
+                    <attribute name="municipal" keyType="MUNI_ID" title="Municipality" dataTable="Labor Force and Unemployment by Year, Place of Residence (Municipal)" dataType="string"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+    </headerAttributeColumn>
+    <headerColumnWidth>73.27327327327328%</headerColumnWidth>
+    <headerText>Attributes</headerText>
+    <maximizable>true</maximizable>
+    <maximized>true</maximized>
+    <minimizable>true</minimizable>
+    <minimized>false</minimized>
+    <panelBackgroundColor>NaN</panelBackgroundColor>
+    <panelBorderColor>NaN</panelBorderColor>
+    <panelHeight>50%</panelHeight>
+    <panelStyleList/>
+    <panelTitle/>
+    <panelWidth>50%</panelWidth>
+    <panelX>22%</panelX>
+    <panelY>29%</panelY>
+    <pinnable>true</pinnable>
+    <pinnableToBack>false</pinnableToBack>
+    <pinned>false</pinned>
+    <pinnedToBack>false</pinnedToBack>
+  </TransposedTableTool>
+</Weave>

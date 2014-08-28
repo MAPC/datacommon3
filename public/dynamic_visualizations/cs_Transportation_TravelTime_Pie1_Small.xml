@@ -1,0 +1,983 @@
+<Weave encoding="dynamic">
+  <KeySet name="alwaysHighlightKeySet"/>
+  <WeaveProperties name="WeaveProperties">
+    <backgroundColor>16777215</backgroundColor>
+    <cssStyleSheetName>weaveStyle.css</cssStyleSheetName>
+    <dashboardMode>true</dashboardMode>
+    <dashedSelectionBox>5,5</dashedSelectionBox>
+    <dataInfoURL/>
+    <debugScreenBounds>false</debugScreenBounds>
+    <defaultTextFormat>
+      <bold>false</bold>
+      <color>0</color>
+      <font>Sophia Nubian</font>
+      <italic>false</italic>
+      <size>12</size>
+      <underline>false</underline>
+    </defaultTextFormat>
+    <enableAboutMenu>true</enableAboutMenu>
+    <enableAdd2DHistogram>true</enableAdd2DHistogram>
+    <enableAddAttributeMenuTool>true</enableAddAttributeMenuTool>
+    <enableAddBarChart>true</enableAddBarChart>
+    <enableAddCollaborationTool>false</enableAddCollaborationTool>
+    <enableAddColorLegend>true</enableAddColorLegend>
+    <enableAddColormapHistogram>true</enableAddColormapHistogram>
+    <enableAddCompoundRadViz>true</enableAddCompoundRadViz>
+    <enableAddCustomTool>true</enableAddCustomTool>
+    <enableAddDataFilter>true</enableAddDataFilter>
+    <enableAddDataSource>true</enableAddDataSource>
+    <enableAddDataTable>true</enableAddDataTable>
+    <enableAddDimensionSliderTool>true</enableAddDimensionSliderTool>
+    <enableAddGaugeTool>true</enableAddGaugeTool>
+    <enableAddGraphTool>true</enableAddGraphTool>
+    <enableAddHistogram>true</enableAddHistogram>
+    <enableAddLineChart>true</enableAddLineChart>
+    <enableAddMap>true</enableAddMap>
+    <enableAddPieChart>true</enableAddPieChart>
+    <enableAddPieChartHistogram>true</enableAddPieChartHistogram>
+    <enableAddRadViz>true</enableAddRadViz>
+    <enableAddRamachandranPlot>false</enableAddRamachandranPlot>
+    <enableAddRScriptEditor>true</enableAddRScriptEditor>
+    <enableAddScatterplot>true</enableAddScatterplot>
+    <enableAddThermometerTool>true</enableAddThermometerTool>
+    <enableAddTimeSliderTool>true</enableAddTimeSliderTool>
+    <enableAddWeaveDataSource>true</enableAddWeaveDataSource>
+    <enableBitmapFilters>true</enableBitmapFilters>
+    <enableCascadeAllWindows>true</enableCascadeAllWindows>
+    <enableClearCurrentSelection>true</enableClearCurrentSelection>
+    <enableCloseAllWindows>true</enableCloseAllWindows>
+    <enableCreateSubsets>true</enableCreateSubsets>
+    <enableDataMenu>true</enableDataMenu>
+    <enableDebugAlert>false</enableDebugAlert>
+    <enableDrawCircle>true</enableDrawCircle>
+    <enableDynamicTools>true</enableDynamicTools>
+    <enableEditDataSource>true</enableEditDataSource>
+    <enableExportApplicationScreenshot>true</enableExportApplicationScreenshot>
+    <enableExportCSV>true</enableExportCSV>
+    <enableExportDataTable>true</enableExportDataTable>
+    <enableExportToolImage>true</enableExportToolImage>
+    <enableFullscreen>true</enableFullscreen>
+    <enableGeometryProbing>true</enableGeometryProbing>
+    <enableGoFullscreen>true</enableGoFullscreen>
+    <enableManageSavedSelections>true</enableManageSavedSelections>
+    <enableManageSavedSubsets>true</enableManageSavedSubsets>
+    <enableMarker>true</enableMarker>
+    <enableMenuBar>false</enableMenuBar>
+    <enableMinimizeAllWindows>true</enableMinimizeAllWindows>
+    <enableMouseWheel>true</enableMouseWheel>
+    <enableNewDataset>true</enableNewDataset>
+    <enableNewUserWizard>true</enableNewUserWizard>
+    <enablePanelCoordsPercentageMode>true</enablePanelCoordsPercentageMode>
+    <enableProbeAnimation>true</enableProbeAnimation>
+    <enableProbeLines>true</enableProbeLines>
+    <enableProbeToolTip>true</enableProbeToolTip>
+    <enableRefreshHierarchies>true</enableRefreshHierarchies>
+    <enableRemoveSubsets>true</enableRemoveSubsets>
+    <enableRestoreAllMinimizedWindows>true</enableRestoreAllMinimizedWindows>
+    <enableRightClick>true</enableRightClick>
+    <enableSaveCurrentSelection>true</enableSaveCurrentSelection>
+    <enableSaveCurrentSubset>true</enableSaveCurrentSubset>
+    <enableSearchForRecord>true</enableSearchForRecord>
+    <enableSelectionSelectorBox>true</enableSelectionSelectorBox>
+    <enableSelectionsMenu>true</enableSelectionsMenu>
+    <enableSessionMenu>false</enableSessionMenu>
+    <enableShowAllRecords>true</enableShowAllRecords>
+    <enableSubsetControls>true</enableSubsetControls>
+    <enableSubsetSelectionBox>true</enableSubsetSelectionBox>
+    <enableSubsetsMenu>true</enableSubsetsMenu>
+    <enableTileAllWindows>true</enableTileAllWindows>
+    <enableToolAttributeEditing>true</enableToolAttributeEditing>
+    <enableToolControls>true</enableToolControls>
+    <enableToolProbe>true</enableToolProbe>
+    <enableToolSelection>true</enableToolSelection>
+    <enableUserPreferences>true</enableUserPreferences>
+    <enableWindowMenu>true</enableWindowMenu>
+    <eventListeners encoding="dynamic"/>
+    <geometryMetadataRequestMode>xyz</geometryMetadataRequestMode>
+    <geometryMinimumScreenArea>1</geometryMinimumScreenArea>
+    <jriServiceURL>/WeaveServices/JRIService</jriServiceURL>
+    <macroLibraries>weave.api::WeaveAPI</macroLibraries>
+    <macros encoding="dynamic"/>
+    <maxTooltipRecordsShown>1</maxTooltipRecordsShown>
+    <pageTitle>Open Indicators Weave</pageTitle>
+    <panelTitleTextFormat>
+      <bold>false</bold>
+      <color>16777215</color>
+      <font>Verdana</font>
+      <italic>false</italic>
+      <size>10</size>
+      <underline>false</underline>
+    </panelTitleTextFormat>
+    <pdbServiceURL>/WeavePDBService/PDBService</pdbServiceURL>
+    <probeInnerGlowAlpha>1</probeInnerGlowAlpha>
+    <probeInnerGlowBlur>5</probeInnerGlowBlur>
+    <probeInnerGlowColor>16777215</probeInnerGlowColor>
+    <probeInnerGlowStrength>10</probeInnerGlowStrength>
+    <probeOuterGlowAlpha>1</probeOuterGlowAlpha>
+    <probeOuterGlowBlur>3</probeOuterGlowBlur>
+    <probeOuterGlowColor>0</probeOuterGlowColor>
+    <probeOuterGlowStrength>3</probeOuterGlowStrength>
+    <probeToolTipBackgroundAlpha>1</probeToolTipBackgroundAlpha>
+    <probeToolTipBackgroundColor>NaN</probeToolTipBackgroundColor>
+    <probeToolTipFontColor>0</probeToolTipFontColor>
+    <probeToolTipMaxWidth>400</probeToolTipMaxWidth>
+    <rServiceURL>/WeaveServices/RService</rServiceURL>
+    <searchServiceURLs>Wikipedia|http://en.wikipedia.org/wiki/Special:Search?search=
+Google|http://www.google.com/search?q=
+Google Images|http://images.google.com/images?q=
+Google Maps|http://maps.google.com/maps?t=h&amp;q=</searchServiceURLs>
+    <selectionAlphaAmount>0.5</selectionAlphaAmount>
+    <selectionBlurringAmount>4</selectionBlurringAmount>
+    <shadowAlpha>0.5</shadowAlpha>
+    <shadowAngle>45</shadowAngle>
+    <shadowBlur>4</shadowBlur>
+    <shadowColor>0</shadowColor>
+    <shadowDistance>2</shadowDistance>
+    <showAttributeSelector>true</showAttributeSelector>
+    <showColorController>true</showColorController>
+    <showCopyright>false</showCopyright>
+    <showEquationEditor>true</showEquationEditor>
+    <showKeyTypeInColumnTitle>false</showKeyTypeInColumnTitle>
+    <showProbeToolTipEditor>true</showProbeToolTipEditor>
+    <showVisToolCloseDialog>false</showVisToolCloseDialog>
+    <startupJavaScript/>
+    <toolInteractions>
+      <defaultDragMode/>
+      <pan>alt,drag</pan>
+      <probe>move</probe>
+      <select>drag</select>
+      <selectAdd>ctrl,drag</selectAdd>
+      <selectRemove>ctrl,shift,drag</selectRemove>
+      <zoom>shift,drag
+wheel</zoom>
+      <zoomIn>dclick</zoomIn>
+      <zoomOut>shift,dclick</zoomOut>
+      <zoomToExtent>ctrl,alt,shift,dclick</zoomToExtent>
+    </toolInteractions>
+    <version>1.0 Beta (Wed Jan 18 11:25:15 EST 2012)</version>
+    <windowSnapGridSize>5</windowSnapGridSize>
+    <workspaceHeight>252</workspaceHeight>
+    <workspaceMultiplier>1</workspaceMultiplier>
+    <workspaceWidth>333</workspaceWidth>
+  </WeaveProperties>
+  <ColorColumn name="defaultColorColumn">
+    <internalDynamicColumn encoding="dynamic">
+      <GlobalObjectReference name="defaultColorBinColumn"/>
+    </internalDynamicColumn>
+    <ramp>0x6BAED6,0xEFF3FF,0x08519C</ramp>
+    <recordColors/>
+  </ColorColumn>
+  <BinnedColumn name="defaultColorBinColumn">
+    <binningDefinition encoding="dynamic">
+      <CategoryBinningDefinition>
+        <overrideBinNames>"% 30-60 min ",% &lt; 30 min,% &gt; 60 min</overrideBinNames>
+      </CategoryBinningDefinition>
+    </binningDefinition>
+    <internalDynamicColumn encoding="dynamic">
+      <GlobalObjectReference name="defaultColorDataColumn"/>
+    </internalDynamicColumn>
+  </BinnedColumn>
+  <FilteredColumn name="defaultColorDataColumn">
+    <filter encoding="dynamic">
+      <GlobalObjectReference name="defaultSubsetKeyFilter"/>
+    </filter>
+    <internalDynamicColumn encoding="dynamic">
+      <ReferencedColumn>
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>WeaveDataSource</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Data Tables" name="Data Tables">
+                  <category title="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Travel Time to Work 2005-09 ACS (Municipality) -Transposed">
+                    <attribute dataType="string" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Attribute" title="Attribute" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+    </internalDynamicColumn>
+  </FilteredColumn>
+  <KeyFilter name="defaultSubsetKeyFilter">
+    <excluded>Travel Time to Work 2005-09 ACS (Municipality) -Transposed,row9,row10,row11,row12,row13,row14,row15,row16,row17,row18,row19,row20,row21,row22,row23,row24,row25,row26,row27,row51,row50,row49,row48,row47,row46,row45,row44,row43,row42,row41,row40,row1,row2,row3,row4,row5,row6,row7,row8,row39,row29,row31,row33,row35,row37,row32,row28,row30</excluded>
+    <included/>
+    <includeMissingKeys>true</includeMissingKeys>
+    <includeMissingKeyTypes>true</includeMissingKeyTypes>
+  </KeyFilter>
+  <KeySet name="defaultSelectionKeySet"/>
+  <KeySet name="defaultProbeKeySet"/>
+  <LinkableHashMap encoding="dynamic" name="savedSelections"/>
+  <LinkableHashMap encoding="dynamic" name="savedSubsets"/>
+  <LinkableHashMap encoding="dynamic" name="Probe Header Columns"/>
+  <LinkableHashMap encoding="dynamic" name="Probed Columns"/>
+  <WeaveDataSource name="WeaveDataSource">
+    <attributeHierarchy encoding="xml">
+      <hierarchy name="Open Indicators Server">
+        <category title="Data Tables" name="Data Tables">
+          <category title="Arts and Culture Points" name="Arts and Culture Points"/>
+          <category title="Boston Circle of Promise Schools" name="Boston Circle of Promise Schools"/>
+          <category title="Boston Daycares" name="Boston Daycares"/>
+          <category title="Boston Neighborhoods" name="Boston Neighborhoods"/>
+          <category title="Boston Non-Profit Educational Assets (Points)" name="Boston Non-Profit Educational Assets (Points)"/>
+          <category title="Boston Non-Profit Educational Assetss" name="Boston Non-Profit Educational Assetss"/>
+          <category title="Boston Outline" name="Boston Outline"/>
+          <category title="Boston Parcels (Subset)" name="Boston Parcels (Subset)"/>
+          <category title="Boston Parcels OnlyPID" name="Boston Parcels OnlyPID"/>
+          <category title="Boston Schools" name="Boston Schools"/>
+          <category title="Boston Turnaround Schools" name="Boston Turnaround Schools"/>
+          <category title="Census 1990 Block Groups" name="Census 1990 Block Groups"/>
+          <category title="Census 2000 Block Groups" name="Census 2000 Block Groups"/>
+          <category title="Census 2000 Tracts" name="Census 2000 Tracts"/>
+          <category title="Child Care Providers with Less than High School" name="Child Care Providers with Less than High School"/>
+          <category title="Children in Families below Poverty Level (2005-09)" name="Children in Families below Poverty Level (2005-09)"/>
+          <category title="Children in Poverty by Family Type (Census Tracts)" name="Children in Poverty by Family Type (Census Tracts)"/>
+          <category title="Children in Poverty by Household (Census Tracts)" name="Children in Poverty by Household (Census Tracts)"/>
+          <category title="Citizenship Status (Municipality)" name="Citizenship Status (Municipality)"/>
+          <category title="Colleges and Universities" name="Colleges and Universities"/>
+          <category title="Commuter Rail" name="Commuter Rail"/>
+          <category title="Educational Attainment over 25 2005-09 (Census tracts)" name="Educational Attainment over 25 2005-09 (Census tracts)"/>
+          <category title="Educational Attainment: All 2005-09 (Census Tracts)" name="Educational Attainment: All 2005-09 (Census Tracts)"/>
+          <category title="Educational Attainment: Asian 2005-09 (Census Tracts)" name="Educational Attainment: Asian 2005-09 (Census Tracts)"/>
+          <category title="Housing Occupancy 2010, Municipal" name="Housing Occupancy 2010, Municipal"/>
+          <category title="Housing: Census 2000 (Municipal)" name="Housing: Census 2000 (Municipal)"/>
+          <category title="Housing: Residential Permits (Municipal)" name="Housing: Residential Permits (Municipal)"/>
+          <category title="Indigo Commuter Line" name="Indigo Commuter Line"/>
+          <category title="Landuse Summary Statistics 2005, Municipal" name="Landuse Summary Statistics 2005, Municipal"/>
+          <category title="Lighthouses" name="Lighthouses"/>
+          <category title="Linguistic Isolation (Census Tracts)" name="Linguistic Isolation (Census Tracts)"/>
+          <category title="Linguistic Isolation (Municipal)" name="Linguistic Isolation (Municipal)"/>
+          <category title="Massachusetts Municipalities" name="Massachusetts Municipalities"/>
+          <category title="MBTA Subway Lines" name="MBTA Subway Lines"/>
+          <category title="Median Household Income by Race (Municipal)" name="Median Household Income by Race (Municipal)"/>
+          <category title="Municipal Elementary School Districts" name="Municipal Elementary School Districts"/>
+          <category title="Population By Age 2000 - 2010 (Municipality)" name="Population By Age 2000 - 2010 (Municipality)"/>
+          <category title="Population by Age Race MSA (2009)" name="Population by Age Race MSA (2009)"/>
+          <category title="Population By Gender and Age with Change, 2000 - 2010 (Municipal)" name="Population By Gender and Age with Change, 2000 - 2010 (Municipal)"/>
+          <category title="Population by Race with Change, 2010-2011 (Municipal)" name="Population by Race with Change, 2010-2011 (Municipal)"/>
+          <category title="Population by Race with Change, 2010-2011 (Municipal) - Transposed" name="Population by Race with Change, 2010-2011 (Municipal) - Transposed"/>
+          <category title="Population Over/Under 18, 2010, Municipal" name="Population Over/Under 18, 2010, Municipal"/>
+          <category title="Poverty by Household Type (Census Tracts)" name="Poverty by Household Type (Census Tracts)"/>
+          <category title="Poverty by Race (Census Tracts)" name="Poverty by Race (Census Tracts)"/>
+          <category title="School Districts" name="School Districts"/>
+          <category title="School Districts Enrollment by Grade" name="School Districts Enrollment by Grade"/>
+          <category title="School Districts Enrollment by Race and Gender" name="School Districts Enrollment by Race and Gender"/>
+          <category title="School Districts Enrollment by Special Population" name="School Districts Enrollment by Special Population"/>
+          <category title="School Districts Graduation Plans" name="School Districts Graduation Plans"/>
+          <category title="School Districts MCAS: Grade 10 Math" name="School Districts MCAS: Grade 10 Math"/>
+          <category title="School Districts MCAS: Grade 10 Reading" name="School Districts MCAS: Grade 10 Reading"/>
+          <category title="School Districts MCAS: Grade 10 Science" name="School Districts MCAS: Grade 10 Science"/>
+          <category title="School Districts MCAS: Grade 3 Math" name="School Districts MCAS: Grade 3 Math"/>
+          <category title="School Districts MCAS: Grade 3 Reading" name="School Districts MCAS: Grade 3 Reading"/>
+          <category title="School Districts MCAS: Grade 8 Math" name="School Districts MCAS: Grade 8 Math"/>
+          <category title="School Districts MCAS: Grade 8 Reading" name="School Districts MCAS: Grade 8 Reading"/>
+          <category title="School Districts: Enrollment" name="School Districts: Enrollment"/>
+          <category title="School Districts: Enrollment by Grade" name="School Districts: Enrollment by Grade"/>
+          <category title="School Districts: Enrollment old" name="School Districts: Enrollment old"/>
+          <category title="School Districts: MCAS Grade3 Math" name="School Districts: MCAS Grade3 Math"/>
+          <category title="School Districts: MCAS Grade3 Reading" name="School Districts: MCAS Grade3 Reading"/>
+          <category title="School Enrollment by Special Population and Race 2010" name="School Enrollment by Special Population and Race 2010"/>
+          <category title="School Mobility 2010" name="School Mobility 2010"/>
+          <category title="School Teacher Characteristics 2010 (points)" name="School Teacher Characteristics 2010 (points)"/>
+          <category title="Schools" name="Schools"/>
+          <category title="Schools Enrollment" name="Schools Enrollment"/>
+          <category title="Schools MCAS Grade3 Reading 2011" name="Schools MCAS Grade3 Reading 2011"/>
+          <category title="Schools MCAS: Grade 10 Reading" name="Schools MCAS: Grade 10 Reading"/>
+          <category title="Schools MCAS: Grade3 Math 2011" name="Schools MCAS: Grade3 Math 2011"/>
+          <category title="Schools MCAS: Grade3 Math 2011 OLD" name="Schools MCAS: Grade3 Math 2011 OLD"/>
+          <category title="Schools MCAS: Grade3 Reading 2011" name="Schools MCAS: Grade3 Reading 2011"/>
+          <category title="Schools: Risk Indicators (2010)" name="Schools: Risk Indicators (2010)"/>
+          <category title="Subsidized Housing Inventory" name="Subsidized Housing Inventory"/>
+          <category title="Success Boston Student Cohorts (2010)" name="Success Boston Student Cohorts (2010)"/>
+          <category title="Travel Time to Work 2005-09 ACS (Municipality)" name="Travel Time to Work 2005-09 ACS (Municipality)"/>
+          <category title="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Travel Time to Work 2005-09 ACS (Municipality) -Transposed">
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="0" title="0" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="string" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Attribute" title="Attribute" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Abington" title="Abington" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Acton" title="Acton" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Acushnet" title="Acushnet" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Adams" title="Adams" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Agawam" title="Agawam" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Alford" title="Alford" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Amesbury" title="Amesbury" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Amherst" title="Amherst" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Andover" title="Andover" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Arlington" title="Arlington" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Ashburnham" title="Ashburnham" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Ashby" title="Ashby" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Ashfield" title="Ashfield" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Ashland" title="Ashland" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Athol" title="Athol" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Attleboro" title="Attleboro" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Auburn" title="Auburn" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Avon" title="Avon" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Ayer" title="Ayer" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Barnstable" title="Barnstable" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Barre" title="Barre" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Becket" title="Becket" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Bedford" title="Bedford" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Belchertown" title="Belchertown" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Bellingham" title="Bellingham" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Belmont" title="Belmont" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Berkley" title="Berkley" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Berlin" title="Berlin" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Bernardston" title="Bernardston" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Beverly" title="Beverly" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Billerica" title="Billerica" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Blackstone" title="Blackstone" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Blandford" title="Blandford" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Bolton" title="Bolton" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Carver" title="Carver" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Boston" title="Boston" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Bourne" title="Bourne" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Boxborough" title="Boxborough" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Boxford" title="Boxford" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Boylston" title="Boylston" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Braintree" title="Braintree" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Brewster" title="Brewster" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Bridgewater" title="Bridgewater" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Brimfield" title="Brimfield" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Brockton" title="Brockton" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Brookfield" title="Brookfield" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Brookline" title="Brookline" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Buckland" title="Buckland" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Burlington" title="Burlington" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Cambridge" title="Cambridge" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Canton" title="Canton" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Carlisle" title="Carlisle" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Charlemont" title="Charlemont" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Charlton" title="Charlton" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Chatham" title="Chatham" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Chelmsford" title="Chelmsford" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Chelsea" title="Chelsea" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Cheshire" title="Cheshire" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Chester" title="Chester" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Chesterfield" title="Chesterfield" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Chicopee" title="Chicopee" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Chilmark" title="Chilmark" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Clarksburg" title="Clarksburg" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Clinton" title="Clinton" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Cohasset" title="Cohasset" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Colrain" title="Colrain" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Concord" title="Concord" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Conway" title="Conway" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Cummington" title="Cummington" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Dalton" title="Dalton" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Danvers" title="Danvers" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Dartmouth" title="Dartmouth" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Dedham" title="Dedham" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Deerfield" title="Deerfield" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Dennis" title="Dennis" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Dighton" title="Dighton" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Douglas" title="Douglas" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Dover" title="Dover" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Dracut" title="Dracut" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Dudley" title="Dudley" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Dunstable" title="Dunstable" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Duxbury" title="Duxbury" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="East Bridgewater" title="East Bridgewater" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="East Brookfield" title="East Brookfield" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="East Longmeadow" title="East Longmeadow" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Eastham" title="Eastham" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Easthampton" title="Easthampton" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Easton" title="Easton" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Edgartown" title="Edgartown" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Egremont" title="Egremont" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Erving" title="Erving" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Essex" title="Essex" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Everett" title="Everett" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Fairhaven" title="Fairhaven" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Fall River" title="Fall River" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Falmouth" title="Falmouth" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Fitchburg" title="Fitchburg" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Florida" title="Florida" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Foxborough" title="Foxborough" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Framingham" title="Framingham" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Franklin" title="Franklin" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Freetown" title="Freetown" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Gardner" title="Gardner" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Aquinnah" title="Aquinnah" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Georgetown" title="Georgetown" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Gill" title="Gill" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Gloucester" title="Gloucester" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Goshen" title="Goshen" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Gosnold" title="Gosnold" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Grafton" title="Grafton" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Granby" title="Granby" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Granville" title="Granville" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Great Barrington" title="Great Barrington" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Greenfield" title="Greenfield" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Groton" title="Groton" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Groveland" title="Groveland" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Hadley" title="Hadley" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Halifax" title="Halifax" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Hamilton" title="Hamilton" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Hampden" title="Hampden" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Hancock" title="Hancock" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Hanover" title="Hanover" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Hanson" title="Hanson" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Hardwick" title="Hardwick" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Harvard" title="Harvard" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Harwich" title="Harwich" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Hatfield" title="Hatfield" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Haverhill" title="Haverhill" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Hawley" title="Hawley" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Heath" title="Heath" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Hingham" title="Hingham" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Hinsdale" title="Hinsdale" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Holbrook" title="Holbrook" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Holden" title="Holden" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Holland" title="Holland" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Holliston" title="Holliston" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Holyoke" title="Holyoke" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Hopedale" title="Hopedale" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Leyden" title="Leyden" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Hopkinton" title="Hopkinton" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Hubbardston" title="Hubbardston" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Hudson" title="Hudson" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Hull" title="Hull" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Huntington" title="Huntington" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Ipswich" title="Ipswich" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Kingston" title="Kingston" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Lakeville" title="Lakeville" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Lancaster" title="Lancaster" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Lanesborough" title="Lanesborough" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Lawrence" title="Lawrence" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Lee" title="Lee" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Leicester" title="Leicester" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Lenox" title="Lenox" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Leominster" title="Leominster" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Leverett" title="Leverett" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Lexington" title="Lexington" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Lincoln" title="Lincoln" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Littleton" title="Littleton" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Longmeadow" title="Longmeadow" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Lowell" title="Lowell" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Ludlow" title="Ludlow" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Lunenburg" title="Lunenburg" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Lynn" title="Lynn" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Lynnfield" title="Lynnfield" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Malden" title="Malden" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Manchester" title="Manchester" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Mansfield" title="Mansfield" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Marblehead" title="Marblehead" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Marion" title="Marion" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Marlborough" title="Marlborough" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Marshfield" title="Marshfield" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Mashpee" title="Mashpee" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Mattapoisett" title="Mattapoisett" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Maynard" title="Maynard" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Medfield" title="Medfield" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Medford" title="Medford" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Medway" title="Medway" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Melrose" title="Melrose" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Mendon" title="Mendon" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Merrimac" title="Merrimac" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Methuen" title="Methuen" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Middleborough" title="Middleborough" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Middlefield" title="Middlefield" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Middleton" title="Middleton" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Milford" title="Milford" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Millbury" title="Millbury" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Millis" title="Millis" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Millville" title="Millville" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Milton" title="Milton" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Monroe" title="Monroe" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Monson" title="Monson" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Montague" title="Montague" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Monterey" title="Monterey" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Montgomery" title="Montgomery" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Mount Washington" title="Mount Washington" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Nahant" title="Nahant" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Nantucket" title="Nantucket" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Natick" title="Natick" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Needham" title="Needham" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="New Ashford" title="New Ashford" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="New Bedford" title="New Bedford" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="New Braintree" title="New Braintree" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="New Marlborough" title="New Marlborough" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="New Salem" title="New Salem" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Newbury" title="Newbury" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Newburyport" title="Newburyport" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Newton" title="Newton" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Norfolk" title="Norfolk" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="North Adams" title="North Adams" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="North Andover" title="North Andover" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="North Attleborough" title="North Attleborough" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="North Brookfield" title="North Brookfield" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="North Reading" title="North Reading" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Northampton" title="Northampton" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Northborough" title="Northborough" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Northbridge" title="Northbridge" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Northfield" title="Northfield" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Norton" title="Norton" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Norwell" title="Norwell" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Norwood" title="Norwood" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Oak Bluffs" title="Oak Bluffs" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Oakham" title="Oakham" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Orange" title="Orange" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Orleans" title="Orleans" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Otis" title="Otis" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Oxford" title="Oxford" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Palmer" title="Palmer" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Paxton" title="Paxton" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Peabody" title="Peabody" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Pelham" title="Pelham" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Pembroke" title="Pembroke" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Pepperell" title="Pepperell" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Peru" title="Peru" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Petersham" title="Petersham" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Phillipston" title="Phillipston" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Pittsfield" title="Pittsfield" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Plainfield" title="Plainfield" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Plainville" title="Plainville" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Plymouth" title="Plymouth" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Plympton" title="Plympton" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Princeton" title="Princeton" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Provincetown" title="Provincetown" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Quincy" title="Quincy" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Randolph" title="Randolph" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Raynham" title="Raynham" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Reading" title="Reading" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Rehoboth" title="Rehoboth" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Revere" title="Revere" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Richmond" title="Richmond" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Rochester" title="Rochester" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Rockland" title="Rockland" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Rockport" title="Rockport" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Rowe" title="Rowe" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Rowley" title="Rowley" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Royalston" title="Royalston" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Russell" title="Russell" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Rutland" title="Rutland" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Salem" title="Salem" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Salisbury" title="Salisbury" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Sandisfield" title="Sandisfield" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Sandwich" title="Sandwich" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Saugus" title="Saugus" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Savoy" title="Savoy" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Scituate" title="Scituate" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Seekonk" title="Seekonk" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Sharon" title="Sharon" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Sheffield" title="Sheffield" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Shelburne" title="Shelburne" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Sherborn" title="Sherborn" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Shirley" title="Shirley" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Shrewsbury" title="Shrewsbury" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Shutesbury" title="Shutesbury" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Somerset" title="Somerset" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Somerville" title="Somerville" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="South Hadley" title="South Hadley" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Southampton" title="Southampton" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Southborough" title="Southborough" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Southbridge" title="Southbridge" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Southwick" title="Southwick" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Spencer" title="Spencer" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Springfield" title="Springfield" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Sterling" title="Sterling" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Stockbridge" title="Stockbridge" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Stoneham" title="Stoneham" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Stoughton" title="Stoughton" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Stow" title="Stow" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Sturbridge" title="Sturbridge" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Sudbury" title="Sudbury" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Sunderland" title="Sunderland" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Sutton" title="Sutton" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Swampscott" title="Swampscott" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Swansea" title="Swansea" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Taunton" title="Taunton" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Templeton" title="Templeton" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Tewksbury" title="Tewksbury" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Tisbury" title="Tisbury" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Tolland" title="Tolland" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Topsfield" title="Topsfield" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Townsend" title="Townsend" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Truro" title="Truro" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Tyngsborough" title="Tyngsborough" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Tyringham" title="Tyringham" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Upton" title="Upton" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Uxbridge" title="Uxbridge" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Wakefield" title="Wakefield" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Wales" title="Wales" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Walpole" title="Walpole" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Waltham" title="Waltham" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Ware" title="Ware" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="West Tisbury" title="West Tisbury" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Wareham" title="Wareham" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Warren" title="Warren" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Warwick" title="Warwick" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Washington" title="Washington" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Watertown" title="Watertown" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Wayland" title="Wayland" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Webster" title="Webster" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Wellesley" title="Wellesley" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Wellfleet" title="Wellfleet" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Wendell" title="Wendell" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Wenham" title="Wenham" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="West Boylston" title="West Boylston" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="West Bridgewater" title="West Bridgewater" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="West Brookfield" title="West Brookfield" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="West Newbury" title="West Newbury" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="West Springfield" title="West Springfield" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="West Stockbridge" title="West Stockbridge" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Westborough" title="Westborough" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Westfield" title="Westfield" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Westford" title="Westford" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Westhampton" title="Westhampton" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Westminster" title="Westminster" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Weston" title="Weston" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Westport" title="Westport" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Westwood" title="Westwood" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Weymouth" title="Weymouth" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Whately" title="Whately" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Whitman" title="Whitman" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Wilbraham" title="Wilbraham" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Williamsburg" title="Williamsburg" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Williamstown" title="Williamstown" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Wilmington" title="Wilmington" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Winchendon" title="Winchendon" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Winchester" title="Winchester" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Windsor" title="Windsor" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Winthrop" title="Winthrop" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Woburn" title="Woburn" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Worcester" title="Worcester" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Worthington" title="Worthington" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Wrentham" title="Wrentham" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Yarmouth" title="Yarmouth" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="MAPC" title="MAPC" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+            <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Massachusetts" title="Massachusetts" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+          </category>
+          <category title="US States" name="US States"/>
+        </category>
+        <category title="Geometry Collections" name="Geometry Collections">
+          <attribute dataType="geometry" name="Arts and Culture Points" title="Arts and Culture Points" keyType="ObjectID"/>
+          <attribute dataType="geometry" name="Boston Circle of Promise Schools" title="Boston Circle of Promise Schools" keyType="SchoolID"/>
+          <attribute dataType="geometry" name="Boston Daycares" title="Boston Daycares" keyType="ObjectID"/>
+          <attribute dataType="geometry" name="Boston Neighborhoods" title="Boston Neighborhoods" keyType="ObjectID"/>
+          <attribute dataType="geometry" name="Boston Non-Profit Educational Assets (Points)" title="Boston Non-Profit Educational Assets (Points)" keyType="ObjectID"/>
+          <attribute dataType="geometry" name="Boston Outline" title="Boston Outline" keyType="MUNI_ID"/>
+          <attribute dataType="geometry" name="Boston Parcels (Subset)" title="Boston Parcels (Subset)" keyType="ObjectID"/>
+          <attribute dataType="geometry" name="Boston Parcels OnlyPID" title="Boston Parcels OnlyPID" keyType="Boston Parcels OnlyPID"/>
+          <attribute dataType="geometry" name="Boston Schools" title="Boston Schools" keyType="SchoolID"/>
+          <attribute dataType="geometry" name="Boston Turnaround Schools" title="Boston Turnaround Schools" keyType="SchoolID"/>
+          <attribute dataType="geometry" name="Census 1990 Block Groups" title="Census 1990 Block Groups" keyType="BG_90_ID"/>
+          <attribute dataType="geometry" name="Census 2000 Block Groups" title="Census 2000 Block Groups" keyType="BG_00_ID"/>
+          <attribute dataType="geometry" name="Census 2000 Tracts" title="Census 2000 Tracts" keyType="CT_ID"/>
+          <attribute dataType="geometry" name="Child Care Providers with Less than High School" title="Child Care Providers with Less than High School" keyType="ObjectID"/>
+          <attribute dataType="geometry" name="Colleges and Universities" title="Colleges and Universities" keyType="College_ID"/>
+          <attribute dataType="geometry" name="Commuter Rail" title="Commuter Rail" keyType="ObjectID"/>
+          <attribute dataType="geometry" name="Indigo Commuter Line" title="Indigo Commuter Line" keyType="ObjectID"/>
+          <attribute dataType="geometry" name="Lighthouses" title="Lighthouses" keyType="ObjectID"/>
+          <attribute dataType="geometry" name="Massachusetts Municipalities" title="Massachusetts Municipalities" keyType="MUNI_ID"/>
+          <attribute dataType="geometry" name="MBTA Subway Lines" title="MBTA Subway Lines" keyType="MBTA Subway Lines"/>
+          <attribute dataType="geometry" name="Municipal Elementary School Districts" title="Municipal Elementary School Districts" keyType="Municipal Elementary School Districts"/>
+          <attribute dataType="geometry" name="School Districts" title="School Districts" keyType="SchoolDistrictID"/>
+          <attribute dataType="geometry" name="Schools" title="Schools" keyType="SchoolID"/>
+          <attribute dataType="geometry" name="Success Boston Student Cohorts (2010)" title="Success Boston Student Cohorts (2010)" keyType="ObjectID"/>
+          <attribute dataType="geometry" name="US States" title="US States" keyType="State_ID"/>
+        </category>
+      </hierarchy>
+    </attributeHierarchy>
+    <hierarchyURL/>
+    <url>/WeaveServices/DataService</url>
+  </WeaveDataSource>
+  <ColorBinLegendTool name="ColorBinLegendTool">
+    <buttonRadius>3</buttonRadius>
+    <children encoding="dynamic">
+      <SimpleInteractiveVisualization name="visualization">
+        <axesAlpha>NaN</axesAlpha>
+        <axesColor>0</axesColor>
+        <axesThickness>NaN</axesThickness>
+        <enableAutoZoomToExtent>true</enableAutoZoomToExtent>
+        <enableAutoZoomXToNiceNumbers>false</enableAutoZoomXToNiceNumbers>
+        <enableAutoZoomYToNiceNumbers>false</enableAutoZoomYToNiceNumbers>
+        <enableFixedAspectRatio>false</enableFixedAspectRatio>
+        <enableProbe>true</enableProbe>
+        <enableSelection>true</enableSelection>
+        <enableZoomAndPan>false</enableZoomAndPan>
+        <gridLineAlpha>NaN</gridLineAlpha>
+        <gridLineColor>0</gridLineColor>
+        <gridLineThickness>NaN</gridLineThickness>
+        <includeNonSelectableLayersInAutoZoom>false</includeNonSelectableLayersInAutoZoom>
+        <layers encoding="dynamic">
+          <SelectablePlotLayer name="plot">
+            <backgroundIsVisible>true</backgroundIsVisible>
+            <layerIsSelectable>true</layerIsSelectable>
+            <layerIsVisible>true</layerIsVisible>
+            <maxVisibleScale>Infinity</maxVisibleScale>
+            <minVisibleScale>0</minVisibleScale>
+            <plotter encoding="dynamic">
+              <ColorBinLegendPlotter>
+                <ascendingOrder>true</ascendingOrder>
+                <dynamicColorColumn encoding="dynamic">
+                  <GlobalObjectReference name="defaultColorColumn"/>
+                </dynamicColorColumn>
+                <itemLabelFunction>string</itemLabelFunction>
+                <keySet>
+                  <keyFilter encoding="dynamic">
+                    <GlobalObjectReference name="defaultSubsetKeyFilter"/>
+                  </keyFilter>
+                </keySet>
+                <legendTitleFunction>string</legendTitleFunction>
+                <lineStyle>
+                  <alpha>
+                    <defaultValue>0.5</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </alpha>
+                  <caps>
+                    <defaultValue/>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </caps>
+                  <color>
+                    <defaultValue>0</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </color>
+                  <enabled>
+                    <defaultValue>true</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </enabled>
+                  <joints>
+                    <defaultValue/>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </joints>
+                  <miterLimit>
+                    <defaultValue>3</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </miterLimit>
+                  <pixelHinting>
+                    <defaultValue>false</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </pixelHinting>
+                  <scaleMode>
+                    <defaultValue>normal</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </scaleMode>
+                  <weight>
+                    <defaultValue>1</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </weight>
+                </lineStyle>
+                <maxColumns>3</maxColumns>
+                <shapeSize>10</shapeSize>
+              </ColorBinLegendPlotter>
+            </plotter>
+            <probeFilter encoding="dynamic">
+              <GlobalObjectReference name="defaultProbeKeySet"/>
+            </probeFilter>
+            <selectionFilter encoding="dynamic">
+              <GlobalObjectReference name="defaultSelectionKeySet"/>
+            </selectionFilter>
+            <subsetFilter encoding="dynamic">
+              <GlobalObjectReference name="defaultSubsetKeyFilter"/>
+            </subsetFilter>
+            <useTextBitmapFilters>true</useTextBitmapFilters>
+          </SelectablePlotLayer>
+        </layers>
+        <marginBottom>5</marginBottom>
+        <marginLeft>5</marginLeft>
+        <marginRight>0</marginRight>
+        <marginTop>0</marginTop>
+        <maxZoomLevel>16</maxZoomLevel>
+        <minScreenSize>128</minScreenSize>
+        <minZoomLevel>0</minZoomLevel>
+        <overrideXMax>NaN</overrideXMax>
+        <overrideXMin>NaN</overrideXMin>
+        <overrideYMax>NaN</overrideYMax>
+        <overrideYMin>NaN</overrideYMin>
+        <zoomBounds>
+          <xMax>1</xMax>
+          <xMin>0</xMin>
+          <yMax>1</yMax>
+          <yMin>0</yMin>
+        </zoomBounds>
+      </SimpleInteractiveVisualization>
+    </children>
+    <closeable>true</closeable>
+    <draggable>true</draggable>
+    <enableBorders>false</enableBorders>
+    <enableTitle>false</enableTitle>
+    <maximizable>true</maximizable>
+    <maximized>false</maximized>
+    <minimizable>true</minimizable>
+    <minimized>false</minimized>
+    <panelBackgroundColor>NaN</panelBackgroundColor>
+    <panelBorderColor>NaN</panelBorderColor>
+    <panelHeight>11%</panelHeight>
+    <panelStyleList/>
+    <panelTitle/>
+    <panelWidth>99%</panelWidth>
+    <panelX>0%</panelX>
+    <panelY>88%</panelY>
+    <pinnable>true</pinnable>
+    <pinnableToBack>false</pinnableToBack>
+    <pinned>false</pinned>
+    <pinnedToBack>false</pinnedToBack>
+    <resizeable>true</resizeable>
+  </ColorBinLegendTool>
+  <PieChartTool name="PieChartTool">
+    <buttonRadius>3</buttonRadius>
+    <children encoding="dynamic">
+      <SimpleInteractiveVisualization name="visualization">
+        <axesAlpha>NaN</axesAlpha>
+        <axesColor>0</axesColor>
+        <axesThickness>NaN</axesThickness>
+        <enableAutoZoomToExtent>true</enableAutoZoomToExtent>
+        <enableAutoZoomXToNiceNumbers>false</enableAutoZoomXToNiceNumbers>
+        <enableAutoZoomYToNiceNumbers>false</enableAutoZoomYToNiceNumbers>
+        <enableFixedAspectRatio>true</enableFixedAspectRatio>
+        <enableProbe>true</enableProbe>
+        <enableSelection>true</enableSelection>
+        <enableZoomAndPan>false</enableZoomAndPan>
+        <gridLineAlpha>NaN</gridLineAlpha>
+        <gridLineColor>0</gridLineColor>
+        <gridLineThickness>NaN</gridLineThickness>
+        <includeNonSelectableLayersInAutoZoom>false</includeNonSelectableLayersInAutoZoom>
+        <layers encoding="dynamic">
+          <SelectablePlotLayer name="plot">
+            <backgroundIsVisible>true</backgroundIsVisible>
+            <layerIsSelectable>true</layerIsSelectable>
+            <layerIsVisible>true</layerIsVisible>
+            <maxVisibleScale>Infinity</maxVisibleScale>
+            <minVisibleScale>0</minVisibleScale>
+            <plotter encoding="dynamic">
+              <PieChartPlotter>
+                <data encoding="dynamic">
+                  <ReferencedColumn>
+                    <dynamicColumnReference encoding="dynamic">
+                      <HierarchyColumnReference>
+                        <dataSourceName>WeaveDataSource</dataSourceName>
+                        <hierarchyPath encoding="xml">
+                          <hierarchy>
+                            <category title="Data Tables" name="Data Tables">
+                              <category title="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="Travel Time to Work 2005-09 ACS (Municipality) -Transposed">
+                                <attribute dataType="number" dataTable="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" name="{{ regionalunit.name }}" title="{{ regionalunit.name }}" keyType="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+                              </category>
+                            </category>
+                          </hierarchy>
+                        </hierarchyPath>
+                      </HierarchyColumnReference>
+                    </dynamicColumnReference>
+                  </ReferencedColumn>
+                </data>
+                <fillStyle encoding="dynamic">
+                  <SolidFillStyle>
+                    <alpha>
+                      <defaultValue>1</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </alpha>
+                    <color>
+                      <defaultValue>NaN</defaultValue>
+                      <internalDynamicColumn encoding="dynamic">
+                        <GlobalObjectReference name="defaultColorColumn"/>
+                      </internalDynamicColumn>
+                    </color>
+                    <enabled>
+                      <defaultValue>true</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </enabled>
+                  </SolidFillStyle>
+                </fillStyle>
+                <keySet>
+                  <keyFilter encoding="dynamic">
+                    <GlobalObjectReference name="defaultSubsetKeyFilter"/>
+                  </keyFilter>
+                </keySet>
+                <label encoding="dynamic"/>
+                <labelAngleRatio>0</labelAngleRatio>
+                <lineStyle encoding="dynamic">
+                  <SolidLineStyle>
+                    <alpha>
+                      <defaultValue>0.5</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </alpha>
+                    <caps>
+                      <defaultValue/>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </caps>
+                    <color>
+                      <defaultValue>0</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </color>
+                    <enabled>
+                      <defaultValue>true</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </enabled>
+                    <joints>
+                      <defaultValue/>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </joints>
+                    <miterLimit>
+                      <defaultValue>3</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </miterLimit>
+                    <pixelHinting>
+                      <defaultValue>false</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </pixelHinting>
+                    <scaleMode>
+                      <defaultValue>normal</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </scaleMode>
+                    <weight>
+                      <defaultValue>1</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </weight>
+                  </SolidLineStyle>
+                </lineStyle>
+              </PieChartPlotter>
+            </plotter>
+            <probeFilter encoding="dynamic">
+              <GlobalObjectReference name="defaultProbeKeySet"/>
+            </probeFilter>
+            <selectionFilter encoding="dynamic">
+              <GlobalObjectReference name="defaultSelectionKeySet"/>
+            </selectionFilter>
+            <subsetFilter encoding="dynamic">
+              <GlobalObjectReference name="defaultSubsetKeyFilter"/>
+            </subsetFilter>
+            <useTextBitmapFilters>false</useTextBitmapFilters>
+          </SelectablePlotLayer>
+        </layers>
+        <marginBottom>10</marginBottom>
+        <marginLeft>50</marginLeft>
+        <marginRight>50</marginRight>
+        <marginTop>10</marginTop>
+        <maxZoomLevel>16</maxZoomLevel>
+        <minScreenSize>128</minScreenSize>
+        <minZoomLevel>0</minZoomLevel>
+        <overrideXMax>NaN</overrideXMax>
+        <overrideXMin>NaN</overrideXMin>
+        <overrideYMax>NaN</overrideYMax>
+        <overrideYMin>NaN</overrideYMin>
+        <zoomBounds>
+          <area>5.3488372093023</area>
+          <xCenter>0</xCenter>
+          <yCenter>0</yCenter>
+        </zoomBounds>
+      </SimpleInteractiveVisualization>
+    </children>
+    <closeable>true</closeable>
+    <draggable>true</draggable>
+    <enableBorders>true</enableBorders>
+    <enableTitle>false</enableTitle>
+    <includeToolAttributesInProbe>true</includeToolAttributesInProbe>
+    <maximizable>true</maximizable>
+    <maximized>false</maximized>
+    <minimizable>true</minimizable>
+    <minimized>false</minimized>
+    <panelBackgroundColor>NaN</panelBackgroundColor>
+    <panelBorderColor>NaN</panelBorderColor>
+    <panelHeight>84%</panelHeight>
+    <panelStyleList/>
+    <panelTitle>Public Transit Commute Time (%)</panelTitle>
+    <panelWidth>99%</panelWidth>
+    <panelX>0%</panelX>
+    <panelY>0%</panelY>
+    <pinnable>true</pinnable>
+    <pinnableToBack>false</pinnableToBack>
+    <pinned>false</pinned>
+    <pinnedToBack>false</pinnedToBack>
+    <resizeable>true</resizeable>
+  </PieChartTool>
+</Weave>
