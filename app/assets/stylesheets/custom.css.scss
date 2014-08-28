@@ -39,15 +39,28 @@ img.header-logo {
 }
 
 
-.item img {
-  height: inherit;
-  min-height: 100%;
+.carousel {
+  margin-top: 20px;
+  height: auto;
 }
 
+.carousel-inner > .item > img {
+  max-width: none !important;
+}
+
+
+.item img {
+  height:     auto;
+  min-height: 475px;
+}
 
 .carousel-caption {
   text-align: left !important;
+  top: -50px;
+  margin-top:    10%;
+  margin-bottom: 10%;
 }
+
 
 
 .featured {
