@@ -1,2 +1,4 @@
-%h1= link_to @geography.name, @geography
-%h2= @topic
+%h1= link_to @s.geography, @s.geography
+%h2= @s.topics
+
+= render partial: 'visualizations/dynamic', collection: @s.visualizations, as: :vis

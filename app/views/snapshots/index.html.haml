@@ -19,3 +19,15 @@
 %br
 %br
 %br
+
+:javascript
+
+$(document).on('ready', function () {
+  $('#area-select').on('change', function () {
+    var url = $( this ).val(); // get selected value
+    if (url) { // require a URL
+      window.location = "#{area_type_name.pluralize}/" + url; // redirect
+    }
+    return false;
+  });
+});

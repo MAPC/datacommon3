@@ -18,7 +18,7 @@ class GeometryModel < ActiveRecord::Base
 
 
   def to_geojson
-    get_query_json """SELECT ST_AsGeoJSON(ST_Transform(geometry, 4326))
+    get_query_json """SELECT ST_AsGeoJSON(ST_Transform(ST_SetSRID(geometry, 26986), 4326))
                       FROM snapshots_regionalunit WHERE unitid = '#{unitid}'"""
   end
 

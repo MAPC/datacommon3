@@ -15,6 +15,7 @@
 //= require jquery_ujs
 //= require chosen.jquery
 //= require turbolinks
+//= require swfobject
 //= require_tree .
 
 $(document).on('ready', function () {
@@ -24,6 +25,6 @@ $(document).on('ready', function () {
     allow_single_deselect:    false,
     disable_search_threshold: 10,
     no_results_text:         'No results matched'
-  }); 
+  });
 
 });

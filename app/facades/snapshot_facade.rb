@@ -4,10 +4,24 @@ class SnapshotFacade
 
   attr_accessor :geography, :topics, :visualizations
 
-  def initialize(geography)
+  def initialize(geography, *topic)
     @geography      = geography
-    @topics         = IssueArea.all
-    @visualizations = get_visualizations
+
+    if topic.first
+      @topics         = topic.first
+      @visualizations = get_topic_visualizations
+    else
+      @topics         = IssueArea.all
+      @visualizations = get_visualizations
+    end
+  end
+
+
+  def get_topic_visualizations
+    topic = @topics
+    topic.dynamic_visualizations.where(
+      regiontype_id: @geography.regiontype_id
+    )
   end
 
 
