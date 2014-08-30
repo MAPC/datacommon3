@@ -61,6 +61,11 @@ class Visualization < ActiveRecord::Base
     "#{base_image_path}_featured.png"
   end
 
+
+  def to_s
+    title
+  end
+
   alias_method :owner, :user
 
 
