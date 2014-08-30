@@ -7,7 +7,7 @@ class MunicipalitiesController < ApplicationController
   end
 
   def show
-    @s = SnapshotFacade.new( Municipality.find_by(slug: params[:id]) )
+    @s = Snapshot.new( Municipality.find_by(slug: params[:id]) )
     render 'snapshots/show'
   end
 
@@ -15,7 +15,7 @@ class MunicipalitiesController < ApplicationController
     geography = Municipality.find_by(slug: params[:municipality_id])
     topic     = IssueArea.find_by(slug: params[:id])
 
-    @s = SnapshotFacade.new(geography, topic)
+    @s = Snapshot.new(geography, topic)
     render 'snapshots/topic'
   end
 end

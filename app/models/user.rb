@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
 
   self.establish_connection :datacommon
-  self.table_name = 'auth_user'
+  self.table_name = 'maps_contact'
 
   has_many :visualizations, foreign_key: :owner_id
 
@@ -9,8 +9,12 @@ class User < ActiveRecord::Base
     "#{first_name} #{last_name}"
   end
 
-  def display_name
-    full_name.presence || username
+  def avatar_url
+    ""
+  end
+
+  def to_s
+    name
   end
 
   default_scope { limit 10 }

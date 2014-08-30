@@ -52,7 +52,7 @@ class Visualization < ActiveRecord::Base
 
 
   def owner_display_name
-    owner.display_name
+    owner.name
   end
 
 

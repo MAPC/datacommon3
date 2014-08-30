@@ -7,13 +7,16 @@ class SubregionsController < ApplicationController
   end
 
   def show
-    @s = SnapshotFacade.new( Subregion.find_by(slug: params[:id]) )
+    @s = Snapshot.new( Subregion.find_by(slug: params[:id]) )
     render 'snapshots/show'
   end
 
   def topic
-    @geography  = Subregion.find_by(slug: params[:subregion_id])
-    @topic = IssueArea.find_by(slug: params[:id])
+    geography  = Subregion.find_by(slug: params[:subregion_id])
+    topic      = IssueArea.find_by(slug: params[:id])
+
+    @s = Snapshot.new( geography, topic )
+    
     render 'snapshots/topic'
   end
 end

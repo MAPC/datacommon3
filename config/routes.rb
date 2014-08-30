@@ -22,6 +22,8 @@ Rails.application.routes.draw do
                        only: [:show], to:   'subregions#topic'
   end
 
+  resources :users, only: [:show]
+
   resources :page_topics, only: [:show], path: '' do
     resources :pages, only: [:show], path: ''
   end

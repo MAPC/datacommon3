@@ -2,4 +2,6 @@
   =link_to vis do
     %img{src: vis.gallery_image_path, alt: vis.title}
     %p.vis-title= vis.title
-  %p.byline by #{vis.owner_display_name}
+  %p.byline
+    by
+    = link_to vis.owner, vis.owner
