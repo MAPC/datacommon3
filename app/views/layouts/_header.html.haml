@@ -50,7 +50,7 @@
 
         =form_tag '/search', method: :post, data: {role: 'search'}, class: "navbar-form navbar-right" do
           %div.input-group
-            = text_field_tag :search, params[:search], class: "typeahead form-control", placeholder: "Search for data!"
+            = text_field_tag :search, params[:search], class: "typeahead form-control", placeholder: "Search for data"
             %span.input-group-btn
               %button.btn.btn-success
                 %span.glyphicon.glyphicon-search

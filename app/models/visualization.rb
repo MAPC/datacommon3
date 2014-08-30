@@ -22,10 +22,17 @@ class Visualization < ActiveRecord::Base
   paginates_per      8
   max_paginates_per 16
 
+
+  def self.topic(issue_area_or_slug)
+    @issue_area = issue_area_for(issue_area_or_slug)
+    @issue_area.visualizations
+  end
+
   
   def self.random
     self.offset(rand(self.count(:all))).first
   end
+
 
   def self.showing # for use when showing details
     self.includes(:issue_areas)
@@ -57,4 +64,16 @@ class Visualization < ActiveRecord::Base
   end
 
   alias_method :owner, :user
+
+
+  private
+
+    def self.issue_area_for(issue_area_or_slug)
+      case issue_area_or_slug
+      when String then IssueArea.find_by(slug: issue_area_or_slug)
+      else
+        issue_area_or_slug
+      end
+    end
+
 end

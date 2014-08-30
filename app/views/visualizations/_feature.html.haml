@@ -4,4 +4,7 @@
 
 :javascript
 
-  DC.embedWeaveOnClick("#vis-#{vis.id}", #{vis.sessionstate});
+  $(document).on('ready', function () {
+    DC.embedWeaveOnClick("#vis-#{vis.id}", #{vis.sessionstate});
+  });
+  

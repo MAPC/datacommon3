@@ -55,8 +55,15 @@ DC.embedWeaveOnClick = function (dom_elem, sessionstate) {
 };
 
 
+var globalsessionstate = undefined;
+
 var weaveReady = function (weave) {
   DC.logger.weaveReady(weave);
+  weave.setSessionState([], globalsessionstate);
+  weave.setSessionState(["WeaveProperties"], {
+    backgroundColor: "16777215",
+    showCopyright:    false
+  });
 }
 
 
@@ -75,6 +82,8 @@ DC.embedWeave = function (dom_elem, sessionstate) {
           showCopyright:    false
         });
       };
+
+  globalsessionstate = sessionstate;
 
   DC.logger.weaveStarted(id);
 

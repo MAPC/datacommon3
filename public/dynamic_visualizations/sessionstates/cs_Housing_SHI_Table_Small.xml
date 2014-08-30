@@ -1,0 +1,1338 @@
+<Weave encoding="dynamic">
+  <WeaveProperties name="WeaveProperties">
+    <backgroundColor>16777215</backgroundColor>
+    <cssStyleSheetName>weaveStyle.css</cssStyleSheetName>
+    <dashboardMode>true</dashboardMode>
+    <dashedSelectionBox>5,5</dashedSelectionBox>
+    <dataInfoURL/>
+    <debugScreenBounds>false</debugScreenBounds>
+    <defaultTextFormat>
+      <bold>false</bold>
+      <color>0</color>
+      <font>Sophia Nubian</font>
+      <italic>false</italic>
+      <size>11</size>
+      <underline>false</underline>
+    </defaultTextFormat>
+    <enableAboutMenu>true</enableAboutMenu>
+    <enableAdd2DHistogram>false</enableAdd2DHistogram>
+    <enableAddAttributeMenuTool>true</enableAddAttributeMenuTool>
+    <enableAddBarChart>true</enableAddBarChart>
+    <enableAddCollaborationTool>false</enableAddCollaborationTool>
+    <enableAddColorLegend>true</enableAddColorLegend>
+    <enableAddColormapHistogram>true</enableAddColormapHistogram>
+    <enableAddCompoundRadViz>false</enableAddCompoundRadViz>
+    <enableAddCustomTool>false</enableAddCustomTool>
+    <enableAddDataFilter>true</enableAddDataFilter>
+    <enableAddDataSource>true</enableAddDataSource>
+    <enableAddDataTable>true</enableAddDataTable>
+    <enableAddDimensionSliderTool>false</enableAddDimensionSliderTool>
+    <enableAddGaugeTool>false</enableAddGaugeTool>
+    <enableAddGraphTool>true</enableAddGraphTool>
+    <enableAddHistogram>true</enableAddHistogram>
+    <enableAddLineChart>true</enableAddLineChart>
+    <enableAddMap>true</enableAddMap>
+    <enableAddPieChart>true</enableAddPieChart>
+    <enableAddPieChartHistogram>true</enableAddPieChartHistogram>
+    <enableAddRadViz>false</enableAddRadViz>
+    <enableAddRamachandranPlot>false</enableAddRamachandranPlot>
+    <enableAddRScriptEditor>true</enableAddRScriptEditor>
+    <enableAddScatterplot>true</enableAddScatterplot>
+    <enableAddThermometerTool>false</enableAddThermometerTool>
+    <enableAddTimeSliderTool>false</enableAddTimeSliderTool>
+    <enableAddWeaveDataSource>true</enableAddWeaveDataSource>
+    <enableBitmapFilters>true</enableBitmapFilters>
+    <enableCascadeAllWindows>true</enableCascadeAllWindows>
+    <enableClearCurrentSelection>true</enableClearCurrentSelection>
+    <enableCloseAllWindows>true</enableCloseAllWindows>
+    <enableCreateSubsets>true</enableCreateSubsets>
+    <enableDataMenu>true</enableDataMenu>
+    <enableDebugAlert>false</enableDebugAlert>
+    <enableDrawCircle>true</enableDrawCircle>
+    <enableDynamicTools>true</enableDynamicTools>
+    <enableEditDataSource>true</enableEditDataSource>
+    <enableExportApplicationScreenshot>true</enableExportApplicationScreenshot>
+    <enableExportCSV>true</enableExportCSV>
+    <enableExportToolImage>true</enableExportToolImage>
+    <enableFullScreen>false</enableFullScreen>
+    <enableFullscreen>true</enableFullscreen>
+    <enableGeometryProbing>true</enableGeometryProbing>
+    <enableManageSavedSelections>true</enableManageSavedSelections>
+    <enableManageSavedSubsets>true</enableManageSavedSubsets>
+    <enableMarker>true</enableMarker>
+    <enableMenuBar>false</enableMenuBar>
+    <enableMinimizeAllWindows>true</enableMinimizeAllWindows>
+    <enableMouseWheel>true</enableMouseWheel>
+    <enableNewDataset>true</enableNewDataset>
+    <enableNewUserWizard>false</enableNewUserWizard>
+    <enablePanelCoordsPercentageMode>true</enablePanelCoordsPercentageMode>
+    <enableProbeAnimation>true</enableProbeAnimation>
+    <enableProbeLines>true</enableProbeLines>
+    <enableProbeToolTip>true</enableProbeToolTip>
+    <enableRefreshHierarchies>false</enableRefreshHierarchies>
+    <enableRemoveSubsets>true</enableRemoveSubsets>
+    <enableRestoreAllMinimizedWindows>true</enableRestoreAllMinimizedWindows>
+    <enableRightClick>true</enableRightClick>
+    <enableSaveCurrentSelection>true</enableSaveCurrentSelection>
+    <enableSaveCurrentSubset>true</enableSaveCurrentSubset>
+    <enableSearchForRecord>true</enableSearchForRecord>
+    <enableSelectionSelectorBox>true</enableSelectionSelectorBox>
+    <enableSelectionsMenu>true</enableSelectionsMenu>
+    <enableSessionMenu>true</enableSessionMenu>
+    <enableShowAllRecords>true</enableShowAllRecords>
+    <enableSubsetControls>true</enableSubsetControls>
+    <enableSubsetSelectionBox>true</enableSubsetSelectionBox>
+    <enableSubsetsMenu>true</enableSubsetsMenu>
+    <enableTileAllWindows>true</enableTileAllWindows>
+    <enableToolAttributeEditing>true</enableToolAttributeEditing>
+    <enableToolControls>true</enableToolControls>
+    <enableToolProbe>true</enableToolProbe>
+    <enableToolSelection>true</enableToolSelection>
+    <enableUserPreferences>true</enableUserPreferences>
+    <enableWindowMenu>true</enableWindowMenu>
+    <eventListeners encoding="dynamic"/>
+    <geometryMetadataRequestMode>xyz</geometryMetadataRequestMode>
+    <geometryMinimumScreenArea>1</geometryMinimumScreenArea>
+    <jriServiceURL>/WeaveServices/JRIService</jriServiceURL>
+    <macroLibraries>weave.api::WeaveAPI</macroLibraries>
+    <macros encoding="dynamic"/>
+    <maxTooltipRecordsShown>1</maxTooltipRecordsShown>
+    <pageTitle>Open Indicators Weave</pageTitle>
+    <panelTitleTextFormat>
+      <bold>false</bold>
+      <color>16777215</color>
+      <font>Verdana</font>
+      <italic>false</italic>
+      <size>10</size>
+      <underline>false</underline>
+    </panelTitleTextFormat>
+    <pdbServiceURL>/WeavePDBService/PDBService</pdbServiceURL>
+    <probeInnerGlowAlpha>1</probeInnerGlowAlpha>
+    <probeInnerGlowBlur>5</probeInnerGlowBlur>
+    <probeInnerGlowColor>16777215</probeInnerGlowColor>
+    <probeInnerGlowStrength>10</probeInnerGlowStrength>
+    <probeOuterGlowAlpha>1</probeOuterGlowAlpha>
+    <probeOuterGlowBlur>3</probeOuterGlowBlur>
+    <probeOuterGlowColor>0</probeOuterGlowColor>
+    <probeOuterGlowStrength>3</probeOuterGlowStrength>
+    <probeToolTipBackgroundAlpha>1</probeToolTipBackgroundAlpha>
+    <probeToolTipBackgroundColor>NaN</probeToolTipBackgroundColor>
+    <probeToolTipFontColor>0</probeToolTipFontColor>
+    <probeToolTipMaxWidth>300</probeToolTipMaxWidth>
+    <rServiceURL>/WeaveServices/RService</rServiceURL>
+    <searchServiceURLs>Wikipedia|http://en.wikipedia.org/wiki/Special:Search?search=
+Google|http://www.google.com/search?q=
+Google Images|http://images.google.com/images?q=
+Google Maps|http://maps.google.com/maps?t=h&amp;q=</searchServiceURLs>
+    <selectionAlphaAmount>0.5</selectionAlphaAmount>
+    <selectionBlurringAmount>4</selectionBlurringAmount>
+    <shadowAlpha>0.5</shadowAlpha>
+    <shadowAngle>45</shadowAngle>
+    <shadowBlur>4</shadowBlur>
+    <shadowColor>0</shadowColor>
+    <shadowDistance>2</shadowDistance>
+    <showAttributeSelector>true</showAttributeSelector>
+    <showColorController>true</showColorController>
+    <showCopyright>false</showCopyright>
+    <showEquationEditor>true</showEquationEditor>
+    <showKeyTypeInColumnTitle>false</showKeyTypeInColumnTitle>
+    <showProbeToolTipEditor>true</showProbeToolTipEditor>
+    <showSelectedRecordsText>true</showSelectedRecordsText>
+    <showVisToolCloseDialog>false</showVisToolCloseDialog>
+    <startupJavaScript/>
+    <toolInteractions>
+      <defaultDragMode/>
+      <pan>alt,drag</pan>
+      <probe>move</probe>
+      <select>drag</select>
+      <selectAdd>ctrl,drag</selectAdd>
+      <selectRemove>ctrl,shift,drag</selectRemove>
+      <zoom>shift,drag
+wheel</zoom>
+      <zoomIn>dclick</zoomIn>
+      <zoomOut>shift,dclick</zoomOut>
+      <zoomToExtent>ctrl,alt,shift,dclick</zoomToExtent>
+    </toolInteractions>
+    <version>1.0 Beta (Tue Jan 24 10:05:07 EST 2012)</version>
+    <windowSnapGridSize>1%</windowSnapGridSize>
+    <workspaceHeight>252</workspaceHeight>
+    <workspaceMultiplier>1</workspaceMultiplier>
+    <workspaceWidth>333</workspaceWidth>
+  </WeaveProperties>
+  <ColorColumn name="defaultColorColumn">
+    <internalDynamicColumn encoding="dynamic">
+      <GlobalObjectReference name="defaultColorBinColumn"/>
+    </internalDynamicColumn>
+    <ramp encoding="xml">
+      <colorRamp category="basic" source="OIC" name="5-Color">
+        <node position="0" color="0xEFF3FF"/>
+        <node position="0.25" color="0xBDD7E7"/>
+        <node position="0.5" color="0x6BAED6"/>
+        <node position="0.75" color="0x3182BD"/>
+        <node position="1" color="0x08519C"/>
+      </colorRamp>
+    </ramp>
+    <recordColors/>
+  </ColorColumn>
+  <BinnedColumn name="defaultColorBinColumn">
+    <binningDefinition encoding="dynamic">
+      <SimpleBinningDefinition>
+        <numberOfBins>10</numberOfBins>
+        <overrideBinNames/>
+      </SimpleBinningDefinition>
+    </binningDefinition>
+    <internalDynamicColumn encoding="dynamic">
+      <GlobalObjectReference name="defaultColorDataColumn"/>
+    </internalDynamicColumn>
+  </BinnedColumn>
+  <FilteredColumn name="defaultColorDataColumn">
+    <filter encoding="dynamic">
+      <GlobalObjectReference name="defaultSubsetKeyFilter"/>
+    </filter>
+    <internalDynamicColumn encoding="dynamic"/>
+  </FilteredColumn>
+  <KeyFilter name="defaultSubsetKeyFilter">
+    <excluded/>
+    <included/>
+    <includeMissingKeys>true</includeMissingKeys>
+    <includeMissingKeyTypes>true</includeMissingKeyTypes>
+  </KeyFilter>
+  <KeySet name="defaultSelectionKeySet"/>
+  <KeySet name="defaultProbeKeySet"/>
+  <KeySet name="alwaysHighlightKeySet"/>
+  <LinkableHashMap encoding="dynamic" name="savedSelections"/>
+  <LinkableHashMap encoding="dynamic" name="savedSubsets"/>
+  <WeaveDataSource name="MetroBoston DataCommon">
+    <attributeHierarchy encoding="xml">
+      <hierarchy name="MetroBoston DataCommon">
+        <category title="Demographics" name="Data Tables">
+          <category source="Census" description="2000 and 2010" name="Census Mail Participation Rate (Municipal)" title="Census Mail Participation Rate, 2000 &amp; 2010 (Municipal)" subject="Census"/>
+          <category source="ACS" name="Citizenship Status (Municipality)" title="Citizenship Status, 5yr Avg 2005-09 (Municipal)" subject="Demographics"/>
+          <category title="Geographic Mobility, 5yr Avg 2005-09 (Municipal)" source="ACS" name="Geographic Mobility (Municipal)"/>
+          <category source="ACS" name="Linguistic Isolation (Municipal)" title="Linguistic Isolation, 5yr Avg 2005-09 (Municipal)" subject="Demographics"/>
+          <category source="Census" name="Population By Age 2000 - 2010 (Municipality)" title="Population By Age, 2000 &amp; 2010 (Municipality)" subject="Demographics"/>
+          <category source="Census" name="Population By Gender and Age with Change, 2000 - 2010 (Municipal)" title="Population By Gender and Age with Change, 2000 &amp; 2010 (Municipal)" subject="Demogrpahics"/>
+          <category source="Census" description="Census 2000" name="Population By Gender and Age, 2000 (Census Tracts)" title="Population By Gender and Age, 2000 (Census Tracts)" subject="Demographics"/>
+          <category source="Census" description="Census" name="Population By Gender and Age, 2010 (Census Tracts)" title="Population By Gender and Age, 2010 (Census Tracts)" subject="Demographics"/>
+          <category title="Population by Race/Ethnicity with Change, 2000 &amp; 2010 (Municipal)" source="Census" name="Population by Race with Change, 2000-2010 (Municipal)"/>
+          <category source="Census" description="Census 2000" name="Population by Race, 2000 (Census Tract)" title="Population by Race/Ethnicity, 2000 (Census Tract)" subject="Demographics"/>
+          <category source="Census" description="Census 2010" name="Population by Race, 2010 (Census Tract)" title="Population by Race/Ethnicity, 2010 (Census Tract)" subject="Demographics"/>
+          <category source="MAPC, 2008" name="Employment Projections by Sector, Current Trends/MetroFuture (Municipal)" title="Projected Employment, Current Trends/MetroFuture, 2030 (Municipal)" subject="MetroFuture"/>
+          <category source="MAPC, 2008" name="Employment Projections by Sector, Current Trends/MetroFuture (TAZ)" title="Projected Employment, Current Trends/MetroFuture, 2030 (TAZ)" subject="MetroFuture"/>
+          <category source="MAPC, 2008" name="Population Projection by Age Group, Current Trends, (Municipal)" title="Projected Population by Age Group, Current Trends, 2030 (Municipal)" subject="MetroFuture"/>
+          <category source="MAPC, 2008" name="Population Projection by Age Group, MetroFuture (Municipal)" title="Projected Population by Age Group, MetroFuture, 2030 (Municipal)" subject="MetroFuture"/>
+          <category source="MAPC, 2008" name="Population, Household and Employment Projection, Current Trends/MetroFuture (Municipal)" title="Projected Population, Households and Employment, Current Trends/MetroFuture 2030 (Municipal)" subject="MetroFuture"/>
+          <category source="MAPC, 2008" name="Population, Household and Employment Projection, Current Trends/MetroFuture (TAZ)" title="Projected Population, Households and Employment, Current Trends/MetroFuture 2030 (TAZ)" subject="MetroFuture"/>
+          <category source="Census" name="Population by Minorities, 2000-2010 (Municipal)" title="Minority Population, 2000 &amp; 2010 (Municipal)" subject="Demographics"/>
+        </category>
+        <category title="Civic Vitality and Governance" name="Data Tables">
+          <category title="Arts and Culture Points of Interest" source="NEFA, 2007" name="Arts and Culture Points"/>
+          <category source="Community Preservation Coalition, 2011" name="Community Preservation Act votes (Municipal)" title="Community Preservation Act Status (Municipal)" subject="Civic Vitality ad Governance"/>
+          <category title="Forms of Municipal Governance (Municipal)" source="MMA, Secretary of State, 2011" name="Forms of Municipal Governance (Municipal)"/>
+          <category source="State Elections Division 2004-2010" name="Voters (Municipal)" title="Registered Voters, by Year 2004-2010 (Municipal)" subject="Civic Vitality ad Governance"/>
+          <category title="State Representatives (MA House Districts)" source="MassGIS, 2011" name="MA House Districts"/>
+          <category title="State Senators (MA Senate Districts)" source="MassGIS, 2011" name="MA Senate Districts"/>
+          <category title="US Representatives (US Congressional Districts)" source="MassGIS, 2007" name="US Congressional Districts"/>
+          <category title="Property Crimes, 2001-09 (Municipal)" name="Property Crimes (Municipal)" subject="Public Safety"/>
+          <category title="Violent Crimes, 2001-09 (Municipal)" name="Violent Crimes (Municipal)" subject="Public Safety"/>
+        </category>
+        <category title="Economy" name="Data Tables">
+          <category source="MA EOLWD ES-202, 2011" name="Average Weekly Wages by Sector (Municipal)" title="Average Weekly Wages by Sector, by Year 2001-2010 (Municipal)" subject="Economy"/>
+          <category name="Children in Poverty by Family Type (Census Tracts)" description="ACS 2005-09" source="ACS" title="Children in Poverty by Family Type, 5yr Avg 2005-09 (Census 2000 Tracts)" subject="Economy"/>
+          <category source="ES-202" name="Employment By Sector 2010 (Municipal) - Tranposed" title="Employment By Sector 2010 (Municipal) - Tranposed" subject="Economy"/>
+          <category source="MA EOLWD ES-202, 2011" name="Employment By Sector 2010 (Municipal)" title="Employment By Sector, Place of Work, 2010 (Municipal)" subject="Economy">
+            <attribute dataTable="Employment By Sector 2010 (Municipal)" keyType="MUNI_ID" name="MUNI_ID" dataType="string" title="Municipal ID"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal)" keyType="MUNI_ID" name="MUNICIPAL" dataType="string" title="Municipality"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal)" keyType="MUNI_ID" name="TOT_10" dataType="number" title="All Industries, 2010"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal)" keyType="MUNI_ID" name="GOOD_10" dataType="number" title="Goods Producing Sector, 2010"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal)" keyType="MUNI_ID" name="SVC_10" dataType="number" title="Service-Providing Sector, 2010"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal)" keyType="MUNI_ID" name="NAT_10" dataType="number" title="Natural Resources and Mining, 2010"/>
+            <attribute min="0" dataTable="Employment By Sector 2010 (Municipal)" name="NAT_10P" dataType="number" string="formatNumber(number, 1)" title="%Natural Resources and Mining, 2010" keyType="MUNI_ID" max="100"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal)" keyType="MUNI_ID" name="CONS_10" dataType="number" title="Construction, 2010"/>
+            <attribute min="0" dataTable="Employment By Sector 2010 (Municipal)" name="CONS_10P" dataType="number" string="formatNumber(number, 1)" title="% Construction, 2010" keyType="MUNI_ID" max="100"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal)" keyType="MUNI_ID" name="MANU_10" dataType="number" title="Manufacturing, 2010"/>
+            <attribute min="0" dataTable="Employment By Sector 2010 (Municipal)" name="MANU_10P" dataType="number" string="formatNumber(number, 1)" title="% Manufacturing, 2010" keyType="MUNI_ID" max="100"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal)" keyType="MUNI_ID" name="TRAD_10" dataType="number" title="Trade,Transportation and Utilities, 2010"/>
+            <attribute min="0" dataTable="Employment By Sector 2010 (Municipal)" name="TRAD_10P" dataType="number" string="formatNumber(number, 1)" title="% Trade,Transportation and Utilities, 2010" keyType="MUNI_ID" max="100"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal)" keyType="MUNI_ID" name="INFO_10" dataType="number" title="Information, 2010"/>
+            <attribute min="0" dataTable="Employment By Sector 2010 (Municipal)" name="INFO_10P" dataType="number" string="formatNumber(number, 1)" title="% Information, 2010" keyType="MUNI_ID" max="100"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal)" keyType="MUNI_ID" name="FIN_10" dataType="number" title="Financial Activities, 2010"/>
+            <attribute min="0" dataTable="Employment By Sector 2010 (Municipal)" name="FIN_10P" dataType="number" string="formatNumber(number, 1)" title="% Financial Activities, 2010" keyType="MUNI_ID" max="100"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal)" keyType="MUNI_ID" name="PROF_10" dataType="number" title="Professional and Business Services, 2010"/>
+            <attribute min="0" dataTable="Employment By Sector 2010 (Municipal)" name="PROF_10P" dataType="number" string="formatNumber(number, 1)" title="% Professional and Business Services, 2010" keyType="MUNI_ID" max="100"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal)" keyType="MUNI_ID" name="EDUC_10" dataType="number" title="Education and Health Services, 2010"/>
+            <attribute min="0" dataTable="Employment By Sector 2010 (Municipal)" name="EDUC_10P" dataType="number" string="formatNumber(number, 1)" title="% Education and Health Services, 2010" keyType="MUNI_ID" max="100"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal)" keyType="MUNI_ID" name="LEIS_10" dataType="number" title="Leisure and Hospitality, 2010"/>
+            <attribute min="0" dataTable="Employment By Sector 2010 (Municipal)" name="LEIS_10P" dataType="number" string="formatNumber(number, 1)" title="% Leisure and Hospitality, 2010" keyType="MUNI_ID" max="100"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal)" keyType="MUNI_ID" name="OTHR_10" dataType="number" title="Other Services, 2010"/>
+            <attribute min="0" dataTable="Employment By Sector 2010 (Municipal)" name="OTHR_10P" dataType="number" string="formatNumber(number, 1)" title="% Other Services, 2010" keyType="MUNI_ID" max="100"/>
+            <attribute dataTable="Employment By Sector 2010 (Municipal)" keyType="MUNI_ID" name="PUB_10" dataType="number" title="Public Administration, 2010"/>
+            <attribute min="0" dataTable="Employment By Sector 2010 (Municipal)" name="PUB_10P" dataType="number" string="formatNumber(number, 1)" title="% Public Administration, 2010" keyType="MUNI_ID" max="100"/>
+          </category>
+          <category source="MA EOLWD ES-202, 2011" name="Employment by Sector (Municipal)" title="Employment by Sector, Place of Work, by Year 2001-2010 (Municipal)" subject="Economy"/>
+          <category source="MA EOLWD ES-202, 2011" name="Establishment by Sector (Municipal)" title="Establishment by Sector, Place of Work, by Year 2001-2010 (Municipal)" subject="Economy"/>
+          <category title="Labor Force and Unemployment, Place of Residence, by Year 2006-10 (Municipal)" source="MA EOLWD ES-202, 2011" name="Labor Force and Unemployment, Place of Residence, by Year (Municipal)"/>
+          <category title="Local Area Unemployment Statistics (Municipal)" source="MA EOLWD, 2006-2010" name="Local Area Unemployment Statistics (Municipality)"/>
+          <category title="Total Employment, Place of Work, by Year 1986-2010 (Municipal)" source="MA EOLWD ES-202, 2011" name="Employment (Municipal)">
+            <attribute dataTable="Employment (Municipal)" keyType="MUNI_ID" name="TOWN_ID" dataType="string" title="Municipal ID"/>
+            <attribute dataTable="Employment (Municipal)" keyType="MUNI_ID" name="MUNI" dataType="string" title="Municipality"/>
+            <attribute dataTable="Employment (Municipal)" keyType="MUNI_ID" name="EMP85" dataType="number" title="Employment, 1985"/>
+            <attribute dataTable="Employment (Municipal)" keyType="MUNI_ID" name="EMP86" dataType="number" title="Employment, 1986"/>
+            <attribute dataTable="Employment (Municipal)" keyType="MUNI_ID" name="EMP87" dataType="number" title="Employment, 1987"/>
+            <attribute dataTable="Employment (Municipal)" keyType="MUNI_ID" name="EMP88" dataType="number" title="Employment, 1988"/>
+            <attribute dataTable="Employment (Municipal)" keyType="MUNI_ID" name="EMP89" dataType="number" title="Employment, 1989"/>
+            <attribute dataTable="Employment (Municipal)" keyType="MUNI_ID" name="EMP90" dataType="number" title="Employment, 1990"/>
+            <attribute dataTable="Employment (Municipal)" keyType="MUNI_ID" name="EMP91" dataType="number" title="Employment, 1991"/>
+            <attribute dataTable="Employment (Municipal)" keyType="MUNI_ID" name="EMP92" dataType="number" title="Employment, 1992"/>
+            <attribute dataTable="Employment (Municipal)" keyType="MUNI_ID" name="EMP93" dataType="number" title="Employment, 1993"/>
+            <attribute dataTable="Employment (Municipal)" keyType="MUNI_ID" name="EMP94" dataType="number" title="Employment, 1994"/>
+            <attribute dataTable="Employment (Municipal)" keyType="MUNI_ID" name="EMP95" dataType="number" title="Employment, 1995"/>
+            <attribute dataTable="Employment (Municipal)" keyType="MUNI_ID" name="EMP96" dataType="number" title="Employment, 1996"/>
+            <attribute dataTable="Employment (Municipal)" keyType="MUNI_ID" name="EMP97" dataType="number" title="Employment, 1997"/>
+            <attribute dataTable="Employment (Municipal)" keyType="MUNI_ID" name="EMP98" dataType="number" title="Employment, 1998"/>
+            <attribute dataTable="Employment (Municipal)" keyType="MUNI_ID" name="EMP99" dataType="number" title="Employment, 1999"/>
+            <attribute dataTable="Employment (Municipal)" keyType="MUNI_ID" name="EMP00" dataType="number" title="Employment, 2000"/>
+            <attribute dataTable="Employment (Municipal)" keyType="MUNI_ID" name="EMP01" dataType="number" title="Employment, 2001"/>
+            <attribute dataTable="Employment (Municipal)" keyType="MUNI_ID" name="EMP02" dataType="number" title="Employment, 2002"/>
+            <attribute dataTable="Employment (Municipal)" keyType="MUNI_ID" name="EMP03" dataType="number" title="Employment, 2003"/>
+            <attribute dataTable="Employment (Municipal)" keyType="MUNI_ID" name="EMP04" dataType="number" title="Employment, 2004"/>
+            <attribute dataTable="Employment (Municipal)" keyType="MUNI_ID" name="EMP05" dataType="number" title="Employment, 2005"/>
+            <attribute dataTable="Employment (Municipal)" keyType="MUNI_ID" name="EMP06" dataType="number" title="Employment, 2006"/>
+            <attribute dataTable="Employment (Municipal)" keyType="MUNI_ID" name="EMP07" dataType="number" title="Employment, 2007"/>
+            <attribute dataTable="Employment (Municipal)" keyType="MUNI_ID" name="EMP08" dataType="number" title="Employment, 2008"/>
+            <attribute dataTable="Employment (Municipal)" keyType="MUNI_ID" name="EMP09" dataType="number" title="Employment, 2009"/>
+            <attribute dataTable="Employment (Municipal)" keyType="MUNI_ID" name="EMP10" dataType="number" title="Employment, 2010"/>
+            <attribute dataTable="Employment (Municipal)" keyType="MUNI_ID" name="EMPCHG9000" dataType="number" title="Employment Change, 1990-2000"/>
+            <attribute dataTable="Employment (Municipal)" keyType="MUNI_ID" name="EMPCHG0010" dataType="number" title="Employment Change, 2000-2010"/>
+          </category>
+        </category>
+        <category title="Education" name="Data Tables">
+          <category title="School Districts data" name="Data Tables">
+            <category title="School Districts" source="DESE" name="School Districts"/>
+            <category source="DESE, 2011" name="School Districts: Enrollment, 2010-11" title="District Enrollment, 2010-11 (School Districts)" subject="Education"/>
+            <category title="District Enrollment, by year 2006-11 (School Districts)" source="DESE, 2011" name="School Districts: Enrollment (multi-year)"/>
+            <category source="DESE, 2011" name="School Districts: Graduation Plans by year" title="District Graduation Plans, by year 2006-11 (School Districts)" subject="Education"/>
+            <category title="District Graduation Plans, by year 2006-11 (School Districts) (Dimension Slider only)" source="DESE, 2011" name="School Districts: Graduation Plans (multi-year)"/>
+            <category name="School Districts: Technology by year" description="DESE" source="DESE, 2011" title="District Technology, by year 2003-10 (School Districts)" subject="Education"/>
+            <category title="Districts by Municipality, 2011" source="DESE, MAPC" name="School Districts by Town"/>
+          </category>
+          <category title="School Municipal Districts data" name="Data Tables">
+            <category source="DESE, 2011" name="School Municipal Districts: Enrollment, 2009-10" title="Enrollment, 2009-10 (School Municipal Districts)" subject="Education"/>
+            <category title="Enrollment, 2010-11 (School Municipal Districts)" source="DESE, 2011" name="School Municipal Districts: Enrollment, 2010-11">
+              <attribute dataTable="School Municipal Districts: Enrollment, 2010-11" keyType="MUNI_ID" name="muni_id" dataType="string" year="2010-11" title="Municipal ID"/>
+              <attribute dataTable="School Municipal Districts: Enrollment, 2010-11" keyType="MUNI_ID" name="municipal" dataType="string" year="2010-11" title="Municipality"/>
+              <attribute dataTable="School Municipal Districts: Enrollment, 2010-11" keyType="MUNI_ID" name="district" dataType="string" year="2010-11" title="School District"/>
+              <attribute dataTable="School Municipal Districts: Enrollment, 2010-11" keyType="MUNI_ID" name="schoolyear" dataType="string" year="2010-11" title="School Year"/>
+              <attribute dataTable="School Municipal Districts: Enrollment, 2010-11" keyType="MUNI_ID" name="enrolled" dataType="number" year="2010-11" title="Number of students enrolled"/>
+              <attribute dataTable="School Municipal Districts: Enrollment, 2010-11" keyType="MUNI_ID" name="grade_pk" dataType="number" year="2010-11" title="Pre-Kindergarden students enrolled"/>
+              <attribute dataTable="School Municipal Districts: Enrollment, 2010-11" keyType="MUNI_ID" name="grade_k" dataType="number" year="2010-11" title="Kindergarden students enrolled"/>
+              <attribute dataTable="School Municipal Districts: Enrollment, 2010-11" keyType="MUNI_ID" name="grade_1" dataType="number" year="2010-11" title="Grade 1 students enrolled"/>
+              <attribute dataTable="School Municipal Districts: Enrollment, 2010-11" keyType="MUNI_ID" name="grade_2" dataType="number" year="2010-11" title="Grade 2 students enrolled"/>
+              <attribute dataTable="School Municipal Districts: Enrollment, 2010-11" keyType="MUNI_ID" name="grade_3" dataType="number" year="2010-11" title="Grade 3 students enrolled"/>
+              <attribute dataTable="School Municipal Districts: Enrollment, 2010-11" keyType="MUNI_ID" name="grade_4" dataType="number" year="2010-11" title="Grade 4 students enrolled"/>
+              <attribute dataTable="School Municipal Districts: Enrollment, 2010-11" keyType="MUNI_ID" name="grade_5" dataType="number" year="2010-11" title="Grade 5 students enrolled"/>
+              <attribute dataTable="School Municipal Districts: Enrollment, 2010-11" keyType="MUNI_ID" name="grade_6" dataType="number" year="2010-11" title="Grade 6 students enrolled"/>
+              <attribute dataTable="School Municipal Districts: Enrollment, 2010-11" keyType="MUNI_ID" name="grade_7" dataType="number" year="2010-11" title="Grade 7 students enrolled"/>
+              <attribute dataTable="School Municipal Districts: Enrollment, 2010-11" keyType="MUNI_ID" name="grade_8" dataType="number" year="2010-11" title="Grade 8 students enrolled"/>
+              <attribute dataTable="School Municipal Districts: Enrollment, 2010-11" keyType="MUNI_ID" name="grade_9" dataType="number" year="2010-11" title="Grade 9 students enrolled"/>
+              <attribute dataTable="School Municipal Districts: Enrollment, 2010-11" keyType="MUNI_ID" name="grade_10" dataType="number" year="2010-11" title="Grade 10 students enrolled"/>
+              <attribute dataTable="School Municipal Districts: Enrollment, 2010-11" keyType="MUNI_ID" name="grade_11" dataType="number" year="2010-11" title="Grade 11 students enrolled"/>
+              <attribute dataTable="School Municipal Districts: Enrollment, 2010-11" keyType="MUNI_ID" name="grade_12" dataType="number" year="2010-11" title="Grade 12 students enrolled"/>
+              <attribute dataTable="School Municipal Districts: Enrollment, 2010-11" keyType="MUNI_ID" name="aa_num" dataType="number" year="2010-11" title="Black Students enrolled"/>
+              <attribute min="0" dataTable="School Municipal Districts: Enrollment, 2010-11" name="aa_pct" dataType="number" string="formatNumber(number, 2)+'%'" title="% Black Students enrolled" keyType="MUNI_ID" year="2010-11" max="100"/>
+              <attribute dataTable="School Municipal Districts: Enrollment, 2010-11" keyType="MUNI_ID" name="as_num" dataType="number" year="2010-11" title="Asian Students enrolled"/>
+              <attribute min="0" dataTable="School Municipal Districts: Enrollment, 2010-11" name="as_pct" dataType="number" string="formatNumber(number, 2)+'%'" title="% Asian Students enrolled" keyType="MUNI_ID" year="2010-11" max="100"/>
+              <attribute dataTable="School Municipal Districts: Enrollment, 2010-11" keyType="MUNI_ID" name="lat_num" dataType="number" year="2010-11" title="Hispanic/Latino Students enrolled"/>
+              <attribute min="0" dataTable="School Municipal Districts: Enrollment, 2010-11" name="lat_pct" dataType="number" string="formatNumber(number, 2)+'%'" title="% Hispanic/Latino Students enrolled" keyType="MUNI_ID" year="2010-11" max="100"/>
+              <attribute dataTable="School Municipal Districts: Enrollment, 2010-11" keyType="MUNI_ID" name="minor_num" dataType="number" year="2010-11" title="Minority Students enrolled"/>
+              <attribute min="0" dataTable="School Municipal Districts: Enrollment, 2010-11" name="minor_pct" dataType="number" string="formatNumber(number, 2)+'%'" title="% Minority Students enrolled" keyType="MUNI_ID" year="2010-11" max="100"/>
+              <attribute dataTable="School Municipal Districts: Enrollment, 2010-11" keyType="MUNI_ID" name="whi_num" dataType="number" year="2010-11" title="White Students enrolled"/>
+              <attribute min="0" dataTable="School Municipal Districts: Enrollment, 2010-11" name="whi_pct" dataType="number" string="formatNumber(number, 2)+'%'" title="% White Students enrolled" keyType="MUNI_ID" year="2010-11" max="100"/>
+              <attribute dataTable="School Municipal Districts: Enrollment, 2010-11" keyType="MUNI_ID" name="fem_num" dataType="number" year="2010-11" title="Female Students enrolled"/>
+              <attribute min="0" dataTable="School Municipal Districts: Enrollment, 2010-11" name="fem_pct" dataType="number" string="formatNumber(number, 2)+'%'" title="% Female Students enrolled" keyType="MUNI_ID" year="2010-11" max="100"/>
+              <attribute dataTable="School Municipal Districts: Enrollment, 2010-11" keyType="MUNI_ID" name="male_num" dataType="number" year="2010-11" title="Male Students enrolled"/>
+              <attribute min="0" dataTable="School Municipal Districts: Enrollment, 2010-11" name="male_pct" dataType="number" string="formatNumber(number, 2)+'%'" title="% Male Students enrolled" keyType="MUNI_ID" year="2010-11" max="100"/>
+              <attribute dataTable="School Municipal Districts: Enrollment, 2010-11" keyType="MUNI_ID" name="ell_num" dataType="number" year="2010-11" title="English Language Learner Students enrolled"/>
+              <attribute min="0" dataTable="School Municipal Districts: Enrollment, 2010-11" name="ell_pct" dataType="number" string="formatNumber(number, 2)+'%'" title="% English Language Learner Students enrolled" keyType="MUNI_ID" year="2010-11" max="100"/>
+              <attribute dataTable="School Municipal Districts: Enrollment, 2010-11" keyType="MUNI_ID" name="lep_num" dataType="number" year="2010-11" title="Limited English Proficient Students enrolled"/>
+              <attribute min="0" dataTable="School Municipal Districts: Enrollment, 2010-11" name="lep_pct" dataType="number" string="formatNumber(number, 2)+'%'" title="% Limited English Proficient Students enrolled" keyType="MUNI_ID" year="2010-11" max="100"/>
+              <attribute dataTable="School Municipal Districts: Enrollment, 2010-11" keyType="MUNI_ID" name="swd_num" dataType="number" year="2010-11" title="Students with disabilities enrolled"/>
+              <attribute min="0" dataTable="School Municipal Districts: Enrollment, 2010-11" name="swd_pct" dataType="number" string="formatNumber(number, 2)+'%'" title="% Students with disabilities enrolled" keyType="MUNI_ID" year="2010-11" max="100"/>
+              <attribute dataTable="School Municipal Districts: Enrollment, 2010-11" keyType="MUNI_ID" name="li_num" dataType="number" year="2010-11" title="Low Income Students enrolled"/>
+              <attribute min="0" dataTable="School Municipal Districts: Enrollment, 2010-11" name="li_pct" dataType="number" string="formatNumber(number, 2)+'%'" title="% Low Income Students enrolled" keyType="MUNI_ID" year="2010-11" max="100"/>
+            </category>
+            <category title="Enrollment, by year 2006-11 (School Municipal Districts)" source="DESE, 2011" name="School Municipal Districts: Enrollment (multi-year)">
+              <attribute dataTable="School Municipal Districts: Enrollment (multi-year)" keyType="MUNI_ID" name="muni_id" dataType="string" title="Municipal ID"/>
+              <attribute dataTable="School Municipal Districts: Enrollment (multi-year)" keyType="MUNI_ID" name="municipal" dataType="string" title="Municipality"/>
+              <attribute dataTable="School Municipal Districts: Enrollment (multi-year)" keyType="MUNI_ID" name="district" dataType="string" title="School District"/>
+              <attribute dataTable="School Municipal Districts: Enrollment (multi-year)" keyType="MUNI_ID" name="schoolyear" dataType="string" title="School Year"/>
+              <attribute dataTable="School Municipal Districts: Enrollment (multi-year)" keyType="MUNI_ID" name="enrolled" dataType="number" title="Number of students enrolled"/>
+              <attribute dataTable="School Municipal Districts: Enrollment (multi-year)" keyType="MUNI_ID" name="grade_pk" dataType="number" title="Pre-Kindergarden students enrolled"/>
+              <attribute dataTable="School Municipal Districts: Enrollment (multi-year)" keyType="MUNI_ID" name="grade_k" dataType="number" title="Kindergarden students enrolled"/>
+              <attribute dataTable="School Municipal Districts: Enrollment (multi-year)" keyType="MUNI_ID" name="grade_1" dataType="number" title="Grade 1 students enrolled"/>
+              <attribute dataTable="School Municipal Districts: Enrollment (multi-year)" keyType="MUNI_ID" name="grade_2" dataType="number" title="Grade 2 students enrolled"/>
+              <attribute dataTable="School Municipal Districts: Enrollment (multi-year)" keyType="MUNI_ID" name="grade_3" dataType="number" title="Grade 3 students enrolled"/>
+              <attribute dataTable="School Municipal Districts: Enrollment (multi-year)" keyType="MUNI_ID" name="grade_4" dataType="number" title="Grade 4 students enrolled"/>
+              <attribute dataTable="School Municipal Districts: Enrollment (multi-year)" keyType="MUNI_ID" name="grade_5" dataType="number" title="Grade 5 students enrolled"/>
+              <attribute dataTable="School Municipal Districts: Enrollment (multi-year)" keyType="MUNI_ID" name="grade_6" dataType="number" title="Grade 6 students enrolled"/>
+              <attribute dataTable="School Municipal Districts: Enrollment (multi-year)" keyType="MUNI_ID" name="grade_7" dataType="number" title="Grade 7 students enrolled"/>
+              <attribute dataTable="School Municipal Districts: Enrollment (multi-year)" keyType="MUNI_ID" name="grade_8" dataType="number" title="Grade 8 students enrolled"/>
+              <attribute dataTable="School Municipal Districts: Enrollment (multi-year)" keyType="MUNI_ID" name="grade_9" dataType="number" title="Grade 9 students enrolled"/>
+              <attribute dataTable="School Municipal Districts: Enrollment (multi-year)" keyType="MUNI_ID" name="grade_10" dataType="number" title="Grade 10 students enrolled"/>
+              <attribute dataTable="School Municipal Districts: Enrollment (multi-year)" keyType="MUNI_ID" name="grade_11" dataType="number" title="Grade 11 students enrolled"/>
+              <attribute dataTable="School Municipal Districts: Enrollment (multi-year)" keyType="MUNI_ID" name="grade_12" dataType="number" title="Grade 12 students enrolled"/>
+              <attribute dataTable="School Municipal Districts: Enrollment (multi-year)" keyType="MUNI_ID" name="aa_num" dataType="number" title="Black Students enrolled"/>
+              <attribute min="0" dataTable="School Municipal Districts: Enrollment (multi-year)" name="aa_pct" dataType="number" string="formatNumber(number, 2)+'%'" title="% Black Students enrolled" keyType="MUNI_ID" max="100"/>
+              <attribute dataTable="School Municipal Districts: Enrollment (multi-year)" keyType="MUNI_ID" name="as_num" dataType="number" title="Asian Students enrolled"/>
+              <attribute min="0" dataTable="School Municipal Districts: Enrollment (multi-year)" name="as_pct" dataType="number" string="formatNumber(number, 2)+'%'" title="% Asian Students enrolled" keyType="MUNI_ID" max="100"/>
+              <attribute dataTable="School Municipal Districts: Enrollment (multi-year)" keyType="MUNI_ID" name="lat_num" dataType="number" title="Hispanic/Latino Students enrolled"/>
+              <attribute min="0" dataTable="School Municipal Districts: Enrollment (multi-year)" name="lat_pct" dataType="number" string="formatNumber(number, 2)+'%'" title="% Hispanic/Latino Students enrolled" keyType="MUNI_ID" max="100"/>
+              <attribute dataTable="School Municipal Districts: Enrollment (multi-year)" keyType="MUNI_ID" name="minor_num" dataType="number" title="Minority Students enrolled"/>
+              <attribute min="0" dataTable="School Municipal Districts: Enrollment (multi-year)" name="minor_pct" dataType="number" string="formatNumber(number, 2)+'%'" title="% Minority Students enrolled" keyType="MUNI_ID" max="100"/>
+              <attribute dataTable="School Municipal Districts: Enrollment (multi-year)" keyType="MUNI_ID" name="whi_num" dataType="number" title="White Students enrolled"/>
+              <attribute min="0" dataTable="School Municipal Districts: Enrollment (multi-year)" name="whi_pct" dataType="number" string="formatNumber(number, 2)+'%'" title="% White Students enrolled" keyType="MUNI_ID" max="100"/>
+              <attribute dataTable="School Municipal Districts: Enrollment (multi-year)" keyType="MUNI_ID" name="fem_num" dataType="number" title="Female Students enrolled"/>
+              <attribute min="0" dataTable="School Municipal Districts: Enrollment (multi-year)" name="fem_pct" dataType="number" string="formatNumber(number, 2)+'%'" title="% Female Students enrolled" keyType="MUNI_ID" max="100"/>
+              <attribute dataTable="School Municipal Districts: Enrollment (multi-year)" keyType="MUNI_ID" name="male_num" dataType="number" title="Male Students enrolled"/>
+              <attribute min="0" dataTable="School Municipal Districts: Enrollment (multi-year)" name="male_pct" dataType="number" string="formatNumber(number, 2)+'%'" title="% Male Students enrolled" keyType="MUNI_ID" max="100"/>
+              <attribute dataTable="School Municipal Districts: Enrollment (multi-year)" keyType="MUNI_ID" name="ell_num" dataType="number" title="English Language Learner Students enrolled"/>
+              <attribute min="0" dataTable="School Municipal Districts: Enrollment (multi-year)" name="ell_pct" dataType="number" string="formatNumber(number, 2)+'%'" title="% English Language Learner Students enrolled" keyType="MUNI_ID" max="100"/>
+              <attribute dataTable="School Municipal Districts: Enrollment (multi-year)" keyType="MUNI_ID" name="lep_num" dataType="number" title="Limited English Proficient Students enrolled"/>
+              <attribute min="0" dataTable="School Municipal Districts: Enrollment (multi-year)" name="lep_pct" dataType="number" string="formatNumber(number, 2)+'%'" title="% Limited English Proficient Students enrolled" keyType="MUNI_ID" max="100"/>
+              <attribute dataTable="School Municipal Districts: Enrollment (multi-year)" keyType="MUNI_ID" name="swd_num" dataType="number" title="Students with disabilities enrolled"/>
+              <attribute min="0" dataTable="School Municipal Districts: Enrollment (multi-year)" name="swd_pct" dataType="number" string="formatNumber(number, 2)+'%'" title="% Students with disabilities enrolled" keyType="MUNI_ID" max="100"/>
+              <attribute dataTable="School Municipal Districts: Enrollment (multi-year)" keyType="MUNI_ID" name="li_num" dataType="number" title="Low Income Students enrolled"/>
+              <attribute min="0" dataTable="School Municipal Districts: Enrollment (multi-year)" name="li_pct" dataType="number" string="formatNumber(number, 2)+'%'" title="% Low Income Students enrolled" keyType="MUNI_ID" max="100"/>
+            </category>
+            <category name="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" description="MCAS, 2011" source="DESE" title="MCAS Grade 03 Math Proficiency by Group, 2010-11 (School Municipal Districts)" subject="Education">
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="muni_id" dataType="string" year="2010-11" title="Municipal ID"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="municpal" dataType="string" year="2010-11" title="Municipality"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="districtid" dataType="string" year="2010-11" title="School District ID"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="district" dataType="string" year="2010-11" title="School District"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="startgrade" dataType="string" year="2010-11" title="Starting Grade"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="endgrade" dataType="number" year="2010-11" title="Ending Grade"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="all_pa" dataType="number" year="2010-11" title="All Students Proficient or Higher in MCAS Grade 3 Math"/>
+              <attribute min="0" dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" name="all_pa_p" dataType="number" string="formatNumber(number, 2)" title="% All Students Proficient or Higher in MCAS Grade 3 Math" keyType="MUNI_ID" year="2010-11" max="100"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="all_num" dataType="number" year="2010-11" title="Number of Students in MCAS Grade 3 Math"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="all_cpi" dataType="number" year="2010-11" title="Grade 10 All Students Composite Performance Index in MCAS Grade 3 Math"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="all_sgp" dataType="number" year="2010-11" title="Grade 10 All Student Growth Percentile in MCAS Grade 3 Math"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="aa_pa" dataType="number" year="2010-11" title="Black Students Proficient or Higher in MCAS Grade 3 Math"/>
+              <attribute min="0" dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" name="aa_pa_p" dataType="number" string="formatNumber(number, 2)" title="% Black Students Proficient or Higher in MCAS Grade 3 Math" keyType="MUNI_ID" year="2010-11" max="100"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="aa_num" dataType="number" year="2010-11" title="Number of Black Students in MCAS Grade 3 Math"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="aa_cpi" dataType="number" year="2010-11" title="Grade 10 Black Students Composite Performance Index in MCAS Grade 3 Math"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="aa_sgp" dataType="number" year="2010-11" title="Grade 10 Black Student Growth Percentile in MCAS Grade 3 Math"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="as_pa" dataType="number" year="2010-11" title="Asian Students Proficient or Higher in MCAS Grade 3 Math"/>
+              <attribute min="0" dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" name="as_pa_p" dataType="number" string="formatNumber(number, 2)" title="% Asian Students Proficient or Higher in MCAS Grade 3 Math" keyType="MUNI_ID" year="2010-11" max="100"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="as_num" dataType="number" year="2010-11" title="Number of Asian Students in MCAS Grade 3 Math"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="as_cpi" dataType="number" year="2010-11" title="Grade 10 Asian Students Composite Performance Index in MCAS Grade 3 Math"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="as_sgp" dataType="number" year="2010-11" title="Grade 10 Asian Student Growth Percentile in MCAS Grade 3 Math"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="lat_pa" dataType="number" year="2010-11" title="Latino Students Proficient or Higher in MCAS Grade 3 Math"/>
+              <attribute min="0" dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" name="lat_pa_p" dataType="number" string="formatNumber(number, 2)" title="% Latino Students Proficient or Higher in MCAS Grade 3 Math" keyType="MUNI_ID" year="2010-11" max="100"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="lat_num" dataType="number" year="2010-11" title="Number of Latino Students in MCAS Grade 3 Math"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="lat_cpi" dataType="number" year="2010-11" title="Grade 10 Latino Students Composite Performance Index in MCAS Grade 3 Math"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="lat_sgp" dataType="number" year="2010-11" title="Grade 10 Latino Student Growth Percentile in MCAS Grade 3 Math"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="whi_pa" dataType="number" year="2010-11" title="White Students Proficient or Higher in MCAS Grade 3 Math"/>
+              <attribute min="0" dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" name="whi_pa_p" dataType="number" string="formatNumber(number, 2)" title="% White Students Proficient or Higher in MCAS Grade 3 Math" keyType="MUNI_ID" year="2010-11" max="100"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="whi_num" dataType="number" year="2010-11" title="Number of White Students in MCAS Grade 3 Math"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="whi_cpi" dataType="number" year="2010-11" title="Grade 10 White Students Composite Performance Index in MCAS Grade 3 Math"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="whi_sgp" dataType="number" year="2010-11" title="Grade 10 White Student Growth Percentile in MCAS Grade 3 Math"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="ell_pa" dataType="number" year="2010-11" title="English Language Learning Students Proficient or Higher in MCAS Grade 3 Math"/>
+              <attribute min="0" dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" name="ell_pa_p" dataType="number" string="formatNumber(number, 2)" title="% English Language Learning Students Proficient or Higher in MCAS Grade 3 Math" keyType="MUNI_ID" year="2010-11" max="100"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="ell_num" dataType="number" year="2010-11" title="Number of English Language Learning Students in MCAS Grade 3 Math"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="ell_cpi" dataType="number" year="2010-11" title="Grade 10 English Language Learning Students Composite Performance Index in MCAS Grade 3 Math"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="ell_sgp" dataType="number" year="2010-11" title="Grade 10 English Language Learning Student Growth Percentile in MCAS Grade 3 Math"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="li_pa" dataType="number" year="2010-11" title="Low Income Students Proficient or Higher in MCAS Grade 3 Math"/>
+              <attribute min="0" dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" name="li_pa_p" dataType="number" string="formatNumber(number, 2)" title="% Low Income Students Proficient or Higher in MCAS Grade 3 Math" keyType="MUNI_ID" year="2010-11" max="100"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="li_num" dataType="number" year="2010-11" title="Number of Low Income Students in MCAS Grade 3 Math"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="li_cpi" dataType="number" year="2010-11" title="Grade 10 Low Income Students Composite Performance Index in MCAS Grade 3 Math"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="li_sgp" dataType="number" year="2010-11" title="Grade 10 Low Income Student Growth Percentile in MCAS Grade 3 Math"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="sp_pa" dataType="number" year="2010-11" title="Special Education Students Proficient or Higher in MCAS Grade 3 Math"/>
+              <attribute min="0" dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" name="sp_pa_p" dataType="number" string="formatNumber(number, 2)" title="% Special Education Students Proficient or Higher in MCAS Grade 3 Math" keyType="MUNI_ID" year="2010-11" max="100"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="sp_num" dataType="number" year="2010-11" title="Number of Special Education Students in MCAS Grade 3 Math"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="sp_cpi" dataType="number" year="2010-11" title="Grade 10 Special Education Students Composite Performance Index in MCAS Grade 3 Math"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="sp_sgp" dataType="number" year="2010-11" title="Grade 10 Special Education Student Growth Percentile in MCAS Grade 3 Math"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="t1_pa" dataType="number" year="2010-11" title="Title1 Students Proficient or Higher in MCAS Grade 3 Math"/>
+              <attribute min="0" dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" name="t1_pa_p" dataType="number" string="formatNumber(number, 2)" title="% Title1 Students Proficient or Higher in MCAS Grade 3 Math" keyType="MUNI_ID" year="2010-11" max="100"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="t1_num" dataType="number" year="2010-11" title="Number of Title1 Students in MCAS Grade 3 Math"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="t1_cpi" dataType="number" year="2010-11" title="Grade 10 Title1 Students Composite Performance Index in MCAS Grade 3 Math"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="t1_sgp" dataType="number" year="2010-11" title="Grade 10 Title1 Student Growth Percentile in MCAS Grade 3 Math"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="fem_pa" dataType="number" year="2010-11" title="Female Students Proficient or Higher in MCAS Grade 3 Math"/>
+              <attribute min="0" dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" name="fem_pa_p" dataType="number" string="formatNumber(number, 2)" title="% Female Students Proficient or Higher in MCAS Grade 3 Math" keyType="MUNI_ID" year="2010-11" max="100"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="fem_num" dataType="number" year="2010-11" title="Number of Female Students in MCAS Grade 3 Math"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="fem_cpi" dataType="number" year="2010-11" title="Grade 10 Female Students Composite Performance Index in MCAS Grade 3 Math"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="fem_sgp" dataType="number" year="2010-11" title="Grade 10 Female Student Growth Percentile in MCAS Grade 3 Math"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="mal_pa" dataType="number" year="2010-11" title="Male Students Proficient or Higher in MCAS Grade 3 Math"/>
+              <attribute min="0" dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" name="mal_pa_p" dataType="number" string="formatNumber(number, 2)" title="% Male Students Proficient or Higher in MCAS Grade 3 Math" keyType="MUNI_ID" year="2010-11" max="100"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="mal_num" dataType="number" year="2010-11" title="Number of Male Students in MCAS Grade 3 Math"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="mal_cpi" dataType="number" year="2010-11" title="Grade 10 Male Students Composite Performance Index in MCAS Grade 3 Math"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="mal_sgp" dataType="number" year="2010-11" title="Grade 10 Male Student Growth Percentile in MCAS Grade 3 Math"/>
+            </category>
+            <category title="MCAS Grade 03 Reading Proficiency by Group, 2010-11 (School Municipal Districts)" source="DESE, 2011" name="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011">
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="town_id" dataType="string" title="Municipal ID"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="town" dataType="string" title="Municipality"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="districtid" dataType="string" title="School District ID"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="district" dataType="string" title="School District"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="startgrade" dataType="string" title="Starting Grade"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="endgrade" dataType="number" title="Ending Grade"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" keyType="MUNI_ID" name="ALL_PA" dataType="number" title="All Students Proficient or Higher in MCAS Grade 3 Reading/ELA"/>
+              <attribute min="0" dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" name="ALL_PA_P" dataType="number" string="formatNumber(number, 2)" title="% All Students Proficient or Higher in MCAS Grade 3 Reading/ELA" keyType="MUNI_ID" max="100"/>
+              <attribute min=" " dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" keyType="MUNI_ID" dataType="number" title="Number of Students in MCAS Grade 3 Reading/ELA" name="ALL_NUM" max=" "/>
+              <attribute min=" " dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" keyType="MUNI_ID" dataType="number" title="All Students Composite Performance Index" name="ALL_CPI" max=" "/>
+              <attribute min=" " dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" keyType="MUNI_ID" dataType="number" title="Black Students Proficient or Higher in MCAS Grade 3 Reading/ELA" name="AA_PA" max=" "/>
+              <attribute min="0" dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" name="AA_PA_P" dataType="number" string="formatNumber(number, 2)" title="% Black Students Proficient or Higher in MCAS Grade 3 Reading/ELA" keyType="MUNI_ID" max="100"/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" name="AA_NUM" keyType="MUNI_ID" dataType="number" max=" " title="Number of Black Students in MCAS Grade 3 Reading/ELA"/>
+              <attribute min=" " dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" keyType="MUNI_ID" dataType="number" title="Black Students Composite Performance Index" name="AA_CPI" max=" "/>
+              <attribute min=" " dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" keyType="MUNI_ID" dataType="number" title="Asian Students Proficient or Higher in MCAS Grade 3 Reading/ELA" name="AS_PA" max=" "/>
+              <attribute min="0" dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" name="AS_PA_P" dataType="number" string="formatNumber(number, 2)" title="%  Asian Students Proficient or Higher in MCAS Grade 3 Reading/ELA" keyType="MUNI_ID" max="100"/>
+              <attribute min=" " dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" keyType="MUNI_ID" dataType="number" title="Number of Asian Students in MCAS Grade 3 Reading/ELA" name="AS_NUM" max=" "/>
+              <attribute min=" " dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" keyType="MUNI_ID" dataType="number" title="Asian Students Composite Performance Index" name="AS_CPI" max=" "/>
+              <attribute min=" " dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" keyType="MUNI_ID" dataType="number" title="Latino Students Proficient or Higher in MCAS Grade 3 Reading/ELA" name="LAT_PA" max=" "/>
+              <attribute min="0" dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" name="LAT_PA_P" dataType="number" string="formatNumber(number, 2)" title="% Latino Students Proficient or Higher in MCAS Grade 3 Reading/ELA" keyType="MUNI_ID" max="100"/>
+              <attribute min=" " dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" keyType="MUNI_ID" dataType="number" title="Number of Latino Students in MCAS Grade 3 Reading/ELA" name="LAT_NUM" max=" "/>
+              <attribute min=" " dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" keyType="MUNI_ID" dataType="number" title="Latino Students Composite Performance Index" name="LAT_CPI" max=" "/>
+              <attribute min=" " dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" keyType="MUNI_ID" dataType="number" title="White Students Proficient or Higher in MCAS Grade 3 Reading/ELA" name="WHI_PA" max=" "/>
+              <attribute min="0" dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" name="WHI_PA_P" dataType="number" string="formatNumber(number, 2)" title="% White Students Proficient or Higher in MCAS Grade 3 Reading/ELA" keyType="MUNI_ID" max="100"/>
+              <attribute min=" " dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" keyType="MUNI_ID" dataType="number" title="Number of White Students in MCAS Grade 3 Reading/ELA" name="WHI_NUM" max=" "/>
+              <attribute min=" " dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" keyType="MUNI_ID" dataType="number" title="White Students Composite Performance Index" name="WHI_CPI" max=" "/>
+              <attribute min=" " dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" keyType="MUNI_ID" dataType="number" title="English Language Learner Students Proficient or Higher in MCAS Grade 3 Reading/ELA" name="ELL_PA" max=" "/>
+              <attribute min="0" dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" name="ELL_PA_P" dataType="number" string="formatNumber(number, 2)" title="% English Language Learner Students Proficient or Higher in MCAS Grade 3 Reading/ELA" keyType="MUNI_ID" max="100"/>
+              <attribute min=" " dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" keyType="MUNI_ID" dataType="number" title="Number of English Language Learner Students in MCAS Grade 3 Reading/ELA" name="ELL_NUM" max=" "/>
+              <attribute min=" " dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" keyType="MUNI_ID" dataType="number" title="English Language Learners Students Composite Performance Index" name="ELL_CPI" max=" "/>
+              <attribute min=" " dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" keyType="MUNI_ID" dataType="number" title="Low Income Students Proficient or Higher in MCAS Grade 3 Reading/ELA" name="LI_PA" max=" "/>
+              <attribute min="0" dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" name="LI_PA_P" dataType="number" string="formatNumber(number, 2)" title="% Low Income Students Proficient or Higher in MCAS Grade 3 Reading/ELA" keyType="MUNI_ID" max="100"/>
+              <attribute min=" " dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" keyType="MUNI_ID" dataType="number" title="Number of Low Income Students in MCAS Grade 3 Reading/ELA" name="LI_NUM" max=" "/>
+              <attribute min=" " dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" keyType="MUNI_ID" dataType="number" title="Low Income Students Composite Performance Index" name="LI_CPI" max=" "/>
+              <attribute min=" " dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" keyType="MUNI_ID" dataType="number" title="Title 1 Students Proficient or Higher in MCAS Grade 3 Reading/ELA" name="TTL1_PA" max=" "/>
+              <attribute min="0" dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" name="TTL1_PA_P" dataType="number" string="formatNumber(number, 2)" title="% Title 1 Students Proficient or Higher in MCAS Grade 3 Reading/ELA" keyType="MUNI_ID" max="100"/>
+              <attribute min=" " dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" name="TTL1_NUM" dataType="number" keyType="MUNI_ID" title="Number of Title 1 Students in MCAS Grade 3 Reading/ELA"/>
+              <attribute min=" " dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" name="TTL1_CPI" dataType="number" keyType="MUNI_ID" title="Title 1 Students Composite Performance Index"/>
+              <attribute min=" " dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" name="FEM_PA" dataType="number" keyType="MUNI_ID" title="Female Students Proficient or Higher in MCAS Grade 3 Reading/ELA"/>
+              <attribute min="0" dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" name="FEM_PA_P" dataType="number" string="formatNumber(number, 2)" title="% Female Students Proficient or Higher in MCAS Grade 3 Reading/ELA" keyType="MUNI_ID" max="100"/>
+              <attribute min=" " dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" keyType="MUNI_ID" dataType="number" title="Number of Female Students in MCAS Grade 3 Reading/ELA" name="FEM_NUM" max=" "/>
+              <attribute min=" " dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" keyType="MUNI_ID" dataType="number" title="Female Students Composite Performance Index" name="FEM_CPI" max=" "/>
+              <attribute dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" name="MAL_PA" keyType="MUNI_ID" dataType="number" max=" " title="Male Students Proficient or Higher in MCAS Grade 3 Reading/ELA"/>
+              <attribute min="0" dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" name="MAL_PA_P" dataType="number" string="formatNumber(number, 2)" title="% Male Students Proficient or Higher in MCAS Grade 3 Reading/ELA" keyType="MUNI_ID" max="100"/>
+              <attribute min=" " dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" name="MAL_NUM" dataType="number" keyType="MUNI_ID" title="Number of Male Students in MCAS Grade 3 Reading/ELA"/>
+              <attribute min=" " dataTable="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" name="MAL_CPI" dataType="number" keyType="MUNI_ID" title="Male Students Composite Performance Index"/>
+            </category>
+            <category name="School Municipal Districts: MCAS Grade 3 All Students Math Proficiency (multi-year)" description="2005-06 thru 2010-11" source="DESE, 2011" title="MCAS Grade 03 Total Math Proficiency, by Year 2006-11 (School Municipal Districts)" subject="Education"/>
+            <category title="MCAS Grade 03 Total Reading Proficiency, 2010-11 (School Municipal Districts)" source="DESE, 2011" name="School Municipal Districts: MCAS Grade 03 Reading Proficiency, 2011"/>
+            <category title="MCAS Grade 03 Total Reading Proficiency, by Year 2006-11 (School Municipal Districts)" source="DESE, 2011" name="School Municipal Districts: MCAS Grade 3 All Students Reading Proficiency (multi-year)"/>
+            <category source="DESE, 2011" name="School Municipal Districts: MCAS Grade 08 Math Proficiency for Student Groups, 2011" title="MCAS Grade 08 Math Proficiency by Group, 2010-11 (School Municipal Districts)" subject="Education"/>
+            <category source="DESE, 2011" name="School Municipal Districts: MCAS Grade 08 Reading Proficiency for Student Groups, 2011" title="MCAS Grade 08 Reading Proficiency by Group, 2010-11 (School Municipal Districts)" subject="Education"/>
+            <category name="School Municipal Districts: MCAS Grade 08 Science Proficiency for Student Groups, 2011" description="MCAS" source="DESE, 2011" title="MCAS Grade 08 Science Proficiency by Group, 2010-11 (School Municipal Districts)" subject="Education"/>
+            <category name="School Municipal Districts: MCAS Grade 10 Math Proficiency for Student Groups, 2011" description=" MCAS" source="DESE, 2011" title="MCAS Grade 10 Math Proficiency by Group, 2010-11 (School Municipal Districts)"/>
+            <category title="MCAS Grade 10 Reading Proficiency by Group, 2010-11 (School Municipal Districts)" source="DESE, 2011" name="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011"/>
+            <category title="MCAS Grade 10 Source Proficiency by Group, 2010-11 (School Municipal Districts)" source="DESE, 2011" name="School Municipal Districts: MCAS Grade 10 Science Proficiency for Student Groups, 2011"/>
+          </category>
+          <category title="Schools data" name="Data Tables">
+            <category title="BPS Circle of Promise Schools" source="DESE, 2011" name="Boston Circle of Promise Schools"/>
+            <category title="BPS Schools" source="DESE, 2011" name="Boston Schools"/>
+            <category title="BPS Turnaround Schools" source="DESE, 2011" name="Boston Turnaround Schools"/>
+            <category title="Schools" source="DESE, 2011" name="Schools"/>
+            <category title="Enrollment, 2010-11 (Schools)" source="DESE, 2011" name="Schools: Enrollment, 2010-11"/>
+            <category title="Enrollment, by Year 2006-11 (Schools)" source="DESE 2011" name="Schools: Enrollment (multi-year)"/>
+            <category title="MCAS Grade 03 Math Proficiency by Group, 2010-11 (Schools)" source="DESE, 2011" name="Schools: MCAS Grade 03 Math Proficiency for Student Groups, 2011"/>
+            <category title="MCAS Grade 03 Reading Proficiency by Group, 2010-11 (Schools)" source="DESE, 2011" name="Schools: MCAS Grade 03 Reading Proficiency for Student Groups, 2011"/>
+            <category title="MCAS Grade 03 Total Reading Proficiency, 2010-11 (Schools)" source="DESE, 2011" name="Schools: MCAS Grade 03 Reading Proficiency, 2011"/>
+            <category source="DESE, 2011" name="Schools: MCAS Grade 08 Math Proficiency for Student Groups, 2011" title="MCAS Grade 08 Math Proficiency by Group, 2010-11 (Schools)" subject="Education"/>
+            <category source="DESE, 2011" name="Schools: MCAS Grade 08 Reading Proficiency for Student Groups, 2011" title="MCAS Grade 08 Reading Proficiency by Group, 2010-11 (Schools)" subject="Education"/>
+            <category source="DESE, 2011" name="Schools: MCAS Grade 08 Science Proficiency for Student Groups, 2011" title="MCAS Grade 08 Science Proficiency by Group, 2010-11 (Schools)" subject="Education"/>
+            <category title="MCAS Grade 10 Math Proficiency by Group, 2010-11 (Schools)" source="DESE, 2011" name="Schools: MCAS Grade 10 Math Proficiency for Student Groups, 2011"/>
+            <category title="MCAS Grade 10 Reading Proficiency by Group, 2010-11 (Schools)" source="DESE, 2011" name="Schools: MCAS Grade 10 Reading Proficiency for Student Groups, 2011"/>
+            <category title="MCAS Grade 10 Science Proficiency by Group, 2010-11 (Schools)" source="DESE, 2011" name="Schools: MCAS Grade 10 Science Proficiency for Student Groups, 2011"/>
+            <category source="DESE, 2010" name="Schools: Mobility, 2010" title="Mobility, 2010 (Schools)" subject="Education"/>
+            <category source="DESE,2011" name="Schools: Risk Indicators" title="Risk Factors, by Year 2006-11 (Schools)" subject="Education"/>
+          </category>
+          <category title="Colleges and Universities" source="MassGIS" name="Colleges and Universities"/>
+          <category title="Educational Attainment, Population 25+ years, 5yr Avg 2005-09 (Census 2000 Tracts)" source="ACS" name="Educational Attainment over 25 years (Census Tracts)"/>
+          <category title="Educational Attainment, Population 25+ years, 5yr Avg 2005-09 (Municipal)" source="ACS" name="Educational Attainment over 25 years (Municipal)">
+            <attribute dataTable="Educational Attainment over 25 years (Municipal)" keyType="MUNI_ID" name="muni_id" dataType="string" title="Municipal ID"/>
+            <attribute dataTable="Educational Attainment over 25 years (Municipal)" keyType="MUNI_ID" name="municipal" dataType="string" title="Municipality"/>
+            <attribute dataTable="Educational Attainment over 25 years (Municipal)" keyType="MUNI_ID" name="pop25_09" dataType="number" title="Population 25 Years and over"/>
+            <attribute dataTable="Educational Attainment over 25 years (Municipal)" keyType="MUNI_ID" name="pop25_09_m" dataType="number" title="Population 25 Years and over, MOE"/>
+            <attribute dataTable="Educational Attainment over 25 years (Municipal)" keyType="MUNI_ID" name="lths_09" dataType="number" title="Less than High School"/>
+            <attribute dataTable="Educational Attainment over 25 years (Municipal)" keyType="MUNI_ID" name="lths_09me" dataType="number" title="Less than High School, MOE"/>
+            <attribute dataTable="Educational Attainment over 25 years (Municipal)" keyType="MUNI_ID" name="ed9_12_09" dataType="number" title="Completed 9th- 12th Grade with no Diploma"/>
+            <attribute dataTable="Educational Attainment over 25 years (Municipal)" keyType="MUNI_ID" name="e912_09me" dataType="number" title="Completed 9th- 12th Grade with no Diploma, MOE"/>
+            <attribute dataTable="Educational Attainment over 25 years (Municipal)" keyType="MUNI_ID" name="ged09" dataType="number" title="High school graduate"/>
+            <attribute dataTable="Educational Attainment over 25 years (Municipal)" keyType="MUNI_ID" name="ged09_me" dataType="number" title="High school graduate, MOE"/>
+            <attribute dataTable="Educational Attainment over 25 years (Municipal)" keyType="MUNI_ID" name="some09" dataType="number" title="Some College"/>
+            <attribute dataTable="Educational Attainment over 25 years (Municipal)" keyType="MUNI_ID" name="some09_me" dataType="number" title="Some College, MOE"/>
+            <attribute dataTable="Educational Attainment over 25 years (Municipal)" keyType="MUNI_ID" name="assoc09" dataType="number" title="Associate Degree"/>
+            <attribute dataTable="Educational Attainment over 25 years (Municipal)" keyType="MUNI_ID" name="assoc09me" dataType="number" title="Associate Degree, MOE"/>
+            <attribute dataTable="Educational Attainment over 25 years (Municipal)" keyType="MUNI_ID" name="ba09" dataType="number" title="Bachelor Degree"/>
+            <attribute dataTable="Educational Attainment over 25 years (Municipal)" keyType="MUNI_ID" name="ba09_me" dataType="number" title="Bachelor Degree, MOE"/>
+            <attribute dataTable="Educational Attainment over 25 years (Municipal)" keyType="MUNI_ID" name="mast09" dataType="number" title="Master Degree or Higher"/>
+            <attribute dataTable="Educational Attainment over 25 years (Municipal)" keyType="MUNI_ID" name="mast09_me" dataType="number" title="Master Degree or Higher, MOE"/>
+            <attribute min="0" dataTable="Educational Attainment over 25 years (Municipal)" name="lths_09p" dataType="number" string="formatNumber(number, 1)" title="% Less than High School" keyType="MUNI_ID" max="100"/>
+            <attribute min="0" dataTable="Educational Attainment over 25 years (Municipal)" name="lths_09mep" dataType="number" string="formatNumber(number, 1)" title="% Less than High School, MOE" keyType="MUNI_ID" max="100"/>
+            <attribute min="0" dataTable="Educational Attainment over 25 years (Municipal)" name="ed9_12_09p" dataType="number" string="formatNumber(number, 1)" title="% Completed 9th- 12th Grade with no Diploma" keyType="MUNI_ID" max="100"/>
+            <attribute min="0" dataTable="Educational Attainment over 25 years (Municipal)" name="e912_09mep" dataType="number" string="formatNumber(number, 1)" title="% Completed 9th- 12th Grade with no Diploma, MOE" keyType="MUNI_ID" max="100"/>
+            <attribute min="0" dataTable="Educational Attainment over 25 years (Municipal)" name="ged09p" dataType="number" string="formatNumber(number, 1)" title="% High school graduate" keyType="MUNI_ID" max="100"/>
+            <attribute min="0" dataTable="Educational Attainment over 25 years (Municipal)" name="ged09_mep" dataType="number" string="formatNumber(number, 1)" title="% High school graduate, MOE" keyType="MUNI_ID" max="100"/>
+            <attribute min="0" dataTable="Educational Attainment over 25 years (Municipal)" name="some09p" dataType="number" string="formatNumber(number, 1)" title="% Some College" keyType="MUNI_ID" max="100"/>
+            <attribute min="0" dataTable="Educational Attainment over 25 years (Municipal)" name="some09_mep" dataType="number" string="formatNumber(number, 1)" title="% Some College, MOE" keyType="MUNI_ID" max="100"/>
+            <attribute min="0" dataTable="Educational Attainment over 25 years (Municipal)" name="assoc09p" dataType="number" string="formatNumber(number, 1)" title="% Associates Degree" keyType="MUNI_ID" max="100"/>
+            <attribute min="0" dataTable="Educational Attainment over 25 years (Municipal)" name="assoc09mep" dataType="number" string="formatNumber(number, 1)" title="% Associates Degree, MOE" keyType="MUNI_ID" max="100"/>
+            <attribute min="0" dataTable="Educational Attainment over 25 years (Municipal)" name="ba09p" dataType="number" string="formatNumber(number, 1)" title="% Bachelor Degree" keyType="MUNI_ID" max="100"/>
+            <attribute min="0" dataTable="Educational Attainment over 25 years (Municipal)" name="ba09_mep" dataType="number" string="formatNumber(number, 1)" title="% Bachelor Degree, MOE" keyType="MUNI_ID" max="100"/>
+            <attribute min="0" dataTable="Educational Attainment over 25 years (Municipal)" name="mast09p" dataType="number" string="formatNumber(number, 1)" title="% Master Degree or Higher" keyType="MUNI_ID" max="100"/>
+            <attribute min="0" dataTable="Educational Attainment over 25 years (Municipal)" name="mast09_mep" dataType="number" string="formatNumber(number, 1)" title="% Master Degree or Higher, MOE" keyType="MUNI_ID" max="100"/>
+          </category>
+          <category title="Libraries" source="MassGIS, 2005" name="Libraries"/>
+        </category>
+        <category title="Environment &amp; Energy" name="Data Tables">
+          <category title="Environmental Hazards Density (Municipal)" source="Northeastern study" name="Environmental Hazards Density (Municipal)"/>
+          <category title="Environmental Justice Populations, 2000 (Block Groups)" source="Census" name="Environmental Justice Populations (Block Groups)"/>
+          <category name="Environmental Justice Criteria (Municipal)" description="Census 2000 block groups" source="Census" title="Environmental Justice Summary, 2000 (Municipal)" subject="Environment"/>
+          <category title="Land Use Summary Statistics, 2005 (Municipal)" source="MassGIS, 2009" name="Land Use Summary Statistics 2005 (Municipal)"/>
+          <category title="LEED Certified Buildings (Points)" name="LEED Certified Buildings (Points)"/>
+          <category title="Open Space" name="Open Space"/>
+          <category title="Protected Open Space" name="Protected Open Space"/>
+          <category title="Water Bodies (100k Hydro)" name="Water Bodies (100k Hydro)"/>
+        </category>
+        <category title="Housing" name="Data Tables">
+          <category source="Census" name="Housing Building Permits: Multi-Family Units (Municipal)" title="Building Permits: Multi-Family Housing, by Year 2000-10 (Municipal)" subject="Housing"/>
+          <category source="Census" name="Housing Building Permits: Single Family Units (Municipal)" title="Building Permits: Single Family Housing, by Year 2001-10 (Municipal)" subject="Housing"/>
+          <category source="Census" name="Housing Building Permits: Total Units (Municipal)" title="Building Permits: Total Housing, by Year 2001-10 (Municipal)" subject="Housing"/>
+          <category source="Census" name="Housing: Household Type 2000-2010 (Municipal)" title="Household Type, 2000 &amp; 2010 (Municipal)" subject="Housing"/>
+          <category title="Housing Cost Burden for Owner, 5yr Avg 2005-09 (Municipal)" source="ACS" name="Housing Cost Burden for Owner (Municipal)">
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="muni_id" dataType="string" title="Municipal ID"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="municipal" dataType="string" title="Municipality"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="HU_OWN" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="HU_OWN_ME" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units, margin of error"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="MRG" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units with a mortgage"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="MRG_ME" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units with a mortgage, margin of error"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="MRG_NC" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units with a mortgage not computed"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="MRG_NC_ME" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units with a mortgage not computed, margin of error"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="MRG_LNC" dataType="number" year="ACS 2005-09" title="Housing units with a mortgage less those not computed"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="MRG_LNC_ME" dataType="number" year="ACS 2005-09" title="Housing units with a mortgage less those not computed, margin of error"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="MRGLT10" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units with a mortgage; Less than 10 % of income"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="MRGLT10ME" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units with a mortgage; Less than 10 % of income, margin of error"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="MRG10_14" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units with a mortgage; 10-14.9% of income"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="MRG10_14ME" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units with a mortgage; 10-14.9% of income, margin of error"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="MRG15_19" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units with a mortgage; 15-19.9% of income"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="MRG15_19ME" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units with a mortgage; 15-19.9% of income, margin of error"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="MRG20_24" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units with a mortgage; 20-24.9% of income"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="MRG20_24ME" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units with a mortgage; 20-24.9% of income, margin of error"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="MRG25_29" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units with a mortgage; 25-29.9% of income"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="MRG25_29ME" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units with a mortgage; 25-29.9% of income, margin of error"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="MRG30_35" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units with a mortgage; 30-34.9% of income"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="MRG30_35ME" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units with a mortgage; 30-34.9% of income, margin of error"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="MRG35_39" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units with a mortgage; 35-39.9% of income"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="MRG35_39ME" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units with a mortgage; 35-39.9% of income, margin of error"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="MRG40_49" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units with a mortgage; 40-49.9% of income"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="MRG40_49ME" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units with a mortgage; 40-49.9% of income, margin of error"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="MRG_GT50" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units with a mortgage; 50% or more of income"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="MRG_GT50ME" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units with a mortgage; 50% or more of income, margin of error"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="NMR" dataType="number" year="ACS 2005-09" title="Housing units without a mortgage"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="NMR_ME" dataType="number" year="ACS 2005-09" title="Housing units without a mortgage, margin of error"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="NMR_NC" dataType="number" year="ACS 2005-09" title="Housing units without a mortgage not computed"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="NMR_NC_ME" dataType="number" year="ACS 2005-09" title="Housing units without a mortgage not computed, margin of error"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="NMR_LNC" dataType="number" year="ACS 2005-09" title="Housing units without a mortgage less those not computed"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="NMR_LNC_ME" dataType="number" year="ACS 2005-09" title="Housing units without a mortgage less those not computed, margin of error"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="NMRLT10" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units without a mortgage; Less than 10 % of income"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="NMRLT10ME" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units without a mortgage; Less than 10 % of income, margin of error"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="NMR10_14" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units without a mortgage; 10-14.9% of income"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="NMR10_14ME" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units without a mortgage; 10-14.9% of income, margin of error"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="NMR15_19" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units without a mortgage; 15-19.9% of income"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="NMR15_19ME" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units without a mortgage; 15-19.9% of income, margin of error"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="NMR20_24" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units without a mortgage; 20-24.9% of income"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="NMR20_24ME" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units without a mortgage; 20-24.9% of income, margin of error"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="NMR25_29" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units without a mortgage; 25-29.9% of income"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="NMR25_29ME" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units without a mortgage; 25-29.9% of income, margin of error"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="NMR30_35" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units without a mortgage; 30-34.9% of income"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="NMR30_35ME" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units without a mortgage; 30-34.9% of income, margin of error"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="NMR35_39" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units without a mortgage; 35-39.9% of income"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="NMR35_39ME" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units without a mortgage; 35-39.9% of income, margin of error"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="NMR40_49" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units without a mortgage; 40-49.9% of income"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="NMR40_49ME" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units without a mortgage; 40-49.9% of income, margin of error"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="NMR_GT50" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units without a mortgage; 50% or more of income"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="NMR_GT50ME" dataType="number" year="ACS 2005-09" title="Owner-Occupied Housing Units without a mortgage; 50% or more of income, margin of error"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="MRG_LT30" dataType="number" year="ACS 2005-09" title="Housing units with a mortgage where owners are paying less than 30% of income on housing costs"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="MRG_LT30ME" dataType="number" year="ACS 2005-09" title="Housing units with a mortgage where owners are paying less than 30% of income on housing costs, margin of error"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="MRG_GT30" dataType="number" year="ACS 2005-09" title="Housing units with a mortgage where owners are paying 30% or more of  income on housing costs"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="MRG_GT30ME" dataType="number" year="ACS 2005-09" title="Housing units with a mortgage where owners are paying 30% or more of  income on housing costs, margin of error"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="NMR_LT30" dataType="number" year="ACS 2005-09" title="Housing units without a mortgage where owners are paying less than 30% of income on housing costs"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="NMR_LT30ME" dataType="number" year="ACS 2005-09" title="Housing units without a mortgage where owners are paying less than 30% of income on housing costs, margin of error"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="NMR_GT30" dataType="number" year="ACS 2005-09" title="Housing units without a mortgage where owners are paying 30% or more of  income on housing costs"/>
+            <attribute dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" name="NMR_GT30ME" dataType="number" year="ACS 2005-09" title="Housing units without a mortgage where owners are paying 30% or more of  income on housing costs, margin of error"/>
+            <attribute min="0" dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" dataType="number" string="formatNumber(number, 1)" title="% Housing units with a mortgage where owners are paying less than 30% of income on housing costs" name="MRG_LT30p" year="ACS 2005-09" max="100"/>
+            <attribute min="0" dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" dataType="number" string="formatNumber(number, 1)" title="% Housing units with a mortgage where owners are paying less than 30% of income on housing costs, margin of error" name="MRGLT30MEp" year="ACS 2005-09" max="100"/>
+            <attribute min="0" dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" dataType="number" string="formatNumber(number, 1)" title="% Housing units with a mortgage where owners are paying 30% or more of  income on housing costs" name="MRG_GT30p" year="ACS 2005-09" max="100"/>
+            <attribute min="0" dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" dataType="number" string="formatNumber(number, 1)" title="% Housing units with a mortgage where owners are paying 30% or more of  income on housing costs, margin of error" name="MRGGT30MEp" year="ACS 2005-09" max="100"/>
+            <attribute min="0" dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" dataType="number" string="formatNumber(number, 1)" title="% Housing units without a mortgage where owners are paying less than 30% of income on housing costs" name="NMR_LT30p" year="ACS 2005-09" max="100"/>
+            <attribute min="0" dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" dataType="number" string="formatNumber(number, 1)" title="% Housing units without a mortgage where owners are paying less than 30% of income on housing costs, margin of error" name="NMRLT30MEp" year="ACS 2005-09" max="100"/>
+            <attribute min="0" dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" dataType="number" string="formatNumber(number, 1)" title="% Housing units without a mortgage where owners are paying 30% or more of  income on housing costs" name="NMR_GT30p" year="ACS 2005-09" max="100"/>
+            <attribute min="0" dataTable="Housing Cost Burden for Owner (Municipal)" keyType="MUNI_ID" dataType="number" string="formatNumber(number, 1)" title="% Housing units without a mortgage where owners are paying 30% or more of  income on housing costs, margin of error" name="NMRGT30MEp" year="ACS 2005-09" max="100"/>
+          </category>
+          <category source="ACS" name="Housing Cost Burden for Renters (Census Tracts)" title="Housing Cost Burden for Renters, 5yr Avg 2005-09 (Census 2000 Tracts)" subject="Housing">
+            <attribute dataTable="Housing Cost Burden for Renters (Census Tracts)" name="CT_ID" keyType="CT_ID" dataType="string" title="Census Tract 2000 ID"/>
+            <attribute dataTable="Housing Cost Burden for Renters (Census Tracts)" name="RENTOCC" keyType="CT_ID" dataType="number" year="2005-09" title="Renter-occupied housing units"/>
+            <attribute dataTable="Housing Cost Burden for Renters (Census Tracts)" name="RENTOCC_ME" keyType="CT_ID" dataType="number" year="2005-09" title="Renter-occupied housing units, margin of error"/>
+            <attribute dataTable="Housing Cost Burden for Renters (Census Tracts)" name="RENTLT30" keyType="CT_ID" dataType="number" year="2005-09" title="Renters paying less than 30% of household income on rent"/>
+            <attribute dataTable="Housing Cost Burden for Renters (Census Tracts)" name="RENTLT30ME" keyType="CT_ID" dataType="number" year="2005-09" title="Renters paying less than 30% of household income on rent, margin of error"/>
+            <attribute dataTable="Housing Cost Burden for Renters (Census Tracts)" name="RENTGT30" keyType="CT_ID" dataType="number" year="2005-09" title="Renters paying 30% or more of household income on rent"/>
+            <attribute dataTable="Housing Cost Burden for Renters (Census Tracts)" name="RENTGT30ME" keyType="CT_ID" dataType="number" year="2005-09" title="Renters paying 30% or more of household income on rent, margin of error"/>
+            <attribute min="0" dataTable="Housing Cost Burden for Renters (Census Tracts)" name="PRNTLT30" dataType="number" string="formatNumber(number, 1)" title="% Renters paying less than 30% of household income on rent" keyType="CT_ID" year="2005-09" max="100"/>
+            <attribute min="0" dataTable="Housing Cost Burden for Renters (Census Tracts)" name="PRNTLT30ME" dataType="number" string="formatNumber(number, 1)" title="% Renters paying less than 30% of household income on rent, margin of error" keyType="CT_ID" year="2005-09" max="100"/>
+            <attribute min="0" dataTable="Housing Cost Burden for Renters (Census Tracts)" name="PRNTGT30" dataType="number" string="formatNumber(number, 1)" title="% Renters paying 30% or more of household income on rent" keyType="CT_ID" year="2005-09" max="100"/>
+            <attribute min="0" dataTable="Housing Cost Burden for Renters (Census Tracts)" name="PRNTGT30ME" dataType="number" string="formatNumber(number, 1)" title="% Renters paying 30% or more of household income on rent, margin of error" keyType="CT_ID" year="2005-09" max="100"/>
+          </category>
+          <category source="ACS" name="Housing Cost Burden for Renters (Municipal)" title="Housing Cost Burden for Renters, 5yr Avg 2005-09 (Municipal)" subject="Housing">
+            <attribute dataTable="Housing Cost Burden for Renters (Municipal)" name="muni_id" keyType="MUNI_ID" dataType="string" title="Municipal ID"/>
+            <attribute dataTable="Housing Cost Burden for Renters (Municipal)" name="municipal" keyType="MUNI_ID" dataType="string" title="Municipality"/>
+            <attribute dataTable="Housing Cost Burden for Renters (Municipal)" name="rentocc" keyType="MUNI_ID" dataType="number" year="2005-09" title="Renter-occupied housing units"/>
+            <attribute dataTable="Housing Cost Burden for Renters (Municipal)" name="rentocc_me" keyType="MUNI_ID" dataType="number" year="2005-09" title="Renter-occupied housing units, margin of error"/>
+            <attribute dataTable="Housing Cost Burden for Renters (Municipal)" name="rentlt30" keyType="MUNI_ID" dataType="number" year="2005-09" title="Renters paying less than 30% of household income on rent"/>
+            <attribute dataTable="Housing Cost Burden for Renters (Municipal)" name="rentlt30me" keyType="MUNI_ID" dataType="number" year="2005-09" title="Renters paying less than 30% of household income on rent, margin of error"/>
+            <attribute dataTable="Housing Cost Burden for Renters (Municipal)" name="rentgt30" keyType="MUNI_ID" dataType="number" year="2005-09" title="Renters paying 30% or more of household income on rent"/>
+            <attribute dataTable="Housing Cost Burden for Renters (Municipal)" name="rentgt30me" keyType="MUNI_ID" dataType="number" year="2005-09" title="Renters paying 30% or more of household income on rent, margin of error"/>
+            <attribute min="0" dataTable="Housing Cost Burden for Renters (Municipal)" name="prntlt30" dataType="number" string="formatNumber(number, 1)" title="% Renters paying less than 30% of household income on rent" keyType="MUNI_ID" year="2005-09" max="100"/>
+            <attribute min="0" dataTable="Housing Cost Burden for Renters (Municipal)" name="prntlt30me" dataType="number" string="formatNumber(number, 1)" title="% Renters paying less than 30% of household income on rent, margin of error" keyType="MUNI_ID" year="2005-09" max="100"/>
+            <attribute min="0" dataTable="Housing Cost Burden for Renters (Municipal)" name="prntgt30" dataType="number" string="formatNumber(number, 1)" title="% Renters paying 30% or more of household income on rent" keyType="MUNI_ID" year="2005-09" max="100"/>
+            <attribute min="0" dataTable="Housing Cost Burden for Renters (Municipal)" name="prntgt30me" dataType="number" string="formatNumber(number, 1)" title="% Renters paying 30% or more of household income on rent, margin of error" keyType="MUNI_ID" year="2005-09" max="100"/>
+          </category>
+          <category source="Census" name="Housing Occupancy, 2000-2010 (Municipal)" title="Housing Occupancy, 2000 &amp; 2010 (Municipal)" subject="Demographics"/>
+          <category name="Housing: Census 2000 (Municipal)" description="Census 2000" source="Census" title="Housing Summary, 2000 (Municipal)" subject="Housing"/>
+          <category name="Median Household Income by Race (Municipal)" description="ACS 2005-09" source="ACS" title="Median Household Income by Race, 5yr Avg 2005-09 (Municipal)" subject="Housing"/>
+          <category source="DHCD, 2011" name="Subsidized Housing Inventory" title="Subsidized Housing Inventory, by Year 2006-11 (Municipal) " subject="Housing">
+            <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" name="devun4_10" dataType="number" year="April 2010" title="Total Development Inventory"/>
+            <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" name="shi_4_10" dataType="number" year="April 2010" title="Subsidized Housing Inventory, April 2010"/>
+            <attribute dataTable="Subsidized Housing Inventory" name="p_shi_4_10" dataType="number" string="formatNumber(number, 1)+'%'" title="% SHI: April 2010" keyType="MUNI_ID" year="April 2010"/>
+            <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" name="muni_id" dataType="string" title="Municiapl ID"/>
+            <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" name="municipal" dataType="string" title="Municipality"/>
+            <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" name="hu_2000" dataType="number" title="Census 2000 Housing units"/>
+            <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" name="devun4_02" dataType="number" year="April 2002" title="Total Development Inventory"/>
+            <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" name="shi_4_02" dataType="number" year="April 2002" title="Subsidized Housing Inventory, April 2002"/>
+            <attribute dataTable="Subsidized Housing Inventory" name="p_shi_4_02" dataType="number" string="formatNumber(number, 1)+'%'" title="% SHI: April 2002" keyType="MUNI_ID" year="April 2002"/>
+            <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" name="devun10_03" dataType="number" year="Oct 2003" title="Total Development Inventory"/>
+            <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" name="shi_10_03" dataType="number" year="Oct 2003" title="Subsidized Housing Inventory, Oct 2003"/>
+            <attribute dataTable="Subsidized Housing Inventory" name="p_shi10_03" dataType="number" string="formatNumber(number, 1)+'%'" title="% SHI: Oct 2003" keyType="MUNI_ID" year="Oct 2003"/>
+            <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" name="devun2_04" dataType="number" year="Feb 2004" title="Total Development Inventory"/>
+            <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" name="shi_2_04" dataType="number" year="Feb 2004" title="Subsidized Housing Inventory, Feb 2004"/>
+            <attribute dataTable="Subsidized Housing Inventory" name="p_shi_2_04" dataType="number" string="formatNumber(number, 1)+'%'" title="% SHI: Feb 2004" keyType="MUNI_ID" year="Feb 2004"/>
+            <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" name="devun2_05" dataType="number" year="Feb 2005" title="Total Development Inventory"/>
+            <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" name="shi_2_05" dataType="number" year="Feb 2005" title="Subsidized Housing Inventory, Feb 2005"/>
+            <attribute dataTable="Subsidized Housing Inventory" name="p_shi_2_05" dataType="number" string="formatNumber(number, 1)+'%'" title="% SHI: Feb 2005" keyType="MUNI_ID" year="Feb 2005"/>
+            <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" name="devun2_06" dataType="number" year="Feb 2006" title="Total Development Inventory"/>
+            <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" name="shi_2_06" dataType="number" year="Feb 2006" title="Subsidized Housing Inventory, Feb 2006"/>
+            <attribute dataTable="Subsidized Housing Inventory" name="p_shi_2_06" dataType="number" string="formatNumber(number, 1)+'%'" title="% SHI: Feb 2006" keyType="MUNI_ID" year="Feb 2006"/>
+            <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" name="devun2_07" dataType="number" year="Feb 2007" title="Total Development Inventory"/>
+            <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" name="shi_2_07" dataType="number" year="Feb 2007" title="Subsidized Housing Inventory, Feb 2007"/>
+            <attribute dataTable="Subsidized Housing Inventory" name="p_shi_2_07" dataType="number" string="formatNumber(number, 1)+'%'" title="% SHI: Feb 2007" keyType="MUNI_ID" year="Feb 2007"/>
+            <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" name="devun9_07" dataType="number" year="Sept 2007" title="Total Development Inventory"/>
+            <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" name="shi_9_07" dataType="number" year="Sept 2007" title="Subsidized Housing Inventory, Sept 2007"/>
+            <attribute dataTable="Subsidized Housing Inventory" name="p_shi_9_07" dataType="number" string="formatNumber(number, 1)+'%'" title="% SHI: Sept 2007" keyType="MUNI_ID" year="Sept 2007"/>
+            <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" name="devun2_08" dataType="number" year="Feb 2008" title="Total Development Inventory"/>
+            <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" name="shi_2_08" dataType="number" year="Feb 2008" title="Subsidized Housing Inventory, Feb 2008"/>
+            <attribute dataTable="Subsidized Housing Inventory" name="p_shi_2_08" dataType="number" string="formatNumber(number, 1)+'%'" title="% SHI: Feb 2008" keyType="MUNI_ID" year="Feb 2008"/>
+            <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" name="devun9_08" dataType="number" year="Sept 2008" title="Total Development Inventory"/>
+            <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" name="shi_9_08" dataType="number" year="Sept 2008" title="Subsidized Housing Inventory, Sept 2008"/>
+            <attribute dataTable="Subsidized Housing Inventory" name="p_shi_9_08" dataType="number" string="formatNumber(number, 1)+'%'" title="% SHI: Sept 2008" keyType="MUNI_ID" year="Sept 2008"/>
+            <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" name="devun9_09" dataType="number" year="Sept 2009" title="Total Development Inventory"/>
+            <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" name="shi_9_09" dataType="number" year="Sept 2009" title="Subsidized Housing Inventory, Sept 2009"/>
+            <attribute dataTable="Subsidized Housing Inventory" name="p_shi_9_09" dataType="number" string="formatNumber(number, 1)+'%'" title="% SHI: Sept 2009" keyType="MUNI_ID" year="Sept 2009"/>
+            <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" name="dev410m402" dataType="number" title="Change in Total Development Units (April 2002 -April 2010)"/>
+            <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" name="shi410402" dataType="number" title="Change in SHI Units (April 2002 -April 2010)"/>
+            <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" name="p_sh410402" dataType="number" title=" Change in SHI Units (April 2002 - April 2010)"/>
+            <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" name="hu_2010" dataType="number" title="Census 2010 Housing units"/>
+            <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" name="devun6_11" dataType="number" year="June 2011" title="Total Development Inventory"/>
+            <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" name="shi_6_11" dataType="number" year="June 2011" title="Subsidized Housing Inventory, June 2011"/>
+            <attribute dataTable="Subsidized Housing Inventory" name="p_shi_6_11" dataType="number" string="formatNumber(number, 1)+'%'" title="% SHI: June 2011" keyType="MUNI_ID" year="June 2011"/>
+          </category>
+        </category>
+        <category title="Public Health" name="Data Tables">
+          <category source="MADPH, 2012" name="Asthma Related Hospitalizations" title="Asthma Related Hospitalizations, 2007-09 (Municipal)" subject="Public Health">
+            <attribute dataTable="Asthma Related Hospitalizations" keyType="MUNI_ID" name="MUNI_ID" dataType="string" title="Municipal ID"/>
+            <attribute dataTable="Asthma Related Hospitalizations" keyType="MUNI_ID" name="MUNICIPAL" dataType="string" title="Municipality"/>
+            <attribute dataTable="Asthma Related Hospitalizations" keyType="MUNI_ID" name="FEM_07" dataType="number" title="Female Asthma Hospitalizations, 2007"/>
+            <attribute dataTable="Asthma Related Hospitalizations" keyType="MUNI_ID" name="MAL_07" dataType="number" title="Male Asthma Related Hospitalizations, 2007"/>
+            <attribute dataTable="Asthma Related Hospitalizations" keyType="MUNI_ID" name="TTL_07" dataType="number" title="Total Asthma Related Hospitalizations, 2007"/>
+            <attribute dataTable="Asthma Related Hospitalizations" keyType="MUNI_ID" name="FEM_08" dataType="number" title="Female Asthma Hospitalizations, 2008"/>
+            <attribute dataTable="Asthma Related Hospitalizations" keyType="MUNI_ID" name="MAL_08" dataType="number" title="Male Asthma Related Hospitalizations, 2008"/>
+            <attribute dataTable="Asthma Related Hospitalizations" keyType="MUNI_ID" name="TTL_08" dataType="number" title="Total Asthma Related Hospitalizations, 2008"/>
+            <attribute dataTable="Asthma Related Hospitalizations" keyType="MUNI_ID" name="FEM_09" dataType="number" title="Female Asthma Hospitalizations, 2009"/>
+            <attribute dataTable="Asthma Related Hospitalizations" keyType="MUNI_ID" name="MAL_09" dataType="number" title="Male Asthma Related Hospitalizations, 2009"/>
+            <attribute dataTable="Asthma Related Hospitalizations" keyType="MUNI_ID" name="TTL_09" dataType="number" title="Total Asthma Related Hospitalizations, 2009"/>
+          </category>
+          <category source="MADPH, 2012" name="Cancer Mortality, 2006 (Municipal)" title="Cancer Mortality, 2006 (Municipal)" subject="Public Health"/>
+          <category source="MADPH, 2012" name="Cancer Mortality, 2007 (Municipal)" title="Cancer Mortality, 2007 (Municipal)" subject="Public Health"/>
+          <category source="MADPH, 2012" name="Cancer Mortality, 2008 (Municipal)" title="Cancer Mortality, 2008 (Municipal)" subject="Public Health">
+            <attribute dataTable="Cancer Mortality, 2008 (Municipal)" keyType="MUNI_ID" name="MUNI_ID" dataType="string" title="Municipal ID"/>
+            <attribute dataTable="Cancer Mortality, 2008 (Municipal)" keyType="MUNI_ID" name="MUNICIPAL" dataType="string" title="Municpality"/>
+            <attribute dataTable="Cancer Mortality, 2008 (Municipal)" keyType="MUNI_ID" name="ALL_08" dataType="number" title="Cancer Deaths, 2008"/>
+            <attribute dataTable="Cancer Mortality, 2008 (Municipal)" keyType="MUNI_ID" name="ALL_ADJ_08" dataType="number" title="Cancer Death Rate, 2008"/>
+            <attribute dataTable="Cancer Mortality, 2008 (Municipal)" keyType="MUNI_ID" name="ALL_ADJR08" dataType="string" title="Cancer Death Rate Range, 2008"/>
+            <attribute dataTable="Cancer Mortality, 2008 (Municipal)" keyType="MUNI_ID" name="BRF_08" dataType="number" title="Breast Cancer Deaths - Female, 2008"/>
+            <attribute dataTable="Cancer Mortality, 2008 (Municipal)" keyType="MUNI_ID" name="BRF_ADJ_08" dataType="number" title="Breast Cancer Death Rate - Female, 2008"/>
+            <attribute dataTable="Cancer Mortality, 2008 (Municipal)" keyType="MUNI_ID" name="BRF_ADJR_08" dataType="string" title="Breast Cancer Death Rate Range - Female, 2008"/>
+            <attribute dataTable="Cancer Mortality, 2008 (Municipal)" keyType="MUNI_ID" name="BRM_08" dataType="number" title="Breast Cancer Deaths - Male, 2008"/>
+            <attribute dataTable="Cancer Mortality, 2008 (Municipal)" keyType="MUNI_ID" name="BRM_ADJ_08" dataType="number" title="Breast Cancer Death Rate - Male, 2008"/>
+            <attribute dataTable="Cancer Mortality, 2008 (Municipal)" keyType="MUNI_ID" name="BRM_ADJR_08" dataType="string" title="Breast Cancer Death Rate Range - Male, 2008"/>
+            <attribute dataTable="Cancer Mortality, 2008 (Municipal)" keyType="MUNI_ID" name="CRV_08" dataType="number" title="Cervical Cancer Deaths, 2008"/>
+            <attribute dataTable="Cancer Mortality, 2008 (Municipal)" keyType="MUNI_ID" name="CRV_ADJ_08" dataType="number" title="Cervical Cancer Death Rate, 2008"/>
+            <attribute dataTable="Cancer Mortality, 2008 (Municipal)" keyType="MUNI_ID" name="CRV_ADJR08" dataType="string" title="Cervical Cancer Death Rate Range, 2008"/>
+            <attribute dataTable="Cancer Mortality, 2008 (Municipal)" keyType="MUNI_ID" name="COL_08" dataType="number" title="Colorectal Cancer Deaths, 2008"/>
+            <attribute dataTable="Cancer Mortality, 2008 (Municipal)" keyType="MUNI_ID" name="COL_ADJ_08" dataType="number" title="Colorectal Cancer Death Rate, 2008"/>
+            <attribute dataTable="Cancer Mortality, 2008 (Municipal)" keyType="MUNI_ID" name="COL_ADJR08" dataType="string" title="Colorectal Cancer Death Rate Range, 2008"/>
+            <attribute dataTable="Cancer Mortality, 2008 (Municipal)" keyType="MUNI_ID" name="LNG_08" dataType="number" title="Lung Cancer Deaths, 2008"/>
+            <attribute dataTable="Cancer Mortality, 2008 (Municipal)" keyType="MUNI_ID" name="LNG_ADJ_08" dataType="number" title="Lung Cancer Death Rate, 2008"/>
+            <attribute dataTable="Cancer Mortality, 2008 (Municipal)" keyType="MUNI_ID" name="LNG_ADJR_08" dataType="string" title="Lung Cancer Death Rate Range, 2008"/>
+            <attribute dataTable="Cancer Mortality, 2008 (Municipal)" keyType="MUNI_ID" name="ORL_08" dataType="number" title="Oral Cavity Cancer Deaths, 2008"/>
+            <attribute dataTable="Cancer Mortality, 2008 (Municipal)" keyType="MUNI_ID" name="ORL_ADJ_08" dataType="number" title="Oral Cavity Cancer Death Rate, 2008"/>
+            <attribute dataTable="Cancer Mortality, 2008 (Municipal)" keyType="MUNI_ID" name="ORL_ADJR08" dataType="string" title="Oral Cavity Cancer Death Rate Range, 2008"/>
+            <attribute dataTable="Cancer Mortality, 2008 (Municipal)" keyType="MUNI_ID" name="PRS_08" dataType="number" title="Prostate Cancer Deaths, 2008"/>
+            <attribute dataTable="Cancer Mortality, 2008 (Municipal)" keyType="MUNI_ID" name="PRS_ADJ_08" dataType="number" title="Prostate Cancer Death Rate, 2008"/>
+            <attribute dataTable="Cancer Mortality, 2008 (Municipal)" keyType="MUNI_ID" name="PRS_ADJR08" dataType="string" title="Prostate Cancer Death Rate Range, 2008"/>
+          </category>
+          <category source="MADPH, 2012" name="Cardiovascular Hospitalizations (Municipal)" title="Cardiovascular Hospitalizations, 2007-09 (Municipal)" subject="Public Health"/>
+          <category title="Low Birth Weight (Municipal)" name="Low Birth Weight (Municipal)" subject="Public Health">
+            <attribute dataTable="Low Birth Weight (Municipal)" name="MUNI_ID" keyType="MUNI_ID" dataType="string" title="Municipal ID"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="MUNICIPAL" keyType="MUNI_ID" dataType="string" title="Municipality"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="ALL_TOT_07" keyType="MUNI_ID" dataType="number" title="Total Births, 2007"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="ALL_LBW_07" keyType="MUNI_ID" dataType="number" title="Total Births with Low Birth Weight, 2007"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="AS_TOT_07" keyType="MUNI_ID" dataType="number" title="Asian Total Births, 2007"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="AS_LBW_07" keyType="MUNI_ID" dataType="number" title="Asian Births with Low Birth Weight, 2007"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="AS_LBW07P" keyType="MUNI_ID" dataType="number" title="% Asian Births with Low Birth Weight, 2007"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="BLK_TOT_07" keyType="MUNI_ID" dataType="number" title="Black Total Births, 2007"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="BLK_LBW_07" keyType="MUNI_ID" dataType="number" title="Black Births with Low Birth Weight, 2007"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="BLK_LBW07P" keyType="MUNI_ID" dataType="number" title="% Black Births with Low Birth Weight, 2007"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="HIS_TOT_07" keyType="MUNI_ID" dataType="number" title="Hispanic Total Births, 2007"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="HIS_LBW_07" keyType="MUNI_ID" dataType="number" title="Hispanic Births with Low Birth Weight, 2007"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="HIS_LBW07P" keyType="MUNI_ID" dataType="number" title="% Hispanic Births with Low Birth Weight, 2007"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="OTH_TOT_07" keyType="MUNI_ID" dataType="number" title="Other Total Births, 2007"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="OTH_LBW_07" keyType="MUNI_ID" dataType="number" title="Other Births with Low Birth Weight, 2007"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="OTH_LBW07P" keyType="MUNI_ID" dataType="number" title="% Other Births with Low Birth Weight, 2007"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="WHI_TOT_07" keyType="MUNI_ID" dataType="number" title="White Total Births, 2007"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="WHI_LBW_07" keyType="MUNI_ID" dataType="number" title="White Births with Low Birth Weight, 2007"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="WHI_LBW07P" keyType="MUNI_ID" dataType="number" title="% White Births with Low Birth Weight, 2007"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="ALL_TOT_08" keyType="MUNI_ID" dataType="number" title="Total Births, 2008"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="ALL_LBW_08" keyType="MUNI_ID" dataType="number" title="Total Births with Low Birth Weight, 2008"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="AS_TOT_08" keyType="MUNI_ID" dataType="number" title="Asian Total Births, 2008"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="AS_LBW_08" keyType="MUNI_ID" dataType="number" title="Asian Births with Low Birth Weight, 2008"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="AS_LBW08P" keyType="MUNI_ID" dataType="number" title="% Asian Births with Low Birth Weight, 2008"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="BLK_TOT_08" keyType="MUNI_ID" dataType="number" title="Black Total Births, 2008"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="BLK_LBW_08" keyType="MUNI_ID" dataType="number" title="Black Births with Low Birth Weight, 2008"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="BLK_LBW08P" keyType="MUNI_ID" dataType="number" title="% Black Births with Low Birth Weight, 2008"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="HIS_TOT_08" keyType="MUNI_ID" dataType="number" title="Hispanic Total Births, 2008"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="HIS_LBW_08" keyType="MUNI_ID" dataType="number" title="Hispanic Births with Low Birth Weight, 2008"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="HIS_LBW08P" keyType="MUNI_ID" dataType="number" title="% Hispanic Births with Low Birth Weight, 2008"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="OTH_TOT_08" keyType="MUNI_ID" dataType="number" title="Other Total Births, 2008"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="OTH_LBW_08" keyType="MUNI_ID" dataType="number" title="Other Births with Low Birth Weight, 2008"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="OTH_LBW08P" keyType="MUNI_ID" dataType="number" title="% Other Births with Low Birth Weight, 2008"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="WHI_TOT_08" keyType="MUNI_ID" dataType="number" title="White Total Births, 2008"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="WHI_LBW_08" keyType="MUNI_ID" dataType="number" title="White Births with Low Birth Weight, 2008"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="WHI_LBW08P" keyType="MUNI_ID" dataType="number" title="% White Births with Low Birth Weight, 2008"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="ALL_TOT_09" keyType="MUNI_ID" dataType="number" title="Total Births, 2009"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="ALL_LBW_09" keyType="MUNI_ID" dataType="number" title="Total Births with Low Birth Weight, 2009"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="AS_TOT_09" keyType="MUNI_ID" dataType="number" title="Asian Total Births, 2009"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="AS_LBW_09" keyType="MUNI_ID" dataType="number" title="Asian Births with Low Birth Weight, 2009"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="AS_LBW09P" keyType="MUNI_ID" dataType="number" title="% Asian Births with Low Birth Weight, 2009"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="BLK_TOT_09" keyType="MUNI_ID" dataType="number" title="Black Total Births, 2009"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="BLK_LBW_09" keyType="MUNI_ID" dataType="number" title="Black Births with Low Birth Weight, 2009"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="BLK_LBW09P" keyType="MUNI_ID" dataType="number" title="% Black Births with Low Birth Weight, 2009"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="HIS_TOT_09" keyType="MUNI_ID" dataType="number" title="Hispanic Total Births, 2009"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="HIS_LBW_09" keyType="MUNI_ID" dataType="number" title="Hispanic Births with Low Birth Weight, 2009"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="HIS_LBW09P" keyType="MUNI_ID" dataType="number" title="% Hispanic Births with Low Birth Weight, 2009"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="OTH_TOT_09" keyType="MUNI_ID" dataType="number" title="Other Total Births, 2009"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="OTH_LBW_09" keyType="MUNI_ID" dataType="number" title="Other Births with Low Birth Weight, 2009"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="OTH_LBW09P" keyType="MUNI_ID" dataType="number" title="% Other Births with Low Birth Weight, 2009"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="WHI_TOT_09" keyType="MUNI_ID" dataType="number" title="White Total Births, 2009"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="WHI_LBW_09" keyType="MUNI_ID" dataType="number" title="White Births with Low Birth Weight, 2009"/>
+            <attribute dataTable="Low Birth Weight (Municipal)" name="WHI_LBW09P" keyType="MUNI_ID" dataType="number" title="% White Births with Low Birth Weight, 2009"/>
+          </category>
+          <category title="Total Births to Moms Age 15-44, 2007-09 (Municipal)" name="Total Births" subject="Public Health"/>
+        </category>
+        <category title="Transportation" name="Data Tables">
+          <category title="Bike and Pedestrian Facilities" source="MAPC, 2011" name="Bike and Pedestrian Facilities"/>
+          <category title="Commuter Rail" source="MassGIS, 2010" name="Commuter Rail"/>
+          <category title="Fairmount Commuter Line" name="Fairmount Commuter Line"/>
+          <category title="Major Roads" source="MassDOT" name="Major Roads"/>
+          <category title="Major Routes" source="MassDOT" name="Major Routes"/>
+          <category title="MBTA Subway Lines" source="MassDOT" name="MBTA Subway Lines"/>
+          <category title="Transportation to Work, 5yr Avg 2005-09 (Municipal)" source="ACS" name="Transportation to Work (Municipal)"/>
+          <category title="Travel Time to Work, 5yr Avg 2005-09 (Municipal)" source="ACS" name="Travel Time to Work (Municipal)"/>
+        </category>
+        <category title="Boundaries" name="Data Tables">
+          <category title="MAPC Municipalities" source="MAPC" name="MAPC Municipalities"/>
+          <category title="Massachusetts Municipalities" source="MassGIS" name="Massachusetts Municipalities"/>
+          <category title="Boston Neighborhoods" source="BRA, 2010" name="Boston Neighborhoods"/>
+          <category title="Boston Parcels (Subset)" source="City of Boston, 2010" name="Boston Parcels (Subset)"/>
+          <category title="Census 2010 Tracts" source="Census, 2010" name="Census 2010 Tracts"/>
+          <category title="Census Block Groups 2000" source="Census" name="Census 2000 Block Groups"/>
+          <category title="Census Block Groups, 2010" source="Census, 2010" name="Census 2010 Block Groups"/>
+          <category title="Census Tracts, 2000" source="Census" name="Census 2000 Tracts"/>
+          <category source="MAPC, 2011" name="Community Types (Municipal)" title="Community Types (Municipal)" subject="Boundaries"/>
+          <category title="MA Counties" source="MassGIS" name="MA Counties"/>
+          <category title="MetroFuture Region" source="MAPC, 2008" name="MetroFuture Region"/>
+          <category title="Traffic Analysis Zones (TAZ) " source="HUD" name="Traffic Analysis Zones (TAZ)"/>
+          <category title="US States" name="US States"/>
+        </category>
+        <category title="Geometry Collections" name="Geometry Collections">
+          <attribute name="Arts and Culture Points" dataType="geometry" keyType="Arts and Culture Points" title="Arts and Culture Points"/>
+          <attribute name="Bike and Pedestrian Facilities" dataType="geometry" keyType="ObjectID" title="Bike and Pedestrian Facilities"/>
+          <attribute name="Boston Circle of Promise Schools" dataType="geometry" keyType="SchoolID" title="Boston Circle of Promise Schools"/>
+          <attribute name="Boston Daycares" dataType="geometry" keyType="ObjectID" title="Boston Daycares"/>
+          <attribute name="Boston Neighborhoods" dataType="geometry" keyType="ObjectID" title="Boston Neighborhoods"/>
+          <attribute name="Boston Non-Profit Educational Assets (Points)" dataType="geometry" keyType="ObjectID" title="Boston Non-Profit Educational Assets (Points)"/>
+          <attribute name="Boston Outline" dataType="geometry" keyType="MUNI_ID" title="Boston Outline"/>
+          <attribute name="Boston Parcels (Subset)" dataType="geometry" keyType="BostonParcelID" title="Boston Parcels (Subset)"/>
+          <attribute name="Boston Schools" dataType="geometry" keyType="SchoolID" title="Boston Schools"/>
+          <attribute name="Boston Turnaround Schools" dataType="geometry" keyType="SchoolID" title="Boston Turnaround Schools"/>
+          <attribute name="Census 2000 Block Groups" dataType="geometry" keyType="BG_00_ID" title="Census 2000 Block Groups"/>
+          <attribute name="Census 2000 Tracts" dataType="geometry" keyType="CT_ID" title="Census 2000 Tracts"/>
+          <attribute name="Census 2010 Block Groups" dataType="geometry" keyType="BG_10_ID" title="Census 2010 Block Groups"/>
+          <attribute name="Census 2010 Tracts" dataType="geometry" keyType="ct10_id" title="Census 2010 Tracts"/>
+          <attribute name="Child Care Providers with Less than High School" dataType="geometry" keyType="ObjectID" title="Child Care Providers with Less than High School"/>
+          <attribute name="Colleges and Universities" dataType="geometry" keyType="College_ID" title="Colleges and Universities"/>
+          <attribute name="Commuter Rail" dataType="geometry" keyType="Commuter Rail" title="Commuter Rail"/>
+          <attribute name="Environmental Justice Populations (Block Groups)" dataType="geometry" keyType="BG_00_ID" title="Environmental Justice Populations (Block Groups)"/>
+          <attribute name="Fairmount Commuter Line" dataType="geometry" keyType="ObjectID" title="Fairmount Commuter Line"/>
+          <attribute name="LEED Certified Buildings (Points)" dataType="geometry" keyType="LEED_ID" title="LEED Certified Buildings (Points)"/>
+          <attribute name="Libraries" dataType="geometry" keyType="ObjectID" title="Libraries"/>
+          <attribute name="MA Counties" dataType="geometry" keyType="FIPS_ID" title="MA Counties"/>
+          <attribute name="MA House Districts" dataType="geometry" keyType="MA_HOUSE02_ID" title="MA House Districts"/>
+          <attribute name="MA Senate Districts" dataType="geometry" keyType="MA_SENATE02_ID" title="MA Senate Districts"/>
+          <attribute name="Major Roads (MassDOT)" dataType="geometry" keyType="ObjectID" title="Major Roads (MassDOT)"/>
+          <attribute name="Major Routes (MassDOT)" dataType="geometry" keyType="ObjectID" title="Major Routes (MassDOT)"/>
+          <attribute name="MAPC Municipalities" dataType="geometry" keyType="MUNI_ID" title="MAPC Municipalities"/>
+          <attribute name="Massachusetts Municipalities" dataType="geometry" keyType="MUNI_ID" title="Massachusetts Municipalities"/>
+          <attribute name="MBTA Subway Lines" dataType="geometry" keyType="MBTA Subway Lines" title="MBTA Subway Lines"/>
+          <attribute name="MetroFuture Region" dataType="geometry" keyType="MUNI_ID" title="MetroFuture Region"/>
+          <attribute name="Open Space" dataType="geometry" keyType="OS_ID" title="Open Space"/>
+          <attribute name="Protected Open Space" dataType="geometry" keyType="OS_ID" title="Protected Open Space"/>
+          <attribute name="School Districts" dataType="geometry" keyType="SchoolDistrictID" title="School Districts"/>
+          <attribute name="School Districts by Town" dataType="geometry" keyType="MUNI_ID" title="School Districts by Town"/>
+          <attribute name="Schools" dataType="geometry" keyType="SchoolID" title="Schools"/>
+          <attribute name="Success Boston Student Cohorts (2010)" dataType="geometry" keyType="ObjectID" title="Success Boston Student Cohorts (2010)"/>
+          <attribute name="Traffic Analysis Zones (TAZ) " dataType="geometry" keyType="TAZ_ID" title="Traffic Analysis Zones (TAZ) "/>
+          <attribute name="US Congressional Districts" dataType="geometry" keyType="US_CONGRESS_ID" title="US Congressional Districts"/>
+          <attribute name="US States" dataType="geometry" keyType="Arts and Culture Points" title="US States"/>
+          <attribute name="Water Bodies (100k Hydro)" dataType="geometry" keyType="PALIS_ID" title="Water Bodies (100k Hydro)"/>
+        </category>
+      </hierarchy>
+    </attributeHierarchy>
+    <hierarchyURL/>
+    <url>/WeaveServices/DataService</url>
+  </WeaveDataSource>
+  <LinkableHashMap encoding="dynamic" name="Probe Header Columns"/>
+  <LinkableHashMap encoding="dynamic" name="Probed Columns"/>
+  <TransposedTableTool name="TransposedTableTool">
+    <buttonRadius>3</buttonRadius>
+    <closeable>true</closeable>
+    <columns encoding="dynamic">
+      <ReferencedColumn name="ReferencedColumn8">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Housing" name="Data Tables">
+                  <category source="DHCD, 2011" name="Subsidized Housing Inventory" title="Subsidized Housing Inventory, by Year 2006-11 (Municipal) " subject="Housing">
+                    <attribute dataTable="Subsidized Housing Inventory" name="shi_4_02" keyType="MUNI_ID" year="April 2002" title="Subsidized Housing Inventory, April 2002" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn9">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Housing" name="Data Tables">
+                  <category source="DHCD, 2011" name="Subsidized Housing Inventory" title="Subsidized Housing Inventory, by Year 2006-11 (Municipal) " subject="Housing">
+                    <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" dataType="number" string="formatNumber(number, 1)+'%'" title="% SHI: April 2002" name="p_shi_4_02" year="April 2002"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn11">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Housing" name="Data Tables">
+                  <category source="DHCD, 2011" name="Subsidized Housing Inventory" title="Subsidized Housing Inventory, by Year 2006-11 (Municipal) " subject="Housing">
+                    <attribute dataTable="Subsidized Housing Inventory" name="shi_10_03" keyType="MUNI_ID" year="Oct 2003" title="Subsidized Housing Inventory, Oct 2003" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn12">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Housing" name="Data Tables">
+                  <category source="DHCD, 2011" name="Subsidized Housing Inventory" title="Subsidized Housing Inventory, by Year 2006-11 (Municipal) " subject="Housing">
+                    <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" dataType="number" string="formatNumber(number, 1)+'%'" title="% SHI: Oct 2003" name="p_shi10_03" year="Oct 2003"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn14">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Housing" name="Data Tables">
+                  <category source="DHCD, 2011" name="Subsidized Housing Inventory" title="Subsidized Housing Inventory, by Year 2006-11 (Municipal) " subject="Housing">
+                    <attribute dataTable="Subsidized Housing Inventory" name="shi_2_04" keyType="MUNI_ID" year="Feb 2004" title="Subsidized Housing Inventory, Feb 2004" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn15">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Housing" name="Data Tables">
+                  <category source="DHCD, 2011" name="Subsidized Housing Inventory" title="Subsidized Housing Inventory, by Year 2006-11 (Municipal) " subject="Housing">
+                    <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" dataType="number" string="formatNumber(number, 1)+'%'" title="% SHI: Feb 2004" name="p_shi_2_04" year="Feb 2004"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn17">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Housing" name="Data Tables">
+                  <category source="DHCD, 2011" name="Subsidized Housing Inventory" title="Subsidized Housing Inventory, by Year 2006-11 (Municipal) " subject="Housing">
+                    <attribute dataTable="Subsidized Housing Inventory" name="shi_2_05" keyType="MUNI_ID" year="Feb 2005" title="Subsidized Housing Inventory, Feb 2005" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn18">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Housing" name="Data Tables">
+                  <category source="DHCD, 2011" name="Subsidized Housing Inventory" title="Subsidized Housing Inventory, by Year 2006-11 (Municipal) " subject="Housing">
+                    <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" dataType="number" string="formatNumber(number, 1)+'%'" title="% SHI: Feb 2005" name="p_shi_2_05" year="Feb 2005"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn20">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Housing" name="Data Tables">
+                  <category source="DHCD, 2011" name="Subsidized Housing Inventory" title="Subsidized Housing Inventory, by Year 2006-11 (Municipal) " subject="Housing">
+                    <attribute dataTable="Subsidized Housing Inventory" name="shi_2_06" keyType="MUNI_ID" year="Feb 2006" title="Subsidized Housing Inventory, Feb 2006" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn21">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Housing" name="Data Tables">
+                  <category source="DHCD, 2011" name="Subsidized Housing Inventory" title="Subsidized Housing Inventory, by Year 2006-11 (Municipal) " subject="Housing">
+                    <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" dataType="number" string="formatNumber(number, 1)+'%'" title="% SHI: Feb 2006" name="p_shi_2_06" year="Feb 2006"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn23">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Housing" name="Data Tables">
+                  <category source="DHCD, 2011" name="Subsidized Housing Inventory" title="Subsidized Housing Inventory, by Year 2006-11 (Municipal) " subject="Housing">
+                    <attribute dataTable="Subsidized Housing Inventory" name="shi_2_07" keyType="MUNI_ID" year="Feb 2007" title="Subsidized Housing Inventory, Feb 2007" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn24">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Housing" name="Data Tables">
+                  <category source="DHCD, 2011" name="Subsidized Housing Inventory" title="Subsidized Housing Inventory, by Year 2006-11 (Municipal) " subject="Housing">
+                    <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" dataType="number" string="formatNumber(number, 1)+'%'" title="% SHI: Feb 2007" name="p_shi_2_07" year="Feb 2007"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn29">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Housing" name="Data Tables">
+                  <category source="DHCD, 2011" name="Subsidized Housing Inventory" title="Subsidized Housing Inventory, by Year 2006-11 (Municipal) " subject="Housing">
+                    <attribute dataTable="Subsidized Housing Inventory" name="shi_2_08" keyType="MUNI_ID" year="Feb 2008" title="Subsidized Housing Inventory, Feb 2008" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn30">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Housing" name="Data Tables">
+                  <category source="DHCD, 2011" name="Subsidized Housing Inventory" title="Subsidized Housing Inventory, by Year 2006-11 (Municipal) " subject="Housing">
+                    <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" dataType="number" string="formatNumber(number, 1)+'%'" title="% SHI: Feb 2008" name="p_shi_2_08" year="Feb 2008"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn35">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Housing" name="Data Tables">
+                  <category source="DHCD, 2011" name="Subsidized Housing Inventory" title="Subsidized Housing Inventory, by Year 2006-11 (Municipal) " subject="Housing">
+                    <attribute dataTable="Subsidized Housing Inventory" name="shi_9_09" keyType="MUNI_ID" year="Sept 2009" title="Subsidized Housing Inventory, Sept 2009" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn36">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Housing" name="Data Tables">
+                  <category source="DHCD, 2011" name="Subsidized Housing Inventory" title="Subsidized Housing Inventory, by Year 2006-11 (Municipal) " subject="Housing">
+                    <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" dataType="number" string="formatNumber(number, 1)+'%'" title="% SHI: Sept 2009" name="p_shi_9_09" year="Sept 2009"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn2">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Housing" name="Data Tables">
+                  <category source="DHCD, 2011" name="Subsidized Housing Inventory" title="Subsidized Housing Inventory, by Year 2006-11 (Municipal) " subject="Housing">
+                    <attribute dataTable="Subsidized Housing Inventory" name="shi_4_10" keyType="MUNI_ID" year="April 2010" title="Subsidized Housing Inventory, April 2010" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn3">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Housing" name="Data Tables">
+                  <category source="DHCD, 2011" name="Subsidized Housing Inventory" title="Subsidized Housing Inventory, by Year 2006-11 (Municipal) " subject="Housing">
+                    <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" dataType="number" string="formatNumber(number, 1)+'%'" title="% SHI: April 2010" name="p_shi_4_10" year="April 2010"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn42">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Housing" name="Data Tables">
+                  <category source="DHCD, 2011" name="Subsidized Housing Inventory" title="Subsidized Housing Inventory, by Year 2006-11 (Municipal) " subject="Housing">
+                    <attribute dataTable="Subsidized Housing Inventory" name="shi_6_11" keyType="MUNI_ID" year="June 2011" title="Subsidized Housing Inventory, June 2011" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn43">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Housing" name="Data Tables">
+                  <category source="DHCD, 2011" name="Subsidized Housing Inventory" title="Subsidized Housing Inventory, by Year 2006-11 (Municipal) " subject="Housing">
+                    <attribute dataTable="Subsidized Housing Inventory" keyType="MUNI_ID" dataType="number" string="formatNumber(number, 1)+'%'" title="% SHI: June 2011" name="p_shi_6_11" year="June 2011"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn37">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Housing" name="Data Tables">
+                  <category source="DHCD, 2011" name="Subsidized Housing Inventory" title="Subsidized Housing Inventory, by Year 2006-11 (Municipal) " subject="Housing">
+                    <attribute dataTable="Subsidized Housing Inventory" name="dev410m402" keyType="MUNI_ID" dataType="number" title="Change in Total Development Units (April 2002 -April 2010)"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn38">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Housing" name="Data Tables">
+                  <category source="DHCD, 2011" name="Subsidized Housing Inventory" title="Subsidized Housing Inventory, by Year 2006-11 (Municipal) " subject="Housing">
+                    <attribute dataTable="Subsidized Housing Inventory" name="shi410402" keyType="MUNI_ID" dataType="number" title="Change in SHI Units (April 2002 -April 2010)"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn44">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Housing" name="Data Tables">
+                  <category source="DHCD, 2011" name="Subsidized Housing Inventory" title="Subsidized Housing Inventory, by Year 2006-11 (Municipal) " subject="Housing">
+                    <attribute dataTable="Subsidized Housing Inventory" name="p_sh410402" keyType="MUNI_ID" dataType="number" title=" Change in SHI Units (April 2002 - April 2010)"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+    </columns>
+    <dataColumnWidth>10%</dataColumnWidth>
+    <draggable>true</draggable>
+    <enableBorders>true</enableBorders>
+    <filterKeySet>MUNI_ID,{{ regionalunit.unitid }}</filterKeySet>
+    <fontSize>10</fontSize>
+    <headerAttributeColumn encoding="dynamic">
+      <ReferencedColumn>
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Housing" name="Data Tables">
+                  <category source="DHCD, 2011" name="Subsidized Housing Inventory" title="Subsidized Housing Inventory, by Year 2006-11 (Municipal) " subject="Housing">
+                    <attribute dataTable="Subsidized Housing Inventory" name="municipal" keyType="MUNI_ID" dataType="string" title="Municipality"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+    </headerAttributeColumn>
+    <headerColumnWidth>70.87087087087087%</headerColumnWidth>
+    <headerText>Attributes</headerText>
+    <maximizable>true</maximizable>
+    <maximized>true</maximized>
+    <minimizable>true</minimizable>
+    <minimized>false</minimized>
+    <panelBackgroundColor>NaN</panelBackgroundColor>
+    <panelBorderColor>NaN</panelBorderColor>
+    <panelHeight>50%</panelHeight>
+    <panelStyleList/>
+    <panelTitle/>
+    <panelWidth>50%</panelWidth>
+    <panelX>24%</panelX>
+    <panelY>23%</panelY>
+    <pinnable>true</pinnable>
+    <pinnableToBack>false</pinnableToBack>
+    <pinned>false</pinned>
+    <pinnedToBack>false</pinnedToBack>
+    <resizeable>true</resizeable>
+  </TransposedTableTool>
+</Weave>

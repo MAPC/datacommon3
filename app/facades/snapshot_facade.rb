@@ -33,7 +33,7 @@ class SnapshotFacade
 
       # Return a NullVisualization if there are
       # not yet visualizations for a topic.
-      vis ||= NullVisualization.new
+      vis ||= NullObjects::NullVisualization.new
 
       OpenStruct.new(
         path:  "#{@geography.slug}/#{topic.slug}",

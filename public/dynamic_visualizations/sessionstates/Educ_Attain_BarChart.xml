@@ -1,0 +1,1034 @@
+<Weave encoding="dynamic">
+  <KeySet name="alwaysHighlightKeySet"/>
+  <WeaveProperties name="WeaveProperties">
+    <axisFontBold>true</axisFontBold>
+    <axisFontColor>0</axisFontColor>
+    <axisFontFamily>Sophia Nubian</axisFontFamily>
+    <axisFontItalic>false</axisFontItalic>
+    <axisFontSize>11</axisFontSize>
+    <axisFontUnderline>false</axisFontUnderline>
+    <backgroundColor>13421772</backgroundColor>
+    <cssStyleSheetName>weaveStyle.css</cssStyleSheetName>
+    <dashboardMode>true</dashboardMode>
+    <dashedSelectionBox>5,5</dashedSelectionBox>
+    <dataInfoURL/>
+    <debugScreenBounds>false</debugScreenBounds>
+    <enableAboutMenu>true</enableAboutMenu>
+    <enableAdd2DHistogram>true</enableAdd2DHistogram>
+    <enableAddAttributeMenuTool>true</enableAddAttributeMenuTool>
+    <enableAddBarChart>true</enableAddBarChart>
+    <enableAddCollaborationTool>false</enableAddCollaborationTool>
+    <enableAddColorLegend>true</enableAddColorLegend>
+    <enableAddColormapHistogram>true</enableAddColormapHistogram>
+    <enableAddCompoundRadViz>true</enableAddCompoundRadViz>
+    <enableAddCustomTool>true</enableAddCustomTool>
+    <enableAddDataFilter>true</enableAddDataFilter>
+    <enableAddDataSource>true</enableAddDataSource>
+    <enableAddDataTable>true</enableAddDataTable>
+    <enableAddDimensionSliderTool>true</enableAddDimensionSliderTool>
+    <enableAddGaugeTool>true</enableAddGaugeTool>
+    <enableAddGraphTool>true</enableAddGraphTool>
+    <enableAddHistogram>true</enableAddHistogram>
+    <enableAddLineChart>true</enableAddLineChart>
+    <enableAddMap>true</enableAddMap>
+    <enableAddPieChart>true</enableAddPieChart>
+    <enableAddPieChartHistogram>true</enableAddPieChartHistogram>
+    <enableAddRadViz>true</enableAddRadViz>
+    <enableAddRamachandranPlot>false</enableAddRamachandranPlot>
+    <enableAddRScriptEditor>true</enableAddRScriptEditor>
+    <enableAddScatterplot>true</enableAddScatterplot>
+    <enableAddThermometerTool>true</enableAddThermometerTool>
+    <enableAddTimeSliderTool>true</enableAddTimeSliderTool>
+    <enableAddWeaveDataSource>true</enableAddWeaveDataSource>
+    <enableBitmapFilters>true</enableBitmapFilters>
+    <enableCascadeAllWindows>true</enableCascadeAllWindows>
+    <enableClearCurrentSelection>true</enableClearCurrentSelection>
+    <enableCloseAllWindows>true</enableCloseAllWindows>
+    <enableCreateSubsets>true</enableCreateSubsets>
+    <enableDataMenu>true</enableDataMenu>
+    <enableDebugAlert>false</enableDebugAlert>
+    <enableDrawCircle>true</enableDrawCircle>
+    <enableDynamicTools>true</enableDynamicTools>
+    <enableEditDataSource>true</enableEditDataSource>
+    <enableExportApplicationScreenshot>true</enableExportApplicationScreenshot>
+    <enableExportDataTable>true</enableExportDataTable>
+    <enableExportToolImage>true</enableExportToolImage>
+    <enableFullscreen>true</enableFullscreen>
+    <enableGeometryProbing>true</enableGeometryProbing>
+    <enableGoFullscreen>true</enableGoFullscreen>
+    <enableManageSavedSelections>true</enableManageSavedSelections>
+    <enableManageSavedSubsets>true</enableManageSavedSubsets>
+    <enableMarker>true</enableMarker>
+    <enableMenuBar>false</enableMenuBar>
+    <enableMinimizeAllWindows>true</enableMinimizeAllWindows>
+    <enableMouseWheel>true</enableMouseWheel>
+    <enableNewDataset>true</enableNewDataset>
+    <enableNewUserWizard>true</enableNewUserWizard>
+    <enablePanelCoordsPercentageMode>true</enablePanelCoordsPercentageMode>
+    <enableProbeAnimation>true</enableProbeAnimation>
+    <enableProbeLines>true</enableProbeLines>
+    <enableRefreshHierarchies>true</enableRefreshHierarchies>
+    <enableRemoveSubsets>true</enableRemoveSubsets>
+    <enableRestoreAllMinimizedWindows>true</enableRestoreAllMinimizedWindows>
+    <enableRightClick>true</enableRightClick>
+    <enableSaveCurrentSelection>true</enableSaveCurrentSelection>
+    <enableSaveCurrentSubset>true</enableSaveCurrentSubset>
+    <enableSearchForRecord>true</enableSearchForRecord>
+    <enableSelectionSelectorBox>true</enableSelectionSelectorBox>
+    <enableSelectionsMenu>true</enableSelectionsMenu>
+    <enableSessionBookmarks>true</enableSessionBookmarks>
+    <enableSessionEdit>false</enableSessionEdit>
+    <enableSessionMenu>false</enableSessionMenu>
+    <enableShowAllRecords>true</enableShowAllRecords>
+    <enableSubsetControls>true</enableSubsetControls>
+    <enableSubsetSelectionBox>true</enableSubsetSelectionBox>
+    <enableSubsetsMenu>true</enableSubsetsMenu>
+    <enableTaskbar>false</enableTaskbar>
+    <enableTileAllWindows>true</enableTileAllWindows>
+    <enableToolAttributeEditing>true</enableToolAttributeEditing>
+    <enableToolControls>true</enableToolControls>
+    <enableToolProbe>true</enableToolProbe>
+    <enableToolSelection>true</enableToolSelection>
+    <enableUserPreferences>true</enableUserPreferences>
+    <enableWindowMenu>true</enableWindowMenu>
+    <jriServiceURL>/WeaveServices/JRIService</jriServiceURL>
+    <macroLibraries>weave.api::WeaveAPI</macroLibraries>
+    <macros encoding="dynamic"/>
+    <maxTooltipRecordsShown>1</maxTooltipRecordsShown>
+    <pageTitle>Open Indicators Weave</pageTitle>
+    <panelTitleFontBold>false</panelTitleFontBold>
+    <panelTitleFontColor>16777215</panelTitleFontColor>
+    <panelTitleFontFamily/>
+    <panelTitleFontItalic>false</panelTitleFontItalic>
+    <panelTitleFontSize>10</panelTitleFontSize>
+    <panelTitleFontUnderline>false</panelTitleFontUnderline>
+    <pdbServiceURL>/WeavePDBService/PDBService</pdbServiceURL>
+    <probeInnerGlowAlpha>1</probeInnerGlowAlpha>
+    <probeInnerGlowBlur>5</probeInnerGlowBlur>
+    <probeInnerGlowColor>16777215</probeInnerGlowColor>
+    <probeInnerGlowStrength>10</probeInnerGlowStrength>
+    <probeOuterGlowAlpha>1</probeOuterGlowAlpha>
+    <probeOuterGlowBlur>3</probeOuterGlowBlur>
+    <probeOuterGlowColor>0</probeOuterGlowColor>
+    <probeOuterGlowStrength>3</probeOuterGlowStrength>
+    <probeToolTipBackgroundAlpha>1</probeToolTipBackgroundAlpha>
+    <probeToolTipBackgroundColor>NaN</probeToolTipBackgroundColor>
+    <probeToolTipFontColor>0</probeToolTipFontColor>
+    <rServiceURL>/WeaveServices/RService</rServiceURL>
+    <searchServiceURLs>Wikipedia|http://en.wikipedia.org/wiki/Special:Search?search=
+Google|http://www.google.com/search?q=
+Google Images|http://images.google.com/images?q=
+Google Maps|http://maps.google.com/maps?t=h&amp;q=</searchServiceURLs>
+    <selectionAlphaAmount>0.5</selectionAlphaAmount>
+    <selectionBlurringAmount>4</selectionBlurringAmount>
+    <shadowAlpha>0.5</shadowAlpha>
+    <shadowAngle>45</shadowAngle>
+    <shadowBlur>4</shadowBlur>
+    <shadowColor>0</shadowColor>
+    <shadowDistance>2</shadowDistance>
+    <showAttributeSelector>true</showAttributeSelector>
+    <showColorController>true</showColorController>
+    <showCopyright>false</showCopyright>
+    <showEquationEditor>true</showEquationEditor>
+    <showKeyTypeInColumnTitle>false</showKeyTypeInColumnTitle>
+    <showProbeToolTipEditor>true</showProbeToolTipEditor>
+    <showVisToolCloseDialog>false</showVisToolCloseDialog>
+    <startupJavaScript/>
+    <toolInteractions>
+      <defaultDragMode/>
+      <pan>alt,drag</pan>
+      <probe>move</probe>
+      <select>drag</select>
+      <selectAdd>ctrl,drag</selectAdd>
+      <selectRemove>ctrl,shift,drag</selectRemove>
+      <zoom>shift,drag
+wheel</zoom>
+      <zoomIn>dclick</zoomIn>
+      <zoomOut>shift,dclick</zoomOut>
+      <zoomToExtent>ctrl,alt,shift,dclick</zoomToExtent>
+    </toolInteractions>
+    <version>Nightly build (Thu Nov 10 04:00:10 EST 2011)</version>
+    <windowSnapGridSize>1%</windowSnapGridSize>
+    <workspaceHeight>252</workspaceHeight>
+    <workspaceWidth>333</workspaceWidth>
+  </WeaveProperties>
+  <ColorColumn name="defaultColorColumn">
+    <internalDynamicColumn encoding="dynamic">
+      <GlobalObjectReference name="defaultColorBinColumn"/>
+    </internalDynamicColumn>
+    <ramp encoding="xml">
+      <colorRamp name="5-Color" source="OIC" category="basic">
+        <node color="0xEFF3FF" position="0"/>
+        <node color="0xBDD7E7" position="0.25"/>
+        <node color="0x6BAED6" position="0.5"/>
+        <node color="0x3182BD" position="0.75"/>
+        <node color="0x08519C" position="1"/>
+      </colorRamp>
+    </ramp>
+  </ColorColumn>
+  <BinnedColumn name="defaultColorBinColumn">
+    <binningDefinition encoding="dynamic">
+      <SimpleBinningDefinition>
+        <numberOfBins>10</numberOfBins>
+      </SimpleBinningDefinition>
+    </binningDefinition>
+    <internalDynamicColumn encoding="dynamic">
+      <GlobalObjectReference name="defaultColorDataColumn"/>
+    </internalDynamicColumn>
+  </BinnedColumn>
+  <FilteredColumn name="defaultColorDataColumn">
+    <filter encoding="dynamic">
+      <GlobalObjectReference name="defaultSubsetKeyFilter"/>
+    </filter>
+    <internalDynamicColumn encoding="dynamic">
+      <ReferencedColumn>
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>WeaveDataSource</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category name="Data Tables" title="Data Tables">
+                  <category name="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="Educational Attainment over 25 years, ACS 2005-09 (Municipal)">
+                    <attribute dataType="string" name="municipal" keyType="MUNI_ID" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="Municipality"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+    </internalDynamicColumn>
+  </FilteredColumn>
+  <KeyFilter name="defaultSubsetKeyFilter">
+    <excluded/>
+    <included>MUNI_ID,{{ regionalunit.unitid }},352,353</included>
+    <includeMissingKeys>false</includeMissingKeys>
+    <includeMissingKeyTypes>true</includeMissingKeyTypes>
+  </KeyFilter>
+  <KeySet name="defaultSelectionKeySet"/>
+  <KeySet name="defaultProbeKeySet"/>
+  <LinkableHashMap encoding="dynamic" name="savedSelections"/>
+  <LinkableHashMap encoding="dynamic" name="savedSubsets"/>
+  <LinkableHashMap encoding="dynamic" name="Probe Header Columns"/>
+  <LinkableHashMap encoding="dynamic" name="Probed Columns"/>
+  <WeaveDataSource name="WeaveDataSource">
+    <attributeHierarchy encoding="xml">
+      <hierarchy name="Open Indicators Server">
+        <category name="Data Tables" title="Data Tables">
+          <category name="Arts and Culture Points" title="Arts and Culture Points"/>
+          <category name="Boston Circle of Promise Schools" title="Boston Circle of Promise Schools"/>
+          <category name="Boston Daycares" title="Boston Daycares"/>
+          <category name="Boston Neighborhoods" title="Boston Neighborhoods"/>
+          <category name="Boston Non-Profit Educational Assets (Points)" title="Boston Non-Profit Educational Assets (Points)"/>
+          <category name="Boston Non-Profit Educational Assetss" title="Boston Non-Profit Educational Assetss"/>
+          <category name="Boston Outline" title="Boston Outline"/>
+          <category name="Boston Parcels (Subset)" title="Boston Parcels (Subset)"/>
+          <category name="Boston Parcels OnlyPID" title="Boston Parcels OnlyPID"/>
+          <category name="Boston Schools" title="Boston Schools"/>
+          <category name="Boston Turnaround Schools" title="Boston Turnaround Schools"/>
+          <category name="Census 1990 Block Groups" title="Census 1990 Block Groups"/>
+          <category name="Census 2000 Block Groups" title="Census 2000 Block Groups"/>
+          <category name="Census 2000 Tracts" title="Census 2000 Tracts"/>
+          <category name="Child Care Providers with Less than High School" title="Child Care Providers with Less than High School"/>
+          <category name="Children in Families below Poverty Level (2005-09)" title="Children in Families below Poverty Level (2005-09)"/>
+          <category name="Children in Poverty by Family Type (Census Tracts)" title="Children in Poverty by Family Type (Census Tracts)"/>
+          <category name="Children in Poverty by Household (Census Tracts)" title="Children in Poverty by Household (Census Tracts)"/>
+          <category name="Citizenship Status (Municipality)" title="Citizenship Status (Municipality)"/>
+          <category name="Colleges and Universities" title="Colleges and Universities"/>
+          <category name="Commuter Rail" title="Commuter Rail"/>
+          <category name="Educational Attainment over 25 2005-09 (Census tracts)" title="Educational Attainment over 25 2005-09 (Census tracts)"/>
+          <category name="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="Educational Attainment over 25 years, ACS 2005-09 (Municipal)">
+            <attribute dataType="string" name="muni_id" keyType="MUNI_ID" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="Municipal ID"/>
+            <attribute dataType="string" name="municipal" keyType="MUNI_ID" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="Municipality"/>
+            <attribute dataType="number" name="pop25_09" keyType="MUNI_ID" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="Population 25 Years and over"/>
+            <attribute dataType="number" name="pop25_09_m" keyType="MUNI_ID" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="Population 25 Years and over, MOE"/>
+            <attribute dataType="number" name="lths_09" keyType="MUNI_ID" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="Less than High School"/>
+            <attribute dataType="number" name="lths_09me" keyType="MUNI_ID" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="Less than High School, MOE"/>
+            <attribute dataType="number" name="ed9_12_09" keyType="MUNI_ID" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="Completed 9th- 12th Grade with no Diploma"/>
+            <attribute dataType="number" name="e912_09me" keyType="MUNI_ID" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="Completed 9th- 12th Grade with no Diploma, MOE"/>
+            <attribute dataType="number" name="ged09" keyType="MUNI_ID" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="High school graduate"/>
+            <attribute dataType="number" name="ged09_me" keyType="MUNI_ID" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="High school graduate, MOE"/>
+            <attribute dataType="number" name="some09" keyType="MUNI_ID" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="Some College"/>
+            <attribute dataType="number" name="some09_me" keyType="MUNI_ID" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="Some College, MOE"/>
+            <attribute dataType="number" name="assoc09" keyType="MUNI_ID" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="Associate Degree"/>
+            <attribute dataType="number" name="assoc09me" keyType="MUNI_ID" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="Associate Degree, MOE"/>
+            <attribute dataType="number" name="ba09" keyType="MUNI_ID" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="Bachelor Degree"/>
+            <attribute dataType="number" name="ba09_me" keyType="MUNI_ID" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="Bachelor Degree, MOE"/>
+            <attribute dataType="number" name="mast09" keyType="MUNI_ID" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="Master Degree or Higher"/>
+            <attribute dataType="number" name="mast09_me" keyType="MUNI_ID" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="Master Degree or Higher, MOE"/>
+            <attribute dataType="number" name="lths_09p" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" max="100" min="0" keyType="MUNI_ID" title="% Less than High School"/>
+            <attribute dataType="number" name="lths_09mep" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" max="100" min="0" keyType="MUNI_ID" title="% Less than High School, MOE"/>
+            <attribute dataType="number" name="ed9_12_09p" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" max="100" min="0" keyType="MUNI_ID" title="% Completed 9th- 12th Grade with no Diploma"/>
+            <attribute dataType="number" name="e912_09mep" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" max="100" min="0" keyType="MUNI_ID" title="% Completed 9th- 12th Grade with no Diploma, MOE"/>
+            <attribute dataType="number" name="ged09p" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" max="100" min="0" keyType="MUNI_ID" title="% High school graduate"/>
+            <attribute dataType="number" name="ged09_mep" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" max="100" min="0" keyType="MUNI_ID" title="% High school graduate, MOE"/>
+            <attribute dataType="number" name="some09p" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" max="100" min="0" keyType="MUNI_ID" title="% Some College"/>
+            <attribute dataType="number" name="some09_mep" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" max="100" min="0" keyType="MUNI_ID" title="% Some College, MOE"/>
+            <attribute dataType="number" name="assoc09p" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" max="100" min="0" keyType="MUNI_ID" title="% Associate Degree"/>
+            <attribute dataType="number" name="assoc09mep" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" max="100" min="0" keyType="MUNI_ID" title="% Associate Degree, MOE"/>
+            <attribute dataType="number" name="ba09p" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" max="100" min="0" keyType="MUNI_ID" title="% Bachelor Degree"/>
+            <attribute dataType="number" name="ba09_mep" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" max="100" min="0" keyType="MUNI_ID" title="% Bachelor Degree, MOE"/>
+            <attribute dataType="number" name="mast09p" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" max="100" min="0" keyType="MUNI_ID" title="% Master Degree or Higher"/>
+            <attribute dataType="number" name="mast09_mep" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" max="100" min="0" keyType="MUNI_ID" title="% Master Degree or Higher, MOE"/>
+          </category>
+          <category name="Educational Attainment over 25 years, ACS 2005-09 (Municipal)-Transposed" title="Educational Attainment over 25 years, ACS 2005-09 (Municipal)-Transposed"/>
+          <category name="Educational Attainment: All 2005-09 (Census Tracts)" title="Educational Attainment: All 2005-09 (Census Tracts)"/>
+          <category name="Educational Attainment: Asian 2005-09 (Census Tracts)" title="Educational Attainment: Asian 2005-09 (Census Tracts)"/>
+          <category name="Employment By Sector 2010 (Municipal) - Tranposed" title="Employment By Sector 2010 (Municipal) - Tranposed"/>
+          <category name="Geographic Mobility, ACS 2005-09 (Municipal) " title="Geographic Mobility, ACS 2005-09 (Municipal) "/>
+          <category name="Geographic Mobility, ACS 2005-09 (Municipal) - Transposed" title="Geographic Mobility, ACS 2005-09 (Municipal) - Transposed"/>
+          <category name="Housing Occupancy 2010, Municipal" title="Housing Occupancy 2010, Municipal"/>
+          <category name="Housing Occupancy, 2000-2010 (Municipal):Transposed" title="Housing Occupancy, 2000-2010 (Municipal):Transposed"/>
+          <category name="Housing: Census 2000 (Municipal)" title="Housing: Census 2000 (Municipal)"/>
+          <category name="Housing: Household Type 2000-2010 (Municipal)" title="Housing: Household Type 2000-2010 (Municipal)"/>
+          <category name="Housing: Residential Permits (Municipal)" title="Housing: Residential Permits (Municipal)"/>
+          <category name="Indigo Commuter Line" title="Indigo Commuter Line"/>
+          <category name="Landuse Summary Statistics 2005, Municipal" title="Landuse Summary Statistics 2005, Municipal"/>
+          <category name="Lighthouses" title="Lighthouses"/>
+          <category name="Linguistic Isolation (Census Tracts)" title="Linguistic Isolation (Census Tracts)"/>
+          <category name="Linguistic Isolation (Municipal)" title="Linguistic Isolation (Municipal)"/>
+          <category name="Massachusetts Municipalities" title="Massachusetts Municipalities"/>
+          <category name="MBTA Subway Lines" title="MBTA Subway Lines"/>
+          <category name="Median Household Income by Race (Municipal)" title="Median Household Income by Race (Municipal)"/>
+          <category name="Municipal Elementary School Districts" title="Municipal Elementary School Districts"/>
+          <category name="Population By Age 2000 - 2010 (Municipality)" title="Population By Age 2000 - 2010 (Municipality)"/>
+          <category name="Population by Age Race MSA (2009)" title="Population by Age Race MSA (2009)"/>
+          <category name="Population By Gender and Age with Change, 2000 - 2010 (Municipal)" title="Population By Gender and Age with Change, 2000 - 2010 (Municipal)"/>
+          <category name="Population by Race with Change, 2010-2011 (Municipal)" title="Population by Race with Change, 2010-2011 (Municipal)"/>
+          <category name="Population by Race with Change, 2010-2011 (Municipal) - Transposed" title="Population by Race with Change, 2010-2011 (Municipal) - Transposed"/>
+          <category name="Population Over/Under 18, 2010, Municipal" title="Population Over/Under 18, 2010, Municipal"/>
+          <category name="Poverty by Household Type (Census Tracts)" title="Poverty by Household Type (Census Tracts)"/>
+          <category name="Poverty by Race (Census Tracts)" title="Poverty by Race (Census Tracts)"/>
+          <category name="School District Enrollment by Municipality" title="School District Enrollment by Municipality"/>
+          <category name="School Districts" title="School Districts"/>
+          <category name="School Districts by Town" title="School Districts by Town"/>
+          <category name="School Districts Enrollment by Grade" title="School Districts Enrollment by Grade"/>
+          <category name="School Districts Enrollment by Race and Gender" title="School Districts Enrollment by Race and Gender"/>
+          <category name="School Districts Enrollment by Special Population" title="School Districts Enrollment by Special Population"/>
+          <category name="School Districts Graduation Plans" title="School Districts Graduation Plans"/>
+          <category name="School Districts MCAS: Grade 10 Math" title="School Districts MCAS: Grade 10 Math"/>
+          <category name="School Districts MCAS: Grade 10 Reading" title="School Districts MCAS: Grade 10 Reading"/>
+          <category name="School Districts MCAS: Grade 10 Science" title="School Districts MCAS: Grade 10 Science"/>
+          <category name="School Districts MCAS: Grade 3 Math" title="School Districts MCAS: Grade 3 Math"/>
+          <category name="School Districts MCAS: Grade 3 Reading" title="School Districts MCAS: Grade 3 Reading"/>
+          <category name="School Districts MCAS: Grade 3 Reading by Municipality" title="School Districts MCAS: Grade 3 Reading by Municipality"/>
+          <category name="School Districts MCAS: Grade 8 Math" title="School Districts MCAS: Grade 8 Math"/>
+          <category name="School Districts MCAS: Grade 8 Reading" title="School Districts MCAS: Grade 8 Reading"/>
+          <category name="School Districts: 2011 Grade 3 MCAS Groups by Municipality" title="School Districts: 2011 Grade 3 MCAS Groups by Municipality"/>
+          <category name="School Districts: Enrollment" title="School Districts: Enrollment"/>
+          <category name="School Districts: Enrollment by Grade" title="School Districts: Enrollment by Grade"/>
+          <category name="School Districts: Enrollment by Municipality" title="School Districts: Enrollment by Municipality"/>
+          <category name="School Districts: Enrollment old" title="School Districts: Enrollment old"/>
+          <category name="School Districts: Grade 3 MCAS by Municipality" title="School Districts: Grade 3 MCAS by Municipality"/>
+          <category name="School Districts: Graduation Plans" title="School Districts: Graduation Plans"/>
+          <category name="School Districts: MCAS Grade 3 by Municipality, 2011" title="School Districts: MCAS Grade 3 by Municipality, 2011"/>
+          <category name="School Districts: MCAS Grade3 Math" title="School Districts: MCAS Grade3 Math"/>
+          <category name="School Districts: MCAS Grade3 Reading" title="School Districts: MCAS Grade3 Reading"/>
+          <category name="School Enrollment by Special Population and Race 2010" title="School Enrollment by Special Population and Race 2010"/>
+          <category name="School Mobility 2010" title="School Mobility 2010"/>
+          <category name="School Teacher Characteristics 2010 (points)" title="School Teacher Characteristics 2010 (points)"/>
+          <category name="Schools" title="Schools"/>
+          <category name="Schools Enrollment" title="Schools Enrollment"/>
+          <category name="Schools MCAS Grade3 Reading 2011" title="Schools MCAS Grade3 Reading 2011"/>
+          <category name="Schools MCAS: Grade 10 Reading" title="Schools MCAS: Grade 10 Reading"/>
+          <category name="Schools MCAS: Grade3 Math 2011" title="Schools MCAS: Grade3 Math 2011"/>
+          <category name="Schools MCAS: Grade3 Math 2011 OLD" title="Schools MCAS: Grade3 Math 2011 OLD"/>
+          <category name="Schools MCAS: Grade3 Reading 2011" title="Schools MCAS: Grade3 Reading 2011"/>
+          <category name="Schools: Risk Indicators (2010)" title="Schools: Risk Indicators (2010)"/>
+          <category name="Subsidized Housing Inventory" title="Subsidized Housing Inventory"/>
+          <category name="Success Boston Student Cohorts (2010)" title="Success Boston Student Cohorts (2010)"/>
+          <category name="Transportation to Work, ACS 2005-09 (Municipality)-Transposed" title="Transportation to Work, ACS 2005-09 (Municipality)-Transposed"/>
+          <category name="Travel Time to Work 2005-09 ACS (Municipality)" title="Travel Time to Work 2005-09 ACS (Municipality)"/>
+          <category name="Travel Time to Work 2005-09 ACS (Municipality) -Transposed" title="Travel Time to Work 2005-09 ACS (Municipality) -Transposed"/>
+          <category name="US States" title="US States"/>
+        </category>
+        <category name="Geometry Collections" title="Geometry Collections">
+          <attribute dataType="geometry" name="Arts and Culture Points" keyType="ObjectID" title="Arts and Culture Points"/>
+          <attribute dataType="geometry" name="Boston Circle of Promise Schools" keyType="SchoolID" title="Boston Circle of Promise Schools"/>
+          <attribute dataType="geometry" name="Boston Daycares" keyType="ObjectID" title="Boston Daycares"/>
+          <attribute dataType="geometry" name="Boston Neighborhoods" keyType="ObjectID" title="Boston Neighborhoods"/>
+          <attribute dataType="geometry" name="Boston Non-Profit Educational Assets (Points)" keyType="ObjectID" title="Boston Non-Profit Educational Assets (Points)"/>
+          <attribute dataType="geometry" name="Boston Outline" keyType="MUNI_ID" title="Boston Outline"/>
+          <attribute dataType="geometry" name="Boston Parcels (Subset)" keyType="ObjectID" title="Boston Parcels (Subset)"/>
+          <attribute dataType="geometry" name="Boston Parcels OnlyPID" keyType="Boston Parcels OnlyPID" title="Boston Parcels OnlyPID"/>
+          <attribute dataType="geometry" name="Boston Schools" keyType="SchoolID" title="Boston Schools"/>
+          <attribute dataType="geometry" name="Boston Turnaround Schools" keyType="SchoolID" title="Boston Turnaround Schools"/>
+          <attribute dataType="geometry" name="Census 1990 Block Groups" keyType="BG_90_ID" title="Census 1990 Block Groups"/>
+          <attribute dataType="geometry" name="Census 2000 Block Groups" keyType="BG_00_ID" title="Census 2000 Block Groups"/>
+          <attribute dataType="geometry" name="Census 2000 Tracts" keyType="CT_ID" title="Census 2000 Tracts"/>
+          <attribute dataType="geometry" name="Child Care Providers with Less than High School" keyType="ObjectID" title="Child Care Providers with Less than High School"/>
+          <attribute dataType="geometry" name="Colleges and Universities" keyType="College_ID" title="Colleges and Universities"/>
+          <attribute dataType="geometry" name="Commuter Rail" keyType="ObjectID" title="Commuter Rail"/>
+          <attribute dataType="geometry" name="Indigo Commuter Line" keyType="ObjectID" title="Indigo Commuter Line"/>
+          <attribute dataType="geometry" name="Lighthouses" keyType="ObjectID" title="Lighthouses"/>
+          <attribute dataType="geometry" name="Massachusetts Municipalities" keyType="MUNI_ID" title="Massachusetts Municipalities"/>
+          <attribute dataType="geometry" name="MBTA Subway Lines" keyType="MBTA Subway Lines" title="MBTA Subway Lines"/>
+          <attribute dataType="geometry" name="Municipal Elementary School Districts" keyType="Municipal Elementary School Districts" title="Municipal Elementary School Districts"/>
+          <attribute dataType="geometry" name="School Districts" keyType="SchoolDistrictID" title="School Districts"/>
+          <attribute dataType="geometry" name="School Districts by Town" keyType="SchoolDistrictID" title="School Districts by Town"/>
+          <attribute dataType="geometry" name="Schools" keyType="SchoolID" title="Schools"/>
+          <attribute dataType="geometry" name="Success Boston Student Cohorts (2010)" keyType="ObjectID" title="Success Boston Student Cohorts (2010)"/>
+          <attribute dataType="geometry" name="US States" keyType="State_ID" title="US States"/>
+        </category>
+      </hierarchy>
+    </attributeHierarchy>
+    <hierarchyURL/>
+    <url>/WeaveServices/DataService</url>
+  </WeaveDataSource>
+  <ProbeToolTipEditor name="ProbeToolTipEditor">
+    <buttonRadius>3</buttonRadius>
+    <closeable>false</closeable>
+    <draggable>true</draggable>
+    <enableBorders>true</enableBorders>
+    <maximizable>false</maximizable>
+    <maximized>false</maximized>
+    <minimizable>false</minimizable>
+    <minimized>false</minimized>
+    <panelBackgroundColor>NaN</panelBackgroundColor>
+    <panelBorderColor>NaN</panelBorderColor>
+    <panelHeight>50%</panelHeight>
+    <panelStyleList/>
+    <panelTitle/>
+    <panelWidth>50%</panelWidth>
+    <panelX>15%</panelX>
+    <panelY>27%</panelY>
+    <pinnable>false</pinnable>
+    <pinnableToBack>false</pinnableToBack>
+    <pinned>false</pinned>
+    <pinnedToBack>false</pinnedToBack>
+    <resizeable>true</resizeable>
+    <showCloseDialog>false</showCloseDialog>
+  </ProbeToolTipEditor>
+  <DataTableTool name="DataTableTool2">
+    <buttonRadius>3</buttonRadius>
+    <closeable>true</closeable>
+    <columns encoding="dynamic">
+      <ReferencedColumn name="ReferencedColumn">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>WeaveDataSource</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category name="Data Tables" title="Data Tables">
+                  <category name="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="Educational Attainment over 25 years, ACS 2005-09 (Municipal)">
+                    <attribute dataType="string" name="municipal" keyType="MUNI_ID" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="Municipality"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn2">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>WeaveDataSource</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category name="Data Tables" title="Data Tables">
+                  <category name="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="Educational Attainment over 25 years, ACS 2005-09 (Municipal)">
+                    <attribute dataType="number" name="lths_09p" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" max="100" min="0" keyType="MUNI_ID" title="% Less than High School"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn3">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>WeaveDataSource</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category name="Data Tables" title="Data Tables">
+                  <category name="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="Educational Attainment over 25 years, ACS 2005-09 (Municipal)">
+                    <attribute dataType="number" name="ed9_12_09p" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" max="100" min="0" keyType="MUNI_ID" title="% Completed 9th- 12th Grade with no Diploma"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn4">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>WeaveDataSource</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category name="Data Tables" title="Data Tables">
+                  <category name="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="Educational Attainment over 25 years, ACS 2005-09 (Municipal)">
+                    <attribute dataType="number" name="ged09p" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" max="100" min="0" keyType="MUNI_ID" title="% High school graduate"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn5">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>WeaveDataSource</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category name="Data Tables" title="Data Tables">
+                  <category name="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="Educational Attainment over 25 years, ACS 2005-09 (Municipal)">
+                    <attribute dataType="number" name="some09p" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" max="100" min="0" keyType="MUNI_ID" title="% Some College"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn6">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>WeaveDataSource</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category name="Data Tables" title="Data Tables">
+                  <category name="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="Educational Attainment over 25 years, ACS 2005-09 (Municipal)">
+                    <attribute dataType="number" name="assoc09p" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" max="100" min="0" keyType="MUNI_ID" title="% Associate Degree"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn7">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>WeaveDataSource</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category name="Data Tables" title="Data Tables">
+                  <category name="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="Educational Attainment over 25 years, ACS 2005-09 (Municipal)">
+                    <attribute dataType="number" name="ba09p" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" max="100" min="0" keyType="MUNI_ID" title="% Bachelor Degree"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn8">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>WeaveDataSource</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category name="Data Tables" title="Data Tables">
+                  <category name="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="Educational Attainment over 25 years, ACS 2005-09 (Municipal)">
+                    <attribute dataType="number" name="mast09p" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" max="100" min="0" keyType="MUNI_ID" title="% Master Degree or Higher"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+    </columns>
+    <columnWidths encoding="dynamic">
+      <LinkableString name="ReferencedColumn"/>
+      <LinkableString name="ReferencedColumn2"/>
+      <LinkableString name="ReferencedColumn3"/>
+      <LinkableString name="ReferencedColumn4"/>
+      <LinkableString name="ReferencedColumn5"/>
+      <LinkableString name="ReferencedColumn6"/>
+      <LinkableString name="ReferencedColumn7"/>
+      <LinkableString name="ReferencedColumn8"/>
+    </columnWidths>
+    <draggable>true</draggable>
+    <enableBorders>true</enableBorders>
+    <exportKeys>true</exportKeys>
+    <filterByKeyType/>
+    <lockedColumns>0</lockedColumns>
+    <maximizable>true</maximizable>
+    <maximized>false</maximized>
+    <minimizable>true</minimizable>
+    <minimized>false</minimized>
+    <panelBackgroundColor>NaN</panelBackgroundColor>
+    <panelBorderColor>NaN</panelBorderColor>
+    <panelHeight>50%</panelHeight>
+    <panelStyleList/>
+    <panelTitle/>
+    <panelWidth>50%</panelWidth>
+    <panelX>2%</panelX>
+    <panelY>26%</panelY>
+    <pinnable>true</pinnable>
+    <pinnableToBack>false</pinnableToBack>
+    <pinned>false</pinned>
+    <pinnedToBack>false</pinnedToBack>
+    <resizeable>true</resizeable>
+    <showCloseDialog>false</showCloseDialog>
+    <showControls>false</showControls>
+    <sortFieldIndex>NaN</sortFieldIndex>
+    <sortInDescendingOrder>false</sortInDescendingOrder>
+  </DataTableTool>
+  <CompoundBarChartTool name="CompoundBarChartTool">
+    <buttonRadius>3</buttonRadius>
+    <children encoding="dynamic">
+      <SimpleInteractiveVisualization name="visualization">
+        <axesAlpha>1</axesAlpha>
+        <axesColor>11579568</axesColor>
+        <axesThickness>10</axesThickness>
+        <axisFontBold>true</axisFontBold>
+        <axisFontColor>0</axisFontColor>
+        <axisFontFamily>Sophia Nubian</axisFontFamily>
+        <axisFontItalic>false</axisFontItalic>
+        <axisFontSize>11</axisFontSize>
+        <axisFontUnderline>false</axisFontUnderline>
+        <enableAutoZoomToExtent>true</enableAutoZoomToExtent>
+        <enableAutoZoomXToNiceNumbers>false</enableAutoZoomXToNiceNumbers>
+        <enableAutoZoomYToNiceNumbers>false</enableAutoZoomYToNiceNumbers>
+        <enableFixedAspectRatio>false</enableFixedAspectRatio>
+        <enableProbe>true</enableProbe>
+        <enableSelection>true</enableSelection>
+        <enableZoomAndPan>false</enableZoomAndPan>
+        <gridLineAlpha>1</gridLineAlpha>
+        <gridLineColor>14540253</gridLineColor>
+        <gridLineThickness>1</gridLineThickness>
+        <includeNonSelectableLayersInAutoZoom>false</includeNonSelectableLayersInAutoZoom>
+        <layers encoding="dynamic">
+          <AxisLayer name="yAxis">
+            <isOverlay>false</isOverlay>
+            <layerIsVisible>true</layerIsVisible>
+            <plotter encoding="dynamic">
+              <SimpleAxisPlotter>
+                <axisLabelDistance>-10</axisLabelDistance>
+                <axisLabelRelativeAngle>90</axisLabelRelativeAngle>
+                <axisLineDataBounds>
+                  <xMax>-0.26293103448275856</xMax>
+                  <xMin>-0.26293103448275856</xMin>
+                  <yMax>27.1745</yMax>
+                  <yMin>0</yMin>
+                </axisLineDataBounds>
+                <axisLineMaxValue>27.1745</axisLineMaxValue>
+                <axisLineMinValue>0</axisLineMinValue>
+                <forceTickCount>false</forceTickCount>
+                <keySet>
+                  <keyFilter encoding="dynamic"/>
+                </keySet>
+                <labelDistanceIsVertical>false</labelDistanceIsVertical>
+                <labelFunction>number+'%'</labelFunction>
+                <labelHorizontalAlign>right</labelHorizontalAlign>
+                <labelNumberFormatter>
+                  <decimalSeparatorFrom>.</decimalSeparatorFrom>
+                  <decimalSeparatorTo>.</decimalSeparatorTo>
+                  <precision>0</precision>
+                  <rounding>none</rounding>
+                  <thousandsSeparatorFrom>,</thousandsSeparatorFrom>
+                  <thousandsSeparatorTo>,</thousandsSeparatorTo>
+                  <useNegativeSign>true</useNegativeSign>
+                  <useThousandsSeparator>true</useThousandsSeparator>
+                </labelNumberFormatter>
+                <labelTextAlignment>left</labelTextAlignment>
+                <labelVerticalAlign>bottom</labelVerticalAlign>
+                <labelWordWrapSize>40</labelWordWrapSize>
+                <overrideAxisName/>
+                <showAxisName>false</showAxisName>
+                <showLabels>true</showLabels>
+                <tickCountRequested>5</tickCountRequested>
+                <tickMaxValue>NaN</tickMaxValue>
+                <tickMinValue>NaN</tickMinValue>
+              </SimpleAxisPlotter>
+            </plotter>
+            <selectionFilter encoding="dynamic"/>
+          </AxisLayer>
+          <AxisLayer name="xAxis">
+            <isOverlay>false</isOverlay>
+            <layerIsVisible>false</layerIsVisible>
+            <plotter encoding="dynamic">
+              <SimpleAxisPlotter>
+                <axisLabelDistance>-10</axisLabelDistance>
+                <axisLabelRelativeAngle>-45</axisLabelRelativeAngle>
+                <axisLineDataBounds>
+                  <xMax>2.2629310344827585</xMax>
+                  <xMin>-0.26293103448275856</xMin>
+                  <yMax>0</yMax>
+                  <yMin>0</yMin>
+                </axisLineDataBounds>
+                <axisLineMaxValue>2.2629310344827585</axisLineMaxValue>
+                <axisLineMinValue>-0.26293103448275856</axisLineMinValue>
+                <forceTickCount>false</forceTickCount>
+                <keySet>
+                  <keyFilter encoding="dynamic"/>
+                </keySet>
+                <labelDistanceIsVertical>false</labelDistanceIsVertical>
+                <labelFunction>string</labelFunction>
+                <labelHorizontalAlign>right</labelHorizontalAlign>
+                <labelNumberFormatter>
+                  <decimalSeparatorFrom>.</decimalSeparatorFrom>
+                  <decimalSeparatorTo>.</decimalSeparatorTo>
+                  <precision>0</precision>
+                  <rounding>none</rounding>
+                  <thousandsSeparatorFrom>,</thousandsSeparatorFrom>
+                  <thousandsSeparatorTo>,</thousandsSeparatorTo>
+                  <useNegativeSign>true</useNegativeSign>
+                  <useThousandsSeparator>true</useThousandsSeparator>
+                </labelNumberFormatter>
+                <labelTextAlignment>left</labelTextAlignment>
+                <labelVerticalAlign>top</labelVerticalAlign>
+                <labelWordWrapSize>10</labelWordWrapSize>
+                <overrideAxisName/>
+                <showAxisName>true</showAxisName>
+                <showLabels>true</showLabels>
+                <tickCountRequested>3</tickCountRequested>
+                <tickMaxValue>2</tickMaxValue>
+                <tickMinValue>0</tickMinValue>
+              </SimpleAxisPlotter>
+            </plotter>
+            <selectionFilter encoding="dynamic"/>
+          </AxisLayer>
+          <SelectablePlotLayer name="plot">
+            <backgroundIsVisible>true</backgroundIsVisible>
+            <layerIsSelectable>true</layerIsSelectable>
+            <layerIsVisible>true</layerIsVisible>
+            <plotter encoding="dynamic">
+              <CompoundBarChartPlotter>
+                <barSpacing>0.9482758620689656</barSpacing>
+                <chartColors encoding="xml">
+                  <colorRamp printFriendly="true" dataFormat="diverging" source="ColorBrewer" category="basic" photocopyable="true" name="Spectral" singlehue="false">
+                    <node color="0xD7191C" position="0"/>
+                    <node color="0xFDAE61" position="0.25"/>
+                    <node color="0xFFFFBF" position="0.5"/>
+                    <node color="0xABDDA4" position="0.75"/>
+                    <node color="0x2B83BA" position="1.0"/>
+                  </colorRamp>
+                </chartColors>
+                <colorColumn>
+                  <defaultValue>NaN</defaultValue>
+                  <internalDynamicColumn encoding="dynamic">
+                    <GlobalObjectReference name="defaultColorColumn"/>
+                  </internalDynamicColumn>
+                </colorColumn>
+                <groupBySortColumn>false</groupBySortColumn>
+                <groupingMode>group</groupingMode>
+                <heightColumns encoding="dynamic">
+                  <ReferencedColumn name="ReferencedColumn">
+                    <dynamicColumnReference encoding="dynamic">
+                      <HierarchyColumnReference>
+                        <dataSourceName>WeaveDataSource</dataSourceName>
+                        <hierarchyPath encoding="xml">
+                          <hierarchy>
+                            <category name="Data Tables" title="Data Tables">
+                              <category name="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="Educational Attainment over 25 years, ACS 2005-09 (Municipal)">
+                                <attribute dataType="number" name="lths_09p" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" max="100" min="0" keyType="MUNI_ID" title="% Less than High School"/>
+                              </category>
+                            </category>
+                          </hierarchy>
+                        </hierarchyPath>
+                      </HierarchyColumnReference>
+                    </dynamicColumnReference>
+                  </ReferencedColumn>
+                  <ReferencedColumn name="ReferencedColumn2">
+                    <dynamicColumnReference encoding="dynamic">
+                      <HierarchyColumnReference>
+                        <dataSourceName>WeaveDataSource</dataSourceName>
+                        <hierarchyPath encoding="xml">
+                          <hierarchy>
+                            <category name="Data Tables" title="Data Tables">
+                              <category name="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="Educational Attainment over 25 years, ACS 2005-09 (Municipal)">
+                                <attribute dataType="number" name="ed9_12_09p" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" max="100" min="0" keyType="MUNI_ID" title="% Completed 9th- 12th Grade with no Diploma"/>
+                              </category>
+                            </category>
+                          </hierarchy>
+                        </hierarchyPath>
+                      </HierarchyColumnReference>
+                    </dynamicColumnReference>
+                  </ReferencedColumn>
+                  <ReferencedColumn name="ReferencedColumn3">
+                    <dynamicColumnReference encoding="dynamic">
+                      <HierarchyColumnReference>
+                        <dataSourceName>WeaveDataSource</dataSourceName>
+                        <hierarchyPath encoding="xml">
+                          <hierarchy>
+                            <category name="Data Tables" title="Data Tables">
+                              <category name="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="Educational Attainment over 25 years, ACS 2005-09 (Municipal)">
+                                <attribute dataType="number" name="ged09p" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" max="100" min="0" keyType="MUNI_ID" title="% High school graduate"/>
+                              </category>
+                            </category>
+                          </hierarchy>
+                        </hierarchyPath>
+                      </HierarchyColumnReference>
+                    </dynamicColumnReference>
+                  </ReferencedColumn>
+                  <ReferencedColumn name="ReferencedColumn4">
+                    <dynamicColumnReference encoding="dynamic">
+                      <HierarchyColumnReference>
+                        <dataSourceName>WeaveDataSource</dataSourceName>
+                        <hierarchyPath encoding="xml">
+                          <hierarchy>
+                            <category name="Data Tables" title="Data Tables">
+                              <category name="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="Educational Attainment over 25 years, ACS 2005-09 (Municipal)">
+                                <attribute dataType="number" name="some09p" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" max="100" min="0" keyType="MUNI_ID" title="% Some College"/>
+                              </category>
+                            </category>
+                          </hierarchy>
+                        </hierarchyPath>
+                      </HierarchyColumnReference>
+                    </dynamicColumnReference>
+                  </ReferencedColumn>
+                  <ReferencedColumn name="ReferencedColumn5">
+                    <dynamicColumnReference encoding="dynamic">
+                      <HierarchyColumnReference>
+                        <dataSourceName>WeaveDataSource</dataSourceName>
+                        <hierarchyPath encoding="xml">
+                          <hierarchy>
+                            <category name="Data Tables" title="Data Tables">
+                              <category name="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="Educational Attainment over 25 years, ACS 2005-09 (Municipal)">
+                                <attribute dataType="number" name="assoc09p" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" max="100" min="0" keyType="MUNI_ID" title="% Associate Degree"/>
+                              </category>
+                            </category>
+                          </hierarchy>
+                        </hierarchyPath>
+                      </HierarchyColumnReference>
+                    </dynamicColumnReference>
+                  </ReferencedColumn>
+                  <ReferencedColumn name="ReferencedColumn6">
+                    <dynamicColumnReference encoding="dynamic">
+                      <HierarchyColumnReference>
+                        <dataSourceName>WeaveDataSource</dataSourceName>
+                        <hierarchyPath encoding="xml">
+                          <hierarchy>
+                            <category name="Data Tables" title="Data Tables">
+                              <category name="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="Educational Attainment over 25 years, ACS 2005-09 (Municipal)">
+                                <attribute dataType="number" name="ba09p" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" max="100" min="0" keyType="MUNI_ID" title="% Bachelor Degree"/>
+                              </category>
+                            </category>
+                          </hierarchy>
+                        </hierarchyPath>
+                      </HierarchyColumnReference>
+                    </dynamicColumnReference>
+                  </ReferencedColumn>
+                  <ReferencedColumn name="ReferencedColumn7">
+                    <dynamicColumnReference encoding="dynamic">
+                      <HierarchyColumnReference>
+                        <dataSourceName>WeaveDataSource</dataSourceName>
+                        <hierarchyPath encoding="xml">
+                          <hierarchy>
+                            <category name="Data Tables" title="Data Tables">
+                              <category name="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="Educational Attainment over 25 years, ACS 2005-09 (Municipal)">
+                                <attribute dataType="number" name="mast09p" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" max="100" min="0" keyType="MUNI_ID" title="% Master Degree or Higher"/>
+                              </category>
+                            </category>
+                          </hierarchy>
+                        </hierarchyPath>
+                      </HierarchyColumnReference>
+                    </dynamicColumnReference>
+                  </ReferencedColumn>
+                </heightColumns>
+                <horizontalMode>false</horizontalMode>
+                <keySet>
+                  <keyFilter encoding="dynamic">
+                    <GlobalObjectReference name="defaultSubsetKeyFilter"/>
+                  </keyFilter>
+                </keySet>
+                <labelColor>0</labelColor>
+                <labelColumn encoding="dynamic">
+                  <ReferencedColumn>
+                    <dynamicColumnReference encoding="dynamic">
+                      <HierarchyColumnReference>
+                        <dataSourceName>WeaveDataSource</dataSourceName>
+                        <hierarchyPath encoding="xml">
+                          <hierarchy>
+                            <category name="Data Tables" title="Data Tables">
+                              <category name="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="Educational Attainment over 25 years, ACS 2005-09 (Municipal)">
+                                <attribute dataType="string" name="municipal" keyType="MUNI_ID" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="Municipality"/>
+                              </category>
+                            </category>
+                          </hierarchy>
+                        </hierarchyPath>
+                      </HierarchyColumnReference>
+                    </dynamicColumnReference>
+                  </ReferencedColumn>
+                </labelColumn>
+                <labelDataCoordinate>NaN</labelDataCoordinate>
+                <labelHorizontalAlign>right</labelHorizontalAlign>
+                <labelRelativeAngle>NaN</labelRelativeAngle>
+                <labelVerticalAlign>middle</labelVerticalAlign>
+                <lineStyle encoding="dynamic">
+                  <SolidLineStyle>
+                    <alpha>
+                      <defaultValue>0.5</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </alpha>
+                    <caps>
+                      <defaultValue/>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </caps>
+                    <color>
+                      <defaultValue>0</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </color>
+                    <enabled>
+                      <defaultValue>true</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </enabled>
+                    <joints>
+                      <defaultValue/>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </joints>
+                    <miterLimit>
+                      <defaultValue>3</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </miterLimit>
+                    <pixelHinting>
+                      <defaultValue>false</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </pixelHinting>
+                    <scaleMode>
+                      <defaultValue>normal</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </scaleMode>
+                    <weight>
+                      <defaultValue>1</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </weight>
+                  </SolidLineStyle>
+                </lineStyle>
+                <negativeErrorColumns encoding="dynamic"/>
+                <positiveErrorColumns encoding="dynamic"/>
+                <showLabels>false</showLabels>
+                <showValueLabels>false</showValueLabels>
+                <sortColumn encoding="dynamic">
+                  <ReferencedColumn>
+                    <dynamicColumnReference encoding="dynamic">
+                      <HierarchyColumnReference>
+                        <dataSourceName>WeaveDataSource</dataSourceName>
+                        <hierarchyPath encoding="xml">
+                          <hierarchy>
+                            <category name="Data Tables" title="Data Tables">
+                              <category name="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="Educational Attainment over 25 years, ACS 2005-09 (Municipal)">
+                                <attribute dataType="string" name="municipal" keyType="MUNI_ID" dataTable="Educational Attainment over 25 years, ACS 2005-09 (Municipal)" title="Municipality"/>
+                              </category>
+                            </category>
+                          </hierarchy>
+                        </hierarchyPath>
+                      </HierarchyColumnReference>
+                    </dynamicColumnReference>
+                  </ReferencedColumn>
+                </sortColumn>
+                <valueLabelColor>0</valueLabelColor>
+                <valueLabelDataCoordinate>NaN</valueLabelDataCoordinate>
+                <valueLabelHorizontalAlign>left</valueLabelHorizontalAlign>
+                <valueLabelRelativeAngle>NaN</valueLabelRelativeAngle>
+                <valueLabelVerticalAlign>middle</valueLabelVerticalAlign>
+                <zoomToSubset>true</zoomToSubset>
+              </CompoundBarChartPlotter>
+            </plotter>
+            <probeFilter encoding="dynamic">
+              <GlobalObjectReference name="defaultProbeKeySet"/>
+            </probeFilter>
+            <selectionFilter encoding="dynamic">
+              <GlobalObjectReference name="defaultSelectionKeySet"/>
+            </selectionFilter>
+            <subsetFilter encoding="dynamic">
+              <GlobalObjectReference name="defaultSubsetKeyFilter"/>
+            </subsetFilter>
+            <useTextBitmapFilters>false</useTextBitmapFilters>
+          </SelectablePlotLayer>
+          <PlotLayer name="probeLine">
+            <isOverlay>false</isOverlay>
+            <layerIsVisible>true</layerIsVisible>
+            <plotter encoding="dynamic">
+              <ProbeLinePlotter>
+                <keySet>
+                  <keyFilter encoding="dynamic"/>
+                </keySet>
+                <lineStyle encoding="dynamic">
+                  <SolidLineStyle>
+                    <alpha>
+                      <defaultValue>0.5</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </alpha>
+                    <caps>
+                      <defaultValue/>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </caps>
+                    <color>
+                      <defaultValue>0</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </color>
+                    <enabled>
+                      <defaultValue>true</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </enabled>
+                    <joints>
+                      <defaultValue/>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </joints>
+                    <miterLimit>
+                      <defaultValue>3</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </miterLimit>
+                    <pixelHinting>
+                      <defaultValue>false</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </pixelHinting>
+                    <scaleMode>
+                      <defaultValue>normal</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </scaleMode>
+                    <weight>
+                      <defaultValue>1</defaultValue>
+                      <internalDynamicColumn encoding="dynamic"/>
+                    </weight>
+                  </SolidLineStyle>
+                </lineStyle>
+              </ProbeLinePlotter>
+            </plotter>
+            <selectionFilter encoding="dynamic"/>
+          </PlotLayer>
+        </layers>
+        <marginBottom>10</marginBottom>
+        <marginLeft>40</marginLeft>
+        <marginRight>10</marginRight>
+        <marginTop>15</marginTop>
+        <maxZoomLevel>16</maxZoomLevel>
+        <minScreenSize>128</minScreenSize>
+        <minZoomLevel>0</minZoomLevel>
+        <overrideXMax>NaN</overrideXMax>
+        <overrideXMin>NaN</overrideXMin>
+        <overrideYMax>NaN</overrideYMax>
+        <overrideYMin>NaN</overrideYMin>
+        <shadowAmount>0</shadowAmount>
+        <zoomBounds>
+          <xMax>2.2629310344827585</xMax>
+          <xMin>-0.26293103448275856</xMin>
+          <yMax>27.1745</yMax>
+          <yMin>0</yMin>
+        </zoomBounds>
+      </SimpleInteractiveVisualization>
+    </children>
+    <closeable>true</closeable>
+    <draggable>true</draggable>
+    <enableBorders>true</enableBorders>
+    <enableTitle>true</enableTitle>
+    <includeToolAttributesInProbe>true</includeToolAttributesInProbe>
+    <maximizable>true</maximizable>
+    <maximized>true</maximized>
+    <minimizable>true</minimizable>
+    <minimized>false</minimized>
+    <panelBackgroundColor>NaN</panelBackgroundColor>
+    <panelBorderColor>NaN</panelBorderColor>
+    <panelHeight>50%</panelHeight>
+    <panelStyleList/>
+    <panelTitle>Educational Attainment for people over 25 years</panelTitle>
+    <panelWidth>50%</panelWidth>
+    <panelX>50%</panelX>
+    <panelY>50%</panelY>
+    <pinnable>true</pinnable>
+    <pinnableToBack>false</pinnableToBack>
+    <pinned>false</pinned>
+    <pinnedToBack>false</pinnedToBack>
+    <resizeable>true</resizeable>
+    <showAllLabels>false</showAllLabels>
+    <showCloseDialog>false</showCloseDialog>
+    <sizeAxisTickCountRequested>5</sizeAxisTickCountRequested>
+  </CompoundBarChartTool>
+</Weave>

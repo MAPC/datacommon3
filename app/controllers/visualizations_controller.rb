@@ -2,8 +2,14 @@ class VisualizationsController < ApplicationController
   before_filter :load_institution
 
   def index
-    @visualizations = Visualization.all.page params[:page]
-    # @visualizations = Visualization.institution(@institution).page params[:page]
+    if params[:topic]
+      topic          = IssueArea.find_by(slug: params[:topic])
+      visualizations = topic.visualizations.page params[:page]
+      
+      @gallery = Gallery.new(visualizations, topic)
+    else
+      @gallery = Gallery.new( Visualization.all.page(params[:page]) )
+    end
   end
 
   def show

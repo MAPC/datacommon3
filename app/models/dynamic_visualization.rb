@@ -10,16 +10,40 @@ class DynamicVisualization < ActiveRecord::Base
   #       sessionstate column than the below. It's 
   #       probably in the Metaprogramming book.
 
+  def basepath
+    "#{Rails.root}/public/dynamic_visualizations"
+  end
+
+
+  def filename
+    filename = read_attribute(:sessionstate).rpartition('/').last
+    filename.split('.').first
+  end
+
+
+  def base_image_path
+    "#{basepath}/images/#{filename}.png"
+  end
+
+
+  def image_path(object, method)
+    "#{basepath}/images/#{filename}_#{object.send(method)}.png"
+  end
+
+  
+  def sessionstate_path
+    read_attribute(:sessionstate)
+  end
+  
+
   def sessionstate
-    vis_path  = read_attribute(:sessionstate).partition('/').last
-    file_path = "#{Rails.root}/public/dynamic_#{vis_path}"
-    File.open(File.expand_path file_path).read
+    file_path = "#{basepath}/sessionstates/#{filename}.xml"
+    File.open(File.expand_path(file_path), 'rb') { |file| file.read }
   end
 
 
   # Render session state for an `object` that has
   # fields `unitid`, `name`, and `subunit_ids`.
-
   def rendered_state(object)
     bracketed    = /(\{{2}.*\}{2})/i
     # Capital S is to match only non-whitespace chars
@@ -31,14 +55,12 @@ class DynamicVisualization < ActiveRecord::Base
     captures.each do |expression|      
       full_method     = expression.match(inside_brackets).captures.first
       replacer_method = full_method.partition('.').last.strip
+      replacer_method = replacer_method.gsub(/\|.*/, '') # remove Django filters
       state.gsub!( expression, object.send(replacer_method) )
     end
 
-    state
+    state.gsub("\n", '').gsub('"','\"')
   end
 
-  def sessionstate_path
-    read_attribute(:sessionstate)
-  end
 
 end

@@ -9,12 +9,9 @@
       =select_tag :municipality_id, options_for_select(@s.options_for_area), include_blank: true, id: 'area-select', class: 'chosen-select', data: { placeholder: "Choose a different #{@s.area_type_name}" }
 
 .row
-  - @s.visualizations.each do |vis|
-    -# TODO: Make this a partial
-    .col-md-4.col-sm-6.col-xs-12.center.snapshot-preview
-      = link_to vis.title, vis.path, class: 'snapshot-preview-title'
-      = link_to vis.path do
-        %img.snapshot-vis{src: "http://unsplash.it/400/400?random"}
+  = render partial: 'visualizations/good_preview', collection: @s.visualizations, as: :vis
+  
+    
 
 :javascript
 

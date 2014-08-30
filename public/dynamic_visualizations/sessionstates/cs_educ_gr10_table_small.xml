@@ -1,0 +1,806 @@
+<Weave encoding="dynamic">
+  <WeaveProperties name="WeaveProperties">
+    <backgroundColor>16777215</backgroundColor>
+    <cssStyleSheetName>weaveStyle.css</cssStyleSheetName>
+    <dashboardMode>true</dashboardMode>
+    <dashedSelectionBox>5,5</dashedSelectionBox>
+    <dataInfoURL/>
+    <debugScreenBounds>false</debugScreenBounds>
+    <defaultTextFormat>
+      <bold>false</bold>
+      <color>0</color>
+      <font>Sophia Nubian</font>
+      <italic>false</italic>
+      <size>11</size>
+      <underline>false</underline>
+    </defaultTextFormat>
+    <enableAboutMenu>true</enableAboutMenu>
+    <enableAdd2DHistogram>false</enableAdd2DHistogram>
+    <enableAddAttributeMenuTool>true</enableAddAttributeMenuTool>
+    <enableAddBarChart>true</enableAddBarChart>
+    <enableAddCollaborationTool>false</enableAddCollaborationTool>
+    <enableAddColorLegend>true</enableAddColorLegend>
+    <enableAddColormapHistogram>true</enableAddColormapHistogram>
+    <enableAddCompoundRadViz>false</enableAddCompoundRadViz>
+    <enableAddCustomTool>false</enableAddCustomTool>
+    <enableAddDataFilter>true</enableAddDataFilter>
+    <enableAddDataSource>true</enableAddDataSource>
+    <enableAddDataTable>true</enableAddDataTable>
+    <enableAddDimensionSliderTool>false</enableAddDimensionSliderTool>
+    <enableAddGaugeTool>false</enableAddGaugeTool>
+    <enableAddGraphTool>true</enableAddGraphTool>
+    <enableAddHistogram>true</enableAddHistogram>
+    <enableAddLineChart>true</enableAddLineChart>
+    <enableAddMap>true</enableAddMap>
+    <enableAddPieChart>true</enableAddPieChart>
+    <enableAddPieChartHistogram>true</enableAddPieChartHistogram>
+    <enableAddRadViz>false</enableAddRadViz>
+    <enableAddRamachandranPlot>false</enableAddRamachandranPlot>
+    <enableAddRScriptEditor>true</enableAddRScriptEditor>
+    <enableAddScatterplot>true</enableAddScatterplot>
+    <enableAddThermometerTool>false</enableAddThermometerTool>
+    <enableAddTimeSliderTool>false</enableAddTimeSliderTool>
+    <enableAddWeaveDataSource>true</enableAddWeaveDataSource>
+    <enableBitmapFilters>true</enableBitmapFilters>
+    <enableCascadeAllWindows>true</enableCascadeAllWindows>
+    <enableClearCurrentSelection>true</enableClearCurrentSelection>
+    <enableCloseAllWindows>true</enableCloseAllWindows>
+    <enableCreateSubsets>true</enableCreateSubsets>
+    <enableDataMenu>true</enableDataMenu>
+    <enableDebugAlert>false</enableDebugAlert>
+    <enableDrawCircle>true</enableDrawCircle>
+    <enableDynamicTools>true</enableDynamicTools>
+    <enableEditDataSource>true</enableEditDataSource>
+    <enableExportApplicationScreenshot>true</enableExportApplicationScreenshot>
+    <enableExportCSV>true</enableExportCSV>
+    <enableExportToolImage>true</enableExportToolImage>
+    <enableFullScreen>false</enableFullScreen>
+    <enableFullscreen>true</enableFullscreen>
+    <enableGeometryProbing>true</enableGeometryProbing>
+    <enableManageSavedSelections>true</enableManageSavedSelections>
+    <enableManageSavedSubsets>true</enableManageSavedSubsets>
+    <enableMarker>true</enableMarker>
+    <enableMenuBar>false</enableMenuBar>
+    <enableMinimizeAllWindows>true</enableMinimizeAllWindows>
+    <enableMouseWheel>true</enableMouseWheel>
+    <enableNewDataset>true</enableNewDataset>
+    <enableNewUserWizard>false</enableNewUserWizard>
+    <enablePanelCoordsPercentageMode>true</enablePanelCoordsPercentageMode>
+    <enableProbeAnimation>true</enableProbeAnimation>
+    <enableProbeLines>true</enableProbeLines>
+    <enableProbeToolTip>true</enableProbeToolTip>
+    <enableRefreshHierarchies>false</enableRefreshHierarchies>
+    <enableRemoveSubsets>true</enableRemoveSubsets>
+    <enableRestoreAllMinimizedWindows>true</enableRestoreAllMinimizedWindows>
+    <enableRightClick>true</enableRightClick>
+    <enableSaveCurrentSelection>true</enableSaveCurrentSelection>
+    <enableSaveCurrentSubset>true</enableSaveCurrentSubset>
+    <enableSearchForRecord>true</enableSearchForRecord>
+    <enableSelectionSelectorBox>true</enableSelectionSelectorBox>
+    <enableSelectionsMenu>true</enableSelectionsMenu>
+    <enableSessionMenu>true</enableSessionMenu>
+    <enableShowAllRecords>true</enableShowAllRecords>
+    <enableSubsetControls>true</enableSubsetControls>
+    <enableSubsetSelectionBox>true</enableSubsetSelectionBox>
+    <enableSubsetsMenu>true</enableSubsetsMenu>
+    <enableTileAllWindows>true</enableTileAllWindows>
+    <enableToolAttributeEditing>true</enableToolAttributeEditing>
+    <enableToolControls>true</enableToolControls>
+    <enableToolProbe>true</enableToolProbe>
+    <enableToolSelection>true</enableToolSelection>
+    <enableUserPreferences>true</enableUserPreferences>
+    <enableWindowMenu>true</enableWindowMenu>
+    <eventListeners encoding="dynamic"/>
+    <geometryMetadataRequestMode>xyz</geometryMetadataRequestMode>
+    <geometryMinimumScreenArea>1</geometryMinimumScreenArea>
+    <jriServiceURL>/WeaveServices/JRIService</jriServiceURL>
+    <macroLibraries>weave.api::WeaveAPI</macroLibraries>
+    <macros encoding="dynamic"/>
+    <maxTooltipRecordsShown>1</maxTooltipRecordsShown>
+    <pageTitle>Open Indicators Weave</pageTitle>
+    <panelTitleTextFormat>
+      <bold>false</bold>
+      <color>16777215</color>
+      <font>Verdana</font>
+      <italic>false</italic>
+      <size>10</size>
+      <underline>false</underline>
+    </panelTitleTextFormat>
+    <pdbServiceURL>/WeavePDBService/PDBService</pdbServiceURL>
+    <probeInnerGlowAlpha>1</probeInnerGlowAlpha>
+    <probeInnerGlowBlur>5</probeInnerGlowBlur>
+    <probeInnerGlowColor>16777215</probeInnerGlowColor>
+    <probeInnerGlowStrength>10</probeInnerGlowStrength>
+    <probeOuterGlowAlpha>1</probeOuterGlowAlpha>
+    <probeOuterGlowBlur>3</probeOuterGlowBlur>
+    <probeOuterGlowColor>0</probeOuterGlowColor>
+    <probeOuterGlowStrength>3</probeOuterGlowStrength>
+    <probeToolTipBackgroundAlpha>1</probeToolTipBackgroundAlpha>
+    <probeToolTipBackgroundColor>NaN</probeToolTipBackgroundColor>
+    <probeToolTipFontColor>0</probeToolTipFontColor>
+    <probeToolTipMaxWidth>400</probeToolTipMaxWidth>
+    <rServiceURL>/WeaveServices/RService</rServiceURL>
+    <searchServiceURLs>Wikipedia|http://en.wikipedia.org/wiki/Special:Search?search=
+Google|http://www.google.com/search?q=
+Google Images|http://images.google.com/images?q=
+Google Maps|http://maps.google.com/maps?t=h&amp;q=</searchServiceURLs>
+    <selectionAlphaAmount>0.5</selectionAlphaAmount>
+    <selectionBlurringAmount>4</selectionBlurringAmount>
+    <shadowAlpha>0.5</shadowAlpha>
+    <shadowAngle>45</shadowAngle>
+    <shadowBlur>4</shadowBlur>
+    <shadowColor>0</shadowColor>
+    <shadowDistance>2</shadowDistance>
+    <showAttributeSelector>true</showAttributeSelector>
+    <showColorController>true</showColorController>
+    <showCopyright>false</showCopyright>
+    <showEquationEditor>true</showEquationEditor>
+    <showKeyTypeInColumnTitle>false</showKeyTypeInColumnTitle>
+    <showProbeToolTipEditor>true</showProbeToolTipEditor>
+    <showSelectedRecordsText>true</showSelectedRecordsText>
+    <showVisToolCloseDialog>false</showVisToolCloseDialog>
+    <startupJavaScript/>
+    <toolInteractions>
+      <defaultDragMode/>
+      <pan>alt,drag</pan>
+      <probe>move</probe>
+      <select>drag</select>
+      <selectAdd>ctrl,drag</selectAdd>
+      <selectRemove>ctrl,shift,drag</selectRemove>
+      <zoom>shift,drag
+wheel</zoom>
+      <zoomIn>dclick</zoomIn>
+      <zoomOut>shift,dclick</zoomOut>
+      <zoomToExtent>ctrl,alt,shift,dclick</zoomToExtent>
+    </toolInteractions>
+    <version>1.0 Beta (Tue Jan 24 10:05:07 EST 2012)</version>
+    <windowSnapGridSize>1%</windowSnapGridSize>
+    <workspaceHeight>252</workspaceHeight>
+    <workspaceMultiplier>1</workspaceMultiplier>
+    <workspaceWidth>333</workspaceWidth>
+  </WeaveProperties>
+  <ColorColumn name="defaultColorColumn">
+    <internalDynamicColumn encoding="dynamic">
+      <GlobalObjectReference name="defaultColorBinColumn"/>
+    </internalDynamicColumn>
+    <ramp encoding="xml">
+      <colorRamp category="basic" source="OIC" name="5-Color">
+        <node position="0" color="0xEFF3FF"/>
+        <node position="0.25" color="0xBDD7E7"/>
+        <node position="0.5" color="0x6BAED6"/>
+        <node position="0.75" color="0x3182BD"/>
+        <node position="1" color="0x08519C"/>
+      </colorRamp>
+    </ramp>
+    <recordColors/>
+  </ColorColumn>
+  <BinnedColumn name="defaultColorBinColumn">
+    <binningDefinition encoding="dynamic">
+      <SimpleBinningDefinition>
+        <numberOfBins>10</numberOfBins>
+        <overrideBinNames/>
+      </SimpleBinningDefinition>
+    </binningDefinition>
+    <internalDynamicColumn encoding="dynamic">
+      <GlobalObjectReference name="defaultColorDataColumn"/>
+    </internalDynamicColumn>
+  </BinnedColumn>
+  <FilteredColumn name="defaultColorDataColumn">
+    <filter encoding="dynamic">
+      <GlobalObjectReference name="defaultSubsetKeyFilter"/>
+    </filter>
+    <internalDynamicColumn encoding="dynamic"/>
+  </FilteredColumn>
+  <KeyFilter name="defaultSubsetKeyFilter">
+    <excluded/>
+    <included>MUNI_ID,2</included>
+    <includeMissingKeys>false</includeMissingKeys>
+    <includeMissingKeyTypes>true</includeMissingKeyTypes>
+  </KeyFilter>
+  <KeySet name="defaultSelectionKeySet"/>
+  <KeySet name="defaultProbeKeySet"/>
+  <KeySet name="alwaysHighlightKeySet"/>
+  <LinkableHashMap encoding="dynamic" name="savedSelections"/>
+  <LinkableHashMap encoding="dynamic" name="savedSubsets"/>
+  <WeaveDataSource name="MetroBoston DataCommon">
+    <attributeHierarchy encoding="xml">
+      <hierarchy name="MetroBoston DataCommon">
+        <category title="Demographics" name="Data Tables">
+          <category source="Census" description="2000 and 2010" name="Census Mail Participation Rate (Municipal)" title="Census Mail Participation Rate, 2000 &amp; 2010 (Municipal)" subject="Census"/>
+          <category source="ACS" name="Citizenship Status (Municipality)" title="Citizenship Status, 5yr Avg 2005-09 (Municipal)" subject="Demographics"/>
+          <category title="Geographic Mobility, 5yr Avg 2005-09 (Municipal)" source="ACS" name="Geographic Mobility (Municipal)"/>
+          <category source="ACS" name="Linguistic Isolation (Municipal)" title="Linguistic Isolation, 5yr Avg 2005-09 (Municipal)" subject="Demographics"/>
+          <category source="Census" name="Population By Age 2000 - 2010 (Municipality)" title="Population By Age, 2000 &amp; 2010 (Municipality)" subject="Demographics"/>
+          <category source="Census" name="Population By Gender and Age with Change, 2000 - 2010 (Municipal)" title="Population By Gender and Age with Change, 2000 &amp; 2010 (Municipal)" subject="Demogrpahics"/>
+          <category source="Census" description="Census 2000" name="Population By Gender and Age, 2000 (Census Tracts)" title="Population By Gender and Age, 2000 (Census Tracts)" subject="Demographics"/>
+          <category source="Census" description="Census" name="Population By Gender and Age, 2010 (Census Tracts)" title="Population By Gender and Age, 2010 (Census Tracts)" subject="Demographics"/>
+          <category title="Population by Race/Ethnicity with Change, 2000 &amp; 2010 (Municipal)" source="Census" name="Population by Race with Change, 2000-2010 (Municipal)"/>
+          <category source="Census" description="Census 2000" name="Population by Race, 2000 (Census Tract)" title="Population by Race/Ethnicity, 2000 (Census Tract)" subject="Demographics"/>
+          <category source="Census" description="Census 2010" name="Population by Race, 2010 (Census Tract)" title="Population by Race/Ethnicity, 2010 (Census Tract)" subject="Demographics"/>
+          <category source="MAPC, 2008" name="Employment Projections by Sector, Current Trends/MetroFuture (Municipal)" title="Projected Employment, Current Trends/MetroFuture, 2030 (Municipal)" subject="MetroFuture"/>
+          <category source="MAPC, 2008" name="Employment Projections by Sector, Current Trends/MetroFuture (TAZ)" title="Projected Employment, Current Trends/MetroFuture, 2030 (TAZ)" subject="MetroFuture"/>
+          <category source="MAPC, 2008" name="Population Projection by Age Group, Current Trends, (Municipal)" title="Projected Population by Age Group, Current Trends, 2030 (Municipal)" subject="MetroFuture"/>
+          <category source="MAPC, 2008" name="Population Projection by Age Group, MetroFuture (Municipal)" title="Projected Population by Age Group, MetroFuture, 2030 (Municipal)" subject="MetroFuture"/>
+          <category source="MAPC, 2008" name="Population, Household and Employment Projection, Current Trends/MetroFuture (Municipal)" title="Projected Population, Households and Employment, Current Trends/MetroFuture 2030 (Municipal)" subject="MetroFuture"/>
+          <category source="MAPC, 2008" name="Population, Household and Employment Projection, Current Trends/MetroFuture (TAZ)" title="Projected Population, Households and Employment, Current Trends/MetroFuture 2030 (TAZ)" subject="MetroFuture"/>
+          <category source="Census" name="Population by Minorities, 2000-2010 (Municipal)" title="Minority Population, 2000 &amp; 2010 (Municipal)" subject="Demographics"/>
+        </category>
+        <category title="Civic Vitality and Governance" name="Data Tables">
+          <category title="Arts and Culture Points of Interest" source="NEFA, 2007" name="Arts and Culture Points"/>
+          <category source="Community Preservation Coalition, 2011" name="Community Preservation Act votes (Municipal)" title="Community Preservation Act Status (Municipal)" subject="Civic Vitality ad Governance"/>
+          <category title="Forms of Municipal Governance (Municipal)" source="MMA, Secretary of State, 2011" name="Forms of Municipal Governance (Municipal)"/>
+          <category source="State Elections Division 2004-2010" name="Voters (Municipal)" title="Registered Voters, by Year 2004-2010 (Municipal)" subject="Civic Vitality ad Governance"/>
+          <category title="State Representatives (MA House Districts)" source="MassGIS, 2011" name="MA House Districts"/>
+          <category title="State Senators (MA Senate Districts)" source="MassGIS, 2011" name="MA Senate Districts"/>
+          <category title="US Representatives (US Congressional Districts)" source="MassGIS, 2007" name="US Congressional Districts"/>
+          <category title="Property Crimes, 2001-09 (Municipal)" name="Property Crimes (Municipal)" subject="Public Safety"/>
+          <category title="Violent Crimes, 2001-09 (Municipal)" name="Violent Crimes (Municipal)" subject="Public Safety"/>
+        </category>
+        <category title="Economy" name="Data Tables">
+          <category source="MA EOLWD ES-202, 2011" name="Average Weekly Wages by Sector (Municipal)" title="Average Weekly Wages by Sector, by Year 2001-2010 (Municipal)" subject="Economy"/>
+          <category name="Children in Poverty by Family Type (Census Tracts)" description="ACS 2005-09" source="ACS" title="Children in Poverty by Family Type, 5yr Avg 2005-09 (Census 2000 Tracts)" subject="Economy"/>
+          <category source="ES-202" name="Employment By Sector 2010 (Municipal) - Tranposed" title="Employment By Sector 2010 (Municipal) - Tranposed" subject="Economy"/>
+          <category source="MA EOLWD ES-202, 2011" name="Employment By Sector 2010 (Municipal)" title="Employment By Sector, Place of Work, 2010 (Municipal)" subject="Economy"/>
+          <category source="MA EOLWD ES-202, 2011" name="Employment by Sector (Municipal)" title="Employment by Sector, Place of Work, by Year 2001-2010 (Municipal)" subject="Economy"/>
+          <category source="MA EOLWD ES-202, 2011" name="Establishment by Sector (Municipal)" title="Establishment by Sector, Place of Work, by Year 2001-2010 (Municipal)" subject="Economy"/>
+          <category title="Labor Force and Unemployment, Place of Residence, by Year 2006-10 (Municipal)" source="MA EOLWD ES-202, 2011" name="Labor Force and Unemployment, Place of Residence, by Year (Municipal)"/>
+          <category title="Local Area Unemployment Statistics (Municipal)" source="MA EOLWD, 2006-2010" name="Local Area Unemployment Statistics (Municipality)">
+            <attribute title="Municipal ID" name="muni_id" dataType="string" keyType="MUNI_ID" dataTable="Local Area Unemployment Statistics (Municipality)"/>
+            <attribute title="Municipality" name="municipal" dataType="string" keyType="MUNI_ID" dataTable="Local Area Unemployment Statistics (Municipality)"/>
+            <attribute title="Labor Force, 2006" name="lf_06" dataType="number" keyType="MUNI_ID" dataTable="Local Area Unemployment Statistics (Municipality)"/>
+            <attribute title="Employed Population, 2006" name="emp_06" dataType="number" keyType="MUNI_ID" dataTable="Local Area Unemployment Statistics (Municipality)"/>
+            <attribute title="Unemployed Population, 2006" name="unemp_06" dataType="number" keyType="MUNI_ID" dataTable="Local Area Unemployment Statistics (Municipality)"/>
+            <attribute title="Unemployed Rate, 2006" name="unemrt_06" dataType="number" keyType="MUNI_ID" dataTable="Local Area Unemployment Statistics (Municipality)"/>
+            <attribute title="Labor Force, 2007" name="lf_07" dataType="number" keyType="MUNI_ID" dataTable="Local Area Unemployment Statistics (Municipality)"/>
+            <attribute title="Employed Population, 2007" name="emp_07" dataType="number" keyType="MUNI_ID" dataTable="Local Area Unemployment Statistics (Municipality)"/>
+            <attribute title="Unemployed Rate, 2007" name="unemrt_07" dataType="number" keyType="MUNI_ID" dataTable="Local Area Unemployment Statistics (Municipality)"/>
+            <attribute title="Unemployed Population, 2007" name="unemp_07" dataType="number" keyType="MUNI_ID" dataTable="Local Area Unemployment Statistics (Municipality)"/>
+            <attribute title="Labor Force, 2008" name="lf_08" dataType="number" keyType="MUNI_ID" dataTable="Local Area Unemployment Statistics (Municipality)"/>
+            <attribute title="Employed Population, 2008" name="emp_08" dataType="number" keyType="MUNI_ID" dataTable="Local Area Unemployment Statistics (Municipality)"/>
+            <attribute title="Unemployed Population, 2008" name="unemp_08" dataType="number" keyType="MUNI_ID" dataTable="Local Area Unemployment Statistics (Municipality)"/>
+            <attribute title="Unemployed Rate, 2008" name="unemrt_08" dataType="number" keyType="MUNI_ID" dataTable="Local Area Unemployment Statistics (Municipality)"/>
+            <attribute title="Labor Force, 2009" name="lf_09" dataType="number" keyType="MUNI_ID" dataTable="Local Area Unemployment Statistics (Municipality)"/>
+            <attribute title="Employed Population, 2009" name="emp_09" dataType="number" keyType="MUNI_ID" dataTable="Local Area Unemployment Statistics (Municipality)"/>
+            <attribute title="Unemployed Population, 2009" name="unemp_09" dataType="number" keyType="MUNI_ID" dataTable="Local Area Unemployment Statistics (Municipality)"/>
+            <attribute title="Unemployed Rate, 2009" name="unemrt_09" dataType="number" keyType="MUNI_ID" dataTable="Local Area Unemployment Statistics (Municipality)"/>
+            <attribute title="Labor Force, 2010" name="lf_10" dataType="number" keyType="MUNI_ID" dataTable="Local Area Unemployment Statistics (Municipality)"/>
+            <attribute title="Employed Population, 2010" name="emp_10" dataType="number" keyType="MUNI_ID" dataTable="Local Area Unemployment Statistics (Municipality)"/>
+            <attribute title="Unemployed Population, 2010" name="unemp_10" dataType="number" keyType="MUNI_ID" dataTable="Local Area Unemployment Statistics (Municipality)"/>
+            <attribute title="Unemployed Rate, 2010" name="unemrt_10" dataType="number" keyType="MUNI_ID" dataTable="Local Area Unemployment Statistics (Municipality)"/>
+          </category>
+          <category title="Total Employment, Place of Work, by Year 1986-2010 (Municipal)" source="MA EOLWD ES-202, 2011" name="Employment (Municipal)"/>
+        </category>
+        <category title="Education" name="Data Tables">
+          <category title="School Districts data" name="Data Tables">
+            <category title="School Districts" source="DESE" name="School Districts"/>
+            <category source="DESE, 2011" name="School Districts: Enrollment, 2010-11" title="District Enrollment, 2010-11 (School Districts)" subject="Education"/>
+            <category title="District Enrollment, by year 2006-11 (School Districts)" source="DESE, 2011" name="School Districts: Enrollment (multi-year)"/>
+            <category source="DESE, 2011" name="School Districts: Graduation Plans by year" title="District Graduation Plans, by year 2006-11 (School Districts)" subject="Education"/>
+            <category title="District Graduation Plans, by year 2006-11 (School Districts) (Dimension Slider only)" source="DESE, 2011" name="School Districts: Graduation Plans (multi-year)"/>
+            <category name="School Districts: Technology by year" description="DESE" source="DESE, 2011" title="District Technology, by year 2003-10 (School Districts)" subject="Education"/>
+            <category title="Districts by Municipality, 2011" source="DESE, MAPC" name="School Districts by Town"/>
+          </category>
+          <category title="School Municipal Districts data" name="Data Tables">
+            <category source="DESE, 2011" name="School Municipal Districts: Enrollment, 2009-10" title="Enrollment, 2009-10 (School Municipal Districts)" subject="Education"/>
+            <category title="Enrollment, 2010-11 (School Municipal Districts)" source="DESE, 2011" name="School Municipal Districts: Enrollment, 2010-11"/>
+            <category title="Enrollment, by year 2006-11 (School Municipal Districts)" source="DESE, 2011" name="School Municipal Districts: Enrollment (multi-year)"/>
+            <category name="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" description="MCAS, 2011" source="DESE" title="MCAS Grade 03 Math Proficiency by Group, 2010-11 (School Municipal Districts)" subject="Education"/>
+            <category title="MCAS Grade 03 Reading Proficiency by Group, 2010-11 (School Municipal Districts)" source="DESE, 2011" name="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011"/>
+            <category name="School Municipal Districts: MCAS Grade 3 All Students Math Proficiency (multi-year)" description="2005-06 thru 2010-11" source="DESE, 2011" title="MCAS Grade 03 Total Math Proficiency, by Year 2006-11 (School Municipal Districts)" subject="Education"/>
+            <category title="MCAS Grade 03 Total Reading Proficiency, 2010-11 (School Municipal Districts)" source="DESE, 2011" name="School Municipal Districts: MCAS Grade 03 Reading Proficiency, 2011"/>
+            <category title="MCAS Grade 03 Total Reading Proficiency, by Year 2006-11 (School Municipal Districts)" source="DESE, 2011" name="School Municipal Districts: MCAS Grade 3 All Students Reading Proficiency (multi-year)"/>
+            <category source="DESE, 2011" name="School Municipal Districts: MCAS Grade 08 Math Proficiency for Student Groups, 2011" title="MCAS Grade 08 Math Proficiency by Group, 2010-11 (School Municipal Districts)" subject="Education"/>
+            <category source="DESE, 2011" name="School Municipal Districts: MCAS Grade 08 Reading Proficiency for Student Groups, 2011" title="MCAS Grade 08 Reading Proficiency by Group, 2010-11 (School Municipal Districts)" subject="Education"/>
+            <category name="School Municipal Districts: MCAS Grade 08 Science Proficiency for Student Groups, 2011" description="MCAS" source="DESE, 2011" title="MCAS Grade 08 Science Proficiency by Group, 2010-11 (School Municipal Districts)" subject="Education"/>
+            <category name="School Municipal Districts: MCAS Grade 10 Math Proficiency for Student Groups, 2011" description=" MCAS" source="DESE, 2011" title="MCAS Grade 10 Math Proficiency by Group, 2010-11 (School Municipal Districts)"/>
+            <category title="MCAS Grade 10 Reading Proficiency by Group, 2010-11 (School Municipal Districts)" source="DESE, 2011" name="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011">
+              <attribute name="muni_id" keyType="MUNI_ID" dataType="string" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="Municipal ID"/>
+              <attribute name="municipal" keyType="MUNI_ID" dataType="string" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="Municipality"/>
+              <attribute name="districtid" keyType="MUNI_ID" dataType="string" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="School District ID"/>
+              <attribute name="district" keyType="MUNI_ID" dataType="string" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="School District"/>
+              <attribute name="startgrade" keyType="MUNI_ID" dataType="string" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="Starting Grade"/>
+              <attribute name="endgrade" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="Ending Grade"/>
+              <attribute name="all_pa" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="All Students Proficient or Higher in MCAS Grade 10 Reading/ELA"/>
+              <attribute min="0" keyType="MUNI_ID" dataType="number" string="formatNumber(number, 2)" title="% All Students Proficient or Higher in MCAS Grade 10 Reading/ELA" name="all_pa_p" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" max="100"/>
+              <attribute name="all_num" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="Number of Students in MCAS Grade 10 Reading/ELA"/>
+              <attribute name="all_cpi" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="All Students Composite Performance Index in MCAS Grade 10 Reading/ELA"/>
+              <attribute name="all_sgp" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="All Student Growth Percentile in MCAS Grade 10 Reading/ELA"/>
+              <attribute name="aa_pa" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="Black Students Proficient or Higher in MCAS Grade 10 Reading/ELA"/>
+              <attribute min="0" keyType="MUNI_ID" dataType="number" string="formatNumber(number, 2)" title="% Black Students Proficient or Higher in MCAS Grade 10 Reading/ELA" name="aa_pa_p" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" max="100"/>
+              <attribute name="aa_num" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="Number of Black Students in MCAS Grade 10 Reading/ELA"/>
+              <attribute name="aa_cpi" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="Black Students Composite Performance Index in MCAS Grade 10 Reading/ELA"/>
+              <attribute name="aa_sgp" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="Black Student Growth Percentile in MCAS Grade 10 Reading/ELA"/>
+              <attribute name="as_pa" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="Asian Students Proficient or Higher in MCAS Grade 10 Reading/ELA"/>
+              <attribute min="0" keyType="MUNI_ID" dataType="number" string="formatNumber(number, 2)" title="% Asian Students Proficient or Higher in MCAS Grade 10 Reading/ELA" name="as_pa_p" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" max="100"/>
+              <attribute name="as_num" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="Number of Asian Students in MCAS Grade 10 Reading/ELA"/>
+              <attribute name="as_cpi" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="Asian Students Composite Performance Index in MCAS Grade 10 Reading/ELA"/>
+              <attribute name="as_sgp" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="Asian Student Growth Percentile in MCAS Grade 10 Reading/ELA"/>
+              <attribute name="lat_pa" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="Latino Students Proficient or Higher in MCAS Grade 10 Reading/ELA"/>
+              <attribute min="0" keyType="MUNI_ID" dataType="number" string="formatNumber(number, 2)" title="% Latino Students Proficient or Higher in MCAS Grade 10 Reading/ELA" name="lat_pa_p" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" max="100"/>
+              <attribute name="lat_num" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="Number of Latino Students in MCAS Grade 10 Reading/ELA"/>
+              <attribute name="lat_cpi" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="Latino Students Composite Performance Index in MCAS Grade 10 Reading/ELA"/>
+              <attribute name="lat_sgp" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="Latino Student Growth Percentile in MCAS Grade 10 Reading/ELA"/>
+              <attribute name="whi_pa" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="White Students Proficient or Higher in MCAS Grade 10 Reading/ELA"/>
+              <attribute min="0" keyType="MUNI_ID" dataType="number" string="formatNumber(number, 2)" title="% White Students Proficient or Higher in MCAS Grade 10 Reading/ELA" name="whi_pa_p" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" max="100"/>
+              <attribute name="whi_num" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="Number of White Students in MCAS Grade 10 Reading/ELA"/>
+              <attribute name="whi_cpi" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="White Students Composite Performance Index in MCAS Grade 10 Reading/ELA"/>
+              <attribute name="whi_sgp" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="White Student Growth Percentile in MCAS Grade 10 Reading/ELA"/>
+              <attribute name="ell_pa" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="English Language Learning Students Proficient or Higher in MCAS Grade 10 Reading/ELA"/>
+              <attribute min="0" keyType="MUNI_ID" dataType="number" string="formatNumber(number, 2)" title="% English Language Learning Students Proficient or Higher in MCAS Grade 10 Reading/ELA" name="ell_pa_p" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" max="100"/>
+              <attribute name="ell_num" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="Number of English Language Learning Students in MCAS Grade 10 Reading/ELA"/>
+              <attribute name="ell_cpi" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="English Language Learning Students Composite Performance Index in MCAS Grade 10 Reading/ELA"/>
+              <attribute name="ell_sgp" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="English Language Learning Student Growth Percentile in MCAS Grade 10 Reading/ELA"/>
+              <attribute name="li_pa" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="Low Income Students Proficient or Higher in MCAS Grade 10 Reading/ELA"/>
+              <attribute min="0" keyType="MUNI_ID" dataType="number" string="formatNumber(number, 2)" title="% Low Income Students Proficient or Higher in MCAS Grade 10 Reading/ELA" name="li_pa_p" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" max="100"/>
+              <attribute name="li_num" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="Number of Low Income Students in MCAS Grade 10 Reading/ELA"/>
+              <attribute name="li_cpi" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="Low Income Students Composite Performance Index in MCAS Grade 10 Reading/ELA"/>
+              <attribute name="li_sgp" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="Low Income Student Growth Percentile in MCAS Grade 10 Reading/ELA"/>
+              <attribute name="sp_pa" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="Special Education Students Proficient or Higher in MCAS Grade 10 Reading/ELA"/>
+              <attribute min="0" keyType="MUNI_ID" dataType="number" string="formatNumber(number, 2)" title="% Special Education Students Proficient or Higher in MCAS Grade 10 Reading/ELA" name="sp_pa_p" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" max="100"/>
+              <attribute name="sp_num" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="Number of Special Education Students in MCAS Grade 10 Reading/ELA"/>
+              <attribute name="sp_cpi" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="Special Education Students Composite Performance Index in MCAS Grade 10 Reading/ELA"/>
+              <attribute name="sp_sgp" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="Special Education Student Growth Percentile in MCAS Grade 10 Reading/ELA"/>
+              <attribute name="t1_pa" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="Title1 Students Proficient or Higher in MCAS Grade 10 Reading/ELA"/>
+              <attribute min="0" keyType="MUNI_ID" dataType="number" string="formatNumber(number, 2)" title="% Title1 Students Proficient or Higher in MCAS Grade 10 Reading/ELA" name="t1_pa_p" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" max="100"/>
+              <attribute name="t1_num" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="Number of Title1 Students in MCAS Grade 10 Reading/ELA"/>
+              <attribute name="t1_cpi" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="Title1 Students Composite Performance Index in MCAS Grade 10 Reading/ELA"/>
+              <attribute name="t1_sgp" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="Title1 Student Growth Percentile in MCAS Grade 10 Reading/ELA"/>
+              <attribute name="fem_pa" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="Female Students Proficient or Higher in MCAS Grade 10 Reading/ELA"/>
+              <attribute min="0" keyType="MUNI_ID" dataType="number" string="formatNumber(number, 2)" title="% Female Students Proficient or Higher in MCAS Grade 10 Reading/ELA" name="fem_pa_p" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" max="100"/>
+              <attribute name="fem_num" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="Number of Female Students in MCAS Grade 10 Reading/ELA"/>
+              <attribute name="fem_cpi" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="Female Students Composite Performance Index in MCAS Grade 10 Reading/ELA"/>
+              <attribute name="fem_sgp" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="Female Student Growth Percentile in MCAS Grade 10 Reading/ELA"/>
+              <attribute name="mal_pa" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="Male Students Proficient or Higher in MCAS Grade 10 Reading/ELA"/>
+              <attribute min="0" keyType="MUNI_ID" dataType="number" string="formatNumber(number, 2)" title="% Male Students Proficient or Higher in MCAS Grade 10 Reading/ELA" name="mal_pa_p" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" max="100"/>
+              <attribute name="mal_num" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="Number of Male Students in MCAS Grade 10 Reading/ELA"/>
+              <attribute name="mal_cpi" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="Male Students Composite Performance Index in MCAS Grade 10 Reading/ELA"/>
+              <attribute name="mal_sgp" keyType="MUNI_ID" dataType="number" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="Male Student Growth Percentile in MCAS Grade 10 Reading/ELA"/>
+            </category>
+            <category title="MCAS Grade 10 Science Proficiency by Group, 2010-11 (School Municipal Districts)" source="DESE, 2011" name="School Municipal Districts: MCAS Grade 10 Science Proficiency for Student Groups, 2011"/>
+          </category>
+          <category title="Schools data" name="Data Tables">
+            <category title="BPS Circle of Promise Schools" source="DESE, 2011" name="Boston Circle of Promise Schools"/>
+            <category title="BPS Schools" source="DESE, 2011" name="Boston Schools"/>
+            <category title="BPS Turnaround Schools" source="DESE, 2011" name="Boston Turnaround Schools"/>
+            <category title="Schools" source="DESE, 2011" name="Schools"/>
+            <category title="Enrollment, 2010-11 (Schools)" source="DESE, 2011" name="Schools: Enrollment, 2010-11"/>
+            <category title="Enrollment, by Year 2006-11 (Schools)" source="DESE 2011" name="Schools: Enrollment (multi-year)"/>
+            <category title="MCAS Grade 03 Math Proficiency by Group, 2010-11 (Schools)" source="DESE, 2011" name="Schools: MCAS Grade 03 Math Proficiency for Student Groups, 2011"/>
+            <category title="MCAS Grade 03 Reading Proficiency by Group, 2010-11 (Schools)" source="DESE, 2011" name="Schools: MCAS Grade 03 Reading Proficiency for Student Groups, 2011"/>
+            <category title="MCAS Grade 03 Total Reading Proficiency, 2010-11 (Schools)" source="DESE, 2011" name="Schools: MCAS Grade 03 Reading Proficiency, 2011"/>
+            <category source="DESE, 2011" name="Schools: MCAS Grade 08 Math Proficiency for Student Groups, 2011" title="MCAS Grade 08 Math Proficiency by Group, 2010-11 (Schools)" subject="Education"/>
+            <category source="DESE, 2011" name="Schools: MCAS Grade 08 Reading Proficiency for Student Groups, 2011" title="MCAS Grade 08 Reading Proficiency by Group, 2010-11 (Schools)" subject="Education"/>
+            <category source="DESE, 2011" name="Schools: MCAS Grade 08 Science Proficiency for Student Groups, 2011" title="MCAS Grade 08 Science Proficiency by Group, 2010-11 (Schools)" subject="Education"/>
+            <category title="MCAS Grade 10 Math Proficiency by Group, 2010-11 (Schools)" source="DESE, 2011" name="Schools: MCAS Grade 10 Math Proficiency for Student Groups, 2011"/>
+            <category title="MCAS Grade 10 Reading Proficiency by Group, 2010-11 (Schools)" source="DESE, 2011" name="Schools: MCAS Grade 10 Reading Proficiency for Student Groups, 2011"/>
+            <category title="MCAS Grade 10 Science Proficiency by Group, 2010-11 (Schools)" source="DESE, 2011" name="Schools: MCAS Grade 10 Science Proficiency for Student Groups, 2011"/>
+            <category source="DESE, 2010" name="Schools: Mobility, 2010" title="Mobility, 2010 (Schools)" subject="Education"/>
+            <category source="DESE,2011" name="Schools: Risk Indicators" title="Risk Factors, by Year 2006-11 (Schools)" subject="Education"/>
+          </category>
+          <category title="Colleges and Universities" source="MassGIS" name="Colleges and Universities"/>
+          <category title="Educational Attainment, Population 25+ years, 5yr Avg 2005-09 (Census 2000 Tracts)" source="ACS" name="Educational Attainment over 25 years (Census Tracts)"/>
+          <category title="Educational Attainment, Population 25+ years, 5yr Avg 2005-09 (Municipal)" source="ACS" name="Educational Attainment over 25 years (Municipal)"/>
+          <category title="Libraries" source="MassGIS, 2005" name="Libraries"/>
+        </category>
+        <category title="Environment &amp; Energy" name="Data Tables">
+          <category title="Environmental Hazards Density (Municipal)" source="Northeastern study" name="Environmental Hazards Density (Municipal)"/>
+          <category title="Environmental Justice Populations, 2000 (Block Groups)" source="Census" name="Environmental Justice Populations (Block Groups)"/>
+          <category name="Environmental Justice Criteria (Municipal)" description="Census 2000 block groups" source="Census" title="Environmental Justice Summary, 2000 (Municipal)" subject="Environment"/>
+          <category title="Land Use Summary Statistics, 2005 (Municipal)" source="MassGIS, 2009" name="Land Use Summary Statistics 2005 (Municipal)"/>
+          <category title="LEED Certified Buildings (Points)" source="USGBC, 2012" name="LEED Certified Buildings (Points)"/>
+          <category title="Open Space" source="MassGIS" name="Open Space"/>
+          <category title="Protected Open Space" source="MassGIS" name="Protected Open Space"/>
+          <category title="Water Bodies (100k Hydro)" name="Water Bodies (100k Hydro)"/>
+        </category>
+        <category title="Housing" name="Data Tables">
+          <category source="Census" name="Housing Building Permits: Multi-Family Units (Municipal)" title="Building Permits: Multi-Family Housing, by Year 2000-10 (Municipal)" subject="Housing"/>
+          <category source="Census" name="Housing Building Permits: Single Family Units (Municipal)" title="Building Permits: Single Family Housing, by Year 2001-10 (Municipal)" subject="Housing"/>
+          <category source="Census" name="Housing Building Permits: Total Units (Municipal)" title="Building Permits: Total Housing, by Year 2001-10 (Municipal)" subject="Housing"/>
+          <category source="Census" name="Housing: Household Type 2000-2010 (Municipal)" title="Household Type, 2000 &amp; 2010 (Municipal)" subject="Housing"/>
+          <category title="Housing Cost Burden for Owner, 5yr Avg 2005-09 (Municipal)" source="ACS" name="Housing Cost Burden for Owner (Municipal)"/>
+          <category source="ACS" name="Housing Cost Burden for Renters (Census Tracts)" title="Housing Cost Burden for Renters, 5yr Avg 2005-09 (Census 2000 Tracts)" subject="Housing"/>
+          <category source="ACS" name="Housing Cost Burden for Renters (Municipal)" title="Housing Cost Burden for Renters, 5yr Avg 2005-09 (Municipal)" subject="Housing"/>
+          <category source="Census" name="Housing Occupancy, 2000-2010 (Municipal)" title="Housing Occupancy, 2000 &amp; 2010 (Municipal)" subject="Demographics"/>
+          <category name="Housing: Census 2000 (Municipal)" description="Census 2000" source="Census" title="Housing Summary, 2000 (Municipal)" subject="Housing"/>
+          <category name="Median Household Income by Race (Municipal)" description="ACS 2005-09" source="ACS" title="Median Household Income by Race, 5yr Avg 2005-09 (Municipal)" subject="Housing"/>
+          <category source="DHCD, 2011" name="Subsidized Housing Inventory" title="Subsidized Housing Inventory, by Year 2006-11 (Municipal) " subject="Housing"/>
+        </category>
+        <category title="Public Health" name="Data Tables">
+          <category source="MADPH, 2012" name="Asthma Related Hospitalizations" title="Asthma Related Hospitalizations, 2007-09 (Municipal)" subject="Public Health"/>
+          <category source="MADPH, 2012" name="Cancer Mortality, 2006 (Municipal)" title="Cancer Mortality, 2006 (Municipal)" subject="Public Health"/>
+          <category source="MADPH, 2012" name="Cancer Mortality, 2007 (Municipal)" title="Cancer Mortality, 2007 (Municipal)" subject="Public Health"/>
+          <category source="MADPH, 2012" name="Cancer Mortality, 2008 (Municipal)" title="Cancer Mortality, 2008 (Municipal)" subject="Public Health"/>
+          <category source="MADPH, 2012" name="Cardiovascular Hospitalizations (Municipal)" title="Cardiovascular Hospitalizations, 2007-09 (Municipal)" subject="Public Health"/>
+          <category title="Low Birth Weight (Municipal)" name="Low Birth Weight (Municipal)" subject="Public Health"/>
+          <category title="Total Births to Moms Age 15-44, 2007-09 (Municipal)" name="Total Births" subject="Public Health"/>
+        </category>
+        <category title="Transportation" name="Data Tables">
+          <category title="Bike and Pedestrian Facilities" source="MAPC, 2011" name="Bike and Pedestrian Facilities"/>
+          <category title="Commuter Rail" source="MassGIS, 2010" name="Commuter Rail"/>
+          <category title="Fairmount Commuter Line" name="Fairmount Commuter Line"/>
+          <category title="Major Roads" source="MassDOT" name="Major Roads"/>
+          <category title="Major Routes" source="MassDOT" name="Major Routes"/>
+          <category title="MBTA Subway Lines" source="MassDOT" name="MBTA Subway Lines"/>
+          <category title="Transportation to Work, 5yr Avg 2005-09 (Municipal)" source="ACS" name="Transportation to Work (Municipal)"/>
+          <category title="Travel Time to Work, 5yr Avg 2005-09 (Municipal)" source="ACS" name="Travel Time to Work (Municipal)"/>
+          <category source="MassGIS" name="Vehicle Miles Traveled, 2005-2007" title="Vehicle Miles Traveled, 2005-2007" subject="Transportation">
+            <attribute title="Municipal ID" name="MUNI_ID" dataType="string" keyType="MUNI_ID" dataTable="Vehicle Miles Traveled, 2005-2007"/>
+            <attribute title="Municipality" name="Municipality" dataType="string" keyType="MUNI_ID" dataTable="Vehicle Miles Traveled, 2005-2007"/>
+            <attribute title="Estimated Population, 2000" name="ESTPOP_00" dataType="number" keyType="MUNI_ID" dataTable="Vehicle Miles Traveled, 2005-2007"/>
+            <attribute title="Estimated Households ,2000" name="ESTHH_00" dataType="number" keyType="MUNI_ID" dataTable="Vehicle Miles Traveled, 2005-2007"/>
+            <attribute title="Registered Passenger Vehicles" name="REG_PASVEH" dataType="number" keyType="MUNI_ID" dataTable="Vehicle Miles Traveled, 2005-2007"/>
+            <attribute title="Annual Mileage for Passenger Vehicles" name="YR_MILE" dataType="number" keyType="MUNI_ID" dataTable="Vehicle Miles Traveled, 2005-2007"/>
+            <attribute title="Daily Mileage for All Passenger Vehicles" name="DAY_MILE" dataType="number" keyType="MUNI_ID" dataTable="Vehicle Miles Traveled, 2005-2007"/>
+            <attribute title="Registered Passenger Vehicles per Person" name="PASVEH_PER" dataType="number" string="formatNumber(number, 1)" keyType="MUNI_ID" dataTable="Vehicle Miles Traveled, 2005-2007"/>
+            <attribute title="Annual Passenger Vehicle Mileage per Household" name="YR_VMT_HH" dataType="number" string="formatNumber(number, 1)" keyType="MUNI_ID" dataTable="Vehicle Miles Traveled, 2005-2007"/>
+            <attribute title="Daily Passenger Vehicle Mileage per Household" name="DAY_VMT_HH" dataType="number" string="formatNumber(number, 1)" keyType="MUNI_ID" dataTable="Vehicle Miles Traveled, 2005-2007"/>
+            <attribute title="Registered Passenger Vehicles per Household" name="PASVEH_HH" dataType="number" string="formatNumber(number, 1)" keyType="MUNI_ID" dataTable="Vehicle Miles Traveled, 2005-2007"/>
+          </category>
+        </category>
+        <category title="Boundaries" name="Data Tables">
+          <category title="MAPC Municipalities" source="MAPC" name="MAPC Municipalities"/>
+          <category title="Massachusetts Municipalities" source="MassGIS" name="Massachusetts Municipalities"/>
+          <category title="Boston Neighborhoods" source="BRA, 2010" name="Boston Neighborhoods"/>
+          <category title="Boston Parcels (Subset)" source="City of Boston, 2010" name="Boston Parcels (Subset)"/>
+          <category title="Census 2010 Tracts" source="Census, 2010" name="Census 2010 Tracts"/>
+          <category title="Census Block Groups 2000" source="Census" name="Census 2000 Block Groups"/>
+          <category title="Census Block Groups, 2010" source="Census, 2010" name="Census 2010 Block Groups"/>
+          <category title="Census Tracts, 2000" source="Census" name="Census 2000 Tracts"/>
+          <category source="MAPC, 2011" name="Community Types (Municipal)" title="Community Types (Municipal)" subject="Boundaries"/>
+          <category title="MA Counties" source="MassGIS" name="MA Counties"/>
+          <category title="MetroFuture Region" source="MAPC, 2008" name="MetroFuture Region"/>
+          <category title="Traffic Analysis Zones (TAZ) " source="HUD" name="Traffic Analysis Zones (TAZ)"/>
+          <category title="US States" name="US States"/>
+        </category>
+        <category title="Geometry Collections" name="Geometry Collections">
+          <attribute name="Arts and Culture Points" dataType="geometry" keyType="Arts and Culture Points" title="Arts and Culture Points"/>
+          <attribute name="Bike and Pedestrian Facilities" dataType="geometry" keyType="ObjectID" title="Bike and Pedestrian Facilities"/>
+          <attribute name="Boston Circle of Promise Schools" dataType="geometry" keyType="SchoolID" title="Boston Circle of Promise Schools"/>
+          <attribute name="Boston Daycares" dataType="geometry" keyType="ObjectID" title="Boston Daycares"/>
+          <attribute name="Boston Neighborhoods" dataType="geometry" keyType="ObjectID" title="Boston Neighborhoods"/>
+          <attribute name="Boston Non-Profit Educational Assets (Points)" dataType="geometry" keyType="ObjectID" title="Boston Non-Profit Educational Assets (Points)"/>
+          <attribute name="Boston Outline" dataType="geometry" keyType="MUNI_ID" title="Boston Outline"/>
+          <attribute name="Boston Parcels (Subset)" dataType="geometry" keyType="BostonParcelID" title="Boston Parcels (Subset)"/>
+          <attribute name="Boston Schools" dataType="geometry" keyType="SchoolID" title="Boston Schools"/>
+          <attribute name="Boston Turnaround Schools" dataType="geometry" keyType="SchoolID" title="Boston Turnaround Schools"/>
+          <attribute name="Census 2000 Block Groups" dataType="geometry" keyType="BG_00_ID" title="Census 2000 Block Groups"/>
+          <attribute name="Census 2000 Tracts" dataType="geometry" keyType="CT_ID" title="Census 2000 Tracts"/>
+          <attribute name="Census 2010 Block Groups" dataType="geometry" keyType="BG_10_ID" title="Census 2010 Block Groups"/>
+          <attribute name="Census 2010 Tracts" dataType="geometry" keyType="ct10_id" title="Census 2010 Tracts"/>
+          <attribute name="Child Care Providers with Less than High School" dataType="geometry" keyType="ObjectID" title="Child Care Providers with Less than High School"/>
+          <attribute name="Colleges and Universities" dataType="geometry" keyType="College_ID" title="Colleges and Universities"/>
+          <attribute name="Commuter Rail" dataType="geometry" keyType="Commuter Rail" title="Commuter Rail"/>
+          <attribute name="Environmental Justice Populations (Block Groups)" dataType="geometry" keyType="BG_00_ID" title="Environmental Justice Populations (Block Groups)"/>
+          <attribute name="Fairmount Commuter Line" dataType="geometry" keyType="ObjectID" title="Fairmount Commuter Line"/>
+          <attribute name="LEED Certified Buildings (Points)" dataType="geometry" keyType="LEED_ID" title="LEED Certified Buildings (Points)"/>
+          <attribute name="Libraries" dataType="geometry" keyType="ObjectID" title="Libraries"/>
+          <attribute name="MA Counties" dataType="geometry" keyType="FIPS_ID" title="MA Counties"/>
+          <attribute name="MA House Districts" dataType="geometry" keyType="MA_HOUSE02_ID" title="MA House Districts"/>
+          <attribute name="MA Senate Districts" dataType="geometry" keyType="MA_SENATE02_ID" title="MA Senate Districts"/>
+          <attribute name="Major Roads (MassDOT)" dataType="geometry" keyType="ObjectID" title="Major Roads (MassDOT)"/>
+          <attribute name="Major Routes (MassDOT)" dataType="geometry" keyType="ObjectID" title="Major Routes (MassDOT)"/>
+          <attribute name="MAPC Municipalities" dataType="geometry" keyType="MUNI_ID" title="MAPC Municipalities"/>
+          <attribute name="Massachusetts Municipalities" dataType="geometry" keyType="MUNI_ID" title="Massachusetts Municipalities"/>
+          <attribute name="MBTA Subway Lines" dataType="geometry" keyType="MBTA Subway Lines" title="MBTA Subway Lines"/>
+          <attribute name="MetroFuture Region" dataType="geometry" keyType="MUNI_ID" title="MetroFuture Region"/>
+          <attribute name="Open Space" dataType="geometry" keyType="OS_ID" title="Open Space"/>
+          <attribute name="Protected Open Space" dataType="geometry" keyType="OS_ID" title="Protected Open Space"/>
+          <attribute name="School Districts" dataType="geometry" keyType="SchoolDistrictID" title="School Districts"/>
+          <attribute name="School Districts by Town" dataType="geometry" keyType="MUNI_ID" title="School Districts by Town"/>
+          <attribute name="Schools" dataType="geometry" keyType="SchoolID" title="Schools"/>
+          <attribute name="Success Boston Student Cohorts (2010)" dataType="geometry" keyType="ObjectID" title="Success Boston Student Cohorts (2010)"/>
+          <attribute name="Traffic Analysis Zones (TAZ) " dataType="geometry" keyType="TAZ_ID" title="Traffic Analysis Zones (TAZ) "/>
+          <attribute name="US Congressional Districts" dataType="geometry" keyType="US_CONGRESS_ID" title="US Congressional Districts"/>
+          <attribute name="US States" dataType="geometry" keyType="Arts and Culture Points" title="US States"/>
+          <attribute name="Water Bodies (100k Hydro)" dataType="geometry" keyType="PALIS_ID" title="Water Bodies (100k Hydro)"/>
+        </category>
+      </hierarchy>
+    </attributeHierarchy>
+    <hierarchyURL/>
+    <url>/WeaveServices/DataService</url>
+  </WeaveDataSource>
+  <LinkableHashMap encoding="dynamic" name="Probe Header Columns"/>
+  <LinkableHashMap encoding="dynamic" name="Probed Columns"/>
+  <TransposedTableTool name="TransposedTableTool2">
+    <buttonRadius>3</buttonRadius>
+    <closeable>true</closeable>
+    <columns encoding="dynamic">
+      <ReferencedColumn name="ReferencedColumn7">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Education" name="Data Tables">
+                  <category title="School Municipal Districts data" name="Data Tables">
+                    <category title="MCAS Grade 10 Reading Proficiency by Group, 2010-11 (School Municipal Districts)" source="DESE, 2011" name="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011">
+                      <attribute dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" keyType="MUNI_ID" dataType="number" year="2010-11" name="all_pa" title="All Students Proficient or Higher in MCAS Grade 10 Reading/ELA"/>
+                    </category>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn8">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Education" name="Data Tables">
+                  <category title="School Municipal Districts data" name="Data Tables">
+                    <category title="MCAS Grade 10 Reading Proficiency by Group, 2010-11 (School Municipal Districts)" source="DESE, 2011" name="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011">
+                      <attribute min="0" keyType="MUNI_ID" dataType="number" string="formatNumber(number, 2)" title="% All Students Proficient or Higher in MCAS Grade 10 Reading/ELA" name="all_pa_p" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" max="100"/>
+                    </category>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn32">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Education" name="Data Tables">
+                  <category title="School Municipal Districts data" name="Data Tables">
+                    <category title="MCAS Grade 10 Reading Proficiency by Group, 2010-11 (School Municipal Districts)" source="DESE, 2011" name="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011">
+                      <attribute dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" keyType="MUNI_ID" dataType="number" year="2010-11" name="aa_pa" title="Black Students Proficient or Higher in MCAS Grade 10 Reading/ELA"/>
+                    </category>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn33">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Education" name="Data Tables">
+                  <category title="School Municipal Districts data" name="Data Tables">
+                    <category title="MCAS Grade 10 Reading Proficiency by Group, 2010-11 (School Municipal Districts)" source="DESE, 2011" name="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011">
+                      <attribute min="0" keyType="MUNI_ID" dataType="number" string="formatNumber(number, 2)" title="% Black Students Proficient or Higher in MCAS Grade 10 Reading/ELA" name="aa_pa_p" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" max="100"/>
+                    </category>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn37">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Education" name="Data Tables">
+                  <category title="School Municipal Districts data" name="Data Tables">
+                    <category title="MCAS Grade 10 Reading Proficiency by Group, 2010-11 (School Municipal Districts)" source="DESE, 2011" name="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011">
+                      <attribute dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" keyType="MUNI_ID" dataType="number" year="2010-11" name="as_pa" title="Asian Students Proficient or Higher in MCAS Grade 10 Reading/ELA"/>
+                    </category>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn38">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Education" name="Data Tables">
+                  <category title="School Municipal Districts data" name="Data Tables">
+                    <category title="MCAS Grade 10 Reading Proficiency by Group, 2010-11 (School Municipal Districts)" source="DESE, 2011" name="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011">
+                      <attribute min="0" keyType="MUNI_ID" dataType="number" string="formatNumber(number, 2)" title="% Asian Students Proficient or Higher in MCAS Grade 10 Reading/ELA" name="as_pa_p" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" max="100"/>
+                    </category>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn42">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Education" name="Data Tables">
+                  <category title="School Municipal Districts data" name="Data Tables">
+                    <category title="MCAS Grade 10 Reading Proficiency by Group, 2010-11 (School Municipal Districts)" source="DESE, 2011" name="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011">
+                      <attribute dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" keyType="MUNI_ID" dataType="number" year="2010-11" name="lat_pa" title="Latino Students Proficient or Higher in MCAS Grade 10 Reading/ELA"/>
+                    </category>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn43">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Education" name="Data Tables">
+                  <category title="School Municipal Districts data" name="Data Tables">
+                    <category title="MCAS Grade 10 Reading Proficiency by Group, 2010-11 (School Municipal Districts)" source="DESE, 2011" name="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011">
+                      <attribute min="0" keyType="MUNI_ID" dataType="number" string="formatNumber(number, 2)" title="% Latino Students Proficient or Higher in MCAS Grade 10 Reading/ELA" name="lat_pa_p" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" max="100"/>
+                    </category>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn47">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Education" name="Data Tables">
+                  <category title="School Municipal Districts data" name="Data Tables">
+                    <category title="MCAS Grade 10 Reading Proficiency by Group, 2010-11 (School Municipal Districts)" source="DESE, 2011" name="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011">
+                      <attribute dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" keyType="MUNI_ID" dataType="number" year="2010-11" name="whi_pa" title="White Students Proficient or Higher in MCAS Grade 10 Reading/ELA"/>
+                    </category>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn48">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Education" name="Data Tables">
+                  <category title="School Municipal Districts data" name="Data Tables">
+                    <category title="MCAS Grade 10 Reading Proficiency by Group, 2010-11 (School Municipal Districts)" source="DESE, 2011" name="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011">
+                      <attribute min="0" keyType="MUNI_ID" dataType="number" string="formatNumber(number, 2)" title="% White Students Proficient or Higher in MCAS Grade 10 Reading/ELA" name="whi_pa_p" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" max="100"/>
+                    </category>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn52">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Education" name="Data Tables">
+                  <category title="School Municipal Districts data" name="Data Tables">
+                    <category title="MCAS Grade 10 Reading Proficiency by Group, 2010-11 (School Municipal Districts)" source="DESE, 2011" name="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011">
+                      <attribute dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" keyType="MUNI_ID" dataType="number" year="2010-11" name="ell_pa" title="English Language Learning Students Proficient or Higher in MCAS Grade 10 Reading/ELA"/>
+                    </category>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn53">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Education" name="Data Tables">
+                  <category title="School Municipal Districts data" name="Data Tables">
+                    <category title="MCAS Grade 10 Reading Proficiency by Group, 2010-11 (School Municipal Districts)" source="DESE, 2011" name="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011">
+                      <attribute min="0" keyType="MUNI_ID" dataType="number" string="formatNumber(number, 2)" title="% English Language Learning Students Proficient or Higher in MCAS Grade 10 Reading/ELA" name="ell_pa_p" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" max="100"/>
+                    </category>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn57">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Education" name="Data Tables">
+                  <category title="School Municipal Districts data" name="Data Tables">
+                    <category title="MCAS Grade 10 Reading Proficiency by Group, 2010-11 (School Municipal Districts)" source="DESE, 2011" name="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011">
+                      <attribute dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" keyType="MUNI_ID" dataType="number" year="2010-11" name="li_pa" title="Low Income Students Proficient or Higher in MCAS Grade 10 Reading/ELA"/>
+                    </category>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn58">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Education" name="Data Tables">
+                  <category title="School Municipal Districts data" name="Data Tables">
+                    <category title="MCAS Grade 10 Reading Proficiency by Group, 2010-11 (School Municipal Districts)" source="DESE, 2011" name="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011">
+                      <attribute min="0" keyType="MUNI_ID" dataType="number" string="formatNumber(number, 2)" title="% Low Income Students Proficient or Higher in MCAS Grade 10 Reading/ELA" name="li_pa_p" year="2010-11" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" max="100"/>
+                    </category>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+    </columns>
+    <dataColumnWidth>10%</dataColumnWidth>
+    <draggable>true</draggable>
+    <enableBorders>true</enableBorders>
+    <filterKeySet>MUNI_ID,{{ regionalunit.unitid }}</filterKeySet>
+    <fontSize>10</fontSize>
+    <headerAttributeColumn encoding="dynamic">
+      <ReferencedColumn>
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Education" name="Data Tables">
+                  <category title="School Municipal Districts data" name="Data Tables">
+                    <category title="MCAS Grade 10 Reading Proficiency by Group, 2010-11 (School Municipal Districts)" source="DESE, 2011" name="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011">
+                      <attribute keyType="MUNI_ID" name="municipal" dataType="string" title="Municipality" dataTable="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" year="2010-11"/>
+                    </category>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+    </headerAttributeColumn>
+    <headerColumnWidth>230</headerColumnWidth>
+    <headerText>Attributes</headerText>
+    <maximizable>true</maximizable>
+    <maximized>true</maximized>
+    <minimizable>true</minimizable>
+    <minimized>false</minimized>
+    <panelBackgroundColor>NaN</panelBackgroundColor>
+    <panelBorderColor>NaN</panelBorderColor>
+    <panelHeight>50%</panelHeight>
+    <panelStyleList/>
+    <panelTitle/>
+    <panelWidth>50%</panelWidth>
+    <panelX>29%</panelX>
+    <panelY>24%</panelY>
+    <pinnable>true</pinnable>
+    <pinnableToBack>false</pinnableToBack>
+    <pinned>false</pinned>
+    <pinnedToBack>false</pinnedToBack>
+    <resizeable>true</resizeable>
+  </TransposedTableTool>
+</Weave>

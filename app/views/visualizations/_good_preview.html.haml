@@ -1,0 +1,9 @@
+.col-md-4.col-sm-6.col-xs-12.center.snapshot-preview
+  = link_to vis.title, vis.path, class: 'snapshot-preview-title'
+  %img.snapshot-vis{id: "vis-#{vis.vis.id}", src: "http://unsplash.it/400/400?random"}
+
+:javascript
+
+  $(document).on('ready', function () {
+    DC.embedWeaveOnClick( "#vis-#{vis.vis.id}", "#{vis.vis.rendered_state(@s.geography)}" );
+  });
