@@ -1,7 +1,7 @@
 module InstitutionsHelper
 
   def featured_visualization
-    Visualization.random
+    Visualization.featured.sample
   end
 
 

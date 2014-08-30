@@ -33,11 +33,9 @@
       %span.glyphicon.glyphicon-chevron-right
 
 
-
 .row
-  .col-xs-12
-    %h3 Featured Visualization
-
+  .col-xs-10.col-xs-offset-1
+    %h2.page-header Featured Visualization
 .row
   .col-md-7.col-md-offset-1.col-sm-12
     = render partial: 'visualizations/feature', locals: { vis: feature }
@@ -46,10 +44,9 @@
     .list-group
       = render partial: 'topics/topic', collection: topics
 
-%hr
 
 .row
   .col-xs-12
-    %h3 Recent Visualizations
+    %h2.page-header Recent Visualizations
     - recent_visualizations.each do |vis|
       = render partial: 'visualizations/preview', locals: { vis: vis }

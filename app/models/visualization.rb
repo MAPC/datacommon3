@@ -26,6 +26,15 @@ class Visualization < ActiveRecord::Base
   scope :topic,       -> t { joins(:issue_areas).where( "mbdc_topic.slug = ?",    t) }
   scope :data_source, -> d { joins(:data_sources).where("mbdc_datasource.id = ?", d) }
 
+
+  def self.featured
+    self.find_by_sql """SELECT weave_visualization.*
+                        FROM weave_visualization
+                        INNER JOIN mbdc_featured
+                          ON mbdc_featured.visualization_id = weave_visualization.id
+                        ORDER BY mbdc_featured.visualization_id ASC"""
+    end
+
   
   def self.random
     self.offset(rand(self.count(:all))).first

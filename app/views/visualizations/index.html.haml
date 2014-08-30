@@ -8,14 +8,21 @@
   =select_tag :data_source, options_for_select(data_source_options, params[:data_source]), id: 'data-source-select', class: 'chosen-select', data: { placeholder: "All Data Sources" }
   #{'.'}
 
+
 .row
   = render partial: 'preview', collection: @gallery.visualizations[0..3], as: :vis
-
 .row
   = render partial: 'preview', collection: @gallery.visualizations[4..7], as: :vis
-
 .row.center
   = paginate @gallery.visualizations, window: 1, outer_window: 1
+
+
+- if @gallery.visualizations.empty?
+  %p
+    There are no visualizations that match your selections. Maybe try another selection, or
+    = link_to 'create one yourself!', '#new_visualization_path'
+
+
 
 
 :javascript

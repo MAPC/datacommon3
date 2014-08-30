@@ -1,4 +1,4 @@
-class NullObjects::NullVisualization < NullObject
+class NullObjects::NullVisualization < NullObjects::NullObject
 
   attr_accessor :sessionstate
 
