@@ -1,11 +1,11 @@
 %h1 Visualization Gallery
 %h2.page-header Explore maps and data visualizations created by DataCommon users.
 
-%p
+%p.viewing
   You are viewing
-  %strong #{@gallery.topic}
+  =select_tag :topic, options_for_select(topic_options, visualizations_path(topic: @gallery.topic)), include_blank: true, id: 'topic-select', class: 'chosen-select', data: { placeholder: "All Topics" }
   and
-  %strong All Data Sources
+  =select_tag :data_source, options_for_select(data_source_options), include_blank: true, id: 'data-source-select', class: 'chosen-select', data: { placeholder: "All Data Sources" }
   #{'.'}
 
 .row
@@ -16,3 +16,13 @@
 
 .row.center
   = paginate @gallery.visualizations, window: 1, outer_window: 1
+
+
+:javascript
+  $('#topic-select').on('change', function () {
+    var url = $( this ).val(); // get selected value
+    if (url) { // require a URL
+      window.location = url; // redirect
+    }
+    return false;
+  });

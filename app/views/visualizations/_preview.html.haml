@@ -1,5 +1,5 @@
-=link_to vis do
-  %div.col-md-3.col-sm-6.col-xs-12
+%div.col-md-3.col-sm-6.col-xs-12.vis-preview
+  =link_to vis do
     %img{src: vis.gallery_image_path}
-    %h5= vis.title
-    %p   by #{vis.owner_display_name}
+    %p.vis-title= vis.title
+  %p.byline by #{vis.owner_display_name}

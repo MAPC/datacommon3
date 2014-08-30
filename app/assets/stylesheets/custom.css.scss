@@ -20,7 +20,7 @@ h2.page-header {
   color: #AAAAAA;
   font-size:    1.3em;
   margin-top:    20px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .center {
@@ -114,6 +114,22 @@ img.feature {
   min-height: 40px;
 }
 
+.vis-preview {
+
+  margin-bottom: 30px;
+
+  .vis-title {
+    font-size: 1.1em;
+    margin-top: 8px;
+    margin-bottom: 0;
+  }
+}
+
+
+p.viewing {
+  margin-top:    10px;
+  margin-bottom: 40px;
+}
 
 .area-summary {
   padding: 20px 0;

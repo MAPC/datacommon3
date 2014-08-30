@@ -4,6 +4,8 @@ class DataSource < ActiveRecord::Base
 
   lazy_load :description
 
+  default_scope { order(:title) }
+
   has_and_belongs_to_many :visualizations,
     join_table:  :weave_visualization_datasources,
     foreign_key:             :datasource_id
