@@ -1,12 +1,13 @@
 module VisualizationsHelper
 
-
   def topic_options
-    IssueArea.all.map {|i| [i.title, visualizations_path(topic: i)]}
+    options  = IssueArea.all.map {|i| [i.title, i.slug]}
+    options.unshift ['All Topics', nil]
   end
 
   def data_source_options
-    DataSource.all.map {|i| [i.title, i.id]}
+    options  = DataSource.all.map {|i| [i.title, i.id]}
+    options.unshift ['All Data Sources', nil]
   end
 
 end

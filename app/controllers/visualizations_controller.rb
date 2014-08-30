@@ -1,15 +1,15 @@
 class VisualizationsController < ApplicationController
   before_filter :load_institution
 
+  has_scope :topic
+  has_scope :data_source
+
   def index
-    if params[:topic]
-      topic          = IssueArea.find_by(slug: params[:topic])
-      visualizations = topic.visualizations.page params[:page]
-      
-      @gallery = Gallery.new(visualizations, topic)
-    else
-      @gallery = Gallery.new( Visualization.all.page(params[:page]) )
-    end
+    visualizations = apply_scopes(Visualization).all.page(params[:page])
+    # topic       = IssueArea.find_by(slug: params[:topic])
+    # data_source = IssueArea.find    params[:data_source]
+
+    @gallery    = Gallery.new(visualizations)#, topic, data_source)
   end
 
   def show

@@ -23,10 +23,8 @@ class Visualization < ActiveRecord::Base
   max_paginates_per 16
 
 
-  def self.topic(issue_area_or_slug)
-    @issue_area = issue_area_for(issue_area_or_slug)
-    @issue_area.visualizations
-  end
+  scope :topic,       -> t { joins(:issue_areas).where( "mbdc_topic.slug = ?",    t) }
+  scope :data_source, -> d { joins(:data_sources).where("mbdc_datasource.id = ?", d) }
 
   
   def self.random

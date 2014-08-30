@@ -3,9 +3,9 @@
 
 %p.viewing
   You are viewing
-  =select_tag :topic, options_for_select(topic_options, visualizations_path(topic: @gallery.topic)), include_blank: true, id: 'topic-select', class: 'chosen-select', data: { placeholder: "All Topics" }
+  =select_tag :topic, options_for_select(topic_options, params[:topic]), id: 'topic-select', class: 'chosen-select', data: { placeholder: "All Topics" }
   and
-  =select_tag :data_source, options_for_select(data_source_options), include_blank: true, id: 'data-source-select', class: 'chosen-select', data: { placeholder: "All Data Sources" }
+  =select_tag :data_source, options_for_select(data_source_options, params[:data_source]), id: 'data-source-select', class: 'chosen-select', data: { placeholder: "All Data Sources" }
   #{'.'}
 
 .row
@@ -19,8 +19,10 @@
 
 
 :javascript
-  $('#topic-select').on('change', function () {
-    var url = $( this ).val(); // get selected value
+  $('.chosen-select').on('change', function () {
+    var topic       = $('#topic-select').val(), // get selected values
+        data_source = $('#data-source-select').val(),
+        url = '#{visualizations_path}' + '?topic=' + topic + '&data_source=' + data_source;
     if (url) { // require a URL
       window.location = url; // redirect
     }
