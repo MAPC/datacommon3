@@ -7,6 +7,8 @@ gem 'rails', '4.1.5'
 gem 'pg'
 # Use ActiveResource to connect to GeoNode API
 gem 'activeresource', path: '/Users/mapcuser/Projects/activeresource', require: 'active_resource'
+# Use has_scope to handle multiply-scoped models
+gem 'has_scope'
 # Use ActiveHash to mock out Institution,
 # replace later with an ActiveRecord model
 gem 'active_hash'

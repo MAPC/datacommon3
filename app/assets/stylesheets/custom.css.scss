@@ -1,8 +1,26 @@
 // custom.css.scss
 
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700);
+
 body {
   padding-top: 70px;
   overflow-x:  hidden;
+  font-family: 'PT Sans', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+}
+
+h1 {
+  font-size: 2em !important;
+}
+
+h2.page-header {
+  color: #AAAAAA;
+  font-size:    1.3em;
+  margin-top:    20px;
+  margin-bottom: 40px;
 }
 
 .center {
@@ -102,9 +120,11 @@ img.feature {
 }
 
 div.static-map-preview {
+  padding: 20px 0;
   img {
     padding:        20px 0;
-    margin-right: -100px;
+    max-width:     200px;
+    max-height:    200px;
   }
 }
 

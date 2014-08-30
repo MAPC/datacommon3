@@ -1,7 +1,12 @@
 %h1 Visualization Gallery
 %h2.page-header Explore maps and data visualizations created by DataCommon users.
 
-%p You are viewing #{@gallery.topic} and All Data Sources
+%p
+  You are viewing
+  %strong #{@gallery.topic}
+  and
+  %strong All Data Sources
+  #{'.'}
 
 .row
   = render partial: 'preview', collection: @gallery.visualizations[0..3], as: :vis

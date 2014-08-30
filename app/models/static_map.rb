@@ -16,6 +16,15 @@ class StaticMap < ActiveRecord::Base
   max_paginates_per 20
 
 
+  default_scope { order('id DESC') }
+
+
+  def date
+    date = Date.new(year, month)
+    date.stamp("May 2014")
+  end
+
+
   def thumbnail_src
     "http://metrobostondatacommon.org/site_media/#{thumbnail}"
   end

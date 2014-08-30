@@ -1,9 +1,10 @@
 .col-xs-12.static-map-preview
   .row
-    .col-md-2.col-md-offset-1.col-sm-3.col-sm-offset-1.col-xs-4.col-xs-offset-4
+    .col-md-2.col-md-offset-1.col-sm-3.col-sm-offset-1.col-xs-12.col-xs-offset-0.center
       =link_to static_map.pdf_page_src, target: '_blank' do
-        %img{src: static_map.thumbnail_src}
+        %img.map-preview{src: static_map.thumbnail_src}
     .col-sm-7.col-sm-offset-1.col-xs-10.col-xs-offset-1
       =link_to static_map.pdf_page_src, target: '_blank' do
         %h3= static_map.title
+      %p=  static_map.date
       %p=  static_map.abstract
