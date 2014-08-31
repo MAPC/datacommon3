@@ -9,7 +9,7 @@
 
 var DC = {};
 
-DC.weave = {
+DC.weaveConfig = {
   flashUrl:         "http://metrobostondatacommon.org/weave/weave.swf",
   expressInstaller: "expressInstall.swf",
   flashVersion:     "10.0.0",
@@ -27,8 +27,8 @@ DC.weave = {
   }
 }
 
-console.log('DC.weave ready with:');
-console.dir(DC.weave);
+console.log('DC.weaveConfig ready with:');
+console.dir(DC.weaveConfig);
 
 
 DC.logger = {
@@ -47,55 +47,63 @@ DC.logger = {
 };
 
 
+var globalsessionstate = undefined;
 
-DC.embedWeaveOnClick = function (dom_elem, sessionstate) {
+DC.embedWeaveOnClick = function (dom_elem) {
   $(dom_elem).on('click', function () {
-    DC.embedWeave( $(this), sessionstate );
+    
+    $.ajax({
+      url: "/municipalities/belmont/state/1",
+      dataType: 'xml'
+    }).done(function( sessionstate ) {
+      globalsessionstate = sessionstate;
+      DC.embedWeave( $( dom_elem ) );
+    });
+
   });
 };
 
 
-var globalsessionstate = undefined;
+DC.embedWeave = function (dom_elem) {
+  var id     = dom_elem.attr('id'),
+      width  = dom_elem.innerWidth() - 10,
+      height = dom_elem.innerHeight() - 10;
+
+  DC.logger.weaveStarted(id);
+
+  swfobject.embedSWF(
+    DC.weaveConfig.flashUrl,            // URL of flash script
+    id,                           // id to populate with Flash
+    width, height,                // dimensions of SWF
+    DC.weaveConfig.flashVersion,        // version
+    DC.weaveConfig.expressInstaller,    // express install URL 
+    DC.weaveConfig.flashvars,           // flashvars
+    DC.weaveConfig.params,              // general Flash params (settings)
+    {id: id, name: id},           // TODO: Not sure where these are used.
+    DC.logger.weaveFinished(id)   // callback
+  );   
+};
+
+
 
 var weaveReady = function (weave) {
+  DC.weave = weave;
+  
   DC.logger.weaveReady(weave);
-  weave.setSessionState([], globalsessionstate);
+  console.log("globalsessionstate", globalsessionstate);
+
+  var convertedState = (new XMLSerializer()).serializeToString(globalsessionstate);
+
+  console.log("convertedState", convertedState);
+  var newstate = weave.convertSessionStateXMLToObject(convertedState);
+
+  console.log("newstate", newstate);
+
+  DC.weave.setSessionState([], newstate);
+  
+  // weave.setSessionState([], globalsessionstate);
   weave.setSessionState(["WeaveProperties"], {
     backgroundColor: "16777215",
     showCopyright:    false
   });
 }
-
-
-DC.embedWeave = function (dom_elem, sessionstate) {
-  var id     = dom_elem.attr('id'),
-      width  = dom_elem.innerWidth(),
-      height = dom_elem.innerHeight(),
-
-      // Does the work of loading the session state for
-      // the variable 'weave', which is the instance
-      // of weave which has just been initialized.
-      weaveReady = function(weave) {
-        weave.setSessionState([], sessionstate);
-        weave.setSessionState(["WeaveProperties"], {
-          backgroundColor: "16777215",
-          showCopyright:    false
-        });
-      };
-
-  globalsessionstate = sessionstate;
-
-  DC.logger.weaveStarted(id);
-
-  swfobject.embedSWF(
-    DC.weave.flashUrl,            // URL of flash script
-    id,                           // id to populate with Flash
-    width, height,                // dimensions of SWF
-    DC.weave.flashVersion,        // version
-    DC.weave.expressInstaller,    // express install URL 
-    DC.weave.flashvars,           // flashvars
-    DC.weave.params,              // general Flash params (settings)
-    {id: id, name: id},           // TODO: Not sure where these are used.
-    DC.logger.weaveFinished(id)   // callback
-  );   
-};

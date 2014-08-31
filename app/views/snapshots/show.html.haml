@@ -6,10 +6,13 @@
   .col-sm-6.col-xs-12.center
     #map
     =form_tag '', method: :get do
-      =select_tag :municipality_id, options_for_select(@s.options_for_area), include_blank: true, id: 'area-select', class: 'chosen-select', data: { placeholder: "Choose a different #{@s.area_type_name}" }
+      =select_tag :municipality_id, options_for_select(@s.options_for_area, @s.geography_slug), include_blank: true, id: 'area-select', class: 'chosen-select', data: { placeholder: "Choose a different #{@s.area_type_name}" }
 
 .row
-  = render partial: 'visualizations/good_preview', collection: @s.visualizations, as: :vis
+  - @s.topics.each do |topic|
+    .col-md-4.col-sm-6.col-xs-12.center.snapshot-preview
+      .snapshot-preview-title=link_to topic.topic.title, municipality_topic_path(@s.geography, topic.topic)
+      = render partial: 'visualizations/good_preview', object: topic.visual, as: :vis
   
     
 
@@ -31,7 +34,7 @@ $(document).on('ready', function () {
   $('#area-select').on('change', function () {
     var url = $( this ).val(); // get selected value
     if (url) { // require a URL
-      window.location = url; // redirect
+      window.location = "/#{@s.area_type_name.pluralize}" + '/' + url; // redirect
     }
     return false;
   });

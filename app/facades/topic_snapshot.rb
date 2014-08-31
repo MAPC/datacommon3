@@ -1,11 +1,9 @@
-# #snapshots returns an array of one DynamicVisualization
-# for each topic in IssueArea.all
-class Snapshot
+class TopicSnapshot
 
-  attr_accessor :geography, :topics, :visualizations
+  attr_accessor :geography, :topic, :visualizations
 
-  def initialize(geography, topics)
-    @geography, @topics = geography, topics
+  def initialize(geography, visualizations, topic)
+    @geography, @visualizations, @topic = geography, visualizations, topic
   end
 
   

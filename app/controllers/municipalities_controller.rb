@@ -7,15 +7,29 @@ class MunicipalitiesController < ApplicationController
   end
 
   def show
-    @s = Snapshot.new( Municipality.find_by(slug: params[:id]) )
+    muni   = Municipality.find_by(slug: params[:id])
+    topics = IssueArea.all.map do |topic|
+      visual = topic.dynamic_visualizations.where(regiontype_id: 1).first # 1 = Municipality
+      OpenStruct.new(topic: topic, visual: visual) unless visual.nil?
+    end
+
+    @s = Snapshot.new(muni, topics.compact)
     render 'snapshots/show'
   end
 
   def topic
-    geography = Municipality.find_by(slug: params[:municipality_id])
-    topic     = IssueArea.find_by(slug: params[:id])
+    muni   = Municipality.find_by(slug: params[:municipality_id])
+    topic  = IssueArea.find_by(slug: params[:id])
+    vis    = topic.dynamic_visualizations.where(regiontype_id: 1)
 
-    @s = Snapshot.new(geography, topic)
+    @s = TopicSnapshot.new(muni, vis, topic)
     render 'snapshots/topic'
+  end
+
+  def rendered_state
+    muni = Municipality.find_by(slug: params[:id])
+    vis  = DynamicVisualization.find_by(id: params[:vis_id])
+    @state = vis.rendered_state(muni)
+    render xml: @state
   end
 end

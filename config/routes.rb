@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   resources :municipalities, only: [:index, :show] do
     resources :topics, on:    :member,        path: '',
                        only: [:show], to:   'municipalities#topic'
+    get 'state/:vis_id', on: :member, to: 'municipalities#rendered_state'
   end
 
   resources :subregions,     only: [:index, :show] do
