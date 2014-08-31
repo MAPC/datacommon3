@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   resources :subregions,     only: [:index, :show] do
     resources :topics, on:    :member,        path: '',
                        only: [:show], to:   'subregions#topic'
+    get 'state/:vis_id', on: :member, to: 'subregions#rendered_state'
   end
 
   resources :users, only: [:show]

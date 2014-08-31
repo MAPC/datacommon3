@@ -3,5 +3,5 @@
 :javascript
 
   $(document).on('ready', function () {
-    DC.embedWeaveOnClick("#vis-#{vis.id}", '#{@s.geography_slug}');
+    DC.embedWeaveOnClick("#vis-#{vis.id}", '#{@s.geography_slug}', '#{@s.area_type_name.pluralize}');
   });

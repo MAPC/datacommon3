@@ -4,8 +4,7 @@
 // Metropolitan Area Planning Council
 //
 // Interface for simplifying the loading of
-// Weave visualizations from synchronous
-// session state
+// Weave visualizations.
 
 var DC = {};
 
@@ -63,13 +62,13 @@ DC.logger = {
 
 DC.sessionStates = {};
 
-DC.embedWeaveOnClick = function (dom_elem, geo) {
+DC.embedWeaveOnClick = function (dom_elem, geo, area_type) {
   $(dom_elem).on('click', function () {
     
     var id = dom_elem.split('-').pop();
 
     $.ajax({
-      url: "/municipalities/" + geo + "/state/" + id,
+      url: "/" + area_type + "/" + geo + "/state/" + id,
       dataType: 'xml'
     }).done(function( sessionstate ) {
       DC.sessionStates[id] = sessionstate;

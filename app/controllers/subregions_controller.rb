@@ -7,16 +7,29 @@ class SubregionsController < ApplicationController
   end
 
   def show
-    @s = Snapshot.new( Subregion.find_by(slug: params[:id]) )
+    subregion = Subregion.find_by(slug: params[:id])
+    topics    = IssueArea.all.map do |topic|
+      visual  = topic.dynamic_visualizations.where(regiontype_id: 5).first # 5 = Subregion
+      OpenStruct.new(topic: topic, visual: visual) unless visual.nil?
+    end
+
+    @s = Snapshot.new(subregion, topics.compact)
     render 'snapshots/show'
   end
 
   def topic
-    geography  = Subregion.find_by(slug: params[:subregion_id])
-    topic      = IssueArea.find_by(slug: params[:id])
+    subregion = Subregion.find_by(slug: params[:subregion_id])
+    topic     = IssueArea.find_by(slug: params[:id])
+    vis       = topic.dynamic_visualizations.where(regiontype_id: 5)
 
-    @s = Snapshot.new( geography, topic )
-    
+    @s = TopicSnapshot.new(subregion, vis, topic)
     render 'snapshots/topic'
+  end
+
+  def rendered_state
+    subregion = Subregion.find_by(slug: params[:id])
+    vis       = DynamicVisualization.find_by(id: params[:vis_id])
+    @state    = vis.rendered_state(subregion)
+    render xml: @state
   end
 end
