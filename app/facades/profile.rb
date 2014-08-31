@@ -1,10 +1,10 @@
 class Profile
 
-  attr_reader :user
+  attr_reader :user, :visualizations
 
-  def initialize(user)
-    @user = user
-    @visualizations = user.visualizations
+  def initialize(user, visualizations)
+    @user           = user
+    @visualizations = visualizations
   end
 
   def method_missing(method_name, *args)

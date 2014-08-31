@@ -2,6 +2,8 @@ class UsersController < ApplicationController
   before_filter :load_institution
 
   def show
-    @profile = Profile.new User.find_by(id: params[:id])
+    user = User.find_by(id: params[:id])
+    visualizations = user.visualizations.all.page(params[:page] || 1)
+    @profile = Profile.new(user, visualizations)
   end
 end

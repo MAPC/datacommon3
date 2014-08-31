@@ -6,10 +6,7 @@ class VisualizationsController < ApplicationController
 
   def index
     visualizations = apply_scopes(Visualization).all.page(params[:page])
-    # topic       = IssueArea.find_by(slug: params[:topic])
-    # data_source = IssueArea.find    params[:data_source]
-
-    @gallery    = Gallery.new(visualizations)#, topic, data_source)
+    @gallery = Gallery.new(visualizations)
   end
 
   def show

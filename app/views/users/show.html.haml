@@ -13,4 +13,10 @@
 
 %h2.page-header #{@profile.name}'s Visualizations
 
-= render partial: 'visualizations/preview', collection: @profile.visualizations, as: :vis
+.row
+  = render partial: 'visualizations/preview', collection: @profile.visualizations[0..3], as: :vis
+.row
+  = render partial: 'visualizations/preview', collection: @profile.visualizations[4..7], as: :vis
+
+.row.center
+  = paginate @profile.visualizations, window: 1, outer_window: 1
