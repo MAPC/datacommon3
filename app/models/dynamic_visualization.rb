@@ -59,8 +59,7 @@ class DynamicVisualization < ActiveRecord::Base
       state.gsub!( expression, object.send(replacer_method) )
     end
 
-    p = "/Users/mapcuser/Projects/datacommon-refactor/old-datacommon/1.xml"
-    File.open(File.expand_path(p), 'rb') { |file| file.read }
+    state
   end
 
 
