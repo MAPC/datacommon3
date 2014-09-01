@@ -1,6 +1,9 @@
 class StaticMap < ActiveRecord::Base
-  self.establish_connection :datacommon
-  self.table_name = :mbdc_calendar
+  
+  if Rails.env == "production"
+    self.establish_connection :datacommon
+    self.table_name = :mbdc_calendar
+  end
 
   has_and_belongs_to_many :data_sources,
     join_table: :mbdc_calendar_sources,

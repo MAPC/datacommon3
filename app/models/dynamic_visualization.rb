@@ -1,6 +1,9 @@
 class DynamicVisualization < ActiveRecord::Base
-  self.establish_connection :datacommon
-  self.table_name = 'snapshots_visualization'
+  
+  if Rails.env == "production"
+    self.establish_connection :datacommon
+    self.table_name = 'snapshots_visualization'
+  end
 
   has_and_belongs_to_many :issue_areas,
     join_table: :snapshots_visualization_topics,

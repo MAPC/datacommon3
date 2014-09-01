@@ -1,6 +1,9 @@
 class DataSource < ActiveRecord::Base
-  self.establish_connection :datacommon
-  self.table_name = :mbdc_datasource
+  
+  if Rails.env == "production"
+    self.establish_connection :datacommon
+    self.table_name = :mbdc_datasource
+  end
 
   lazy_load :description
 

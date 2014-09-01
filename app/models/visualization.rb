@@ -1,7 +1,9 @@
 class Visualization < ActiveRecord::Base
 
-  self.establish_connection :datacommon
-  self.table_name = 'weave_visualization'
+  if Rails.env == "production"
+    self.establish_connection :datacommon
+    self.table_name = 'weave_visualization'
+  end
 
   belongs_to :user, foreign_key: :owner_id
   
@@ -28,12 +30,17 @@ class Visualization < ActiveRecord::Base
 
 
   def self.featured
-    self.find_by_sql """SELECT weave_visualization.*
+    if Rails.env == "production"
+      self.find_by_sql """SELECT weave_visualization.*
                         FROM weave_visualization
                         INNER JOIN mbdc_featured
                           ON mbdc_featured.visualization_id = weave_visualization.id
                         ORDER BY mbdc_featured.visualization_id ASC"""
+    else
+      self.where('featured IS NOT NULL').order(:featured)
     end
+    
+  end
 
   
   def self.random

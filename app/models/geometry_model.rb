@@ -1,8 +1,10 @@
 class GeometryModel < ActiveRecord::Base
   self.abstract_class = true
 
-  self.establish_connection :datacommon
-  self.table_name = 'snapshots_regionalunit'
+  if Rails.env == "production"
+    self.establish_connection :datacommon
+    self.table_name = 'snapshots_regionalunit'
+  end
 
   lazy_load :geometry,
             :short_desc,
