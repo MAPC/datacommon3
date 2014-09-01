@@ -8,6 +8,8 @@ class GeometryModel < ActiveRecord::Base
     self.table_name = 'snapshots_regionalunit'
   end
 
+  belongs_to :institution
+
   lazy_load :geometry,
             :short_desc,
             :short_desc_markup_type,
