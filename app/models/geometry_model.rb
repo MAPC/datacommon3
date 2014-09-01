@@ -10,6 +10,8 @@ class GeometryModel < ActiveRecord::Base
 
   belongs_to :institution
 
+  include InstitutionScope
+
   lazy_load :geometry,
             :short_desc,
             :short_desc_markup_type,

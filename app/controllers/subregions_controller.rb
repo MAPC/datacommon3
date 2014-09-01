@@ -2,9 +2,10 @@ class SubregionsController < ApplicationController
   before_filter :load_institution
   
   def index
-    @geographies = Subregion.all.sort {|e,f| e.unitid.to_i <=> f.unitid.to_i }
+    @geographies = Subregion.only_inst(@institution)
     render 'snapshots/index'
   end
+
 
   def show
     subregion = Subregion.find_by(slug: params[:id])
@@ -17,6 +18,7 @@ class SubregionsController < ApplicationController
     render 'snapshots/show'
   end
 
+
   def topic
     subregion = Subregion.find_by(slug: params[:subregion_id])
     topic     = IssueArea.find_by(slug: params[:id])
@@ -25,6 +27,7 @@ class SubregionsController < ApplicationController
     @s = TopicSnapshot.new(subregion, vis, topic)
     render 'snapshots/topic'
   end
+
 
   def rendered_state
     subregion = Subregion.find_by(slug: params[:id])

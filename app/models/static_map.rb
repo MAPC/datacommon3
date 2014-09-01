@@ -22,11 +22,14 @@ class StaticMap < ActiveRecord::Base
   has_and_belongs_to_many :issue_areas
 
 
-  paginates_per     10
-  max_paginates_per 20
+  def self.default_scope
+    order('id DESC')
+  end
+  
+  include InstitutionScope
 
 
-  default_scope { order('id DESC') }
+  paginates_per     8
 
 
   def date

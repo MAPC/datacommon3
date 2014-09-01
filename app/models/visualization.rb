@@ -19,14 +19,20 @@ class Visualization < ActiveRecord::Base
   has_and_belongs_to_many :data_sources
   has_and_belongs_to_many :issue_areas
 
+  include InstitutionScope
+
+  def self.default_scope
+    order('id DESC')
+  end
+
   # We don't always need this -- only when showing --
   # so this removes the column from the default_scope.
   # Call Visualization.count(:all) to get
   # the unscoped record count.
   lazy_load :sessionstate
 
-  paginates_per      8
-  max_paginates_per 16
+  paginates_per 8
+  # max_paginates_per 16
 
 
   if Rails.env == "production"

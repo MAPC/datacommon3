@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140901192800) do
+ActiveRecord::Schema.define(version: 20140901211355) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,15 @@ ActiveRecord::Schema.define(version: 20140901192800) do
   add_index "data_sources_static_maps", ["data_source_id"], name: "data_sources_static_maps_data_source_id", using: :btree
   add_index "data_sources_static_maps", ["static_map_id", "data_source_id"], name: "data_sources_static_maps_static_map_id_4b0d4bdf31ddc740_uniq", unique: true, using: :btree
   add_index "data_sources_static_maps", ["static_map_id"], name: "data_sources_static_maps_static_map_id", using: :btree
+
+  create_table "data_sources_visualizations", force: true do |t|
+    t.integer "visualization_id", null: false
+    t.integer "data_source_id",   null: false
+  end
+
+  add_index "data_sources_visualizations", ["data_source_id"], name: "visualizations_data_sources_data_source_id", using: :btree
+  add_index "data_sources_visualizations", ["visualization_id", "data_source_id"], name: "visualizations_data_visualization_id_7910f94c368bebdd_uniq", unique: true, using: :btree
+  add_index "data_sources_visualizations", ["visualization_id"], name: "visualizations_data_sources_visualization_id", using: :btree
 
   create_table "dynamic_visualizations", force: true do |t|
     t.string  "title",         limit: 100,             null: false
@@ -105,6 +114,34 @@ ActiveRecord::Schema.define(version: 20140901192800) do
   add_index "issue_areas_static_maps", ["issue_area_id"], name: "issue_areas_static_maps_issue_area_id", using: :btree
   add_index "issue_areas_static_maps", ["static_map_id", "issue_area_id"], name: "issue_areas_static_maps_static_map_id_38f0752a22458442_uniq", unique: true, using: :btree
   add_index "issue_areas_static_maps", ["static_map_id"], name: "issue_areas_static_maps_static_map_id", using: :btree
+
+  create_table "issue_areas_visualizations", force: true do |t|
+    t.integer "visualization_id", null: false
+    t.integer "issue_area_id",    null: false
+  end
+
+  add_index "issue_areas_visualizations", ["issue_area_id"], name: "visualizations_issue_areas_issue_area_id", using: :btree
+  add_index "issue_areas_visualizations", ["visualization_id", "issue_area_id"], name: "visualizations_issue_areas_visualization_id_1f3c9f406802bc09_un", unique: true, using: :btree
+  add_index "issue_areas_visualizations", ["visualization_id"], name: "visualizations_issue_areas_visualization_id", using: :btree
+
+  create_table "layers", id: false, force: true do |t|
+    t.string  "id"
+    t.string  "title"
+    t.string  "alt_title"
+    t.string  "descriptn"
+    t.string  "subject"
+    t.string  "creator"
+    t.string  "createdate"
+    t.string  "moddate"
+    t.string  "publisher"
+    t.string  "contributr"
+    t.string  "coverage"
+    t.string  "universe"
+    t.string  "schema"
+    t.string  "tablename"
+    t.string  "tablenum"
+    t.integer "institution_id"
+  end
 
   create_table "pages", force: true do |t|
     t.integer "institution_id"
@@ -172,23 +209,5 @@ ActiveRecord::Schema.define(version: 20140901192800) do
 
   add_index "visualizations", ["original_id"], name: "visualizations_original_id", using: :btree
   add_index "visualizations", ["owner_id"], name: "visualizations_owner_id", using: :btree
-
-  create_table "visualizations_data_sources", force: true do |t|
-    t.integer "visualization_id", null: false
-    t.integer "data_source_id",   null: false
-  end
-
-  add_index "visualizations_data_sources", ["data_source_id"], name: "visualizations_data_sources_data_source_id", using: :btree
-  add_index "visualizations_data_sources", ["visualization_id", "data_source_id"], name: "visualizations_data_visualization_id_7910f94c368bebdd_uniq", unique: true, using: :btree
-  add_index "visualizations_data_sources", ["visualization_id"], name: "visualizations_data_sources_visualization_id", using: :btree
-
-  create_table "visualizations_issue_areas", force: true do |t|
-    t.integer "visualization_id", null: false
-    t.integer "issue_area_id",    null: false
-  end
-
-  add_index "visualizations_issue_areas", ["issue_area_id"], name: "visualizations_issue_areas_issue_area_id", using: :btree
-  add_index "visualizations_issue_areas", ["visualization_id", "issue_area_id"], name: "visualizations_issue_areas_visualization_id_1f3c9f406802bc09_un", unique: true, using: :btree
-  add_index "visualizations_issue_areas", ["visualization_id"], name: "visualizations_issue_areas_visualization_id", using: :btree
 
 end

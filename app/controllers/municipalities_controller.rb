@@ -2,9 +2,10 @@ class MunicipalitiesController < ApplicationController
   before_filter :load_institution
   
   def index
-    @geographies = Municipality.all.sort {|e,f| e.unitid.to_i <=> f.unitid.to_i }
+    @geographies = Municipality.only_inst(@institution)
     render 'snapshots/index'
   end
+
 
   def show
     muni   = Municipality.find_by(slug: params[:id])
@@ -17,6 +18,7 @@ class MunicipalitiesController < ApplicationController
     render 'snapshots/show'
   end
 
+
   def topic
     muni   = Municipality.find_by(slug: params[:municipality_id])
     topic  = IssueArea.find_by(slug: params[:id])
@@ -25,6 +27,7 @@ class MunicipalitiesController < ApplicationController
     @s = TopicSnapshot.new(muni, vis, topic)
     render 'snapshots/topic'
   end
+
 
   def rendered_state
     muni = Municipality.find_by(slug: params[:id])
