@@ -28,6 +28,9 @@ gem 'sass-rails', '~> 4.0.3'
 # Convenient timestamping
 gem 'stamp'
 
+# Use Watir to crawl the DataCommon for images
+gem 'watir'
+
 # Use Foreman to manage the server and multiple processes
 gem 'foreman'
 # Use Uglifier as compressor for JavaScript assets

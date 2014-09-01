@@ -26,22 +26,22 @@ DC.weaveConfig = {
   }
 }
 
-console.log('DC.weaveConfig ready with:');
-console.dir(DC.weaveConfig);
+// console.log('DC.weaveConfig ready with:');
+// console.dir(DC.weaveConfig);
 
 
 DC.logger = {
   weaveStarted:  function (id) {
-    console.log('swfobject.embedSWF started loading visualization ' + id);
+    // console.log('swfobject.embedSWF started loading visualization ' + id);
   },
 
   weaveFinished: function (id) {
-    console.log('swfobject.embedSWF finished loading visualization ' + id);
+    // console.log('swfobject.embedSWF finished loading visualization ' + id);
   },
 
   weaveReady:    function (weave) {
-    console.log('#weaveReady was called with the following instance:');
-    console.dir(weave);
+    // console.log('#weaveReady was called with the following instance:');
+    // console.dir(weave);
   }
 };
 
@@ -61,6 +61,18 @@ DC.logger = {
 // that just loaded, which has the same ID as the visualization.
 
 DC.sessionStates = {};
+DC.weaves        = {};
+
+DC.synchEmbedWeaveOnClick = function (dom_elem, sessionstate) {
+  $(dom_elem).on('click', function () {
+
+    var id = dom_elem.split('-').pop();
+
+    DC.sessionStates[id] = sessionstate;
+    DC.embedWeave( $(dom_elem) );
+  });
+}
+
 
 DC.embedWeaveOnClick = function (dom_elem, geo, area_type) {
   $(dom_elem).on('click', function () {
@@ -99,6 +111,27 @@ DC.embedWeave = function (dom_elem) {
   );   
 };
 
+DC.base64s = {};
+
+DC.establishAllBase64 = function () {
+  var visuals = $('.snapshot-vis');
+
+  $.each(visuals, function (idx, div) {
+    div.click();
+    var weave_id = $(div).attr('id').split('-').pop();
+    console.log("weave_id", weave_id);
+
+    setTimeout(function () {
+      var base64 = DC.weaves[weave_id].evaluateExpression(null, 'getBase64Image(Application.application.visDesktop)', null, ['weave.utils.BitmapUtils', 'mx.core.Application']);
+      DC.base64s[String(weave_id)] = base64
+    }, 40000 );
+  });
+}
+
+DC.getAllBase64 = function () {
+  return DC.base64s;
+}
+
 
 
 var weaveReady = function (weave) {
@@ -106,15 +139,23 @@ var weaveReady = function (weave) {
   DC.weave     = weave;
   
   DC.logger.weaveReady(weave);
+  DC.weaves[weave_id] = weave;
   
   // IMPORTANT: Weave apparently cannot read XML session states
   // directly. Instead of Weave checking if it's XML and doing
   // the proper conversions, we are forced to do them here.
 
-  var stringState = (new XMLSerializer()).serializeToString(DC.sessionStates[weave_id]);
-  var objectState = weave.convertSessionStateXMLToObject(stringState);
+  // console.log(DC.sessionStates[weave_id])
+  // console.log( String(DC.sessionStates[weave_id]) );
 
-  weave.setSessionState([], objectState);
+  if (String(DC.sessionStates[weave_id]) === "[object XMLDocument]") {
+    var stringState = (new XMLSerializer()).serializeToString(DC.sessionStates[weave_id])
+        objectState = weave.convertSessionStateXMLToObject(stringState);
+
+    weave.setSessionState([], objectState);
+  } else {
+    weave.setSessionState([], DC.sessionStates[weave_id]);
+  }
 
   weave.setSessionState(["WeaveProperties"], {
     backgroundColor: "16777215", // 'white'

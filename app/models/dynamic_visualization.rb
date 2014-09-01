@@ -11,7 +11,7 @@ class DynamicVisualization < ActiveRecord::Base
   #       probably in the Metaprogramming book.
 
   def basepath
-    "#{Rails.root}/public/dynamic_visualizations"
+    "#{Rails.public_path}/dynamic_visualizations"
   end
 
 
@@ -26,8 +26,12 @@ class DynamicVisualization < ActiveRecord::Base
   end
 
 
-  def image_path(object, method)
-    "#{basepath}/images/#{filename}_#{object.send(method)}.png"
+  def image_path(object, method=:slug)
+    if File.exists? "#{basepath}/images/#{object.send(method)}/#{id}.png"
+      "/dynamic_visualizations/images/#{object.send(method)}/#{id}.png"
+    else
+      "http://unsplash.it/400/400?random"
+    end
   end
 
   

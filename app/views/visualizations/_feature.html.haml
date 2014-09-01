@@ -1,10 +1,10 @@
 %div
-  %h3= feature.title
-  %img.feature{id: "vis-#{vis.id}", src: feature.gallery_image_path}
+  %h3= link_to feature.title, feature
+  %img.feature{id: "vis-#{feature.id}", src: feature.gallery_image_path}
 
 :javascript
 
   $(document).on('ready', function () {
-    DC.embedWeaveOnClick("#vis-#{vis.id}", #{vis.sessionstate});
+    DC.synchEmbedWeaveOnClick("#vis-#{feature.id}", #{feature.sessionstate});
   });
   

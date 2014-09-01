@@ -4,7 +4,7 @@
 - @s.visualizations.each do |vis|
   .col-md-4.col-sm-6.col-xs-12.center.snapshot-preview
     .snapshot-preview-title= vis.title
-    %img.snapshot-vis{id: "vis-#{vis.id}", src: "http://unsplash.it/400/400?random"}
+    %img.snapshot-vis{id: "vis-#{vis.id}", src: vis.image_path(@s.geography)}
     :javascript
 
       $(document).on('ready', function () {
