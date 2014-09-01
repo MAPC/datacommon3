@@ -1,8 +1,8 @@
 class Gallery
 
-  attr_reader :visualizations#, :topic, :data_source
+  attr_reader :visualizations
 
-  def initialize(visualizations)#, topic, data_source)
+  def initialize(visualizations)
     @visualizations = visualizations
     # @topic          = topic
     # @data_source    = data_source

@@ -1,6 +1,8 @@
 class GeometryModel < ActiveRecord::Base
   self.abstract_class = true
 
+  self.table_name = 'snapshots_regionalunit'
+
   if Rails.env == "production"
     self.establish_connection :datacommon
     self.table_name = 'snapshots_regionalunit'
@@ -15,13 +17,13 @@ class GeometryModel < ActiveRecord::Base
   def centroid
     get_query_json """SELECT ST_AsGeoJSON(
                         ST_Transform(ST_Centroid(geometry), 4326))
-                      FROM snapshots_regionalunit WHERE unitid = '#{unitid}'"""
+                      FROM #{self.table_name} WHERE unitid = '#{unitid}'"""
   end
 
 
   def to_geojson
     get_query_json """SELECT ST_AsGeoJSON(ST_Transform(ST_SetSRID(geometry, 26986), 4326))
-                      FROM snapshots_regionalunit WHERE unitid = '#{unitid}'"""
+                      FROM #{self.table_name} WHERE unitid = '#{unitid}'"""
   end
 
 

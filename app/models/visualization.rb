@@ -3,17 +3,21 @@ class Visualization < ActiveRecord::Base
   if Rails.env == "production"
     self.establish_connection :datacommon
     self.table_name = 'weave_visualization'
+  
+    has_and_belongs_to_many :data_sources,
+      join_table: :weave_visualization_datasources,
+      association_foreign_key: :datasource_id
+
+    has_and_belongs_to_many :issue_areas,
+      join_table: :weave_visualization_topics,
+      association_foreign_key: :topic_id
   end
 
+  belongs_to :institution
   belongs_to :user, foreign_key: :owner_id
-  
-  has_and_belongs_to_many :data_sources,
-    join_table: :weave_visualization_datasources,
-    association_foreign_key: :datasource_id
 
-  has_and_belongs_to_many :issue_areas,
-    join_table: :weave_visualization_topics,
-    association_foreign_key: :topic_id
+  has_and_belongs_to_many :data_sources
+  has_and_belongs_to_many :issue_areas
 
   # We don't always need this -- only when showing --
   # so this removes the column from the default_scope.
@@ -25,8 +29,13 @@ class Visualization < ActiveRecord::Base
   max_paginates_per 16
 
 
-  scope :topic,       -> t { joins(:issue_areas).where( "mbdc_topic.slug = ?",    t) }
-  scope :data_source, -> d { joins(:data_sources).where("mbdc_datasource.id = ?", d) }
+  if Rails.env == "production"
+    scope :topic,       -> t { joins(:issue_areas).where( "mbdc_topic.slug = ?",    t) }
+    scope :data_source, -> d { joins(:data_sources).where("mbdc_datasource.id = ?", d) }
+  else
+    scope :topic,       -> t { joins(:issue_areas).where("issue_areas.slug = ?", t) }
+    scope :data_source, -> d { joins(:data_sources).where("data_sources.id = ?", d) }
+  end
 
 
   def self.featured
@@ -39,7 +48,6 @@ class Visualization < ActiveRecord::Base
     else
       self.where('featured IS NOT NULL').order(:featured)
     end
-    
   end
 
   
