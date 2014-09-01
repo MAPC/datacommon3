@@ -18,5 +18,8 @@
 # Don't really want connection details out
 /config/database.yml
 
+.env
 .DS_Store
+/db/data/*
+
 sloccount.txt
