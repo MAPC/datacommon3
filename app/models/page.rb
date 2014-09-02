@@ -1,7 +1,12 @@
 class Page < ActiveRecord::Base
 
   belongs_to :institution
-  belongs_to :page_topic
+  belongs_to :page_topi
+
+  def self.default_scope
+    order(:sort_order)
+  end
+
 
 
   def body

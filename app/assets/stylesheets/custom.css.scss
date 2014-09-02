@@ -1,6 +1,6 @@
 // custom.css.scss
 
-@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400,700);
 
 
 // Topic colors (from Regional Indicators)
@@ -28,7 +28,6 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-
 }
 
 h1 {
@@ -40,6 +39,14 @@ h2.page-header {
   font-size:    1.3em;
   margin-top:    20px;
   margin-bottom: 30px;
+}
+
+h3 {
+  font-family: 'PT Serif', serif !important;
+}
+
+h4 {
+  padding-top: 20px;
 }
 
 .center {
@@ -166,6 +173,30 @@ p.viewing {
   margin-top:    10px;
   margin-bottom: 40px;
 }
+
+// STATIC PAGES
+
+ul.contact {
+  list-style-type: none;
+  padding-top: 10px;
+  font-size: 1.1em;
+}
+
+ul.none {
+  list-style-type: none;
+}
+
+.padder {
+  padding-top: 27px;
+  margin-top: -40px;
+  h4 {
+    margin-top: 20px;
+  }
+}
+
+
+
+// SNAPSHOTS
 
 .area-summary {
   padding: 20px 0;
