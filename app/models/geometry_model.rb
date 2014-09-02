@@ -3,11 +3,6 @@ class GeometryModel < ActiveRecord::Base
 
   self.table_name = 'snapshots_regionalunit'
 
-  if Rails.env == "production"
-    self.establish_connection :datacommon
-    self.table_name = 'snapshots_regionalunit'
-  end
-
   belongs_to :institution
 
   include InstitutionScope

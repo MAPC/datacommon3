@@ -1,23 +1,16 @@
-class Visualization < ActiveRecord::Base
-
-  if Rails.env == "production"
-    self.establish_connection :datacommon
-    self.table_name = 'weave_visualization'
+class Visualization < ActiveRecord::Base  
+  self.table_name = 'weave_visualization'
   
-    has_and_belongs_to_many :data_sources,
-      join_table: :weave_visualization_datasources,
-      association_foreign_key: :datasource_id
+  has_and_belongs_to_many :data_sources,
+    join_table: :weave_visualization_datasources,
+    association_foreign_key: :datasource_id
 
-    has_and_belongs_to_many :issue_areas,
-      join_table: :weave_visualization_topics,
-      association_foreign_key: :topic_id
-  end
+  has_and_belongs_to_many :issue_areas,
+    join_table: :weave_visualization_topics,
+    association_foreign_key: :topic_id
 
   belongs_to :institution
   belongs_to :user, foreign_key: :owner_id
-
-  has_and_belongs_to_many :data_sources
-  has_and_belongs_to_many :issue_areas
 
   include InstitutionScope
 

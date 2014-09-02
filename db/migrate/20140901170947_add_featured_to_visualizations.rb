@@ -1,5 +1,5 @@
 class AddFeaturedToVisualizations < ActiveRecord::Migration
   def change
-    add_column :visualizations, :featured, :integer, default: nil
+    add_column :weave_visualization, :featured, :integer, default: nil
   end
 end

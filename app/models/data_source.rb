@@ -1,13 +1,11 @@
 class DataSource < ActiveRecord::Base
-  
-  if Rails.env == "production"
-    self.establish_connection :datacommon
-    self.table_name = :mbdc_datasource
-  end
+  self.table_name = 'mbdc_datasource'
 
   lazy_load :description
 
-  default_scope { order(:title) }
+  def self.default_scope
+    order(:title)
+  end
 
   has_and_belongs_to_many :visualizations,
     join_table:  :weave_visualization_datasources,

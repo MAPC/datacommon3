@@ -1,9 +1,5 @@
 class Hero < ActiveRecord::Base
-  
-  if Rails.env == "production"
-    self.establish_connection :datacommon
-    self.table_name = 'mbdc_hero'
-  end
+  self.table_name = 'mbdc_hero'
 
   belongs_to :institution
   
