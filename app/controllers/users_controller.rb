@@ -4,6 +4,6 @@ class UsersController < ApplicationController
   def show
     user = User.find_by(id: params[:id])
     visualizations = user.visualizations.all.page(params[:page] || 1)
-    @profile = Profile.new(user, visualizations)
+    @profile = ProfileFacade.new(user, visualizations)
   end
 end

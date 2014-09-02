@@ -1,14 +1,20 @@
 class User < ActiveRecord::Base
 
-  if Rails.env == "production"
-    self.establish_connection :datacommon
-    self.table_name = 'maps_contact'
-  end
+  self.table_name = 'auth_user'
 
+  has_one  :profile
   has_many :visualizations, foreign_key: :owner_id
 
-  def full_name
-    "#{first_name} #{last_name}"
+  def self.default_scope
+    limit 10
+  end
+
+  def name
+    if profile
+      profile.name
+    else
+      "#{first_name} #{last_name}"
+    end
   end
 
   def avatar_url
@@ -16,8 +22,7 @@ class User < ActiveRecord::Base
   end
 
   def to_s
-    name
+    name.presence || username
   end
 
-  default_scope { limit 10 }
 end

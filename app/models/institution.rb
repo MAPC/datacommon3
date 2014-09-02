@@ -2,6 +2,7 @@ class Institution < ActiveRecord::Base
 
   has_one  :branding
 
+  has_many :heros
   has_many :layers
   has_many :pages
   has_many :static_maps

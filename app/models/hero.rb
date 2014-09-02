@@ -5,10 +5,13 @@ class Hero < ActiveRecord::Base
     self.table_name = 'mbdc_hero'
   end
 
-  # belongs_to :institution
+  belongs_to :institution
+  
+  def self.default_scope
+    where(active: true).order(:order)
+  end
 
-
-  default_scope { where(active: true).order(:order) }
+  include InstitutionScope
 
 
   def self.random

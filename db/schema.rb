@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140901211355) do
+ActiveRecord::Schema.define(version: 20140902182153) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -79,16 +79,17 @@ ActiveRecord::Schema.define(version: 20140901211355) do
   add_index "featured_visualizations", ["visualization_id"], name: "featured_visualizations_visualization_id", using: :btree
 
   create_table "heros", force: true do |t|
-    t.string  "title",               limit: 100, null: false
-    t.string  "subtitle",            limit: 50,  null: false
+    t.string  "title",               limit: 100,             null: false
+    t.string  "subtitle",            limit: 50,              null: false
     t.string  "navtitle",            limit: 50
     t.string  "navsubtitle",         limit: 50
     t.text    "content"
-    t.string  "image",               limit: 100, null: false
+    t.string  "image",               limit: 100,             null: false
     t.integer "order"
-    t.boolean "active",                          null: false
-    t.string  "content_markup_type", limit: 30,  null: false
-    t.text    "_content_rendered",               null: false
+    t.boolean "active",                                      null: false
+    t.string  "content_markup_type", limit: 30,              null: false
+    t.text    "_content_rendered",                           null: false
+    t.integer "institution_id",                  default: 1
   end
 
   create_table "institutions", force: true do |t|
