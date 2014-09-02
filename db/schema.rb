@@ -17,6 +17,21 @@ ActiveRecord::Schema.define(version: 20140902182153) do
   enable_extension "plpgsql"
   enable_extension "postgis"
 
+  create_table "auth_user", force: true do |t|
+    t.string   "username",     limit: 30,  null: false
+    t.string   "first_name",   limit: 30,  null: false
+    t.string   "last_name",    limit: 30,  null: false
+    t.string   "email",        limit: 75,  null: false
+    t.string   "password",     limit: 128, null: false
+    t.boolean  "is_staff",                 null: false
+    t.boolean  "is_active",                null: false
+    t.boolean  "is_superuser",             null: false
+    t.datetime "last_login",               null: false
+    t.datetime "date_joined",              null: false
+  end
+
+  add_index "auth_user", ["username"], name: "auth_user_username_key", unique: true, using: :btree
+
   create_table "brandings", force: true do |t|
     t.integer "institution_id"
     t.string  "logo_url"

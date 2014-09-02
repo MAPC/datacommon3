@@ -54,11 +54,14 @@ gem 'spring',        group: :development
 
 
 group :development, :test do
-  gem 'rspec-rails'
-  gem 'guard-rspec'
+  gem 'rspec-rails', '2.13.1'
+  gem 'guard-rspec', '2.5.0'
   gem 'spork-rails', '4.0.0'
   gem 'guard-spork', '1.5.0'
-  gem 'childprocess'
+  gem 'childprocess', '0.3.6'
+  gem 'selenium-webdriver', '2.35.1'
+  gem 'capybara', '2.1.0'
+  gem 'minitest'
 end
 
 # Use ActiveModel has_secure_password
