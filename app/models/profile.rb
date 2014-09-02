@@ -5,7 +5,11 @@ class Profile < ActiveRecord::Base
   end
 
   self.table_name = 'users'
-
+  
   belongs_to :user
+
+  def name
+    read_attribute(:name).titleize
+  end
 
 end

@@ -11,9 +11,9 @@ class User < ActiveRecord::Base
 
   def name
     if profile
-      profile.name
+      profile.name.titleize
     else
-      "#{first_name} #{last_name}"
+      full_name_or_username
     end
   end
 
@@ -22,7 +22,14 @@ class User < ActiveRecord::Base
   end
 
   def to_s
-    name.presence || username
+    name
   end
+
+  private
+
+  def full_name_or_username
+    "#{first_name} #{last_name}".titleize.presence || username
+  end
+
 
 end

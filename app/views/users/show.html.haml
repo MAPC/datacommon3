@@ -3,12 +3,14 @@
     %img{src: avatar_url(@profile.user), alt: @profile.name}    
   .col-md-3.col-sm-4.col-xs-8.info
     %h3=  @profile.name
-    %p=  mail_to @profile.email
-    %p=  @profile.city
-  .col-md-3.col-sm-4.col-xs-12.org
-    %h5= @profile.organization
-    %p=  @profile.position
-    %p=  link_to @profile.website_url
+    - if @profile.has_rich_data?
+      %p=  mail_to @profile.email
+      %p=  @profile.city
+  - if @profile.has_rich_data?
+    .col-md-3.col-sm-4.col-xs-12.org
+      %h5= @profile.organization
+      %p=  @profile.position
+      %p=  link_to @profile.website_url
     
 
 %h2.page-header #{@profile.name}'s Visualizations
