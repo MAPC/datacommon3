@@ -14,7 +14,9 @@
     %div.col-md-12.col-xs-5.vis-abstract
       = render partial: 'visualizations/abstract', locals: { abstract: @visualization.abstract }
     %div.col-md-12.col-xs-5.vis-owner
-      %p= "by #{@visualization.owner_display_name}"
+      %p
+        by
+        = link_to @visualization.owner, @visualization.owner
       %p
         %h5 Topics
         %ul
