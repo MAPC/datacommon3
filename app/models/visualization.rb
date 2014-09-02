@@ -27,26 +27,12 @@ class Visualization < ActiveRecord::Base
   paginates_per 8
   # max_paginates_per 16
 
-
-  if Rails.env == "production"
-    scope :topic,       -> t { joins(:issue_areas).where( "mbdc_topic.slug = ?",    t) }
-    scope :data_source, -> d { joins(:data_sources).where("mbdc_datasource.id = ?", d) }
-  else
-    scope :topic,       -> t { joins(:issue_areas).where("issue_areas.slug = ?", t) }
-    scope :data_source, -> d { joins(:data_sources).where("data_sources.id = ?", d) }
-  end
+  scope :topic,       -> t { joins(:issue_areas).where( "mbdc_topic.slug = ?",    t) }
+  scope :data_source, -> d { joins(:data_sources).where("mbdc_datasource.id = ?", d) }
 
 
   def self.featured
-    if Rails.env == "production"
-      self.find_by_sql """SELECT weave_visualization.*
-                        FROM weave_visualization
-                        INNER JOIN mbdc_featured
-                          ON mbdc_featured.visualization_id = weave_visualization.id
-                        ORDER BY mbdc_featured.visualization_id ASC"""
-    else
-      self.where('featured IS NOT NULL').order(:featured)
-    end
+    self.where('featured IS NOT NULL').order(:featured)
   end
 
   

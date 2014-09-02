@@ -267,3 +267,22 @@ Hero.unscoped.where(active: false).limit(3).each do |h|
   h.update_attribute(:active, true)
   h.update_attribute(:institution_id, 2)
 end
+
+
+profiles = Profile.where(organization: 'CMRPC')
+profiles = profiles + Profile.where(organization: 'Central Massachusetts Regional Planning Commission')
+
+profiles.each do |profile|
+  profile.user.visualizations.each {|v| v.update_attribute(:institution_id, 2)}
+end
+
+user = User.where(username: 'cjryan2006').profile
+user.visualizations.each {|v| v.update_attribute(:institution_id, 2)}
+
+
+Visualization.where(featured: nil).where(institution_id: 2).sample(3).each_with_index do |v, index|
+  v.update_attribute(:featured, index)
+end
+
+
+

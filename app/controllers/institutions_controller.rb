@@ -3,6 +3,6 @@ class InstitutionsController < ApplicationController
   
   def show
     @heros   = Hero.institution(@institution).limit(3)
-    @feature = Visualization.institution(@institution).featured.sample
+    @feature = Visualization.where(institution_id: @institution.id).featured.sample
   end
 end
