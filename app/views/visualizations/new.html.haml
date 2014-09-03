@@ -46,7 +46,7 @@
         = f.label  :permission, 'Public or Private?'
         %p.small
           Public visualizations are displayed in the gallery, and can be viewed and shared.
-        = select_tag(:permission, options_for_select([['Public','public'],['Private','private']], 'public'))
+        = select_tag('visualization[permission]', options_for_select([['Public','public'],['Private','private']], 'public'))
 
       = f.hidden_field :sessionstate
 
