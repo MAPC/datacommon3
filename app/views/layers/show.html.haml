@@ -1,3 +1,57 @@
-%h4= @layer.title.titleize
-=image_tag @layer.thumbnail_src
-%p Owner #{@layer.owner.id}
+%h1= link_to "< Layers", layers_path
+
+%h2= @layer.title
+%p= @layer.description
+
+%table
+  %tr
+    %td{width: '30%'} title
+    %td #{@layer.title}
+  %tr
+    %td alt_title
+    %td #{@layer.alt_title}
+  %tr
+    %td descriptn
+    %td #{@layer.descriptn}
+  %tr
+    %td subject
+    %td #{@layer.subject}
+  %tr
+    %td creator
+    %td #{@layer.creator}
+  %tr
+    %td createdate
+    %td #{@layer.createdate}
+  %tr
+    %td moddate
+    %td #{@layer.moddate}
+  %tr
+    %td publisher
+    %td #{@layer.publisher}
+  %tr
+    %td contributr
+    %td #{@layer.contributr}
+  %tr
+    %td coverage
+    %td #{@layer.coverage}
+  %tr
+    %td universe
+    %td #{@layer.universe}
+  %tr
+    %td schema
+    %td #{@layer.schema}
+  %tr
+    %td tablename
+    %td #{@layer.tablename}
+
+%br
+%br
+
+.center
+  .btn.btn-success
+    Download Layer
+    %b.caret
+  .btn.btn-primary
+    Download Metadata
+    %b.caret
+     

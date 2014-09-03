@@ -1,5 +1,6 @@
 class Layer < ActiveRecord::Base
   belongs_to :institution
+  self.primary_key = :title
 
   def self.default_scope
     order(:title)
@@ -8,7 +9,7 @@ class Layer < ActiveRecord::Base
   include InstitutionScope
 
   def description
-    read_attribute(:descriptn).titleize
+    read_attribute(:descriptn)
   end
 
   alias_method :desc, :description
@@ -16,7 +17,11 @@ class Layer < ActiveRecord::Base
   paginates_per 8
 
   def to_param
-    title.parameterize
+    tablename
+  end
+
+  def to_s
+    title
   end
   
 end

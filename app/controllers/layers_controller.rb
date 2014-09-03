@@ -6,6 +6,6 @@ class LayersController < ApplicationController
   end
 
   def show
-    @layer  = Layer.find params[:id]
+    @layer  = Layer.find_by(tablename: params[:id])
   end
 end
