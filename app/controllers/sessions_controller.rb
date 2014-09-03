@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
     if user
       sign_in user
       flash[:success] = "Welcome to the DataCommon!"
-      redirect_to user
+      redirect_back_or user
     else
       flash.now[:danger] = <<-EOS
         We don't know that username/password combination.

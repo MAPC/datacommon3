@@ -1,0 +1,25 @@
+%h1.page-header New Visualization
+
+.row
+  .col-md-8.col-md-offset-2.col-sm-10.col-md-offset-1.col-xs-12.col-xs-offset-0    
+
+    %br
+    %br
+    %br
+    %p  Weave Goes Here
+    %br
+    %br
+    %br
+    %br
+
+    .form{role: 'form'}
+      = form_for @visualization do |f|
+        .form-group
+          = f.label  :institution_id
+          %br
+          = collection_select(:visualization, :institution_id, Institution.all, :id, :short_name, selected: @institution.id)
+        .form-group
+          = f.label  :permission
+          %br
+          = select_tag(:permission, options_for_select([['Public','public'],['Private','private']], 'public'))
+        = f.submit 'Save', class: 'btn btn-large btn-success'

@@ -15,8 +15,9 @@ class Visualization < ActiveRecord::Base
   include InstitutionScope
 
   def self.default_scope
-    order('id DESC')
+    order('id DESC').where(permission: 'public')
   end
+
 
   # We don't always need this -- only when showing --
   # so this removes the column from the default_scope.
@@ -48,6 +49,26 @@ class Visualization < ActiveRecord::Base
 
   def self.recent(count=4)
     self.order('last_modified DESC').limit(count)
+  end
+
+
+  def self.public
+    where(permission: 'public')
+  end
+
+
+  def self.private
+    where(permission: 'private')
+  end
+
+
+  def private?
+    permission == "private"
+  end
+
+
+  def public?
+    !private?
   end
 
 

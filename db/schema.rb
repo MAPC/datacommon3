@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140903002213) do
+ActiveRecord::Schema.define(version: 20140903033148) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,17 @@ ActiveRecord::Schema.define(version: 20140903002213) do
     t.string  "tagline"
     t.string  "map_gallery_intro"
   end
+
+  create_table "core_genericobjectrolemapping", force: true do |t|
+    t.string  "subject",      limit: 100, null: false
+    t.integer "object_ct_id",             null: false
+    t.integer "object_id",                null: false
+    t.integer "role_id",                  null: false
+  end
+
+  add_index "core_genericobjectrolemapping", ["object_ct_id"], name: "core_genericobjectrolemapping_object_ct_id", using: :btree
+  add_index "core_genericobjectrolemapping", ["role_id"], name: "core_genericobjectrolemapping_role_id", using: :btree
+  add_index "core_genericobjectrolemapping", ["subject", "object_ct_id", "object_id", "role_id"], name: "core_genericobjectrolemapping_subject_object_ct_id_object_i_key", unique: true, using: :btree
 
   create_table "institutions", force: true do |t|
     t.string "short_name"
@@ -195,13 +206,14 @@ ActiveRecord::Schema.define(version: 20140903002213) do
   create_table "weave_visualization", force: true do |t|
     t.string   "title",          limit: 100
     t.text     "abstract"
-    t.integer  "owner_id",                               null: false
-    t.datetime "last_modified",                          null: false
-    t.text     "sessionstate",                           null: false
+    t.integer  "owner_id",                                       null: false
+    t.datetime "last_modified",                                  null: false
+    t.text     "sessionstate",                                   null: false
     t.string   "year",           limit: 50
     t.integer  "original_id"
     t.integer  "featured"
     t.integer  "institution_id",             default: 1
+    t.string   "permission",                 default: "private"
   end
 
   add_index "weave_visualization", ["original_id"], name: "weave_visualization_original_id", using: :btree

@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :institutions,   only: [:show]
 
   resources :layers,         only: [:index, :show], concerns: :paginatable
-  resources :visualizations, only: [:index, :show], concerns: :paginatable
+  resources :visualizations, only: [:index, :show, :new], concerns: :paginatable
   resources :static_maps,    only: [:index, :show], concerns: :paginatable,
                              path: 'gallery'
 
