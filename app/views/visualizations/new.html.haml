@@ -3,10 +3,21 @@
 .form.vis-form{role: 'form'}
   = form_for @visualization, remote: true, format: :json do |f|
     = render 'shared/error_messages'
+    = render 'shared/success_messages'
 
     .col-md-9.col-sm-12
 
       #vis-new
+
+      .row
+        .col-xs-12
+          %ol
+            %li
+              Scalable prosperity voice vulnerable citizens, assistance; non-partisan socio-economic divide. Respect nonprofit achieve; amplify inspiration; maintain.  Inclusive metrics combat HIV/AIDS innovate. Public service legal aid strengthen democracy; John Lennon fellows tackling diversity foundation institutions.
+            %li
+              Organization volunteer community health workers communities impact inspire social change partnership natural resources board of directors. Legitimize eradicate civil society; necessities fundraise social innovation lasting change citizens of change revitalize. Sustainable climate change Bill and Melinda Gates accelerate progress Kickstarter. Open source readiness cross-agency.
+            %li
+              Jane Jacobs working families Bono complexity protect. Partner; growth participatory monitoring billionaire philanthropy solution. Medicine forward-thinking; time of extraordinary change Rockefeller UNICEF. International emergency response, rights-based approach, tackle change, life-expectancy, economic independence employment rural development.
 
     .col-md-3.col-sm-12
 
@@ -14,7 +25,7 @@
         = f.label      :title
         = f.text_field :title, class: 'form-control'
       .form-group
-        = f.label      :year
+        = f.label      :year, 'Year(s)'
         = f.text_field :year,  class: 'form-control'
       .form-group
         = f.label      :abstract
@@ -36,6 +47,9 @@
         %p.small
           Public visualizations are displayed in the gallery, and can be viewed and shared.
         = select_tag(:permission, options_for_select([['Public','public'],['Private','private']], 'public'))
+
+      = f.hidden_field :sessionstate
+
       = f.submit 'Save', class: 'btn btn-large btn-success'
 
 :javascript

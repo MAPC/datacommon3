@@ -24,10 +24,11 @@ class VisualizationsController < ApplicationController
 
   def create
     @visualization = Visualization.new new_params
+    @visualization.owner_id = current_user.id
 
     respond_to do |format|
       if @visualization.save
-        flash[:success] = "Great! You saved your visualizations successfully!"
+        format.json { render json: @visualization }
       else
         format.json { render json:   @visualization.errors.full_messages,
                              status: :unprocessable_entity }
@@ -43,7 +44,8 @@ class VisualizationsController < ApplicationController
                                 {issue_area_ids:  []},
                                 {data_source_ids: []},
                                 :institution_id,
-                                :permission)
+                                :permission,
+                                :sessionstate)
     end
 
     def signed_in_user

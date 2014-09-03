@@ -1,6 +1,8 @@
 class Visualization < ActiveRecord::Base  
   self.table_name = 'weave_visualization'
   PERMISSIONS = ['public', 'private']
+
+  before_save :update_time
   
   has_and_belongs_to_many :data_sources,
     join_table: :weave_visualization_datasources,
@@ -24,8 +26,8 @@ class Visualization < ActiveRecord::Base
   validates :abstract,   presence: true, length: { minimum: 70, maximum: 560 }
   validates :permission, presence: true, inclusion: { in: PERMISSIONS,
              message: "Permission be 'public' or 'private': \"%{value}\" doesn't count." }
-  validates :data_source_ids, allow_blank: true, inclusion: { in: DataSource.pluck(:id) }
-  validates :issue_area_ids,  allow_blank: true, inclusion: { in: IssueArea.pluck(:id) }
+  # validates :data_source_ids, allow_blank: true, inclusion: { in: DataSource.pluck(:id) }
+  # validates :issue_area_ids,  allow_blank: true, inclusion: { in: IssueArea.pluck(:id) }
   validates :institution_id,  allow_blank: true, inclusion: { in: Institution.pluck(:id) }
 
   validates :sessionstate, presence: true, length: { minimum: 100 }
@@ -114,6 +116,10 @@ class Visualization < ActiveRecord::Base
       else
         issue_area_or_slug
       end
+    end
+
+    def update_time
+      self.last_modified = Time.now
     end
 
 end
