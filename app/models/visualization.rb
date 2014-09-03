@@ -26,6 +26,7 @@ class Visualization < ActiveRecord::Base
              message: "Permission be 'public' or 'private': \"%{value}\" doesn't count." }
   validates :data_source_ids, allow_blank: true, inclusion: { in: DataSource.pluck(:id) }
   validates :issue_area_ids,  allow_blank: true, inclusion: { in: IssueArea.pluck(:id) }
+  validates :institution_id,  allow_blank: true, inclusion: { in: Institution.pluck(:id) }
 
   validates :sessionstate, presence: true, length: { minimum: 100 }
 

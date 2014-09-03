@@ -4,11 +4,11 @@
   = form_for @visualization, remote: true, format: :json do |f|
     = render 'shared/error_messages'
 
-    .col-md-9.col-sm-10.col-xs-12.col-xs-offset-0
+    .col-md-9.col-sm-12
 
       #vis-new
 
-    .col-md-3.col-sm-12.col-xs-12
+    .col-md-3.col-sm-12
 
       .form-group
         = f.label      :title
