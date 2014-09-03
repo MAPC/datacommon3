@@ -19,19 +19,16 @@ class Visualization < ActiveRecord::Base
     order('id DESC').where(permission: 'public')
   end
 
-  validates :title, presence: true, length: { minimum: 3, maximum: 140 }
-  validates :year,  presence: true, length: { minimum: 4, maximum: 20  }
-  validates :abstract,  presence: true, length: { minimum: 70, maximum: 560  }
-  validates :permission, presence: true, inclusion: { in: PERMISSIONS },
-             message: "Permission be 'public' or 'private': %{value} doesn't count."
-  
+  validates :title,      presence: true, length: { minimum: 3,  maximum: 140 }
+  validates :year,       presence: true, length: { minimum: 4,  maximum: 20  }
+  validates :abstract,   presence: true, length: { minimum: 70, maximum: 560 }
+  validates :permission, presence: true, inclusion: { in: PERMISSIONS,
+             message: "Permission be 'public' or 'private': \"%{value}\" doesn't count." }
+  validates :data_source_ids, allow_blank: true, inclusion: { in: DataSource.pluck(:id) }
+  validates :issue_area_ids,  allow_blank: true, inclusion: { in: IssueArea.pluck(:id) }
 
+  validates :sessionstate, presence: true, length: { minimum: 100 }
 
-
-  # We don't always need this -- only when showing --
-  # so this removes the column from the default_scope.
-  # Call Visualization.count(:all) to get
-  # the unscoped record count.
   lazy_load :sessionstate
 
   paginates_per 8

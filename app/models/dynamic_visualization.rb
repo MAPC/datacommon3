@@ -29,7 +29,7 @@ class DynamicVisualization < ActiveRecord::Base
     if File.exists? "#{basepath}/images/#{object.send(method)}/#{id}.png"
       "/dynamic_visualizations/images/#{object.send(method)}/#{id}.png"
     else
-      "http://unsplash.it/400/400?random"
+      "/dynamic_visualizations/images/no-preview.jpg"
     end
   end
 

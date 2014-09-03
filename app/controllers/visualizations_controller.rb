@@ -24,10 +24,14 @@ class VisualizationsController < ApplicationController
 
   def create
     @visualization = Visualization.new new_params
-    if @visualization.save
-      flash[:success] = "Great! You saved your visualizations successfully!"
-    else
-      render 'new'
+
+    respond_to do |format|
+      if @visualization.save
+        flash[:success] = "Great! You saved your visualizations successfully!"
+      else
+        format.json { render json:   @visualization.errors.full_messages,
+                             status: :unprocessable_entity }
+      end
     end
   end
 
@@ -36,15 +40,15 @@ class VisualizationsController < ApplicationController
 
     def new_params
       params.require(:visualization).permit(:title, :year, :abstract, 
-                                            :issue_area_ids,
-                                            :data_source_ids,
-                                            :institution_id,
-                                            :permission)
+                                {issue_area_ids:  []},
+                                {data_source_ids: []},
+                                :institution_id,
+                                :permission)
     end
 
     def signed_in_user
       unless signed_in?
-        flash[:danger] = "Please sign in before creating a visualization."
+        flash[:warning] = "Please sign in before creating a visualization."
         store_location
         redirect_to signin_url
       end

@@ -1,0 +1,5 @@
+#error_explanation.alert.alert-danger{style: 'display:none;'}
+  %ul
+    - if @visualization.errors.any?
+      - @visualization.errors.full_messages.each do |msg|
+        %li= msg
