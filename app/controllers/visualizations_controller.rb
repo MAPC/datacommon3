@@ -23,11 +23,24 @@ class VisualizationsController < ApplicationController
 
 
   def create
-    render 'new'
+    @visualization = Visualization.new new_params
+    if @visualization.save
+      flash[:success] = "Great! You saved your visualizations successfully!"
+    else
+      render 'new'
+    end
   end
 
 
   private
+
+    def new_params
+      params.require(:visualization).permit(:title, :year, :abstract, 
+                                            :issue_area_ids,
+                                            :data_source_ids,
+                                            :institution_id,
+                                            :permission)
+    end
 
     def signed_in_user
       unless signed_in?

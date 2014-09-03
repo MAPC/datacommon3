@@ -1,5 +1,6 @@
 class Visualization < ActiveRecord::Base  
   self.table_name = 'weave_visualization'
+  PERMISSIONS = ['public', 'private']
   
   has_and_belongs_to_many :data_sources,
     join_table: :weave_visualization_datasources,
@@ -17,6 +18,14 @@ class Visualization < ActiveRecord::Base
   def self.default_scope
     order('id DESC').where(permission: 'public')
   end
+
+  validates :title, presence: true, length: { minimum: 3, maximum: 140 }
+  validates :year,  presence: true, length: { minimum: 4, maximum: 20  }
+  validates :abstract,  presence: true, length: { minimum: 70, maximum: 560  }
+  validates :permission, presence: true, inclusion: { in: PERMISSIONS },
+             message: "Permission be 'public' or 'private': %{value} doesn't count."
+  
+
 
 
   # We don't always need this -- only when showing --
