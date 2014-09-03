@@ -1,6 +1,6 @@
 .row
   .col-md-8.col-md-offset-2.col-sm-10.col-md-offset-1.col-xs-12.col-xs-offset-0
-    %h1.page-header Sign in
+    %h1.page-header Log In
     .form{role: 'form'}
       = form_for(:session, url: sessions_path) do |f|
         .form-group
@@ -10,11 +10,11 @@
           = f.label          :password
           = f.password_field :password, class: 'form-control'
 
-        = f.submit 'Sign in', class: 'btn btn-large btn-success'
-
-
-.row
-  .col-xs-12
+        = f.submit 'Log In', class: 'btn btn-large btn-success'
+    
     %br
     %br
-    %p Do you need an account? TODO: A sign-up link.
+    
+    %p
+      Do you need an account?
+      =link_to 'Sign up!', '#'

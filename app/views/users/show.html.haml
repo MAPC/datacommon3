@@ -15,6 +15,9 @@
 
 %h2.page-header #{@profile.name}'s Visualizations
 
+- if @profile.visualizations.empty?
+  %p #{@profile.fname} has not created any visualizations.
+
 .row
   = render partial: 'visualizations/preview', collection: @profile.visualizations[0..3], as: :vis
 .row

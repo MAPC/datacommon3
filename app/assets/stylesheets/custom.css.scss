@@ -80,6 +80,12 @@ a.dropdown-toggle {
   
 }
 
+input#search {
+
+  @media (max-width: 1200px) {
+    width: 67px;
+  }
+}
 
 img.header-logo {
   margin-top: -15px;
