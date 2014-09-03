@@ -31,12 +31,11 @@ $(document).ready ->
     $error_container_ul = $("ul", $error_container)
     $error_container.show()
     if $("li", $error_container_ul).length
-      $("li", $error_container_ul).remove()
+      $("li", $error_container_ul).clear()
     $.each jqxhr.responseJSON, (index, message) ->
-      console.log(index, message)
       $error_container.append("<li>" + message)
 
-  $('.form').on 'ajax:beforeSend', (xhr, settings) ->
+  $('.form').on 'ajax:before', (xhr, settings) ->
     $session_state_field = $('#visualization_sessionstate')
     $session_state = JSON.stringify(DC.weave.getSessionState([]))
     $session_state_field.val($session_state)

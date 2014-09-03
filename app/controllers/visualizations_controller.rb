@@ -1,6 +1,7 @@
 class VisualizationsController < ApplicationController
   before_filter :load_institution
   before_action :signed_in_user, only: [:new, :create]
+  before_action :correct_viewer, only: [:show]
   # before_action :correct_user, only: [:edit, :update, :destroy]
 
   has_scope :topic
@@ -13,7 +14,6 @@ class VisualizationsController < ApplicationController
 
 
   def show
-    @visualization = Visualization.showing.find params[:id]
   end
 
 
@@ -57,8 +57,17 @@ class VisualizationsController < ApplicationController
     end
 
 
+    def correct_viewer
+      @visualization = Visualization.unscoped.find(params[:id])
+
+      if @visualization.private? && !current_user?(@visualization.owner)
+        flash[:danger] = "Only the owner of a private visualization may view it."
+        redirect_to visualizations_url
+      end
+    end
+
     def correct_user
-      @visualization = Visualization.showing.find(params[:id])
+      @visualization = Visualization.find(params[:id])
       
       unless current_user?(@user)
         flash[:danger] = <<-EOE
