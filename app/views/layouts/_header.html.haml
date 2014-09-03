@@ -47,10 +47,21 @@
           %ul.dropdown-menu
             = render partial: 'pages/link', collection: community_pages, as: :page
 
+        - if signed_in?
+          %li.dropdown
+            %a.dropdown-toggle{href: "#", data: {toggle: 'dropdown'}}
+              Hi, #{current_user}
+              %b.caret
+            %ul.dropdown-menu
+              %li= link_to 'Profile', current_user
+              %li= link_to 'Log out', signout_path, method: 'delete'
+        - else
+          %li= link_to 'Log in', signin_path
 
-        =form_tag '/search', method: :post, data: {role: 'search'}, class: "navbar-form navbar-right" do
-          %div.input-group
-            = text_field_tag :search, params[:search], class: "typeahead form-control", placeholder: "Search for data"
-            %span.input-group-btn
-              %button.btn.btn-success
-                %span.glyphicon.glyphicon-search
+
+        -# =form_tag '/search', method: :post, data: {role: 'search'}, class: "navbar-form navbar-right" do
+          -# %div.input-group
+            -# = text_field_tag :search, params[:search], class: "typeahead form-control", placeholder: "Search for data"
+            -# %span.input-group-btn
+              -# %button.btn.btn-success
+                -# %span.glyphicon.glyphicon-search

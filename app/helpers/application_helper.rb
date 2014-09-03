@@ -29,9 +29,20 @@ module ApplicationHelper
     if user.avatar_url.present?
       user.avatar_url
     else
+      email = profile_or_user_email_for(user).downcase
       default_url = "#{root_url}images/guest.png"
-      gravatar_id = Digest::MD5.hexdigest(user.email.downcase)
+      gravatar_id = Digest::MD5.hexdigest(email)
       "http://gravatar.com/avatar/#{gravatar_id}.png?s=75"
+    end
+  end
+
+  private
+
+  def profile_or_user_email_for(user)
+    if user.profile && user.profile.email
+      user.profile.email
+    else
+      user.email
     end
   end
 

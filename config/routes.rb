@@ -24,7 +24,8 @@ Rails.application.routes.draw do
     get 'state/:vis_id', on: :member, to: 'subregions#rendered_state'
   end
 
-  resources :users, only: [:show]
+  resources :users, only: [:show], path: 'profiles'
+  resources :sessions, only: [:new, :create, :destroy]
 
   match '/signin',  to: 'sessions#new',     via: 'get'
   match '/signout', to: 'sessions#destroy', via: 'delete'
