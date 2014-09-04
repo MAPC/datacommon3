@@ -1,6 +1,5 @@
 class Layer < ActiveRecord::Base
   belongs_to :institution
-  self.primary_key = :title
 
   def self.default_scope
     order(:title)

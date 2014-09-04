@@ -59,7 +59,7 @@
           %li= link_to 'Log in', signin_path
 
 
-        =form_tag '/search', method: :post, data: {role: 'search'}, class: "navbar-form navbar-right" do
+        =form_tag '/search', method: :get, data: {role: 'search'}, class: "navbar-form navbar-right" do
           %div.input-group
             = text_field_tag :search, params[:search], class: "typeahead form-control", placeholder: "Search for data"
             %span.input-group-btn

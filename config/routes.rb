@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  match '/search',  to: 'search#search',  via: :get
+  match '/suggest', to: 'search#suggest', via: :get
+
   concern :paginatable do
     get '(page/:page)', :action => :index, :on => :collection, :as => ''
   end

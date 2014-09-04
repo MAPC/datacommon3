@@ -16,6 +16,12 @@ module Datacommon
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
     # config.time_zone = 'Central Time (US & Canada)'
 
+    # Rails lacks any support for creating or updating database views.
+    # Because the view must be created by calling execute, Rails is unable
+    # to dump the view into db/schema.rb.
+    # --from http://robots.thoughtbot.com/implementing-multi-table-full-text-search-with-postgres
+    config.active_record.schema_format = :sql
+
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de

@@ -3,55 +3,69 @@
 %h2= @layer.title
 %p= @layer.description
 
-%table
-  %tr
-    %td{width: '30%'} title
-    %td #{@layer.title}
-  %tr
-    %td alt_title
-    %td #{@layer.alt_title}
-  %tr
-    %td descriptn
-    %td #{@layer.descriptn}
-  %tr
-    %td subject
-    %td #{@layer.subject}
-  %tr
-    %td creator
-    %td #{@layer.creator}
-  %tr
-    %td createdate
-    %td #{@layer.createdate}
-  %tr
-    %td moddate
-    %td #{@layer.moddate}
-  %tr
-    %td publisher
-    %td #{@layer.publisher}
-  %tr
-    %td contributr
-    %td #{@layer.contributr}
-  %tr
-    %td coverage
-    %td #{@layer.coverage}
-  %tr
-    %td universe
-    %td #{@layer.universe}
-  %tr
-    %td schema
-    %td #{@layer.schema}
-  %tr
-    %td tablename
-    %td #{@layer.tablename}
+.row
+  .col-sm-6.col-xs-12
+    #map.tall
+    .center
+      .btn.btn-success
+        Download Layer
+        %b.caret
+      .btn.btn-primary
+        Download Metadata
+        %b.caret
+         
 
-%br
-%br
+  .col-sm-6.col-xs-12
 
-.center
-  .btn.btn-success
-    Download Layer
-    %b.caret
-  .btn.btn-primary
-    Download Metadata
-    %b.caret
-     
+    %table.metadata
+      %tr
+        %td{width: '30%'} Title
+        %td #{@layer.title}
+      %tr
+        %td Alternate Title
+        %td #{@layer.alt_title}
+      %tr
+        %td Subject
+        %td #{@layer.subject}
+      %tr
+        %td Creator
+        %td #{@layer.creator}
+      %tr
+        %td Creation Date
+        %td #{@layer.createdate}
+      %tr
+        %td Modified Date
+        %td #{@layer.moddate}
+      %tr
+        %td Publisher
+        %td #{@layer.publisher}
+      %tr
+        %td Contributor
+        %td #{@layer.contributr}
+      %tr
+        %td Coverage (Spatial Extent)
+        %td #{@layer.coverage}
+      %tr
+        %td
+          Universe
+          %br
+          %small
+            %a{href: '#'} What is a 'universe'?
+        %td #{@layer.universe}
+      %tr
+        %td Schema
+        %td #{@layer.schema}
+      %tr
+        %td Table Name
+        %td #{@layer.tablename}
+
+:javascript
+
+$(document).on('ready', function () {
+
+  var map   = L.map('map', {scrollWheelZoom: false}).setView([42.3580, -71.0616], 12),
+      tiles = L.tileLayer("http://tiles.mapc.org/basemap/{z}/{x}/{y}.png", {
+          attribution: 'Tiles by <a href="http://www.mapc.org/" target="_blank">Metropolitan Area Planning Council</a>.',
+          maxZoom:      17
+    }).addTo(map);
+});
