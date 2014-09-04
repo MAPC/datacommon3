@@ -19,9 +19,9 @@
   %p #{@profile.fname} has not created any visualizations.
 
 .row
-  = render partial: 'visualizations/preview', collection: @profile.visualizations[0..3], as: :vis
+  = render partial: 'visualizations/thumbnail', collection: @profile.visualizations[0..3], as: :vis
 .row
-  = render partial: 'visualizations/preview', collection: @profile.visualizations[4..7], as: :vis
+  = render partial: 'visualizations/thumbnail', collection: @profile.visualizations[4..7], as: :vis
 
 .row.center
   = paginate @profile.visualizations, window: 1, outer_window: 1

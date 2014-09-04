@@ -82,6 +82,9 @@ class Visualization < ActiveRecord::Base
     owner.name
   end
 
+  def abstract
+    read_attribute(:abstract).presence || "No abstract."
+  end
 
   def base_image_path
     "http://metrobostondatacommon.org/site_media/weave_thumbnails/#{id}"

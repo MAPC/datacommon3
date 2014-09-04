@@ -7,9 +7,8 @@
     .col-sm-7.col-sm-offset-1.col-xs-10.col-xs-offset-1
       %h3= link_to layer.title, layer
       %p
-        %em by #{layer.creator}
-        %span.glyphicon.glyphicon-map-marker
-        #{layer.coverage}
+        %em by #{layer.creator},
+        #{layer.coverage.singularize} coverage
       - if layer.createdate.presence
         %p Created in #{layer.createdate}
       

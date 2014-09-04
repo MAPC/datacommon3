@@ -64,7 +64,10 @@ DC.sessionStates = {};
 DC.weaves        = {};
 
 DC.synchEmbedWeaveOnClick = function (dom_elem, sessionstate) {
+  console.log('embed fn listening to ' + dom_elem);
+  
   $(dom_elem).on('click', function () {
+    console.log('synchEmbedWeaveOnClick triggered');
 
     var id = dom_elem.split('-').pop();
 
@@ -75,7 +78,10 @@ DC.synchEmbedWeaveOnClick = function (dom_elem, sessionstate) {
 
 
 DC.embedWeaveOnClick = function (dom_elem, geo, area_type) {
+  console.log('embed fn listening to ' + dom_elem);
+
   $(dom_elem).on('click', function () {
+    console.log('synchEmbedWeaveOnClick triggered');
     
     var id = dom_elem.split('-').pop();
 

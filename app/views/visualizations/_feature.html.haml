@@ -10,6 +10,7 @@
 :javascript
 
   $(document).on('ready', function () {
+    console.log('ready');
     DC.synchEmbedWeaveOnClick("#vis-#{feature.id}", #{feature.sessionstate});
   });
   

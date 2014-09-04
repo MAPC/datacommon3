@@ -1,6 +1,14 @@
-.item
-  %img{src: 'http://unsplash.it/1400/300?image=111'}
-  .carousel-caption
-    %h3= hero.title
-    %h4= hero.subtitle
-    %p=  hero.to_html.html_safe
+- if hero == first
+  .item.active
+    %img{src: hero.image}
+      .carousel-caption
+        %h3=  hero.title
+        %h4=  hero.subtitle
+        %p=   hero.to_html.html_safe
+- else
+  .item
+    %img{src: hero.image}
+      .carousel-caption
+        %h3=  hero.title
+        %h4=  hero.subtitle
+        %p=   hero.to_html.html_safe

@@ -11,9 +11,9 @@
 
 
 .row
-  = render partial: 'preview', collection: @gallery.visualizations[0..3], as: :vis
+  = render partial: 'thumbnail', collection: @gallery.visualizations[0..3], as: :vis
 .row
-  = render partial: 'preview', collection: @gallery.visualizations[4..7], as: :vis
+  = render partial: 'thumbnail', collection: @gallery.visualizations[4..7], as: :vis
 .row.center
   = paginate @gallery.visualizations, window: 1, outer_window: 1
 

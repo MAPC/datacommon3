@@ -9,11 +9,7 @@
       =select_tag :municipality_id, options_for_select(@s.options_for_area, @s.geography_slug), include_blank: true, id: 'area-select', class: 'chosen-select', data: { placeholder: "Choose a different #{@s.area_type_name}" }
 
 .row
-  - @s.topics.each do |topic|
-    .col-md-4.col-sm-6.col-xs-12.center.snapshot-preview
-      .snapshot-preview-title=link_to topic.topic.title, eval("#{@s.area_type_name}_topic_path(@s.geography, topic.topic)")
-      = render partial: 'visualizations/good_preview', object: topic.visual, as: :vis
-  
+  = render partial: 'snapshots/topic', collection: @s.topics, as: :topic
     
 
 :javascript

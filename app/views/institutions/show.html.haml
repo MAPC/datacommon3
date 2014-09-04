@@ -8,25 +8,8 @@
       %li{       data: {target: "#carousel-dc", "slide-to" => "2"}}
 
     .carousel-inner
-      .item.active
-        %img{src: @heros[0].image}
-        .carousel-caption
-          %h3= @heros[0].title
-          %h4= @heros[0].subtitle
-          %p=  @heros[0].to_html.html_safe
-      .item
-        %img{src: @heros[1].image}
-        .carousel-caption
-          %h3= @heros[1].title
-          %h4= @heros[1].subtitle
-          %p=  @heros[1].to_html.html_safe
-      .item
-        %img{src: @heros[2].image}
-        .carousel-caption
-          %h3= @heros[2].title
-          %h4= @heros[2].subtitle
-          %p=  @heros[2].to_html.html_safe
-
+      = render partial: 'heros/hero', collection: @heros, as: :hero, locals: { first: @heros.first }
+      
     %a.left.carousel-control{href: "#carousel-dc", role: "button", data: {slide: "prev"}}
       %span.glyphicon.glyphicon-chevron-left
     %a.right.carousel-control{href: "#carousel-dc", role: "button", data: {slide: "next"}}
@@ -48,5 +31,4 @@
 .row
   .col-xs-12
     %h2.page-header Recent Visualizations
-    - recent_visualizations.each do |vis|
-      = render partial: 'visualizations/preview', locals: { vis: vis }
+  = render partial: 'visualizations/thumbnail', collection: recent_visualizations, as: :vis

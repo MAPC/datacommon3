@@ -21,7 +21,7 @@ class Hero < ActiveRecord::Base
 
 
   def to_html
-    self._content_rendered
+    self._content_rendered.presence || self.content
   end
 
 

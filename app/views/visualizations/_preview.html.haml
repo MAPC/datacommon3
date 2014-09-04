@@ -1,9 +1,7 @@
-%div.col-md-3.col-sm-6.col-xs-12.vis-preview
-  =link_to vis do
-    %img{src: vis.gallery_image_path, alt: vis.title}
-    - if vis.private?
-      %span.badge Private
-    %p.vis-title= vis.title
-  %p.byline
-    by
-    = link_to vis.owner, vis.owner
+%img.snapshot-vis{id: "vis-#{vis.id}", src: vis.image_path(@s.geography)}
+
+:javascript
+
+  $(document).on('ready', function () {
+    DC.embedWeaveOnClick("#vis-#{vis.id}", '#{@s.geography_slug}', '#{@s.area_type_name.pluralize}');
+  });

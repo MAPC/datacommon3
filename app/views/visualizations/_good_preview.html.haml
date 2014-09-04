@@ -1,7 +1,0 @@
-%img.snapshot-vis{id: "vis-#{vis.id}", src: vis.image_path(@s.geography)}
-
-:javascript
-
-  $(document).on('ready', function () {
-    DC.embedWeaveOnClick("#vis-#{vis.id}", '#{@s.geography_slug}', '#{@s.area_type_name.pluralize}');
-  });
