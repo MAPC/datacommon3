@@ -8,7 +8,7 @@ class Layer < ActiveRecord::Base
   include InstitutionScope
 
   def description
-    read_attribute(:descriptn)
+    read_attribute(:descriptn).to_s
   end
 
   alias_method :desc, :description

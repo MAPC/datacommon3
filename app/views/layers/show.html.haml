@@ -7,19 +7,37 @@
   .col-sm-6.col-xs-12
     #map.tall
     .center
-      .btn.btn-success
-        Download Layer
-        %b.caret
-      .btn.btn-primary
-        Download Metadata
-        %b.caret
-         
+
+      .dropdown.btn-group
+        %a.btn.btn-success.dropdown-toggle{href: '#', data: {toggle: "dropdown"}}
+          %span.glyphicon.glyphicon-cloud-download
+          Download Layer
+          %span.caret
+        %ul.dropdown-menu
+          %li= link_to 'CSV',         '#'
+          %li= link_to 'Shapefile',   '#'
+          %li= link_to 'GeoJSON',     '#'
+          %li= link_to 'KML',         '#'
+          %li= link_to 'PostGIS SQL', '#'
+
+      .dropdown.btn-group
+        %a.btn.btn-primary.dropdown-toggle{href: '#', data: {toggle: "dropdown"}}
+          %span.glyphicon.glyphicon-list
+          Download Metadata
+          %span.caret
+        %ul.dropdown-menu
+          %li= link_to 'CSV',         '#'
+          %li= link_to 'JSON',        '#'
+          %li= link_to 'Spreadsheet', '#'
+          %li= link_to 'XML',         '#'
+          %li= link_to 'YAML',        '#'
+          
 
   .col-sm-6.col-xs-12
 
     %table.metadata
       %tr
-        %td{width: '30%'} Title
+        %td{width: '35%'} Title
         %td #{@layer.title}
       %tr
         %td Alternate Title
@@ -43,7 +61,7 @@
         %td Contributor
         %td #{@layer.contributr}
       %tr
-        %td Coverage (Spatial Extent)
+        %td Spatial Coverage
         %td #{@layer.coverage}
       %tr
         %td
@@ -52,9 +70,6 @@
           %small
             %a{href: '#'} What is a 'universe'?
         %td #{@layer.universe}
-      %tr
-        %td Schema
-        %td #{@layer.schema}
       %tr
         %td Table Name
         %td #{@layer.tablename}
