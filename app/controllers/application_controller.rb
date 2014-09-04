@@ -5,6 +5,6 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
 
   def load_institution
-    @institution = Institution.find_by_subdomain(request.subdomain) || Institution.find(1)
+    @institution = Institution.find_by_subdomain(request.subdomain) || Institution.find(2)
   end
 end

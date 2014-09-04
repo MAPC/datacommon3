@@ -6,6 +6,7 @@ class VisualizationsController < ApplicationController
 
   has_scope :topic
   has_scope :data_source
+  
 
   def index
     visualizations = apply_scopes(Visualization.institution(@institution)).page(params[:page])

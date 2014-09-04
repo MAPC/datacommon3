@@ -16,13 +16,13 @@ class GeometryModel < ActiveRecord::Base
   def centroid
     get_query_json """SELECT ST_AsGeoJSON(
                         ST_Transform(ST_Centroid(geometry), 4326))
-                      FROM #{self.table_name} WHERE unitid = '#{unitid}'"""
+                      FROM #{self.class.table_name} WHERE unitid = '#{unitid}'"""
   end
 
 
   def to_geojson
     get_query_json """SELECT ST_AsGeoJSON(ST_Transform(ST_SetSRID(geometry, 26986), 4326))
-                      FROM #{self.table_name} WHERE unitid = '#{unitid}'"""
+                      FROM #{self.class.table_name} WHERE unitid = '#{unitid}'"""
   end
 
 

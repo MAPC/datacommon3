@@ -12,11 +12,8 @@ class User < ActiveRecord::Base
   end
 
   def fname
-    if profile && profile.name
-      profile.name.titleize
-    else
-      full_name_or_username.split(' ').first
-    end
+    f = profile && profile.name ? profile.name : full_name_or_username
+    f.split(' ').first.capitalize
   end
 
   def avatar_url ; "" ; end

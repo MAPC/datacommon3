@@ -3,7 +3,33 @@
 
 %p= @institution.branding.map_gallery_intro
 
+%p.viewing
+  You are viewing
+  =select_tag :topic, options_for_select(topic_options, params[:topic]), id: 'topic-select', class: 'chosen-select', data: { placeholder: "All Topics" }
+  and
+  =select_tag :data_source, options_for_select(data_source_options, params[:data_source]), id: 'data-source-select', class: 'chosen-select', data: { placeholder: "All Data Sources" }
+  #{'.'}
+
 = render @maps
 
 .row.center
   = paginate @maps, window: 1, outer_window: 2
+
+- if @maps.empty?
+  %p
+    There are no maps that match your selections. Maybe try another selection, or
+    = link_to 'create a data visualization and map of your own.', new_visualization_path
+    Alternately, you can
+    = link_to "contact MAPC to request a map.", "mailto:ewallace@mapc.org?subject=Map Request"
+
+
+:javascript
+  $('.chosen-select').on('change', function () {
+    var topic       = $('#topic-select').val(), // get selected values
+        data_source = $('#data-source-select').val(),
+        url = '#{static_maps_path}' + '?topic=' + topic + '&data_source=' + data_source;
+    if (url) { // require a URL
+      window.location = url; // redirect
+    }
+    return false;
+  });

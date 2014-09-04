@@ -49,6 +49,13 @@ h4 {
   padding-top: 20px;
 }
 
+.beta {
+  position: absolute;
+  top:  15px;
+  left: 20px;
+  font-weight: 700;
+}
+
 .center {
   text-align: center;
 }
@@ -99,17 +106,24 @@ img.header-logo {
 
 .carousel {
   margin-top: -20px;
-  height: auto;
+  max-height: 475px;
 }
 
 .carousel-inner > .item > img {
   max-width: none !important;
 }
 
+.item {
+  max-height: 475px;
+  overflow-y: hidden;
+}
 
 .item img {
-  height:     auto;
-  min-height: 475px;
+  position:   relative;
+  display:    block;
+  bottom:     300px;
+  max-width:  2000px;
+  max-height: 1000px;
 }
 
 .carousel-caption {
@@ -138,6 +152,7 @@ img.header-logo {
 img.feature {
   width:  100%;
   height: auto;
+  padding-bottom: 10px;
 }
 
 

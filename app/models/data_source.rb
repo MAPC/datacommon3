@@ -7,6 +7,10 @@ class DataSource < ActiveRecord::Base
     order(:title)
   end
 
+  def to_s
+    title
+  end
+
   has_and_belongs_to_many :visualizations,
     join_table:  :weave_visualization_datasources,
     foreign_key:             :datasource_id

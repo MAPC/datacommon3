@@ -16,6 +16,7 @@ class Visualization < ActiveRecord::Base
   belongs_to :user, foreign_key: :owner_id
 
   include InstitutionScope
+  include DataResourceFilters
 
   def self.default_scope
     order('id DESC').where(permission: 'public')
@@ -36,10 +37,6 @@ class Visualization < ActiveRecord::Base
 
   paginates_per 8
   # max_paginates_per 16
-
-  scope :topic,       -> t { joins(:issue_areas).where( "mbdc_topic.slug = ?",    t) }
-  scope :data_source, -> d { joins(:data_sources).where("mbdc_datasource.id = ?", d) }
-
 
   def self.featured
     self.where('featured IS NOT NULL').order(:featured)

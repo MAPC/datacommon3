@@ -15,6 +15,7 @@ class StaticMap < ActiveRecord::Base
   belongs_to :institution
   
   include InstitutionScope
+  include DataResourceFilters
 
   def self.default_scope
     order('id DESC')
