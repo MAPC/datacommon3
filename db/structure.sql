@@ -4496,7 +4496,8 @@ CREATE TABLE brandings (
     institution_id integer,
     logo_url character varying(255),
     tagline character varying(255),
-    map_gallery_intro character varying(255)
+    map_gallery_intro character varying(255),
+    logos text DEFAULT '[]'::text
 );
 
 
@@ -7255,4 +7256,6 @@ INSERT INTO schema_migrations (version) VALUES ('20140903033148');
 INSERT INTO schema_migrations (version) VALUES ('20140904030546');
 
 INSERT INTO schema_migrations (version) VALUES ('20140904031000');
+
+INSERT INTO schema_migrations (version) VALUES ('20140905131353');
 
