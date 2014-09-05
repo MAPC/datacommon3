@@ -11,6 +11,10 @@ class Layer < ActiveRecord::Base
     read_attribute(:descriptn).to_s
   end
 
+  def image
+    preview_image || "/layers/no-layer-preview.png"
+  end
+
   alias_method :desc, :description
 
   paginates_per 8

@@ -4605,7 +4605,8 @@ CREATE TABLE layers (
     tablenum character varying(255),
     institution_id integer,
     id integer NOT NULL,
-    primarykey character varying(255)
+    primarykey character varying(255),
+    preview_image character varying(255)
 );
 
 
@@ -7258,4 +7259,6 @@ INSERT INTO schema_migrations (version) VALUES ('20140904030546');
 INSERT INTO schema_migrations (version) VALUES ('20140904031000');
 
 INSERT INTO schema_migrations (version) VALUES ('20140905131353');
+
+INSERT INTO schema_migrations (version) VALUES ('20140905142405');
 

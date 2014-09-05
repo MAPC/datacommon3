@@ -295,37 +295,37 @@
 # end
 
 
-# Hero.create([
-#   {
-#     title: "Welcome to the Central Mass DataCommon",
-#     subtitle: "A Data Visualization Tool",
-#     content_markup_type: "html",
-#     content: "<p>The Central Mass DataCommon, a partnership between the Metropolitan Area Planning Council (MAPC), the Central Massachusetts Planning Commission and Montachusetts Regional Planning Commission, provides a wealth of information about the region’s people and communities through a variety of topics -- from arts and education to the environment and transportation. A resource for all those seeking to understand how the region is changing, it helps residents, stakeholders, planners, city and town officials, educators and journalists explore data and make informed decisions. We invite you to explore its data, community snapshots and create your own visualizations and reports.</p>",
-#     _content_rendered: "<p>The Central Mass DataCommon, a partnership between the Metropolitan Area Planning Council (MAPC), the Central Massachusetts Planning Commission and Montachusetts Regional Planning Commission, provides a wealth of information about the region’s people and communities through a variety of topics -- from arts and education to the environment and transportation. A resource for all those seeking to understand how the region is changing, it helps residents, stakeholders, planners, city and town officials, educators and journalists explore data and make informed decisions. We invite you to explore its data, community snapshots and create your own visualizations and reports.</p>",
-#     active: true,
-#     image: "http://upload.wikimedia.org/wikipedia/commons/f/fe/Worcester_Massachusetts.jpg",
-#     institution_id: 2
-#   },
-#   {
-#     title: "Help us Improve the DataCommon!",
-#     subtitle: "User testing ongoing",
-#     content_markup_type: "html",
-#     content: "The Central Mass DataCommon is currently in development. Help us ensure that this resource is easy for everyone to use! Our goal is to make it easy to find data, visualize it with a map or chart, and to use that visualization to communicate findings in a website, presentation, or email. We are looking for residents, stakeholders, planners, city and town officials, educators and journalists &mdash; basically anyone who is interested in data to participate in usability testing. We are not testing you or your computer, but looking for ways to improve the data portal. Email <a href=\"mailto:cryan@cmrpc.org\">Chris Ryan, CMRPC</a>, for more information and to sign up.",
-#     _content_rendered: "The Central Mass DataCommon is currently in development. Help us ensure that this resource is easy for everyone to use! Our goal is to make it easy to find data, visualize it with a map or chart, and to use that visualization to communicate findings in a website, presentation, or email. We are looking for residents, stakeholders, planners, city and town officials, educators and journalists &mdash; basically anyone who is interested in data to participate in usability testing. We are not testing you or your computer, but looking for ways to improve the data portal. Email <a href=\"mailto:cryan@cmrpc.org\">Chris Ryan, CMRPC</a>, for more information and to sign up.",
-#     active: true,
-#     image: "http://upload.wikimedia.org/wikipedia/commons/c/c7/Union_Station,_Worcester_MA.jpg",
-#     institution_id: 2
-#   },
-#   {
-#     title: "New Data! 2013 Municipal Unemployment Rates",
-#     subtitle: "Unemployment data available for 1990-2013",
-#     content_markup_type: "html",
-#     content: "The Massachusetts unemployment rate has decline over the past few years, but not everywhere in the state. The Bureau of Labor Statistics recently released the 2013 Local Area Unemployment Statistics and it is now available on the DataCommon. The DataCommon now has unemployment data for 1990-2013. Find out how Central Massachusetts and your municipality are doing.",
-#     _content_rendered: "The Massachusetts unemployment rate has decline over the past few years, but not everywhere in the state. The Bureau of Labor Statistics recently released the 2013 Local Area Unemployment Statistics and it is now available on the DataCommon. The DataCommon now has unemployment data for 1990-2013. Find out how Central Massachusetts and your municipality are doing.",
-#     active: true,
-#     image: "http://upload.wikimedia.org/wikipedia/commons/c/c6/Greendale_Mall,_Worcester_MA.jpg",
-#     institution_id: 2
-#   }
-# ])
+Hero.create([
+  {
+    title: "Welcome to the Central Mass DataCommon",
+    subtitle: "A Data Visualization Tool",
+    content_markup_type: "html",
+    content: "<p>The Central Mass DataCommon, a partnership between the Metropolitan Area Planning Council (MAPC), the Central Massachusetts Planning Commission, and Montachusetts Regional Planning Commission, provides a wealth of information about the region’s people and communities through a variety of topics -- from health care and education to economic development and transportation. DataCommon is an important resource for all those seeking to understand how the region is changing, it helps residents, stakeholders, planners, city and town officials, educators, the business community, journalists, and others explore data and make informed decisions. We invite you to explore its data, community snapshots and create your own visualizations and reports.</p>",
+    _content_rendered: "<p>The Central Mass DataCommon, a partnership between the Metropolitan Area Planning Council (MAPC), the Central Massachusetts Planning Commission, and Montachusetts Regional Planning Commission, provides a wealth of information about the region’s people and communities through a variety of topics -- from health care and education to economic development and transportation. DataCommon is an important resource for all those seeking to understand how the region is changing, it helps residents, stakeholders, planners, city and town officials, educators, the business community, journalists, and others explore data and make informed decisions. We invite you to explore its data, community snapshots and create your own visualizations and reports.</p>",
+    active: true,
+    image: "http://upload.wikimedia.org/wikipedia/commons/f/fe/Worcester_Massachusetts.jpg",
+    institution_id: 2
+  },
+  {
+    title: "Help us improve the DataCommon!",
+    subtitle: "User testing ongoing",
+    content_markup_type: "html",
+    content: "<p>The Central Mass DataCommon is currently in development. Help us ensure that this resource is easy for everyone to use! Our goal is to make it easy to find data, visualize it with a map or chart, and to use that visualization to communicate findings in a website, presentation, report, or email. We are looking for residents, stakeholders, planners, city and town officials, educators, the business community, journalists, and others — basically anyone who is interested in data to participate in usability testing. We are not testing you or your computer, but looking for ways to improve the data portal. Email <a href=\"mailto:cryan@cmrpc.org\">Chris Ryan, CMRPC</a>, for more information and to sign up.</p>",
+    _content_rendered: "<p>The Central Mass DataCommon is currently in development. Help us ensure that this resource is easy for everyone to use! Our goal is to make it easy to find data, visualize it with a map or chart, and to use that visualization to communicate findings in a website, presentation, report, or email. We are looking for residents, stakeholders, planners, city and town officials, educators, the business community, journalists, and others — basically anyone who is interested in data to participate in usability testing. We are not testing you or your computer, but looking for ways to improve the data portal. Email <a href=\"mailto:cryan@cmrpc.org\">Chris Ryan, CMRPC</a>, for more information and to sign up.</p>",
+    active: true,
+    image: "http://upload.wikimedia.org/wikipedia/commons/c/c7/Union_Station,_Worcester_MA.jpg",
+    institution_id: 2
+  },
+  {
+    title: "New Data! 2013 Municipal Unemployment Rates",
+    subtitle: "Unemployment data available for 1990-2013",
+    content_markup_type: "html",
+    content: "<p>The Massachusetts unemployment rate has decline over the past few years, but not everywhere in the state. The Bureau of Labor Statistics recently released the 2013 Local Area Unemployment Statistics and it is now available on the DataCommon. The DataCommon now has unemployment data for 1990-2013. Find out how Central Massachusetts and your municipality are doing.</p>",
+    _content_rendered: "<p>The Massachusetts unemployment rate has decline over the past few years, but not everywhere in the state. The Bureau of Labor Statistics recently released the 2013 Local Area Unemployment Statistics and it is now available on the DataCommon. The DataCommon now has unemployment data for 1990-2013. Find out how Central Massachusetts and your municipality are doing.</p>",
+    active: true,
+    image: "http://upload.wikimedia.org/wikipedia/commons/c/c6/Greendale_Mall,_Worcester_MA.jpg",
+    institution_id: 2
+  }
+])
 
 
