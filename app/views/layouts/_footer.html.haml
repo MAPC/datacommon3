@@ -42,17 +42,6 @@
   %hr
   %div.row
     = render partial: 'layouts/logos', collection: @institution.branding.logos, as: :logo, locals: { col_width: (12 / @institution.branding.logo_count) }
-    
-    -# %div.col-sm-4.col-xs-12.center
-    -#   = link_to do
-    -#     %img.bottom{src: 'http://metrobostondatacommon.org/media/mbdc/img/logo-indicators.png', alt: 'The Boston Indicators Project'}
-    -# %div.col-sm-4.col-xs-12.center
-    -#   = link_to do
-    -#     %img{src: 'http://www.mapc.org/sites/default/files/mapc_logo.png', alt: 'MAPC'}
-    -# %div.col-sm-4.col-xs-12.center
-    -#   = link_to do
-    -#     %img.bottom{src: 'http://metrobostondatacommon.org/media/mbdc/img/logo-tbf.png', alt: 'The Boston Foundation'}
-          
 
   %div.row
     %div.col-xs-12
