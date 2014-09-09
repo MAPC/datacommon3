@@ -200,7 +200,10 @@ img.feature {
 
 
 .vis-main {
-
+  img {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 .vis-sidebar {
@@ -209,7 +212,6 @@ img.feature {
 
 .vis-abstract {
   display:   block;
-  height:     40px;
   min-height: 40px;
 }
 

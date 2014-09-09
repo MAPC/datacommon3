@@ -15,7 +15,7 @@ module InstitutionsHelper
 
   def issue_areas_list(visualization)
     links = visualization.issue_areas.map do |ia|
-      link_to ia.title, "/visualizations?data_source=#{ia.slug}"
+      link_to ia.title, "/visualizations?topic=#{ia.slug}"
     end
     link_text = links.join(', ')
 

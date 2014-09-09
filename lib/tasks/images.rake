@@ -8,7 +8,7 @@ namespace :vis do
   task :crawl => :environment do
 
     @b = Watir::Browser.new
-    @b.goto 'metroboston.datacommon.dev'
+    @b.goto 'centralmass.datacommon.dev'
 
     geographies = %w( Municipality Subregion )
     topics = IssueArea.all

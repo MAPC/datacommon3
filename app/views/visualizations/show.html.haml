@@ -2,12 +2,9 @@
 
 %div.col-md-8.col-xs-12.vis-main
   %h3= @visualization.title
-  %div{id: "#{@visualization.id}"}
-    %img{src: @visualization.preview_image_path}
-    %p Flash is not available, which might mean it is not installed on your device.
-    %p
-      %a{href: '#flash-player'} Download Flash Player
-      to interact with this visualization.
+  %img.feature{id: "vis-#{@visualization.id}", src: @visualization.full_image_path}
+    %p#clickto
+      %small Click to activate interactive visualization. (Flash required)
 
 %div.col-md-4.col-xs-12.vis-sidebar
   %div.row
@@ -17,14 +14,19 @@
       %p
         by
         = link_to @visualization.owner, @visualization.owner
-      %p
-        %h5 Topics
-        %ul
-          = render partial: 'visualizations/topic', collection: @visualization.issue_areas
+      %p= issue_areas_list  @visualization
+      %p= data_sources_list @visualization
+
 
 
 
 :javascript
+  
   $(document).on('ready', function () {
-    DC.embedWeaveOnClick( "#vis-#{@visualization.id}", #{@visualization.sessionstate} );
+    console.log('ready');
+    DC.synchEmbedWeaveOnClick("#vis-#{@visualization.id}", #{@visualization.sessionstate});
+
+    $("#vis-#{@visualization.id}").click(function () {
+      $('#clickto').hide();
+    });
   });
