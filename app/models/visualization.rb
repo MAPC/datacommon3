@@ -91,6 +91,11 @@ class Visualization < ActiveRecord::Base
   end
 
 
+  def full_image_path
+    "/visualizations/weave_thumbnails/#{id}.png"
+  end  
+
+
   def gallery_image_path
     "#{base_image_path}_gallery.png"
   end
