@@ -24,7 +24,7 @@ class Layer < ActiveRecord::Base
   end
 
   def to_s
-    title
+    title || alt_title
   end
   
 end

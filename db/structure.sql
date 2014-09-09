@@ -113,6 +113,38 @@ $$;
 
 
 --
+-- Name: update_id(); Type: FUNCTION; Schema: metadata; Owner: -
+--
+
+CREATE FUNCTION update_id() RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+DECLARE
+    my_row    RECORD;
+    my_metadata text;
+    updatequery text;
+BEGIN   
+
+    
+    FOR my_row IN 
+        SELECT table_name
+        FROM   information_schema.tables
+        WHERE  table_schema = 'metadata'
+        AND table_name <>'_tables' AND table_name <>'_metadata_view'
+
+    LOOP
+    my_metadata = my_row.table_name;
+    updatequery:= 'UPDATE  metadata.' || my_metadata ||' set name = ''join_key'' where name = ''id'' ';
+    --RAISE NOTICE ' INSERT INTO metadata._tables(name) VALUES %',  my_metadata;
+    --RAISE NOTICE 'UPDATE  metadata.% set name = ''join_key'' where name = ''id'' ', my_metadata;
+
+    EXECUTE updatequery;
+    END LOOP;
+END;
+$$;
+
+
+--
 -- Name: _public_tables_seq; Type: SEQUENCE; Schema: metadata; Owner: -
 --
 
@@ -355,10 +387,10 @@ CREATE SEQUENCE b05003_citizenship_nativity_by_age_gender_m_meta_seq
 
 
 --
--- Name: b06009_educational_attainment_by_placeofbirth_ct_meta_seq; Type: SEQUENCE; Schema: metadata; Owner: -
+-- Name: b06009_educational_attainment_by_placeofbirth_acs_ct_meta_seq; Type: SEQUENCE; Schema: metadata; Owner: -
 --
 
-CREATE SEQUENCE b06009_educational_attainment_by_placeofbirth_ct_meta_seq
+CREATE SEQUENCE b06009_educational_attainment_by_placeofbirth_acs_ct_meta_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -371,11 +403,47 @@ CREATE SEQUENCE b06009_educational_attainment_by_placeofbirth_ct_meta_seq
 --
 
 CREATE TABLE b06009_educational_attainment_by_placeofbirth_acs_ct (
-    orderid integer DEFAULT nextval('b06009_educational_attainment_by_placeofbirth_ct_meta_seq'::regclass) NOT NULL,
+    orderid integer DEFAULT nextval('b06009_educational_attainment_by_placeofbirth_acs_ct_meta_seq'::regclass) NOT NULL,
     name character varying(10),
     alias character varying(150),
     details character varying(150)
 );
+
+
+--
+-- Name: b06009_educational_attainment_by_placeofbirth_acs_m_meta_seq; Type: SEQUENCE; Schema: metadata; Owner: -
+--
+
+CREATE SEQUENCE b06009_educational_attainment_by_placeofbirth_acs_m_meta_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: b06009_educational_attainment_by_placeofbirth_acs_m; Type: TABLE; Schema: metadata; Owner: -; Tablespace: 
+--
+
+CREATE TABLE b06009_educational_attainment_by_placeofbirth_acs_m (
+    orderid integer DEFAULT nextval('b06009_educational_attainment_by_placeofbirth_acs_m_meta_seq'::regclass) NOT NULL,
+    name character varying(10),
+    alias character varying(150),
+    details character varying(150)
+);
+
+
+--
+-- Name: b06009_educational_attainment_by_placeofbirth_ct_meta_seq; Type: SEQUENCE; Schema: metadata; Owner: -
+--
+
+CREATE SEQUENCE b06009_educational_attainment_by_placeofbirth_ct_meta_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
 
 
 --
@@ -391,11 +459,47 @@ CREATE SEQUENCE b06009_educational_attainment_by_placeofbirth_m_meta_seq
 
 
 --
--- Name: b06009_educational_attainment_by_placeofbirth_acs_m; Type: TABLE; Schema: metadata; Owner: -; Tablespace: 
+-- Name: b07204_geomobility_in_migration_acs_ct_meta_seq; Type: SEQUENCE; Schema: metadata; Owner: -
 --
 
-CREATE TABLE b06009_educational_attainment_by_placeofbirth_acs_m (
-    orderid integer DEFAULT nextval('b06009_educational_attainment_by_placeofbirth_m_meta_seq'::regclass) NOT NULL,
+CREATE SEQUENCE b07204_geomobility_in_migration_acs_ct_meta_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: b07204_geomobility_in_migration_acs_ct; Type: TABLE; Schema: metadata; Owner: -; Tablespace: 
+--
+
+CREATE TABLE b07204_geomobility_in_migration_acs_ct (
+    orderid integer DEFAULT nextval('b07204_geomobility_in_migration_acs_ct_meta_seq'::regclass) NOT NULL,
+    name character varying(10),
+    alias character varying(150),
+    details character varying(150)
+);
+
+
+--
+-- Name: b07204_geomobility_in_migration_acs_m_meta_seq; Type: SEQUENCE; Schema: metadata; Owner: -
+--
+
+CREATE SEQUENCE b07204_geomobility_in_migration_acs_m_meta_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: b07204_geomobility_in_migration_acs_m; Type: TABLE; Schema: metadata; Owner: -; Tablespace: 
+--
+
+CREATE TABLE b07204_geomobility_in_migration_acs_m (
+    orderid integer DEFAULT nextval('b07204_geomobility_in_migration_acs_m_meta_seq'::regclass) NOT NULL,
     name character varying(10),
     alias character varying(150),
     details character varying(150)
@@ -415,18 +519,6 @@ CREATE SEQUENCE b07204_geomobility_in_migration_ct_meta_seq
 
 
 --
--- Name: b07204_geomobility_in_migration_acs_ct; Type: TABLE; Schema: metadata; Owner: -; Tablespace: 
---
-
-CREATE TABLE b07204_geomobility_in_migration_acs_ct (
-    orderid integer DEFAULT nextval('b07204_geomobility_in_migration_ct_meta_seq'::regclass) NOT NULL,
-    name character varying(10),
-    alias character varying(150),
-    details character varying(150)
-);
-
-
---
 -- Name: b07204_geomobility_in_migration_m_meta_seq; Type: SEQUENCE; Schema: metadata; Owner: -
 --
 
@@ -436,18 +528,6 @@ CREATE SEQUENCE b07204_geomobility_in_migration_m_meta_seq
     NO MINVALUE
     NO MAXVALUE
     CACHE 1;
-
-
---
--- Name: b07204_geomobility_in_migration_acs_m; Type: TABLE; Schema: metadata; Owner: -; Tablespace: 
---
-
-CREATE TABLE b07204_geomobility_in_migration_acs_m (
-    orderid integer DEFAULT nextval('b07204_geomobility_in_migration_m_meta_seq'::regclass) NOT NULL,
-    name character varying(10),
-    alias character varying(150),
-    details character varying(150)
-);
 
 
 --
@@ -811,10 +891,10 @@ CREATE SEQUENCE b08201_hhsize_by_vehicles_m_meta_seq
 
 
 --
--- Name: b08301_means_transportation_to_work_by_residence_bg_meta_seq; Type: SEQUENCE; Schema: metadata; Owner: -
+-- Name: b08301_means_transportation_to_work_by_residence_acs_bg_meta_se; Type: SEQUENCE; Schema: metadata; Owner: -
 --
 
-CREATE SEQUENCE b08301_means_transportation_to_work_by_residence_bg_meta_seq
+CREATE SEQUENCE b08301_means_transportation_to_work_by_residence_acs_bg_meta_se
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -827,11 +907,71 @@ CREATE SEQUENCE b08301_means_transportation_to_work_by_residence_bg_meta_seq
 --
 
 CREATE TABLE b08301_means_transportation_to_work_by_residence_acs_bg (
-    orderid integer DEFAULT nextval('b08301_means_transportation_to_work_by_residence_bg_meta_seq'::regclass) NOT NULL,
+    orderid integer DEFAULT nextval('b08301_means_transportation_to_work_by_residence_acs_bg_meta_se'::regclass) NOT NULL,
     name character varying(10),
     alias character varying(150),
     details character varying(150)
 );
+
+
+--
+-- Name: b08301_means_transportation_to_work_by_residence_acs_ct_meta_se; Type: SEQUENCE; Schema: metadata; Owner: -
+--
+
+CREATE SEQUENCE b08301_means_transportation_to_work_by_residence_acs_ct_meta_se
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: b08301_means_transportation_to_work_by_residence_acs_ct; Type: TABLE; Schema: metadata; Owner: -; Tablespace: 
+--
+
+CREATE TABLE b08301_means_transportation_to_work_by_residence_acs_ct (
+    orderid integer DEFAULT nextval('b08301_means_transportation_to_work_by_residence_acs_ct_meta_se'::regclass) NOT NULL,
+    name character varying(10),
+    alias character varying(150),
+    details character varying(150)
+);
+
+
+--
+-- Name: b08301_means_transportation_to_work_by_residence_acs_m_meta_seq; Type: SEQUENCE; Schema: metadata; Owner: -
+--
+
+CREATE SEQUENCE b08301_means_transportation_to_work_by_residence_acs_m_meta_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: b08301_means_transportation_to_work_by_residence_acs_m; Type: TABLE; Schema: metadata; Owner: -; Tablespace: 
+--
+
+CREATE TABLE b08301_means_transportation_to_work_by_residence_acs_m (
+    orderid integer DEFAULT nextval('b08301_means_transportation_to_work_by_residence_acs_m_meta_seq'::regclass) NOT NULL,
+    name character varying(10),
+    alias character varying(150),
+    details character varying(150)
+);
+
+
+--
+-- Name: b08301_means_transportation_to_work_by_residence_bg_meta_seq; Type: SEQUENCE; Schema: metadata; Owner: -
+--
+
+CREATE SEQUENCE b08301_means_transportation_to_work_by_residence_bg_meta_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
 
 
 --
@@ -847,18 +987,6 @@ CREATE SEQUENCE b08301_means_transportation_to_work_by_residence_ct_meta_seq
 
 
 --
--- Name: b08301_means_transportation_to_work_by_residence_acs_ct; Type: TABLE; Schema: metadata; Owner: -; Tablespace: 
---
-
-CREATE TABLE b08301_means_transportation_to_work_by_residence_acs_ct (
-    orderid integer DEFAULT nextval('b08301_means_transportation_to_work_by_residence_ct_meta_seq'::regclass) NOT NULL,
-    name character varying(10),
-    alias character varying(150),
-    details character varying(150)
-);
-
-
---
 -- Name: b08301_means_transportation_to_work_by_residence_m_meta_seq; Type: SEQUENCE; Schema: metadata; Owner: -
 --
 
@@ -871,11 +999,71 @@ CREATE SEQUENCE b08301_means_transportation_to_work_by_residence_m_meta_seq
 
 
 --
--- Name: b08301_means_transportation_to_work_by_residence_acs_m; Type: TABLE; Schema: metadata; Owner: -; Tablespace: 
+-- Name: b08303_traveltime_to_work_by_residence_acs_bg_meta_seq; Type: SEQUENCE; Schema: metadata; Owner: -
 --
 
-CREATE TABLE b08301_means_transportation_to_work_by_residence_acs_m (
-    orderid integer DEFAULT nextval('b08301_means_transportation_to_work_by_residence_m_meta_seq'::regclass) NOT NULL,
+CREATE SEQUENCE b08303_traveltime_to_work_by_residence_acs_bg_meta_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: b08303_traveltime_to_work_by_residence_acs_bg; Type: TABLE; Schema: metadata; Owner: -; Tablespace: 
+--
+
+CREATE TABLE b08303_traveltime_to_work_by_residence_acs_bg (
+    orderid integer DEFAULT nextval('b08303_traveltime_to_work_by_residence_acs_bg_meta_seq'::regclass) NOT NULL,
+    name character varying(10),
+    alias character varying(150),
+    details character varying(150)
+);
+
+
+--
+-- Name: b08303_traveltime_to_work_by_residence_acs_ct_meta_seq; Type: SEQUENCE; Schema: metadata; Owner: -
+--
+
+CREATE SEQUENCE b08303_traveltime_to_work_by_residence_acs_ct_meta_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: b08303_traveltime_to_work_by_residence_acs_ct; Type: TABLE; Schema: metadata; Owner: -; Tablespace: 
+--
+
+CREATE TABLE b08303_traveltime_to_work_by_residence_acs_ct (
+    orderid integer DEFAULT nextval('b08303_traveltime_to_work_by_residence_acs_ct_meta_seq'::regclass) NOT NULL,
+    name character varying(10),
+    alias character varying(150),
+    details character varying(150)
+);
+
+
+--
+-- Name: b08303_traveltime_to_work_by_residence_acs_m_meta_seq; Type: SEQUENCE; Schema: metadata; Owner: -
+--
+
+CREATE SEQUENCE b08303_traveltime_to_work_by_residence_acs_m_meta_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: b08303_traveltime_to_work_by_residence_acs_m; Type: TABLE; Schema: metadata; Owner: -; Tablespace: 
+--
+
+CREATE TABLE b08303_traveltime_to_work_by_residence_acs_m (
+    orderid integer DEFAULT nextval('b08303_traveltime_to_work_by_residence_acs_m_meta_seq'::regclass) NOT NULL,
     name character varying(10),
     alias character varying(150),
     details character varying(150)
@@ -895,18 +1083,6 @@ CREATE SEQUENCE b08303_traveltime_to_work_by_residence_bg_meta_seq
 
 
 --
--- Name: b08303_traveltime_to_work_by_residence_acs_bg; Type: TABLE; Schema: metadata; Owner: -; Tablespace: 
---
-
-CREATE TABLE b08303_traveltime_to_work_by_residence_acs_bg (
-    orderid integer DEFAULT nextval('b08303_traveltime_to_work_by_residence_bg_meta_seq'::regclass) NOT NULL,
-    name character varying(10),
-    alias character varying(150),
-    details character varying(150)
-);
-
-
---
 -- Name: b08303_traveltime_to_work_by_residence_ct_meta_seq; Type: SEQUENCE; Schema: metadata; Owner: -
 --
 
@@ -919,18 +1095,6 @@ CREATE SEQUENCE b08303_traveltime_to_work_by_residence_ct_meta_seq
 
 
 --
--- Name: b08303_traveltime_to_work_by_residence_acs_ct; Type: TABLE; Schema: metadata; Owner: -; Tablespace: 
---
-
-CREATE TABLE b08303_traveltime_to_work_by_residence_acs_ct (
-    orderid integer DEFAULT nextval('b08303_traveltime_to_work_by_residence_ct_meta_seq'::regclass) NOT NULL,
-    name character varying(10),
-    alias character varying(150),
-    details character varying(150)
-);
-
-
---
 -- Name: b08303_traveltime_to_work_by_residence_m_meta_seq; Type: SEQUENCE; Schema: metadata; Owner: -
 --
 
@@ -940,18 +1104,6 @@ CREATE SEQUENCE b08303_traveltime_to_work_by_residence_m_meta_seq
     NO MINVALUE
     NO MAXVALUE
     CACHE 1;
-
-
---
--- Name: b08303_traveltime_to_work_by_residence_acs_m; Type: TABLE; Schema: metadata; Owner: -; Tablespace: 
---
-
-CREATE TABLE b08303_traveltime_to_work_by_residence_acs_m (
-    orderid integer DEFAULT nextval('b08303_traveltime_to_work_by_residence_m_meta_seq'::regclass) NOT NULL,
-    name character varying(10),
-    alias character varying(150),
-    details character varying(150)
-);
 
 
 --
@@ -1219,10 +1371,10 @@ CREATE SEQUENCE b11007_hh_with_seniors_m_meta_seq
 
 
 --
--- Name: b11009_unmarried_partners_hh_acs_ct_seq; Type: SEQUENCE; Schema: metadata; Owner: -
+-- Name: b11009_unmarried_partners_hh_acs_ct_meta_seq; Type: SEQUENCE; Schema: metadata; Owner: -
 --
 
-CREATE SEQUENCE b11009_unmarried_partners_hh_acs_ct_seq
+CREATE SEQUENCE b11009_unmarried_partners_hh_acs_ct_meta_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -1235,7 +1387,43 @@ CREATE SEQUENCE b11009_unmarried_partners_hh_acs_ct_seq
 --
 
 CREATE TABLE b11009_unmarried_partners_hh_acs_ct (
-    orderid integer DEFAULT nextval('b11009_unmarried_partners_hh_acs_ct_seq'::regclass) NOT NULL,
+    orderid integer DEFAULT nextval('b11009_unmarried_partners_hh_acs_ct_meta_seq'::regclass) NOT NULL,
+    name character varying(10),
+    alias character varying(150),
+    details character varying(150)
+);
+
+
+--
+-- Name: b11009_unmarried_partners_hh_acs_ct_seq; Type: SEQUENCE; Schema: metadata; Owner: -
+--
+
+CREATE SEQUENCE b11009_unmarried_partners_hh_acs_ct_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: b11009_unmarried_partners_hh_acs_m_meta_seq; Type: SEQUENCE; Schema: metadata; Owner: -
+--
+
+CREATE SEQUENCE b11009_unmarried_partners_hh_acs_m_meta_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: b11009_unmarried_partners_hh_acs_m; Type: TABLE; Schema: metadata; Owner: -; Tablespace: 
+--
+
+CREATE TABLE b11009_unmarried_partners_hh_acs_m (
+    orderid integer DEFAULT nextval('b11009_unmarried_partners_hh_acs_m_meta_seq'::regclass) NOT NULL,
     name character varying(10),
     alias character varying(150),
     details character varying(150)
@@ -1252,18 +1440,6 @@ CREATE SEQUENCE b11009_unmarried_partners_hh_acs_m_seq
     NO MINVALUE
     NO MAXVALUE
     CACHE 1;
-
-
---
--- Name: b11009_unmarried_partners_hh_acs_m; Type: TABLE; Schema: metadata; Owner: -; Tablespace: 
---
-
-CREATE TABLE b11009_unmarried_partners_hh_acs_m (
-    orderid integer DEFAULT nextval('b11009_unmarried_partners_hh_acs_m_seq'::regclass) NOT NULL,
-    name character varying(10),
-    alias character varying(150),
-    details character varying(150)
-);
 
 
 --
@@ -1507,10 +1683,10 @@ CREATE TABLE b16002_hh_linguistic_isolation_acs_m (
 
 
 --
--- Name: b16004_home_language_english_ability_acs_bg_seq; Type: SEQUENCE; Schema: metadata; Owner: -
+-- Name: b16004_home_language_english_ability_acs_bg_meta_seq; Type: SEQUENCE; Schema: metadata; Owner: -
 --
 
-CREATE SEQUENCE b16004_home_language_english_ability_acs_bg_seq
+CREATE SEQUENCE b16004_home_language_english_ability_acs_bg_meta_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -1523,7 +1699,43 @@ CREATE SEQUENCE b16004_home_language_english_ability_acs_bg_seq
 --
 
 CREATE TABLE b16004_home_language_english_ability_acs_bg (
-    orderid integer DEFAULT nextval('b16004_home_language_english_ability_acs_bg_seq'::regclass) NOT NULL,
+    orderid integer DEFAULT nextval('b16004_home_language_english_ability_acs_bg_meta_seq'::regclass) NOT NULL,
+    name character varying(10),
+    alias character varying(150),
+    details character varying(150)
+);
+
+
+--
+-- Name: b16004_home_language_english_ability_acs_bg_seq; Type: SEQUENCE; Schema: metadata; Owner: -
+--
+
+CREATE SEQUENCE b16004_home_language_english_ability_acs_bg_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: b16004_home_language_english_ability_acs_ct_meta_seq; Type: SEQUENCE; Schema: metadata; Owner: -
+--
+
+CREATE SEQUENCE b16004_home_language_english_ability_acs_ct_meta_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: b16004_home_language_english_ability_acs_ct; Type: TABLE; Schema: metadata; Owner: -; Tablespace: 
+--
+
+CREATE TABLE b16004_home_language_english_ability_acs_ct (
+    orderid integer DEFAULT nextval('b16004_home_language_english_ability_acs_ct_meta_seq'::regclass) NOT NULL,
     name character varying(10),
     alias character varying(150),
     details character varying(150)
@@ -1543,11 +1755,23 @@ CREATE SEQUENCE b16004_home_language_english_ability_acs_ct_seq
 
 
 --
--- Name: b16004_home_language_english_ability_acs_ct; Type: TABLE; Schema: metadata; Owner: -; Tablespace: 
+-- Name: b16004_home_language_english_ability_acs_m_meta_seq; Type: SEQUENCE; Schema: metadata; Owner: -
 --
 
-CREATE TABLE b16004_home_language_english_ability_acs_ct (
-    orderid integer DEFAULT nextval('b16004_home_language_english_ability_acs_ct_seq'::regclass) NOT NULL,
+CREATE SEQUENCE b16004_home_language_english_ability_acs_m_meta_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: b16004_home_language_english_ability_acs_m; Type: TABLE; Schema: metadata; Owner: -; Tablespace: 
+--
+
+CREATE TABLE b16004_home_language_english_ability_acs_m (
+    orderid integer DEFAULT nextval('b16004_home_language_english_ability_acs_m_meta_seq'::regclass) NOT NULL,
     name character varying(10),
     alias character varying(150),
     details character varying(150)
@@ -1567,11 +1791,23 @@ CREATE SEQUENCE b16004_home_language_english_ability_acs_m_seq
 
 
 --
--- Name: b16004_home_language_english_ability_acs_m; Type: TABLE; Schema: metadata; Owner: -; Tablespace: 
+-- Name: b16005_nativity_english_ability_by_race_acs_ct_meta_seq; Type: SEQUENCE; Schema: metadata; Owner: -
 --
 
-CREATE TABLE b16004_home_language_english_ability_acs_m (
-    orderid integer DEFAULT nextval('b16004_home_language_english_ability_acs_m_seq'::regclass) NOT NULL,
+CREATE SEQUENCE b16005_nativity_english_ability_by_race_acs_ct_meta_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: b16005_nativity_english_ability_by_race_acs_ct; Type: TABLE; Schema: metadata; Owner: -; Tablespace: 
+--
+
+CREATE TABLE b16005_nativity_english_ability_by_race_acs_ct (
+    orderid integer DEFAULT nextval('b16005_nativity_english_ability_by_race_acs_ct_meta_seq'::regclass) NOT NULL,
     name character varying(10),
     alias character varying(150),
     details character varying(150)
@@ -1591,11 +1827,23 @@ CREATE SEQUENCE b16005_nativity_english_ability_by_race_acs_ct_seq
 
 
 --
--- Name: b16005_nativity_english_ability_by_race_acs_ct; Type: TABLE; Schema: metadata; Owner: -; Tablespace: 
+-- Name: b16005_nativity_english_ability_by_race_acs_m_meta_seq; Type: SEQUENCE; Schema: metadata; Owner: -
 --
 
-CREATE TABLE b16005_nativity_english_ability_by_race_acs_ct (
-    orderid integer DEFAULT nextval('b16005_nativity_english_ability_by_race_acs_ct_seq'::regclass) NOT NULL,
+CREATE SEQUENCE b16005_nativity_english_ability_by_race_acs_m_meta_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: b16005_nativity_english_ability_by_race_acs_m; Type: TABLE; Schema: metadata; Owner: -; Tablespace: 
+--
+
+CREATE TABLE b16005_nativity_english_ability_by_race_acs_m (
+    orderid integer DEFAULT nextval('b16005_nativity_english_ability_by_race_acs_m_meta_seq'::regclass) NOT NULL,
     name character varying(10),
     alias character varying(150),
     details character varying(150)
@@ -1615,11 +1863,23 @@ CREATE SEQUENCE b16005_nativity_english_ability_by_race_acs_m_seq
 
 
 --
--- Name: b16005_nativity_english_ability_by_race_acs_m; Type: TABLE; Schema: metadata; Owner: -; Tablespace: 
+-- Name: b17001_poverty_by_age_gender_acs_ct_meta_seq; Type: SEQUENCE; Schema: metadata; Owner: -
 --
 
-CREATE TABLE b16005_nativity_english_ability_by_race_acs_m (
-    orderid integer DEFAULT nextval('b16005_nativity_english_ability_by_race_acs_m_seq'::regclass) NOT NULL,
+CREATE SEQUENCE b17001_poverty_by_age_gender_acs_ct_meta_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: b17001_poverty_by_age_gender_acs_ct; Type: TABLE; Schema: metadata; Owner: -; Tablespace: 
+--
+
+CREATE TABLE b17001_poverty_by_age_gender_acs_ct (
+    orderid integer DEFAULT nextval('b17001_poverty_by_age_gender_acs_ct_meta_seq'::regclass) NOT NULL,
     name character varying(10),
     alias character varying(150),
     details character varying(150)
@@ -1639,11 +1899,23 @@ CREATE SEQUENCE b17001_poverty_by_age_gender_acs_ct_seq
 
 
 --
--- Name: b17001_poverty_by_age_gender_acs_ct; Type: TABLE; Schema: metadata; Owner: -; Tablespace: 
+-- Name: b17001_poverty_by_age_gender_acs_m_meta_seq; Type: SEQUENCE; Schema: metadata; Owner: -
 --
 
-CREATE TABLE b17001_poverty_by_age_gender_acs_ct (
-    orderid integer DEFAULT nextval('b17001_poverty_by_age_gender_acs_ct_seq'::regclass) NOT NULL,
+CREATE SEQUENCE b17001_poverty_by_age_gender_acs_m_meta_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: b17001_poverty_by_age_gender_acs_m; Type: TABLE; Schema: metadata; Owner: -; Tablespace: 
+--
+
+CREATE TABLE b17001_poverty_by_age_gender_acs_m (
+    orderid integer DEFAULT nextval('b17001_poverty_by_age_gender_acs_m_meta_seq'::regclass) NOT NULL,
     name character varying(10),
     alias character varying(150),
     details character varying(150)
@@ -1663,11 +1935,23 @@ CREATE SEQUENCE b17001_poverty_by_age_gender_acs_m_seq
 
 
 --
--- Name: b17001_poverty_by_age_gender_acs_m; Type: TABLE; Schema: metadata; Owner: -; Tablespace: 
+-- Name: b17001_povertypopulation_acs_ct_meta_seq; Type: SEQUENCE; Schema: metadata; Owner: -
 --
 
-CREATE TABLE b17001_poverty_by_age_gender_acs_m (
-    orderid integer DEFAULT nextval('b17001_poverty_by_age_gender_acs_m_seq'::regclass) NOT NULL,
+CREATE SEQUENCE b17001_povertypopulation_acs_ct_meta_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: b17001_povertypopulation_acs_ct; Type: TABLE; Schema: metadata; Owner: -; Tablespace: 
+--
+
+CREATE TABLE b17001_povertypopulation_acs_ct (
+    orderid integer DEFAULT nextval('b17001_povertypopulation_acs_ct_meta_seq'::regclass) NOT NULL,
     name character varying(10),
     alias character varying(150),
     details character varying(150)
@@ -1687,11 +1971,23 @@ CREATE SEQUENCE b17001_povertypopulation_acs_ct_seq
 
 
 --
--- Name: b17001_povertypopulation_acs_ct; Type: TABLE; Schema: metadata; Owner: -; Tablespace: 
+-- Name: b17001_povertypopulation_acs_m_meta_seq; Type: SEQUENCE; Schema: metadata; Owner: -
 --
 
-CREATE TABLE b17001_povertypopulation_acs_ct (
-    orderid integer DEFAULT nextval('b17001_povertypopulation_acs_ct_seq'::regclass) NOT NULL,
+CREATE SEQUENCE b17001_povertypopulation_acs_m_meta_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: b17001_povertypopulation_acs_m; Type: TABLE; Schema: metadata; Owner: -; Tablespace: 
+--
+
+CREATE TABLE b17001_povertypopulation_acs_m (
+    orderid integer DEFAULT nextval('b17001_povertypopulation_acs_m_meta_seq'::regclass) NOT NULL,
     name character varying(10),
     alias character varying(150),
     details character varying(150)
@@ -1708,18 +2004,6 @@ CREATE SEQUENCE b17001_povertypopulation_acs_m_seq
     NO MINVALUE
     NO MAXVALUE
     CACHE 1;
-
-
---
--- Name: b17001_povertypopulation_acs_m; Type: TABLE; Schema: metadata; Owner: -; Tablespace: 
---
-
-CREATE TABLE b17001_povertypopulation_acs_m (
-    orderid integer DEFAULT nextval('b17001_povertypopulation_acs_m_seq'::regclass) NOT NULL,
-    name character varying(10),
-    alias character varying(150),
-    details character varying(150)
-);
 
 
 --
@@ -4219,6 +4503,30 @@ CREATE TABLE demo_population_over_under18_10m (
 
 
 --
+-- Name: econ_unemployment_by_year_m_seq; Type: SEQUENCE; Schema: metadata; Owner: -
+--
+
+CREATE SEQUENCE econ_unemployment_by_year_m_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: econ_unemployment_by_year_m; Type: TABLE; Schema: metadata; Owner: -; Tablespace: 
+--
+
+CREATE TABLE econ_unemployment_by_year_m (
+    orderid integer DEFAULT nextval('econ_unemployment_by_year_m_seq'::regclass) NOT NULL,
+    name character varying(10),
+    alias character varying(150),
+    details character varying(250)
+);
+
+
+--
 -- Name: educ_district_enrollment_seq_id_seq; Type: SEQUENCE; Schema: metadata; Owner: -
 --
 
@@ -4605,8 +4913,9 @@ CREATE TABLE layers (
     tablenum character varying(255),
     institution_id integer,
     id integer NOT NULL,
-    primarykey character varying(255),
-    preview_image character varying(255)
+    join_key character varying(255),
+    preview_image character varying(255),
+    datesavail character varying(255)
 );
 
 
@@ -4983,7 +5292,7 @@ CREATE TABLE snapshots_regionalunit (
     short_desc_markup_type character varying(30) NOT NULL,
     _short_desc_rendered text NOT NULL,
     subunit_ids character varying(255),
-    institution_id integer DEFAULT 1,
+    institution_id integer,
     CONSTRAINT enforce_dims_geometry CHECK ((st_ndims(geometry) = 2)),
     CONSTRAINT enforce_geotype_geometry CHECK (((geometrytype(geometry) = 'MULTIPOLYGON'::text) OR (geometry IS NULL))),
     CONSTRAINT enforce_srid_geometry CHECK ((st_srid(geometry) = 26986))
@@ -6582,6 +6891,14 @@ ALTER TABLE ONLY demo_population_over_under18_10m
 
 
 --
+-- Name: econ_unemployment_by_year_m_pkey; Type: CONSTRAINT; Schema: metadata; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY econ_unemployment_by_year_m
+    ADD CONSTRAINT econ_unemployment_by_year_m_pkey PRIMARY KEY (orderid);
+
+
+--
 -- Name: educ_enrollment_by_year_districts_pkey; Type: CONSTRAINT; Schema: metadata; Owner: -; Tablespace: 
 --
 
@@ -7211,22 +7528,6 @@ ALTER TABLE ONLY mbdc_featured
 
 
 --
--- Name: visualization_id_refs_id_3a6e538870e0c178; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY weave_visualization_datasources
-    ADD CONSTRAINT visualization_id_refs_id_3a6e538870e0c178 FOREIGN KEY (visualization_id) REFERENCES weave_visualization(id) DEFERRABLE INITIALLY DEFERRED;
-
-
---
--- Name: visualization_id_refs_id_627380809c3ae6a7; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY weave_visualization_topics
-    ADD CONSTRAINT visualization_id_refs_id_627380809c3ae6a7 FOREIGN KEY (visualization_id) REFERENCES weave_visualization(id) DEFERRABLE INITIALLY DEFERRED;
-
-
---
 -- PostgreSQL database dump complete
 --
 
@@ -7261,4 +7562,6 @@ INSERT INTO schema_migrations (version) VALUES ('20140904031000');
 INSERT INTO schema_migrations (version) VALUES ('20140905131353');
 
 INSERT INTO schema_migrations (version) VALUES ('20140905142405');
+
+INSERT INTO schema_migrations (version) VALUES ('20140909152215');
 
