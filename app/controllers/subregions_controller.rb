@@ -14,7 +14,7 @@ class SubregionsController < ApplicationController
       OpenStruct.new(topic: topic, visual: visual) unless visual.nil?
     end
 
-    @s = Snapshot.new(subregion, topics.compact)
+    @s = Snapshot.new(subregion, topics.compact, @institution)
     render 'snapshots/show'
   end
 

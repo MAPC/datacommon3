@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'dynamic_visualizations/image'
+
   match '/search',  to: 'search#search',  via: :get
   match '/suggest', to: 'search#suggest', via: :get
 

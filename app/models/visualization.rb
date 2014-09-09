@@ -24,7 +24,7 @@ class Visualization < ActiveRecord::Base
 
   validates :title,      presence: true, length: { minimum: 3,  maximum: 140 }
   validates :year,       presence: true, length: { minimum: 4,  maximum: 20  }
-  validates :abstract,   presence: true, length: { minimum: 70, maximum: 560 }
+  # validates :abstract,   presence: true, length: { minimum: 70, maximum: 560 }
   validates :permission, presence: true, inclusion: { in: PERMISSIONS,
              message: "Permission be 'public' or 'private': \"%{value}\" doesn't count." }
   # validates :data_source_ids, allow_blank: true, inclusion: { in: DataSource.pluck(:id) }
@@ -87,7 +87,7 @@ class Visualization < ActiveRecord::Base
   end
 
   def base_image_path
-    "http://metrobostondatacommon.org/site_media/weave_thumbnails/#{id}"
+    "/visualizations/weave_thumbnails/#{id}"
   end
 
 

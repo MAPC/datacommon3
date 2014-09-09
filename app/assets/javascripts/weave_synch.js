@@ -117,7 +117,24 @@ DC.embedWeave = function (dom_elem) {
   );   
 };
 
+
+
+
 DC.base64s = {};
+DC.pngSpec = "data:image/png;base64,";
+
+DC.getBase64 = function (weave_id, callback) {
+  var base64 = DC.weaves[weave_id].evaluateExpression(null, 'getBase64Image(Application.application.visDesktop)',
+                                                      null, ['weave.utils.BitmapUtils', 'mx.core.Application']);
+  base64 = DC.pngSpec + base64
+  DC.base64s[String(weave_id)] = base64;
+  if (callback) {
+    callback(base64);
+  } else {
+    return base64;
+  }
+}
+
 
 DC.establishAllBase64 = function () {
   var visuals = $('.snapshot-vis');
@@ -129,15 +146,15 @@ DC.establishAllBase64 = function () {
 
     setTimeout(function () {
       var base64 = DC.weaves[weave_id].evaluateExpression(null, 'getBase64Image(Application.application.visDesktop)', null, ['weave.utils.BitmapUtils', 'mx.core.Application']);
-      DC.base64s[String(weave_id)] = base64
+      DC.base64s[String(weave_id)] = DC.pngSpec + base64
     }, 40000 );
   });
 }
 
+
 DC.getAllBase64 = function () {
   return DC.base64s;
 }
-
 
 
 var weaveReady = function (weave) {

@@ -26,11 +26,28 @@ class DynamicVisualization < ActiveRecord::Base
 
 
   def image_path(object, method=:slug)
-    if File.exists? "#{basepath}/images/#{object.send(method)}/#{id}.png"
+    if has_preview?(object, method)
+      # TODO return object.to_s instead of sending methods if it's already
+      # a string or an integer
       "/dynamic_visualizations/images/#{object.send(method)}/#{id}.png"
     else
       "/dynamic_visualizations/images/no-preview.jpg"
     end
+  end
+
+
+  def preview_path(object, method=:slug)
+    "#{basepath}/images/#{object.send(method)}/#{id}.png"
+  end
+
+
+  def has_preview?(object, method=:slug)
+    File.exists? preview_path(object, method)
+  end
+
+
+  def has_no_preview?(object, method=:slug)
+    !has_preview?(object, method)
   end
 
   

@@ -14,7 +14,7 @@ class MunicipalitiesController < ApplicationController
       OpenStruct.new(topic: topic, visual: visual) unless visual.nil?
     end
 
-    @s = Snapshot.new(muni, topics.compact)
+    @s = Snapshot.new(muni, topics.compact, @institution)
     render 'snapshots/show'
   end
 

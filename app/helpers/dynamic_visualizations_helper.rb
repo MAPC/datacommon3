@@ -1,0 +1,2 @@
+module DynamicVisualizationsHelper
+end

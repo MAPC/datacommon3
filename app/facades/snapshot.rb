@@ -4,8 +4,8 @@ class Snapshot
 
   attr_accessor :geography, :topics, :visualizations
 
-  def initialize(geography, topics)
-    @geography, @topics = geography, topics
+  def initialize(geography, topics, institution)
+    @geography, @topics, @institution = geography, topics, institution
   end
 
   
@@ -20,7 +20,7 @@ class Snapshot
 
   
   def options_for_area
-    @geography.class.all.map {|g| [g.name, g.slug]}
+    @geography.class.only_inst(@institution).map {|g| [g.name, g.slug]}
   end
 
   

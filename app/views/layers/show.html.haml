@@ -37,11 +37,8 @@
 
     %table.metadata
       %tr
-        %td{width: '35%'} Title
+        %td.first Title
         %td #{@layer.title}
-      %tr
-        %td Alternate Title
-        %td #{@layer.alt_title}
       %tr
         %td Subject
         %td #{@layer.subject}
@@ -49,17 +46,11 @@
         %td Creator
         %td #{@layer.creator}
       %tr
-        %td Creation Date
-        %td #{@layer.createdate}
-      %tr
-        %td Modified Date
+        %td Last Updated
         %td #{@layer.moddate}
       %tr
         %td Publisher
         %td #{@layer.publisher}
-      %tr
-        %td Contributor
-        %td #{@layer.contributr}
       %tr
         %td Spatial Coverage
         %td #{@layer.coverage}

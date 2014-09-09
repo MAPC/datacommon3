@@ -20,6 +20,12 @@
 
 .env
 .DS_Store
+
+# Don't get the data dumps
 /db/data/*
+
+# Don't include the thumbnails in git
+/public/visualizations/weave_thumbnails
+
 
 sloccount.txt
