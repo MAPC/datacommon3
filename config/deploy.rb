@@ -2,7 +2,7 @@
 lock '3.2.1'
 
 set :application, 'datacommon'
-set :repo_url, 'git@github.com:beechnut/datacommon.git'
+set :repo_url, 'https://github.com/mapc/datacommon3'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
