@@ -9,6 +9,7 @@ role :web, %w{deployer@66.181.92.20}
 role :db,  %w{deployer@66.181.92.20}
 
 set :deploy_to, '/home/deployer/apps/staging.datacommon.org'
+set :branch,    'staging'
 
 # Extended Server Syntax
 # ======================
