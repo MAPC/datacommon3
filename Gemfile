@@ -7,6 +7,8 @@ gem 'rails', '4.1.5'
 gem 'pg'
 # Enables PostgreSQL Fulltext Search
 gem 'textacular'
+# Use ActiveHash for mock database tables for pages
+gem 'active_hash'
 # Use has_scope to handle multiply-scoped models
 gem 'has_scope'
 # Lazily load large columns
@@ -72,7 +74,7 @@ group :development do
   gem 'capistrano',         '~> 2.0'
   gem 'net-ssh',            '2.7.0'
   gem 'net-ssh-gateway',    '1.2.0'
-  gem 'capistrano-unicorn', '0.2.0', :require => false
+  gem 'capistrano-unicorn', '0.2.0', require: false
 end
 
 # Use debugger
