@@ -9,9 +9,6 @@ gem 'pg'
 gem 'textacular'
 # Use has_scope to handle multiply-scoped models
 gem 'has_scope'
-# Use ActiveHash to mock out Institution,
-# replace later with an ActiveRecord model
-gem 'active_hash'
 # Lazily load large columns
 gem 'lazy_columns', github: 'jorgemanrubia/lazy_columns'
 # Use Kaminari for pagination
@@ -72,9 +69,10 @@ gem 'unicorn-rails'
 
 # Use Capistrano for deployment
 group :development do
-  gem 'capistrano-rails'
-  gem 'capistrano-bundler'
-  gem 'capistrano-rvm', require: false
+  gem 'capistrano',         '~> 2.0'
+  gem 'net-ssh',            '2.7.0'
+  gem 'net-ssh-gateway',    '1.2.0'
+  gem 'capistrano-unicorn', '0.2.0', :require => false
 end
 
 # Use debugger
