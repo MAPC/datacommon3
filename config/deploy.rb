@@ -41,8 +41,11 @@ namespace :deploy do
   desc 'Restart application'
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
-      # Your restart mechanism here, for example:
-      # execute :touch, release_path.join('tmp/restart.txt')
+      begin
+        run "kill -s USR2 `cat /tmp/unicorn.datacommon.pid`"
+      rescue
+        # It wasn't running. No problem.
+      end
     end
   end
 
@@ -56,8 +59,32 @@ namespace :deploy do
       # end
     end
   end
-
 end
+
+
+
+namespace :foreman do
+  desc "Export the Procfile and environments to Ubuntu's upstart scripts"
+  task :export, roles: :app do
+    run "cd #{current_path} && #{try_sudo} bundle exec foreman export -e .env upstart /etc/init -a #{application} -u #{user} -l #{shared_path}/log --procfile=Procfile.#{stage}"
+  end
+
+  desc "Start the application services"
+  task :start, roles: :app do
+    sudo "start #{application}"
+  end
+
+  desc "Stop the application services"
+  task :stop, roles: :app do
+    sudo "stop #{application}"
+  end
+
+  desc "Restart the application services"
+  task :restart, roles: :app do
+    run "sudo start #{application} || sudo restart #{application}"
+  end
+end
+
 
 
 desc "Check that we can access everything"
