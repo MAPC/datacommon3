@@ -58,71 +58,71 @@ pages = Page.create([
   { id: 22,  institution_id: 2,  sort_order: 11,  topic_id: 'community',  slug: "data-day-2013"                 }
 ])
 
-layers = Layer.create([
-    {
-      id:          "ct10_id",
-      title:       "Household Income by Age (Census Tracts)",
-      alt_title:   " ",
-      descriptn:   "AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS",
-      subject:     "Economy",
-      creator:     "American Community Survey",
-      createdate:  " ",
-      moddate:     "2013-12 (IN 2012 INFLATION-ADJUSTED DOLLARS)",
-      publisher:   "MAPC",
-      contributr:  " ",
-      coverage:    "Statewide",
-      universe:    "Households",
-      schema:      "mapc",
-      tablename:   "b19037_hh_income_by_age_acs_ct",
-      tablenum:    "b19037",
-      institution_id: 1
-    },
-    {
-      id:         "bg10_id",
-      title:      "Household Income by Age (Block Groups)",
-      alt_title:  "",
-      descriptn:  "AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS",
-      subject:    "Economy",
-      creator:    "American Community Survey",
-      createdate: "",
-      moddate:    "2013-12 (IN 2012 INFLATION-ADJUSTED DOLLARS)",
-      publisher:  "MAPC",
-      contributr: "",
-      coverage:   "Statewide",
-      universe:   "Households",
-      schema:     "mapc",
-      tablename:  "b19037_hh_income_by_age_acs_bg",
-      tablenum:   "b19037",
-      institution_id: 1
-    },
-    {
-      id:         "Municipal ID",
-      title:      "Households by Family Type, 2000,2010 (Municipal)",
-      alt_title:  "",
-      descriptn:  "",
-      subject:    "Housing",
-      creator:    "Census",
-      createdate: "2000",
-      moddate:    "2014-05",
-      publisher:  "MAPC",
-      contributr: "",
-      coverage:   "Statewide, Municipalities and Counties",
-      universe:   "Housing Units",
-      schema:     "ds",
-      tablename:  "hous_hh_fam_00_10m",
-      tablenum:   "",
-      institution_id: 2
-    }
-  ])
+# layers = Layer.create([
+#     {
+#       id:          "ct10_id",
+#       title:       "Household Income by Age (Census Tracts)",
+#       alt_title:   " ",
+#       descriptn:   "AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS",
+#       subject:     "Economy",
+#       creator:     "American Community Survey",
+#       createdate:  " ",
+#       moddate:     "2013-12 (IN 2012 INFLATION-ADJUSTED DOLLARS)",
+#       publisher:   "MAPC",
+#       contributr:  " ",
+#       coverage:    "Statewide",
+#       universe:    "Households",
+#       schema:      "mapc",
+#       tablename:   "b19037_hh_income_by_age_acs_ct",
+#       tablenum:    "b19037",
+#       institution_id: 1
+#     },
+#     {
+#       id:         "bg10_id",
+#       title:      "Household Income by Age (Block Groups)",
+#       alt_title:  "",
+#       descriptn:  "AGE OF HOUSEHOLDER BY HOUSEHOLD INCOME IN THE PAST 12 MONTHS",
+#       subject:    "Economy",
+#       creator:    "American Community Survey",
+#       createdate: "",
+#       moddate:    "2013-12 (IN 2012 INFLATION-ADJUSTED DOLLARS)",
+#       publisher:  "MAPC",
+#       contributr: "",
+#       coverage:   "Statewide",
+#       universe:   "Households",
+#       schema:     "mapc",
+#       tablename:  "b19037_hh_income_by_age_acs_bg",
+#       tablenum:   "b19037",
+#       institution_id: 1
+#     },
+#     {
+#       id:         "Municipal ID",
+#       title:      "Households by Family Type, 2000,2010 (Municipal)",
+#       alt_title:  "",
+#       descriptn:  "",
+#       subject:    "Housing",
+#       creator:    "Census",
+#       createdate: "2000",
+#       moddate:    "2014-05",
+#       publisher:  "MAPC",
+#       contributr: "",
+#       coverage:   "Statewide, Municipalities and Counties",
+#       universe:   "Housing Units",
+#       schema:     "ds",
+#       tablename:  "hous_hh_fam_00_10m",
+#       tablenum:   "",
+#       institution_id: 2
+#     }
+#   ])
 
 
 
-Visualization.find(1072).update_attribute(:featured, 4)
-Visualization.find(23).update_attribute(  :featured, 5)
-Visualization.find(27).update_attribute(  :featured, 6)
-Visualization.find(2403).update_attribute(:featured, 2)
-Visualization.find(2351).update_attribute(:featured, 3)
-Visualization.find(2521).update_attribute(:featured, 1)
+Visualization.unscoped.find(1072).update_attribute(:featured, 4)
+Visualization.unscoped.find(23).update_attribute(  :featured, 5)
+Visualization.unscoped.find(27).update_attribute(  :featured, 6)
+Visualization.unscoped.find(2403).update_attribute(:featured, 2)
+Visualization.unscoped.find(2351).update_attribute(:featured, 3)
+Visualization.unscoped.find(2521).update_attribute(:featured, 1)
 
 
 Hero.unscoped.where(active: false).limit(3).each do |h|
@@ -145,11 +145,11 @@ user3 = User.where(username: 'edd06001').profile
   user.visualizations.each {|v| v.update_attribute(:institution_id, 2)}
 end
 
-Visualization.where(featured: nil).where(institution_id: 2).sample(3).each_with_index do |v, index|
+Visualization.unscoped.where(featured: nil).where(institution_id: 2).sample(3).each_with_index do |v, index|
   v.update_attribute(:featured, index)
 end
 
-Visualization.all.each do |v|
+Visualization.unscoped.find_each do |v|
   query = <<-ESQL
     SELECT COUNT(*) 
     FROM core_genericobjectrolemapping
