@@ -64,24 +64,33 @@ end
 
 
 namespace :foreman do
+  
   desc "Export the Procfile and environments to Ubuntu's upstart scripts"
-  task :export, roles: :app do
-    run "cd #{current_path} && #{try_sudo} bundle exec foreman export -e .env upstart /etc/init -a #{application} -u #{user} -l #{shared_path}/log --procfile=Procfile.#{stage}"
+  task :export do
+    on roles(:app) do
+      run "cd #{current_path} && #{try_sudo} bundle exec foreman export -e .env upstart /etc/init -a #{application} -u #{user} -l #{shared_path}/log --procfile=Procfile.#{stage}"
+    end
   end
 
   desc "Start the application services"
-  task :start, roles: :app do
-    sudo "start #{application}"
+  task :start do
+    on roles(:app) do
+      sudo "start #{application}"
+    end
   end
 
   desc "Stop the application services"
-  task :stop, roles: :app do
-    sudo "stop #{application}"
+  task :stop do
+    on roles(:app) do
+      sudo "stop #{application}"
+    end
   end
 
   desc "Restart the application services"
-  task :restart, roles: :app do
-    run "sudo start #{application} || sudo restart #{application}"
+  task :restart do
+    on roles(:app) do
+      run "sudo start #{application} || sudo restart #{application}"
+    end
   end
 end
 
