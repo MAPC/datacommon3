@@ -17,6 +17,7 @@
 
 # Don't really want connection details out
 /config/database.yml
+/config/secrets.yml
 
 .env
 .DS_Store
