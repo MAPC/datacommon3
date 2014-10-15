@@ -19,6 +19,29 @@ $public-safety:             #990033;
 $technology:                #000066;
 $transportation:            #FF6633;
 
+// OPACITIES
+
+$bold:   1.0;
+$normal: 0.8;
+$washed: 0.4;
+$faded:  0.2;
+
+.arts-culture:hover          { background-color: rgba(255,204,  0, $faded) !important; }
+.civic-vitality:hover        { background-color: rgba(0,  204,204, $faded) !important; }
+.demographics:hover          { background-color: rgba(102,  0,102, $faded) !important; }
+.economy:hover               { background-color: rgba( 58,143, 29, $faded) !important; }
+.education:hover             { background-color: rgba(  0,102,153, $faded) !important; }
+.environment-energy:hover    { background-color: rgba(145,226, 72, $faded) !important; }
+.geographic-boundaries:hover { background-color: rgba(153,153,153, $faded) !important; }
+.housing:hover               { background-color: rgba(255,153,  0, $faded) !important; }
+.land-use-zoning:hover       { background-color: rgba(255,238, 44, $faded) !important; }
+.public-health:hover         { background-color: rgba(204, 51,  0, $faded) !important; }
+.public-safety:hover         { background-color: rgba(153,  0, 51, $faded) !important; }
+.technology:hover            { background-color: rgba(  0,  0,102, $faded) !important; }
+.transportation:hover        { background-color: rgba(255,102, 51, $faded) !important; }
+
+
+
 
 
 body {

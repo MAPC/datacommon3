@@ -1,4 +1,6 @@
-%h1.page-header New Visualization
+%h1.page-header
+  = params[:action].titleize
+  Visualization
 
 .form.vis-form{role: 'form'}
   = form_for @visualization, remote: true, format: :json do |f|
@@ -26,26 +28,38 @@
       .form-group
         = f.label      :title
         = f.text_field :title, class: 'form-control'
+      
+
       .form-group
         = f.label      :year, 'Year(s)'
         = f.text_field :year,  class: 'form-control'
+      
+
       .form-group
         = f.label      :abstract
         = f.text_area  :abstract, class: 'form-control'
+      
+
       .form-group
-        = f.label :issue_area_ids, 'Topics'
+        = f.label      :issue_area_ids, 'Topics'
         %p.small Hold down Control (PC) or Command (Mac) to select multiple topics.
-        = f.collection_select :issue_area_ids, IssueArea.all, :id, :title, {}, {multiple: true, class: 'form-control'}
+        = f.collection_select :issue_area_ids,  IssueArea.all,  :id, :title, {}, {multiple: true, class: 'form-control'}
+      
+
       .form-group
-        = f.label :data_source_ids, 'Data Sources'
+        = f.label      :data_source_ids, 'Data Sources'
         %p.small Hold down Control (PC) or Command (Mac) to select multiple data sources.
         = f.collection_select :data_source_ids, DataSource.all, :id, :title, {}, {multiple: true, class: 'form-control'}
+      
+
       .form-group
-        = f.label  :institution_id
+        = f.label      :institution_id
         %br
         = f.collection_select(:institution_id, Institution.all, :id, :short_name, selected: @institution.id)
+      
+
       .form-group
-        = f.label  :permission, 'Public or Private?'
+        = f.label      :permission, 'Public or Private?'
         %p.small
           Public visualizations are displayed in the gallery, and can be viewed and shared.
         = select_tag('visualization[permission]', options_for_select([['Public','public'],['Private','private']], 'public'))
@@ -53,9 +67,11 @@
       = f.hidden_field :sessionstate
 
       = f.submit 'Save', class: 'btn btn-large btn-success'
+      - if params[:action] == "edit"
+        =link_to 'Destroy', @visualization, method: :delete, class: "btn btn-danger", data: { confirm: "Are you sure? You cannot undo deletion." }
 
 :javascript
 
 $(document).on('ready', function () {
-  DC.embedWeave($('#vis-new'));  
+  DC.embedWeave($('#vis-new'));
 });

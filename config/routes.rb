@@ -13,8 +13,7 @@ Rails.application.routes.draw do
   resources :institutions,   only: [:show]
 
   resources :layers,         only: [:index, :show], concerns: :paginatable
-  resources :visualizations, only: [:index, :show, :new, :create],
-                             concerns: :paginatable
+  resources :visualizations, concerns: :paginatable
   resources :static_maps,    only: [:index, :show], concerns: :paginatable,
                              path: 'gallery'
 
@@ -25,8 +24,8 @@ Rails.application.routes.draw do
   end
 
   resources :subregions,     only: [:index, :show] do
-    resources :topics, on:    :member,        path: '',
-                       only: [:show], to:   'subregions#topic'
+    resources :topics, on:    :member, path: '',
+                       only: [:show],  to: 'subregions#topic'
     get 'state/:vis_id', on: :member, to: 'subregions#rendered_state'
   end
 

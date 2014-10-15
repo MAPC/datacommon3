@@ -1,8 +1,9 @@
 class VisualizationsController < ApplicationController
   before_filter :load_institution
+
   before_action :signed_in_user, only: [:new, :create]
   before_action :correct_viewer, only: [:show]
-  # before_action :correct_user, only: [:edit, :update, :destroy]
+  before_action :correct_user, only: [:edit, :update, :destroy]
 
   has_scope :topic
   has_scope :data_source
@@ -24,7 +25,7 @@ class VisualizationsController < ApplicationController
 
 
   def create
-    @visualization = Visualization.new new_params
+    @visualization = Visualization.new editable_params
     @visualization.owner_id = current_user.id
 
     respond_to do |format|
@@ -37,17 +38,39 @@ class VisualizationsController < ApplicationController
     end
   end
 
+  
+  def edit
+    render 'new'
+  end
+
+
+  def update
+    @visualization.update! editable_params
+    redirect_to @visualization
+  end
+
+
+  def destroy
+    @visualization = Visualization.find(params[:id])
+    @visualization.destroy
+    flash[:success] = "You deleted \"#{@visualization}\"."
+    redirect_to current_user
+  end
+
 
   private
 
-    def new_params
-      params.require(:visualization).permit(:title, :year, :abstract, 
-                                {issue_area_ids:  []},
-                                {data_source_ids: []},
-                                :institution_id,
-                                :permission,
-                                :sessionstate)
+    def editable_params
+      params.require(:visualization).permit(:title,
+                                            :year,
+                                            :abstract,
+                                            :institution_id,
+                                            :permission,
+                                            :sessionstate,
+                                            {issue_area_ids:  []},
+                                            {data_source_ids: []})
     end
+
 
     def signed_in_user
       unless signed_in?
@@ -67,10 +90,11 @@ class VisualizationsController < ApplicationController
       end
     end
 
+
     def correct_user
       @visualization = Visualization.find(params[:id])
       
-      unless current_user?(@user)
+      unless current_user?(@visualization.owner)
         flash[:danger] = <<-EOE
           You must be logged in as the owner in order to edit this visualization.
         EOE

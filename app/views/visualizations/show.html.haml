@@ -17,7 +17,12 @@
       %p= issue_areas_list  @visualization
       %p= data_sources_list @visualization
 
+  %hr
 
+  %div.row
+    %div.col-md-12
+      - if current_user?(@visualization.owner)
+        = link_to 'Edit', edit_visualization_path(@visualization), class: "btn-lg btn-primary"
 
 
 :javascript
