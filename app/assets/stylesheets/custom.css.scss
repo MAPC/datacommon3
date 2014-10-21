@@ -285,11 +285,14 @@ table.metadata {
 
   td {
     text-align: left;
-    padding: 0 10px;
+    //        T     R    B   L
+    padding: 14px 20px  0 4px;
     font-weight: 700;
+    border-bottom: 1px #EEE solid;
   }
+
   td:first-child {
-    text-align: right;
+    text-align: left;
     font-weight: 400;
   }
 }

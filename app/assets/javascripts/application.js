@@ -14,7 +14,7 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require chosen.jquery
-//= require turbolinks
+//require turbolinks
 //= require swfobject
 //= require_tree .
 

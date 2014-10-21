@@ -9,7 +9,12 @@
 
     .col-md-9.col-sm-12
 
-      #vis-new
+      - if params[:action] == 'new'
+        #vis-new
+      - else
+        %img.feature{id: "vis-#{@visualization.id}", src: @visualization.full_image_path}
+        %p#clickto
+          %small Click to activate interactive visualization. (Flash required)
 
       .row
         .col-xs-12
@@ -70,8 +75,22 @@
       - if params[:action] == "edit"
         =link_to 'Destroy', @visualization, method: :delete, class: "btn btn-danger", data: { confirm: "Are you sure? You cannot undo deletion." }
 
-:javascript
+- if params[:action] == 'new'
+  :javascript
 
-$(document).on('ready', function () {
-  DC.embedWeave($('#vis-new'));
-});
+    $(document).on('ready', function () {
+      DC.embedWeave($('#vis-new'));
+    });
+- else
+  :javascript
+
+    $(document).on('ready', function () {
+      console.log('(edit) document ready');
+      DC.synchEmbedWeaveOnClick("#vis-#{@visualization.id}", #{@visualization.sessionstate});
+
+      $("#vis-#{@visualization.id}").click(function () {
+        $('#clickto').hide();
+      });
+
+      $("#vis-#{@visualization.id}").trigger('click');
+    });

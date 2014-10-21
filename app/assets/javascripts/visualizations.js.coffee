@@ -21,7 +21,7 @@ $(document).ready ->
 
     $("<li>").html($vis.title + " saved. You will be redirected to it in a few seconds. If that doesn't happen, <a href='" + $vis.id + "'>view it here.</a>").appendTo $success_container
 
-    redirect = -> window.location = $vis.id
+    redirect = -> window.location = '/visualizations/' + $vis.id
     setTimeout redirect, 5000
 
 

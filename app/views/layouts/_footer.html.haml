@@ -41,7 +41,7 @@
 
   %hr
   %div.row
-    = render partial: 'layouts/logos', collection: @institution.branding.logos, as: :logo, locals: { col_width: (12 / @institution.branding.logo_count) }
+    = render partial: 'layouts/logos', collection: @institution.branding.logos.to_json, as: :logo, locals: { col_width: (12 / @institution.branding.logo_count) }
 
   %div.row
     %div.col-xs-12

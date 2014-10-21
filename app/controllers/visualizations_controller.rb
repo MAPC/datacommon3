@@ -3,7 +3,7 @@ class VisualizationsController < ApplicationController
 
   before_action :signed_in_user, only: [:new, :create]
   before_action :correct_viewer, only: [:show]
-  before_action :correct_user, only: [:edit, :update, :destroy]
+  before_action :correct_user,   only: [:edit, :update, :destroy]
 
   has_scope :topic
   has_scope :data_source
@@ -46,14 +46,23 @@ class VisualizationsController < ApplicationController
 
   def update
     @visualization.update! editable_params
-    redirect_to @visualization
+    
+    respond_to do |format|
+      if @visualization.save
+        format.json { render json: @visualization }
+      else
+        format.json { render json:   @visualization.errors.full_messages,
+                             status: :unprocessable_entity }
+      end
+    end
   end
 
 
   def destroy
     @visualization = Visualization.find(params[:id])
     @visualization.destroy
-    flash[:success] = "You deleted \"#{@visualization}\"."
+
+    flash[:success] = "You deleted the visualization \"#{@visualization}\"."
     redirect_to current_user
   end
 
@@ -72,9 +81,22 @@ class VisualizationsController < ApplicationController
     end
 
 
+    SIGN_IN_FIRST = "Please sign in before you create a visualization."
+
+    ONLY_OWNER_MAY_VIEW = <<-EOE
+      This visualization has been made private by the owner. 
+      Only the owner of a private visualization may view it.
+    EOE
+
+    ONLY_OWNER_MAY_EDIT = <<-EOE
+      This visualization has been made private by the owner.
+      If you are the owner of this visualization, please log in to edit it.
+    EOE
+
+
     def signed_in_user
       unless signed_in?
-        flash[:warning] = "Please sign in before creating a visualization."
+        flash[:warning] = SIGN_IN_FIRST
         store_location
         redirect_to signin_url
       end
@@ -85,20 +107,17 @@ class VisualizationsController < ApplicationController
       @visualization = Visualization.unscoped.find(params[:id])
 
       if @visualization.private? && !current_user?(@visualization.owner)
-        flash[:danger] = "Only the owner of a private visualization may view it."
+        flash[:danger] = ONLY_OWNER_MAY_VIEW
         redirect_to visualizations_url
       end
     end
 
 
     def correct_user
-      @visualization = Visualization.find(params[:id])
+      @visualization = Visualization.unscoped.find(params[:id])
       
       unless current_user?(@visualization.owner)
-        flash[:danger] = <<-EOE
-          You must be logged in as the owner in order to edit this visualization.
-        EOE
-  
+        flash[:danger] = ONLY_OWNER_MAY_EDIT
         store_location
         redirect_to signin_url
       end
