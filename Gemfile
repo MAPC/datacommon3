@@ -44,16 +44,21 @@ gem 'unicorn-rails'     # Use Unicorn as the app server
 # Utilities
 gem 'mail'
 gem 'stamp', '0.6.0' # Convenient timestamping
+gem 'watir'          # For web crawling!
 
 
 group :development, :test do
   gem 'rspec-rails',        '2.13.1'
+  gem 'cucumber-rails',     require: false
+  gem 'database_cleaner'
+
   gem 'guard-rspec',        '2.5.0'
   gem 'spork-rails',        '4.0.0'
   gem 'guard-spork',        '1.5.0'
   gem 'childprocess',       '0.3.6'
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara',           '2.1.0'
+
   gem 'minitest'
 end
 

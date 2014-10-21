@@ -3,6 +3,7 @@
 --
 
 SET statement_timeout = 0;
+SET lock_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SET check_function_bodies = false;
@@ -4767,11 +4768,11 @@ CREATE TABLE auth_user (
     last_name character varying(30) NOT NULL,
     email character varying(75) NOT NULL,
     password character varying(128) NOT NULL,
-    is_staff boolean NOT NULL,
-    is_active boolean NOT NULL,
-    is_superuser boolean NOT NULL,
-    last_login timestamp with time zone NOT NULL,
-    date_joined timestamp with time zone NOT NULL,
+    is_staff boolean DEFAULT false NOT NULL,
+    is_active boolean DEFAULT true NOT NULL,
+    is_superuser boolean DEFAULT false NOT NULL,
+    last_login timestamp with time zone DEFAULT '2014-10-21 14:32:24.188076-04'::timestamp with time zone NOT NULL,
+    date_joined timestamp with time zone DEFAULT '2014-10-21 14:32:24.186514-04'::timestamp with time zone NOT NULL,
     remember_token character varying(255)
 );
 
@@ -4957,9 +4958,9 @@ CREATE TABLE maps_contact (
     country character varying(3),
     email character varying(75),
     website_url character varying(200),
-    mapc_newsletter boolean NOT NULL,
-    mbdc_newsletter boolean NOT NULL,
-    last_modified timestamp with time zone NOT NULL
+    mapc_newsletter boolean DEFAULT false NOT NULL,
+    mbdc_newsletter boolean DEFAULT false NOT NULL,
+    last_modified timestamp with time zone DEFAULT '2014-10-21 14:34:11.939363-04'::timestamp with time zone NOT NULL
 );
 
 
@@ -5274,7 +5275,7 @@ CREATE TABLE weave_visualization (
 --
 
 CREATE VIEW searches AS
-    (((((SELECT weave_visualization.id AS searchable_id, 'Visualization'::text AS searchable_type, weave_visualization.title AS term FROM weave_visualization UNION SELECT weave_visualization.id AS searchable_id, 'Visualization'::text AS searchable_type, weave_visualization.abstract AS term FROM weave_visualization) UNION SELECT layers.id AS searchable_id, 'Layer'::text AS searchable_type, layers.title AS term FROM layers) UNION SELECT layers.id AS searchable_id, 'Layer'::text AS searchable_type, layers.alt_title AS term FROM layers) UNION SELECT layers.id AS searchable_id, 'Layer'::text AS searchable_type, layers.descriptn AS term FROM layers) UNION SELECT mbdc_calendar.id AS searchable_id, 'StaticMap'::text AS searchable_type, mbdc_calendar.title AS term FROM mbdc_calendar) UNION SELECT mbdc_calendar.id AS searchable_id, 'StaticMap'::text AS searchable_type, mbdc_calendar.abstract AS term FROM mbdc_calendar;
+(((((SELECT weave_visualization.id AS searchable_id, 'Visualization'::text AS searchable_type, weave_visualization.title AS term FROM weave_visualization UNION SELECT weave_visualization.id AS searchable_id, 'Visualization'::text AS searchable_type, weave_visualization.abstract AS term FROM weave_visualization) UNION SELECT layers.id AS searchable_id, 'Layer'::text AS searchable_type, layers.title AS term FROM layers) UNION SELECT layers.id AS searchable_id, 'Layer'::text AS searchable_type, layers.alt_title AS term FROM layers) UNION SELECT layers.id AS searchable_id, 'Layer'::text AS searchable_type, layers.descriptn AS term FROM layers) UNION SELECT mbdc_calendar.id AS searchable_id, 'StaticMap'::text AS searchable_type, mbdc_calendar.title AS term FROM mbdc_calendar) UNION SELECT mbdc_calendar.id AS searchable_id, 'StaticMap'::text AS searchable_type, mbdc_calendar.abstract AS term FROM mbdc_calendar;
 
 
 --
@@ -7427,27 +7428,6 @@ CREATE INDEX weave_visualization_topics_visualization_id ON weave_visualization_
 
 
 --
--- Name: geometry_columns_delete; Type: RULE; Schema: public; Owner: -
---
-
-CREATE RULE geometry_columns_delete AS ON DELETE TO geometry_columns DO INSTEAD NOTHING;
-
-
---
--- Name: geometry_columns_insert; Type: RULE; Schema: public; Owner: -
---
-
-CREATE RULE geometry_columns_insert AS ON INSERT TO geometry_columns DO INSTEAD NOTHING;
-
-
---
--- Name: geometry_columns_update; Type: RULE; Schema: public; Owner: -
---
-
-CREATE RULE geometry_columns_update AS ON UPDATE TO geometry_columns DO INSTEAD NOTHING;
-
-
---
 -- Name: calendar_id_refs_id_4443fd67cb277315; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7564,4 +7544,8 @@ INSERT INTO schema_migrations (version) VALUES ('20140905131353');
 INSERT INTO schema_migrations (version) VALUES ('20140905142405');
 
 INSERT INTO schema_migrations (version) VALUES ('20140909152215');
+
+INSERT INTO schema_migrations (version) VALUES ('20141021182918');
+
+INSERT INTO schema_migrations (version) VALUES ('20141021183232');
 

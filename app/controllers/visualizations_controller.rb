@@ -40,7 +40,6 @@ class VisualizationsController < ApplicationController
 
   
   def edit
-    render 'new'
   end
 
 

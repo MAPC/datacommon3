@@ -1,32 +1,4 @@
 %h1.page-header Sign Up
 %p Create a new account.
 
-.col-md-4.col-md-offset-4
-  .form.user-form{role: 'form'}
-    = form_for @user do |f|
-      
-      .form-group
-        = f.label          :first_name
-        = f.text_field     :first_name,            class: 'form-control'
-
-      .form-group
-        = f.label          :last_name
-        = f.text_field     :last_name,             class: 'form-control'
-
-      .form-group
-        = f.label          :email, 'Email address'
-        = f.text_field     :email,                 class: 'form-control'
-
-      .form-group
-        = f.label          :username
-        = f.text_field     :username,              class: 'form-control'
-      
-      .form-group
-        = f.label          :password
-        = f.password_field :password,              class: 'form-control'
-      
-      .form-group
-        = f.label          :password_confirmation
-        = f.password_field :password_confirmation, class: 'form-control'
-
-      = f.submit 'Sign up', class: 'btn btn-large btn-success'
+= render partial: 'form', locals: { button: 'Sign up' }

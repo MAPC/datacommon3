@@ -1,0 +1,45 @@
+%h1.page-header Edit Profile
+%p Let other planners & data professionals know who you are.
+
+.col-md-4.col-md-offset-4
+  .form.user-form{role: 'form'}
+    = form_for @profile do |f|
+
+      .form-group
+        = f.label      :organization
+        = f.text_field :organization, class: 'form-control'
+
+      .form-group
+        = f.label      :position,     'Position at organization'
+        = f.text_field :position,     class: 'form-control'
+
+      .form-group
+        = f.label      :voice,        'Phone number'
+        = f.text_field :voice,        class: 'form-control'
+
+      .form-group
+        = f.label      :delivery,     'Address'
+        = f.text_field :delivery,     class: 'form-control'
+
+      .form-group
+        = f.label      :city
+        = f.text_field :city,         class: 'form-control'
+
+      .form-group
+        = f.label      :zipcode
+        = f.text_field :zipcode,      class: 'form-control'
+
+      .form-group
+        = f.label      :country
+        = f.text_field :country,      class: 'form-control'
+
+      .form-group
+        = f.label      :email,        'Email address'
+        = f.text_field :email,        class: 'form-control'
+
+      .form-group
+        = f.label      :website_url,  'Your website URL'
+        = f.text_field :website_url,  class: 'form-control'
+
+      = f.submit 'Update Profile', class: 'btn btn-large btn-success'
+      = link_to 'Cancel', @profile.user, class: 'btn btn-large btn-warning'

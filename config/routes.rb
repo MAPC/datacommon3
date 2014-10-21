@@ -30,6 +30,7 @@ Rails.application.routes.draw do
   end
 
   resources :users,  except: [:edit, :update, :destroy], path: 'profiles'
+  resources :profiles, only: [:edit, :update, :destroy]
   match '/signup', to: 'users#new', via: 'get'
 
   resources :sessions, only: [:new, :create, :destroy]

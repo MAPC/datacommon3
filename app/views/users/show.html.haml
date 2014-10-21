@@ -3,6 +3,8 @@
     %img{src: avatar_url(@profile.user), alt: @profile.name}    
   .col-md-3.col-sm-4.col-xs-8.info
     %h3=  @profile.name
+    - if current_user? @profile.user
+      = link_to 'Edit Profile', edit_profile_path(@profile.user)
     - if @profile.has_rich_data?
       %p=  mail_to @profile.email
       %p=  @profile.city

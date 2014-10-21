@@ -1,0 +1,16 @@
+%h1.page-header Edit Visualization
+
+= render partial: 'form', locals: { button: 'Update' }
+
+:javascript
+
+  $(document).on('ready', function () {
+    console.log('(edit) document ready');
+    DC.synchEmbedWeaveOnClick("#vis-#{@visualization.id}", #{@visualization.sessionstate});
+
+    $("#vis-#{@visualization.id}").click(function () {
+      $('#clickto').hide();
+    });
+
+    $("#vis-#{@visualization.id}").trigger('click');
+  });
