@@ -12,7 +12,11 @@ Rails.application.routes.draw do
 
   resources :institutions,   only: [:show]
 
-  resources :layers,         only: [:index, :show], concerns: :paginatable
+  resources :layers,         except: [:new, :create, :edit, :update, :destroy], concerns: :paginatable do
+    match :download, to: 'layers#download',      on: :member, via: :get
+    match :meta,     to: 'layers#meta_download', on: :member, via: :get
+  end
+
   resources :visualizations, concerns: :paginatable
   resources :static_maps,    only: [:index, :show], concerns: :paginatable,
                              path: 'gallery'
