@@ -11,23 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140903033148) do
+ActiveRecord::Schema.define(version: 20141031173625) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "postgis"
 
   create_table "auth_user", force: true do |t|
-    t.string   "username",       limit: 30,  null: false
-    t.string   "first_name",     limit: 30,  null: false
-    t.string   "last_name",      limit: 30,  null: false
-    t.string   "email",          limit: 75,  null: false
-    t.string   "password",       limit: 128, null: false
-    t.boolean  "is_staff",                   null: false
-    t.boolean  "is_active",                  null: false
-    t.boolean  "is_superuser",               null: false
-    t.datetime "last_login",                 null: false
-    t.datetime "date_joined",                null: false
+    t.string   "username",       limit: 30,                                  null: false
+    t.string   "first_name",     limit: 30,                                  null: false
+    t.string   "last_name",      limit: 30,                                  null: false
+    t.string   "email",          limit: 75,                                  null: false
+    t.string   "password",       limit: 128,                                 null: false
+    t.boolean  "is_staff",                   default: false,                 null: false
+    t.boolean  "is_active",                  default: true,                  null: false
+    t.boolean  "is_superuser",               default: false,                 null: false
+    t.datetime "last_login",                 default: '2014-10-21 18:32:24', null: false
+    t.datetime "date_joined",                default: '2014-10-21 18:32:24', null: false
     t.string   "remember_token"
   end
 
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 20140903033148) do
     t.string  "logo_url"
     t.string  "tagline"
     t.string  "map_gallery_intro"
+    t.text    "logos",             default: "[]"
   end
 
   create_table "core_genericobjectrolemapping", force: true do |t|
@@ -53,13 +54,13 @@ ActiveRecord::Schema.define(version: 20140903033148) do
   add_index "core_genericobjectrolemapping", ["subject", "object_ct_id", "object_id", "role_id"], name: "core_genericobjectrolemapping_subject_object_ct_id_object_i_key", unique: true, using: :btree
 
   create_table "institutions", force: true do |t|
-    t.string "short_name"
-    t.string "long_name"
-    t.string "subdomain"
+    t.string  "short_name"
+    t.string  "long_name"
+    t.string  "subdomain"
+    t.integer "region_id"
   end
 
-  create_table "layers", id: false, force: true do |t|
-    t.string  "id"
+  create_table "layers", force: true do |t|
     t.string  "title"
     t.string  "alt_title"
     t.string  "descriptn"
@@ -75,6 +76,9 @@ ActiveRecord::Schema.define(version: 20140903033148) do
     t.string  "tablename"
     t.string  "tablenum"
     t.integer "institution_id"
+    t.string  "join_key"
+    t.string  "preview_image"
+    t.string  "datesavail"
   end
 
   create_table "maps_contact", force: true do |t|
@@ -91,9 +95,9 @@ ActiveRecord::Schema.define(version: 20140903033148) do
     t.string   "country",         limit: 3
     t.string   "email",           limit: 75
     t.string   "website_url",     limit: 200
-    t.boolean  "mapc_newsletter",             null: false
-    t.boolean  "mbdc_newsletter",             null: false
-    t.datetime "last_modified",               null: false
+    t.boolean  "mapc_newsletter",             default: false,                 null: false
+    t.boolean  "mbdc_newsletter",             default: false,                 null: false
+    t.datetime "last_modified",               default: '2014-10-21 18:34:11', null: false
   end
 
   add_index "maps_contact", ["user_id"], name: "maps_contact_user_id", using: :btree

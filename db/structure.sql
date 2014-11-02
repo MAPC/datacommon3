@@ -10,6 +10,20 @@ SET check_function_bodies = false;
 SET client_min_messages = warning;
 
 --
+-- Name: gisdata; Type: SCHEMA; Schema: -; Owner: -
+--
+
+CREATE SCHEMA gisdata;
+
+
+--
+-- Name: mapc; Type: SCHEMA; Schema: -; Owner: -
+--
+
+CREATE SCHEMA mapc;
+
+
+--
 -- Name: metadata; Type: SCHEMA; Schema: -; Owner: -
 --
 
@@ -145,6 +159,75 @@ END;
 $$;
 
 
+SET search_path = gisdata, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- Name: ma_municipal; Type: TABLE; Schema: gisdata; Owner: -; Tablespace: 
+--
+
+CREATE TABLE ma_municipal (
+    gid integer NOT NULL,
+    muni_id smallint,
+    municipal character varying(35),
+    the_geom public.geometry,
+    CONSTRAINT enforce_dims_the_geom CHECK ((public.st_ndims(the_geom) = 2)),
+    CONSTRAINT enforce_geotype_the_geom CHECK (((public.geometrytype(the_geom) = 'MULTIPOLYGON'::text) OR (the_geom IS NULL))),
+    CONSTRAINT enforce_srid_the_geom CHECK ((public.st_srid(the_geom) = 26986))
+);
+
+
+--
+-- Name: ma_municipal_gid_seq; Type: SEQUENCE; Schema: gisdata; Owner: -
+--
+
+CREATE SEQUENCE ma_municipal_gid_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: ma_municipal_gid_seq; Type: SEQUENCE OWNED BY; Schema: gisdata; Owner: -
+--
+
+ALTER SEQUENCE ma_municipal_gid_seq OWNED BY ma_municipal.gid;
+
+
+SET search_path = mapc, pg_catalog;
+
+--
+-- Name: health_births_m_seq; Type: SEQUENCE; Schema: mapc; Owner: -
+--
+
+CREATE SEQUENCE health_births_m_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: health_births_m; Type: TABLE; Schema: mapc; Owner: -; Tablespace: 
+--
+
+CREATE TABLE health_births_m (
+    seq_id integer DEFAULT nextval('health_births_m_seq'::regclass) NOT NULL,
+    muni_id smallint,
+    municipal text,
+    years integer,
+    births_num integer
+);
+
+
+SET search_path = metadata, pg_catalog;
+
 --
 -- Name: _public_tables_seq; Type: SEQUENCE; Schema: metadata; Owner: -
 --
@@ -156,10 +239,6 @@ CREATE SEQUENCE _public_tables_seq
     NO MAXVALUE
     CACHE 1;
 
-
-SET default_tablespace = '';
-
-SET default_with_oids = false;
 
 --
 -- Name: _public_tables; Type: TABLE; Schema: metadata; Owner: -; Tablespace: 
@@ -4870,7 +4949,8 @@ CREATE TABLE institutions (
     id integer NOT NULL,
     short_name character varying(255),
     long_name character varying(255),
-    subdomain character varying(255)
+    subdomain character varying(255),
+    region_id integer
 );
 
 
@@ -5461,6 +5541,17 @@ CREATE SEQUENCE weave_visualization_topics_id_seq
 ALTER SEQUENCE weave_visualization_topics_id_seq OWNED BY weave_visualization_topics.id;
 
 
+SET search_path = gisdata, pg_catalog;
+
+--
+-- Name: gid; Type: DEFAULT; Schema: gisdata; Owner: -
+--
+
+ALTER TABLE ONLY ma_municipal ALTER COLUMN gid SET DEFAULT nextval('ma_municipal_gid_seq'::regclass);
+
+
+SET search_path = public, pg_catalog;
+
 --
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
@@ -5599,6 +5690,26 @@ ALTER TABLE ONLY weave_visualization_datasources ALTER COLUMN id SET DEFAULT nex
 --
 
 ALTER TABLE ONLY weave_visualization_topics ALTER COLUMN id SET DEFAULT nextval('weave_visualization_topics_id_seq'::regclass);
+
+
+SET search_path = gisdata, pg_catalog;
+
+--
+-- Name: ma_municipal_pkey; Type: CONSTRAINT; Schema: gisdata; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY ma_municipal
+    ADD CONSTRAINT ma_municipal_pkey PRIMARY KEY (gid);
+
+
+SET search_path = mapc, pg_catalog;
+
+--
+-- Name: health_births_m_pkey; Type: CONSTRAINT; Schema: mapc; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY health_births_m
+    ADD CONSTRAINT health_births_m_pkey PRIMARY KEY (seq_id);
 
 
 SET search_path = metadata, pg_catalog;
@@ -7548,4 +7659,6 @@ INSERT INTO schema_migrations (version) VALUES ('20140909152215');
 INSERT INTO schema_migrations (version) VALUES ('20141021182918');
 
 INSERT INTO schema_migrations (version) VALUES ('20141021183232');
+
+INSERT INTO schema_migrations (version) VALUES ('20141031173625');
 

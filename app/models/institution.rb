@@ -19,5 +19,7 @@ class Institution < ActiveRecord::Base
   def to_s
     camel_name
   end
+
+  # alias_attribute :muni_id, :region_id
   
 end

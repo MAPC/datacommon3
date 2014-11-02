@@ -21,9 +21,6 @@ class UsersController < ApplicationController
   end
 
 
-  def show
-  end
-
   private
 
     def user_params
@@ -37,7 +34,6 @@ class UsersController < ApplicationController
 
     def correct_user
       user    = User.find_by(username: params[:id])
-      profile = user.profile
 
       if current_user?(user)
         visualizations = Visualization.unscoped.where(owner_id: user.id).page(params[:page])
@@ -45,7 +41,7 @@ class UsersController < ApplicationController
         visualizations = user.visualizations.page(params[:page])
       end
 
-      @profile = ProfileFacade.new(user, profile, visualizations)
+      @profile = ProfileFacade.new(user, user.profile, visualizations)
     end
 
 end

@@ -50,7 +50,7 @@
 
         - if signed_in?
           %li.dropdown
-            %a.dropdown-toggle{href: "#", data: {toggle: 'dropdown'}}
+            %a#user-menu.dropdown-toggle{href: "#", data: {toggle: 'dropdown'}}
               Hi, #{current_user.fname}
               %b.caret
             %ul.dropdown-menu

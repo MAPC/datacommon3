@@ -26,8 +26,8 @@ class LayersController < ApplicationController
     filename = "#{@layer.tablename}.#{params[:format]}"
 
     respond_to do |format|
-      format.csv  { send_data @layer.layer_to_json, filename: filename}
-      format.json { send_data @layer.layer_to_json, filename: filename}
+      format.csv  { redirect_to "http://files.dev.datacommon.org.s3-website-us-east-1.amazonaws.com/layers/downloads/#{params[:id]}.csv" }
+      format.json { redirect_to "http://files.dev.datacommon.org.s3-website-us-east-1.amazonaws.com/layers/downloads/#{params[:id]}.json" }
     end
   end
 

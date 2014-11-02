@@ -52,6 +52,9 @@ group :development, :test do
   gem 'cucumber-rails',     require: false
   gem 'database_cleaner'
 
+  gem 'factory_girl_rails', '~> 4.0'
+  gem 'launchy'
+
   gem 'guard-rspec',        '2.5.0'
   gem 'spork-rails',        '4.0.0'
   gem 'guard-spork',        '1.5.0'

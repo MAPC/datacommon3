@@ -19,11 +19,10 @@
           %li= link_to 'JSON', download_layer_path(format: :json)
           %li.divider
           %li.dropdown-header Spatial (Not joined to tabular)
-          %li.disabled= link_to 'GeoJSON',     download_layer_path(format: :geojson)
-
-          %li.disabled= link_to 'PostGIS SQL', '#' # download(:dump)
-          %li.disabled= link_to 'KML',         '#' # download(:kml)
-          %li.disabled= link_to 'Shapefile',   '#' # download(:shp)
+          %li.disabled= link_to 'GeoJSON',     ''
+          %li.disabled= link_to 'PostGIS SQL', ''
+          %li.disabled= link_to 'KML',         ''
+          %li.disabled= link_to 'Shapefile',   ''
           
 
       .dropdown.btn-group

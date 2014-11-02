@@ -26,6 +26,9 @@ class Layer < ActiveRecord::Base
     tablename
   end
 
+  alias_attribute :dates,   :datesavail
+  alias_attribute :created, :createdate
+
 
   def to_s
     title || alt_title

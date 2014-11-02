@@ -1,7 +1,6 @@
 class ProfilesController < ApplicationController
   before_filter :load_institution
-  before_action :correct_user,   only: [:edit, :update]
-
+  before_action :correct_user, only: [:edit, :update]
 
   def edit
     render 'users/edit'
@@ -23,8 +22,12 @@ class ProfilesController < ApplicationController
 
 
     def correct_user
-      @profile = Profile.find_by(id: params[:id]) || User.find_by(username: params[:id]).profile
       
+      @profile = Profile.find_by(id: params[:id])
+      if @profile.nil?
+        @profile = User.find_by(username: params[:id]).profile
+      end
+
       unless current_user?(@profile.user)
         flash[:danger] = ONLY_OWNER_MAY_EDIT
         store_location

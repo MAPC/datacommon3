@@ -9,7 +9,9 @@
       - if layer.coverage
         %p
           #{layer.coverage.singularize} coverage
-      - if layer.createdate.presence
-        %p Created in #{layer.createdate}
+          - if layer.dates
+            &nbsp;&bull;&nbsp; #{layer.dates}
+      - if layer.created.presence
+        %p Created in #{layer.created}
       
       %p= layer.description.downcase.capitalize

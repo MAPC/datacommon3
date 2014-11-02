@@ -12,6 +12,10 @@ class Visualization < ActiveRecord::Base
     join_table: :weave_visualization_topics,
     association_foreign_key: :topic_id
 
+  # has_attached_file :image,
+  #                    styles: { gallery: ['205x137>', :png], featured: ['455x305>', :png] },
+  #                    url: ":class/images/:style/:id_:style.:extension"
+
   belongs_to :institution
   belongs_to :user, foreign_key: :owner_id
 
@@ -26,7 +30,7 @@ class Visualization < ActiveRecord::Base
   validates :year,       presence: true, length: { minimum: 4,  maximum: 20  }
   # validates :abstract,   presence: true, length: { minimum: 70, maximum: 560 }
   validates :permission, presence: true, inclusion: { in: PERMISSIONS,
-             message: "Permission be 'public' or 'private': \"%{value}\" doesn't count." }
+             message: "Permission must be 'public' or 'private', but you assigned \"%{value}\"." }
   # validates :data_source_ids, allow_blank: true, inclusion: { in: DataSource.pluck(:id) }
   # validates :issue_area_ids,  allow_blank: true, inclusion: { in: IssueArea.pluck(:id) }
   validates :institution_id,  allow_blank: true, inclusion: { in: Institution.pluck(:id) }
@@ -87,12 +91,12 @@ class Visualization < ActiveRecord::Base
   end
 
   def base_image_path
-    "/visualizations/weave_thumbnails/#{id}"
+    "/visualizations/images/#{id}"
   end
 
 
   def full_image_path
-    "/visualizations/weave_thumbnails/#{id}.png"
+    "/visualizations/images/#{id}.png"
   end  
 
 

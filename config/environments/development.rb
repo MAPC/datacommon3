@@ -26,6 +26,7 @@ Rails.application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+  config.serve_static_assets = true
 
   # Adds additional error checking when serving assets at runtime.
   # Checks for improperly declared sprockets dependencies.
@@ -38,13 +39,27 @@ Rails.application.configure do
   # Paperclip configuration: attachments with Amazon S3 uploads
   Paperclip.options[:command_path] = "/usr/local/bin/convert"
   
-  config.paperclip_defaults = {
-    storage: :s3,
-    path:    ":url",
-    s3_credentials: {
-      bucket:            'files.dev.datacommon.org',
-      access_key_id:     ENV['AWS_ACCESS_KEY_ID'],
-      secret_access_key: ENV['AWS_SECRET_ACCESS_KEY']
+
+  if ENV['LOCAL_STORAGE']
+    config.paperclip_defaults = {
+      storage: :filesystem,
+      url:    "#{Rails.public_path}/system/#{Rails.env}/:path",
+      s3_credentials: {
+        bucket:           'files.dev.datacommon.org',
+        access_key_id:     ENV['AWS_ACCESS_KEY_ID'],
+        secret_access_key: ENV['AWS_SECRET_ACCESS_KEY']
+      }
     }
-  }
+  else
+    config.paperclip_defaults = {
+      storage: :s3,
+      url:    "#{Rails.env}/:path",
+      s3_credentials: {
+        bucket:           'files.dev.datacommon.org',
+        access_key_id:     ENV['AWS_ACCESS_KEY_ID'],
+        secret_access_key: ENV['AWS_SECRET_ACCESS_KEY']
+      }
+    }
+  end
+
 end

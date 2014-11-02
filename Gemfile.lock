@@ -43,6 +43,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    addressable (2.3.6)
     arel (5.0.1.20140414130214)
     aws-sdk (1.33.0)
       json (~> 1.4)
@@ -112,6 +113,11 @@ GEM
     dotenv-deployment (0.0.2)
     erubis (2.7.0)
     execjs (2.2.1)
+    factory_girl (4.5.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.5.0)
+      factory_girl (~> 4.5.0)
+      railties (>= 3.0.0)
     ffi (1.9.3)
     foreman (0.75.0)
       dotenv (~> 0.11.1)
@@ -152,6 +158,8 @@ GEM
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     kgio (2.9.2)
+    launchy (2.4.2)
+      addressable (~> 2.3)
     listen (2.7.9)
       celluloid (>= 0.15.2)
       rb-fsevent (>= 0.9.3)
@@ -302,6 +310,7 @@ DEPENDENCIES
   compass-rails!
   cucumber-rails
   database_cleaner
+  factory_girl_rails (~> 4.0)
   foreman (= 0.75.0)
   guard-rspec (= 2.5.0)
   guard-spork (= 1.5.0)
@@ -309,6 +318,7 @@ DEPENDENCIES
   has_scope (= 0.5.1)
   jquery-rails (= 3.1.2)
   kaminari (= 0.16.1)
+  launchy
   lazy_columns!
   mail
   minitest
