@@ -63,6 +63,51 @@ DC.logger = {
 DC.sessionStates = {};
 DC.weaves        = {};
 
+
+// Use this when the visualization does not have a preview image
+// yet. This function will start Weave directly, take a
+// screenshot, and post it to the preview images.
+DC.embedWeaveAndUpload = function ( dom_id, sessionstate, area_type, area_id, slug ) {
+  // area_type: 'municipalities',  'subregions'
+  // area_id:   'municipality_id', 'subregion_id'
+  // slug:      'canton',          'metro-west'
+  
+  console.log('embedWeaveAndUpload happening on ' + dom_id);
+  
+  var id = dom_id.split('-').pop();
+
+  DC.sessionStates[id] = sessionstate;
+  DC.embedWeave( $(dom_id) );
+
+  // Wait 40 seconds, then POST the screenshot to 
+  // be saved by the server.
+  setTimeout(function () {
+    DC.getBase64( id, function ( base64 ) {
+      // var base64 = "data:image/png;base64," + base64
+      var data_object = {
+        id:   id,
+        data: base64
+      }      
+      data_object[area_id] = slug
+
+      $.ajax({
+        type: "POST",
+        url: "/" + area_type + "/" + slug + "/image",
+        data: data_object,
+        success: function (data) {
+          console.log( dom_id + ": Good news! I POSTed successfully." );
+          console.log( "The data was " + data + "." );
+        },
+        error: function (e) {
+          console.log( "Such error with " + dom_id + ", wow." );
+          console.dir( e );
+        }
+      });
+    });
+  }, 30000);
+}
+
+
 DC.synchEmbedWeaveOnClick = function (dom_elem, sessionstate) {
   console.log('embed fn listening to ' + dom_elem);
   

@@ -9,6 +9,10 @@ class DynamicVisualization < ActiveRecord::Base
   #       sessionstate column than the below. It's 
   #       probably in the Metaprogramming book.
 
+  def to_s
+    title
+  end
+  
   def basepath
     "#{Rails.public_path}/dynamic_visualizations"
   end
@@ -30,8 +34,6 @@ class DynamicVisualization < ActiveRecord::Base
       # TODO return object.to_s instead of sending methods if it's already
       # a string or an integer
       "/dynamic_visualizations/images/#{object.send(method)}/#{id}.png"
-    else
-      "/dynamic_visualizations/images/no-preview.jpg"
     end
   end
 

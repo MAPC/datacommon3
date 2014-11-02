@@ -5,8 +5,8 @@
     %p.area-summary= @s.geography.short_desc
   .col-sm-6.col-xs-12.center
     #map
-    =form_tag '', method: :get do
-      =select_tag :municipality_id, options_for_select(@s.options_for_area, @s.geography_slug), include_blank: true, id: 'area-select', class: 'chosen-select', data: { placeholder: "Choose a different #{@s.area_type_name}" }
+    = form_tag '', method: :get do
+      = select_tag :municipality_id, options_for_select(@s.options_for_area, @s.geography_slug), include_blank: true, id: 'area-select', class: 'chosen-select', data: { placeholder: "Choose a different #{@s.area_type_name}" }
 
 .row
   = render partial: 'snapshots/topic', collection: @s.topics, as: :topic

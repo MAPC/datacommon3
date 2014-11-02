@@ -13,6 +13,11 @@ class Snapshot
     @geography.class.name.downcase
   end
 
+
+  def area_type_id
+    "#{area_type_name.pluralize}_id"
+  end
+
   
   def geography_slug
     @geography.slug

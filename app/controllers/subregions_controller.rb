@@ -35,4 +35,19 @@ class SubregionsController < ApplicationController
     @state    = vis.rendered_state(subregion)
     render xml: @state
   end
+
+  def image
+    puts "#image"
+    data = params[:data]
+    png_data = data.split(',').last
+    png = Base64.decode64 png_data
+
+    filename = "#{Rails.public_path}/dynamic_visualizations/images/#{params[:subregion_id]}/#{params[:id]}.png"
+    dirname = File.dirname(filename) 
+    FileUtils.mkdir_p(dirname) unless File.directory?(dirname)
+
+    File.open(filename, 'wb') {|f| f.write png }
+
+    render status: 200
+  end
 end

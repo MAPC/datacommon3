@@ -1,7 +1,28 @@
-%img.snapshot-vis{class: "#{@s.area_type_name}", id: "vis-#{vis.id}", src: vis.image_path(@s.geography)}
+- if !vis.image_path(@s.geography).nil?
 
-:javascript
+  %img.snapshot-vis{class: "#{@s.area_type_name}", id: "vis-#{vis.id}", src: vis.image_path(@s.geography)}
 
-  $(document).on('ready', function () {
-    DC.embedWeaveOnClick("#vis-#{vis.id}", '#{@s.geography_slug}', '#{@s.area_type_name.pluralize}');
-  });
+  :javascript
+
+    $(document).on('ready', function () {
+      DC.embedWeaveOnClick("#vis-#{vis.id}", '#{@s.geography_slug}', '#{@s.area_type_name.pluralize}');
+    });
+
+- else
+
+  .snapshot-vis{class: "#{@s.area_type_name}", id: "vis-#{vis.id}"}
+
+  :javascript
+
+    $(document).on('ready', function () {
+      var sessionstate = $("#sessionstate-#{vis.id}").html(),
+          xmlstate     = (new DOMParser()).parseFromString(sessionstate, "text/xml")
+      DC.embedWeaveAndUpload( "#vis-#{vis.id}",
+                               xmlstate,
+                               '#{@s.area_type_name.pluralize}',
+                               '#{@s.area_type_id}',
+                               '#{@s.geography_slug}' );
+    });
+
+  %script{id: "sessionstate-#{vis.id}", type: 'text/xml'}
+    #{vis.rendered_state(@s.geography).html_safe}

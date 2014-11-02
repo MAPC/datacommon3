@@ -1,11 +1,11 @@
 - if @s.area_type_name == 'municipality'
   .col-md-4.col-sm-6.col-xs-12.center.snapshot-preview
-    .snapshot-preview-title
-      =link_to eval("#{@s.area_type_name}_topic_path(@s.geography, topic.topic)") do
+    =link_to eval("#{@s.area_type_name}_topic_path(@s.geography, topic.topic)") do
+      .snapshot-preview-title
         = topic.topic.title
-        (View All)
+      (View All)
     = render partial: 'visualizations/preview', object: topic.visual, as: :vis
-- else
+- else # subregion
   .col-xs-12.center.snapshot-preview
     .snapshot-preview-title
       = link_to topic.topic.title, eval("#{@s.area_type_name}_topic_path(@s.geography, topic.topic)")

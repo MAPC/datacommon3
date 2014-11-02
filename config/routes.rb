@@ -25,12 +25,14 @@ Rails.application.routes.draw do
     resources :topics, on:    :member,        path: '',
                        only: [:show], to:   'municipalities#topic'
     get 'state/:vis_id', on: :member, to: 'municipalities#rendered_state'
+    post :image
   end
 
   resources :subregions,     only: [:index, :show] do
     resources :topics, on:    :member, path: '',
                        only: [:show],  to: 'subregions#topic'
     get 'state/:vis_id', on: :member, to: 'subregions#rendered_state'
+    post :image
   end
 
   resources :users,  except: [:edit, :update, :destroy], path: 'profiles'
