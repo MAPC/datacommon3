@@ -32,8 +32,9 @@ gem 'turbolinks',   '2.4.0' # Following links are faster.
 
 
 # Files
-gem 'paperclip', '~> 3.0' # Handle file attachments
-gem 'aws-sdk',   '1.33.0' # Upload files to Amazon S3
+gem 'paperclip',   '~> 3.0' # Handle file attachments
+gem 'aws-sdk',     '1.33.0' # Upload files to Amazon S3
+gem 'rack-attack', '~> 4.2' # Block non-local requests to image posting
 
 
 # Server

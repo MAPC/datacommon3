@@ -1,0 +1,1 @@
+class Geometry < GeometryModel ; end

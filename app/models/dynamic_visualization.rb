@@ -71,15 +71,16 @@ class DynamicVisualization < ActiveRecord::Base
     # Capital S is to match only non-whitespace chars
     inside_brackets  = /\{{2}\s*(\S*)\s*\}{2}/i
 
-    captures = sessionstate.match(bracketed).captures
     state    = sessionstate.dup
+    captures = state.match(bracketed).captures
 
-    captures.each do |expression|      
-      full_method     = expression.match(inside_brackets).captures.first
-      replacer_method = full_method.partition('.').last.strip
-      replacer_method = replacer_method.gsub(/\|.*/, '') # remove Django filters
+    captures.each do |expression|
+      full_method     = expression.match(inside_brackets).captures.first       # 'regionalunit.unitid'
+      replacer_method = full_method.partition('.').last.strip.gsub(/\|.*/, '') # 'unitid'
       state.gsub!( expression, object.send(replacer_method) )
     end
+
+    state.gsub!( /,352/, ',402' ) # TODO: Make 402
 
     state
   end
