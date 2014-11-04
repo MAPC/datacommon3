@@ -1,4 +1,10 @@
 %img{id: "vis-#{vis.id}", src: vis.image_path(@s.geography)}
+%p.sources
+  Years:
+  = vis.year
+  &bull;
+  = "#{'Source'.pluralize(vis.data_sources.count)}:"
+  = vis.sources
 
 :javascript
 

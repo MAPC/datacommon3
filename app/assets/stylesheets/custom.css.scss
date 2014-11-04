@@ -329,7 +329,7 @@ ul.none {
 .snapshot.municipality {
   position: relative;
   height: 350px;
-  padding: 20px 0;
+  padding: 0 0 40px 0;
   text-align: center;
 }
 .snapshot.subregion {
@@ -337,6 +337,10 @@ ul.none {
   height: 460px;
 }
 
+p.sources {
+  margin-left: 30px;
+  text-align: left;
+}
 // img.snapshot-vis {
 //   width: 333px;
 //   height: 255px;
