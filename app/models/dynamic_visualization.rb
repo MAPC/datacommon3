@@ -9,6 +9,10 @@ class DynamicVisualization < ActiveRecord::Base
   #       sessionstate column than the below. It's 
   #       probably in the Metaprogramming book.
 
+  def to_s
+    title
+  end
+
   def basepath
     "#{Rails.public_path}/dynamic_visualizations"
   end

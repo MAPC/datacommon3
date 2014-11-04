@@ -2,25 +2,6 @@
 %h2= @s.topic
 
 - @s.visualizations.each do |vis|
-  .col-md-4.col-sm-6.col-xs-12.municipality
-    .snapshot-preview-title= vis.title
-    %img.snapshot-vis.municipality{id: "vis-#{vis.id}", src: vis.image_path(@s.geography)}
-    - if vis.has_no_preview?(@s.geography)
-      :javascript
-        console.log('(#{vis.id}) #{vis.title} has no preview');
-        
-        $(document).on('ready', function () {
-          $("#vis-#{vis.id}").click(function () {
-            setTimeout(function() {
-              DC.getBase64(#{vis.id}, function (data) {
-                console.log(data);
-              });
-            }, 4000);
-          });
-
-        });  
-
-    :javascript
-      $(document).on('ready', function () {
-        DC.embedWeaveOnClick("#vis-#{vis.id}", '#{@s.geography_slug}', '#{@s.area_type_name.pluralize}');
-      });
+  .col-md-6.col-sm-6.col-xs-12.center.snapshot-preview
+    .snapshot-preview-title= vis
+    = render partial: 'visualizations/preview', object: vis, as: :vis

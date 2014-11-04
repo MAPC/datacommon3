@@ -307,17 +307,40 @@ ul.none {
 
 
 
-// SNAPSHOTS
+// SNAPSHOTS 
 
-.subregion {
+.snapshot.municipality {
+  position: relative;
+  height: 350px;
+  padding: 20px 0;
+}
+.snapshot.subregion {
   width:  880px;
   height: 460px;
 }
 
-.municipality {
-  width:  335px;
-  height: 255px;
+// img.snapshot-vis {
+//   width: 333px;
+//   height: 255px;
+//   padding-bottom: -5px;
+// }
+
+// .snapshot-preview {
+//   margin: 20px 0px;
+//   padding: 0px;
+// }
+
+.snapshot-preview-title {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  display: block;
+  float: left;
+  font-size: 1.3em;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
+
 
 .area-summary {
   padding: 20px 0;
@@ -343,21 +366,7 @@ ul.chosen-results {
   margin:       15px 0;
 }
 
-.snapshot-preview {
-  margin: 20px 0px;
-}
 
-.snapshot-preview-title {
-  width: 100%;
-  min-width: 100%;
-  max-width: 100%;
-  display: block;
-  float: left;
-}
-
-.snapshot-preview {
-  a { font-size: 1.5em; }
-}
 
 // USER PROFILES
 

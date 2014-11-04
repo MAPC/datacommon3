@@ -22,7 +22,7 @@ class SubregionsController < ApplicationController
   def topic
     subregion = Subregion.find_by(slug: params[:subregion_id])
     topic     = IssueArea.find_by(slug: params[:id])
-    vis       = topic.dynamic_visualizations.where(regiontype_id: 5)
+    vis       = topic.dynamic_visualizations.where(regiontype_id: 5).order(:title)
 
     @s = TopicSnapshot.new(subregion, vis, topic)
     render 'snapshots/topic'

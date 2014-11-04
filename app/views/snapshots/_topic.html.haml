@@ -1,10 +1,11 @@
 - if @s.area_type_name == 'municipality'
-  .col-md-4.col-sm-6.col-xs-12.center.snapshot-preview
-    .snapshot-preview-title
+  .col-md-4
+    .snapshot-preview-title.center
       =link_to eval("#{@s.area_type_name}_topic_path(@s.geography, topic.topic)") do
         = topic.topic.title
         (View All)
-    = render partial: 'visualizations/preview', object: topic.visual, as: :vis
+    .snapshot.municipality
+      = render partial: 'visualizations/preview', object: topic.visual, as: :vis
 - else
   .col-xs-12.center.snapshot-preview
     .snapshot-preview-title
