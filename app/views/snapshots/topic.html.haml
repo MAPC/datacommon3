@@ -2,6 +2,7 @@
 %h2= @s.topic
 
 - @s.visualizations.each do |vis|
-  .col-md-6.col-sm-6.col-xs-12.center.snapshot-preview
-    .snapshot-preview-title= vis
-    = render partial: 'visualizations/preview', object: vis, as: :vis
+  .col-sm-6.col-xs-12
+    .snapshot.municipality
+      .snapshot-preview-title= vis
+      = render partial: 'visualizations/preview', object: vis, as: :vis

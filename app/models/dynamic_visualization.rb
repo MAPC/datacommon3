@@ -1,6 +1,11 @@
 class DynamicVisualization < ActiveRecord::Base
   self.table_name = 'snapshots_visualization'
 
+  # TODO
+  # has_and_belongs_to_many :data_sources,
+  #   join_table: :snapshots_visualization_source,
+  #   association_foreign_key: :datasource_id
+
   has_and_belongs_to_many :issue_areas,
     join_table: :snapshots_visualization_topics,
     association_foreign_key: :topic_id
@@ -12,6 +17,11 @@ class DynamicVisualization < ActiveRecord::Base
   def to_s
     title
   end
+
+  # TODO
+  # def sources
+  #   data_sources.map {|s| s.title}.join(', ')
+  # end
 
   def basepath
     "#{Rails.public_path}/dynamic_visualizations"

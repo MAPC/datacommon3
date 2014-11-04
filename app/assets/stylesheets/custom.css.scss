@@ -313,6 +313,7 @@ ul.none {
   position: relative;
   height: 350px;
   padding: 20px 0;
+  text-align: center;
 }
 .snapshot.subregion {
   width:  880px;
@@ -331,11 +332,6 @@ ul.none {
 // }
 
 .snapshot-preview-title {
-  width: 100%;
-  min-width: 100%;
-  max-width: 100%;
-  display: block;
-  float: left;
   font-size: 1.3em;
   margin-top: 30px;
   margin-bottom: 10px;
