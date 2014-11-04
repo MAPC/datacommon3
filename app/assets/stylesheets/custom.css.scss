@@ -276,13 +276,30 @@ table.metadata {
 
   td {
     text-align: left;
-    padding: 0 10px;
-    font-weight: 700;
+    padding: 5px 10px;
+    // font-weight: 700;
+    font-size: 1.1em;
   }
   td:first-child {
     text-align: right;
     font-weight: 400;
+    font-size: 1.0em;
   }
+}
+
+
+.layer.title {
+  // display: inline-block;
+  // float: left;
+}
+
+p.layer.coverage {
+  // display: inline-block;
+  // float: left;
+  // top: 26px;
+  // position: absolute;
+  // margin-left: 10px;
+  // margin-bottom: 40px;
 }
 
 // STATIC PAGES
