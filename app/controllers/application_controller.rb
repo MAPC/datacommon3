@@ -6,6 +6,6 @@ class ApplicationController < ActionController::Base
 
   def load_institution
     subdomain = request.subdomain.split('.').first
-    @institution = Institution.find_by(subdomain: subdomain) || Institution.first
+    @institution = Institution.find_by(subdomain: subdomain) || Institution.find(1)
   end
 end

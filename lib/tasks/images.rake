@@ -1,4 +1,4 @@
-require 'watir'
+# require 'watir'
 require 'base64'
 require 'fileutils'
 

@@ -4,7 +4,10 @@
 # http://github.com/thoughtbot/factory_girl
 # http://railscasts.com/episodes/158-factories-not-fixtures
 
-FactoryGirl.define do
+FactoryGirl.define do  factory :spatial_extent do
+    
+  end
+
 
   factory :user do
     sequence(:username) { |n| "planner#{n}" }

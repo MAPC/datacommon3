@@ -32,7 +32,7 @@ DC.weaveConfig = {
 
 DC.logger = {
   weaveStarted:  function (id) {
-    // console.log('swfobject.embedSWF started loading visualization ' + id);
+    console.log('swfobject.embedSWF started loading visualization ' + id);
   },
 
   weaveFinished: function (id) {
@@ -144,8 +144,8 @@ DC.embedWeaveOnClick = function (dom_elem, geo, area_type) {
 
 DC.embedWeave = function (dom_elem) {
   var id     = dom_elem.attr('id'),
-      width  = dom_elem.innerWidth()  - 10,
-      height = dom_elem.innerHeight() - 10;
+      width  = dom_elem.innerWidth(),
+      height = dom_elem.innerHeight();
 
   DC.logger.weaveStarted(id);
 

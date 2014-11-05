@@ -17,7 +17,6 @@ gem 'chosen-rails',         '1.1.0'  # Use Chosen for friendly dropdowns
 # Styles
 gem 'bootstrap-sass',       '~> 3.2.0' # Responsive base styles
 gem 'sass-rails',           '~> 4.0.3' # Use SCSS for stylesheets
-gem 'compass-rails', github: 'Compass/compass-rails' # Use pre-release for Rails 4 compatibility
 
 # Javascript
 gem 'jquery-rails',         '3.1.2'    # Use jquery as the JavaScript library
@@ -32,9 +31,9 @@ gem 'turbolinks',   '2.4.0' # Following links are faster.
 
 
 # Files
-gem 'paperclip',   '~> 3.0' # Handle file attachments
-gem 'aws-sdk',     '1.33.0' # Upload files to Amazon S3
-gem 'rack-attack', '~> 4.2' # Block non-local requests to image posting
+gem 'paperclip', '~> 3.0' # Handle file attachments
+gem 'aws-sdk',   '1.33.0' # Upload files to Amazon S3
+gem 'rubyzip', '>= 1.0.0', require: 'zip' # Zip files for downloading
 
 
 # Server
@@ -45,7 +44,6 @@ gem 'unicorn-rails'     # Use Unicorn as the app server
 # Utilities
 gem 'mail'
 gem 'stamp', '0.6.0' # Convenient timestamping
-gem 'watir'          # For web crawling!
 
 
 group :development, :test do
@@ -60,7 +58,7 @@ group :development, :test do
   gem 'spork-rails',        '4.0.0'
   gem 'guard-spork',        '1.5.0'
   gem 'childprocess',       '0.3.6'
-  gem 'selenium-webdriver', '2.35.1'
+  # gem 'selenium-webdriver', '2.35.1'
   gem 'capybara',           '2.1.0'
 
   gem 'minitest'

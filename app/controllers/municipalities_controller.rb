@@ -22,7 +22,7 @@ class MunicipalitiesController < ApplicationController
   def topic
     muni   = Municipality.find_by(slug: params[:municipality_id])
     topic  = IssueArea.find_by(slug: params[:id])
-    vis    = topic.dynamic_visualizations.where(regiontype_id: 1)
+    vis    = topic.dynamic_visualizations.where(regiontype_id: 1).order(:title)
 
     @s = TopicSnapshot.new(muni, vis, topic)
     render 'snapshots/topic'

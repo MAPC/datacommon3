@@ -1,7 +1,12 @@
 class Layer < ActiveRecord::Base
   belongs_to :institution
 
-  JOINABLE_ROW_LIMIT = 400
+  self.table_name = 'metadata._geo_layers'
+
+  has_and_belongs_to_many :spatial_extents,
+  join_table: 'metadata._geo_extents_geo_layers',
+  foreign_key:             :geo_layer_id,
+  association_foreign_key: :geo_extent_id
 
   def self.default_scope
     order(:title)

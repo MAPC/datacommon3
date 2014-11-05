@@ -256,7 +256,7 @@ wheel</zoom>
   <KeyFilter name="defaultSubsetKeyFilter">
     <excluded/>
     <filters encoding="dynamic"/>
-    <included encoding="csv">MUNI_ID,{{ regionalunit.unitid }},352,353</included>
+    <included encoding="csv">MUNI_ID,{{ regionalunit.unitid }},402,353</included>
     <includeMissingKeys>false</includeMissingKeys>
     <includeMissingKeyTypes>true</includeMissingKeyTypes>
   </KeyFilter>
@@ -885,7 +885,7 @@ wheel</zoom>
                 </keyFilter>
               </filteredKeySet>
               <forceTickCount>false</forceTickCount>
-              <labelFunction>function (number, string) {	return string;}</labelFunction>
+              <labelFunction>string == "Central Massachusetts" ? "Central Mass" : string</labelFunction>
               <labelHorizontalAlign>center</labelHorizontalAlign>
               <labelNumberFormatter>
                 <decimalSeparatorFrom>.</decimalSeparatorFrom>

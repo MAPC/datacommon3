@@ -92,6 +92,10 @@ a.dropdown-toggle {
   font-weight: 700;
 }
 
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
 .navbar {
   /* height: 70px; */
 }
@@ -110,7 +114,6 @@ a.dropdown-toggle {
   @media (max-width: 1200px) {
     font-size: 12px;
   }
-  
 }
 
 input#search {
@@ -276,13 +279,30 @@ table.metadata {
 
   td {
     text-align: left;
-    padding: 0 10px;
-    font-weight: 700;
+    padding: 5px 10px;
+    // font-weight: 700;
+    font-size: 1.1em;
   }
   td:first-child {
     text-align: right;
     font-weight: 400;
+    font-size: 1.0em;
   }
+}
+
+
+.layer.title {
+  // display: inline-block;
+  // float: left;
+}
+
+p.layer.coverage {
+  // display: inline-block;
+  // float: left;
+  // top: 26px;
+  // position: absolute;
+  // margin-left: 10px;
+  // margin-bottom: 40px;
 }
 
 // STATIC PAGES
@@ -307,17 +327,40 @@ ul.none {
 
 
 
-// SNAPSHOTS
+// SNAPSHOTS 
 
-.subregion {
+.snapshot.municipality {
+  position: relative;
+  height: 350px;
+  padding: 0 0 40px 0;
+  text-align: center;
+}
+.snapshot.subregion {
   width:  880px;
   height: 460px;
 }
 
-.municipality {
-  width:  335px;
-  height: 255px;
+p.sources {
+  margin-left: 30px;
+  text-align: left;
 }
+// img.snapshot-vis {
+//   width: 333px;
+//   height: 255px;
+//   padding-bottom: -5px;
+// }
+
+// .snapshot-preview {
+//   margin: 20px 0px;
+//   padding: 0px;
+// }
+
+.snapshot-preview-title {
+  font-size: 1.3em;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
 
 .area-summary {
   padding: 20px 0;
@@ -341,19 +384,6 @@ ul.chosen-results {
   width:        100%;
   min-height:   340px;
   margin:       15px 0;
-}
-
-.snapshot-preview {
-  margin: 20px 0px;
-}
-
-.snapshot-preview-title {
-  width: 100%;
-  min-width: 100%;
-  max-width: 100%;
-  display: block;
-  float: left;
-  font-size: 1.5em;
 }
 
 // USER PROFILES

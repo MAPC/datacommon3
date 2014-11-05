@@ -1,75 +1,56 @@
 <Weave encoding="dynamic">
   <WeaveProperties name="WeaveProperties">
-    <backgroundColor>16777215</backgroundColor>
-    <cssStyleSheetName>weaveStyle.css</cssStyleSheetName>
-    <dashboardMode>true</dashboardMode>
-    <dashedSelectionBox>5,5</dashedSelectionBox>
-    <dataInfoURL/>
-    <debugScreenBounds>false</debugScreenBounds>
-    <defaultTextFormat>
+    <axisTitleTextFormat>
       <bold>false</bold>
       <color>0</color>
       <font>Sophia Nubian</font>
       <italic>false</italic>
       <size>11</size>
       <underline>false</underline>
-    </defaultTextFormat>
+    </axisTitleTextFormat>
+    <backgroundColor>16777215</backgroundColor>
+    <collabServerIP>demo.oicweave.org</collabServerIP>
+    <collabServerName>ivpr-vm</collabServerName>
+    <collabServerPort>5222</collabServerPort>
+    <collabServerRoom/>
+    <collabSpectating>false</collabSpectating>
+    <cssStyleSheetName>weaveStyle.css</cssStyleSheetName>
+    <dashboardMode>true</dashboardMode>
+    <dashedSelectionBox>5,5</dashedSelectionBox>
+    <dataInfoURL/>
+    <debugScreenBounds>false</debugScreenBounds>
     <enableAboutMenu>true</enableAboutMenu>
-    <enableAdd2DHistogram>false</enableAdd2DHistogram>
-    <enableAddAttributeMenuTool>true</enableAddAttributeMenuTool>
-    <enableAddBarChart>true</enableAddBarChart>
-    <enableAddCollaborationTool>false</enableAddCollaborationTool>
-    <enableAddColorLegend>true</enableAddColorLegend>
-    <enableAddColormapHistogram>true</enableAddColormapHistogram>
-    <enableAddCompoundRadViz>false</enableAddCompoundRadViz>
-    <enableAddCustomTool>false</enableAddCustomTool>
-    <enableAddDataFilter>true</enableAddDataFilter>
-    <enableAddDataSource>true</enableAddDataSource>
-    <enableAddDataTable>true</enableAddDataTable>
-    <enableAddDimensionSliderTool>false</enableAddDimensionSliderTool>
-    <enableAddGaugeTool>false</enableAddGaugeTool>
-    <enableAddGraphTool>true</enableAddGraphTool>
-    <enableAddHistogram>true</enableAddHistogram>
-    <enableAddLineChart>true</enableAddLineChart>
-    <enableAddMap>true</enableAddMap>
-    <enableAddPieChart>true</enableAddPieChart>
-    <enableAddPieChartHistogram>true</enableAddPieChartHistogram>
-    <enableAddRadViz>false</enableAddRadViz>
-    <enableAddRamachandranPlot>false</enableAddRamachandranPlot>
-    <enableAddRScriptEditor>true</enableAddRScriptEditor>
-    <enableAddScatterplot>true</enableAddScatterplot>
-    <enableAddThermometerTool>false</enableAddThermometerTool>
-    <enableAddTimeSliderTool>false</enableAddTimeSliderTool>
-    <enableAddWeaveDataSource>true</enableAddWeaveDataSource>
+    <enableAnnotation>true</enableAnnotation>
+    <enableAnnuliCircles>false</enableAnnuliCircles>
+    <enableAxisToolTips>true</enableAxisToolTips>
     <enableBitmapFilters>true</enableBitmapFilters>
+    <enableBrowseData>false</enableBrowseData>
     <enableCascadeAllWindows>true</enableCascadeAllWindows>
     <enableClearCurrentSelection>true</enableClearCurrentSelection>
     <enableCloseAllWindows>true</enableCloseAllWindows>
+    <enableCollaborationBar>false</enableCollaborationBar>
     <enableCreateSubsets>true</enableCreateSubsets>
     <enableDataMenu>true</enableDataMenu>
-    <enableDebugAlert>false</enableDebugAlert>
     <enableDrawCircle>true</enableDrawCircle>
     <enableDynamicTools>true</enableDynamicTools>
-    <enableEditDataSource>true</enableEditDataSource>
     <enableExportApplicationScreenshot>true</enableExportApplicationScreenshot>
     <enableExportCSV>true</enableExportCSV>
     <enableExportToolImage>true</enableExportToolImage>
     <enableFullScreen>false</enableFullScreen>
-    <enableFullscreen>true</enableFullscreen>
     <enableGeometryProbing>true</enableGeometryProbing>
+    <enableLoadMyData>false</enableLoadMyData>
+    <enableManageDataSources>true</enableManageDataSources>
     <enableManageSavedSelections>true</enableManageSavedSelections>
     <enableManageSavedSubsets>true</enableManageSavedSubsets>
     <enableMarker>true</enableMarker>
     <enableMenuBar>false</enableMenuBar>
     <enableMinimizeAllWindows>true</enableMinimizeAllWindows>
     <enableMouseWheel>true</enableMouseWheel>
-    <enableNewDataset>true</enableNewDataset>
-    <enableNewUserWizard>false</enableNewUserWizard>
     <enablePanelCoordsPercentageMode>true</enablePanelCoordsPercentageMode>
-    <enableProbeAnimation>true</enableProbeAnimation>
+    <enablePenTool>true</enablePenTool>
     <enableProbeLines>true</enableProbeLines>
     <enableProbeToolTip>true</enableProbeToolTip>
-    <enableRefreshHierarchies>false</enableRefreshHierarchies>
+    <enableRefreshHierarchies>true</enableRefreshHierarchies>
     <enableRemoveSubsets>true</enableRemoveSubsets>
     <enableRestoreAllMinimizedWindows>true</enableRestoreAllMinimizedWindows>
     <enableRightClick>true</enableRightClick>
@@ -85,17 +66,18 @@
     <enableSubsetsMenu>true</enableSubsetsMenu>
     <enableTileAllWindows>true</enableTileAllWindows>
     <enableToolAttributeEditing>true</enableToolAttributeEditing>
-    <enableToolControls>true</enableToolControls>
+    <enableToolControls>false</enableToolControls>
     <enableToolProbe>true</enableToolProbe>
     <enableToolSelection>true</enableToolSelection>
     <enableUserPreferences>true</enableUserPreferences>
+    <enableWeaveAnalystMode>false</enableWeaveAnalystMode>
     <enableWindowMenu>true</enableWindowMenu>
     <eventListeners encoding="dynamic"/>
     <geometryMetadataRequestMode>xyz</geometryMetadataRequestMode>
     <geometryMinimumScreenArea>1</geometryMinimumScreenArea>
-    <jriServiceURL>/WeaveServices/JRIService</jriServiceURL>
     <macroLibraries>weave.api::WeaveAPI</macroLibraries>
     <macros encoding="dynamic"/>
+    <maxComputationTimePerFrame>100</maxComputationTimePerFrame>
     <maxTooltipRecordsShown>1</maxTooltipRecordsShown>
     <pageTitle>Open Indicators Weave</pageTitle>
     <panelTitleTextFormat>
@@ -107,37 +89,59 @@
       <underline>false</underline>
     </panelTitleTextFormat>
     <pdbServiceURL>/WeavePDBService/PDBService</pdbServiceURL>
-    <probeInnerGlowAlpha>1</probeInnerGlowAlpha>
-    <probeInnerGlowBlur>5</probeInnerGlowBlur>
-    <probeInnerGlowColor>16777215</probeInnerGlowColor>
-    <probeInnerGlowStrength>10</probeInnerGlowStrength>
-    <probeOuterGlowAlpha>1</probeOuterGlowAlpha>
-    <probeOuterGlowBlur>3</probeOuterGlowBlur>
-    <probeOuterGlowColor>0</probeOuterGlowColor>
-    <probeOuterGlowStrength>3</probeOuterGlowStrength>
-    <probeToolTipBackgroundAlpha>1</probeToolTipBackgroundAlpha>
-    <probeToolTipBackgroundColor>NaN</probeToolTipBackgroundColor>
+    <probeBufferSize>10</probeBufferSize>
+    <probeInnerGlow>
+      <alpha>1</alpha>
+      <blurX>5</blurX>
+      <blurY>5</blurY>
+      <color>16777215</color>
+      <strength>10</strength>
+    </probeInnerGlow>
+    <probeLineFormatter>str = replace(lpad(string, 8, "	"), "	", "  ");
+str + " (" + title + ")"</probeLineFormatter>
+    <probeOuterGlow>
+      <alpha>1</alpha>
+      <blurX>3</blurX>
+      <blurY>3</blurY>
+      <color>0</color>
+      <strength>3</strength>
+    </probeOuterGlow>
+    <probeToolTipBackgroundAlpha>0.8</probeToolTipBackgroundAlpha>
+    <probeToolTipBackgroundColor>16777215</probeToolTipBackgroundColor>
     <probeToolTipFontColor>0</probeToolTipFontColor>
-    <probeToolTipMaxWidth>400</probeToolTipMaxWidth>
+    <probeToolTipMaxWidth>200</probeToolTipMaxWidth>
+    <recordsTooltipLocation>Lower left</recordsTooltipLocation>
     <rServiceURL>/WeaveServices/RService</rServiceURL>
     <searchServiceURLs>Wikipedia|http://en.wikipedia.org/wiki/Special:Search?search=
 Google|http://www.google.com/search?q=
 Google Images|http://images.google.com/images?q=
 Google Maps|http://maps.google.com/maps?t=h&amp;q=</searchServiceURLs>
-    <selectionAlphaAmount>0.5</selectionAlphaAmount>
+    <SecondaryKeyNumColumn_useGlobalMinMaxValues>true</SecondaryKeyNumColumn_useGlobalMinMaxValues>
+    <selectionAlphaAmount>1</selectionAlphaAmount>
     <selectionBlurringAmount>4</selectionBlurringAmount>
-    <shadowAlpha>0.5</shadowAlpha>
-    <shadowAngle>45</shadowAngle>
-    <shadowBlur>4</shadowBlur>
-    <shadowColor>0</shadowColor>
-    <shadowDistance>2</shadowDistance>
-    <showAttributeSelector>true</showAttributeSelector>
+    <selectionDropShadow>
+      <alpha>0.5</alpha>
+      <angle>45</angle>
+      <blurX>4</blurX>
+      <blurY>4</blurY>
+      <color>0</color>
+      <distance>2</distance>
+      <strength>1</strength>
+    </selectionDropShadow>
+    <selectionMode>rectangle</selectionMode>
+    <showAddAllButton>true</showAddAllButton>
+    <showCollaborationEditor>false</showCollaborationEditor>
+    <showCollaborationMenuItem>true</showCollaborationMenuItem>
     <showColorController>true</showColorController>
     <showCopyright>false</showCopyright>
+    <showEmptyProbeRecordIdentifiers>true</showEmptyProbeRecordIdentifiers>
     <showEquationEditor>true</showEquationEditor>
+    <showErrors>true</showErrors>
     <showKeyTypeInColumnTitle>false</showKeyTypeInColumnTitle>
     <showProbeToolTipEditor>true</showProbeToolTipEditor>
+    <showProbeWindow>true</showProbeWindow>
     <showSelectedRecordsText>true</showSelectedRecordsText>
+    <showSessionHistoryControls>false</showSessionHistoryControls>
     <showVisToolCloseDialog>false</showVisToolCloseDialog>
     <startupJavaScript/>
     <toolInteractions>
@@ -146,6 +150,7 @@ Google Maps|http://maps.google.com/maps?t=h&amp;q=</searchServiceURLs>
       <probe>move</probe>
       <select>drag</select>
       <selectAdd>ctrl,drag</selectAdd>
+      <selectAll>ctrl,dclick</selectAll>
       <selectRemove>ctrl,shift,drag</selectRemove>
       <zoom>shift,drag
 wheel</zoom>
@@ -153,7 +158,53 @@ wheel</zoom>
       <zoomOut>shift,dclick</zoomOut>
       <zoomToExtent>ctrl,alt,shift,dclick</zoomToExtent>
     </toolInteractions>
-    <version>1.0 Beta (Tue Jan 24 10:05:07 EST 2012)</version>
+    <toolToggles encoding="dynamic">
+      <LinkableBoolean name="CytoscapeWebTool">false</LinkableBoolean>
+      <LinkableBoolean name="CustomGraphicsTool">false</LinkableBoolean>
+      <LinkableBoolean name="DataFilter">false</LinkableBoolean>
+      <LinkableBoolean name="TransposedTableTool">true</LinkableBoolean>
+      <LinkableBoolean name="RamachandranPlotTool">false</LinkableBoolean>
+      <LinkableBoolean name="AttributeMenuTool">true</LinkableBoolean>
+      <LinkableBoolean name="CompoundBarChartTool">true</LinkableBoolean>
+      <LinkableBoolean name="ColormapHistogramTool">true</LinkableBoolean>
+      <LinkableBoolean name="ColorBinLegendTool">true</LinkableBoolean>
+      <LinkableBoolean name="CompoundRadVizTool">false</LinkableBoolean>
+      <LinkableBoolean name="CustomTool">false</LinkableBoolean>
+      <LinkableBoolean name="DataStatisticsTool">false</LinkableBoolean>
+      <LinkableBoolean name="DataTableTool">true</LinkableBoolean>
+      <LinkableBoolean name="DimensionSliderTool">false</LinkableBoolean>
+      <LinkableBoolean name="GaugeTool">false</LinkableBoolean>
+      <LinkableBoolean name="HistogramTool">true</LinkableBoolean>
+      <LinkableBoolean name="Histogram2DTool">false</LinkableBoolean>
+      <LinkableBoolean name="LineChartTool">true</LinkableBoolean>
+      <LinkableBoolean name="MapTool">true</LinkableBoolean>
+      <LinkableBoolean name="PieChartTool">true</LinkableBoolean>
+      <LinkableBoolean name="PieChartHistogramTool">false</LinkableBoolean>
+      <LinkableBoolean name="RTextEditor">true</LinkableBoolean>
+      <LinkableBoolean name="RadVizTool">false</LinkableBoolean>
+      <LinkableBoolean name="ScatterPlotTool">true</LinkableBoolean>
+      <LinkableBoolean name="SchafersMissingDataTool">false</LinkableBoolean>
+      <LinkableBoolean name="ThermometerTool">false</LinkableBoolean>
+      <LinkableBoolean name="TimeSliderTool">false</LinkableBoolean>
+      <LinkableBoolean name="GraphTool">false</LinkableBoolean>
+    </toolToggles>
+    <version>Nightly Build (Wed Jan 29 04:00:03 EST 2014)</version>
+    <visTextFormat>
+      <bold>false</bold>
+      <color>0</color>
+      <font>Sophia Nubian</font>
+      <italic>false</italic>
+      <size>11</size>
+      <underline>false</underline>
+    </visTextFormat>
+    <visTitleTextFormat>
+      <bold>false</bold>
+      <color>0</color>
+      <font>Sophia Nubian</font>
+      <italic>false</italic>
+      <size>11</size>
+      <underline>false</underline>
+    </visTitleTextFormat>
     <windowSnapGridSize>1%</windowSnapGridSize>
     <workspaceHeight>252</workspaceHeight>
     <workspaceMultiplier>1</workspaceMultiplier>
@@ -163,15 +214,7 @@ wheel</zoom>
     <internalDynamicColumn encoding="dynamic">
       <GlobalObjectReference name="defaultColorBinColumn"/>
     </internalDynamicColumn>
-    <ramp encoding="xml">
-      <colorRamp category="basic" source="OIC" name="5-Color">
-        <node position="0" color="0xEFF3FF"/>
-        <node position="0.25" color="0xBDD7E7"/>
-        <node position="0.5" color="0x6BAED6"/>
-        <node position="0.75" color="0x3182BD"/>
-        <node position="1" color="0x08519C"/>
-      </colorRamp>
-    </ramp>
+    <ramp>0xF5E6EB,0xCC8099,0xA31947,0x7A0029,0x4C001A</ramp>
     <recordColors/>
   </ColorColumn>
   <BinnedColumn name="defaultColorBinColumn">
@@ -189,16 +232,32 @@ wheel</zoom>
     <filter encoding="dynamic">
       <GlobalObjectReference name="defaultSubsetKeyFilter"/>
     </filter>
-    <internalDynamicColumn encoding="dynamic"/>
+    <internalDynamicColumn encoding="dynamic">
+      <ReferencedColumn>
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>TransposedDataSource</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy title="TransposedDataSource">
+                <category title="Source column metadata">
+                  <attribute title="shortTitle" TransposedDataSource_propertyName="shortTitle"/>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+    </internalDynamicColumn>
   </FilteredColumn>
   <KeyFilter name="defaultSubsetKeyFilter">
-    <excluded/>
-    <included>MUNI_ID,2</included>
+    <excluded encoding="csv">TransposedDataSource,ReferencedColumn5,ReferencedColumn7,ReferencedColumn9,ReferencedColumn6,ReferencedColumn8,ReferencedColumn21,ReferencedColumn17,ReferencedColumn10,ReferencedColumn18,ReferencedColumn22,ReferencedColumn15,ReferencedColumn16,ReferencedColumn14,ReferencedColumn13,ReferencedColumn19,ReferencedColumn20,ReferencedColumn12,ReferencedColumn11</excluded>
+    <filters encoding="dynamic"/>
+    <included encoding="csv">MUNI_ID,{{ regionalunit.unitid }}</included>
     <includeMissingKeys>false</includeMissingKeys>
     <includeMissingKeyTypes>true</includeMissingKeyTypes>
   </KeyFilter>
-  <KeySet name="defaultSelectionKeySet"/>
-  <KeySet name="defaultProbeKeySet"/>
+  <KeySet encoding="dynamic" name="defaultSelectionKeySet"/>
+  <KeySet encoding="dynamic" name="defaultProbeKeySet"/>
   <KeySet name="alwaysHighlightKeySet"/>
   <LinkableHashMap encoding="dynamic" name="savedSelections"/>
   <LinkableHashMap encoding="dynamic" name="savedSubsets"/>
@@ -206,305 +265,744 @@ wheel</zoom>
     <attributeHierarchy encoding="xml">
       <hierarchy name="MetroBoston DataCommon">
         <category title="Demographics" name="Data Tables">
-          <category source="Census" description="2000 and 2010" name="Census Mail Participation Rate (Municipal)" title="Census Mail Participation Rate, 2000 &amp; 2010 (Municipal)" subject="Census"/>
-          <category source="ACS" name="Citizenship Status (Municipality)" title="Citizenship Status, 5yr Avg 2005-09 (Municipal)" subject="Demographics"/>
-          <category title="Geographic Mobility, 5yr Avg 2005-09 (Municipal)" source="ACS" name="Geographic Mobility (Municipal)"/>
-          <category source="ACS" name="Linguistic Isolation (Municipal)" title="Linguistic Isolation, 5yr Avg 2005-09 (Municipal)" subject="Demographics"/>
-          <category source="Census" name="Population By Age 2000 - 2010 (Municipality)" title="Population By Age, 2000 &amp; 2010 (Municipality)" subject="Demographics"/>
-          <category source="Census" name="Population By Gender and Age with Change, 2000 - 2010 (Municipal)" title="Population By Gender and Age with Change, 2000 &amp; 2010 (Municipal)" subject="Demogrpahics"/>
-          <category source="Census" description="Census 2000" name="Population By Gender and Age, 2000 (Census Tracts)" title="Population By Gender and Age, 2000 (Census Tracts)" subject="Demographics"/>
-          <category source="Census" description="Census" name="Population By Gender and Age, 2010 (Census Tracts)" title="Population By Gender and Age, 2010 (Census Tracts)" subject="Demographics"/>
-          <category title="Population by Race/Ethnicity with Change, 2000 &amp; 2010 (Municipal)" source="Census" name="Population by Race with Change, 2000-2010 (Municipal)"/>
-          <category source="Census" description="Census 2000" name="Population by Race, 2000 (Census Tract)" title="Population by Race/Ethnicity, 2000 (Census Tract)" subject="Demographics"/>
-          <category source="Census" description="Census 2010" name="Population by Race, 2010 (Census Tract)" title="Population by Race/Ethnicity, 2010 (Census Tract)" subject="Demographics"/>
-          <category source="MAPC, 2008" name="Employment Projections by Sector, Current Trends/MetroFuture (Municipal)" title="Projected Employment, Current Trends/MetroFuture, 2030 (Municipal)" subject="MetroFuture"/>
-          <category source="MAPC, 2008" name="Employment Projections by Sector, Current Trends/MetroFuture (TAZ)" title="Projected Employment, Current Trends/MetroFuture, 2030 (TAZ)" subject="MetroFuture"/>
-          <category source="MAPC, 2008" name="Population Projection by Age Group, Current Trends, (Municipal)" title="Projected Population by Age Group, Current Trends, 2030 (Municipal)" subject="MetroFuture"/>
-          <category source="MAPC, 2008" name="Population Projection by Age Group, MetroFuture (Municipal)" title="Projected Population by Age Group, MetroFuture, 2030 (Municipal)" subject="MetroFuture"/>
-          <category source="MAPC, 2008" name="Population, Household and Employment Projection, Current Trends/MetroFuture (Municipal)" title="Projected Population, Households and Employment, Current Trends/MetroFuture 2030 (Municipal)" subject="MetroFuture"/>
-          <category source="MAPC, 2008" name="Population, Household and Employment Projection, Current Trends/MetroFuture (TAZ)" title="Projected Population, Households and Employment, Current Trends/MetroFuture 2030 (TAZ)" subject="MetroFuture"/>
-          <category source="Census" name="Population by Minorities, 2000-2010 (Municipal)" title="Minority Population, 2000 &amp; 2010 (Municipal)" subject="Demographics"/>
+          <category title="Block Group Data" name="Data Tables">
+            <category name="Environmental Justice Populations (Block Groups)" title="Environmental Justice Populations, 2000 (Block Groups)" source="Census" subject="Demographics"/>
+            <category weaveEntityId="28226" title="Language Spoken at Home by Ability to Speak English, 5yr Avg 2008-12 (Block Groups)" source="ACS" subject="Demographics"/>
+            <category weaveEntityId="28088" title="Linguistic Isolation, 5yr Avg 2008-12 (Block Groups)" source="ACS" subject="Demographics"/>
+            <category weaveEntityId="24241" title="Median Age, 5yr Avg 2008-12 (Block Groups)" source="ACS" subject="Demographics"/>
+            <category weaveEntityId="26034" title="Population by Age, 2010 (Block Groups)" source="Census" subject="Demographics"/>
+            <category weaveEntityId="28294" title="Population by Race, 2010 (Block Groups)" source="Census" subject="Demographics"/>
+            <category weaveEntityId="28376" title="Population by Race/Ethnicity, 2010 (Block Groups)" source="Census" subject="Demographics"/>
+          </category>
+          <category title="Census Tract Data" name="Data Tables">
+            <category weaveEntityId="24751" title="Citizenship Status, 5yr Avg 2008-12 (Census Tracts)" source="ACS" subject="Demographics"/>
+            <category weaveEntityId="24478" title="Citizenship Status by Age and Gender, 5yr Avg 2008-12 (Census Tracts)" source="ACS" subject="Demographics"/>
+            <category weaveEntityId="24307" title="Geographic Mobility: In Migration, 5yr Avg 2008-12 (Census Tracts)" source="ACS" subject="Demographics"/>
+            <category weaveEntityId="28158" title="Language Spoken at Home by Ability to Speak English, 5yr Avg 2008-12 (Census Tracts)" source="ACS" subject="Demographics"/>
+            <category weaveEntityId="26683" title="Linguistic Isolation, 5yr Avg 2008-12 (Census Tracts)" source="ACS" subject="Demographics"/>
+            <category weaveEntityId="24175" title="Median Age, 5yr Avg 2008-12 (Census Tracts)" source="ACS" subject="Demographics"/>
+            <category weaveEntityId="25971" title="Population by Age, 2010 (Census Tracts)" source="Census" subject="Demographics"/>
+            <category weaveEntityId="28314" title="Population by Race, 2010 (Census Tracts)" source="Census" subject="Demographics"/>
+            <category name="Population By Gender and Age, 2000 (Census Tracts)" description="Census 2000" title="Population By Gender and Age, 2000 (Census Tracts)" source="Census" subject="Demographics"/>
+            <category name="Population By Gender and Age, 2010 (Census Tracts)" description="Census" title="Population By Gender and Age, 2010 (Census Tracts)" source="Census" subject="Demographics"/>
+            <category name="Population by Race, 2000 (Census Tract)" description="Census 2000" title="Population by Race/Ethnicity, 2000 (Census Tract)" source="Census" subject="Demographics"/>
+            <category weaveEntityId="28398" title="Population by Race/Ethnicity, 2010 (Census Tracts)" source="Census" subject="Demographics"/>
+            <category name="Population Over/Under 18, 2010 (Census Tract)" description="Census 2010" title="Population Over/Under 18, 2010 (Census Tract)" subject="Demographics"/>
+          </category>
+          <category title="Municipal Data" name="Data Tables">
+            <category name="Census Mail Participation Rate (Municipal)" description="2000 and 2010" title="Census Mail Participation Rate, 2000 &amp; 2010 (Municipal)" source="Census" subject="Demographics"/>
+            <category weaveEntityId="22984" title="Citizenship Status, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Demographics"/>
+            <category weaveEntityId="24614" title="Citizenship Status by Age and Gender, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Demographics"/>
+            <category title="Environmental Justice Summary, 2010 (Municipal)" weaveEntityId="28420"/>
+            <category weaveEntityId="24343" title="Geographic Mobility: In Migration, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Demographics"/>
+            <category weaveEntityId="24380" title="Geographic Mobility: Out Migration, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Demographics"/>
+            <category weaveEntityId="24039" title="Language Spoken at Home by Ability to Speak English, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Demographics"/>
+            <category weaveEntityId="23968" title="Linguistic Isolation, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Demographics"/>
+            <category weaveEntityId="24108" title="Median Age, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Demographics"/>
+            <category title="Population by White/Minority, 2000 &amp; 2010 (Municipal)" weaveEntityId="28432"/>
+            <category name="Population By Age 2000 - 2010 (Municipality)" title="Population By Age, 2000 &amp; 2010 (Municipality)" source="Census" subject="Demographics"/>
+            <category weaveEntityId="21872" title="Population by Age, 2010 (Municipal)" source="Census" subject="Demographics"/>
+            <category weaveEntityId="21757" title="Population by Decade (Municipal)" source="Census" subject="Demographics"/>
+            <category weaveEntityId="28356" title="Population by Race, 2010 (Municipal)" source="Census" subject="Demographics"/>
+            <category weaveEntityId="28334" title="Population by Race/Ethnicity, 2010 (Municipal)" source="Census" subject="Demographics"/>
+            <category weaveEntityId="27969" title="Population with Projections, 2000-2030 (Municipal)" source="MAPC; Donahue" subject="Demographics"/>
+            <category name="Population By Gender and Age with Change, 2000 - 2010 (Municipal)" title="Population By Gender and Age with Change, 2000 &amp; 2010 (Municipal)" source="Census" subject="Demographics"/>
+            <category name="Population by Household and Group Quarters (MetroFuture Municipalities)" title="Population by Household and Group Qaurters (MetroFuture Municipalities)" source="Census" subject="Demographics"/>
+            <category title="Population by Race with Change, 2000-2010 (Municipal)" weaveEntityId="28447"/>
+            <category name="Population Over/Under 18, 2010 (Municipal)" description="Census, 2010" title="Population Over/Under 18, 2010 (Municipal)" subject="Demographics"/>
+          </category>
+        </category>
+        <category title="Arts and Culture" name="Data Tables">
+          <category subject="Arts and Culture" name="Arts Agency Appropriations by Fiscal Year (US States)" title="Arts Agency Appropriations by Fiscal Year (US States)" source="TBF" date="2010-12"/>
+          <category subject="Arts and Culture" name="Arts and Culture Points" title="Arts and Culture Points of Interest, 2007" source="NEFA" date="2007"/>
+          <category subject="Arts and Culture" name="Arts Related Businesses, 2012 (County)" description="Americans for the Arts, Dunn &amp; Bradstreet data" title="Arts Related Businesses, 2012 (County)" date="2012"/>
+          <category title="Arts Related Employment, 2012 (County)" date="2012" name="Arts Related Employment, 2012 (County)" description="Americans for the Arts, Dunn &amp; Bradstreet data" source="Dunn &amp; Bradstreet" subject="Arts and Culture"/>
+          <category name="Farmers Markets summary (Municipal)" title="Farmers Markets summary (Municipal)" subject="Arts and Culture"/>
+          <category name="Libraries" title="Libraries" source="MassGIS, 2005" subject="Education"/>
         </category>
         <category title="Civic Vitality and Governance" name="Data Tables">
-          <category title="Arts and Culture Points of Interest" source="NEFA, 2007" name="Arts and Culture Points"/>
-          <category source="Community Preservation Coalition, 2011" name="Community Preservation Act votes (Municipal)" title="Community Preservation Act Status (Municipal)" subject="Civic Vitality ad Governance"/>
-          <category title="Forms of Municipal Governance (Municipal)" source="MMA, Secretary of State, 2011" name="Forms of Municipal Governance (Municipal)"/>
-          <category source="State Elections Division 2004-2010" name="Voters (Municipal)" title="Registered Voters, by Year 2004-2010 (Municipal)" subject="Civic Vitality ad Governance"/>
-          <category title="State Representatives (MA House Districts)" source="MassGIS, 2011" name="MA House Districts"/>
-          <category title="State Senators (MA Senate Districts)" source="MassGIS, 2011" name="MA Senate Districts"/>
-          <category title="US Representatives (US Congressional Districts)" source="MassGIS, 2007" name="US Congressional Districts"/>
-          <category title="Property Crimes, 2001-09 (Municipal)" name="Property Crimes (Municipal)" subject="Public Safety"/>
-          <category title="Violent Crimes, 2001-09 (Municipal)" name="Violent Crimes (Municipal)" subject="Public Safety"/>
+          <category name="Community Preservation Act votes (Municipal)" title="Community Preservation Act Status (Municipal)" source="Community Preservation Coalition, 2011" subject="Civic Vitality"/>
+          <category name="Forms of Municipal Governance (Municipal)" title="Forms of Municipal Governance (Municipal)" source="MMA, Secretary of State, 2011" subject="Civic Vitality"/>
+          <category name="Civic: Foundation Stats by Year (MSA)" title="Foundation Stats by Year (Boston MSA)" source="Foundation Center" subject="Civic Vitality"/>
+          <category name="Voters (Municipal)" title="Registered Voters, by Year 2004-2010 (Municipal)" source="State Elections Division 2004-2010" subject="Civic Vitality"/>
+          <category name="Civic: Special Senate Election 2010 Results (Municipal)" description="2010" title="Special Senate Election 2010 Results (Municipal)" subject="Civic Vitality"/>
+          <category name="MA House Districts" title="MA House Legislative Districts (2002)" source="MassGIS, 2011" subject="Civic Vitality"/>
+          <category name="MA House Districts (2012)" title="MA House Legislative Districts (2012)" subject="Civic Vitality"/>
+          <category name="MA Senate Districts" title="MA Senate Legislative Districts (2002)" source="MassGIS, 2011" subject="Civic Vitality"/>
+          <category name="MA Senate Districts (2012)" title="MA Senate Legislative Districts (2012)" subject="Civic Vitality"/>
+          <category name="US Congressional Districts" title="US Representatives (US Congressional Districts)" source="MassGIS, 2007" subject="Civic Vitality"/>
         </category>
         <category title="Economy" name="Data Tables">
-          <category source="MA EOLWD ES-202, 2011" name="Average Weekly Wages by Sector (Municipal)" title="Average Weekly Wages by Sector, by Year 2001-2010 (Municipal)" subject="Economy"/>
-          <category name="Children in Poverty by Family Type (Census Tracts)" description="ACS 2005-09" source="ACS" title="Children in Poverty by Family Type, 5yr Avg 2005-09 (Census 2000 Tracts)" subject="Economy"/>
-          <category source="ES-202" name="Employment By Sector 2010 (Municipal) - Tranposed" title="Employment By Sector 2010 (Municipal) - Tranposed" subject="Economy"/>
-          <category source="MA EOLWD ES-202, 2011" name="Employment By Sector 2010 (Municipal)" title="Employment By Sector, Place of Work, 2010 (Municipal)" subject="Economy"/>
-          <category source="MA EOLWD ES-202, 2011" name="Employment by Sector (Municipal)" title="Employment by Sector, Place of Work, by Year 2001-2010 (Municipal)" subject="Economy"/>
-          <category source="MA EOLWD ES-202, 2011" name="Establishment by Sector (Municipal)" title="Establishment by Sector, Place of Work, by Year 2001-2010 (Municipal)" subject="Economy"/>
-          <category title="Labor Force and Unemployment, Place of Residence, by Year 2006-10 (Municipal)" source="MA EOLWD ES-202, 2011" name="Labor Force and Unemployment, Place of Residence, by Year (Municipal)"/>
-          <category title="Local Area Unemployment Statistics (Municipal)" source="MA EOLWD, 2006-2010" name="Local Area Unemployment Statistics (Municipality)">
-            <attribute dataType="string" name="muni_id" title="Municipal ID" dataTable="Local Area Unemployment Statistics (Municipality)" keyType="MUNI_ID"/>
-            <attribute dataType="string" name="municipal" title="Municipality" dataTable="Local Area Unemployment Statistics (Municipality)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="lf_06" title="Labor Force, 2006" dataTable="Local Area Unemployment Statistics (Municipality)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="emp_06" title="Employed Population, 2006" dataTable="Local Area Unemployment Statistics (Municipality)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="unemp_06" title="Unemployed Population, 2006" dataTable="Local Area Unemployment Statistics (Municipality)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="unemrt_06" title="Unemployed Rate, 2006" dataTable="Local Area Unemployment Statistics (Municipality)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="lf_07" title="Labor Force, 2007" dataTable="Local Area Unemployment Statistics (Municipality)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="emp_07" title="Employed Population, 2007" dataTable="Local Area Unemployment Statistics (Municipality)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="unemrt_07" title="Unemployed Rate, 2007" dataTable="Local Area Unemployment Statistics (Municipality)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="unemp_07" title="Unemployed Population, 2007" dataTable="Local Area Unemployment Statistics (Municipality)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="lf_08" title="Labor Force, 2008" dataTable="Local Area Unemployment Statistics (Municipality)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="emp_08" title="Employed Population, 2008" dataTable="Local Area Unemployment Statistics (Municipality)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="unemp_08" title="Unemployed Population, 2008" dataTable="Local Area Unemployment Statistics (Municipality)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="unemrt_08" title="Unemployed Rate, 2008" dataTable="Local Area Unemployment Statistics (Municipality)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="lf_09" title="Labor Force, 2009" dataTable="Local Area Unemployment Statistics (Municipality)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="emp_09" title="Employed Population, 2009" dataTable="Local Area Unemployment Statistics (Municipality)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="unemp_09" title="Unemployed Population, 2009" dataTable="Local Area Unemployment Statistics (Municipality)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="unemrt_09" title="Unemployed Rate, 2009" dataTable="Local Area Unemployment Statistics (Municipality)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="lf_10" title="Labor Force, 2010" dataTable="Local Area Unemployment Statistics (Municipality)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="emp_10" title="Employed Population, 2010" dataTable="Local Area Unemployment Statistics (Municipality)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="unemp_10" title="Unemployed Population, 2010" dataTable="Local Area Unemployment Statistics (Municipality)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="unemrt_10" title="Unemployed Rate, 2010" dataTable="Local Area Unemployment Statistics (Municipality)" keyType="MUNI_ID"/>
+          <category title="Poverty" name="Data Tables">
+            <category weaveEntityId="26321" title="Population in Poverty, 5yr Avg 2008-12 (Census Tracts)" source="ACS" subject="Economy"/>
+            <category weaveEntityId="26333" title="Population in Poverty, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Economy"/>
+            <category weaveEntityId="24405" title="Children in Poverty by Family Type, 5yr Avg 2008-12 (Census Tracts)" source="ACS" subject="Economy"/>
+            <category weaveEntityId="24441" title="Children in Poverty by Family Type, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Economy"/>
+            <category weaveEntityId="26753" title="Poverty by Age and Gender, 5yr Avg 2008-12 (Census Tracts)" source="ACS" subject="Economy"/>
+            <category weaveEntityId="26881" title="Poverty by Age and Gender, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Economy"/>
+            <category weaveEntityId="29768" title="Poverty by Household Type, 5yr Avg 2008-12 (Block Groups)" source="ACS" subject="Economy"/>
+            <category weaveEntityId="27010" title="Poverty by Household Type, 5yr Avg 2008-12 (Census Tracts)" source="ACS" subject="Economy"/>
+            <category weaveEntityId="23931" title="Poverty by Household Type, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Economy"/>
+            <category weaveEntityId="26346" title="Poverty by Race and Age, 5yr Avg 2008-12 (Census Tracts)" source="ACS" subject="Economy"/>
+            <category weaveEntityId="26514" title="Poverty by Race and Age, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Economy"/>
           </category>
-          <category title="Total Employment, Place of Work, by Year 1986-2010 (Municipal)" source="MA EOLWD ES-202, 2011" name="Employment (Municipal)"/>
+          <category name="Average Weekly Wages by Sector (Municipal)" title="Average Weekly Wages by Sector, by Municipality 2001-2010 (Municipal)" source="MA EOLWD ES-202, 2011" subject="Economy"/>
+          <category name="Average Weekly Wages by Sector by Year (Municipal)" title="Average Weekly Wages by Sector, by Year 2001-2010 (Municipal)" source="MA EOLWD ES-202, 2011" subject="Economy"/>
+          <category weaveEntityId="29861" title="Employment By Sector, Place of Work, 2013 (Municipal)" source="MA EOLWD ES-202" subject="Economy"/>
+          <category weaveEntityId="21726" title="Employment By Sector, Place of Work by Year (Municipal)" source="MA EOLWD ES-202" subject="Economy"/>
+          <category name="Employment Characteristics by Age, Race and Education, 5yr avg 2006-10 (Census Tracts)" title="Employment Characteristics by Age, Race and Education, 5yr avg 2006-10 (Census Tracts)" source="ACS" subject="Economy"/>
+          <category name="Employment Characteristics by Age, Race and Education, 5yr avg 2006-10 (Municipal)" title="Employment Characteristics by Age, Race and Education, 5yr avg 2006-10 (Municipal)" source="ACS" subject="Economy"/>
+          <category name="GINI Index, ACS 2006-10 (Census Tracts)" title="Gini Index, 5yr Avg 2006-10 (Census Tracts)" source="ACS" subject="Economy"/>
+          <category name="Gini Index, ACS 2006-10 (Municipal)" title="Gini Index, 5yr Avg 2006-10 (Municipal)" source="ACS" subject="Economy"/>
+          <category name="Economy: High Tech Employment (States)" title="High Tech Employment (States)" source="Census Bureau special tabulations (2011)" subject="Economy"/>
+          <category name="Economy: High Tech Establishments (States)" title="High Tech Establishments (States)" source="Census Bureau special tabulations (2011)" subject="Economy"/>
+          <category name="Housing and Transportation Cost (Municipal)" title="Housing and Transportation Cost (Municipal)" subject="Economy"/>
+          <category weaveEntityId="21822" title="Labor Force and Unemployment, Place of Residence, by Year 2006-12 (Municipal)" source="MA EOLWD ES-202, 2013" subject="Economy"/>
+          <category name="Local Area Unemployment Statistics (Municipality)" title="Local Area Unemployment Statistics (Municipal)" source="MA EOLWD, 2006-2010" subject="Economy"/>
+          <category name="Mass. Budget Funding by Year" description="2001-2012" title="Mass. Budget Funding by Year" source="Mass Budget and Policy Center, 2001-12" subject="Economy"/>
+          <category weaveEntityId="29816" title="Median Household Income by Family/Non-Family 5yr Avg 2008-12 (Block Groups)" source="ACS" subject="Economy"/>
+          <category weaveEntityId="29804" title="Median Household Income by Family/Non-Family 5yr Avg 2008-12 (Census Tracts)" source="ACS" subject="Economy"/>
+          <category weaveEntityId="23880" title="Median Household Income by Family/Non-Family 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Economy"/>
+          <category weaveEntityId="22267" title="Median Household Income by Race, 5yr Avg 2008-12 (Block Groups)" source="ACS" subject="Economy"/>
+          <category weaveEntityId="22293" title="Median Household Income by Race, 5yr Avg 2008-12 (Census Tracts)" source="ACS" subject="Economy"/>
+          <category weaveEntityId="22319" title="Median Household Income by Race, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Economy"/>
+          <category weaveEntityId="22346" title="Median Household Income by Tenure, 5yr Avg 2008-12 (Census Tracts)" source="ACS" subject="Economy"/>
+          <category weaveEntityId="22358" title="Median Household Income by Tenure, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Economy"/>
+          <category weaveEntityId="29845" title="Public Assistance, 5yr Avg 2008-12 (Census Tracts)" source="ACS" subject="Economy"/>
+          <category weaveEntityId="29828" title="Public Assistance, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Economy"/>
+          <category name="Employment (Municipal)" title="Total Employment, Place of Work, by Year 1986-2010 (Municipal)" source="MA EOLWD ES-202, 2011" subject="Economy"/>
+          <category weaveEntityId="27650" title="Unemployment by Year (Municipal)" source="BLS" subject="Economy"/>
+          <category name="Women Board of Directors (Massachusetts)" title="Women Board of Directors (Massachusetts)" subject="Economy"/>
         </category>
         <category title="Education" name="Data Tables">
           <category title="School Districts data" name="Data Tables">
-            <category title="School Districts" source="DESE" name="School Districts"/>
-            <category source="DESE, 2011" name="School Districts: Enrollment, 2010-11" title="District Enrollment, 2010-11 (School Districts)" subject="Education"/>
-            <category title="District Enrollment, by year 2006-11 (School Districts)" source="DESE, 2011" name="School Districts: Enrollment (multi-year)"/>
-            <category source="DESE, 2011" name="School Districts: Graduation Plans by year" title="District Graduation Plans, by year 2006-11 (School Districts)" subject="Education"/>
-            <category title="District Graduation Plans, by year 2006-11 (School Districts) (Dimension Slider only)" source="DESE, 2011" name="School Districts: Graduation Plans (multi-year)"/>
-            <category name="School Districts: Technology by year" description="DESE" source="DESE, 2011" title="District Technology, by year 2003-10 (School Districts)" subject="Education"/>
-            <category title="Districts by Municipality, 2011" source="DESE, MAPC" name="School Districts by Town"/>
+            <category name="School Districts" title="School Districts" source="DESE, 2011" subject="Education"/>
+            <category name="School Districts: Arts Teachers (multi-year)" description="DESE, 2008-11" title="District Arts Teachers (multi-year)" source="DESE, 2008-11" subject="Education"/>
+            <category name="School Districts: Enrollment by Grade by Year" title="Enrollment by Grade by Year (School Districts)" source="MA DESE" subject="Education"/>
+            <category name="School Districts: Enrollment by Group by Year" title="Enrollment by Group by Year (School Districts)" source="MA DESE" subject="Education"/>
+            <category name="School Districts: Graduation Plans by year" title="Graduation Plans, by year 2006-11 (School Districts)" source="DESE, 2011" subject="Education"/>
+            <category name="School Districts: MCAS Grade 03 Math Proficiency by Year" title="MCAS Grade 03 Math Proficiency by Year (School Districts)" subject="Education"/>
+            <category name="School Districts: MCAS Grade 03 Reading Proficiency by Year" title="MCAS Grade 03 Reading Proficiency by Year (School Districts)" subject="Education"/>
+            <category name="School Districts: MCAS Grade 08 Math Proficiency by Year" title="MCAS Grade 08 Math Proficiency by Year (School Districts)" subject="Education"/>
+            <category name="School Districts: Student Risk Indicators By Year" title="Student Risk Indicators By Year (School Districts)" subject="Education"/>
+            <category name="School Districts: Technology by year" description="DESE" title="Technology, by year 2003-10 (School Districts)" source="DESE, 2011" subject="Education"/>
           </category>
           <category title="School Municipal Districts data" name="Data Tables">
-            <category source="DESE, 2011" name="School Municipal Districts: Enrollment, 2009-10" title="Enrollment, 2009-10 (School Municipal Districts)" subject="Education"/>
-            <category title="Enrollment, 2010-11 (School Municipal Districts)" source="DESE, 2011" name="School Municipal Districts: Enrollment, 2010-11"/>
-            <category title="Enrollment, by year 2006-11 (School Municipal Districts)" source="DESE, 2011" name="School Municipal Districts: Enrollment (multi-year)"/>
-            <category name="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" description="MCAS, 2011" source="DESE" title="MCAS Grade 03 Math Proficiency by Group, 2010-11 (School Municipal Districts)" subject="Education"/>
-            <category title="MCAS Grade 03 Reading Proficiency by Group, 2010-11 (School Municipal Districts)" source="DESE, 2011" name="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011"/>
-            <category name="School Municipal Districts: MCAS Grade 3 All Students Math Proficiency (multi-year)" description="2005-06 thru 2010-11" source="DESE, 2011" title="MCAS Grade 03 Total Math Proficiency, by Year 2006-11 (School Municipal Districts)" subject="Education"/>
-            <category title="MCAS Grade 03 Total Reading Proficiency, 2010-11 (School Municipal Districts)" source="DESE, 2011" name="School Municipal Districts: MCAS Grade 03 Reading Proficiency, 2011"/>
-            <category title="MCAS Grade 03 Total Reading Proficiency, by Year 2006-11 (School Municipal Districts)" source="DESE, 2011" name="School Municipal Districts: MCAS Grade 3 All Students Reading Proficiency (multi-year)"/>
-            <category source="DESE, 2011" name="School Municipal Districts: MCAS Grade 08 Math Proficiency for Student Groups, 2011" title="MCAS Grade 08 Math Proficiency by Group, 2010-11 (School Municipal Districts)" subject="Education"/>
-            <category source="DESE, 2011" name="School Municipal Districts: MCAS Grade 08 Reading Proficiency for Student Groups, 2011" title="MCAS Grade 08 Reading Proficiency by Group, 2010-11 (School Municipal Districts)" subject="Education"/>
-            <category name="School Municipal Districts: MCAS Grade 08 Science Proficiency for Student Groups, 2011" description="MCAS" source="DESE, 2011" title="MCAS Grade 08 Science Proficiency by Group, 2010-11 (School Municipal Districts)" subject="Education"/>
-            <category name="School Municipal Districts: MCAS Grade 10 Math Proficiency for Student Groups, 2011" description=" MCAS" source="DESE, 2011" title="MCAS Grade 10 Math Proficiency by Group, 2010-11 (School Municipal Districts)"/>
-            <category title="MCAS Grade 10 Reading Proficiency by Group, 2010-11 (School Municipal Districts)" source="DESE, 2011" name="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011"/>
-            <category title="MCAS Grade 10 Science Proficiency by Group, 2010-11 (School Municipal Districts)" source="DESE, 2011" name="School Municipal Districts: MCAS Grade 10 Science Proficiency for Student Groups, 2011"/>
+            <category name="School Districts by Town" title="Districts by Municipality, 2011" source="DESE, MAPC" subject="Education"/>
+            <category name="School Municipal Districts: Enrollment, 2010-11" title="Enrollment, 2010-11 (School Municipal Districts)" source="DESE, 2011" subject="Education"/>
+            <category name="School Municipal Districts: Enrollment (multi-year)" title="Enrollment, by year 2006-11 (School Municipal Districts)" source="DESE, 2011" subject="Education"/>
+            <category name="School Municipal Districts: MCAS Grade 03 Math Proficiency for Student Groups, 2011" description="MCAS, 2011" title="MCAS Grade 03 Math Proficiency by Group, 2010-11 (School Municipal Districts)" source="DESE" subject="Education"/>
+            <category name="School Municipal Districts: MCAS Grade 03 Reading Proficiency for Student Groups, 2011" title="MCAS Grade 03 Reading Proficiency by Group, 2010-11 (School Municipal Districts)" source="DESE, 2011" subject="Education"/>
+            <category name="School Municipal Districts: MCAS Grade 08 Math Proficiency for Student Groups, 2011" title="MCAS Grade 08 Math Proficiency by Group, 2010-11 (School Municipal Districts)" source="DESE, 2011" subject="Education"/>
+            <category name="School Municipal Districts: MCAS Grade 08 Reading Proficiency for Student Groups, 2011" title="MCAS Grade 08 Reading Proficiency by Group, 2010-11 (School Municipal Districts)" source="DESE, 2011" subject="Education"/>
+            <category name="School Municipal Districts: MCAS Grade 08 Science Proficiency for Student Groups, 2011" description="MCAS" title="MCAS Grade 08 Science Proficiency by Group, 2010-11 (School Municipal Districts)" source="DESE, 2011" subject="Education"/>
+            <category name="School Municipal Districts: MCAS Grade 10 Math Proficiency for Student Groups, 2011" description=" MCAS" title="MCAS Grade 10 Math Proficiency by Group, 2010-11 (School Municipal Districts)" source="DESE, 2011" subject="Education"/>
+            <category name="School Municipal Districts: MCAS Grade 10 Reading Proficiency for Student Groups, 2011" title="MCAS Grade 10 Reading Proficiency by Group, 2010-11 (School Municipal Districts)" source="DESE, 2011" subject="Education"/>
+            <category name="School Municipal Districts: MCAS Grade 10 Science Proficiency for Student Groups, 2011" title="MCAS Grade 10 Science Proficiency by Group, 2010-11 (School Municipal Districts)" source="DESE, 2011" subject="Education"/>
+            <category name="School Municipal Districts: Teacher Data by Year" title="Teacher Data by Year, 2006-11 (School Municipal Districts)" source="DESE" subject="Education"/>
           </category>
           <category title="Schools data" name="Data Tables">
-            <category title="BPS Circle of Promise Schools" source="DESE, 2011" name="Boston Circle of Promise Schools"/>
-            <category title="BPS Schools" source="DESE, 2011" name="Boston Schools"/>
-            <category title="BPS Turnaround Schools" source="DESE, 2011" name="Boston Turnaround Schools"/>
-            <category title="Schools" source="DESE, 2011" name="Schools"/>
-            <category title="Enrollment, 2010-11 (Schools)" source="DESE, 2011" name="Schools: Enrollment, 2010-11"/>
-            <category title="Enrollment, by Year 2006-11 (Schools)" source="DESE 2011" name="Schools: Enrollment (multi-year)"/>
-            <category title="MCAS Grade 03 Math Proficiency by Group, 2010-11 (Schools)" source="DESE, 2011" name="Schools: MCAS Grade 03 Math Proficiency for Student Groups, 2011"/>
-            <category title="MCAS Grade 03 Reading Proficiency by Group, 2010-11 (Schools)" source="DESE, 2011" name="Schools: MCAS Grade 03 Reading Proficiency for Student Groups, 2011"/>
-            <category title="MCAS Grade 03 Total Reading Proficiency, 2010-11 (Schools)" source="DESE, 2011" name="Schools: MCAS Grade 03 Reading Proficiency, 2011"/>
-            <category source="DESE, 2011" name="Schools: MCAS Grade 08 Math Proficiency for Student Groups, 2011" title="MCAS Grade 08 Math Proficiency by Group, 2010-11 (Schools)" subject="Education"/>
-            <category source="DESE, 2011" name="Schools: MCAS Grade 08 Reading Proficiency for Student Groups, 2011" title="MCAS Grade 08 Reading Proficiency by Group, 2010-11 (Schools)" subject="Education"/>
-            <category source="DESE, 2011" name="Schools: MCAS Grade 08 Science Proficiency for Student Groups, 2011" title="MCAS Grade 08 Science Proficiency by Group, 2010-11 (Schools)" subject="Education"/>
-            <category title="MCAS Grade 10 Math Proficiency by Group, 2010-11 (Schools)" source="DESE, 2011" name="Schools: MCAS Grade 10 Math Proficiency for Student Groups, 2011"/>
-            <category title="MCAS Grade 10 Reading Proficiency by Group, 2010-11 (Schools)" source="DESE, 2011" name="Schools: MCAS Grade 10 Reading Proficiency for Student Groups, 2011"/>
-            <category title="MCAS Grade 10 Science Proficiency by Group, 2010-11 (Schools)" source="DESE, 2011" name="Schools: MCAS Grade 10 Science Proficiency for Student Groups, 2011"/>
-            <category source="DESE, 2010" name="Schools: Mobility, 2010" title="Mobility, 2010 (Schools)" subject="Education"/>
-            <category source="DESE,2011" name="Schools: Risk Indicators" title="Risk Factors, by Year 2006-11 (Schools)" subject="Education"/>
+            <category name="Schools: Arts Teachers (multi-year)" title="Arts Teachers (multi-year)" source="DESE, 2008-11" subject="Education"/>
+            <category name="Schools: Enrollment, 2010-11" title="Enrollment, 2010-11 (Schools)" source="DESE, 2011" subject="Education"/>
+            <category name="Schools: MCAS Grade 03 Math Proficiency by Year" description="DESE, 2006-11" title="MCAS Grade 3 Math Proficiency by Year (Schools)" subject="Education"/>
+            <category name="Schools: MCAS Grade 03 Reading Proficiency by Year" title="MCAS Grade 3 Reading Proficiency by Year (Schools)" source="DESE" subject="Education"/>
+            <category name="Schools: MCAS Grade 08 Math Proficiency by Year" title="MCAS Grade 8 Math Proficiency by Year (Schools)" source="DESE" subject="Education"/>
+            <category name="Schools: MCAS Grade 08 Reading Proficiency by Year" title="MCAS Grade 8 Reading Profiency by Year (Schools)" source="DESE" subject="Education"/>
+            <category name="Schools: MCAS Grade 08 Science Proficiency by Year" title="MCAS Grade 8 Science Proficiency by Year (Schools)" source="DESE" subject="Education"/>
+            <category name="Schools: MCAS Grade 10 Math Proficiency by Year" title="MCAS Grade 10 Math Proficency by Year (Schools)" source="DESE" subject="Education"/>
+            <category name="Schools: MCAS Grade 10 Reading Proficiency by Year" title="MCAS Grade 10 Reading Proficency by Year (Schools)" source="DESE" subject="Education"/>
+            <category name="Schools: MCAS Grade 10 Science Proficiency by Year" title="MCAS Grade 10 Science Proficiency by Year (Schools)" source="DESE" subject="Education"/>
+            <category name="Schools: MCAS High School Science - Biology" title="MCAS High School Biology Proficiency by Group, 2010-11 (Schools)" source="DESE" subject="Education"/>
+            <category name="Schools: MCAS High School Science - Chemistry" title="MCAS High School Chemistry Proficiency by Group, 2010-11 (Schools)" source="DESE" subject="Education"/>
+            <category name="Schools: MCAS High School Science - Physics" title="MCAS High School Physics Proficiency by Group, 2010-11 (Schools)" source="DESE" subject="Education"/>
+            <category name="Schools: MCAS High School Science - Tech" title="MCAS High School Tech Proficiency by Group, 2010-11 (Schools)" source="DESE" subject="Education"/>
+            <category name="Schools: Mobility, 2010" title="Mobility, 2010 (Schools)" source="DESE, 2010" subject="Education"/>
+            <category name="Schools: Risk Indicators" title="Risk Indicators by Year 2006-11 (Schools)" source="DESE,2011" subject="Education"/>
+            <category name="Schools: Teacher Data By Year" title="Teacher Data By Year (Schools)" source="DESE" subject="Education"/>
+            <category name="Schools: Teacher Program Area by Year" title="Teacher Program Area by Year (Schools)" source="DESE" subject="Education"/>
+            <category name="Schools: Teachers by Race and Gender by Year" title="Teachers by Race and Gender by Year (Schools)" source="DESE" subject="Education"/>
           </category>
-          <category title="Colleges and Universities" source="MassGIS" name="Colleges and Universities"/>
-          <category title="Educational Attainment, Population 25+ years, 5yr Avg 2005-09 (Census 2000 Tracts)" source="ACS" name="Educational Attainment over 25 years (Census Tracts)"/>
-          <category title="Educational Attainment, Population 25+ years, 5yr Avg 2005-09 (Municipal)" source="ACS" name="Educational Attainment over 25 years (Municipal)"/>
-          <category title="Libraries" source="MassGIS, 2005" name="Libraries"/>
+          <category title="Educational Attainment" name="Data Tables">
+            <category weaveEntityId="25517" title="Educational Attainment, 5yr Avg 2008-12 (Block Groups)" source="ACS" subject="Education"/>
+            <category weaveEntityId="25481" title="Educational Attainment, 5yr Avg 2008-12 (Census Tracts)" source="ACS" subject="Education"/>
+            <category weaveEntityId="23674" title="Educational Attainment, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Education"/>
+            <category weaveEntityId="24792" title="Educational Attainment by Age, 5yr Avg 2008-12 (Census Tracts)" source="ACS" subject="Education"/>
+            <category weaveEntityId="24919" title="Educational Attainment by Age, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Education"/>
+            <category weaveEntityId="25119" title="Educational Attainment by Employment Status, 5yr Avg 2008-12 (Census Tracts)" source="ACS" subject="Education"/>
+            <category weaveEntityId="25047" title="Educational Attainment by Employment Status, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Education"/>
+            <category weaveEntityId="25252" title="Educational Attainment by Place of Birth, 5yr Avg 2008-12 (Census Tracts)" source="ACS" subject="Education"/>
+            <category weaveEntityId="25190" title="Educational Attainment by Place of Birth, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Education"/>
+            <category weaveEntityId="25313" title="Educational Attainment by Race, 5yr Avg 2008-12 (Census Tracts)" source="ACS" subject="Education"/>
+            <category weaveEntityId="23711" title="Educational Attainment by Race, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Education"/>
+          </category>
+          <category name="Colleges and Universities" title="Colleges and Universities" source="MassGIS" subject="Education"/>
+          <category name="Doctorate Degrees (States)" title="Doctorate Degrees, 2011 (States)" source="National Science Foundation" subject="Education"/>
+          <category name="Libraries" title="Libraries" source="MassGIS, 2005" subject="Education"/>
+          <category name="Schools:2012" title="Schools (points)" source="DESE, 2012" subject="Education"/>
         </category>
         <category title="Environment &amp; Energy" name="Data Tables">
-          <category title="Environmental Hazards Density (Municipal)" source="Northeastern study" name="Environmental Hazards Density (Municipal)"/>
-          <category title="Environmental Justice Populations, 2000 (Block Groups)" source="Census" name="Environmental Justice Populations (Block Groups)"/>
-          <category name="Environmental Justice Criteria (Municipal)" description="Census 2000 block groups" source="Census" title="Environmental Justice Summary, 2000 (Municipal)" subject="Environment"/>
-          <category title="Land Use Summary Statistics, 2005 (Municipal)" source="MassGIS, 2009" name="Land Use Summary Statistics 2005 (Municipal)"/>
-          <category title="LEED Certified Buildings (Points)" source="USGBC, 2012" name="LEED Certified Buildings (Points)"/>
-          <category title="Open Space" source="MassGIS" name="Open Space"/>
-          <category title="Protected Open Space" source="MassGIS" name="Protected Open Space"/>
-          <category title="Water Bodies (100k Hydro)" name="Water Bodies (100k Hydro)"/>
+          <category name="Air Pollution, 2003-10 (MSA)" title="Air Pollution, 2003-10 (Boston MSA)" source="US EPA" subject="Environment"/>
+          <category name="Environmental Hazards Density (Municipal)" title="Environmental Hazards Density (Municipal)" source="Northeastern study" subject="Environment"/>
+          <category name="Green House Gas Emissions by Facility, 2010 (pts)" title="Green House Gas Emissions by Facility, 2010 (Points)" source="EPA" subject="Energy"/>
+          <category name="Land Use Summary Statistics 2005 (Municipal)" title="Land Use Summary Statistics, 2005 (Municipal)" source="MassGIS, 2009" subject="Environment"/>
+          <category name="LEED Certified Buildings (Points)" title="LEED Certified Buildings (Points)" source="USGBC, 2012" subject="Environment"/>
+          <category name="Open Space" title="Open Space" subject="Environment"/>
+          <category name="Open Space Municipal Summary" title="Open Space Municipal Summary" source="MassGIS, 2012" subject="Environment"/>
+          <category name="Protected Open Space" title="Protected Open Space" source="MassGIS and MAPC, 2011" subject="Environment"/>
+          <category name="Recycling and Waste Survey, 2009 (Municipal)" title="Recycling and Waste Survey, 2009 (Municipal)" source="MA DEP" subject="Environment"/>
+          <category name="Recycling and Waste Survey, 2010 (Municipal)" title="Recycling and Waste Survey, 2010 (Municipal)" source="MA DEP" subject="Environment"/>
+        </category>
+        <category title="Grid" name="Data Tables">
+          <category name="1Km Grid" title="1Km Grid" source="MassGIS" subject="Grid"/>
+          <category name="1Km Grid Allocation" title="1Km Grid Allocation" subject="Grid"/>
         </category>
         <category title="Housing" name="Data Tables">
-          <category source="Census" name="Housing Building Permits: Multi-Family Units (Municipal)" title="Building Permits: Multi-Family Housing, by Year 2000-10 (Municipal)" subject="Housing"/>
-          <category source="Census" name="Housing Building Permits: Single Family Units (Municipal)" title="Building Permits: Single Family Housing, by Year 2001-10 (Municipal)" subject="Housing"/>
-          <category source="Census" name="Housing Building Permits: Total Units (Municipal)" title="Building Permits: Total Housing, by Year 2001-10 (Municipal)" subject="Housing"/>
-          <category source="Census" name="Housing: Household Type 2000-2010 (Municipal)" title="Household Type, 2000 &amp; 2010 (Municipal)" subject="Housing"/>
-          <category title="Housing Cost Burden for Owner, 5yr Avg 2005-09 (Municipal)" source="ACS" name="Housing Cost Burden for Owner (Municipal)"/>
-          <category source="ACS" name="Housing Cost Burden for Renters (Census Tracts)" title="Housing Cost Burden for Renters, 5yr Avg 2005-09 (Census 2000 Tracts)" subject="Housing"/>
-          <category source="ACS" name="Housing Cost Burden for Renters (Municipal)" title="Housing Cost Burden for Renters, 5yr Avg 2005-09 (Municipal)" subject="Housing"/>
-          <category source="Census" name="Housing Occupancy, 2000-2010 (Municipal)" title="Housing Occupancy, 2000 &amp; 2010 (Municipal)" subject="Demographics"/>
-          <category name="Housing: Census 2000 (Municipal)" description="Census 2000" source="Census" title="Housing Summary, 2000 (Municipal)" subject="Housing"/>
-          <category name="Median Household Income by Race (Municipal)" description="ACS 2005-09" source="ACS" title="Median Household Income by Race, 5yr Avg 2005-09 (Municipal)" subject="Housing"/>
-          <category source="DHCD, 2011" name="Subsidized Housing Inventory" title="Subsidized Housing Inventory, by Year 2006-11 (Municipal) " subject="Housing"/>
+          <category name="Housing: 40R Zoning Districts and Units Approved" title="40R Smart Growth Zoning Dsitricts &amp; Units Approved" source="Commonwealth Housing Task Force" subject="Housing"/>
+          <category name="Housing Building Permits: Multi-Family Units (Municipal)" title="Building Permits: Multi-Family Housing, by Year 2000-10 (Municipal)" source="Census" subject="Housing"/>
+          <category name="Housing Building Permits: Single Family Units (Municipal)" title="Building Permits: Single Family Housing, by Year 2000-10 (Municipal)" source="Census" subject="Housing"/>
+          <category name="Housing Building Permits: Total Units (Municipal)" title="Building Permits: Total Housing, by Year 2000-10 (Municipal)" source="Census" subject="Housing"/>
+          <category name="Housing: Home Price Index " title="Home Price Index, 1990-2012 (CBSA)" source="Case-Shiller" subject="Housing"/>
+          <category name="Housing: Household Type 2000-2010 (Municipal)" title="Household Type, 2000 &amp; 2010 (Municipal)" source="Census" subject="Housing"/>
+          <category name="Households By Ancestry, ACS06-10 (Census Tracts)" description="ACS 2006-10" title="Households By Ancestry, 5yr Avg 2006-10 (Census Tracts)" subject="Housing"/>
+          <category name="Households By Ancestry, 5yr Avg 2006-10 (Municipal)" description="ACS 2006-10" title="Households By Ancestry, 5yr Avg 2006-10 (Municipal)" subject="Housing"/>
+          <category weaveEntityId="27167" title="Housing Cost Burden, 5yr Avg 2008-12 (Block Groups)" source="ACS" subject="Housing"/>
+          <category weaveEntityId="27107" title="Housing Cost Burden, 5yr Avg 2008-12 (Census Tracts)" source="ACS" subject="Housing"/>
+          <category weaveEntityId="27046" title="Housing Cost Burden, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Housing"/>
+          <category weaveEntityId="29350" title="Housing Cost Burden by Age, 5yr Avg 2008-12 (Block Groups)" source="ACS" subject="Housing"/>
+          <category weaveEntityId="29512" title="Housing Cost Burden by Age, 5yr Avg 2008-12 (Census Tracts)" source="ACS" subject="Housing"/>
+          <category weaveEntityId="23511" title="Housing Cost Burden by Age, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Housing"/>
+          <category weaveEntityId="29674" title="Housing Cost Burden by Income, 5yr Avg 2008-12 (Census Tracts)" source="ACS" subject="Housing"/>
+          <category weaveEntityId="23416" title="Housing Cost Burden by Income, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Housing"/>
+          <category name="Housing Occupancy, 2000-2010 (Municipal)" title="Housing Occupancy, 2000 &amp; 2010 (Municipal)" source="Census" subject="Housing"/>
+          <category name="Housing: Census 2000 (Municipal)" description="Census 2000" title="Housing Summary, 2000 (Municipal)" source="Census" subject="Housing"/>
+          <category weaveEntityId="18413" title="Housing Tenure by Heating Fuel, 5yr Avg 2007-11 (Census Tracts)" source="ACS" subject="Housing"/>
+          <category weaveEntityId="18537" title="Housing Tenure by Heating Fuel, 5yr Avg 2007-11 (Municipal)" source="ACS" subject="Housing"/>
+          <category name="Housing Tenure by Race ACS 2006-10 (Census Tracts)" title="Housing Tenure by Race, 5yr Avg 2006-10 (Census Tracts)" source="ACS" subject="Housing"/>
+          <category name="Housing Tenure by Race ACS 2006-10 (Municipal)" title="Housing Tenure by Race, 5yr Avg 2006-10 (Municipal)" source="ACS" subject="Housing"/>
+          <category weaveEntityId="18767" title="Housing Tenure by Unit Type, 5yr Avg 2007-11 (Block Groups)" source="ACS" subject="Housing"/>
+          <category weaveEntityId="18715" title="Housing Tenure by Unit Type, 5yr Avg 2007-11 (Census Tracts)" source="ACS" subject="Housing"/>
+          <category weaveEntityId="18662" title="Housing Tenure by Unit Type, 5yr Avg 2007-11 (Municipal)" source="ACS" subject="Housing"/>
+          <category name="Housing Tenure by Year of Occupancy (Census Tracts)" description="ACS" title="Housing Tenure by Year of Occupancy, 5yr Avg 2006-10 (Census Tracts)" subject="Housing"/>
+          <category name="Housing Tenure by Year of Occupancy (Municipal)" description="ACS" title="Housing Tenure by Year of Occupancy, 5yr Avg 2006-10 (Municipal)" subject="Housing"/>
+          <category name="Subsidized Housing Inventory" title="Subsidized Housing Inventory, by Year 2006-11 (Municipal) " source="DHCD, 2011" subject="Housing"/>
+        </category>
+        <category title="Projections" name="Data Tables">
+          <category title="2008 Projections to 2030(Current Trends vs MetroFuture)" name="Data Tables">
+            <category name="MetroFuture Region" title="MetroFuture Region" source="MAPC, 2008" subject="MetroFuture"/>
+            <category name="Employment Projections by Sector, Current Trends/MetroFuture (Municipal)" title="Projected Employment, Current Trends/MetroFuture, 2030 (Municipal)" source="MAPC, 2008" subject="MetroFuture"/>
+            <category name="Employment Projections by Sector, Current Trends/MetroFuture (TAZ)" title="Projected Employment, Current Trends/MetroFuture, 2030 (TAZ)" source="MAPC, 2008" subject="MetroFuture"/>
+            <category name="Population Projection by Age Group, Current Trends, (Municipal)" title="Projected Population by Age Group, Current Trends, 2030 (Municipal)" source="MAPC, 2008" subject="MetroFuture"/>
+            <category name="Population Projection by Age Group, MetroFuture (Municipal)" title="Projected Population by Age Group, MetroFuture, 2030 (Municipal)" source="MAPC, 2008" subject="MetroFuture"/>
+            <category name="Population, Household and Employment Projection, Current Trends/MetroFuture (Municipal)" title="Projected Population, Households and Employment, Current Trends/MetroFuture 2030 (Municipal)" source="MAPC, 2008" subject="MetroFuture"/>
+            <category name="Population, Household and Employment Projection, Current Trends/MetroFuture (TAZ)" title="Projected Population, Households and Employment, Current Trends/MetroFuture 2030 (TAZ)" source="MAPC, 2008" subject="MetroFuture"/>
+          </category>
+          <category title="2013 Projections: to 2030(Status Quo vs Stronger Region)" name="Data Tables">
+            <category weaveEntityId="20883" title="Projections, 2020-2030: Household Size (Municipal)" source="MAPC" subject="Projections"/>
+            <category weaveEntityId="20873" title="Projections, 2020-2030: Households (Municipal)" source="MAPC" subject="Projections"/>
+            <category weaveEntityId="20893" title="Projections, 2020-2030: Housing Units (Municipal)" source="MAPC" subject="Projections"/>
+            <category weaveEntityId="20908" title="Projections, 2020-2030: Median Age (Municipal)" source="MAPC" subject="Projections"/>
+            <category weaveEntityId="22013" title="Projections, 2020-2030: Population (Municipal)" source="MAPC" subject="Projections"/>
+            <category weaveEntityId="20917" title="Projections, 2020-2030: Population Age 5 - 14 (Municipal)" source="MAPC" subject="Projections"/>
+            <category weaveEntityId="20931" title="Projections, 2020-2030: Population Age 65 and Over (Municipal)" source="MAPC" subject="Projections"/>
+          </category>
         </category>
         <category title="Public Health" name="Data Tables">
-          <category source="MADPH, 2012" name="Asthma Related Hospitalizations" title="Asthma Related Hospitalizations, 2007-09 (Municipal)" subject="Public Health"/>
-          <category source="MADPH, 2012" name="Cancer Mortality, 2006 (Municipal)" title="Cancer Mortality, 2006 (Municipal)" subject="Public Health"/>
-          <category source="MADPH, 2012" name="Cancer Mortality, 2007 (Municipal)" title="Cancer Mortality, 2007 (Municipal)" subject="Public Health"/>
-          <category source="MADPH, 2012" name="Cancer Mortality, 2008 (Municipal)" title="Cancer Mortality, 2008 (Municipal)" subject="Public Health"/>
-          <category source="MADPH, 2012" name="Cardiovascular Hospitalizations (Municipal)" title="Cardiovascular Hospitalizations, 2007-09 (Municipal)" subject="Public Health"/>
-          <category title="Low Birth Weight (Municipal)" name="Low Birth Weight (Municipal)" subject="Public Health"/>
-          <category title="Total Births to Moms Age 15-44, 2007-09 (Municipal)" name="Total Births" subject="Public Health"/>
+          <category title="Birth" name="Data Tables">
+            <category name="Health: Births, 2000-2009 (Municipal)" description="2000-2009" title="Births, 2000-2009 (Municipal)" source="MDPH" subject="Public Health"/>
+            <category name="DPH Adequate Care Births (Muni)" title="Births Receiving Adequate Care Rate per 100,000, 2007-09 (Municipal)" source="MDPH" subject="Public Health"/>
+            <category name="DPH Public Care Births (Municipal)" title="Births Recieving Public Care Rate per 100,000, 2007-09 (Municipal)" source="MDPH" subject="Public Health"/>
+            <category name="Total Births" title="Births to Moms Age 15-44, 2007-09 (Municipal)" source="MADPH, 2012" subject="Public Health"/>
+            <category name="Low Birth Weight (Municipal)" title="Low Birth Weight (Municipal)" source="MADPH, 2012" subject="Public Health"/>
+            <category name="DPH Low Birth Weight (Municipal)" title="Low Birth Weight Rate per 100,000, 2007-09 (Municipal)" source="MDPH" subject="Public Health"/>
+            <category name="Smoking Mothers during Pregnancy, 2004-10avg (Municipal)" description="DPH" title="Mothers that Smoked during Pregnancy, 2004-10avg (Municipal)" source="MDPH" subject="Public Health"/>
+            <category name="DPH No First Trimester Care Births (Municipal)" title="No First Trimester Care Birth Rate per 100,000, 2007-09 (Municipal)" source="MDPH" subject="Public Health"/>
+            <category subject="Public Health" name="DPH Adolescent Births (Municipal)" title="Teen Birth Rate, 2007-09 (Municipal)" source="MDPH" date="2007-09"/>
+          </category>
+          <category title="Hospitalizations" name="Data Tables">
+            <category title="Asthma Related Hospitalizations, 2007-09 (Municipal)" date="2007-09" name="Asthma Related Hospitalizations" description="Total Numbers" source="MDPH" subject="Public Health"/>
+            <category name="Cardiovascular Hospitalizations (Municipal)" title="Cardiovascular Hospitalizations, 2007-09 (Municipal)" source="MDPH" subject="Public Health"/>
+            <category subject="Public Health" name="Health Hospitalizations: Heart Attack (Municipal)" title="Heart Attack Hospitalization Rates per 100,000, 2007-10 (Municipal)" source="MDPH" date="2007-10"/>
+            <category name="Health: Hospitalizations 2007-11Avg (Municipal)" description="2007-11 Avg" title="Hospitalizations 2007-11Avg (Municipal)" source="DPH" subject="Public Health"/>
+            <category name="Health: Hospitalizations, 2009 (Municipal)" description="2009" title="Hospitalizations, 2009 (Municipal)" source="DPH" subject="Public Health"/>
+            <category subject="Public Health" name="Health Hospitalizations: CHD (Municipal)" title="Coronary Heart Disease Hospitalization Rates per 100,000, 2007-10 (Municipal)" source="MDPH" date="2007-10"/>
+            <category subject="Public Health" name="Health Hospitalizations: Injections (Municipal)" title="Injection Hospitalization Rates per 100,000, 2008-10 (Municipal)" source="MDPH" date="2007-10"/>
+            <category subject="Public Health" name="Health Hospitalizations: Stroke (Municipal)" title="Stroke Hospitalization Rates per 100,000, 2007-10 (Municipal)" source="MDPH" date="2007-10"/>
+            <category subject="Public Health" name="Health Hospitalizations: Substance Abuse (Municipal)" title="Substance Abuse Hospitalization Rates per 100,000, 2008-10 (Municipal) " source="MDPH" date="2008-10"/>
+          </category>
+          <category title="Mortality" name="Data Tables">
+            <category subject="Public Health" name="Health Deaths: Cancer (Municipal)" title="All Cancer Death Rate per 100,000, 2006-08 (Municipal)" source="MDPH" date="2006-08"/>
+            <category subject="Public Health" name="Health Deaths: Breast Cancer (Municipal)" title="Breast Cancer Death Rate per 100,000, 2006-08 (Municipal)" source="MDPH" date="2006-08"/>
+            <category subject="Public Health" name="Cancer Mortality, 2006 (Municipal)" title="Death Rate, Cancer 2006 (Municipal)" source="MDPH" date="2006"/>
+            <category subject="Public Health" name="Cancer Mortality, 2007 (Municipal)" title="Death Rate, Cancer 2007 (Municipal)" source="MDPH" date="2007"/>
+            <category subject="Public Health" name="Cancer Mortality, 2008 (Municipal)" title="Death Rate, Cancer 2008 (Municipal)" source="MDPH" date="2008"/>
+            <category name="DPH Deaths: Cardiovascular (municipal)" title="Cardiovascular Death Rate per 100,000, 2006-08 (Municipal)" source="MDPH" subject="Public Health"/>
+            <category name="DPH Deaths: Chronic Disease (municipal)" title="Chronic Disease Death Rate per 100,000, 2006-08 (Municipal)" source="MDPH" subject="Public Health"/>
+            <category name="Health Deaths: Homicide (Municipal)" title="Homicide Rate per 100,000, 2006-08 (Municipal)" source="MDPH" subject="Public Health"/>
+            <category name="Health Deaths: Lung Cancer (Municipal)" title="Lung Cancer Death Rate per 100,000, 2006-08 (Municipal)" source="MDPH" subject="Public Health"/>
+            <category subject="Public Health" name="Health Deaths: Motor Vehicle (Municipal)" title="Moter Vehicle Death Rate per 100,000, 2006-08 (Municipal)" source="MPDH" date="2006-08"/>
+          </category>
+          <category weaveEntityId="25726" title="Health Insurance by Gender and Age, 5yr Avg 2008-12 (Census Tracts)" source="ACS" subject="Public Health"/>
+          <category weaveEntityId="25553" title="Health Insurance by Gender and Age, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Public Health"/>
+          <category name="Health: Adults Smokers (Municipal)" title="Adult Smokers, 2011 (Municipal)" source="MDPH" subject="Public Health"/>
+          <category name="Health: Daily Fruits and Vegetables (Municipal)" title="Adults Eating Daily Fruits and Vegetables, 2011 (Municipal)" source="MDPH" subject="Public Health"/>
+          <category name="Health: Adults Lacking Daily Exercise (Municipal)" title="Adults Lacking Daily Exercise, 2011 (Municipal)" source="MDPH" subject="Public Health"/>
+          <category name="Food Deserts (Census 2000 Tracts)" title="Food Deserts (Census 2000 Tracts)" source="USDA" subject="Public Health"/>
+          <category name="Health: Food Establishments" title="Food Establishments (Municipal)" source="MDPH" subject="Public Health"/>
+          <category name="Health: Survey Data" description="2007" title="Health: Survey Data" source="BRFFS" subject="Public Health"/>
+          <category name="Health Survey: Public Recreation Programs" description="2007" title="Health Survey: Public Recreation Programs" source="BRFFS" subject="Public Health"/>
+          <category name="Health: Lead Poisoning in Children, 2010 (Municipal)" description="2010" title="Lead Poisoning in Children, 2010 (Municipal)" source="DPH" subject="Public Health"/>
+          <category name="Health: MA Physical Acitvity by Race and Year (Municipal)" title="MA Physical Acitvity by Race and Year (MA)" source="DPH" subject="Public Health"/>
+          <category subject="Public Health" name="Health Insurance Premiums, 2010 (States)" title="Health Insurance Premiums, 2010 (States)" source="Kaiser State Health Facts" date="2010"/>
+          <category subject="Public Health" name="Health Spending per Capita (MA)" title="Health Spending per Capita by Year, 1991-2009 (MA)" source="Kaiser State Health Facts" date="1991-2009"/>
+          <category name="Community Health Center Patient Populations" title="Community Health Center Patient Populations" source="MDPH" subject="Public Health"/>
+          <category name="Community Health Centers" title="Community Health Centers" source="MDPH" subject="Public Health"/>
+          <category title="Hospitals" name="Hospitals"/>
+          <category name="Mass in Motion Communities" title="Mass in Motion Communities" subject="Public Health"/>
+          <category name="Health: Obese Adults (Municipal)" title="Obese Adults, 2011 (Municipal)" source="MDPH" subject="Public Health"/>
+          <category name="Health: DPH Data" title="Physicians and Tobacco Retailers (Municipal)" source="MDPH" subject="Public Health"/>
+        </category>
+        <category title="Public Safety" name="Data Tables">
+          <category title="Boston Police Districts" name="Boston Police Districts"/>
+          <category name="Police Stations" title="Police Stations" source="MassGIS, 2007" subject="Public Safety"/>
+          <category name="Property Crimes (Municipal)" title="Property Crimes, 2001-09 (Municipal)" source="FBI UCR, 2012" subject="Public Safety"/>
+          <category name="Violent Crimes (Municipal)" title="Violent Crimes, 2001-09 (Municipal)" source="FBI URC, 2012" subject="Public Safety"/>
+        </category>
+        <category title="Technology" name="Data Tables">
+          <category name="Intel Clubhouses" title="Intel Computer Clubhouse, 2012" subject="Technology"/>
+          <category name="R_D Academic Expenditures, FY09 (States)" title="R&amp; D Academic Expenditures, FY09 (States)" source="National Science Foundation" subject="Technology"/>
+          <category name="Technology: Venture Capital Share, 1995-2011 (MA)" title="MA Venture Capital Share, 1995-2011 (MA)" source="PricewaterhouseCoopers Moneytree Survey" subject="Technology"/>
+          <category name="Technology: Venture Capital, 2011 (States)" title="Venture Capital, 2011 (States)" source="PricewaterhouseCoopers Moneytree Survey" subject="Technology"/>
         </category>
         <category title="Transportation" name="Data Tables">
-          <category title="Bike and Pedestrian Facilities" source="MAPC, 2011" name="Bike and Pedestrian Facilities"/>
-          <category title="Commuter Rail" source="MassGIS, 2010" name="Commuter Rail"/>
-          <category title="Fairmount Commuter Line" name="Fairmount Commuter Line"/>
-          <category title="Major Roads" source="MassDOT" name="Major Roads"/>
-          <category title="Major Routes" source="MassDOT" name="Major Routes"/>
-          <category title="MBTA Subway Lines" source="MassDOT" name="MBTA Subway Lines"/>
-          <category title="Transportation to Work, 5yr Avg 2005-09 (Municipal)" source="ACS" name="Transportation to Work (Municipal)"/>
-          <category title="Travel Time to Work, 5yr Avg 2005-09 (Municipal)" source="ACS" name="Travel Time to Work (Municipal)">
-            <attribute dataType="string" name="muni_id" title="Municipal ID" dataTable="Travel Time to Work (Municipal)" keyType="MUNI_ID"/>
-            <attribute dataType="string" name="municipal" title="Municipality" dataTable="Travel Time to Work (Municipal)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="wrk16p_tot" title="Workers 16 years and older" dataTable="Travel Time to Work (Municipal)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="wrk16p_moe" title="Workers 16 years and older, MOE" dataTable="Travel Time to Work (Municipal)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="mlt15" title="Workers with &lt; 15 min commute" dataTable="Travel Time to Work (Municipal)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="mlt15_me" title="Workers with &lt; 15 min commute, MOE" dataTable="Travel Time to Work (Municipal)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="m15_30" title="Workers with 15-30 min commute" dataTable="Travel Time to Work (Municipal)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="m15_30_me" title="Workers with 15-30 min commute, MOE" dataTable="Travel Time to Work (Municipal)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="m30_45" title="Workers with 30-45 min commute" dataTable="Travel Time to Work (Municipal)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="m30_45_me" title="Workers with 30-45 min commute, MOE" dataTable="Travel Time to Work (Municipal)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="m45_60" title="Workers with 45-60 min commute" dataTable="Travel Time to Work (Municipal)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="m45_60_me" title="Workers with 45-60 min commute, MOE" dataTable="Travel Time to Work (Municipal)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="m60_90" title="Workers with 60-90 min commute" dataTable="Travel Time to Work (Municipal)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="m60_90_me" title="Workers with 60-90 min commute, MOE" dataTable="Travel Time to Work (Municipal)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="m90p" title="Workers with > 90 min commute" dataTable="Travel Time to Work (Municipal)" keyType="MUNI_ID"/>
-            <attribute dataType="number" keyType="MUNI_ID" name="m90p_me" max=" " title="Workers with > 90 min commute, MOE" dataTable="Travel Time to Work (Municipal)"/>
-            <attribute min="0" string="formatNumber(number, 1)" title="% Workers with &lt; 15 min commute" keyType="MUNI_ID" dataType="number" name="mlt15_p" max="100" dataTable="Travel Time to Work (Municipal)"/>
-            <attribute min="0" string="formatNumber(number, 1)" title="% Workers with &lt; 15 min commute, MOE" keyType="MUNI_ID" dataType="number" name="mlt15_mep" max="100" dataTable="Travel Time to Work (Municipal)"/>
-            <attribute min="0" string="formatNumber(number, 1)" title="% Workers with 15-30 min commute" keyType="MUNI_ID" dataType="number" name="m15_30_p" max="100" dataTable="Travel Time to Work (Municipal)"/>
-            <attribute min="0" string="formatNumber(number, 1)" title="% Workers with 15-30 min commute, MOE" keyType="MUNI_ID" dataType="number" name="m15_30_mep" max="100" dataTable="Travel Time to Work (Municipal)"/>
-            <attribute min="0" string="formatNumber(number, 1)" title="% Workers with 30-45 min com" keyType="MUNI_ID" dataType="number" name="m30_45_p" max="100" dataTable="Travel Time to Work (Municipal)"/>
-            <attribute min="0" string="formatNumber(number, 1)" title="% Workers with 30-45 min commute, MOE" keyType="MUNI_ID" dataType="number" name="m30_45_mep" max="100" dataTable="Travel Time to Work (Municipal)"/>
-            <attribute min="0" string="formatNumber(number, 1)" title="% Workers with 45-60 min commute" keyType="MUNI_ID" dataType="number" name="m45_60_p" max="100" dataTable="Travel Time to Work (Municipal)"/>
-            <attribute min="0" string="formatNumber(number, 1)" title="% Workers with 45-60 min commute, MOE" keyType="MUNI_ID" dataType="number" name="m45_60_mep" max="100" dataTable="Travel Time to Work (Municipal)"/>
-            <attribute min="0" string="formatNumber(number, 1)" title="% Workers with 60-90 min commute" keyType="MUNI_ID" dataType="number" name="m60_90_p" max="100" dataTable="Travel Time to Work (Municipal)"/>
-            <attribute min="0" string="formatNumber(number, 1)" title="% Workers with 60-90 min commute, MOE" keyType="MUNI_ID" dataType="number" name="m60_90_mep" max="100" dataTable="Travel Time to Work (Municipal)"/>
-            <attribute min="0" string="formatNumber(number, 1)" title="% Workers with > 90 min commute" keyType="MUNI_ID" dataType="number" name="m90plus_p" max="100" dataTable="Travel Time to Work (Municipal)"/>
-            <attribute min="0" string="formatNumber(number, 1)" title="% Workers with > 90 min commute, MOE" keyType="MUNI_ID" dataType="number" name="m90plu_mep" max="100" dataTable="Travel Time to Work (Municipal)"/>
-            <attribute dataType="number" name="pt0_30" title="Workers with &lt; 30 min commute by Public Transportation" dataTable="Travel Time to Work (Municipal)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="pt0_30_me" title="Workers with &lt; 30 min commute by Public Transportation, MOE" dataTable="Travel Time to Work (Municipal)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="pt30_60" title="Workers with 30-60 min commute by Public Transportation" dataTable="Travel Time to Work (Municipal)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="pt30_60_me" title="Workers with 30-60 min commute by Public Transportation, MOE" dataTable="Travel Time to Work (Municipal)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="pt60p" title="Workers with > 60 min commute by Public Transportation" dataTable="Travel Time to Work (Municipal)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="pt60p_me" title="Workers with > 60 min commute by Public Transportation, MOE" dataTable="Travel Time to Work (Municipal)" keyType="MUNI_ID"/>
-            <attribute min="0" string="formatNumber(number, 1)" title="% Workers with &lt; 30 min commute by Public Transportation" keyType="MUNI_ID" dataType="number" name="pt0_30_p" year=" " max="100" dataTable="Travel Time to Work (Municipal)"/>
-            <attribute min="0" string="formatNumber(number, 1)" title="% Workers with &lt; 30 min commute by Public Transportation, MOE" keyType="MUNI_ID" dataType="number" name="pt0_30_mep" max="100" dataTable="Travel Time to Work (Municipal)"/>
-            <attribute min="0" string="formatNumber(number, 1)" title="% Workers with 30-60 min commute by Public Transportation" keyType="MUNI_ID" dataType="number" name="pt30_60_p" max="100" dataTable="Travel Time to Work (Municipal)"/>
-            <attribute min="0" string="formatNumber(number, 1)" title="% Workers with 30-60 min commute by Public Transportation, MOE" keyType="MUNI_ID" dataType="number" name="pt3060_mep" max="100" dataTable="Travel Time to Work (Municipal)"/>
-            <attribute min="0" string="formatNumber(number, 1)" title="% Workers with > 60 min commute by Public Transportation" keyType="MUNI_ID" dataType="number" name="pt60p_p" max="100" dataTable="Travel Time to Work (Municipal)"/>
-            <attribute min="0" string="formatNumber(number, 1)" title="% Workers with > 60 min commute by Public Transportation, MOE" keyType="MUNI_ID" dataType="number" name="pt60p_mep" max="100" dataTable="Travel Time to Work (Municipal)"/>
-            <attribute dataType="number" name="ot0_30" title="Workers with &lt; 30 min commute by Other Transportation" dataTable="Travel Time to Work (Municipal)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="ot0_30_me" title="Workers with &lt; 30 min commute by Other Transportation, MOE" dataTable="Travel Time to Work (Municipal)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="ot30_60" title="Workers with 30-60 min commute by Other Transportation" dataTable="Travel Time to Work (Municipal)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="ot30_60_me" title="Workers with 30-60 min commute by Other Transportation, MOE" dataTable="Travel Time to Work (Municipal)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="ot60p" title="Workers with > 60 min commute by Other Transportation" dataTable="Travel Time to Work (Municipal)" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="ot60p_me" title="Workers with > 60 min commute by Other Transportation, MOE" dataTable="Travel Time to Work (Municipal)" keyType="MUNI_ID"/>
-            <attribute min="0" string="formatNumber(number, 1)" title="% Workers with &lt; 30 min commute by Other Transportation" keyType="MUNI_ID" dataType="number" name="ot0_30_p" max="100" dataTable="Travel Time to Work (Municipal)"/>
-            <attribute min="0" string="formatNumber(number, 1)" title="% Workers with &lt; 30 min commute by Other Transportation, MOE" keyType="MUNI_ID" dataType="number" name="ot0_30_mep" max="100" dataTable="Travel Time to Work (Municipal)"/>
-            <attribute min="0" string="formatNumber(number, 1)" title="% Workers with 30-60 min commute by Other Transportation" keyType="MUNI_ID" dataType="number" name="ot30_60_p" max="100" dataTable="Travel Time to Work (Municipal)"/>
-            <attribute min="0" string="formatNumber(number, 1)" title="% Workers with 30-60 min commute by Other Transportation, MOE" keyType="MUNI_ID" dataType="number" name="ot3060_mep" max="100" dataTable="Travel Time to Work (Municipal)"/>
-            <attribute min="0" string="formatNumber(number, 1)" title="% Workers with > 60 min commute by Other Transportation" keyType="MUNI_ID" dataType="number" name="ot60p_p" max="100" dataTable="Travel Time to Work (Municipal)"/>
-            <attribute min="0" string="formatNumber(number, 1)" title="% Workers with > 60 min commute by Other Transportation, MOE" keyType="MUNI_ID" dataType="number" name="ot60p_mep" max="100" dataTable="Travel Time to Work (Municipal)"/>
+          <category name="Trasnportation: Alternative Fuels Vehicle Registrations by Municipality" description="Mass RMV, accessed via Boston.com" title="Alternative Fuels Vehicle Registrations, 2011 (Municipal)" subject="Transportation"/>
+          <category name="Commuter Rail" title="Commuter Rail" source="MassGIS, 2010" subject="Transportation"/>
+          <category name="Commuter Rail Stations" title="Commuter Rail Stations" subject="Transportation"/>
+          <category name="Transportation Cost (Metro US)" title="Household Income Spent on Transportation, 2009 (Metro US)" subject="Transportation"/>
+          <category name="Logan Airport Traffic, 1998-2011" title="Logan Airport Traffic, 1998-2011" source="MassPort" subject="Transportation"/>
+          <category name="Major Roads" title="Major Roads" source="MassDOT" subject="Transportation"/>
+          <category name="Major Routes" title="Major Routes" source="MassDOT" subject="Transportation"/>
+          <category name="Transportation: MBTA Expenses by Year" description="MBTA FY" title="MBTA Expenses by Year" subject="Transportation"/>
+          <category name="Transportation: MBTA Revenue by Year" description="MBTA FY" title="MBTA Revenue by Year" subject="Transportation"/>
+          <category name="MBTA Subway Lines" title="MBTA Subway Lines" source="MassGIS" subject="Transportation"/>
+          <category name="MBTA Subway Stops" title="MBTA Subway Stops" source="MassGIS" subject="Transportation"/>
+          <category name="Transit Oriented Development Stations" title="Transit Oriented Development Stations, 2012" source="MAPC" subject="Transportation"/>
+          <category weaveEntityId="27992" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Block Groups)" source="ACS" subject="Transportation"/>
+          <category weaveEntityId="28040" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Census Tracts)" source="ACS" subject="Transportation"/>
+          <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+            <attribute weaveEntityId="23168" keyType="MUNI_ID" title="Municipal ID" dataType="number"/>
+            <attribute weaveEntityId="23169" keyType="MUNI_ID" title="Municipality" dataType="string"/>
+            <attribute weaveEntityId="23170" keyType="MUNI_ID" title="Census geoid" dataType="string"/>
+            <attribute weaveEntityId="23172" keyType="MUNI_ID" title="ACS year" dataType="string"/>
+            <attribute weaveEntityId="23173" keyType="MUNI_ID" title="Workers 16 years and over" dataType="number"/>
+            <attribute weaveEntityId="23174" keyType="MUNI_ID" title="Workers 16 years and over, Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="23175" keyType="MUNI_ID" title="Commuters who drive to work" dataType="number"/>
+            <attribute weaveEntityId="23176" keyType="MUNI_ID" title="Commuters who drive to work, Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="23177" keyType="MUNI_ID" title="Commuters who take public transit to work" dataType="number"/>
+            <attribute weaveEntityId="23178" keyType="MUNI_ID" title="Commuters who take public transit to work, Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="23179" keyType="MUNI_ID" title="Commuters who take a taxi to work" dataType="number"/>
+            <attribute weaveEntityId="23180" keyType="MUNI_ID" title="Commuters who take a taxi to work, Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="23181" keyType="MUNI_ID" title="Commuters who take a motorcycle to work" dataType="number"/>
+            <attribute weaveEntityId="23182" keyType="MUNI_ID" title="Commuters who take a motorcycle to work, Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="23183" keyType="MUNI_ID" title="Commuters bicycling to work" dataType="number"/>
+            <attribute weaveEntityId="23184" keyType="MUNI_ID" title="Commuters bicycling to work, Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="23185" keyType="MUNI_ID" title="Commuters walking to work" dataType="number"/>
+            <attribute weaveEntityId="23186" keyType="MUNI_ID" title="Commuters walking to work, Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="23187" keyType="MUNI_ID" title="Commuters taking other means of transportation to work" dataType="number"/>
+            <attribute weaveEntityId="23188" keyType="MUNI_ID" title="Commuters taking other means of transportation to work, Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="23189" keyType="MUNI_ID" title="Individuals who work from home" dataType="number"/>
+            <attribute weaveEntityId="23190" keyType="MUNI_ID" title="Individuals who work from home, Margin of Error" dataType="number"/>
+            <attribute keyType="MUNI_ID" string="formatNumber(number, 1)" shortTitle="% Drive" weaveEntityId="23191" title="% Commuters who drive to work" dataType="number"/>
+            <attribute weaveEntityId="23192" keyType="MUNI_ID" title="% Commuters who drive to work, Margin of Error" string="formatNumber(number, 1)" dataType="number"/>
+            <attribute weaveEntityId="23193" keyType="MUNI_ID" title="% Commuters who take public transit to work" dataType="number"/>
+            <attribute weaveEntityId="23194" keyType="MUNI_ID" title="% Commuters who take public transit to work, Margin of Error" string="formatNumber(number, 1)" dataType="number"/>
+            <attribute keyType="MUNI_ID" string="formatNumber(number, 1)" shortTitle="% Taxi" weaveEntityId="23195" title="% Commuters who take a taxi to work" dataType="number"/>
+            <attribute weaveEntityId="23196" keyType="MUNI_ID" title="% Commuters who take a taxi to work, Margin of Error" string="formatNumber(number, 1)" dataType="number"/>
+            <attribute keyType="MUNI_ID" string="formatNumber(number, 1)" shortTitle="% Motorcycle" weaveEntityId="23197" title="% Commuters who take a motorcycle to work" dataType="number"/>
+            <attribute weaveEntityId="23198" keyType="MUNI_ID" title="% Commuters who take a motorcycle to work, Margin of Error" string="formatNumber(number, 1)" dataType="number"/>
+            <attribute keyType="MUNI_ID" string="formatNumber(number, 1)" shortTitle="% Bicycle" weaveEntityId="23199" title="% Commuters who bicycle to work" dataType="number"/>
+            <attribute weaveEntityId="23200" keyType="MUNI_ID" title="% Commuters who bicycle to work, Margin of Error" string="formatNumber(number, 1)" dataType="number"/>
+            <attribute keyType="MUNI_ID" string="formatNumber(number, 1)" shortTitle="% Walk" weaveEntityId="23201" title="% Commuters who walk to work" dataType="number"/>
+            <attribute weaveEntityId="23202" keyType="MUNI_ID" title="% Commuters who walk to work, Margin of Error" string="formatNumber(number, 1)" dataType="number"/>
+            <attribute keyType="MUNI_ID" string="formatNumber(number, 1)" shortTitle="% Other" weaveEntityId="23203" title="% Commuters who take other means of transportation to work" dataType="number"/>
+            <attribute weaveEntityId="23204" keyType="MUNI_ID" title="% Commuters who take other means of transportation to work, Margin of Error" string="formatNumber(number, 1)" dataType="number"/>
+            <attribute keyType="MUNI_ID" string="formatNumber(number, 1)" shortTitle="% Work from Home" weaveEntityId="23205" title="% Individuals who work from home" dataType="number"/>
+            <attribute weaveEntityId="23206" keyType="MUNI_ID" title="% Individuals who work from home, Margin of Error" string="formatNumber(number, 1)" dataType="number"/>
           </category>
-          <category source="MassGIS" name="Vehicle Miles Traveled, 2005-2007" title="Vehicle Miles Traveled, 2005-2007" subject="Transportation">
-            <attribute dataType="string" name="MUNI_ID" title="Municipal ID" dataTable="Vehicle Miles Traveled, 2005-2007" keyType="MUNI_ID"/>
-            <attribute dataType="string" name="Municipality" title="Municipality" dataTable="Vehicle Miles Traveled, 2005-2007" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="ESTPOP_00" title="Estimated Population, 2000" dataTable="Vehicle Miles Traveled, 2005-2007" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="ESTHH_00" title="Estimated Households ,2000" dataTable="Vehicle Miles Traveled, 2005-2007" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="REG_PASVEH" title="Registered Passenger Vehicles" dataTable="Vehicle Miles Traveled, 2005-2007" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="YR_MILE" title="Annual Mileage for Passenger Vehicles" dataTable="Vehicle Miles Traveled, 2005-2007" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="DAY_MILE" title="Daily Mileage for All Passenger Vehicles" dataTable="Vehicle Miles Traveled, 2005-2007" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="PASVEH_PER" string="formatNumber(number, 1)" title="Registered Passenger Vehicles per Person" dataTable="Vehicle Miles Traveled, 2005-2007" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="YR_VMT_HH" string="formatNumber(number, 1)" title="Annual Passenger Vehicle Mileage per Household" dataTable="Vehicle Miles Traveled, 2005-2007" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="DAY_VMT_HH" string="formatNumber(number, 1)" title="Daily Passenger Vehicle Mileage per Household" dataTable="Vehicle Miles Traveled, 2005-2007" keyType="MUNI_ID"/>
-            <attribute dataType="number" name="PASVEH_HH" string="formatNumber(number, 1)" title="Registered Passenger Vehicles per Household" dataTable="Vehicle Miles Traveled, 2005-2007" keyType="MUNI_ID"/>
+          <category weaveEntityId="28909" title="Transportation to Work from Residence by Age, 5yr Avg 2008-12 (Census Tracts)" source="ACS" subject="Transportation"/>
+          <category weaveEntityId="29129" title="Transportation to Work from Residence by Age, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation"/>
+          <category weaveEntityId="28732" title="Transportation to Work from Residence by Gender, 5yr Avg 2008-12 (Census Tracts)" source="ACS" subject="Transportation"/>
+          <category weaveEntityId="28820" title="Transportation to Work from Residence by Gender, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+            <attribute weaveEntityId="28822" keyType="MUNI_ID" title="Municipal ID" dataType="number"/>
+            <attribute weaveEntityId="28823" keyType="MUNI_ID" title="Municipality" dataType="string"/>
+            <attribute weaveEntityId="28824" keyType="MUNI_ID" title="Census Geographic Level ID" dataType="string"/>
+            <attribute weaveEntityId="28825" keyType="MUNI_ID" title="Census Logical Record Number" dataType="number"/>
+            <attribute weaveEntityId="28826" keyType="MUNI_ID" title="ACS Years" dataType="string"/>
+            <attribute weaveEntityId="28827" keyType="MUNI_ID" title="Workers 16 years and over" dataType="number"/>
+            <attribute weaveEntityId="28828" keyType="MUNI_ID" title="Workers 16 years and over; Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="28829" keyType="MUNI_ID" title="Commuters who drive to work (Car; truck; or van: alone and carpooled)" dataType="number"/>
+            <attribute weaveEntityId="28830" keyType="MUNI_ID" title="Commuters who drive to work (Car; truck; or van: alone and carpooled); Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="28831" keyType="MUNI_ID" title="Commuters who take public transportation to work" dataType="number"/>
+            <attribute weaveEntityId="28832" keyType="MUNI_ID" title="Commuters who take public transportation to work; Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="28833" keyType="MUNI_ID" title="Commuters bicycling to work" dataType="number"/>
+            <attribute weaveEntityId="28834" keyType="MUNI_ID" title="Commuters bicycling to work; Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="28835" keyType="MUNI_ID" title="Commuters walking to work" dataType="number"/>
+            <attribute weaveEntityId="28836" keyType="MUNI_ID" title="Commuters walking to work; Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="28837" keyType="MUNI_ID" title="Commuters taking other means of transportation to work" dataType="number"/>
+            <attribute weaveEntityId="28838" keyType="MUNI_ID" title="Commuters taking other means of transportation to work; Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="28839" keyType="MUNI_ID" title="Individuals who work from home" dataType="number"/>
+            <attribute weaveEntityId="28840" keyType="MUNI_ID" title="Individuals who work from home; Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="28841" keyType="MUNI_ID" title="Male workers 16 years and over" dataType="number"/>
+            <attribute weaveEntityId="28842" keyType="MUNI_ID" title="Male workers 16 years and over; Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="28843" keyType="MUNI_ID" title="Males who drive to work (Car; truck; or van: alone and carpooled)" dataType="number"/>
+            <attribute weaveEntityId="28844" keyType="MUNI_ID" title="Males who drive to work (Car; truck; or van: alone and carpooled); Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="28845" keyType="MUNI_ID" title="Males who take public transportation to work" dataType="number"/>
+            <attribute weaveEntityId="28846" keyType="MUNI_ID" title="Males who take public transportation to work; Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="28847" keyType="MUNI_ID" title="Males bicycling to work" dataType="number"/>
+            <attribute weaveEntityId="28848" keyType="MUNI_ID" title="Males bicycling to work; Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="28849" keyType="MUNI_ID" title="Males walking to work" dataType="number"/>
+            <attribute weaveEntityId="28850" keyType="MUNI_ID" title="Males walking to work; Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="28851" keyType="MUNI_ID" title="Males taking other means of transportation to work" dataType="number"/>
+            <attribute weaveEntityId="28852" keyType="MUNI_ID" title="Males taking other means of transportation to work; Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="28853" keyType="MUNI_ID" title="Males who work from home" dataType="number"/>
+            <attribute weaveEntityId="28854" keyType="MUNI_ID" title="Males who work from home; Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="28855" keyType="MUNI_ID" title="Female workers 16 years and over" dataType="number"/>
+            <attribute weaveEntityId="28856" keyType="MUNI_ID" title="Female workers 16 years and over; Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="28857" keyType="MUNI_ID" title="Females who drive to work (Car; truck; or van: alone and carpooled)" dataType="number"/>
+            <attribute weaveEntityId="28858" keyType="MUNI_ID" title="Females who drive to work (Car; truck; or van: alone and carpooled); Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="28859" keyType="MUNI_ID" title="Females who take public transportation to work" dataType="number"/>
+            <attribute weaveEntityId="28860" keyType="MUNI_ID" title="Females who take public transportation to work; Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="28861" keyType="MUNI_ID" title="Females walking to work" dataType="number"/>
+            <attribute weaveEntityId="28862" keyType="MUNI_ID" title="Females walking to work; Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="28863" keyType="MUNI_ID" title="Females taking other means of transportation to work" dataType="number"/>
+            <attribute weaveEntityId="28864" keyType="MUNI_ID" title="Females taking other means of transportation to work; Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="28865" keyType="MUNI_ID" title="Females taking other means of transportation to work" dataType="number"/>
+            <attribute weaveEntityId="28866" keyType="MUNI_ID" title="Females taking other means of transportation to work; Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="28867" keyType="MUNI_ID" title="Females who work from home" dataType="number"/>
+            <attribute weaveEntityId="28868" keyType="MUNI_ID" title="Females who work from home; Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="28869" keyType="MUNI_ID" title="% Commuters who drive to work (Car; truck; or van: alone and carpooled)" dataType="number"/>
+            <attribute weaveEntityId="28870" keyType="MUNI_ID" title="% Commuters who drive to work (Car; truck; or van: alone and carpooled); Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="28871" keyType="MUNI_ID" title="% Commuters who take public transportation to work" dataType="number"/>
+            <attribute weaveEntityId="28872" keyType="MUNI_ID" title="% Commuters who take public transportation to work; Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="28873" keyType="MUNI_ID" title="% Commuters bicycling to work" dataType="number"/>
+            <attribute weaveEntityId="28874" keyType="MUNI_ID" title="% Commuters bicycling to work; Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="28875" keyType="MUNI_ID" title="% Commuters walking to work" dataType="number"/>
+            <attribute weaveEntityId="28876" keyType="MUNI_ID" title="% Commuters walking to work; Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="28877" keyType="MUNI_ID" title="% Commuters taking other means of transportation to work" dataType="number"/>
+            <attribute weaveEntityId="28878" keyType="MUNI_ID" title="% Commuters taking other means of transportation to work; Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="28879" keyType="MUNI_ID" title="% Individuals who work from home" dataType="number"/>
+            <attribute weaveEntityId="28880" keyType="MUNI_ID" title="% Individuals who work from home; Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="28881" keyType="MUNI_ID" title="% Male workers 16 years and over" dataType="number"/>
+            <attribute weaveEntityId="28882" keyType="MUNI_ID" title="% Male workers 16 years and over; Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="28883" keyType="MUNI_ID" title="% Males who drive to work (Car; truck; or van: alone and carpooled)" dataType="number"/>
+            <attribute weaveEntityId="28884" keyType="MUNI_ID" title="% Males who drive to work (Car; truck; or van: alone and carpooled); Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="28885" keyType="MUNI_ID" title="% Males who take public transportation to work" dataType="number"/>
+            <attribute weaveEntityId="28886" keyType="MUNI_ID" title="% Males who take public transportation to work; Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="28887" keyType="MUNI_ID" title="% Males bicycling to work" dataType="number"/>
+            <attribute weaveEntityId="28888" keyType="MUNI_ID" title="% Males bicycling to work; Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="28889" keyType="MUNI_ID" title="% Males walking to work" dataType="number"/>
+            <attribute weaveEntityId="28890" keyType="MUNI_ID" title="% Males walking to work; Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="28891" keyType="MUNI_ID" title="% Males taking other means of transportation to work" dataType="number"/>
+            <attribute weaveEntityId="28892" keyType="MUNI_ID" title="% Males taking other means of transportation to work; Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="28893" keyType="MUNI_ID" title="% Males who work from home" dataType="number"/>
+            <attribute weaveEntityId="28894" keyType="MUNI_ID" title="% Males who work from home; Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="28895" keyType="MUNI_ID" title="% Female workers 16 years and over" dataType="number"/>
+            <attribute weaveEntityId="28896" keyType="MUNI_ID" title="% Female workers 16 years and over; Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="28897" keyType="MUNI_ID" title="% Females who drive to work (Car; truck; or van: alone and carpooled)" dataType="number"/>
+            <attribute weaveEntityId="28898" keyType="MUNI_ID" title="% Females who drive to work (Car; truck; or van: alone and carpooled); Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="28899" keyType="MUNI_ID" title="% Females who take public transportation to work" dataType="number"/>
+            <attribute weaveEntityId="28900" keyType="MUNI_ID" title="% Females who take public transportation to work; Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="28901" keyType="MUNI_ID" title="% Females bicycling to work" dataType="number"/>
+            <attribute weaveEntityId="28902" keyType="MUNI_ID" title="% Females bicycling to work; Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="28903" keyType="MUNI_ID" title="% Females walking to work" dataType="number"/>
+            <attribute weaveEntityId="28904" keyType="MUNI_ID" title="% Females walking to work; Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="28905" keyType="MUNI_ID" title="% Females taking other means of transportation to work" dataType="number"/>
+            <attribute weaveEntityId="28906" keyType="MUNI_ID" title="% Females taking other means of transportation to work; Margin of Error" dataType="number"/>
+            <attribute weaveEntityId="28907" keyType="MUNI_ID" title="% Females who work from home" dataType="number"/>
+            <attribute weaveEntityId="28908" keyType="MUNI_ID" title="% Females who work from home; Margin of Error" dataType="number"/>
+          </category>
+          <category weaveEntityId="23354" title="Transportation to Work from Work Place, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation"/>
+          <category weaveEntityId="28660" title="Travel Time to Work from Residence, 5yr Avg 2008-12 (Block Groups)" source="ACS" subject="Transportation"/>
+          <category weaveEntityId="28696" title="Travel Time to Work from Residence, 5yr Avg 2008-12 (Census Tracts)" source="ACS" subject="Transportation"/>
+          <category weaveEntityId="23207" title="Travel Time to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation"/>
+          <category weaveEntityId="23317" title="Travel Time to Work from Work Place, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation"/>
+          <category weaveEntityId="27235" title="Vehicle Crashes by Year (Municipal)" source="MassDOT" subject="Transportation"/>
+          <category name="Vehicle Miles Traveled, 2005-2007" title="Vehicle Miles Traveled, 2005-2007" source="MassGIS" subject="Transportation"/>
+          <category weaveEntityId="28516" title="Vehicles by Household, 5yr Avg 2008-12 (Block Groups)" source="ACS" subject="Transportation"/>
+          <category weaveEntityId="28588" title="Vehicles by Household, 5yr Avg 2008-12 (Census Tracts)" source="ACS" subject="Transportation"/>
+          <category weaveEntityId="23244" title="Vehicles by Household, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation"/>
+        </category>
+        <category title="Municipal Subset" name="Data Tables">
+          <category title="Boston" name="Data Tables">
+            <category title="Boundaries" name="Data Tables">
+              <category name="Boston Census Tracts" title="Boston Census 2010 Tracts" source="Census" subject="Boston"/>
+              <category name="Boston Neighborhoods" title="Boston Neighborhoods" source="BRA, 2010" subject="Boundaries"/>
+              <category name="Boston Parcels (Subset)" title="Boston Parcels (Subset)" source="City of Boston, 2010" subject="Boston"/>
+              <category name="Boston Planning Districts" title="Boston Planning Districts" subject="Boston"/>
+              <category title="Boston Police Districts" name="Boston Police Districts"/>
+              <category name="Boston Precincts" title="Boston Wards &amp; Precincts" source="BRA" subject="Boston"/>
+            </category>
+            <category title="Civic Vitality and Governance" name="Data Tables">
+              <category name="Boston Cares Annual Volunteer Hours, by Year" description="Boston Cares" title="Boston Cares Annual Volunteer Hours, by Year" subject="Civic Vitality"/>
+              <category name="Boston Voting by Year (Wards and Precincts)" title="Boston Voting Data by Year (Ward and Precinct)" source="Boston Elections Dept, 2000-2011"/>
+            </category>
+            <category title="Economy" name="Data Tables">
+              <category name="Hotel Occupancy by Year (Municipal)" title="Hotel Occupancy by Year (Boston)" source="Pinnacle Advisory Group" subject="Economy"/>
+            </category>
+            <category title="Education" name="Data Tables">
+              <category name="Boston Daycares" title="Boston Day Care Providers, 2010 (points)" subject="Education"/>
+              <category name="Boston Non-Profit Educational Assets (Points)" title="Boston Non-Profit Educational Assets (Points)" subject="Education"/>
+              <category name="Boston Circle of Promise Schools" title="BPS Circle of Promise Schools" source="DESE, 2011" subject="Education"/>
+              <category name="Boston Schools" title="BPS Schools" source="DESE, 2011" subject="Boston"/>
+              <category name="Boston Turnaround Schools" title="BPS Turnaround Schools" source="DESE, 2011" subject="Boston"/>
+              <category name="Library Characteristics" title="Library Characteristics, 2011 (Boston)" source="BPL" subject="Education"/>
+              <category name="Library Circulation by Year (Municipal)" title="Library Circulation by Year (Boston)" source="Boston Public Library" subject="Education"/>
+              <category name="Schools: Students Receiving Weekly Arts Programming by Year" title="Students Receiving Weekly Arts Programming by Year (Boston Schools)" source="Arts Expansion Initiative" subject="Education"/>
+              <category name="Success Boston Student Cohorts (2010)" title="Success Boston Student Cohorts (2010)" source="DESE" subject="Education"/>
+            </category>
+            <category title="Environment &amp; Energy" name="Data Tables">
+              <category name="Energy: Commercial and Industrial Energy Use by Source (Municipal)" title="Commercial and Industrial Energy Use by Year (Boston)" source="City of Boston, Climate Action Plan Greenhouse Gas Inventories" subject="Energy"/>
+              <category name="Environment: Extreme Heat with Projections (Municipal)" title="Extreme Heat Days with Projections (Boston)" source="Northeast Climate Data" subject="Environment"/>
+              <category name="Greenhouse Gas Emissions (Municipal)" title="Greenhouse Gas Emissions, 2005-10 (Boston)" source="City of Boston" subject="Environment"/>
+              <category name="Energy: MBTA Transportation Use (municipal)" title="MBTA Energy Use by Year (Boston)" source="City of Boston, Climate Action Plan Greenhouse Gas Inventories" subject="Energy"/>
+              <category name="Energy: Residential Use (municipal)" title="Residential Energy Use by Year (Boston)" source="City of Boston, Climate Action Plan Greenhouse Gas Inventories" subject="Energy"/>
+              <category name="Water, Sewer and Energy Use by Source (Boston)" title="Water, Sewer and Energy Use by Source and Year (Boston)" source="City of Boston, Climate Action Plan Greenhouse Gas Inventories" subject="Energy"/>
+              <category name="Energy: Residential Use (municipal)" title="Residential Energy Use by Year (Boston)" source="City of Boston, Climate Action Plan Greenhouse Gas Inventories" subject="Energy"/>
+            </category>
+            <category title="Housing" name="Data Tables">
+              <category name="Housing: Abandoned Buildings, multi-year (Boston)" title="Abandoned Buildings multi-year (Boston)" source="Department of Neighborhood Development" subject="Housing"/>
+              <category name="Housing: Annual Foreclosure Deeds by Year (Boston)" description="1990-2011" title="Annual Foreclosure Deeds by Year (Boston)" source="The Warren Group, Suffolk Registry of Deeds" subject="Housing"/>
+              <category name="Homeless Count by Year (Boston)" title="Homeless Count by Year (Boston)" source="Boston Public Health Commission" subject="Housing"/>
+              <category name="Housing stats, 2011 (Boston Planning Districts)" title="Housing Stats, 2011 (Boston Planning Districts)" source="Boston DND" subject="Housing"/>
+              <category name="Housing: Abandoned Buildings by Year (Boston)" description="Department of Neighborhood Development" title="Housing: Abandoned Buildings by Year (Boston)" source="Department of Neighborhood Development" subject="Housing"/>
+            </category>
+            <category title="Public Health" name="Data Tables">
+              <category name="Health: Youth Alcohol Consumption, 1993-11 (Boston)" title="Youth Alcohol Consumption, 1993-11 (Boston)" source="YRBSS" subject="Public Health"/>
+              <category name="Health: Youth Attempted Suicide, 1993-11 (Boston)" description="Teens who attempted suicide in the last 12 months" title="Youth Attempted Suicide, 1993-11 (Boston)" subject="Public Health"/>
+              <category name="Health: Youth Diagnosed with Asthma, 2005-11 (Boston)" title="Youth Diagnosed with Asthma, 2005-11 (Boston)" source="YRBSS" subject="Public Health"/>
+              <category name="Health: Youth Marijuana Use 1993-11 (Boston)" title="Youth Marijuana Use 1993-11 (Boston)" source="YRBSS" subject="Public Health"/>
+              <category name="Health: Youth Weight (Municipal)" title="Youth Overweight/Obese, 1999-2011 (Boston)" source="YRBSS" subject="Public Health"/>
+              <category name="Health: Youth Physical Activity (Municipal)" title="Youth Physical Activity 1993-11 (Boston)" source="YRBSS" subject="Public Health"/>
+              <category name="Health: Youth Phys. Ed. (Municipal)" title="Youth Physical Education 1993-11 (Boston)" source="YRBSS" subject="Public Health"/>
+              <category name="Health: Youth Smoking, 1993-11 (Boston)" title="Youth Smoking, 1993-11 (Boston)" source="YRBSS" subject="Public Health"/>
+              <category name="Health: Youth Soda Consumption (Municipal)" title="Youth Soda Consumption, 2007-11 (Boston)" source="YRBSS" subject="Public Health"/>
+            </category>
+            <category title="Public Safety" name="Data Tables">
+              <category name="Public Safety: Hate Crimes by Offense (Boston)" title="Public Safety: Hate Crimes by Offense (Boston)" source="Boston Police Dept." subject="Public Safety"/>
+              <category name="Public Safety: Hate Crimes by Perpetrator Race/Ethnicity (Boston)" description="All incidents investigated by the BPD Community Disorders unit" title="Public Safety: Hate Crimes by Perpetrator Race/Ethnicity (Boston)" source="Boston Police Dept" subject="Public Safety"/>
+              <category name="Public Safety: Hate Crimes by Victim Race/Ethnicity (Boston)" title="Public Safety: Hate Crimes by Victim Race/Ethnicity (Boston)" source="Boston Police Dept." subject="Public Safety"/>
+              <category name="Public Safety: Youth Crime (under age 16) by Type (Boston)" title="Public Safety: Youth Crime (under age 16) by Type (Boston)" source="Boston Police Dept." subject="Public Safety"/>
+              <category name="Public Safety: Youth Crime (age 14 to 24) by Type (Boston)" description="Youth Population aged 14 to 24" title="Youth Crime (age 14 to 24) by Type (Boston)" subject="Public Safety"/>
+            </category>
+            <category title="Technology" name="Data Tables">
+              <category name="Boston Tech Centers" title="Boston Technology Centers, 2012" source="Timothy Smith Network" subject="Technology"/>
+            </category>
           </category>
         </category>
         <category title="Boundaries" name="Data Tables">
-          <category title="MAPC Municipalities" source="MAPC" name="MAPC Municipalities"/>
-          <category title="Massachusetts Municipalities" source="MassGIS" name="Massachusetts Municipalities"/>
-          <category title="Boston Neighborhoods" source="BRA, 2010" name="Boston Neighborhoods"/>
-          <category title="Boston Parcels (Subset)" source="City of Boston, 2010" name="Boston Parcels (Subset)"/>
-          <category title="Census 2010 Tracts" source="Census, 2010" name="Census 2010 Tracts"/>
-          <category title="Census Block Groups 2000" source="Census" name="Census 2000 Block Groups"/>
-          <category title="Census Block Groups, 2010" source="Census, 2010" name="Census 2010 Block Groups"/>
-          <category title="Census Tracts, 2000" source="Census" name="Census 2000 Tracts"/>
-          <category source="MAPC, 2011" name="Community Types (Municipal)" title="Community Types (Municipal)" subject="Boundaries"/>
-          <category title="MA Counties" source="MassGIS" name="MA Counties"/>
-          <category title="MetroFuture Region" source="MAPC, 2008" name="MetroFuture Region"/>
-          <category title="Traffic Analysis Zones (TAZ) " source="HUD" name="Traffic Analysis Zones (TAZ)"/>
-          <category title="US States" name="US States"/>
+          <category name="MAPC Municipalities" title="MAPC Municipalities" source="MAPC" subject="Boundaries"/>
+          <category name="Massachusetts Municipalities" title="Massachusetts Municipalities" source="MassGIS" subject="Boundaries"/>
+          <category name="Boston Neighborhoods" title="Boston Neighborhoods" source="BRA, 2010" subject="Boundaries"/>
+          <category name="Census 2010 Block Groups" title="Census Block Groups, 2010" source="Census" subject="Boundaries"/>
+          <category name="Census 2010 Tracts" title="Census 2010 Tracts" source="Census" subject="Boundaries"/>
+          <category name="Census 2000 Block Groups" title="Census Block Groups 2000" source="Census" subject="Boundaries"/>
+          <category name="Census 2000 Tracts" title="Census Tracts, 2000" source="Census" subject="Boundaries"/>
+          <category name="Community Types (Municipal)" title="Community Types (Municipal)" source="MAPC, 2011" subject="Boundaries"/>
+          <category name="MA Counties" title="MA Counties" source="MassGIS" subject="Boundaries"/>
+          <category title="MA Regions (Polygons)" weaveEntityId="27964"/>
+          <category name="MetroFuture Region" title="MetroFuture Region" source="MAPC, 2008" subject="MetroFuture"/>
+          <category title="Regional Planning Agencies (RPA)" weaveEntityId="27227"/>
+          <category name="Traffic Analysis Zones (TAZ)" title="Traffic Analysis Zones (TAZ) " source="HUD" subject="Boundaries"/>
+          <category name="US States" title="US States" subject="Boundaries"/>
         </category>
-        <category title="Geometry Collections" name="Geometry Collections">
-          <attribute dataType="geometry" name="Arts and Culture Points" title="Arts and Culture Points" keyType="Arts and Culture Points"/>
-          <attribute dataType="geometry" name="Bike and Pedestrian Facilities" title="Bike and Pedestrian Facilities" keyType="ObjectID"/>
-          <attribute dataType="geometry" name="Boston Circle of Promise Schools" title="Boston Circle of Promise Schools" keyType="SchoolID"/>
-          <attribute dataType="geometry" name="Boston Daycares" title="Boston Daycares" keyType="ObjectID"/>
-          <attribute dataType="geometry" name="Boston Neighborhoods" title="Boston Neighborhoods" keyType="ObjectID"/>
-          <attribute dataType="geometry" name="Boston Non-Profit Educational Assets (Points)" title="Boston Non-Profit Educational Assets (Points)" keyType="ObjectID"/>
-          <attribute dataType="geometry" name="Boston Outline" title="Boston Outline" keyType="MUNI_ID"/>
-          <attribute dataType="geometry" name="Boston Parcels (Subset)" title="Boston Parcels (Subset)" keyType="BostonParcelID"/>
-          <attribute dataType="geometry" name="Boston Schools" title="Boston Schools" keyType="SchoolID"/>
-          <attribute dataType="geometry" name="Boston Turnaround Schools" title="Boston Turnaround Schools" keyType="SchoolID"/>
-          <attribute dataType="geometry" name="Census 2000 Block Groups" title="Census 2000 Block Groups" keyType="BG_00_ID"/>
-          <attribute dataType="geometry" name="Census 2000 Tracts" title="Census 2000 Tracts" keyType="CT_ID"/>
-          <attribute dataType="geometry" name="Census 2010 Block Groups" title="Census 2010 Block Groups" keyType="BG_10_ID"/>
-          <attribute dataType="geometry" name="Census 2010 Tracts" title="Census 2010 Tracts" keyType="ct10_id"/>
-          <attribute dataType="geometry" name="Child Care Providers with Less than High School" title="Child Care Providers with Less than High School" keyType="ObjectID"/>
-          <attribute dataType="geometry" name="Colleges and Universities" title="Colleges and Universities" keyType="College_ID"/>
-          <attribute dataType="geometry" name="Commuter Rail" title="Commuter Rail" keyType="Commuter Rail"/>
-          <attribute dataType="geometry" name="Environmental Justice Populations (Block Groups)" title="Environmental Justice Populations (Block Groups)" keyType="BG_00_ID"/>
-          <attribute dataType="geometry" name="Fairmount Commuter Line" title="Fairmount Commuter Line" keyType="ObjectID"/>
-          <attribute dataType="geometry" name="LEED Certified Buildings (Points)" title="LEED Certified Buildings (Points)" keyType="LEED_ID"/>
-          <attribute dataType="geometry" name="Libraries" title="Libraries" keyType="ObjectID"/>
-          <attribute dataType="geometry" name="MA Counties" title="MA Counties" keyType="FIPS_ID"/>
-          <attribute dataType="geometry" name="MA House Districts" title="MA House Districts" keyType="MA_HOUSE02_ID"/>
-          <attribute dataType="geometry" name="MA Senate Districts" title="MA Senate Districts" keyType="MA_SENATE02_ID"/>
-          <attribute dataType="geometry" name="Major Roads (MassDOT)" title="Major Roads (MassDOT)" keyType="ObjectID"/>
-          <attribute dataType="geometry" name="Major Routes (MassDOT)" title="Major Routes (MassDOT)" keyType="ObjectID"/>
-          <attribute dataType="geometry" name="MAPC Municipalities" title="MAPC Municipalities" keyType="MUNI_ID"/>
-          <attribute dataType="geometry" name="Massachusetts Municipalities" title="Massachusetts Municipalities" keyType="MUNI_ID"/>
-          <attribute dataType="geometry" name="MBTA Subway Lines" title="MBTA Subway Lines" keyType="MBTA Subway Lines"/>
-          <attribute dataType="geometry" name="MetroFuture Region" title="MetroFuture Region" keyType="MUNI_ID"/>
-          <attribute dataType="geometry" name="Open Space" title="Open Space" keyType="OS_ID"/>
-          <attribute dataType="geometry" name="Protected Open Space" title="Protected Open Space" keyType="OS_ID"/>
-          <attribute dataType="geometry" name="School Districts" title="School Districts" keyType="SchoolDistrictID"/>
-          <attribute dataType="geometry" name="School Districts by Town" title="School Districts by Town" keyType="MUNI_ID"/>
-          <attribute dataType="geometry" name="Schools" title="Schools" keyType="SchoolID"/>
-          <attribute dataType="geometry" name="Success Boston Student Cohorts (2010)" title="Success Boston Student Cohorts (2010)" keyType="ObjectID"/>
-          <attribute dataType="geometry" name="Traffic Analysis Zones (TAZ) " title="Traffic Analysis Zones (TAZ) " keyType="TAZ_ID"/>
-          <attribute dataType="geometry" name="US Congressional Districts" title="US Congressional Districts" keyType="US_CONGRESS_ID"/>
-          <attribute dataType="geometry" name="US States" title="US States" keyType="Arts and Culture Points"/>
-          <attribute dataType="geometry" name="Water Bodies (100k Hydro)" title="Water Bodies (100k Hydro)" keyType="PALIS_ID"/>
+        <category title="Spatial Geography for Maps" name="Geometry Collections">
+          <attribute name="MAPC Municipalities" keyType="MUNI_ID" title="MAPC Municipalities" dataType="geometry"/>
+          <attribute name="Massachusetts Municipalities" keyType="MUNI_ID" title="Massachusetts Municipalities" dataType="geometry"/>
+          <attribute name="1Km Grid" keyType="Grid_1Km_ID" title="1Km Grid" dataType="geometry"/>
+          <attribute name="Arts and Culture Points" keyType="Arts and Culture Points" title="Arts and Culture Points" dataType="geometry"/>
+          <attribute name="Bike and Pedestrian Facilities" keyType="ObjectID" title="Bike and Pedestrian Facilities" dataType="geometry"/>
+          <attribute name="Boston Circle of Promise Schools" keyType="SchoolID" title="Boston Circle of Promise Schools" dataType="geometry"/>
+          <attribute name="Boston Daycares" keyType="ObjectID" title="Boston Daycares" dataType="geometry"/>
+          <attribute name="Boston Neighborhoods" keyType="ObjectID" title="Boston Neighborhoods" dataType="geometry"/>
+          <attribute name="Boston Non-Profit Educational Assets (Points)" keyType="ObjectID" title="Boston Non-Profit Educational Assets (Points)" dataType="geometry"/>
+          <attribute name="Boston Outline" keyType="MUNI_ID" title="Boston Outline" dataType="geometry"/>
+          <attribute name="Boston Parcels (Subset)" keyType="BostonParcelID" title="Boston Parcels (Subset)" dataType="geometry"/>
+          <attribute name="Boston Planning Districts" keyType="Boston_Planning_Districts" title="Boston Planning Districts" dataType="geometry"/>
+          <attribute name="Boston Police Districts" keyType="boston_police_districts_id" title="Boston Police Districts" dataType="geometry"/>
+          <attribute name="Boston Precincts" keyType="Boston_Wards_Precincts" title="Boston Precincts" dataType="geometry"/>
+          <attribute name="Boston Schools" keyType="SchoolID" title="Boston Schools" dataType="geometry"/>
+          <attribute name="Boston Tech Centers" keyType="Boston_TechCenters" title="Boston Tech Centers" dataType="geometry"/>
+          <attribute name="Boston Turnaround Schools" keyType="SchoolID" title="Boston Turnaround Schools" dataType="geometry"/>
+          <attribute name="Census 2000 Block Groups" keyType="BG_00_ID" title="Census 2000 Block Groups" dataType="geometry"/>
+          <attribute name="Census 2000 Tracts" keyType="CT_ID" title="Census 2000 Tracts" dataType="geometry"/>
+          <attribute name="Census 2010 Block Groups" keyType="BG_10_ID" title="Census 2010 Block Groups" dataType="geometry"/>
+          <attribute name="Census 2010 Tracts" keyType="ct10_id" title="Census 2010 Tracts" dataType="geometry"/>
+          <attribute name="Child Care Providers with Less than High School" keyType="ObjectID" title="Child Care Providers with Less than High School" dataType="geometry"/>
+          <attribute name="Colleges and Universities" keyType="College_ID" title="Colleges and Universities" dataType="geometry"/>
+          <attribute name="Community Health Centers" keyType="chc_id" title="Community Health Centers" dataType="geometry"/>
+          <attribute name="Commuter Rail" keyType="Commuter Rail" title="Commuter Rail" dataType="geometry"/>
+          <attribute name="Commuter Rail Stations" keyType="Commuter Rail Stations" title="Commuter Rail Stations" dataType="geometry"/>
+          <attribute name="Environmental Justice Populations (Block Groups)" keyType="BG_00_ID" title="Environmental Justice Populations (Block Groups)" dataType="geometry"/>
+          <attribute name="Fairmount Commuter Line" keyType="ObjectID" title="Fairmount Commuter Line" dataType="geometry"/>
+          <attribute name="Green House Gas Emissions by Facility, 2010 (pts)" keyType="frs_id" title="Green House Gas Emissions by Facility, 2010 (pts)" dataType="geometry"/>
+          <attribute name="Hospitals" keyType="hospital_id" title="Hospitals" dataType="geometry"/>
+          <attribute name="Intel Clubhouses" keyType="Intel_Clubhouses" title="Intel Clubhouses" dataType="geometry"/>
+          <attribute name="LEED Certified Buildings (Points)" keyType="LEED_ID" title="LEED Certified Buildings (Points)" dataType="geometry"/>
+          <attribute name="Libraries" keyType="LibraryID" title="Libraries" dataType="geometry"/>
+          <attribute name="MA Counties" keyType="FIPS_ID" title="MA Counties" dataType="geometry"/>
+          <attribute name="MA House Legislative Districts (2012)" keyType="MA_HOUSE12_ID" title="MA House Legislative Districts (2012)" dataType="geometry"/>
+          <attribute weaveEntityId="27968" projection="EPSG:26986" keyType="MUNI_ID" title="MA Regions (Polygons)" dataType="geometry"/>
+          <attribute name="MA Senate Legislative Districts (2012)" keyType="MA_SENATE12_ID" title="MA Senate Legislative Districts (2012)" dataType="geometry"/>
+          <attribute name="Major Roads (MassDOT)" keyType="ObjectID" title="Major Roads (MassDOT)" dataType="geometry"/>
+          <attribute name="Major Routes (MassDOT)" keyType="ObjectID" title="Major Routes (MassDOT)" dataType="geometry"/>
+          <attribute name="MAPC Municipalities" keyType="MUNI_ID" title="MAPC Municipalities" dataType="geometry"/>
+          <attribute name="Mass in Motion Communities" keyType="MUNI_ID" title="Mass in Motion Communities" dataType="geometry"/>
+          <attribute name="Massachusetts Municipalities" keyType="MUNI_ID" title="Massachusetts Municipalities" dataType="geometry"/>
+          <attribute name="MBTA Subway Lines" keyType="MBTA Subway Lines" title="MBTA Subway Lines" dataType="geometry"/>
+          <attribute name="MBTA Subway Stops" keyType="MBTA Subway Stops" title="MBTA Subway Stops" dataType="geometry"/>
+          <attribute name="MetroFuture Region" keyType="MUNI_ID" title="MetroFuture Region" dataType="geometry"/>
+          <attribute name="Open Space" keyType="OS_ID" title="Open Space" dataType="geometry"/>
+          <attribute name="Police Stations" keyType="PoliceStations_id" title="Police Stations" dataType="geometry"/>
+          <attribute name="Protected Open Space" keyType="OS_ID" title="Protected Open Space" dataType="geometry"/>
+          <attribute weaveEntityId="27234" projection="EPSG:26986" keyType="rpa_muni_id" title="Regional Planning Agencies (RPAs)" dataType="geometry"/>
+          <attribute weaveEntityId="26150" projection="EPSG:26986" keyType="RTA_Bus_Lines" title="RTA Bus Lines" dataType="geometry"/>
+          <attribute name="School Districts" keyType="SchoolDistrictID" title="School Districts" dataType="geometry"/>
+          <attribute name="School Districts by Town" keyType="MUNI_ID" title="School Districts by Town" dataType="geometry"/>
+          <attribute name="Schools" keyType="SchoolID" title="Schools" dataType="geometry"/>
+          <attribute name="Success Boston Student Cohorts (2010)" keyType="ObjectID" title="Success Boston Student Cohorts (2010)" dataType="geometry"/>
+          <attribute name="Transit Oriented Development Stations" keyType="TOD_Station" title="Transit Oriented Development Stations" dataType="geometry"/>
+          <attribute name="Traffic Analysis Zones (TAZ) " keyType="TAZ_ID" title="Traffic Analysis Zones (TAZ) " dataType="geometry"/>
+          <attribute name="US Congressional Districts" keyType="US_CONGRESS_ID" title="US Congressional Districts" dataType="geometry"/>
+          <attribute name="US States" keyType="Arts and Culture Points" title="US States" dataType="geometry"/>
+          <attribute name="Water Bodies (100k Hydro)" keyType="PALIS_ID" title="Water Bodies (100k Hydro)" dataType="geometry"/>
         </category>
       </hierarchy>
     </attributeHierarchy>
     <hierarchyURL/>
+    <idFields/>
     <url>/WeaveServices/DataService</url>
   </WeaveDataSource>
-  <LinkableHashMap encoding="dynamic" name="Probe Header Columns"/>
+  <LinkableHashMap encoding="dynamic" name="Probe Header Columns">
+    <ReferencedColumn name="ReferencedColumn">
+      <dynamicColumnReference encoding="dynamic">
+        <HierarchyColumnReference>
+          <dataSourceName>TransposedDataSource</dataSourceName>
+          <hierarchyPath encoding="xml">
+            <hierarchy title="TransposedDataSource">
+              <category title="Transposed columns">
+                <attribute title="{{ regionalunit.name }}" TransposedDataSource_recordKey="MUNI_ID,{{ regionalunit.unitid }}"/>
+              </category>
+            </hierarchy>
+          </hierarchyPath>
+        </HierarchyColumnReference>
+      </dynamicColumnReference>
+    </ReferencedColumn>
+    <ReferencedColumn name="ReferencedColumn2">
+      <dynamicColumnReference encoding="dynamic">
+        <HierarchyColumnReference>
+          <dataSourceName>TransposedDataSource</dataSourceName>
+          <hierarchyPath encoding="xml">
+            <hierarchy title="TransposedDataSource">
+              <category title="Source column metadata">
+                <attribute title="shortTitle" TransposedDataSource_propertyName="shortTitle"/>
+              </category>
+            </hierarchy>
+          </hierarchyPath>
+        </HierarchyColumnReference>
+      </dynamicColumnReference>
+    </ReferencedColumn>
+  </LinkableHashMap>
   <LinkableHashMap encoding="dynamic" name="Probed Columns"/>
-  <TransposedTableTool name="TransposedTableTool2">
-    <buttonRadius>3</buttonRadius>
-    <closeable>true</closeable>
+  <TransposedDataSource name="TransposedDataSource">
     <columns encoding="dynamic">
-      <ReferencedColumn name="ReferencedColumn34">
+      <ReferencedColumn name="ReferencedColumn23">
         <dynamicColumnReference encoding="dynamic">
           <HierarchyColumnReference>
             <dataSourceName>MetroBoston DataCommon</dataSourceName>
             <hierarchyPath encoding="xml">
               <hierarchy>
                 <category title="Transportation" name="Data Tables">
-                  <category title="Travel Time to Work, 5yr Avg 2005-09 (Municipal)" source="ACS" name="Travel Time to Work (Municipal)">
-                    <attribute dataType="number" name="wrk16p_tot" title="Workers 16 years and older" dataTable="Travel Time to Work (Municipal)" keyType="MUNI_ID"/>
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute keyType="MUNI_ID" title="% Commuters who drive to work" shortTitle="% Drive" weaveEntityId="23191" string="formatNumber(number, 1)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn25">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Transportation" name="Data Tables">
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute weaveEntityId="23193" keyType="MUNI_ID" title="% Commuters who take public transit to work" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn27">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Transportation" name="Data Tables">
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute keyType="MUNI_ID" title="% Commuters who take a taxi to work" shortTitle="% Taxi" weaveEntityId="23195" string="formatNumber(number, 1)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn29">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Transportation" name="Data Tables">
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute keyType="MUNI_ID" title="% Commuters who take a motorcycle to work" shortTitle="% Motorcycle" weaveEntityId="23197" string="formatNumber(number, 1)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn31">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Transportation" name="Data Tables">
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute keyType="MUNI_ID" title="% Commuters who bicycle to work" shortTitle="% Bicycle" weaveEntityId="23199" string="formatNumber(number, 1)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn33">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Transportation" name="Data Tables">
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute keyType="MUNI_ID" title="% Commuters who walk to work" shortTitle="% Walk" weaveEntityId="23201" string="formatNumber(number, 1)" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -519,8 +1017,8 @@ wheel</zoom>
             <hierarchyPath encoding="xml">
               <hierarchy>
                 <category title="Transportation" name="Data Tables">
-                  <category title="Travel Time to Work, 5yr Avg 2005-09 (Municipal)" source="ACS" name="Travel Time to Work (Municipal)">
-                    <attribute dataType="number" name="wrk16p_moe" title="Workers 16 years and older, MOE" dataTable="Travel Time to Work (Municipal)" keyType="MUNI_ID"/>
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute keyType="MUNI_ID" title="% Commuters who take other means of transportation to work" shortTitle="% Other" weaveEntityId="23203" string="formatNumber(number, 1)" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -528,15 +1026,15 @@ wheel</zoom>
           </HierarchyColumnReference>
         </dynamicColumnReference>
       </ReferencedColumn>
-      <ReferencedColumn name="ReferencedColumn60">
+      <ReferencedColumn name="ReferencedColumn37">
         <dynamicColumnReference encoding="dynamic">
           <HierarchyColumnReference>
             <dataSourceName>MetroBoston DataCommon</dataSourceName>
             <hierarchyPath encoding="xml">
               <hierarchy>
                 <category title="Transportation" name="Data Tables">
-                  <category title="Travel Time to Work, 5yr Avg 2005-09 (Municipal)" source="ACS" name="Travel Time to Work (Municipal)">
-                    <attribute dataType="number" name="pt0_30" title="Workers with &lt; 30 min commute by Public Transportation" dataTable="Travel Time to Work (Municipal)" keyType="MUNI_ID"/>
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute keyType="MUNI_ID" title="% Individuals who work from home" shortTitle="% Work from Home" weaveEntityId="23205" string="formatNumber(number, 1)" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -544,15 +1042,22 @@ wheel</zoom>
           </HierarchyColumnReference>
         </dynamicColumnReference>
       </ReferencedColumn>
-      <ReferencedColumn name="ReferencedColumn61">
+    </columns>
+    <filteredKeySet>
+      <keyFilter encoding="dynamic">
+        <GlobalObjectReference name="defaultSubsetKeyFilter"/>
+      </keyFilter>
+    </filteredKeySet>
+    <metadata encoding="dynamic">
+      <ReferencedColumn name="title">
         <dynamicColumnReference encoding="dynamic">
           <HierarchyColumnReference>
             <dataSourceName>MetroBoston DataCommon</dataSourceName>
             <hierarchyPath encoding="xml">
               <hierarchy>
                 <category title="Transportation" name="Data Tables">
-                  <category title="Travel Time to Work, 5yr Avg 2005-09 (Municipal)" source="ACS" name="Travel Time to Work (Municipal)">
-                    <attribute dataType="number" name="pt0_30_me" title="Workers with &lt; 30 min commute by Public Transportation, MOE" dataTable="Travel Time to Work (Municipal)" keyType="MUNI_ID"/>
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute weaveEntityId="23169" keyType="MUNI_ID" title="Municipality" dataType="string"/>
                   </category>
                 </category>
               </hierarchy>
@@ -560,15 +1065,21 @@ wheel</zoom>
           </HierarchyColumnReference>
         </dynamicColumnReference>
       </ReferencedColumn>
-      <ReferencedColumn name="ReferencedColumn62">
+    </metadata>
+  </TransposedDataSource>
+  <TransposedTableTool name="TransposedTableTool2">
+    <buttonRadius>3</buttonRadius>
+    <closeable>true</closeable>
+    <columns encoding="dynamic">
+      <ReferencedColumn name="ReferencedColumn5">
         <dynamicColumnReference encoding="dynamic">
           <HierarchyColumnReference>
             <dataSourceName>MetroBoston DataCommon</dataSourceName>
             <hierarchyPath encoding="xml">
               <hierarchy>
                 <category title="Transportation" name="Data Tables">
-                  <category title="Travel Time to Work, 5yr Avg 2005-09 (Municipal)" source="ACS" name="Travel Time to Work (Municipal)">
-                    <attribute dataType="number" name="pt30_60" title="Workers with 30-60 min commute by Public Transportation" dataTable="Travel Time to Work (Municipal)" keyType="MUNI_ID"/>
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute weaveEntityId="23173" keyType="MUNI_ID" title="Workers 16 years and over" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -576,15 +1087,15 @@ wheel</zoom>
           </HierarchyColumnReference>
         </dynamicColumnReference>
       </ReferencedColumn>
-      <ReferencedColumn name="ReferencedColumn63">
+      <ReferencedColumn name="ReferencedColumn6">
         <dynamicColumnReference encoding="dynamic">
           <HierarchyColumnReference>
             <dataSourceName>MetroBoston DataCommon</dataSourceName>
             <hierarchyPath encoding="xml">
               <hierarchy>
                 <category title="Transportation" name="Data Tables">
-                  <category title="Travel Time to Work, 5yr Avg 2005-09 (Municipal)" source="ACS" name="Travel Time to Work (Municipal)">
-                    <attribute dataType="number" name="pt30_60_me" title="Workers with 30-60 min commute by Public Transportation, MOE" dataTable="Travel Time to Work (Municipal)" keyType="MUNI_ID"/>
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute weaveEntityId="23174" keyType="MUNI_ID" title="Workers 16 years and over, Margin of Error" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -592,15 +1103,15 @@ wheel</zoom>
           </HierarchyColumnReference>
         </dynamicColumnReference>
       </ReferencedColumn>
-      <ReferencedColumn name="ReferencedColumn64">
+      <ReferencedColumn name="ReferencedColumn7">
         <dynamicColumnReference encoding="dynamic">
           <HierarchyColumnReference>
             <dataSourceName>MetroBoston DataCommon</dataSourceName>
             <hierarchyPath encoding="xml">
               <hierarchy>
                 <category title="Transportation" name="Data Tables">
-                  <category title="Travel Time to Work, 5yr Avg 2005-09 (Municipal)" source="ACS" name="Travel Time to Work (Municipal)">
-                    <attribute dataType="number" name="pt60p" title="Workers with > 60 min commute by Public Transportation" dataTable="Travel Time to Work (Municipal)" keyType="MUNI_ID"/>
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute weaveEntityId="23175" keyType="MUNI_ID" title="Commuters who drive to work" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -608,15 +1119,15 @@ wheel</zoom>
           </HierarchyColumnReference>
         </dynamicColumnReference>
       </ReferencedColumn>
-      <ReferencedColumn name="ReferencedColumn65">
+      <ReferencedColumn name="ReferencedColumn8">
         <dynamicColumnReference encoding="dynamic">
           <HierarchyColumnReference>
             <dataSourceName>MetroBoston DataCommon</dataSourceName>
             <hierarchyPath encoding="xml">
               <hierarchy>
                 <category title="Transportation" name="Data Tables">
-                  <category title="Travel Time to Work, 5yr Avg 2005-09 (Municipal)" source="ACS" name="Travel Time to Work (Municipal)">
-                    <attribute dataType="number" name="pt60p_me" title="Workers with > 60 min commute by Public Transportation, MOE" dataTable="Travel Time to Work (Municipal)" keyType="MUNI_ID"/>
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute weaveEntityId="23176" keyType="MUNI_ID" title="Commuters who drive to work, Margin of Error" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -624,15 +1135,15 @@ wheel</zoom>
           </HierarchyColumnReference>
         </dynamicColumnReference>
       </ReferencedColumn>
-      <ReferencedColumn name="ReferencedColumn66">
+      <ReferencedColumn name="ReferencedColumn9">
         <dynamicColumnReference encoding="dynamic">
           <HierarchyColumnReference>
             <dataSourceName>MetroBoston DataCommon</dataSourceName>
             <hierarchyPath encoding="xml">
               <hierarchy>
                 <category title="Transportation" name="Data Tables">
-                  <category title="Travel Time to Work, 5yr Avg 2005-09 (Municipal)" source="ACS" name="Travel Time to Work (Municipal)">
-                    <attribute min="0" string="formatNumber(number, 1)" title="% Workers with &lt; 30 min commute by Public Transportation" keyType="MUNI_ID" dataType="number" name="pt0_30_p" year=" " max="100" dataTable="Travel Time to Work (Municipal)"/>
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute weaveEntityId="23177" keyType="MUNI_ID" title="Commuters who take public transit to work" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -640,15 +1151,15 @@ wheel</zoom>
           </HierarchyColumnReference>
         </dynamicColumnReference>
       </ReferencedColumn>
-      <ReferencedColumn name="ReferencedColumn67">
+      <ReferencedColumn name="ReferencedColumn10">
         <dynamicColumnReference encoding="dynamic">
           <HierarchyColumnReference>
             <dataSourceName>MetroBoston DataCommon</dataSourceName>
             <hierarchyPath encoding="xml">
               <hierarchy>
                 <category title="Transportation" name="Data Tables">
-                  <category title="Travel Time to Work, 5yr Avg 2005-09 (Municipal)" source="ACS" name="Travel Time to Work (Municipal)">
-                    <attribute min="0" string="formatNumber(number, 1)" title="% Workers with &lt; 30 min commute by Public Transportation, MOE" keyType="MUNI_ID" dataType="number" name="pt0_30_mep" max="100" dataTable="Travel Time to Work (Municipal)"/>
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute weaveEntityId="23178" keyType="MUNI_ID" title="Commuters who take public transit to work, Margin of Error" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -656,15 +1167,15 @@ wheel</zoom>
           </HierarchyColumnReference>
         </dynamicColumnReference>
       </ReferencedColumn>
-      <ReferencedColumn name="ReferencedColumn68">
+      <ReferencedColumn name="ReferencedColumn11">
         <dynamicColumnReference encoding="dynamic">
           <HierarchyColumnReference>
             <dataSourceName>MetroBoston DataCommon</dataSourceName>
             <hierarchyPath encoding="xml">
               <hierarchy>
                 <category title="Transportation" name="Data Tables">
-                  <category title="Travel Time to Work, 5yr Avg 2005-09 (Municipal)" source="ACS" name="Travel Time to Work (Municipal)">
-                    <attribute min="0" string="formatNumber(number, 1)" title="% Workers with 30-60 min commute by Public Transportation" keyType="MUNI_ID" dataType="number" name="pt30_60_p" max="100" dataTable="Travel Time to Work (Municipal)"/>
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute weaveEntityId="23179" keyType="MUNI_ID" title="Commuters who take a taxi to work" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -672,15 +1183,15 @@ wheel</zoom>
           </HierarchyColumnReference>
         </dynamicColumnReference>
       </ReferencedColumn>
-      <ReferencedColumn name="ReferencedColumn69">
+      <ReferencedColumn name="ReferencedColumn12">
         <dynamicColumnReference encoding="dynamic">
           <HierarchyColumnReference>
             <dataSourceName>MetroBoston DataCommon</dataSourceName>
             <hierarchyPath encoding="xml">
               <hierarchy>
                 <category title="Transportation" name="Data Tables">
-                  <category title="Travel Time to Work, 5yr Avg 2005-09 (Municipal)" source="ACS" name="Travel Time to Work (Municipal)">
-                    <attribute min="0" string="formatNumber(number, 1)" title="% Workers with 30-60 min commute by Public Transportation, MOE" keyType="MUNI_ID" dataType="number" name="pt3060_mep" max="100" dataTable="Travel Time to Work (Municipal)"/>
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute weaveEntityId="23180" keyType="MUNI_ID" title="Commuters who take a taxi to work, Margin of Error" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -688,15 +1199,15 @@ wheel</zoom>
           </HierarchyColumnReference>
         </dynamicColumnReference>
       </ReferencedColumn>
-      <ReferencedColumn name="ReferencedColumn70">
+      <ReferencedColumn name="ReferencedColumn13">
         <dynamicColumnReference encoding="dynamic">
           <HierarchyColumnReference>
             <dataSourceName>MetroBoston DataCommon</dataSourceName>
             <hierarchyPath encoding="xml">
               <hierarchy>
                 <category title="Transportation" name="Data Tables">
-                  <category title="Travel Time to Work, 5yr Avg 2005-09 (Municipal)" source="ACS" name="Travel Time to Work (Municipal)">
-                    <attribute min="0" string="formatNumber(number, 1)" title="% Workers with > 60 min commute by Public Transportation" keyType="MUNI_ID" dataType="number" name="pt60p_p" max="100" dataTable="Travel Time to Work (Municipal)"/>
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute weaveEntityId="23181" keyType="MUNI_ID" title="Commuters who take a motorcycle to work" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -704,15 +1215,399 @@ wheel</zoom>
           </HierarchyColumnReference>
         </dynamicColumnReference>
       </ReferencedColumn>
-      <ReferencedColumn name="ReferencedColumn71">
+      <ReferencedColumn name="ReferencedColumn14">
         <dynamicColumnReference encoding="dynamic">
           <HierarchyColumnReference>
             <dataSourceName>MetroBoston DataCommon</dataSourceName>
             <hierarchyPath encoding="xml">
               <hierarchy>
                 <category title="Transportation" name="Data Tables">
-                  <category title="Travel Time to Work, 5yr Avg 2005-09 (Municipal)" source="ACS" name="Travel Time to Work (Municipal)">
-                    <attribute min="0" string="formatNumber(number, 1)" title="% Workers with > 60 min commute by Public Transportation, MOE" keyType="MUNI_ID" dataType="number" name="pt60p_mep" max="100" dataTable="Travel Time to Work (Municipal)"/>
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute weaveEntityId="23182" keyType="MUNI_ID" title="Commuters who take a motorcycle to work, Margin of Error" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn15">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Transportation" name="Data Tables">
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute weaveEntityId="23183" keyType="MUNI_ID" title="Commuters bicycling to work" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn16">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Transportation" name="Data Tables">
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute weaveEntityId="23184" keyType="MUNI_ID" title="Commuters bicycling to work, Margin of Error" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn17">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Transportation" name="Data Tables">
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute weaveEntityId="23185" keyType="MUNI_ID" title="Commuters walking to work" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn18">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Transportation" name="Data Tables">
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute weaveEntityId="23186" keyType="MUNI_ID" title="Commuters walking to work, Margin of Error" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn19">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Transportation" name="Data Tables">
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute weaveEntityId="23187" keyType="MUNI_ID" title="Commuters taking other means of transportation to work" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn20">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Transportation" name="Data Tables">
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute weaveEntityId="23188" keyType="MUNI_ID" title="Commuters taking other means of transportation to work, Margin of Error" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn21">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Transportation" name="Data Tables">
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute weaveEntityId="23189" keyType="MUNI_ID" title="Individuals who work from home" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn22">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Transportation" name="Data Tables">
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute weaveEntityId="23190" keyType="MUNI_ID" title="Individuals who work from home, Margin of Error" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn23">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Transportation" name="Data Tables">
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute keyType="MUNI_ID" title="% Commuters who drive to work" shortTitle="% Drive" weaveEntityId="23191" string="formatNumber(number, 1)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn24">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Transportation" name="Data Tables">
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute weaveEntityId="23192" keyType="MUNI_ID" title="% Commuters who drive to work, Margin of Error" string="formatNumber(number, 1)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn25">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Transportation" name="Data Tables">
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute weaveEntityId="23193" keyType="MUNI_ID" title="% Commuters who take public transit to work" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn26">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Transportation" name="Data Tables">
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute weaveEntityId="23194" keyType="MUNI_ID" title="% Commuters who take public transit to work, Margin of Error" string="formatNumber(number, 1)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn27">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Transportation" name="Data Tables">
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute keyType="MUNI_ID" title="% Commuters who take a taxi to work" shortTitle="% Taxi" weaveEntityId="23195" string="formatNumber(number, 1)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn28">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Transportation" name="Data Tables">
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute weaveEntityId="23196" keyType="MUNI_ID" title="% Commuters who take a taxi to work, Margin of Error" string="formatNumber(number, 1)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn29">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Transportation" name="Data Tables">
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute keyType="MUNI_ID" title="% Commuters who take a motorcycle to work" shortTitle="% Motorcycle" weaveEntityId="23197" string="formatNumber(number, 1)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn30">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Transportation" name="Data Tables">
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute weaveEntityId="23198" keyType="MUNI_ID" title="% Commuters who take a motorcycle to work, Margin of Error" string="formatNumber(number, 1)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn31">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Transportation" name="Data Tables">
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute keyType="MUNI_ID" title="% Commuters who bicycle to work" shortTitle="% Bicycle" weaveEntityId="23199" string="formatNumber(number, 1)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn32">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Transportation" name="Data Tables">
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute weaveEntityId="23200" keyType="MUNI_ID" title="% Commuters who bicycle to work, Margin of Error" string="formatNumber(number, 1)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn33">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Transportation" name="Data Tables">
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute keyType="MUNI_ID" title="% Commuters who walk to work" shortTitle="% Walk" weaveEntityId="23201" string="formatNumber(number, 1)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn34">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Transportation" name="Data Tables">
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute weaveEntityId="23202" keyType="MUNI_ID" title="% Commuters who walk to work, Margin of Error" string="formatNumber(number, 1)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn35">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Transportation" name="Data Tables">
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute keyType="MUNI_ID" title="% Commuters who take other means of transportation to work" shortTitle="% Other" weaveEntityId="23203" string="formatNumber(number, 1)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn36">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Transportation" name="Data Tables">
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute weaveEntityId="23204" keyType="MUNI_ID" title="% Commuters who take other means of transportation to work, Margin of Error" string="formatNumber(number, 1)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn37">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Transportation" name="Data Tables">
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute keyType="MUNI_ID" title="% Individuals who work from home" shortTitle="% Work from Home" weaveEntityId="23205" string="formatNumber(number, 1)" dataType="number"/>
+                  </category>
+                </category>
+              </hierarchy>
+            </hierarchyPath>
+          </HierarchyColumnReference>
+        </dynamicColumnReference>
+      </ReferencedColumn>
+      <ReferencedColumn name="ReferencedColumn38">
+        <dynamicColumnReference encoding="dynamic">
+          <HierarchyColumnReference>
+            <dataSourceName>MetroBoston DataCommon</dataSourceName>
+            <hierarchyPath encoding="xml">
+              <hierarchy>
+                <category title="Transportation" name="Data Tables">
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute weaveEntityId="23206" keyType="MUNI_ID" title="% Individuals who work from home, Margin of Error" string="formatNumber(number, 1)" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -722,10 +1617,10 @@ wheel</zoom>
       </ReferencedColumn>
     </columns>
     <dataColumnWidth>10%</dataColumnWidth>
-    <draggable>true</draggable>
-    <enableBorders>true</enableBorders>
-    <filterKeySet>MUNI_ID,{{ regionalunit.unitid }}</filterKeySet>
-    <fontSize>10</fontSize>
+    <enableBorders>false</enableBorders>
+    <enableMoveResize>true</enableMoveResize>
+    <enableSubMenu>false</enableSubMenu>
+    <enableZOrder>true</enableZOrder>
     <headerAttributeColumn encoding="dynamic">
       <ReferencedColumn>
         <dynamicColumnReference encoding="dynamic">
@@ -734,8 +1629,8 @@ wheel</zoom>
             <hierarchyPath encoding="xml">
               <hierarchy>
                 <category title="Transportation" name="Data Tables">
-                  <category title="Travel Time to Work, 5yr Avg 2005-09 (Municipal)" source="ACS" name="Travel Time to Work (Municipal)">
-                    <attribute dataType="string" name="municipal" title="Municipality" dataTable="Travel Time to Work (Municipal)" keyType="MUNI_ID"/>
+                  <category weaveEntityId="23166" title="Transportation to Work from Residence, 5yr Avg 2008-12 (Municipal)" source="ACS" subject="Transportation">
+                    <attribute weaveEntityId="23169" keyType="MUNI_ID" title="Municipality" dataType="string"/>
                   </category>
                 </category>
               </hierarchy>
@@ -744,8 +1639,13 @@ wheel</zoom>
         </dynamicColumnReference>
       </ReferencedColumn>
     </headerAttributeColumn>
-    <headerColumnWidth>230</headerColumnWidth>
+    <headerColumnWidth>63.36336336336337%</headerColumnWidth>
     <headerText>Attributes</headerText>
+    <keySet>
+      <keyFilter encoding="dynamic">
+        <GlobalObjectReference name="defaultSubsetKeyFilter"/>
+      </keyFilter>
+    </keySet>
     <maximizable>true</maximizable>
     <maximized>true</maximized>
     <minimizable>true</minimizable>
@@ -756,12 +1656,8 @@ wheel</zoom>
     <panelStyleList/>
     <panelTitle/>
     <panelWidth>50%</panelWidth>
-    <panelX>29%</panelX>
-    <panelY>24%</panelY>
-    <pinnable>true</pinnable>
-    <pinnableToBack>false</pinnableToBack>
-    <pinned>false</pinned>
-    <pinnedToBack>false</pinnedToBack>
-    <resizeable>true</resizeable>
+    <panelX>6%</panelX>
+    <panelY>4%</panelY>
+    <zOrder>0</zOrder>
   </TransposedTableTool>
 </Weave>
