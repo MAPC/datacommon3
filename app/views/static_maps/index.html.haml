@@ -11,7 +11,8 @@
 = render @maps
 
 .row.center
-  = paginate @maps, window: 1, outer_window: 2
+  .col-sm-12
+    = paginate @maps, window: 1, outer_window: 2
 
 - if @maps.empty?
   %p
