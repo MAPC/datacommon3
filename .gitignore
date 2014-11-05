@@ -26,8 +26,8 @@
 /db/data/*
 
 # Don't include the thumbnails in git
-/public/visualizations/*
-/public/dynamic_visualizations/*
+/public/visualizations/
+/public/dynamic_visualizations/
 /public/layers/exports/**/*
 
 sloccount.txt
