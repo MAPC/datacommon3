@@ -36,12 +36,12 @@ DC.logger = {
   },
 
   weaveFinished: function (id) {
-    // console.log('swfobject.embedSWF finished loading visualization ' + id);
+    console.log('swfobject.embedSWF finished loading visualization ' + id);
   },
 
   weaveReady:    function (weave) {
-    // console.log('#weaveReady was called with the following instance:');
-    // console.dir(weave);
+    console.log('#weaveReady was called with the following instance:');
+    console.dir(weave);
   }
 };
 
@@ -104,7 +104,7 @@ DC.embedWeaveAndUpload = function ( dom_id, sessionstate, area_type, area_id, sl
         }
       });
     });
-  }, 30000);
+  }, 37000);
 }
 
 
@@ -169,7 +169,6 @@ DC.base64s = {};
 DC.pngSpec = "data:image/png;base64,";
 
 DC.getBase64 = function (weave_id, callback) {
-  console.log(weave_id);
   var base64 = DC.weaves[weave_id].evaluateExpression(null, 'getBase64Image(Application.application.visDesktop)',
                                                       null, ['weave.utils.BitmapUtils', 'mx.core.Application']);
   base64 = DC.pngSpec + base64

@@ -15,7 +15,7 @@ class Snapshot
 
 
   def area_type_id
-    "#{area_type_name.pluralize}_id"
+    "#{area_type_name.singularize}_id"
   end
 
   
