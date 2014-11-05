@@ -1,1 +1,3 @@
-%a.list-group-item.center.issue_area{href: visualizations_path(topic: topic.slug)} #{topic}
+%div{:class => "icon icon-#{topic.slug}"}
+%a.list-group-item.center.issue_area{href: visualizations_path(topic: topic.slug)} #{topic} 
+%br
