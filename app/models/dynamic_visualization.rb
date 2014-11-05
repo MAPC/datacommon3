@@ -7,6 +7,7 @@ class DynamicVisualization < ActiveRecord::Base
     association_foreign_key: :datasource_id
 
   has_and_belongs_to_many :issue_areas,
+    foreign_key: :visualization_id,
     join_table: :snapshots_visualization_topics,
     association_foreign_key: :topic_id
 
@@ -76,7 +77,7 @@ class DynamicVisualization < ActiveRecord::Base
   # Render session state for an `object` that has
   # fields `unitid`, `name`, and `subunit_ids`.
   def rendered_state(object)
-    bracketed    = /(\{{2}.*\}{2})/i
+    bracketed    = /(\{{2}\s*regionalunit.unitid\s*\}{2})/i  # was /(\{{2}.*\}{2})/i
     # Capital S is to match only non-whitespace chars
     inside_brackets  = /\{{2}\s*(\S*)\s*\}{2}/i
 
@@ -84,13 +85,14 @@ class DynamicVisualization < ActiveRecord::Base
     captures = state.match(bracketed).captures
 
     captures.each do |expression|
-      full_method     = expression.match(inside_brackets).captures.first       # 'regionalunit.unitid'
-      replacer_method = full_method.partition('.').last.strip.gsub(/\|.*/, '') # 'unitid'
-      state.gsub!( expression, object.send(replacer_method) )
+      full_method     = expression.match(inside_brackets).captures.first # 'regionalunit.unitd'
+      replacer_method = full_method.partition('.').last.strip            # 'unitid'
+      replacer_method = replacer_method.gsub(/\|.*/, '')                 # remove Django filters
+      state.gsub!( expression, object.send(replacer_method) )            # @municipality.send('unitid')
+      puts "#{expression} => #{replacer_method}"
     end
 
-    state.gsub!( /,352/, ',402' ) # TODO: Make 402
-
+    state.gsub!( /,352/, ',402' )
     state
   end
 

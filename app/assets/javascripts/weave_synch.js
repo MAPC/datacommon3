@@ -169,6 +169,7 @@ DC.base64s = {};
 DC.pngSpec = "data:image/png;base64,";
 
 DC.getBase64 = function (weave_id, callback) {
+  console.log(weave_id);
   var base64 = DC.weaves[weave_id].evaluateExpression(null, 'getBase64Image(Application.application.visDesktop)',
                                                       null, ['weave.utils.BitmapUtils', 'mx.core.Application']);
   base64 = DC.pngSpec + base64

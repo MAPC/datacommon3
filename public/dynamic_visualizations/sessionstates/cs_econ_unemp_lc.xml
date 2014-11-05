@@ -98,9 +98,7 @@
       <color>16777215</color>
       <strength>10</strength>
     </probeInnerGlow>
-    <probeLineFormatter>str = replace(lpad(string, 8, "	"), "	", "  ");
-a = title.split(' ').splice(2).join(' ');
-str + " in " + a</probeLineFormatter>
+    <probeLineFormatter>str = replace(lpad(string, 8, "	"), "	", "  ");a = title.split(' ').splice(2).join(' ');str + " in " + a</probeLineFormatter>
     <probeOuterGlow>
       <alpha>1</alpha>
       <blurX>3</blurX>

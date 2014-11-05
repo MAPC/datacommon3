@@ -97,8 +97,7 @@
       <color>16777215</color>
       <strength>10</strength>
     </probeInnerGlow>
-    <probeLineFormatter>str = replace(lpad(string, 8, "	"), "	", "  ");
-str + " (" + title + ")"</probeLineFormatter>
+    <probeLineFormatter>str = replace(lpad(string, 8, "	"), "	", "  ");str + " (" + title + ")"</probeLineFormatter>
     <probeOuterGlow>
       <alpha>1</alpha>
       <blurX>3</blurX>
