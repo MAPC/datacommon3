@@ -79,19 +79,25 @@ class DynamicVisualization < ActiveRecord::Base
   # Render session state for an `object` that has
   # fields `unitid`, `name`, and `subunit_ids`.
   def rendered_state(object)
-    bracketed    = /(\{{2}.*\}{2})/i
+    bracketed    = /(\{{2}\s*regionalunit.unitid\s*\}{2})/i  # was /(\{{2}.*\}{2})/i
     # Capital S is to match only non-whitespace chars
     inside_brackets  = /\{{2}\s*(\S*)\s*\}{2}/i
 
     captures = sessionstate.match(bracketed).captures
     state    = sessionstate.dup
 
-    captures.each do |expression|      
-      full_method     = expression.match(inside_brackets).captures.first
-      replacer_method = full_method.partition('.').last.strip
-      replacer_method = replacer_method.gsub(/\|.*/, '') # remove Django filters
-      state.gsub!( expression, object.send(replacer_method) )
+    puts "-----------"
+    puts "captures: #{captures.inspect}"
+
+    captures.each do |expression|
+      full_method     = expression.match(inside_brackets).captures.first # 'regionalunit.unitd'
+      replacer_method = full_method.partition('.').last.strip            # 'unitid'
+      replacer_method = replacer_method.gsub(/\|.*/, '')                 # remove Django filters
+      state.gsub!( expression, object.send(replacer_method) )            # @municipality.send('unitid')
+      puts "#{expression} => #{replacer_method}"
     end
+
+    state.gsub!( /,352/, ',402' )
 
     state
   end

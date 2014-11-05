@@ -523,7 +523,7 @@ wheel</zoom>
                   </keyFilter>
                 </keySet>
                 <labelDistanceIsVertical>false</labelDistanceIsVertical>
-                <labelFunction>string.toLowerCase()</labelFunction>
+                <labelFunction>string == "Central Massachusetts" ? "Central Mass" : string</labelFunction>
                 <labelHorizontalAlign>center</labelHorizontalAlign>
                 <labelNumberFormatter>
                   <decimalSeparatorFrom>.</decimalSeparatorFrom>
