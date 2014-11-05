@@ -4,7 +4,7 @@
   
   %hr
   
-  %div.row
+  %div.row-upper
     %div.container
       %div.row
         %div.col-sm-3.col-sm-offset-0.col-xs-12.col-xs-offset-1.links
@@ -40,8 +40,8 @@
             = render partial: 'pages/link', collection: resources_pages, as: :page
 
   %hr
-  %div.row
-    = render partial: 'layouts/logos', collection: @institution.branding.logos.to_json, as: :logo, locals: { col_width: (12 / @institution.branding.logo_count) }
+  %div.row-lower
+    = render partial: 'layouts/logos', collection: @institution.branding.logos, as: :logo, locals: { col_width: (12 / @institution.branding.logo_count) }
 
   %div.row
     %div.col-xs-12
