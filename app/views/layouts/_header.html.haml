@@ -1,5 +1,5 @@
 %nav.navbar.navbar-default.navbar-fixed-top{role: 'navigation'}
-  %p.beta Beta
+  %a.beta{href: '#', data: {toggle: 'modal', target: '#beta'}} Beta
   %div.container
     %div.navbar-header
       %button.navbar-toggle{type: "button", data: {toggle: "collapse", target: "#main-header"}}
@@ -66,3 +66,27 @@
             %span.input-group-btn
               %button.btn.btn-success
                 %span.glyphicon.glyphicon-search
+
+#beta.modal.fade{role: 'dialog'}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{type: 'button', data: {dismiss: 'modal'}} &times;
+        %h3 DataCommon Beta
+      .modal-body
+        %p
+          The new DataCommon is presently in the Beta stage. This means that we are still actively developing features, and that the layers you see in the Data Catalog are only a small sample of our collection of 300+ layers.
+        %p
+          We are actively developing the DataCommon, so you will see new features and additional layers over time.
+        %p
+          You are always welcome to share feedback or suggest ideas through our 
+          %a{href: "http://mapc.uservoice.com/forums/76849-metroboston-datacommon-feedback-support"} DataCommon UserVoice.
+        %p
+          Thank you for using the DataCommon.
+        %p
+          %a{href: 'mailto: mcloyd@mapc.org'} Matt, 
+          %a{href: 'mailto: hstclair@mapc.org'} Holly, 
+          %a{href: 'mailto: sbrunton@mapc.org'} Susan,
+          and the rest of MAPC Data Services.
+      .modal-footer
+        %button.btn.btn-default{type: 'button', data: {dismiss: 'modal'}} Close window

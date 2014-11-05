@@ -1,34 +1,45 @@
 class LayersController < ApplicationController
   before_filter :load_institution
 
+  
   def index
     @layers = Layer.all.page params[:page] #institution(@institution)
   end
 
+  
   def show
     @layer  = Layer.find_by(tablename: params[:id])
   end
 
-  def meta_download
-    @layer = Layer.find_by(tablename: params[:id])
-    filename = "#{@layer.tablename}_metadata.#{params[:format]}"
-    # disposition: attachment, defaults to using x-sendfile
-    respond_to do |format|
-      format.csv  { send_data @layer.to_csv,  filename: filename}
-      format.json { send_data @layer.to_json, filename: filename}
-      format.xml  { send_data @layer.to_xml,  filename: filename}
-      format.yaml { send_data @layer.to_yaml, filename: filename}
-    end
-  end
 
   def download
-    @layer = Layer.find_by(tablename: params[:id])
-    filename = "#{@layer.tablename}.#{params[:format]}"
+    layer  = Layer.find_by tablename: params[:id]
+    extent = SpatialExtent.find params[:extent_id]
 
-    respond_to do |format|
-      format.csv  { redirect_to "http://files.dev.datacommon.org.s3-website-us-east-1.amazonaws.com/layers/downloads/#{params[:id]}.csv" }
-      format.json { redirect_to "http://files.dev.datacommon.org.s3-website-us-east-1.amazonaws.com/layers/downloads/#{params[:id]}.json" }
+    exports = File.join Rails.public_path, 'layers', 'exports'
+    tabular = File.join exports, 'tabular'
+    spatial = File.join exports, 'spatial'
+
+    spatial_files = Dir.glob( File.join(spatial, "#{extent.tablename}*") )
+    tabular_files = Dir.glob( File.join(tabular, "#{layer.tablename}#{extent.table_suffix}.csv") )
+    metadata_file = Dir.glob( File.join(tabular, "#{layer.tablename}#{extent.table_suffix}_meta.csv") )
+
+    zip_file_name = File.join(Rails.root, 'tmp', 'downloads', "#{layer.title} (#{extent.title})")
+
+    unless File.exists? zip_file_name
+      FileUtils.mkdir_p( File.dirname(zip_file_name) )
+
+      Zip::File.open( zip_file_name, Zip::File::CREATE) do |zip|
+        [spatial_files, tabular_files, metadata_file].flatten.uniq.each do |file|
+          filename = file.rpartition('/').last
+          zip.add(filename, file)
+        end
+      end
     end
+
+    send_file zip_file_name, filename: "#{File.basename(zip_file_name)}.zip", type: :zip
+    
+
   end
 
 end

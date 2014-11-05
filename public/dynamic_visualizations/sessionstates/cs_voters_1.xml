@@ -1,73 +1,53 @@
 <Weave encoding="dynamic">
   <WeaveProperties name="WeaveProperties">
-    <backgroundColor>16777215</backgroundColor>
-    <cssStyleSheetName>weaveStyle.css</cssStyleSheetName>
-    <dashboardMode>true</dashboardMode>
-    <dashedSelectionBox>5,5</dashedSelectionBox>
-    <dataInfoURL/>
-    <debugScreenBounds>false</debugScreenBounds>
-    <defaultTextFormat>
+    <axisTitleTextFormat>
       <bold>false</bold>
       <color>0</color>
       <font>Sophia Nubian</font>
       <italic>false</italic>
       <size>11</size>
       <underline>false</underline>
-    </defaultTextFormat>
+    </axisTitleTextFormat>
+    <backgroundColor>16777215</backgroundColor>
+    <collabServerIP>demo.oicweave.org</collabServerIP>
+    <collabServerName>ivpr-vm</collabServerName>
+    <collabServerPort>5222</collabServerPort>
+    <collabServerRoom/>
+    <collabSpectating>false</collabSpectating>
+    <cssStyleSheetName>weaveStyle.css</cssStyleSheetName>
+    <dashboardMode>true</dashboardMode>
+    <dashedSelectionBox>5,5</dashedSelectionBox>
+    <dataInfoURL/>
+    <debugScreenBounds>false</debugScreenBounds>
     <enableAboutMenu>true</enableAboutMenu>
-    <enableAdd2DHistogram>true</enableAdd2DHistogram>
-    <enableAddAttributeMenuTool>true</enableAddAttributeMenuTool>
-    <enableAddBarChart>true</enableAddBarChart>
-    <enableAddCollaborationTool>false</enableAddCollaborationTool>
-    <enableAddColorLegend>true</enableAddColorLegend>
-    <enableAddColormapHistogram>true</enableAddColormapHistogram>
-    <enableAddCompoundRadViz>true</enableAddCompoundRadViz>
-    <enableAddCustomTool>true</enableAddCustomTool>
-    <enableAddDataFilter>true</enableAddDataFilter>
-    <enableAddDataSource>true</enableAddDataSource>
-    <enableAddDataTable>true</enableAddDataTable>
-    <enableAddDimensionSliderTool>true</enableAddDimensionSliderTool>
-    <enableAddGaugeTool>true</enableAddGaugeTool>
-    <enableAddGraphTool>true</enableAddGraphTool>
-    <enableAddHistogram>true</enableAddHistogram>
-    <enableAddLineChart>true</enableAddLineChart>
-    <enableAddMap>true</enableAddMap>
-    <enableAddPieChart>true</enableAddPieChart>
-    <enableAddPieChartHistogram>true</enableAddPieChartHistogram>
-    <enableAddRadViz>true</enableAddRadViz>
-    <enableAddRamachandranPlot>false</enableAddRamachandranPlot>
-    <enableAddRScriptEditor>true</enableAddRScriptEditor>
-    <enableAddScatterplot>true</enableAddScatterplot>
-    <enableAddThermometerTool>true</enableAddThermometerTool>
-    <enableAddTimeSliderTool>true</enableAddTimeSliderTool>
-    <enableAddWeaveDataSource>true</enableAddWeaveDataSource>
+    <enableAnnotation>true</enableAnnotation>
+    <enableAnnuliCircles>false</enableAnnuliCircles>
+    <enableAxisToolTips>true</enableAxisToolTips>
     <enableBitmapFilters>true</enableBitmapFilters>
+    <enableBrowseData>false</enableBrowseData>
     <enableCascadeAllWindows>true</enableCascadeAllWindows>
     <enableClearCurrentSelection>true</enableClearCurrentSelection>
     <enableCloseAllWindows>true</enableCloseAllWindows>
+    <enableCollaborationBar>false</enableCollaborationBar>
     <enableCreateSubsets>true</enableCreateSubsets>
     <enableDataMenu>true</enableDataMenu>
-    <enableDebugAlert>false</enableDebugAlert>
     <enableDrawCircle>true</enableDrawCircle>
     <enableDynamicTools>true</enableDynamicTools>
-    <enableEditDataSource>true</enableEditDataSource>
     <enableExportApplicationScreenshot>true</enableExportApplicationScreenshot>
     <enableExportCSV>true</enableExportCSV>
-    <enableExportDataTable>true</enableExportDataTable>
     <enableExportToolImage>true</enableExportToolImage>
-    <enableFullscreen>true</enableFullscreen>
+    <enableFullScreen>false</enableFullScreen>
     <enableGeometryProbing>true</enableGeometryProbing>
-    <enableGoFullscreen>true</enableGoFullscreen>
+    <enableLoadMyData>true</enableLoadMyData>
+    <enableManageDataSources>true</enableManageDataSources>
     <enableManageSavedSelections>true</enableManageSavedSelections>
     <enableManageSavedSubsets>true</enableManageSavedSubsets>
     <enableMarker>true</enableMarker>
     <enableMenuBar>false</enableMenuBar>
     <enableMinimizeAllWindows>true</enableMinimizeAllWindows>
     <enableMouseWheel>true</enableMouseWheel>
-    <enableNewDataset>true</enableNewDataset>
-    <enableNewUserWizard>true</enableNewUserWizard>
     <enablePanelCoordsPercentageMode>true</enablePanelCoordsPercentageMode>
-    <enableProbeAnimation>true</enableProbeAnimation>
+    <enablePenTool>true</enablePenTool>
     <enableProbeLines>true</enableProbeLines>
     <enableProbeToolTip>true</enableProbeToolTip>
     <enableRefreshHierarchies>true</enableRefreshHierarchies>
@@ -86,17 +66,18 @@
     <enableSubsetsMenu>true</enableSubsetsMenu>
     <enableTileAllWindows>true</enableTileAllWindows>
     <enableToolAttributeEditing>true</enableToolAttributeEditing>
-    <enableToolControls>true</enableToolControls>
+    <enableToolControls>false</enableToolControls>
     <enableToolProbe>true</enableToolProbe>
     <enableToolSelection>true</enableToolSelection>
     <enableUserPreferences>true</enableUserPreferences>
+    <enableWeaveAnalystMode>false</enableWeaveAnalystMode>
     <enableWindowMenu>true</enableWindowMenu>
     <eventListeners encoding="dynamic"/>
     <geometryMetadataRequestMode>xyz</geometryMetadataRequestMode>
     <geometryMinimumScreenArea>1</geometryMinimumScreenArea>
-    <jriServiceURL>/WeaveServices/JRIService</jriServiceURL>
     <macroLibraries>weave.api::WeaveAPI</macroLibraries>
     <macros encoding="dynamic"/>
+    <maxComputationTimePerFrame>100</maxComputationTimePerFrame>
     <maxTooltipRecordsShown>1</maxTooltipRecordsShown>
     <pageTitle>Open Indicators Weave</pageTitle>
     <panelTitleTextFormat>
@@ -108,36 +89,59 @@
       <underline>false</underline>
     </panelTitleTextFormat>
     <pdbServiceURL>/WeavePDBService/PDBService</pdbServiceURL>
-    <probeInnerGlowAlpha>1</probeInnerGlowAlpha>
-    <probeInnerGlowBlur>5</probeInnerGlowBlur>
-    <probeInnerGlowColor>16777215</probeInnerGlowColor>
-    <probeInnerGlowStrength>10</probeInnerGlowStrength>
-    <probeOuterGlowAlpha>1</probeOuterGlowAlpha>
-    <probeOuterGlowBlur>3</probeOuterGlowBlur>
-    <probeOuterGlowColor>0</probeOuterGlowColor>
-    <probeOuterGlowStrength>3</probeOuterGlowStrength>
+    <probeBufferSize>10</probeBufferSize>
+    <probeInnerGlow>
+      <alpha>1</alpha>
+      <blurX>5</blurX>
+      <blurY>5</blurY>
+      <color>16777215</color>
+      <strength>10</strength>
+    </probeInnerGlow>
+    <probeLineFormatter>str = replace(lpad(string, 8, "	"), "	", "  ");
+str + " (" + title + ")"</probeLineFormatter>
+    <probeOuterGlow>
+      <alpha>1</alpha>
+      <blurX>3</blurX>
+      <blurY>3</blurY>
+      <color>0</color>
+      <strength>3</strength>
+    </probeOuterGlow>
     <probeToolTipBackgroundAlpha>1</probeToolTipBackgroundAlpha>
     <probeToolTipBackgroundColor>NaN</probeToolTipBackgroundColor>
     <probeToolTipFontColor>0</probeToolTipFontColor>
     <probeToolTipMaxWidth>400</probeToolTipMaxWidth>
+    <recordsTooltipLocation>Lower left</recordsTooltipLocation>
     <rServiceURL>/WeaveServices/RService</rServiceURL>
     <searchServiceURLs>Wikipedia|http://en.wikipedia.org/wiki/Special:Search?search=
 Google|http://www.google.com/search?q=
 Google Images|http://images.google.com/images?q=
 Google Maps|http://maps.google.com/maps?t=h&amp;q=</searchServiceURLs>
+    <SecondaryKeyNumColumn_useGlobalMinMaxValues>true</SecondaryKeyNumColumn_useGlobalMinMaxValues>
     <selectionAlphaAmount>0.5</selectionAlphaAmount>
     <selectionBlurringAmount>4</selectionBlurringAmount>
-    <shadowAlpha>0.5</shadowAlpha>
-    <shadowAngle>45</shadowAngle>
-    <shadowBlur>4</shadowBlur>
-    <shadowColor>0</shadowColor>
-    <shadowDistance>2</shadowDistance>
-    <showAttributeSelector>true</showAttributeSelector>
+    <selectionDropShadow>
+      <alpha>0.5</alpha>
+      <angle>45</angle>
+      <blurX>4</blurX>
+      <blurY>4</blurY>
+      <color>0</color>
+      <distance>2</distance>
+      <strength>1</strength>
+    </selectionDropShadow>
+    <selectionMode>rectangle</selectionMode>
+    <showAddAllButton>true</showAddAllButton>
+    <showCollaborationEditor>false</showCollaborationEditor>
+    <showCollaborationMenuItem>true</showCollaborationMenuItem>
     <showColorController>true</showColorController>
     <showCopyright>false</showCopyright>
+    <showEmptyProbeRecordIdentifiers>true</showEmptyProbeRecordIdentifiers>
     <showEquationEditor>true</showEquationEditor>
+    <showErrors>true</showErrors>
     <showKeyTypeInColumnTitle>false</showKeyTypeInColumnTitle>
     <showProbeToolTipEditor>true</showProbeToolTipEditor>
+    <showProbeWindow>true</showProbeWindow>
+    <showSelectedRecordsText>true</showSelectedRecordsText>
+    <showSessionHistoryControls>false</showSessionHistoryControls>
     <showVisToolCloseDialog>false</showVisToolCloseDialog>
     <startupJavaScript/>
     <toolInteractions>
@@ -146,6 +150,7 @@ Google Maps|http://maps.google.com/maps?t=h&amp;q=</searchServiceURLs>
       <probe>move</probe>
       <select>drag</select>
       <selectAdd>ctrl,drag</selectAdd>
+      <selectAll>ctrl,dclick</selectAll>
       <selectRemove>ctrl,shift,drag</selectRemove>
       <zoom>shift,drag
 wheel</zoom>
@@ -153,7 +158,53 @@ wheel</zoom>
       <zoomOut>shift,dclick</zoomOut>
       <zoomToExtent>ctrl,alt,shift,dclick</zoomToExtent>
     </toolInteractions>
-    <version>1.0 Beta (Wed Jan 18 11:25:15 EST 2012)</version>
+    <toolToggles encoding="dynamic">
+      <LinkableBoolean name="CytoscapeWebTool">false</LinkableBoolean>
+      <LinkableBoolean name="CustomGraphicsTool">false</LinkableBoolean>
+      <LinkableBoolean name="DataFilter">false</LinkableBoolean>
+      <LinkableBoolean name="TransposedTableTool">true</LinkableBoolean>
+      <LinkableBoolean name="RamachandranPlotTool">false</LinkableBoolean>
+      <LinkableBoolean name="AttributeMenuTool">true</LinkableBoolean>
+      <LinkableBoolean name="CompoundBarChartTool">true</LinkableBoolean>
+      <LinkableBoolean name="ColormapHistogramTool">true</LinkableBoolean>
+      <LinkableBoolean name="ColorBinLegendTool">true</LinkableBoolean>
+      <LinkableBoolean name="CompoundRadVizTool">true</LinkableBoolean>
+      <LinkableBoolean name="CustomTool">true</LinkableBoolean>
+      <LinkableBoolean name="DataStatisticsTool">false</LinkableBoolean>
+      <LinkableBoolean name="DataTableTool">true</LinkableBoolean>
+      <LinkableBoolean name="DimensionSliderTool">true</LinkableBoolean>
+      <LinkableBoolean name="GaugeTool">true</LinkableBoolean>
+      <LinkableBoolean name="HistogramTool">true</LinkableBoolean>
+      <LinkableBoolean name="Histogram2DTool">true</LinkableBoolean>
+      <LinkableBoolean name="LineChartTool">true</LinkableBoolean>
+      <LinkableBoolean name="MapTool">true</LinkableBoolean>
+      <LinkableBoolean name="PieChartTool">true</LinkableBoolean>
+      <LinkableBoolean name="PieChartHistogramTool">true</LinkableBoolean>
+      <LinkableBoolean name="RTextEditor">true</LinkableBoolean>
+      <LinkableBoolean name="RadVizTool">true</LinkableBoolean>
+      <LinkableBoolean name="ScatterPlotTool">true</LinkableBoolean>
+      <LinkableBoolean name="SchafersMissingDataTool">false</LinkableBoolean>
+      <LinkableBoolean name="ThermometerTool">true</LinkableBoolean>
+      <LinkableBoolean name="TimeSliderTool">true</LinkableBoolean>
+      <LinkableBoolean name="GraphTool">false</LinkableBoolean>
+    </toolToggles>
+    <version>Nightly Build (Wed Jan 29 04:00:03 EST 2014)</version>
+    <visTextFormat>
+      <bold>false</bold>
+      <color>0</color>
+      <font>Sophia Nubian</font>
+      <italic>false</italic>
+      <size>11</size>
+      <underline>false</underline>
+    </visTextFormat>
+    <visTitleTextFormat>
+      <bold>false</bold>
+      <color>0</color>
+      <font>Sophia Nubian</font>
+      <italic>false</italic>
+      <size>11</size>
+      <underline>false</underline>
+    </visTitleTextFormat>
     <windowSnapGridSize>1%</windowSnapGridSize>
     <workspaceHeight>252</workspaceHeight>
     <workspaceMultiplier>1</workspaceMultiplier>
@@ -163,15 +214,13 @@ wheel</zoom>
     <internalDynamicColumn encoding="dynamic">
       <GlobalObjectReference name="defaultColorBinColumn"/>
     </internalDynamicColumn>
-    <ramp encoding="xml">
-      <colorRamp category="basic" name="5-Color" source="OIC">
-        <node position="0" color="0xEFF3FF"/>
-        <node position="0.25" color="0xBDD7E7"/>
-        <node position="0.5" color="0x6BAED6"/>
-        <node position="0.75" color="0x3182BD"/>
-        <node position="1" color="0x08519C"/>
-      </colorRamp>
-    </ramp>
+    <ramp>&lt;colorRamp name="5-Color" source="OIC" category="basic"&gt;
+  &lt;node position="0" color="0xEFF3FF"/&gt;
+  &lt;node position="0.25" color="0xBDD7E7"/&gt;
+  &lt;node position="0.5" color="0x6BAED6"/&gt;
+  &lt;node position="0.75" color="0x3182BD"/&gt;
+  &lt;node position="1" color="0x08519C"/&gt;
+&lt;/colorRamp&gt;</ramp>
     <recordColors/>
   </ColorColumn>
   <BinnedColumn name="defaultColorBinColumn">
@@ -198,7 +247,7 @@ wheel</zoom>
               <hierarchy>
                 <category title="Data Tables" name="Data Tables">
                   <category title="Voters (Municipal)" name="Voters (Municipal)">
-                    <attribute dataTable="Voters (Municipal)" name="municipal" dataType="string" keyType="MUNI_ID" title="Municipality"/>
+                    <attribute keyType="MUNI_ID" name="municipal" dataTable="Voters (Municipal)" title="Municipality" dataType="string"/>
                   </category>
                 </category>
               </hierarchy>
@@ -210,15 +259,16 @@ wheel</zoom>
   </FilteredColumn>
   <KeyFilter name="defaultSubsetKeyFilter">
     <excluded/>
-    <included>MUNI_ID,{{ regionalunit.unitid }}</included>
+    <filters encoding="dynamic"/>
+    <included encoding="csv">MUNI_ID,{{ regionalunit.unitid }}</included>
     <includeMissingKeys>false</includeMissingKeys>
     <includeMissingKeyTypes>true</includeMissingKeyTypes>
   </KeyFilter>
-  <KeySet name="defaultSelectionKeySet"/>
-  <KeySet name="defaultProbeKeySet"/>
+  <KeySet name="defaultSelectionKeySet" encoding="dynamic"/>
+  <KeySet name="defaultProbeKeySet" encoding="dynamic"/>
   <KeySet name="alwaysHighlightKeySet"/>
-  <LinkableHashMap encoding="dynamic" name="savedSelections"/>
-  <LinkableHashMap encoding="dynamic" name="savedSubsets"/>
+  <LinkableHashMap name="savedSelections" encoding="dynamic"/>
+  <LinkableHashMap name="savedSubsets" encoding="dynamic"/>
   <WeaveDataSource name="WeaveDataSource">
     <attributeHierarchy encoding="xml">
       <hierarchy name="Open Indicators Server">
@@ -327,80 +377,81 @@ wheel</zoom>
           <category title="US Congressional Districts" name="US Congressional Districts"/>
           <category title="US States" name="US States"/>
           <category title="Voters (Municipal)" name="Voters (Municipal)">
-            <attribute keyType="MUNI_ID" name="muni_id" dataType="string" dataTable="Voters (Municipal)" title="Municipal ID"/>
-            <attribute keyType="MUNI_ID" name="municipal" dataType="string" dataTable="Voters (Municipal)" title="Municipality"/>
-            <attribute keyType="MUNI_ID" name="register04" dataType="number" dataTable="Voters (Municipal)" title="Registered Voters, 2004"/>
-            <attribute keyType="MUNI_ID" name="numdem04" dataType="number" dataTable="Voters (Municipal)" title="Registered Democrats, 2004"/>
-            <attribute keyType="MUNI_ID" name="numrep04" dataType="number" dataTable="Voters (Municipal)" title="Registered Republicans, 2004"/>
-            <attribute keyType="MUNI_ID" name="numoth04" dataType="number" dataTable="Voters (Municipal)" title="Registered Other Party, 2004"/>
-            <attribute min="0" dataType="number" dataTable="Voters (Municipal)" keyType="MUNI_ID" name="pctdem04" string="formatNumber(number, 2)" title="% Registered Democrats, 2004" max="100"/>
-            <attribute min="0" dataType="number" dataTable="Voters (Municipal)" keyType="MUNI_ID" name="pctrep04" string="formatNumber(number, 2)" title="% Registered Republicans, 2004" max="100"/>
-            <attribute min="0" dataType="number" dataTable="Voters (Municipal)" keyType="MUNI_ID" name="pctoth04" string="formatNumber(number, 2)" title="% Registered Other Party, 2004" max="100"/>
-            <attribute keyType="MUNI_ID" name="register06" dataType="number" dataTable="Voters (Municipal)" title="Registered Voters, 2006"/>
-            <attribute keyType="MUNI_ID" name="numdem06" dataType="number" dataTable="Voters (Municipal)" title="Registered Democrats, 2006"/>
-            <attribute keyType="MUNI_ID" name="numrep06" dataType="number" dataTable="Voters (Municipal)" title="Registered Republicans, 2006"/>
-            <attribute keyType="MUNI_ID" name="numoth06" dataType="number" dataTable="Voters (Municipal)" title="Registered Other Party, 2006"/>
-            <attribute min="0" dataType="number" dataTable="Voters (Municipal)" keyType="MUNI_ID" name="pctdem06" string="formatNumber(number, 2)" title="% Registered Democrats, 2006" max="100"/>
-            <attribute min="0" dataType="number" dataTable="Voters (Municipal)" keyType="MUNI_ID" name="pctrep06" string="formatNumber(number, 2)" title="% Registered Republicans, 2006" max="100"/>
-            <attribute min="0" dataType="number" dataTable="Voters (Municipal)" keyType="MUNI_ID" name="pctoth06" string="formatNumber(number, 2)" title="% Registered Other Party, 2006" max="100"/>
-            <attribute keyType="MUNI_ID" name="register08" dataType="number" dataTable="Voters (Municipal)" title="Registered Voters, 2008"/>
-            <attribute keyType="MUNI_ID" name="numdem08" dataType="number" dataTable="Voters (Municipal)" title="Registered Democrats, 2008"/>
-            <attribute keyType="MUNI_ID" name="numrep08" dataType="number" dataTable="Voters (Municipal)" title="Registered Republicans, 2008"/>
-            <attribute keyType="MUNI_ID" name="numoth08" dataType="number" dataTable="Voters (Municipal)" title="Registered Other Party, 2008"/>
-            <attribute min="0" dataType="number" dataTable="Voters (Municipal)" keyType="MUNI_ID" name="pctdem08" string="formatNumber(number, 2)" title="% Registered Democrats, 2008" max="100"/>
-            <attribute min="0" dataType="number" dataTable="Voters (Municipal)" keyType="MUNI_ID" name="pctrep08" string="formatNumber(number, 2)" title="% Registered Republicans, 2008" max="100"/>
-            <attribute min="0" dataType="number" dataTable="Voters (Municipal)" keyType="MUNI_ID" name="pctoth08" string="formatNumber(number, 2)" title="% Registered Other Party, 2008" max="100"/>
-            <attribute keyType="MUNI_ID" name="register10" dataType="number" dataTable="Voters (Municipal)" title="Registered Voters, 2010"/>
-            <attribute keyType="MUNI_ID" name="numdem10" dataType="number" dataTable="Voters (Municipal)" title="Registered Democrats, 2010"/>
-            <attribute keyType="MUNI_ID" name="numrep10" dataType="number" dataTable="Voters (Municipal)" title="Registered Republicans, 2010"/>
-            <attribute keyType="MUNI_ID" name="numoth10" dataType="number" dataTable="Voters (Municipal)" title="Registered Other Party, 2010"/>
-            <attribute min="0" dataType="number" dataTable="Voters (Municipal)" keyType="MUNI_ID" name="pctdem10" string="formatNumber(number, 2)" title="% Registered Democrats, 2010" max="100"/>
-            <attribute min="0" dataType="number" dataTable="Voters (Municipal)" keyType="MUNI_ID" name="pctrep10" string="formatNumber(number, 2)" title="% Registered Republicans, 20010" max="100"/>
-            <attribute min="0" dataType="number" dataTable="Voters (Municipal)" keyType="MUNI_ID" name="pctoth10" string="formatNumber(number, 2)" title="% Registered Other Party, 2010" max="100"/>
+            <attribute keyType="MUNI_ID" name="muni_id" dataTable="Voters (Municipal)" title="Municipal ID" dataType="string"/>
+            <attribute keyType="MUNI_ID" name="municipal" dataTable="Voters (Municipal)" title="Municipality" dataType="string"/>
+            <attribute keyType="MUNI_ID" name="register04" dataTable="Voters (Municipal)" title="Registered Voters, 2004" dataType="number"/>
+            <attribute keyType="MUNI_ID" name="numdem04" dataTable="Voters (Municipal)" title="Registered Democrats, 2004" dataType="number"/>
+            <attribute keyType="MUNI_ID" name="numrep04" dataTable="Voters (Municipal)" title="Registered Republicans, 2004" dataType="number"/>
+            <attribute keyType="MUNI_ID" name="numoth04" dataTable="Voters (Municipal)" title="Registered Other Party, 2004" dataType="number"/>
+            <attribute keyType="MUNI_ID" string="formatNumber(number, 2)" title="% Registered Democrats, 2004" min="0" dataTable="Voters (Municipal)" name="pctdem04" max="100" dataType="number"/>
+            <attribute keyType="MUNI_ID" string="formatNumber(number, 2)" title="% Registered Republicans, 2004" min="0" dataTable="Voters (Municipal)" name="pctrep04" max="100" dataType="number"/>
+            <attribute keyType="MUNI_ID" string="formatNumber(number, 2)" title="% Registered Other Party, 2004" min="0" dataTable="Voters (Municipal)" name="pctoth04" max="100" dataType="number"/>
+            <attribute keyType="MUNI_ID" name="register06" dataTable="Voters (Municipal)" title="Registered Voters, 2006" dataType="number"/>
+            <attribute keyType="MUNI_ID" name="numdem06" dataTable="Voters (Municipal)" title="Registered Democrats, 2006" dataType="number"/>
+            <attribute keyType="MUNI_ID" name="numrep06" dataTable="Voters (Municipal)" title="Registered Republicans, 2006" dataType="number"/>
+            <attribute keyType="MUNI_ID" name="numoth06" dataTable="Voters (Municipal)" title="Registered Other Party, 2006" dataType="number"/>
+            <attribute keyType="MUNI_ID" string="formatNumber(number, 2)" title="% Registered Democrats, 2006" min="0" dataTable="Voters (Municipal)" name="pctdem06" max="100" dataType="number"/>
+            <attribute keyType="MUNI_ID" string="formatNumber(number, 2)" title="% Registered Republicans, 2006" min="0" dataTable="Voters (Municipal)" name="pctrep06" max="100" dataType="number"/>
+            <attribute keyType="MUNI_ID" string="formatNumber(number, 2)" title="% Registered Other Party, 2006" min="0" dataTable="Voters (Municipal)" name="pctoth06" max="100" dataType="number"/>
+            <attribute keyType="MUNI_ID" name="register08" dataTable="Voters (Municipal)" title="Registered Voters, 2008" dataType="number"/>
+            <attribute keyType="MUNI_ID" name="numdem08" dataTable="Voters (Municipal)" title="Registered Democrats, 2008" dataType="number"/>
+            <attribute keyType="MUNI_ID" name="numrep08" dataTable="Voters (Municipal)" title="Registered Republicans, 2008" dataType="number"/>
+            <attribute keyType="MUNI_ID" name="numoth08" dataTable="Voters (Municipal)" title="Registered Other Party, 2008" dataType="number"/>
+            <attribute keyType="MUNI_ID" string="formatNumber(number, 2)" title="% Registered Democrats, 2008" min="0" dataTable="Voters (Municipal)" name="pctdem08" max="100" dataType="number"/>
+            <attribute keyType="MUNI_ID" string="formatNumber(number, 2)" title="% Registered Republicans, 2008" min="0" dataTable="Voters (Municipal)" name="pctrep08" max="100" dataType="number"/>
+            <attribute keyType="MUNI_ID" string="formatNumber(number, 2)" title="% Registered Other Party, 2008" min="0" dataTable="Voters (Municipal)" name="pctoth08" max="100" dataType="number"/>
+            <attribute keyType="MUNI_ID" name="register10" dataTable="Voters (Municipal)" title="Registered Voters, 2010" dataType="number"/>
+            <attribute keyType="MUNI_ID" name="numdem10" dataTable="Voters (Municipal)" title="Registered Democrats, 2010" dataType="number"/>
+            <attribute keyType="MUNI_ID" name="numrep10" dataTable="Voters (Municipal)" title="Registered Republicans, 2010" dataType="number"/>
+            <attribute keyType="MUNI_ID" name="numoth10" dataTable="Voters (Municipal)" title="Registered Other Party, 2010" dataType="number"/>
+            <attribute keyType="MUNI_ID" string="formatNumber(number, 2)" title="% Registered Democrats, 2010" min="0" dataTable="Voters (Municipal)" name="pctdem10" max="100" dataType="number"/>
+            <attribute keyType="MUNI_ID" string="formatNumber(number, 2)" title="% Registered Republicans, 20010" min="0" dataTable="Voters (Municipal)" name="pctrep10" max="100" dataType="number"/>
+            <attribute keyType="MUNI_ID" string="formatNumber(number, 2)" title="% Registered Other Party, 2010" min="0" dataTable="Voters (Municipal)" name="pctoth10" max="100" dataType="number"/>
           </category>
         </category>
         <category title="Geometry Collections" name="Geometry Collections">
-          <attribute name="Arts and Culture Points" dataType="geometry" title="Arts and Culture Points" keyType="Arts and Culture Points"/>
-          <attribute name="Bike and Pedestrian Facilities" dataType="geometry" title="Bike and Pedestrian Facilities" keyType="ObjectID"/>
-          <attribute name="Boston Circle of Promise Schools" dataType="geometry" title="Boston Circle of Promise Schools" keyType="SchoolID"/>
-          <attribute name="Boston Daycares" dataType="geometry" title="Boston Daycares" keyType="ObjectID"/>
-          <attribute name="Boston Neighborhoods" dataType="geometry" title="Boston Neighborhoods" keyType="ObjectID"/>
-          <attribute name="Boston Non-Profit Educational Assets (Points)" dataType="geometry" title="Boston Non-Profit Educational Assets (Points)" keyType="ObjectID"/>
-          <attribute name="Boston Outline" dataType="geometry" title="Boston Outline" keyType="MUNI_ID"/>
-          <attribute name="Boston Parcels (Subset)" dataType="geometry" title="Boston Parcels (Subset)" keyType="BostonParcelID"/>
-          <attribute name="Boston Schools" dataType="geometry" title="Boston Schools" keyType="SchoolID"/>
-          <attribute name="Boston Turnaround Schools" dataType="geometry" title="Boston Turnaround Schools" keyType="SchoolID"/>
-          <attribute name="Census 2000 Block Groups" dataType="geometry" title="Census 2000 Block Groups" keyType="BG_00_ID"/>
-          <attribute name="Census 2000 Tracts" dataType="geometry" title="Census 2000 Tracts" keyType="CT_ID"/>
-          <attribute name="Census 2010 Block Groups" dataType="geometry" title="Census 2010 Block Groups" keyType="BG_10_ID"/>
-          <attribute name="Census 2010 Tracts" dataType="geometry" title="Census 2010 Tracts" keyType="ct10_id"/>
-          <attribute name="Child Care Providers with Less than High School" dataType="geometry" title="Child Care Providers with Less than High School" keyType="ObjectID"/>
-          <attribute name="Colleges and Universities" dataType="geometry" title="Colleges and Universities" keyType="College_ID"/>
-          <attribute name="Commuter Rail" dataType="geometry" title="Commuter Rail" keyType="Commuter Rail"/>
-          <attribute name="Energy Star Buildings" dataType="geometry" title="Energy Star Buildings" keyType="ObjectID"/>
-          <attribute name="Indigo Commuter Line" dataType="geometry" title="Indigo Commuter Line" keyType="ObjectID"/>
-          <attribute name="Libraries" dataType="geometry" title="Libraries" keyType="ObjectID"/>
-          <attribute name="MA Counties" dataType="geometry" title="MA Counties" keyType="FIPS_ID"/>
-          <attribute name="MA House Districts" dataType="geometry" title="MA House Districts" keyType="MA_HOUSE02_ID"/>
-          <attribute name="MA Senate Districts" dataType="geometry" title="MA Senate Districts" keyType="MA_SENATE02_ID"/>
-          <attribute name="MAPC Municipalities" dataType="geometry" title="MAPC Municipalities" keyType="MUNI_ID"/>
-          <attribute name="Massachusetts Municipalities" dataType="geometry" title="Massachusetts Municipalities" keyType="MUNI_ID"/>
-          <attribute name="MBTA Subway Lines" dataType="geometry" title="MBTA Subway Lines" keyType="MBTA Subway Lines"/>
-          <attribute name="MetroFuture Region" dataType="geometry" title="MetroFuture Region" keyType="MUNI_ID"/>
-          <attribute name="School Districts" dataType="geometry" title="School Districts" keyType="SchoolDistrictID"/>
-          <attribute name="School Districts by Town" dataType="geometry" title="School Districts by Town" keyType="MUNI_ID"/>
-          <attribute name="Schools" dataType="geometry" title="Schools" keyType="SchoolID"/>
-          <attribute name="Success Boston Student Cohorts (2010)" dataType="geometry" title="Success Boston Student Cohorts (2010)" keyType="ObjectID"/>
-          <attribute name="US Congressional Districts" dataType="geometry" title="US Congressional Districts" keyType="US_CONGRESS_ID"/>
-          <attribute name="US States" dataType="geometry" title="US States" keyType="Arts and Culture Points"/>
+          <attribute keyType="Arts and Culture Points" name="Arts and Culture Points" title="Arts and Culture Points" dataType="geometry"/>
+          <attribute keyType="ObjectID" name="Bike and Pedestrian Facilities" title="Bike and Pedestrian Facilities" dataType="geometry"/>
+          <attribute keyType="SchoolID" name="Boston Circle of Promise Schools" title="Boston Circle of Promise Schools" dataType="geometry"/>
+          <attribute keyType="ObjectID" name="Boston Daycares" title="Boston Daycares" dataType="geometry"/>
+          <attribute keyType="ObjectID" name="Boston Neighborhoods" title="Boston Neighborhoods" dataType="geometry"/>
+          <attribute keyType="ObjectID" name="Boston Non-Profit Educational Assets (Points)" title="Boston Non-Profit Educational Assets (Points)" dataType="geometry"/>
+          <attribute keyType="MUNI_ID" name="Boston Outline" title="Boston Outline" dataType="geometry"/>
+          <attribute keyType="BostonParcelID" name="Boston Parcels (Subset)" title="Boston Parcels (Subset)" dataType="geometry"/>
+          <attribute keyType="SchoolID" name="Boston Schools" title="Boston Schools" dataType="geometry"/>
+          <attribute keyType="SchoolID" name="Boston Turnaround Schools" title="Boston Turnaround Schools" dataType="geometry"/>
+          <attribute keyType="BG_00_ID" name="Census 2000 Block Groups" title="Census 2000 Block Groups" dataType="geometry"/>
+          <attribute keyType="CT_ID" name="Census 2000 Tracts" title="Census 2000 Tracts" dataType="geometry"/>
+          <attribute keyType="BG_10_ID" name="Census 2010 Block Groups" title="Census 2010 Block Groups" dataType="geometry"/>
+          <attribute keyType="ct10_id" name="Census 2010 Tracts" title="Census 2010 Tracts" dataType="geometry"/>
+          <attribute keyType="ObjectID" name="Child Care Providers with Less than High School" title="Child Care Providers with Less than High School" dataType="geometry"/>
+          <attribute keyType="College_ID" name="Colleges and Universities" title="Colleges and Universities" dataType="geometry"/>
+          <attribute keyType="Commuter Rail" name="Commuter Rail" title="Commuter Rail" dataType="geometry"/>
+          <attribute keyType="ObjectID" name="Energy Star Buildings" title="Energy Star Buildings" dataType="geometry"/>
+          <attribute keyType="ObjectID" name="Indigo Commuter Line" title="Indigo Commuter Line" dataType="geometry"/>
+          <attribute keyType="ObjectID" name="Libraries" title="Libraries" dataType="geometry"/>
+          <attribute keyType="FIPS_ID" name="MA Counties" title="MA Counties" dataType="geometry"/>
+          <attribute keyType="MA_HOUSE02_ID" name="MA House Districts" title="MA House Districts" dataType="geometry"/>
+          <attribute keyType="MA_SENATE02_ID" name="MA Senate Districts" title="MA Senate Districts" dataType="geometry"/>
+          <attribute keyType="MUNI_ID" name="MAPC Municipalities" title="MAPC Municipalities" dataType="geometry"/>
+          <attribute keyType="MUNI_ID" name="Massachusetts Municipalities" title="Massachusetts Municipalities" dataType="geometry"/>
+          <attribute keyType="MBTA Subway Lines" name="MBTA Subway Lines" title="MBTA Subway Lines" dataType="geometry"/>
+          <attribute keyType="MUNI_ID" name="MetroFuture Region" title="MetroFuture Region" dataType="geometry"/>
+          <attribute keyType="SchoolDistrictID" name="School Districts" title="School Districts" dataType="geometry"/>
+          <attribute keyType="MUNI_ID" name="School Districts by Town" title="School Districts by Town" dataType="geometry"/>
+          <attribute keyType="SchoolID" name="Schools" title="Schools" dataType="geometry"/>
+          <attribute keyType="ObjectID" name="Success Boston Student Cohorts (2010)" title="Success Boston Student Cohorts (2010)" dataType="geometry"/>
+          <attribute keyType="US_CONGRESS_ID" name="US Congressional Districts" title="US Congressional Districts" dataType="geometry"/>
+          <attribute keyType="Arts and Culture Points" name="US States" title="US States" dataType="geometry"/>
         </category>
       </hierarchy>
     </attributeHierarchy>
     <hierarchyURL/>
+    <idFields/>
     <url>/WeaveServices/DataService</url>
   </WeaveDataSource>
-  <LinkableHashMap encoding="dynamic" name="Probe Header Columns"/>
-  <LinkableHashMap encoding="dynamic" name="Probed Columns">
+  <LinkableHashMap name="Probe Header Columns" encoding="dynamic"/>
+  <LinkableHashMap name="Probed Columns" encoding="dynamic">
     <ReferencedColumn name="ReferencedColumn">
       <dynamicColumnReference encoding="dynamic">
         <HierarchyColumnReference>
@@ -409,7 +460,7 @@ wheel</zoom>
             <hierarchy>
               <category title="Data Tables" name="Data Tables">
                 <category title="Voters (Municipal)" name="Voters (Municipal)">
-                  <attribute title="Municipality" name="municipal" dataType="string" dataTable="Voters (Municipal)" keyType="MUNI_ID"/>
+                  <attribute keyType="MUNI_ID" name="municipal" dataTable="Voters (Municipal)" title="Municipality" dataType="string"/>
                 </category>
               </category>
             </hierarchy>
@@ -425,7 +476,7 @@ wheel</zoom>
             <hierarchy>
               <category title="Data Tables" name="Data Tables">
                 <category title="Voters (Municipal)" name="Voters (Municipal)">
-                  <attribute title="Registered Voters, 2010" name="register10" dataType="number" dataTable="Voters (Municipal)" keyType="MUNI_ID"/>
+                  <attribute keyType="MUNI_ID" name="register10" dataTable="Voters (Municipal)" title="Registered Voters, 2010" dataType="number"/>
                 </category>
               </category>
             </hierarchy>
@@ -435,405 +486,413 @@ wheel</zoom>
     </ReferencedColumn>
   </LinkableHashMap>
   <CompoundBarChartTool name="CompoundBarChartTool">
+    <attributesToIncludeInProbe encoding="json">[
+  true,
+  true,
+  true,
+  true,
+  true,
+  true
+]</attributesToIncludeInProbe>
     <buttonRadius>3</buttonRadius>
     <children encoding="dynamic">
       <SimpleInteractiveVisualization name="visualization">
         <axesAlpha>1</axesAlpha>
         <axesColor>11579568</axesColor>
         <axesThickness>2</axesThickness>
-        <enableAutoZoomToExtent>true</enableAutoZoomToExtent>
         <enableAutoZoomXToNiceNumbers>false</enableAutoZoomXToNiceNumbers>
         <enableAutoZoomYToNiceNumbers>false</enableAutoZoomYToNiceNumbers>
-        <enableFixedAspectRatio>false</enableFixedAspectRatio>
         <enableProbe>true</enableProbe>
         <enableSelection>true</enableSelection>
         <enableZoomAndPan>false</enableZoomAndPan>
         <gridLineAlpha>1</gridLineAlpha>
         <gridLineColor>14540253</gridLineColor>
         <gridLineThickness>1</gridLineThickness>
-        <includeNonSelectableLayersInAutoZoom>false</includeNonSelectableLayersInAutoZoom>
-        <layers encoding="dynamic">
-          <AxisLayer name="yAxis">
-            <isOverlay>false</isOverlay>
-            <layerIsVisible>true</layerIsVisible>
-            <maxVisibleScale>Infinity</maxVisibleScale>
-            <minVisibleScale>0</minVisibleScale>
-            <plotter encoding="dynamic">
-              <SimpleAxisPlotter>
-                <axisLabelDistance>-5</axisLabelDistance>
-                <axisLabelRelativeAngle>90</axisLabelRelativeAngle>
-                <axisLineDataBounds>
-                  <xMax>-0.4547413793103448</xMax>
-                  <xMin>-0.4547413793103448</xMin>
-                  <yMax>54.803</yMax>
-                  <yMin>0</yMin>
-                </axisLineDataBounds>
-                <axisLineMaxValue>54.803</axisLineMaxValue>
-                <axisLineMinValue>0</axisLineMinValue>
-                <forceTickCount>false</forceTickCount>
-                <keySet>
-                  <keyFilter encoding="dynamic">
-                    <GlobalObjectReference name="defaultSubsetKeyFilter"/>
-                  </keyFilter>
-                </keySet>
-                <labelDistanceIsVertical>false</labelDistanceIsVertical>
-                <labelFunction>formatNumber(number, 0)+'%'</labelFunction>
-                <labelHorizontalAlign>right</labelHorizontalAlign>
-                <labelNumberFormatter>
-                  <decimalSeparatorFrom>.</decimalSeparatorFrom>
-                  <decimalSeparatorTo>.</decimalSeparatorTo>
-                  <precision>0</precision>
-                  <rounding>none</rounding>
-                  <thousandsSeparatorFrom>,</thousandsSeparatorFrom>
-                  <thousandsSeparatorTo>,</thousandsSeparatorTo>
-                  <useNegativeSign>true</useNegativeSign>
-                  <useThousandsSeparator>true</useThousandsSeparator>
-                </labelNumberFormatter>
-                <labelTextAlignment>left</labelTextAlignment>
-                <labelVerticalAlign>middle</labelVerticalAlign>
-                <labelWordWrapSize>80</labelWordWrapSize>
-                <overrideAxisName/>
-                <showAxisName>false</showAxisName>
-                <showLabels>true</showLabels>
-                <tickCountRequested>5</tickCountRequested>
-                <tickMaxValue>NaN</tickMaxValue>
-                <tickMinValue>NaN</tickMinValue>
-              </SimpleAxisPlotter>
-            </plotter>
-            <selectionFilter encoding="dynamic"/>
-          </AxisLayer>
-          <AxisLayer name="xAxis">
-            <isOverlay>false</isOverlay>
-            <layerIsVisible>true</layerIsVisible>
-            <maxVisibleScale>Infinity</maxVisibleScale>
-            <minVisibleScale>0</minVisibleScale>
-            <plotter encoding="dynamic">
-              <SimpleAxisPlotter>
-                <axisLabelDistance>0</axisLabelDistance>
-                <axisLabelRelativeAngle>0</axisLabelRelativeAngle>
-                <axisLineDataBounds>
-                  <xMax>0.4547413793103448</xMax>
-                  <xMin>-0.4547413793103448</xMin>
-                  <yMax>0</yMax>
-                  <yMin>0</yMin>
-                </axisLineDataBounds>
-                <axisLineMaxValue>0.4547413793103448</axisLineMaxValue>
-                <axisLineMinValue>-0.4547413793103448</axisLineMinValue>
-                <forceTickCount>false</forceTickCount>
-                <keySet>
-                  <keyFilter encoding="dynamic">
-                    <GlobalObjectReference name="defaultSubsetKeyFilter"/>
-                  </keyFilter>
-                </keySet>
-                <labelDistanceIsVertical>true</labelDistanceIsVertical>
-                <labelFunction>string</labelFunction>
-                <labelHorizontalAlign>center</labelHorizontalAlign>
-                <labelNumberFormatter>
-                  <decimalSeparatorFrom>.</decimalSeparatorFrom>
-                  <decimalSeparatorTo>.</decimalSeparatorTo>
-                  <precision>Infinity</precision>
-                  <rounding>none</rounding>
-                  <thousandsSeparatorFrom>,</thousandsSeparatorFrom>
-                  <thousandsSeparatorTo>,</thousandsSeparatorTo>
-                  <useNegativeSign>true</useNegativeSign>
-                  <useThousandsSeparator>true</useThousandsSeparator>
-                </labelNumberFormatter>
-                <labelTextAlignment>left</labelTextAlignment>
-                <labelVerticalAlign>top</labelVerticalAlign>
-                <labelWordWrapSize>80</labelWordWrapSize>
-                <overrideAxisName/>
-                <showAxisName>false</showAxisName>
-                <showLabels>true</showLabels>
-                <tickCountRequested>1</tickCountRequested>
-                <tickMaxValue>0</tickMaxValue>
-                <tickMinValue>0</tickMinValue>
-              </SimpleAxisPlotter>
-            </plotter>
-            <selectionFilter encoding="dynamic"/>
-          </AxisLayer>
-          <SelectablePlotLayer name="plot">
-            <backgroundIsVisible>true</backgroundIsVisible>
-            <layerIsSelectable>true</layerIsSelectable>
-            <layerIsVisible>true</layerIsVisible>
-            <maxVisibleScale>Infinity</maxVisibleScale>
-            <minVisibleScale>0</minVisibleScale>
-            <plotter encoding="dynamic">
-              <CompoundBarChartPlotter>
-                <barSpacing>0.1810344827586207</barSpacing>
-                <chartColors>0x0201F4,0xBC0000,0x666666</chartColors>
-                <colorColumn>
-                  <defaultValue>NaN</defaultValue>
-                  <internalDynamicColumn encoding="dynamic">
-                    <GlobalObjectReference name="defaultColorColumn"/>
-                  </internalDynamicColumn>
-                </colorColumn>
-                <groupBySortColumn>false</groupBySortColumn>
-                <groupingMode>group</groupingMode>
-                <heightColumns encoding="dynamic">
-                  <ReferencedColumn name="ReferencedColumn5">
-                    <dynamicColumnReference encoding="dynamic">
-                      <HierarchyColumnReference>
-                        <dataSourceName>WeaveDataSource</dataSourceName>
-                        <hierarchyPath encoding="xml">
-                          <hierarchy>
-                            <category title="Data Tables" name="Data Tables">
-                              <category title="Voters (Municipal)" name="Voters (Municipal)">
-                                <attribute min="0" string="formatNumber(number, 2)" dataTable="Voters (Municipal)" max="100" name="pctdem10" dataType="number" title="% Registered Democrats, 2010" keyType="MUNI_ID"/>
-                              </category>
+        <plotManager>
+          <enableAutoZoomToExtent>true</enableAutoZoomToExtent>
+          <enableAutoZoomToSelection>false</enableAutoZoomToSelection>
+          <enableFixedAspectRatio>false</enableFixedAspectRatio>
+          <includeNonSelectableLayersInAutoZoom>false</includeNonSelectableLayersInAutoZoom>
+          <layerSettings encoding="dynamic">
+            <LayerSettings name="yAxis">
+              <alwaysRenderSelection>false</alwaysRenderSelection>
+              <maxVisibleScale>Infinity</maxVisibleScale>
+              <minVisibleScale>0</minVisibleScale>
+              <selectable>false</selectable>
+              <visible>true</visible>
+            </LayerSettings>
+            <LayerSettings name="xAxis">
+              <alwaysRenderSelection>false</alwaysRenderSelection>
+              <maxVisibleScale>Infinity</maxVisibleScale>
+              <minVisibleScale>0</minVisibleScale>
+              <selectable>false</selectable>
+              <visible>true</visible>
+            </LayerSettings>
+            <LayerSettings name="plot">
+              <alwaysRenderSelection>false</alwaysRenderSelection>
+              <maxVisibleScale>Infinity</maxVisibleScale>
+              <minVisibleScale>0</minVisibleScale>
+              <selectable>true</selectable>
+              <visible>true</visible>
+            </LayerSettings>
+            <LayerSettings name="probeLine">
+              <alwaysRenderSelection>false</alwaysRenderSelection>
+              <maxVisibleScale>Infinity</maxVisibleScale>
+              <minVisibleScale>0</minVisibleScale>
+              <selectable>true</selectable>
+              <visible>true</visible>
+            </LayerSettings>
+          </layerSettings>
+          <marginBottom>25</marginBottom>
+          <marginLeft>35</marginLeft>
+          <marginRight>5</marginRight>
+          <marginTop>15</marginTop>
+          <maxZoomLevel>16</maxZoomLevel>
+          <minScreenSize>128</minScreenSize>
+          <minZoomLevel>0</minZoomLevel>
+          <overrideXMax>NaN</overrideXMax>
+          <overrideXMin>NaN</overrideXMin>
+          <overrideYMax>NaN</overrideYMax>
+          <overrideYMin>NaN</overrideYMin>
+          <plotters encoding="dynamic">
+            <SimpleAxisPlotter name="yAxis">
+              <axisLabelHorizontalDistance>-5</axisLabelHorizontalDistance>
+              <axisLabelRelativeAngle>90</axisLabelRelativeAngle>
+              <axisLabelVerticalDistance>0</axisLabelVerticalDistance>
+              <axisLineDataBounds>
+                <xMax>-0.5</xMax>
+                <xMin>-0.5</xMin>
+                <yMax>45.4735</yMax>
+                <yMin>0</yMin>
+              </axisLineDataBounds>
+              <axisLineMaxValue>45.4735</axisLineMaxValue>
+              <axisLineMinValue>0</axisLineMinValue>
+              <filteredKeySet>
+                <keyFilter encoding="dynamic">
+                  <GlobalObjectReference name="defaultSubsetKeyFilter"/>
+                </keyFilter>
+              </filteredKeySet>
+              <forceTickCount>false</forceTickCount>
+              <labelFunction>formatNumber(number, 0)+'%'</labelFunction>
+              <labelHorizontalAlign>right</labelHorizontalAlign>
+              <labelNumberFormatter>
+                <decimalSeparatorFrom>.</decimalSeparatorFrom>
+                <decimalSeparatorTo>.</decimalSeparatorTo>
+                <precision>0</precision>
+                <rounding>none</rounding>
+                <thousandsSeparatorFrom>,</thousandsSeparatorFrom>
+                <thousandsSeparatorTo>,</thousandsSeparatorTo>
+                <useNegativeSign>true</useNegativeSign>
+                <useThousandsSeparator>true</useThousandsSeparator>
+              </labelNumberFormatter>
+              <labelTextAlignment>left</labelTextAlignment>
+              <labelVerticalAlign>middle</labelVerticalAlign>
+              <labelWordWrapSize>80</labelWordWrapSize>
+              <overrideAxisName/>
+              <showAxisName>false</showAxisName>
+              <showLabels>true</showLabels>
+              <tickCountRequested>5</tickCountRequested>
+              <tickMaxValue>NaN</tickMaxValue>
+              <tickMinValue>NaN</tickMinValue>
+            </SimpleAxisPlotter>
+            <SimpleAxisPlotter name="xAxis">
+              <axisLabelHorizontalDistance>-10</axisLabelHorizontalDistance>
+              <axisLabelRelativeAngle>0</axisLabelRelativeAngle>
+              <axisLabelVerticalDistance>0</axisLabelVerticalDistance>
+              <axisLineDataBounds>
+                <xMax>0.5</xMax>
+                <xMin>-0.5</xMin>
+                <yMax>0</yMax>
+                <yMin>0</yMin>
+              </axisLineDataBounds>
+              <axisLineMaxValue>0.5</axisLineMaxValue>
+              <axisLineMinValue>-0.5</axisLineMinValue>
+              <filteredKeySet>
+                <keyFilter encoding="dynamic">
+                  <GlobalObjectReference name="defaultSubsetKeyFilter"/>
+                </keyFilter>
+              </filteredKeySet>
+              <forceTickCount>false</forceTickCount>
+              <labelFunction>string</labelFunction>
+              <labelHorizontalAlign>center</labelHorizontalAlign>
+              <labelNumberFormatter>
+                <decimalSeparatorFrom>.</decimalSeparatorFrom>
+                <decimalSeparatorTo>.</decimalSeparatorTo>
+                <precision>Infinity</precision>
+                <rounding>none</rounding>
+                <thousandsSeparatorFrom>,</thousandsSeparatorFrom>
+                <thousandsSeparatorTo>,</thousandsSeparatorTo>
+                <useNegativeSign>true</useNegativeSign>
+                <useThousandsSeparator>true</useThousandsSeparator>
+              </labelNumberFormatter>
+              <labelTextAlignment>left</labelTextAlignment>
+              <labelVerticalAlign>top</labelVerticalAlign>
+              <labelWordWrapSize>80</labelWordWrapSize>
+              <overrideAxisName/>
+              <showAxisName>false</showAxisName>
+              <showLabels>true</showLabels>
+              <tickCountRequested>1</tickCountRequested>
+              <tickMaxValue>0</tickMaxValue>
+              <tickMinValue>0</tickMinValue>
+            </SimpleAxisPlotter>
+            <CompoundBarChartPlotter name="plot">
+              <barSpacing>0.1810344827586207</barSpacing>
+              <chartColors>0x0201F4,0xBC0000,0x666666</chartColors>
+              <colorColumn>
+                <defaultValue>NaN</defaultValue>
+                <internalDynamicColumn encoding="dynamic">
+                  <GlobalObjectReference name="defaultColorColumn"/>
+                </internalDynamicColumn>
+              </colorColumn>
+              <filteredKeySet>
+                <keyFilter encoding="dynamic">
+                  <GlobalObjectReference name="defaultSubsetKeyFilter"/>
+                </keyFilter>
+              </filteredKeySet>
+              <groupBySortColumn>false</groupBySortColumn>
+              <groupingMode>group</groupingMode>
+              <heightColumns encoding="dynamic">
+                <ReferencedColumn name="ReferencedColumn5">
+                  <dynamicColumnReference encoding="dynamic">
+                    <HierarchyColumnReference>
+                      <dataSourceName>WeaveDataSource</dataSourceName>
+                      <hierarchyPath encoding="xml">
+                        <hierarchy>
+                          <category title="Data Tables" name="Data Tables">
+                            <category title="Voters (Municipal)" name="Voters (Municipal)">
+                              <attribute keyType="MUNI_ID" string="formatNumber(number, 2)" title="% Registered Democrats, 2010" min="0" dataTable="Voters (Municipal)" name="pctdem10" max="100" dataType="number"/>
                             </category>
-                          </hierarchy>
-                        </hierarchyPath>
-                      </HierarchyColumnReference>
-                    </dynamicColumnReference>
-                  </ReferencedColumn>
-                  <ReferencedColumn name="ReferencedColumn6">
-                    <dynamicColumnReference encoding="dynamic">
-                      <HierarchyColumnReference>
-                        <dataSourceName>WeaveDataSource</dataSourceName>
-                        <hierarchyPath encoding="xml">
-                          <hierarchy>
-                            <category title="Data Tables" name="Data Tables">
-                              <category title="Voters (Municipal)" name="Voters (Municipal)">
-                                <attribute min="0" string="formatNumber(number, 2)" dataTable="Voters (Municipal)" max="100" name="pctrep10" dataType="number" title="% Registered Republicans, 20010" keyType="MUNI_ID"/>
-                              </category>
+                          </category>
+                        </hierarchy>
+                      </hierarchyPath>
+                    </HierarchyColumnReference>
+                  </dynamicColumnReference>
+                </ReferencedColumn>
+                <ReferencedColumn name="ReferencedColumn6">
+                  <dynamicColumnReference encoding="dynamic">
+                    <HierarchyColumnReference>
+                      <dataSourceName>WeaveDataSource</dataSourceName>
+                      <hierarchyPath encoding="xml">
+                        <hierarchy>
+                          <category title="Data Tables" name="Data Tables">
+                            <category title="Voters (Municipal)" name="Voters (Municipal)">
+                              <attribute keyType="MUNI_ID" string="formatNumber(number, 2)" title="% Registered Republicans, 20010" min="0" dataTable="Voters (Municipal)" name="pctrep10" max="100" dataType="number"/>
                             </category>
-                          </hierarchy>
-                        </hierarchyPath>
-                      </HierarchyColumnReference>
-                    </dynamicColumnReference>
-                  </ReferencedColumn>
-                  <ReferencedColumn name="ReferencedColumn7">
-                    <dynamicColumnReference encoding="dynamic">
-                      <HierarchyColumnReference>
-                        <dataSourceName>WeaveDataSource</dataSourceName>
-                        <hierarchyPath encoding="xml">
-                          <hierarchy>
-                            <category title="Data Tables" name="Data Tables">
-                              <category title="Voters (Municipal)" name="Voters (Municipal)">
-                                <attribute min="0" string="formatNumber(number, 2)" dataTable="Voters (Municipal)" max="100" name="pctoth10" dataType="number" title="% Registered Other Party, 2010" keyType="MUNI_ID"/>
-                              </category>
+                          </category>
+                        </hierarchy>
+                      </hierarchyPath>
+                    </HierarchyColumnReference>
+                  </dynamicColumnReference>
+                </ReferencedColumn>
+                <ReferencedColumn name="ReferencedColumn7">
+                  <dynamicColumnReference encoding="dynamic">
+                    <HierarchyColumnReference>
+                      <dataSourceName>WeaveDataSource</dataSourceName>
+                      <hierarchyPath encoding="xml">
+                        <hierarchy>
+                          <category title="Data Tables" name="Data Tables">
+                            <category title="Voters (Municipal)" name="Voters (Municipal)">
+                              <attribute keyType="MUNI_ID" string="formatNumber(number, 2)" title="% Registered Other Party, 2010" min="0" dataTable="Voters (Municipal)" name="pctoth10" max="100" dataType="number"/>
                             </category>
-                          </hierarchy>
-                        </hierarchyPath>
-                      </HierarchyColumnReference>
-                    </dynamicColumnReference>
-                  </ReferencedColumn>
-                </heightColumns>
-                <horizontalMode>false</horizontalMode>
-                <keySet>
-                  <keyFilter encoding="dynamic">
-                    <GlobalObjectReference name="defaultSubsetKeyFilter"/>
-                  </keyFilter>
-                </keySet>
-                <labelColor>0</labelColor>
-                <labelColumn encoding="dynamic">
-                  <ReferencedColumn>
-                    <dynamicColumnReference encoding="dynamic">
-                      <HierarchyColumnReference>
-                        <dataSourceName>WeaveDataSource</dataSourceName>
-                        <hierarchyPath encoding="xml">
-                          <hierarchy>
-                            <category title="Data Tables" name="Data Tables">
-                              <category title="Voters (Municipal)" name="Voters (Municipal)">
-                                <attribute keyType="MUNI_ID" name="municipal" dataType="string" title="Municipality" dataTable="Voters (Municipal)"/>
-                              </category>
+                          </category>
+                        </hierarchy>
+                      </hierarchyPath>
+                    </HierarchyColumnReference>
+                  </dynamicColumnReference>
+                </ReferencedColumn>
+              </heightColumns>
+              <horizontalMode>false</horizontalMode>
+              <labelColor>0</labelColor>
+              <labelColumn encoding="dynamic">
+                <ReferencedColumn>
+                  <dynamicColumnReference encoding="dynamic">
+                    <HierarchyColumnReference>
+                      <dataSourceName>WeaveDataSource</dataSourceName>
+                      <hierarchyPath encoding="xml">
+                        <hierarchy>
+                          <category title="Data Tables" name="Data Tables">
+                            <category title="Voters (Municipal)" name="Voters (Municipal)">
+                              <attribute keyType="MUNI_ID" name="municipal" dataTable="Voters (Municipal)" title="Municipality" dataType="string"/>
                             </category>
-                          </hierarchy>
-                        </hierarchyPath>
-                      </HierarchyColumnReference>
-                    </dynamicColumnReference>
-                  </ReferencedColumn>
-                </labelColumn>
-                <labelDataCoordinate>-50</labelDataCoordinate>
-                <labelHorizontalAlign>center</labelHorizontalAlign>
-                <labelMaxWidth>200</labelMaxWidth>
-                <labelRelativeAngle>90</labelRelativeAngle>
-                <labelVerticalAlign>top</labelVerticalAlign>
-                <lineStyle encoding="dynamic">
-                  <SolidLineStyle>
-                    <alpha>
-                      <defaultValue>0.5</defaultValue>
-                      <internalDynamicColumn encoding="dynamic"/>
-                    </alpha>
-                    <caps>
-                      <defaultValue/>
-                      <internalDynamicColumn encoding="dynamic"/>
-                    </caps>
-                    <color>
-                      <defaultValue>0</defaultValue>
-                      <internalDynamicColumn encoding="dynamic"/>
-                    </color>
-                    <enabled>
-                      <defaultValue>true</defaultValue>
-                      <internalDynamicColumn encoding="dynamic"/>
-                    </enabled>
-                    <joints>
-                      <defaultValue/>
-                      <internalDynamicColumn encoding="dynamic"/>
-                    </joints>
-                    <miterLimit>
-                      <defaultValue>3</defaultValue>
-                      <internalDynamicColumn encoding="dynamic"/>
-                    </miterLimit>
-                    <pixelHinting>
-                      <defaultValue>false</defaultValue>
-                      <internalDynamicColumn encoding="dynamic"/>
-                    </pixelHinting>
-                    <scaleMode>
-                      <defaultValue>normal</defaultValue>
-                      <internalDynamicColumn encoding="dynamic"/>
-                    </scaleMode>
-                    <weight>
-                      <defaultValue>1</defaultValue>
-                      <internalDynamicColumn encoding="dynamic"/>
-                    </weight>
-                  </SolidLineStyle>
-                </lineStyle>
-                <negativeErrorColumns encoding="dynamic"/>
-                <positiveErrorColumns encoding="dynamic"/>
-                <recordLabelColoring>false</recordLabelColoring>
-                <recordValueLabelColoring>false</recordValueLabelColoring>
-                <showLabels>false</showLabels>
-                <showValueLabels>false</showValueLabels>
-                <sortColumn encoding="dynamic">
-                  <ReferencedColumn>
-                    <dynamicColumnReference encoding="dynamic">
-                      <HierarchyColumnReference>
-                        <dataSourceName>WeaveDataSource</dataSourceName>
-                        <hierarchyPath encoding="xml">
-                          <hierarchy>
-                            <category title="Data Tables" name="Data Tables">
-                              <category title="Voters (Municipal)" name="Voters (Municipal)">
-                                <attribute keyType="MUNI_ID" name="municipal" dataType="string" title="Municipality" dataTable="Voters (Municipal)"/>
-                              </category>
+                          </category>
+                        </hierarchy>
+                      </hierarchyPath>
+                    </HierarchyColumnReference>
+                  </dynamicColumnReference>
+                </ReferencedColumn>
+              </labelColumn>
+              <labelDataCoordinate>-50</labelDataCoordinate>
+              <labelFormatter>string</labelFormatter>
+              <labelHorizontalAlign>center</labelHorizontalAlign>
+              <labelMaxWidth>200</labelMaxWidth>
+              <labelRelativeAngle>90</labelRelativeAngle>
+              <labelVerticalAlign>top</labelVerticalAlign>
+              <lineStyle encoding="dynamic">
+                <SolidLineStyle>
+                  <alpha>
+                    <defaultValue>0.5</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </alpha>
+                  <caps>
+                    <defaultValue/>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </caps>
+                  <color>
+                    <defaultValue>0</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </color>
+                  <enabled>
+                    <defaultValue>true</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </enabled>
+                  <joints>
+                    <defaultValue/>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </joints>
+                  <miterLimit>
+                    <defaultValue>3</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </miterLimit>
+                  <pixelHinting>
+                    <defaultValue>false</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </pixelHinting>
+                  <scaleMode>
+                    <defaultValue>normal</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </scaleMode>
+                  <weight>
+                    <defaultValue>1</defaultValue>
+                    <internalDynamicColumn encoding="dynamic">
+                      <NormalizedColumn>
+                        <internalDynamicColumn encoding="dynamic"/>
+                        <max>5</max>
+                        <min>1</min>
+                      </NormalizedColumn>
+                    </internalDynamicColumn>
+                  </weight>
+                </SolidLineStyle>
+              </lineStyle>
+              <negativeErrorColumns encoding="dynamic"/>
+              <positiveErrorColumns encoding="dynamic"/>
+              <recordLabelColoring>false</recordLabelColoring>
+              <recordValueLabelColoring>false</recordValueLabelColoring>
+              <showLabels>false</showLabels>
+              <showValueLabels>true</showValueLabels>
+              <sortColumn encoding="dynamic">
+                <ReferencedColumn>
+                  <dynamicColumnReference encoding="dynamic">
+                    <HierarchyColumnReference>
+                      <dataSourceName>WeaveDataSource</dataSourceName>
+                      <hierarchyPath encoding="xml">
+                        <hierarchy>
+                          <category title="Data Tables" name="Data Tables">
+                            <category title="Voters (Municipal)" name="Voters (Municipal)">
+                              <attribute keyType="MUNI_ID" name="municipal" dataTable="Voters (Municipal)" title="Municipality" dataType="string"/>
                             </category>
-                          </hierarchy>
-                        </hierarchyPath>
-                      </HierarchyColumnReference>
-                    </dynamicColumnReference>
-                  </ReferencedColumn>
-                </sortColumn>
-                <valueLabelColor>0</valueLabelColor>
-                <valueLabelDataCoordinate>NaN</valueLabelDataCoordinate>
-                <valueLabelHorizontalAlign>left</valueLabelHorizontalAlign>
-                <valueLabelMaxWidth>200</valueLabelMaxWidth>
-                <valueLabelRelativeAngle>NaN</valueLabelRelativeAngle>
-                <valueLabelVerticalAlign>middle</valueLabelVerticalAlign>
-                <zoomToSubset>true</zoomToSubset>
-              </CompoundBarChartPlotter>
-            </plotter>
-            <probeFilter encoding="dynamic">
-              <GlobalObjectReference name="defaultProbeKeySet"/>
-            </probeFilter>
-            <selectionFilter encoding="dynamic">
-              <GlobalObjectReference name="defaultSelectionKeySet"/>
-            </selectionFilter>
-            <subsetFilter encoding="dynamic">
-              <GlobalObjectReference name="defaultSubsetKeyFilter"/>
-            </subsetFilter>
-            <useTextBitmapFilters>false</useTextBitmapFilters>
-          </SelectablePlotLayer>
-          <PlotLayer name="probeLine">
-            <isOverlay>false</isOverlay>
-            <layerIsVisible>true</layerIsVisible>
-            <maxVisibleScale>Infinity</maxVisibleScale>
-            <minVisibleScale>0</minVisibleScale>
-            <plotter encoding="dynamic">
-              <ProbeLinePlotter>
-                <keySet>
-                  <keyFilter encoding="dynamic">
-                    <GlobalObjectReference name="defaultSubsetKeyFilter"/>
-                  </keyFilter>
-                </keySet>
-                <lineStyle encoding="dynamic">
-                  <SolidLineStyle>
-                    <alpha>
-                      <defaultValue>0.5</defaultValue>
-                      <internalDynamicColumn encoding="dynamic"/>
-                    </alpha>
-                    <caps>
-                      <defaultValue/>
-                      <internalDynamicColumn encoding="dynamic"/>
-                    </caps>
-                    <color>
-                      <defaultValue>0</defaultValue>
-                      <internalDynamicColumn encoding="dynamic"/>
-                    </color>
-                    <enabled>
-                      <defaultValue>true</defaultValue>
-                      <internalDynamicColumn encoding="dynamic"/>
-                    </enabled>
-                    <joints>
-                      <defaultValue/>
-                      <internalDynamicColumn encoding="dynamic"/>
-                    </joints>
-                    <miterLimit>
-                      <defaultValue>3</defaultValue>
-                      <internalDynamicColumn encoding="dynamic"/>
-                    </miterLimit>
-                    <pixelHinting>
-                      <defaultValue>false</defaultValue>
-                      <internalDynamicColumn encoding="dynamic"/>
-                    </pixelHinting>
-                    <scaleMode>
-                      <defaultValue>normal</defaultValue>
-                      <internalDynamicColumn encoding="dynamic"/>
-                    </scaleMode>
-                    <weight>
-                      <defaultValue>1</defaultValue>
-                      <internalDynamicColumn encoding="dynamic"/>
-                    </weight>
-                  </SolidLineStyle>
-                </lineStyle>
-              </ProbeLinePlotter>
-            </plotter>
-            <selectionFilter encoding="dynamic"/>
-          </PlotLayer>
-        </layers>
-        <marginBottom>60</marginBottom>
-        <marginLeft>35</marginLeft>
-        <marginRight>5</marginRight>
-        <marginTop>5</marginTop>
-        <maxZoomLevel>16</maxZoomLevel>
-        <minScreenSize>128</minScreenSize>
-        <minZoomLevel>0</minZoomLevel>
-        <overrideXMax>NaN</overrideXMax>
-        <overrideXMin>NaN</overrideXMin>
-        <overrideYMax>NaN</overrideYMax>
-        <overrideYMin>NaN</overrideYMin>
-        <zoomBounds>
-          <xMax>0.4547413793103448</xMax>
-          <xMin>-0.4547413793103448</xMin>
-          <yMax>54.803</yMax>
-          <yMin>0</yMin>
-        </zoomBounds>
+                          </category>
+                        </hierarchy>
+                      </hierarchyPath>
+                    </HierarchyColumnReference>
+                  </dynamicColumnReference>
+                </ReferencedColumn>
+              </sortColumn>
+              <stackedMissingDataGap>true</stackedMissingDataGap>
+              <valueLabelColor>0</valueLabelColor>
+              <valueLabelDataCoordinate>NaN</valueLabelDataCoordinate>
+              <valueLabelHorizontalAlign>center</valueLabelHorizontalAlign>
+              <valueLabelMaxWidth>200</valueLabelMaxWidth>
+              <valueLabelRelativeAngle>90</valueLabelRelativeAngle>
+              <valueLabelVerticalAlign>bottom</valueLabelVerticalAlign>
+              <zoomToSubset>true</zoomToSubset>
+              <zoomToSubsetBars>false</zoomToSubsetBars>
+            </CompoundBarChartPlotter>
+            <ProbeLinePlotter name="probeLine">
+              <filteredKeySet>
+                <keyFilter encoding="dynamic">
+                  <GlobalObjectReference name="defaultSubsetKeyFilter"/>
+                </keyFilter>
+              </filteredKeySet>
+              <lineStyle encoding="dynamic">
+                <SolidLineStyle>
+                  <alpha>
+                    <defaultValue>0.5</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </alpha>
+                  <caps>
+                    <defaultValue/>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </caps>
+                  <color>
+                    <defaultValue>0</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </color>
+                  <enabled>
+                    <defaultValue>true</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </enabled>
+                  <joints>
+                    <defaultValue/>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </joints>
+                  <miterLimit>
+                    <defaultValue>3</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </miterLimit>
+                  <pixelHinting>
+                    <defaultValue>false</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </pixelHinting>
+                  <scaleMode>
+                    <defaultValue>normal</defaultValue>
+                    <internalDynamicColumn encoding="dynamic"/>
+                  </scaleMode>
+                  <weight>
+                    <defaultValue>1</defaultValue>
+                    <internalDynamicColumn encoding="dynamic">
+                      <NormalizedColumn>
+                        <internalDynamicColumn encoding="dynamic"/>
+                        <max>5</max>
+                        <min>1</min>
+                      </NormalizedColumn>
+                    </internalDynamicColumn>
+                  </weight>
+                </SolidLineStyle>
+              </lineStyle>
+            </ProbeLinePlotter>
+          </plotters>
+          <zoomBounds>
+            <xMax>0.5</xMax>
+            <xMin>-0.5</xMin>
+            <yMax>45.4735</yMax>
+            <yMin>0</yMin>
+          </zoomBounds>
+        </plotManager>
+        <zoomFactor>2</zoomFactor>
       </SimpleInteractiveVisualization>
     </children>
     <closeable>true</closeable>
-    <draggable>true</draggable>
-    <enableBorders>true</enableBorders>
+    <enableBorders>false</enableBorders>
+    <enableMoveResize>true</enableMoveResize>
+    <enableSubMenu>false</enableSubMenu>
     <enableTitle>false</enableTitle>
-    <includeToolAttributesInProbe>true</includeToolAttributesInProbe>
+    <enableZOrder>true</enableZOrder>
     <linkHeightAndSortColumns>false</linkHeightAndSortColumns>
     <maximizable>true</maximizable>
-    <maximized>true</maximized>
+    <maximized>false</maximized>
     <minimizable>true</minimizable>
     <minimized>false</minimized>
     <panelBackgroundColor>NaN</panelBackgroundColor>
     <panelBorderColor>NaN</panelBorderColor>
-    <panelHeight>50%</panelHeight>
+    <panelHeight>83%</panelHeight>
     <panelStyleList/>
     <panelTitle/>
-    <panelWidth>50%</panelWidth>
+    <panelWidth>100%</panelWidth>
     <panelX>0%</panelX>
     <panelY>0%</panelY>
-    <pinnable>true</pinnable>
-    <pinnableToBack>false</pinnableToBack>
-    <pinned>false</pinned>
-    <pinnedToBack>false</pinnedToBack>
-    <resizeable>true</resizeable>
     <showAllLabels>false</showAllLabels>
     <sizeAxisTickCountRequested>5</sizeAxisTickCountRequested>
+    <zOrder>-1</zOrder>
   </CompoundBarChartTool>
   <BarChartLegendTool name="BarChartLegendTool">
     <buttonRadius>3</buttonRadius>
@@ -842,253 +901,246 @@ wheel</zoom>
         <axesAlpha>NaN</axesAlpha>
         <axesColor>0</axesColor>
         <axesThickness>NaN</axesThickness>
-        <enableAutoZoomToExtent>true</enableAutoZoomToExtent>
         <enableAutoZoomXToNiceNumbers>false</enableAutoZoomXToNiceNumbers>
         <enableAutoZoomYToNiceNumbers>false</enableAutoZoomYToNiceNumbers>
-        <enableFixedAspectRatio>false</enableFixedAspectRatio>
         <enableProbe>true</enableProbe>
         <enableSelection>true</enableSelection>
         <enableZoomAndPan>false</enableZoomAndPan>
         <gridLineAlpha>NaN</gridLineAlpha>
         <gridLineColor>0</gridLineColor>
         <gridLineThickness>NaN</gridLineThickness>
-        <includeNonSelectableLayersInAutoZoom>false</includeNonSelectableLayersInAutoZoom>
-        <layers encoding="dynamic">
-          <SelectablePlotLayer name="plot">
-            <backgroundIsVisible>true</backgroundIsVisible>
-            <layerIsSelectable>true</layerIsSelectable>
-            <layerIsVisible>true</layerIsVisible>
-            <maxVisibleScale>Infinity</maxVisibleScale>
-            <minVisibleScale>0</minVisibleScale>
-            <plotter encoding="dynamic">
-              <BarChartLegendPlotter>
-                <ascendingOrder>false</ascendingOrder>
-                <chartColors>0x0201F4,0xBC0000,0x666666</chartColors>
-                <columns encoding="dynamic">
-                  <ReferencedColumn name="ReferencedColumn5">
-                    <dynamicColumnReference encoding="dynamic">
-                      <HierarchyColumnReference>
-                        <dataSourceName>WeaveDataSource</dataSourceName>
-                        <hierarchyPath encoding="xml">
-                          <hierarchy>
-                            <category title="Data Tables" name="Data Tables">
-                              <category title="Voters (Municipal)" name="Voters (Municipal)">
-                                <attribute min="0" string="formatNumber(number, 2)" dataTable="Voters (Municipal)" max="100" name="pctdem10" dataType="number" title="% Registered Democrats, 2010" keyType="MUNI_ID"/>
-                              </category>
+        <plotManager>
+          <enableAutoZoomToExtent>true</enableAutoZoomToExtent>
+          <enableAutoZoomToSelection>false</enableAutoZoomToSelection>
+          <enableFixedAspectRatio>false</enableFixedAspectRatio>
+          <includeNonSelectableLayersInAutoZoom>false</includeNonSelectableLayersInAutoZoom>
+          <layerSettings encoding="dynamic">
+            <LayerSettings name="plot">
+              <alwaysRenderSelection>false</alwaysRenderSelection>
+              <maxVisibleScale>Infinity</maxVisibleScale>
+              <minVisibleScale>0</minVisibleScale>
+              <selectable>true</selectable>
+              <visible>true</visible>
+            </LayerSettings>
+            <LayerSettings name="color legend">
+              <alwaysRenderSelection>false</alwaysRenderSelection>
+              <maxVisibleScale>Infinity</maxVisibleScale>
+              <minVisibleScale>0</minVisibleScale>
+              <selectable>true</selectable>
+              <visible>false</visible>
+            </LayerSettings>
+          </layerSettings>
+          <marginBottom>2</marginBottom>
+          <marginLeft>5</marginLeft>
+          <marginRight>5</marginRight>
+          <marginTop>0</marginTop>
+          <maxZoomLevel>16</maxZoomLevel>
+          <minScreenSize>128</minScreenSize>
+          <minZoomLevel>0</minZoomLevel>
+          <overrideXMax>NaN</overrideXMax>
+          <overrideXMin>NaN</overrideXMin>
+          <overrideYMax>NaN</overrideYMax>
+          <overrideYMin>NaN</overrideYMin>
+          <plotters encoding="dynamic">
+            <BarChartLegendPlotter name="plot">
+              <ascendingOrder>false</ascendingOrder>
+              <chartColors>0x0201F4,0xBC0000,0x666666</chartColors>
+              <columns encoding="dynamic">
+                <ReferencedColumn name="ReferencedColumn5">
+                  <dynamicColumnReference encoding="dynamic">
+                    <HierarchyColumnReference>
+                      <dataSourceName>WeaveDataSource</dataSourceName>
+                      <hierarchyPath encoding="xml">
+                        <hierarchy>
+                          <category title="Data Tables" name="Data Tables">
+                            <category title="Voters (Municipal)" name="Voters (Municipal)">
+                              <attribute keyType="MUNI_ID" string="formatNumber(number, 2)" title="% Registered Democrats, 2010" min="0" dataTable="Voters (Municipal)" name="pctdem10" max="100" dataType="number"/>
                             </category>
-                          </hierarchy>
-                        </hierarchyPath>
-                      </HierarchyColumnReference>
-                    </dynamicColumnReference>
-                  </ReferencedColumn>
-                  <ReferencedColumn name="ReferencedColumn6">
-                    <dynamicColumnReference encoding="dynamic">
-                      <HierarchyColumnReference>
-                        <dataSourceName>WeaveDataSource</dataSourceName>
-                        <hierarchyPath encoding="xml">
-                          <hierarchy>
-                            <category title="Data Tables" name="Data Tables">
-                              <category title="Voters (Municipal)" name="Voters (Municipal)">
-                                <attribute min="0" string="formatNumber(number, 2)" dataTable="Voters (Municipal)" max="100" name="pctrep10" dataType="number" title="% Registered Republicans, 20010" keyType="MUNI_ID"/>
-                              </category>
+                          </category>
+                        </hierarchy>
+                      </hierarchyPath>
+                    </HierarchyColumnReference>
+                  </dynamicColumnReference>
+                </ReferencedColumn>
+                <ReferencedColumn name="ReferencedColumn6">
+                  <dynamicColumnReference encoding="dynamic">
+                    <HierarchyColumnReference>
+                      <dataSourceName>WeaveDataSource</dataSourceName>
+                      <hierarchyPath encoding="xml">
+                        <hierarchy>
+                          <category title="Data Tables" name="Data Tables">
+                            <category title="Voters (Municipal)" name="Voters (Municipal)">
+                              <attribute keyType="MUNI_ID" string="formatNumber(number, 2)" title="% Registered Republicans, 20010" min="0" dataTable="Voters (Municipal)" name="pctrep10" max="100" dataType="number"/>
                             </category>
-                          </hierarchy>
-                        </hierarchyPath>
-                      </HierarchyColumnReference>
-                    </dynamicColumnReference>
-                  </ReferencedColumn>
-                  <ReferencedColumn name="ReferencedColumn7">
-                    <dynamicColumnReference encoding="dynamic">
-                      <HierarchyColumnReference>
-                        <dataSourceName>WeaveDataSource</dataSourceName>
-                        <hierarchyPath encoding="xml">
-                          <hierarchy>
-                            <category title="Data Tables" name="Data Tables">
-                              <category title="Voters (Municipal)" name="Voters (Municipal)">
-                                <attribute min="0" string="formatNumber(number, 2)" dataTable="Voters (Municipal)" max="100" name="pctoth10" dataType="number" title="% Registered Other Party, 2010" keyType="MUNI_ID"/>
-                              </category>
+                          </category>
+                        </hierarchy>
+                      </hierarchyPath>
+                    </HierarchyColumnReference>
+                  </dynamicColumnReference>
+                </ReferencedColumn>
+                <ReferencedColumn name="ReferencedColumn7">
+                  <dynamicColumnReference encoding="dynamic">
+                    <HierarchyColumnReference>
+                      <dataSourceName>WeaveDataSource</dataSourceName>
+                      <hierarchyPath encoding="xml">
+                        <hierarchy>
+                          <category title="Data Tables" name="Data Tables">
+                            <category title="Voters (Municipal)" name="Voters (Municipal)">
+                              <attribute keyType="MUNI_ID" string="formatNumber(number, 2)" title="% Registered Other Party, 2010" min="0" dataTable="Voters (Municipal)" name="pctoth10" max="100" dataType="number"/>
                             </category>
-                          </hierarchy>
-                        </hierarchyPath>
-                      </HierarchyColumnReference>
-                    </dynamicColumnReference>
-                  </ReferencedColumn>
-                </columns>
-                <itemLabelFunction>string</itemLabelFunction>
-                <keySet>
-                  <keyFilter encoding="dynamic">
-                    <GlobalObjectReference name="defaultSubsetKeyFilter"/>
-                  </keyFilter>
-                </keySet>
-                <legendTitleFunction>string</legendTitleFunction>
-                <lineStyle>
-                  <alpha>
-                    <defaultValue>0.5</defaultValue>
-                    <internalDynamicColumn encoding="dynamic"/>
-                  </alpha>
-                  <caps>
-                    <defaultValue/>
-                    <internalDynamicColumn encoding="dynamic"/>
-                  </caps>
-                  <color>
-                    <defaultValue>0</defaultValue>
-                    <internalDynamicColumn encoding="dynamic"/>
-                  </color>
-                  <enabled>
-                    <defaultValue>true</defaultValue>
-                    <internalDynamicColumn encoding="dynamic"/>
-                  </enabled>
-                  <joints>
-                    <defaultValue/>
-                    <internalDynamicColumn encoding="dynamic"/>
-                  </joints>
-                  <miterLimit>
-                    <defaultValue>3</defaultValue>
-                    <internalDynamicColumn encoding="dynamic"/>
-                  </miterLimit>
-                  <pixelHinting>
-                    <defaultValue>false</defaultValue>
-                    <internalDynamicColumn encoding="dynamic"/>
-                  </pixelHinting>
-                  <scaleMode>
-                    <defaultValue>normal</defaultValue>
-                    <internalDynamicColumn encoding="dynamic"/>
-                  </scaleMode>
-                  <weight>
-                    <defaultValue>1</defaultValue>
-                    <internalDynamicColumn encoding="dynamic"/>
-                  </weight>
-                </lineStyle>
-                <maxColumns>1</maxColumns>
-                <shapeSize>12</shapeSize>
-              </BarChartLegendPlotter>
-            </plotter>
-            <probeFilter encoding="dynamic">
-              <GlobalObjectReference name="defaultProbeKeySet"/>
-            </probeFilter>
-            <selectionFilter encoding="dynamic">
-              <GlobalObjectReference name="defaultSelectionKeySet"/>
-            </selectionFilter>
-            <subsetFilter encoding="dynamic">
-              <GlobalObjectReference name="defaultSubsetKeyFilter"/>
-            </subsetFilter>
-            <useTextBitmapFilters>false</useTextBitmapFilters>
-          </SelectablePlotLayer>
-          <SelectablePlotLayer name="color legend">
-            <backgroundIsVisible>true</backgroundIsVisible>
-            <layerIsSelectable>true</layerIsSelectable>
-            <layerIsVisible>false</layerIsVisible>
-            <maxVisibleScale>Infinity</maxVisibleScale>
-            <minVisibleScale>0</minVisibleScale>
-            <plotter encoding="dynamic">
-              <ColorBinLegendPlotter>
-                <ascendingOrder>false</ascendingOrder>
-                <dynamicColorColumn encoding="dynamic">
-                  <GlobalObjectReference name="defaultColorColumn"/>
-                </dynamicColorColumn>
-                <itemLabelFunction>string</itemLabelFunction>
-                <keySet>
-                  <keyFilter encoding="dynamic">
-                    <GlobalObjectReference name="defaultSubsetKeyFilter"/>
-                  </keyFilter>
-                </keySet>
-                <legendTitleFunction>string</legendTitleFunction>
-                <lineStyle>
-                  <alpha>
-                    <defaultValue>0.5</defaultValue>
-                    <internalDynamicColumn encoding="dynamic"/>
-                  </alpha>
-                  <caps>
-                    <defaultValue/>
-                    <internalDynamicColumn encoding="dynamic"/>
-                  </caps>
-                  <color>
-                    <defaultValue>0</defaultValue>
-                    <internalDynamicColumn encoding="dynamic"/>
-                  </color>
-                  <enabled>
-                    <defaultValue>true</defaultValue>
-                    <internalDynamicColumn encoding="dynamic"/>
-                  </enabled>
-                  <joints>
-                    <defaultValue/>
-                    <internalDynamicColumn encoding="dynamic"/>
-                  </joints>
-                  <miterLimit>
-                    <defaultValue>3</defaultValue>
-                    <internalDynamicColumn encoding="dynamic"/>
-                  </miterLimit>
-                  <pixelHinting>
-                    <defaultValue>false</defaultValue>
-                    <internalDynamicColumn encoding="dynamic"/>
-                  </pixelHinting>
-                  <scaleMode>
-                    <defaultValue>normal</defaultValue>
-                    <internalDynamicColumn encoding="dynamic"/>
-                  </scaleMode>
-                  <weight>
-                    <defaultValue>1</defaultValue>
-                    <internalDynamicColumn encoding="dynamic"/>
-                  </weight>
-                </lineStyle>
-                <maxColumns>1</maxColumns>
-                <shapeSize>20</shapeSize>
-              </ColorBinLegendPlotter>
-            </plotter>
-            <probeFilter encoding="dynamic">
-              <GlobalObjectReference name="defaultProbeKeySet"/>
-            </probeFilter>
-            <selectionFilter encoding="dynamic">
-              <GlobalObjectReference name="defaultSelectionKeySet"/>
-            </selectionFilter>
-            <subsetFilter encoding="dynamic">
-              <GlobalObjectReference name="defaultSubsetKeyFilter"/>
-            </subsetFilter>
-            <useTextBitmapFilters>true</useTextBitmapFilters>
-          </SelectablePlotLayer>
-        </layers>
-        <marginBottom>2</marginBottom>
-        <marginLeft>5</marginLeft>
-        <marginRight>5</marginRight>
-        <marginTop>0</marginTop>
-        <maxZoomLevel>16</maxZoomLevel>
-        <minScreenSize>128</minScreenSize>
-        <minZoomLevel>0</minZoomLevel>
-        <overrideXMax>NaN</overrideXMax>
-        <overrideXMin>NaN</overrideXMin>
-        <overrideYMax>NaN</overrideYMax>
-        <overrideYMin>NaN</overrideYMin>
-        <zoomBounds>
-          <xMax>1</xMax>
-          <xMin>0</xMin>
-          <yMax>1</yMax>
-          <yMin>0</yMin>
-        </zoomBounds>
+                          </category>
+                        </hierarchy>
+                      </hierarchyPath>
+                    </HierarchyColumnReference>
+                  </dynamicColumnReference>
+                </ReferencedColumn>
+              </columns>
+              <filteredKeySet>
+                <keyFilter encoding="dynamic">
+                  <GlobalObjectReference name="defaultSubsetKeyFilter"/>
+                </keyFilter>
+              </filteredKeySet>
+              <itemLabelFunction>string</itemLabelFunction>
+              <legendTitleFunction>string</legendTitleFunction>
+              <lineStyle>
+                <alpha>
+                  <defaultValue>0.5</defaultValue>
+                  <internalDynamicColumn encoding="dynamic"/>
+                </alpha>
+                <caps>
+                  <defaultValue/>
+                  <internalDynamicColumn encoding="dynamic"/>
+                </caps>
+                <color>
+                  <defaultValue>0</defaultValue>
+                  <internalDynamicColumn encoding="dynamic"/>
+                </color>
+                <enabled>
+                  <defaultValue>true</defaultValue>
+                  <internalDynamicColumn encoding="dynamic"/>
+                </enabled>
+                <joints>
+                  <defaultValue/>
+                  <internalDynamicColumn encoding="dynamic"/>
+                </joints>
+                <miterLimit>
+                  <defaultValue>3</defaultValue>
+                  <internalDynamicColumn encoding="dynamic"/>
+                </miterLimit>
+                <pixelHinting>
+                  <defaultValue>false</defaultValue>
+                  <internalDynamicColumn encoding="dynamic"/>
+                </pixelHinting>
+                <scaleMode>
+                  <defaultValue>normal</defaultValue>
+                  <internalDynamicColumn encoding="dynamic"/>
+                </scaleMode>
+                <weight>
+                  <defaultValue>1</defaultValue>
+                  <internalDynamicColumn encoding="dynamic">
+                    <NormalizedColumn>
+                      <internalDynamicColumn encoding="dynamic"/>
+                      <max>5</max>
+                      <min>1</min>
+                    </NormalizedColumn>
+                  </internalDynamicColumn>
+                </weight>
+              </lineStyle>
+              <maxColumns>1</maxColumns>
+              <shapeSize>12</shapeSize>
+            </BarChartLegendPlotter>
+            <ColorBinLegendPlotter name="color legend">
+              <ascendingOrder>false</ascendingOrder>
+              <dynamicColorColumn encoding="dynamic">
+                <GlobalObjectReference name="defaultColorColumn"/>
+              </dynamicColorColumn>
+              <filteredKeySet>
+                <keyFilter encoding="dynamic">
+                  <GlobalObjectReference name="defaultSubsetKeyFilter"/>
+                </keyFilter>
+              </filteredKeySet>
+              <itemLabelFunction>string</itemLabelFunction>
+              <legendTitleFunction>string</legendTitleFunction>
+              <lineStyle>
+                <alpha>
+                  <defaultValue>0.5</defaultValue>
+                  <internalDynamicColumn encoding="dynamic"/>
+                </alpha>
+                <caps>
+                  <defaultValue/>
+                  <internalDynamicColumn encoding="dynamic"/>
+                </caps>
+                <color>
+                  <defaultValue>0</defaultValue>
+                  <internalDynamicColumn encoding="dynamic"/>
+                </color>
+                <enabled>
+                  <defaultValue>true</defaultValue>
+                  <internalDynamicColumn encoding="dynamic"/>
+                </enabled>
+                <joints>
+                  <defaultValue/>
+                  <internalDynamicColumn encoding="dynamic"/>
+                </joints>
+                <miterLimit>
+                  <defaultValue>3</defaultValue>
+                  <internalDynamicColumn encoding="dynamic"/>
+                </miterLimit>
+                <pixelHinting>
+                  <defaultValue>false</defaultValue>
+                  <internalDynamicColumn encoding="dynamic"/>
+                </pixelHinting>
+                <scaleMode>
+                  <defaultValue>normal</defaultValue>
+                  <internalDynamicColumn encoding="dynamic"/>
+                </scaleMode>
+                <weight>
+                  <defaultValue>1</defaultValue>
+                  <internalDynamicColumn encoding="dynamic">
+                    <NormalizedColumn>
+                      <internalDynamicColumn encoding="dynamic"/>
+                      <max>5</max>
+                      <min>1</min>
+                    </NormalizedColumn>
+                  </internalDynamicColumn>
+                </weight>
+              </lineStyle>
+              <maxColumns>1</maxColumns>
+              <shapeSize>20</shapeSize>
+              <shapeType>circle</shapeType>
+            </ColorBinLegendPlotter>
+          </plotters>
+          <zoomBounds>
+            <xMax>1</xMax>
+            <xMin>0</xMin>
+            <yMax>1</yMax>
+            <yMin>0</yMin>
+          </zoomBounds>
+        </plotManager>
+        <zoomFactor>2</zoomFactor>
       </SimpleInteractiveVisualization>
     </children>
     <closeable>true</closeable>
-    <draggable>true</draggable>
     <dynamicBarChartTool encoding="dynamic">
       <GlobalObjectReference name="CompoundBarChartTool"/>
     </dynamicBarChartTool>
     <enableBorders>false</enableBorders>
+    <enableMoveResize>true</enableMoveResize>
+    <enableSubMenu>false</enableSubMenu>
     <enableTitle>false</enableTitle>
+    <enableZOrder>true</enableZOrder>
     <maximizable>true</maximizable>
     <maximized>false</maximized>
     <minimizable>true</minimizable>
     <minimized>false</minimized>
     <panelBackgroundColor>NaN</panelBackgroundColor>
     <panelBorderColor>NaN</panelBorderColor>
-    <panelHeight>16%</panelHeight>
+    <panelHeight>19%</panelHeight>
     <panelStyleList/>
     <panelTitle/>
     <panelWidth>100%</panelWidth>
     <panelX>0%</panelX>
-    <panelY>84%</panelY>
-    <pinnable>true</pinnable>
-    <pinnableToBack>false</pinnableToBack>
-    <pinned>true</pinned>
-    <pinnedToBack>false</pinnedToBack>
-    <resizeable>true</resizeable>
+    <panelY>81%</panelY>
+    <zOrder>1</zOrder>
   </BarChartLegendTool>
 </Weave>
