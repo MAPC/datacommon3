@@ -97,8 +97,7 @@
       <color>16777215</color>
       <strength>10</strength>
     </probeInnerGlow>
-    <probeLineFormatter>str = replace(lpad(string, 2, "	"), "	", "  ");
-str</probeLineFormatter>
+    <probeLineFormatter>str = replace(lpad(string, 2, "	"), "	", "  ");str</probeLineFormatter>
     <probeOuterGlow>
       <alpha>1</alpha>
       <blurX>3</blurX>
@@ -354,36 +353,36 @@ wheel</zoom>
           <category name="Average Weekly Wages by Sector (Municipal)" title="Average Weekly Wages by Sector, by Municipality 2001-2010 (Municipal)" source="MA EOLWD ES-202, 2011" subject="Economy"/>
           <category name="Average Weekly Wages by Sector by Year (Municipal)" title="Average Weekly Wages by Sector, by Year 2001-2010 (Municipal)" source="MA EOLWD ES-202, 2011" subject="Economy"/>
           <category title="Employment By Sector, Place of Work, 2013 (Municipal)" source="MA EOLWD ES-202" weaveEntityId="29861" subject="Economy">
-            <attribute dataType="number" title="Municipal ID" weaveEntityId="29863" keyType="MUNI_ID"/>
-            <attribute dataType="string" title="Municipality" weaveEntityId="29864" keyType="MUNI_ID"/>
-            <attribute dataType="number" title="Year" weaveEntityId="29865" keyType="MUNI_ID"/>
-            <attribute dataType="number" title="All Industries" weaveEntityId="29866" keyType="MUNI_ID"/>
-            <attribute dataType="number" title="Goods Producing" weaveEntityId="29867" keyType="MUNI_ID"/>
-            <attribute dataType="number" title="% Goods Producing" weaveEntityId="29868" keyType="MUNI_ID"/>
-            <attribute dataType="number" title="Natural Resources and Mining" weaveEntityId="29869" keyType="MUNI_ID"/>
-            <attribute dataType="number" title="% Natural Resources and Mining" weaveEntityId="29870" keyType="MUNI_ID"/>
-            <attribute dataType="number" title="Construction" weaveEntityId="29871" keyType="MUNI_ID"/>
-            <attribute dataType="number" title="% Construction" weaveEntityId="29872" keyType="MUNI_ID"/>
-            <attribute dataType="number" title="Manufacturing" weaveEntityId="29873" keyType="MUNI_ID"/>
-            <attribute dataType="number" title="% Manufacturing" weaveEntityId="29874" keyType="MUNI_ID"/>
-            <attribute dataType="number" title="Service" weaveEntityId="29875" keyType="MUNI_ID"/>
-            <attribute dataType="number" title="% Service" weaveEntityId="29876" keyType="MUNI_ID"/>
-            <attribute dataType="number" title="Trade, Transportation and Utilities" weaveEntityId="29877" keyType="MUNI_ID"/>
-            <attribute dataType="number" title="% Trade, Transportation and Utilities" weaveEntityId="29878" keyType="MUNI_ID"/>
-            <attribute dataType="number" title="Information" weaveEntityId="29879" keyType="MUNI_ID"/>
-            <attribute dataType="number" title="% Information" weaveEntityId="29880" keyType="MUNI_ID"/>
-            <attribute dataType="number" title="Financial" weaveEntityId="29881" keyType="MUNI_ID"/>
-            <attribute dataType="number" title="% Financial" weaveEntityId="29882" keyType="MUNI_ID"/>
-            <attribute dataType="number" title="Professional and Business Services" weaveEntityId="29883" keyType="MUNI_ID"/>
-            <attribute dataType="number" title="% Professional and Business Services" weaveEntityId="29884" keyType="MUNI_ID"/>
-            <attribute dataType="number" title="Education and Health Services" weaveEntityId="29885" keyType="MUNI_ID"/>
-            <attribute dataType="number" title="% Education and Health Services" weaveEntityId="29886" keyType="MUNI_ID"/>
-            <attribute dataType="number" title="Leisure and Hospitality" weaveEntityId="29887" keyType="MUNI_ID"/>
-            <attribute dataType="number" title="% Leisure and Hospitality" weaveEntityId="29888" keyType="MUNI_ID"/>
-            <attribute dataType="number" title="Other Services" weaveEntityId="29889" keyType="MUNI_ID"/>
-            <attribute dataType="number" title="% Other Services" weaveEntityId="29890" keyType="MUNI_ID"/>
-            <attribute dataType="number" title="Public Administration" weaveEntityId="29891" keyType="MUNI_ID"/>
-            <attribute dataType="number" title="% Public Administration" weaveEntityId="29892" keyType="MUNI_ID"/>
+            <attribute keyType="MUNI_ID" title="Municipal ID" dataType="number" weaveEntityId="29863"/>
+            <attribute keyType="MUNI_ID" title="Municipality" dataType="string" weaveEntityId="29864"/>
+            <attribute keyType="MUNI_ID" title="Year" dataType="number" weaveEntityId="29865"/>
+            <attribute keyType="MUNI_ID" title="All Industries" dataType="number" weaveEntityId="29866"/>
+            <attribute keyType="MUNI_ID" title="Goods Producing" dataType="number" weaveEntityId="29867"/>
+            <attribute keyType="MUNI_ID" title="% Goods Producing" dataType="number" weaveEntityId="29868"/>
+            <attribute keyType="MUNI_ID" title="Natural Resources and Mining" dataType="number" weaveEntityId="29869"/>
+            <attribute keyType="MUNI_ID" title="% Natural Resources and Mining" dataType="number" weaveEntityId="29870"/>
+            <attribute keyType="MUNI_ID" title="Construction" dataType="number" weaveEntityId="29871"/>
+            <attribute keyType="MUNI_ID" title="% Construction" dataType="number" weaveEntityId="29872"/>
+            <attribute keyType="MUNI_ID" title="Manufacturing" dataType="number" weaveEntityId="29873"/>
+            <attribute keyType="MUNI_ID" title="% Manufacturing" dataType="number" weaveEntityId="29874"/>
+            <attribute keyType="MUNI_ID" title="Service" dataType="number" weaveEntityId="29875"/>
+            <attribute keyType="MUNI_ID" title="% Service" dataType="number" weaveEntityId="29876"/>
+            <attribute keyType="MUNI_ID" title="Trade, Transportation and Utilities" dataType="number" weaveEntityId="29877"/>
+            <attribute keyType="MUNI_ID" title="% Trade, Transportation and Utilities" dataType="number" weaveEntityId="29878"/>
+            <attribute keyType="MUNI_ID" title="Information" dataType="number" weaveEntityId="29879"/>
+            <attribute keyType="MUNI_ID" title="% Information" dataType="number" weaveEntityId="29880"/>
+            <attribute keyType="MUNI_ID" title="Financial" dataType="number" weaveEntityId="29881"/>
+            <attribute keyType="MUNI_ID" title="% Financial" dataType="number" weaveEntityId="29882"/>
+            <attribute keyType="MUNI_ID" title="Professional and Business Services" dataType="number" weaveEntityId="29883"/>
+            <attribute keyType="MUNI_ID" title="% Professional and Business Services" dataType="number" weaveEntityId="29884"/>
+            <attribute keyType="MUNI_ID" title="Education and Health Services" dataType="number" weaveEntityId="29885"/>
+            <attribute keyType="MUNI_ID" title="% Education and Health Services" dataType="number" weaveEntityId="29886"/>
+            <attribute keyType="MUNI_ID" title="Leisure and Hospitality" dataType="number" weaveEntityId="29887"/>
+            <attribute keyType="MUNI_ID" title="% Leisure and Hospitality" dataType="number" weaveEntityId="29888"/>
+            <attribute keyType="MUNI_ID" title="Other Services" dataType="number" weaveEntityId="29889"/>
+            <attribute keyType="MUNI_ID" title="% Other Services" dataType="number" weaveEntityId="29890"/>
+            <attribute keyType="MUNI_ID" title="Public Administration" dataType="number" weaveEntityId="29891"/>
+            <attribute keyType="MUNI_ID" title="% Public Administration" dataType="number" weaveEntityId="29892"/>
           </category>
           <category title="Employment By Sector, Place of Work by Year (Municipal)" source="MA EOLWD ES-202" weaveEntityId="21726" subject="Economy"/>
           <category name="Employment Characteristics by Age, Race and Education, 5yr avg 2006-10 (Census Tracts)" title="Employment Characteristics by Age, Race and Education, 5yr avg 2006-10 (Census Tracts)" source="ACS" subject="Economy"/>
@@ -724,65 +723,65 @@ wheel</zoom>
           <category name="US States" title="US States" subject="Boundaries"/>
         </category>
         <category title="Spatial Geography for Maps" name="Geometry Collections">
-          <attribute name="MAPC Municipalities" dataType="geometry" title="MAPC Municipalities" keyType="MUNI_ID"/>
-          <attribute name="Massachusetts Municipalities" dataType="geometry" title="Massachusetts Municipalities" keyType="MUNI_ID"/>
-          <attribute name="1Km Grid" dataType="geometry" title="1Km Grid" keyType="Grid_1Km_ID"/>
-          <attribute name="Arts and Culture Points" dataType="geometry" title="Arts and Culture Points" keyType="Arts and Culture Points"/>
-          <attribute name="Bike and Pedestrian Facilities" dataType="geometry" title="Bike and Pedestrian Facilities" keyType="ObjectID"/>
-          <attribute name="Boston Circle of Promise Schools" dataType="geometry" title="Boston Circle of Promise Schools" keyType="SchoolID"/>
-          <attribute name="Boston Daycares" dataType="geometry" title="Boston Daycares" keyType="ObjectID"/>
-          <attribute name="Boston Neighborhoods" dataType="geometry" title="Boston Neighborhoods" keyType="ObjectID"/>
-          <attribute name="Boston Non-Profit Educational Assets (Points)" dataType="geometry" title="Boston Non-Profit Educational Assets (Points)" keyType="ObjectID"/>
-          <attribute name="Boston Outline" dataType="geometry" title="Boston Outline" keyType="MUNI_ID"/>
-          <attribute name="Boston Parcels (Subset)" dataType="geometry" title="Boston Parcels (Subset)" keyType="BostonParcelID"/>
-          <attribute name="Boston Planning Districts" dataType="geometry" title="Boston Planning Districts" keyType="Boston_Planning_Districts"/>
-          <attribute name="Boston Police Districts" dataType="geometry" title="Boston Police Districts" keyType="boston_police_districts_id"/>
-          <attribute name="Boston Precincts" dataType="geometry" title="Boston Precincts" keyType="Boston_Wards_Precincts"/>
-          <attribute name="Boston Schools" dataType="geometry" title="Boston Schools" keyType="SchoolID"/>
-          <attribute name="Boston Tech Centers" dataType="geometry" title="Boston Tech Centers" keyType="Boston_TechCenters"/>
-          <attribute name="Boston Turnaround Schools" dataType="geometry" title="Boston Turnaround Schools" keyType="SchoolID"/>
-          <attribute name="Census 2000 Block Groups" dataType="geometry" title="Census 2000 Block Groups" keyType="BG_00_ID"/>
-          <attribute name="Census 2000 Tracts" dataType="geometry" title="Census 2000 Tracts" keyType="CT_ID"/>
-          <attribute name="Census 2010 Block Groups" dataType="geometry" title="Census 2010 Block Groups" keyType="BG_10_ID"/>
-          <attribute name="Census 2010 Tracts" dataType="geometry" title="Census 2010 Tracts" keyType="ct10_id"/>
-          <attribute name="Child Care Providers with Less than High School" dataType="geometry" title="Child Care Providers with Less than High School" keyType="ObjectID"/>
-          <attribute name="Colleges and Universities" dataType="geometry" title="Colleges and Universities" keyType="College_ID"/>
-          <attribute name="Community Health Centers" dataType="geometry" title="Community Health Centers" keyType="chc_id"/>
-          <attribute name="Commuter Rail" dataType="geometry" title="Commuter Rail" keyType="Commuter Rail"/>
-          <attribute name="Commuter Rail Stations" dataType="geometry" title="Commuter Rail Stations" keyType="Commuter Rail Stations"/>
-          <attribute name="Environmental Justice Populations (Block Groups)" dataType="geometry" title="Environmental Justice Populations (Block Groups)" keyType="BG_00_ID"/>
-          <attribute name="Fairmount Commuter Line" dataType="geometry" title="Fairmount Commuter Line" keyType="ObjectID"/>
-          <attribute name="Green House Gas Emissions by Facility, 2010 (pts)" dataType="geometry" title="Green House Gas Emissions by Facility, 2010 (pts)" keyType="frs_id"/>
-          <attribute name="Hospitals" dataType="geometry" title="Hospitals" keyType="hospital_id"/>
-          <attribute name="Intel Clubhouses" dataType="geometry" title="Intel Clubhouses" keyType="Intel_Clubhouses"/>
-          <attribute name="LEED Certified Buildings (Points)" dataType="geometry" title="LEED Certified Buildings (Points)" keyType="LEED_ID"/>
-          <attribute name="Libraries" dataType="geometry" title="Libraries" keyType="LibraryID"/>
-          <attribute name="MA Counties" dataType="geometry" title="MA Counties" keyType="FIPS_ID"/>
-          <attribute name="MA House Legislative Districts (2012)" dataType="geometry" title="MA House Legislative Districts (2012)" keyType="MA_HOUSE12_ID"/>
-          <attribute projection="EPSG:26986" dataType="geometry" title="MA Regions (Polygons)" weaveEntityId="27968" keyType="MUNI_ID"/>
-          <attribute name="MA Senate Legislative Districts (2012)" dataType="geometry" title="MA Senate Legislative Districts (2012)" keyType="MA_SENATE12_ID"/>
-          <attribute name="Major Roads (MassDOT)" dataType="geometry" title="Major Roads (MassDOT)" keyType="ObjectID"/>
-          <attribute name="Major Routes (MassDOT)" dataType="geometry" title="Major Routes (MassDOT)" keyType="ObjectID"/>
-          <attribute name="MAPC Municipalities" dataType="geometry" title="MAPC Municipalities" keyType="MUNI_ID"/>
-          <attribute name="Mass in Motion Communities" dataType="geometry" title="Mass in Motion Communities" keyType="MUNI_ID"/>
-          <attribute name="Massachusetts Municipalities" dataType="geometry" title="Massachusetts Municipalities" keyType="MUNI_ID"/>
-          <attribute name="MBTA Subway Lines" dataType="geometry" title="MBTA Subway Lines" keyType="MBTA Subway Lines"/>
-          <attribute name="MBTA Subway Stops" dataType="geometry" title="MBTA Subway Stops" keyType="MBTA Subway Stops"/>
-          <attribute name="MetroFuture Region" dataType="geometry" title="MetroFuture Region" keyType="MUNI_ID"/>
-          <attribute name="Open Space" dataType="geometry" title="Open Space" keyType="OS_ID"/>
-          <attribute name="Police Stations" dataType="geometry" title="Police Stations" keyType="PoliceStations_id"/>
-          <attribute name="Protected Open Space" dataType="geometry" title="Protected Open Space" keyType="OS_ID"/>
-          <attribute projection="EPSG:26986" dataType="geometry" title="Regional Planning Agencies (RPAs)" weaveEntityId="27234" keyType="rpa_muni_id"/>
-          <attribute projection="EPSG:26986" dataType="geometry" title="RTA Bus Lines" weaveEntityId="26150" keyType="RTA_Bus_Lines"/>
-          <attribute name="School Districts" dataType="geometry" title="School Districts" keyType="SchoolDistrictID"/>
-          <attribute name="School Districts by Town" dataType="geometry" title="School Districts by Town" keyType="MUNI_ID"/>
-          <attribute name="Schools" dataType="geometry" title="Schools" keyType="SchoolID"/>
-          <attribute name="Success Boston Student Cohorts (2010)" dataType="geometry" title="Success Boston Student Cohorts (2010)" keyType="ObjectID"/>
-          <attribute name="Transit Oriented Development Stations" dataType="geometry" title="Transit Oriented Development Stations" keyType="TOD_Station"/>
-          <attribute name="Traffic Analysis Zones (TAZ) " dataType="geometry" title="Traffic Analysis Zones (TAZ) " keyType="TAZ_ID"/>
-          <attribute name="US Congressional Districts" dataType="geometry" title="US Congressional Districts" keyType="US_CONGRESS_ID"/>
-          <attribute name="US States" dataType="geometry" title="US States" keyType="Arts and Culture Points"/>
-          <attribute name="Water Bodies (100k Hydro)" dataType="geometry" title="Water Bodies (100k Hydro)" keyType="PALIS_ID"/>
+          <attribute keyType="MUNI_ID" name="MAPC Municipalities" dataType="geometry" title="MAPC Municipalities"/>
+          <attribute keyType="MUNI_ID" name="Massachusetts Municipalities" dataType="geometry" title="Massachusetts Municipalities"/>
+          <attribute keyType="Grid_1Km_ID" name="1Km Grid" dataType="geometry" title="1Km Grid"/>
+          <attribute keyType="Arts and Culture Points" name="Arts and Culture Points" dataType="geometry" title="Arts and Culture Points"/>
+          <attribute keyType="ObjectID" name="Bike and Pedestrian Facilities" dataType="geometry" title="Bike and Pedestrian Facilities"/>
+          <attribute keyType="SchoolID" name="Boston Circle of Promise Schools" dataType="geometry" title="Boston Circle of Promise Schools"/>
+          <attribute keyType="ObjectID" name="Boston Daycares" dataType="geometry" title="Boston Daycares"/>
+          <attribute keyType="ObjectID" name="Boston Neighborhoods" dataType="geometry" title="Boston Neighborhoods"/>
+          <attribute keyType="ObjectID" name="Boston Non-Profit Educational Assets (Points)" dataType="geometry" title="Boston Non-Profit Educational Assets (Points)"/>
+          <attribute keyType="MUNI_ID" name="Boston Outline" dataType="geometry" title="Boston Outline"/>
+          <attribute keyType="BostonParcelID" name="Boston Parcels (Subset)" dataType="geometry" title="Boston Parcels (Subset)"/>
+          <attribute keyType="Boston_Planning_Districts" name="Boston Planning Districts" dataType="geometry" title="Boston Planning Districts"/>
+          <attribute keyType="boston_police_districts_id" name="Boston Police Districts" dataType="geometry" title="Boston Police Districts"/>
+          <attribute keyType="Boston_Wards_Precincts" name="Boston Precincts" dataType="geometry" title="Boston Precincts"/>
+          <attribute keyType="SchoolID" name="Boston Schools" dataType="geometry" title="Boston Schools"/>
+          <attribute keyType="Boston_TechCenters" name="Boston Tech Centers" dataType="geometry" title="Boston Tech Centers"/>
+          <attribute keyType="SchoolID" name="Boston Turnaround Schools" dataType="geometry" title="Boston Turnaround Schools"/>
+          <attribute keyType="BG_00_ID" name="Census 2000 Block Groups" dataType="geometry" title="Census 2000 Block Groups"/>
+          <attribute keyType="CT_ID" name="Census 2000 Tracts" dataType="geometry" title="Census 2000 Tracts"/>
+          <attribute keyType="BG_10_ID" name="Census 2010 Block Groups" dataType="geometry" title="Census 2010 Block Groups"/>
+          <attribute keyType="ct10_id" name="Census 2010 Tracts" dataType="geometry" title="Census 2010 Tracts"/>
+          <attribute keyType="ObjectID" name="Child Care Providers with Less than High School" dataType="geometry" title="Child Care Providers with Less than High School"/>
+          <attribute keyType="College_ID" name="Colleges and Universities" dataType="geometry" title="Colleges and Universities"/>
+          <attribute keyType="chc_id" name="Community Health Centers" dataType="geometry" title="Community Health Centers"/>
+          <attribute keyType="Commuter Rail" name="Commuter Rail" dataType="geometry" title="Commuter Rail"/>
+          <attribute keyType="Commuter Rail Stations" name="Commuter Rail Stations" dataType="geometry" title="Commuter Rail Stations"/>
+          <attribute keyType="BG_00_ID" name="Environmental Justice Populations (Block Groups)" dataType="geometry" title="Environmental Justice Populations (Block Groups)"/>
+          <attribute keyType="ObjectID" name="Fairmount Commuter Line" dataType="geometry" title="Fairmount Commuter Line"/>
+          <attribute keyType="frs_id" name="Green House Gas Emissions by Facility, 2010 (pts)" dataType="geometry" title="Green House Gas Emissions by Facility, 2010 (pts)"/>
+          <attribute keyType="hospital_id" name="Hospitals" dataType="geometry" title="Hospitals"/>
+          <attribute keyType="Intel_Clubhouses" name="Intel Clubhouses" dataType="geometry" title="Intel Clubhouses"/>
+          <attribute keyType="LEED_ID" name="LEED Certified Buildings (Points)" dataType="geometry" title="LEED Certified Buildings (Points)"/>
+          <attribute keyType="LibraryID" name="Libraries" dataType="geometry" title="Libraries"/>
+          <attribute keyType="FIPS_ID" name="MA Counties" dataType="geometry" title="MA Counties"/>
+          <attribute keyType="MA_HOUSE12_ID" name="MA House Legislative Districts (2012)" dataType="geometry" title="MA House Legislative Districts (2012)"/>
+          <attribute keyType="MUNI_ID" dataType="geometry" projection="EPSG:26986" weaveEntityId="27968" title="MA Regions (Polygons)"/>
+          <attribute keyType="MA_SENATE12_ID" name="MA Senate Legislative Districts (2012)" dataType="geometry" title="MA Senate Legislative Districts (2012)"/>
+          <attribute keyType="ObjectID" name="Major Roads (MassDOT)" dataType="geometry" title="Major Roads (MassDOT)"/>
+          <attribute keyType="ObjectID" name="Major Routes (MassDOT)" dataType="geometry" title="Major Routes (MassDOT)"/>
+          <attribute keyType="MUNI_ID" name="MAPC Municipalities" dataType="geometry" title="MAPC Municipalities"/>
+          <attribute keyType="MUNI_ID" name="Mass in Motion Communities" dataType="geometry" title="Mass in Motion Communities"/>
+          <attribute keyType="MUNI_ID" name="Massachusetts Municipalities" dataType="geometry" title="Massachusetts Municipalities"/>
+          <attribute keyType="MBTA Subway Lines" name="MBTA Subway Lines" dataType="geometry" title="MBTA Subway Lines"/>
+          <attribute keyType="MBTA Subway Stops" name="MBTA Subway Stops" dataType="geometry" title="MBTA Subway Stops"/>
+          <attribute keyType="MUNI_ID" name="MetroFuture Region" dataType="geometry" title="MetroFuture Region"/>
+          <attribute keyType="OS_ID" name="Open Space" dataType="geometry" title="Open Space"/>
+          <attribute keyType="PoliceStations_id" name="Police Stations" dataType="geometry" title="Police Stations"/>
+          <attribute keyType="OS_ID" name="Protected Open Space" dataType="geometry" title="Protected Open Space"/>
+          <attribute keyType="rpa_muni_id" dataType="geometry" projection="EPSG:26986" weaveEntityId="27234" title="Regional Planning Agencies (RPAs)"/>
+          <attribute keyType="RTA_Bus_Lines" dataType="geometry" projection="EPSG:26986" weaveEntityId="26150" title="RTA Bus Lines"/>
+          <attribute keyType="SchoolDistrictID" name="School Districts" dataType="geometry" title="School Districts"/>
+          <attribute keyType="MUNI_ID" name="School Districts by Town" dataType="geometry" title="School Districts by Town"/>
+          <attribute keyType="SchoolID" name="Schools" dataType="geometry" title="Schools"/>
+          <attribute keyType="ObjectID" name="Success Boston Student Cohorts (2010)" dataType="geometry" title="Success Boston Student Cohorts (2010)"/>
+          <attribute keyType="TOD_Station" name="Transit Oriented Development Stations" dataType="geometry" title="Transit Oriented Development Stations"/>
+          <attribute keyType="TAZ_ID" name="Traffic Analysis Zones (TAZ) " dataType="geometry" title="Traffic Analysis Zones (TAZ) "/>
+          <attribute keyType="US_CONGRESS_ID" name="US Congressional Districts" dataType="geometry" title="US Congressional Districts"/>
+          <attribute keyType="Arts and Culture Points" name="US States" dataType="geometry" title="US States"/>
+          <attribute keyType="PALIS_ID" name="Water Bodies (100k Hydro)" dataType="geometry" title="Water Bodies (100k Hydro)"/>
         </category>
       </hierarchy>
     </attributeHierarchy>
@@ -799,7 +798,7 @@ wheel</zoom>
           <hierarchyPath encoding="xml">
             <hierarchy title="Employment by Sector 2013 - Transposed">
               <category title="Transposed columns">
-                <attribute All_ind="13,558" title="{{ regionalunit.name }}" TransposedDataSource_recordKey="MUNI_ID,{{ regionalunit.unitid }}"/>
+                <attribute title="{{ regionalunit.name }}" TransposedDataSource_recordKey="MUNI_ID,{{ regionalunit.unitid }}"/>
               </category>
             </hierarchy>
           </hierarchyPath>
@@ -831,7 +830,7 @@ wheel</zoom>
               <hierarchy>
                 <category title="Economy" name="Data Tables">
                   <category title="Employment By Sector, Place of Work, 2013 (Municipal)" source="MA EOLWD ES-202" weaveEntityId="29861" subject="Economy">
-                    <attribute dataType="number" title="Municipal ID" weaveEntityId="29863" keyType="MUNI_ID"/>
+                    <attribute keyType="MUNI_ID" title="Municipal ID" weaveEntityId="29863" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -847,7 +846,7 @@ wheel</zoom>
               <hierarchy>
                 <category title="Economy" name="Data Tables">
                   <category title="Employment By Sector, Place of Work, 2013 (Municipal)" source="MA EOLWD ES-202" weaveEntityId="29861" subject="Economy">
-                    <attribute dataType="string" title="Municipality" weaveEntityId="29864" keyType="MUNI_ID"/>
+                    <attribute keyType="MUNI_ID" title="Municipality" weaveEntityId="29864" dataType="string"/>
                   </category>
                 </category>
               </hierarchy>
@@ -863,7 +862,7 @@ wheel</zoom>
               <hierarchy>
                 <category title="Economy" name="Data Tables">
                   <category title="Employment By Sector, Place of Work, 2013 (Municipal)" source="MA EOLWD ES-202" weaveEntityId="29861" subject="Economy">
-                    <attribute dataType="number" title="Year" weaveEntityId="29865" keyType="MUNI_ID"/>
+                    <attribute keyType="MUNI_ID" title="Year" weaveEntityId="29865" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -879,7 +878,7 @@ wheel</zoom>
               <hierarchy>
                 <category title="Economy" name="Data Tables">
                   <category title="Employment By Sector, Place of Work, 2013 (Municipal)" source="MA EOLWD ES-202" weaveEntityId="29861" subject="Economy">
-                    <attribute dataType="number" title="All Industries" weaveEntityId="29866" keyType="MUNI_ID"/>
+                    <attribute keyType="MUNI_ID" title="All Industries" weaveEntityId="29866" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -895,7 +894,7 @@ wheel</zoom>
               <hierarchy>
                 <category title="Economy" name="Data Tables">
                   <category title="Employment By Sector, Place of Work, 2013 (Municipal)" source="MA EOLWD ES-202" weaveEntityId="29861" subject="Economy">
-                    <attribute dataType="number" title="Goods Producing" weaveEntityId="29867" keyType="MUNI_ID"/>
+                    <attribute keyType="MUNI_ID" title="Goods Producing" weaveEntityId="29867" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -911,7 +910,7 @@ wheel</zoom>
               <hierarchy>
                 <category title="Economy" name="Data Tables">
                   <category title="Employment By Sector, Place of Work, 2013 (Municipal)" source="MA EOLWD ES-202" weaveEntityId="29861" subject="Economy">
-                    <attribute dataType="number" title="% Goods Producing" weaveEntityId="29868" keyType="MUNI_ID"/>
+                    <attribute keyType="MUNI_ID" title="% Goods Producing" weaveEntityId="29868" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -927,7 +926,7 @@ wheel</zoom>
               <hierarchy>
                 <category title="Economy" name="Data Tables">
                   <category title="Employment By Sector, Place of Work, 2013 (Municipal)" source="MA EOLWD ES-202" weaveEntityId="29861" subject="Economy">
-                    <attribute dataType="number" title="Natural Resources and Mining" weaveEntityId="29869" keyType="MUNI_ID"/>
+                    <attribute keyType="MUNI_ID" title="Natural Resources and Mining" weaveEntityId="29869" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -943,7 +942,7 @@ wheel</zoom>
               <hierarchy>
                 <category title="Economy" name="Data Tables">
                   <category title="Employment By Sector, Place of Work, 2013 (Municipal)" source="MA EOLWD ES-202" weaveEntityId="29861" subject="Economy">
-                    <attribute dataType="number" title="% Natural Resources and Mining" weaveEntityId="29870" keyType="MUNI_ID"/>
+                    <attribute keyType="MUNI_ID" title="% Natural Resources and Mining" weaveEntityId="29870" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -959,7 +958,7 @@ wheel</zoom>
               <hierarchy>
                 <category title="Economy" name="Data Tables">
                   <category title="Employment By Sector, Place of Work, 2013 (Municipal)" source="MA EOLWD ES-202" weaveEntityId="29861" subject="Economy">
-                    <attribute dataType="number" title="Construction" weaveEntityId="29871" keyType="MUNI_ID"/>
+                    <attribute keyType="MUNI_ID" title="Construction" weaveEntityId="29871" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -975,7 +974,7 @@ wheel</zoom>
               <hierarchy>
                 <category title="Economy" name="Data Tables">
                   <category title="Employment By Sector, Place of Work, 2013 (Municipal)" source="MA EOLWD ES-202" weaveEntityId="29861" subject="Economy">
-                    <attribute dataType="number" title="% Construction" weaveEntityId="29872" keyType="MUNI_ID"/>
+                    <attribute keyType="MUNI_ID" title="% Construction" weaveEntityId="29872" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -991,7 +990,7 @@ wheel</zoom>
               <hierarchy>
                 <category title="Economy" name="Data Tables">
                   <category title="Employment By Sector, Place of Work, 2013 (Municipal)" source="MA EOLWD ES-202" weaveEntityId="29861" subject="Economy">
-                    <attribute dataType="number" title="Manufacturing" weaveEntityId="29873" keyType="MUNI_ID"/>
+                    <attribute keyType="MUNI_ID" title="Manufacturing" weaveEntityId="29873" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -1007,7 +1006,7 @@ wheel</zoom>
               <hierarchy>
                 <category title="Economy" name="Data Tables">
                   <category title="Employment By Sector, Place of Work, 2013 (Municipal)" source="MA EOLWD ES-202" weaveEntityId="29861" subject="Economy">
-                    <attribute dataType="number" title="% Manufacturing" weaveEntityId="29874" keyType="MUNI_ID"/>
+                    <attribute keyType="MUNI_ID" title="% Manufacturing" weaveEntityId="29874" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -1023,7 +1022,7 @@ wheel</zoom>
               <hierarchy>
                 <category title="Economy" name="Data Tables">
                   <category title="Employment By Sector, Place of Work, 2013 (Municipal)" source="MA EOLWD ES-202" weaveEntityId="29861" subject="Economy">
-                    <attribute dataType="number" title="Service" weaveEntityId="29875" keyType="MUNI_ID"/>
+                    <attribute keyType="MUNI_ID" title="Service" weaveEntityId="29875" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -1039,7 +1038,7 @@ wheel</zoom>
               <hierarchy>
                 <category title="Economy" name="Data Tables">
                   <category title="Employment By Sector, Place of Work, 2013 (Municipal)" source="MA EOLWD ES-202" weaveEntityId="29861" subject="Economy">
-                    <attribute dataType="number" title="% Service" weaveEntityId="29876" keyType="MUNI_ID"/>
+                    <attribute keyType="MUNI_ID" title="% Service" weaveEntityId="29876" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -1055,7 +1054,7 @@ wheel</zoom>
               <hierarchy>
                 <category title="Economy" name="Data Tables">
                   <category title="Employment By Sector, Place of Work, 2013 (Municipal)" source="MA EOLWD ES-202" weaveEntityId="29861" subject="Economy">
-                    <attribute dataType="number" title="Trade, Transportation and Utilities" weaveEntityId="29877" keyType="MUNI_ID"/>
+                    <attribute keyType="MUNI_ID" title="Trade, Transportation and Utilities" weaveEntityId="29877" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -1071,7 +1070,7 @@ wheel</zoom>
               <hierarchy>
                 <category title="Economy" name="Data Tables">
                   <category title="Employment By Sector, Place of Work, 2013 (Municipal)" source="MA EOLWD ES-202" weaveEntityId="29861" subject="Economy">
-                    <attribute dataType="number" title="% Trade, Transportation and Utilities" weaveEntityId="29878" keyType="MUNI_ID"/>
+                    <attribute keyType="MUNI_ID" title="% Trade, Transportation and Utilities" weaveEntityId="29878" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -1087,7 +1086,7 @@ wheel</zoom>
               <hierarchy>
                 <category title="Economy" name="Data Tables">
                   <category title="Employment By Sector, Place of Work, 2013 (Municipal)" source="MA EOLWD ES-202" weaveEntityId="29861" subject="Economy">
-                    <attribute dataType="number" title="Information" weaveEntityId="29879" keyType="MUNI_ID"/>
+                    <attribute keyType="MUNI_ID" title="Information" weaveEntityId="29879" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -1103,7 +1102,7 @@ wheel</zoom>
               <hierarchy>
                 <category title="Economy" name="Data Tables">
                   <category title="Employment By Sector, Place of Work, 2013 (Municipal)" source="MA EOLWD ES-202" weaveEntityId="29861" subject="Economy">
-                    <attribute dataType="number" title="% Information" weaveEntityId="29880" keyType="MUNI_ID"/>
+                    <attribute keyType="MUNI_ID" title="% Information" weaveEntityId="29880" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -1119,7 +1118,7 @@ wheel</zoom>
               <hierarchy>
                 <category title="Economy" name="Data Tables">
                   <category title="Employment By Sector, Place of Work, 2013 (Municipal)" source="MA EOLWD ES-202" weaveEntityId="29861" subject="Economy">
-                    <attribute dataType="number" title="Financial" weaveEntityId="29881" keyType="MUNI_ID"/>
+                    <attribute keyType="MUNI_ID" title="Financial" weaveEntityId="29881" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -1135,7 +1134,7 @@ wheel</zoom>
               <hierarchy>
                 <category title="Economy" name="Data Tables">
                   <category title="Employment By Sector, Place of Work, 2013 (Municipal)" source="MA EOLWD ES-202" weaveEntityId="29861" subject="Economy">
-                    <attribute dataType="number" title="% Financial" weaveEntityId="29882" keyType="MUNI_ID"/>
+                    <attribute keyType="MUNI_ID" title="% Financial" weaveEntityId="29882" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -1151,7 +1150,7 @@ wheel</zoom>
               <hierarchy>
                 <category title="Economy" name="Data Tables">
                   <category title="Employment By Sector, Place of Work, 2013 (Municipal)" source="MA EOLWD ES-202" weaveEntityId="29861" subject="Economy">
-                    <attribute dataType="number" title="Professional and Business Services" weaveEntityId="29883" keyType="MUNI_ID"/>
+                    <attribute keyType="MUNI_ID" title="Professional and Business Services" weaveEntityId="29883" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -1167,7 +1166,7 @@ wheel</zoom>
               <hierarchy>
                 <category title="Economy" name="Data Tables">
                   <category title="Employment By Sector, Place of Work, 2013 (Municipal)" source="MA EOLWD ES-202" weaveEntityId="29861" subject="Economy">
-                    <attribute dataType="number" title="% Professional and Business Services" weaveEntityId="29884" keyType="MUNI_ID"/>
+                    <attribute keyType="MUNI_ID" title="% Professional and Business Services" weaveEntityId="29884" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -1183,7 +1182,7 @@ wheel</zoom>
               <hierarchy>
                 <category title="Economy" name="Data Tables">
                   <category title="Employment By Sector, Place of Work, 2013 (Municipal)" source="MA EOLWD ES-202" weaveEntityId="29861" subject="Economy">
-                    <attribute dataType="number" title="Education and Health Services" weaveEntityId="29885" keyType="MUNI_ID"/>
+                    <attribute keyType="MUNI_ID" title="Education and Health Services" weaveEntityId="29885" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -1199,7 +1198,7 @@ wheel</zoom>
               <hierarchy>
                 <category title="Economy" name="Data Tables">
                   <category title="Employment By Sector, Place of Work, 2013 (Municipal)" source="MA EOLWD ES-202" weaveEntityId="29861" subject="Economy">
-                    <attribute dataType="number" title="% Education and Health Services" weaveEntityId="29886" keyType="MUNI_ID"/>
+                    <attribute keyType="MUNI_ID" title="% Education and Health Services" weaveEntityId="29886" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -1215,7 +1214,7 @@ wheel</zoom>
               <hierarchy>
                 <category title="Economy" name="Data Tables">
                   <category title="Employment By Sector, Place of Work, 2013 (Municipal)" source="MA EOLWD ES-202" weaveEntityId="29861" subject="Economy">
-                    <attribute dataType="number" title="Leisure and Hospitality" weaveEntityId="29887" keyType="MUNI_ID"/>
+                    <attribute keyType="MUNI_ID" title="Leisure and Hospitality" weaveEntityId="29887" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -1231,7 +1230,7 @@ wheel</zoom>
               <hierarchy>
                 <category title="Economy" name="Data Tables">
                   <category title="Employment By Sector, Place of Work, 2013 (Municipal)" source="MA EOLWD ES-202" weaveEntityId="29861" subject="Economy">
-                    <attribute dataType="number" title="% Leisure and Hospitality" weaveEntityId="29888" keyType="MUNI_ID"/>
+                    <attribute keyType="MUNI_ID" title="% Leisure and Hospitality" weaveEntityId="29888" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -1247,7 +1246,7 @@ wheel</zoom>
               <hierarchy>
                 <category title="Economy" name="Data Tables">
                   <category title="Employment By Sector, Place of Work, 2013 (Municipal)" source="MA EOLWD ES-202" weaveEntityId="29861" subject="Economy">
-                    <attribute dataType="number" title="Other Services" weaveEntityId="29889" keyType="MUNI_ID"/>
+                    <attribute keyType="MUNI_ID" title="Other Services" weaveEntityId="29889" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -1263,7 +1262,7 @@ wheel</zoom>
               <hierarchy>
                 <category title="Economy" name="Data Tables">
                   <category title="Employment By Sector, Place of Work, 2013 (Municipal)" source="MA EOLWD ES-202" weaveEntityId="29861" subject="Economy">
-                    <attribute dataType="number" title="% Other Services" weaveEntityId="29890" keyType="MUNI_ID"/>
+                    <attribute keyType="MUNI_ID" title="% Other Services" weaveEntityId="29890" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -1279,7 +1278,7 @@ wheel</zoom>
               <hierarchy>
                 <category title="Economy" name="Data Tables">
                   <category title="Employment By Sector, Place of Work, 2013 (Municipal)" source="MA EOLWD ES-202" weaveEntityId="29861" subject="Economy">
-                    <attribute dataType="number" title="Public Administration" weaveEntityId="29891" keyType="MUNI_ID"/>
+                    <attribute keyType="MUNI_ID" title="Public Administration" weaveEntityId="29891" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -1295,7 +1294,7 @@ wheel</zoom>
               <hierarchy>
                 <category title="Economy" name="Data Tables">
                   <category title="Employment By Sector, Place of Work, 2013 (Municipal)" source="MA EOLWD ES-202" weaveEntityId="29861" subject="Economy">
-                    <attribute dataType="number" title="% Public Administration" weaveEntityId="29892" keyType="MUNI_ID"/>
+                    <attribute keyType="MUNI_ID" title="% Public Administration" weaveEntityId="29892" dataType="number"/>
                   </category>
                 </category>
               </hierarchy>
@@ -1318,23 +1317,7 @@ wheel</zoom>
               <hierarchy>
                 <category title="Economy" name="Data Tables">
                   <category title="Employment By Sector, Place of Work, 2013 (Municipal)" source="MA EOLWD ES-202" weaveEntityId="29861" subject="Economy">
-                    <attribute dataType="string" title="Municipality" weaveEntityId="29864" keyType="MUNI_ID"/>
-                  </category>
-                </category>
-              </hierarchy>
-            </hierarchyPath>
-          </HierarchyColumnReference>
-        </dynamicColumnReference>
-      </ReferencedColumn>
-      <ReferencedColumn name="All_ind">
-        <dynamicColumnReference encoding="dynamic">
-          <HierarchyColumnReference>
-            <dataSourceName>MetroBoston DataCommon</dataSourceName>
-            <hierarchyPath encoding="xml">
-              <hierarchy>
-                <category title="Economy" name="Data Tables">
-                  <category title="Employment By Sector, Place of Work, 2013 (Municipal)" source="MA EOLWD ES-202" weaveEntityId="29861" subject="Economy">
-                    <attribute dataType="number" title="All Industries" weaveEntityId="29866" keyType="MUNI_ID"/>
+                    <attribute keyType="MUNI_ID" title="Municipality" weaveEntityId="29864" dataType="string"/>
                   </category>
                 </category>
               </hierarchy>
@@ -1565,9 +1548,7 @@ wheel</zoom>
                 </keyFilter>
               </filteredKeySet>
               <forceTickCount>false</forceTickCount>
-              <labelFunction>function (number, string) {
-	return string;
-}</labelFunction>
+              <labelFunction>function (number, string) {	return string;}</labelFunction>
               <labelHorizontalAlign>right</labelHorizontalAlign>
               <labelNumberFormatter>
                 <decimalSeparatorFrom>.</decimalSeparatorFrom>
@@ -1594,12 +1575,12 @@ wheel</zoom>
               <axisLabelRelativeAngle>0</axisLabelRelativeAngle>
               <axisLabelVerticalDistance>0</axisLabelVerticalDistance>
               <axisLineDataBounds>
-                <xMax>26.67</xMax>
+                <xMax>47.62</xMax>
                 <xMin>0</xMin>
                 <yMax>-0.5</yMax>
                 <yMin>-0.5</yMin>
               </axisLineDataBounds>
-              <axisLineMaxValue>26.67</axisLineMaxValue>
+              <axisLineMaxValue>47.62</axisLineMaxValue>
               <axisLineMinValue>0</axisLineMinValue>
               <filteredKeySet>
                 <keyFilter encoding="dynamic">
@@ -1607,9 +1588,7 @@ wheel</zoom>
                 </keyFilter>
               </filteredKeySet>
               <forceTickCount>false</forceTickCount>
-              <labelFunction>function (number, string) {
-	return string +'%';
-}</labelFunction>
+              <labelFunction>function (number, string) {	return string +'%';}</labelFunction>
               <labelHorizontalAlign>center</labelHorizontalAlign>
               <labelNumberFormatter>
                 <decimalSeparatorFrom>.</decimalSeparatorFrom>
@@ -1655,7 +1634,7 @@ wheel</zoom>
                       <hierarchyPath encoding="xml">
                         <hierarchy title="Employment by Sector 2013 - Transposed">
                           <category title="Transposed columns">
-                            <attribute All_ind="13,558" title="{{ regionalunit.name }}" TransposedDataSource_recordKey="MUNI_ID,{{ regionalunit.unitid }}"/>
+                            <attribute title="{{ regionalunit.name }}" TransposedDataSource_recordKey="MUNI_ID,{{ regionalunit.unitid }}"/>
                           </category>
                         </hierarchy>
                       </hierarchyPath>
@@ -1673,7 +1652,7 @@ wheel</zoom>
                       <hierarchyPath encoding="xml">
                         <hierarchy title="Employment by Sector 2013 - Transposed">
                           <category title="Transposed columns">
-                            <attribute All_ind="13,558" title="{{ regionalunit.name }}" TransposedDataSource_recordKey="MUNI_ID,{{ regionalunit.unitid }}"/>
+                            <attribute title="{{ regionalunit.name }}" TransposedDataSource_recordKey="MUNI_ID,{{ regionalunit.unitid }}"/>
                           </category>
                         </hierarchy>
                       </hierarchyPath>
@@ -1820,7 +1799,7 @@ wheel</zoom>
             </ProbeLinePlotter>
           </plotters>
           <zoomBounds>
-            <xMax>26.67</xMax>
+            <xMax>47.62</xMax>
             <xMin>0</xMin>
             <yMax>10.5</yMax>
             <yMin>-0.5</yMin>

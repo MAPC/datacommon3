@@ -7,6 +7,7 @@ class DynamicVisualization < ActiveRecord::Base
     association_foreign_key: :datasource_id
 
   has_and_belongs_to_many :issue_areas,
+    foreign_key: :visualization_id,
     join_table: :snapshots_visualization_topics,
     association_foreign_key: :topic_id
 
