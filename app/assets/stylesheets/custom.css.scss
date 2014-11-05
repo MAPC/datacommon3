@@ -175,7 +175,7 @@ a.dropdown-toggle {
   font-weight: 300;
 
   @media (max-width: 1200px) {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 
@@ -250,12 +250,14 @@ img.header-logo {
   margin-bottom: 10%;
   text-shadow: 0px 0px 4px #000 !important;
   height: 400px;
-  //overflow-y: scroll;//
+  @media (max-width: 700px) {
+    overflow-y: scroll;
+  }
   opacity: 1;
   p {
     font-family: $dc-body;
     font-weight: 400;
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
   a {
     // text-shadow: none;
@@ -446,13 +448,18 @@ table.metadata {
 
   td {
     text-align: left;
-    padding: 0 10px;
-    font-weight: 700;
+    padding: 5px 10px;
+    font-weight: 400;
+    font-size: 1.1em;
   }
   td:first-child {
     text-align: right;
-    font-weight: 400;
+    font-size: 1em;
   }
+}
+
+p.coverage {
+  line-height: 1em;
 }
 
 // MAP GALLERY //

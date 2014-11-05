@@ -1,7 +1,9 @@
 module ApplicationHelper
 
   def topics
-    @topics = IssueArea.all
+    topics = IssueArea.all.to_a
+    topics.pop
+    topics
   end
 
 
