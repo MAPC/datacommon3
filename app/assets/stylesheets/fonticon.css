@@ -2,14 +2,13 @@
 
 @font-face {
   font-family: "topics";
-  src:url("fonts/topics.eot");
-  src:url("fonts/topics.eot?#iefix") format("embedded-opentype"),
-    url("fonts/topics.woff") format("woff"),
-    url("fonts/topics.ttf") format("truetype"),
-    url("fonts/topics.svg#untitled-font-1") format("svg");
+  src: font-url("topics.eot");
+  src: font-url("topics.eot?#iefix") format("embedded-opentype"),
+       font-url("topics.woff")       format("woff"),
+       font-url("topics.ttf")        format("truetype"),
+       font-url("topics.svg#topics") format("svg");
   font-weight: normal;
   font-style: normal;
-
 }
 
 [data-icon]:before {
@@ -27,7 +26,7 @@
 
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
-  font-family: "untitled-font-1" !important;
+  font-family: "topics" !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;
@@ -38,42 +37,51 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-ma-massachusetts:before {
-  content: "a";
+.icon {
+  width:          40px;
+  height:         40px;
+  border-radius:  50%;
+  display:        inline-block;
+  font-size:      1.4em;
+  text-align:     center;
+  vertical-align: middle;
+  line-height:    53px;
+  margin-left:    20px;
 }
-.icon-artsculture:before {
+
+.icon-arts-culture:before {
+  content: "o";
+}
+.icon-civic-vitality:before {
+  content: "b";
+}
+.icon-demographics:before {
   content: "c";
 }
-.icon-civicvitality:before {
+.icon-economy:before {
   content: "d";
 }
-.icon-economy:before {
+.icon-education:before {
   content: "e";
 }
-.icon-education:before {
+.icon-environment-energy:before {
   content: "f";
 }
-.icon-environment:before {
+.icon-land-use-zoning:before {
   content: "g";
 }
 .icon-housing:before {
   content: "h";
 }
-.icon-landusezoning:before {
+.icon-public-health:before {
   content: "i";
 }
-.icon-publichealth:before {
+.icon-public-safety:before {
   content: "j";
 }
-.icon-publicsafety:before {
+.icon-technology:before {
   content: "k";
 }
-.icon-technology:before {
-  content: "l";
-}
 .icon-transportation:before {
-  content: "m";
-}
-.icon-demographics:before {
-  content: "b";
+  content: "l";
 }

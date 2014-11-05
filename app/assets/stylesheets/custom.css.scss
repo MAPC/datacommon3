@@ -7,82 +7,7 @@
 
 // TOPIC ICON STYLESHEET
 
-@charset "UTF-8";
-
-@font-face {
-  font-family: "topics";
-  src:url("fonts/topics.eot");
-  src:url("fonts/topics.eot?#iefix") format("embedded-opentype"),
-    url("fonts/topics.woff") format("woff"),
-    url("fonts/topics.ttf") format("truetype"),
-    url("fonts/topics.svg#topics") format("svg");
-  font-weight: normal;
-  font-style: normal;
-
-}
-
-[data-icon]:before {
-  font-family: "topics" !important;
-  content: attr(data-icon);
-  font-style: normal !important;
-  font-weight: normal !important;
-  font-variant: normal !important;
-  text-transform: none !important;
-  speak: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
-  font-family: "topics" !important;
-  font-style: normal !important;
-  font-weight: normal !important;
-  font-variant: normal !important;
-  text-transform: none !important;
-  speak: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-arts-culture:before {
-  content: "o";
-}
-.icon-civic-vitality:before {
-  content: "b";
-}
-.icon-demographics:before {
-  content: "c";
-}
-.icon-economy:before {
-  content: "d";
-}
-.icon-education:before {
-  content: "e";
-}
-.icon-environment-energy:before {
-  content: "f";
-}
-.icon-land-use-zoning:before {
-  content: "g";
-}
-.icon-housing:before {
-  content: "h";
-}
-.icon-public-health:before {
-  content: "i";
-}
-.icon-public-safety:before {
-  content: "j";
-}
-.icon-technology:before {
-  content: "k";
-}
-.icon-transportation:before {
-  content: "l";
-}
+@import "fonticon";
 
 // Topic colors (from Regional Indicators)
 
@@ -186,13 +111,6 @@ p.vis-title {
   font-size: 1.2em !important;
 }
 
-a.list-group-item {
-  font-family: rokkitt;
-  font-size: 1.2em;
-  text-align: left;
-  padding-top: 6.5px;
-}
-
 .beta {
   position: absolute;
   top:  15px;
@@ -222,9 +140,22 @@ a.list-group-item {
 //   overflow-wrap: none;
 // }
 
+
 a.dropdown-toggle {
   font-weight: 300;
   color: white !important;
+}
+
+.header-item {
+  margin-top: 15px;
+}
+
+.header-item a {
+  color: white !important;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
 .navbar {
@@ -398,73 +329,75 @@ div.col-md-3.col-md-offset-0.col-sm-8.col-sm-offset-2 {
   width: 300px;
 }
 
+
+
+a.list-group-item {
+  font-family: rokkitt;
+  font-size: 1.2em;
+  text-align: left;
+  padding-top: 6.5px;
+}
+
 div .list-group-item {
   border-color: transparent;
   display: inline-block;
+  padding-left: 5px;
 }
 
-div.icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      display: inline-block;
-      font-size: 1.2em;
-      text-align: center;
-      vertical-align: middle;
-      line-height: 40px;
-     }
-     .icon-demographics{
-     background-color: $demographics;
-      color: white;
-     }
-     .icon-arts-culture{
-      background-color: $arts-culture;
-      color: white;
-     }
-     .icon-civic-vitality{
-      background-color: $civic-vitality-governance;
-      color: white;
-     }
-     .icon-economy{
-      background-color: $economy;
-      color: white;
-     }
-     .icon-education{
-      background-color: $education;
-      color: white;
-     }
-     .icon-environment-energy{
-      background-color: $environment-energy;
-      color: white;
-     }
-     .icon-housing{
-      background-color: $housing;
-      color: white;
-     }
-     .icon-land-use-zoning{
-      background-color: $land-use-zoning;
-      color: white;
-     }
-     .icon-public-health{
-      background-color: $public-health;
-      color: white;
-     }
-     .icon-public-safety{
-      background-color: $public-safety;
-      color: white;
-     }
-     .icon-technology{
-      background-color: $technology;
-      color: white;
-     }
-     .icon-transportation{
-      background-color: $transportation;
-      color: white;
-     }
-     .icon-geographic-boundaries{
-      background-color: $geographic-boundaries;
-      color: white;
-     }
+
+
+.icon-demographics{
+  background-color: $demographics;
+  color: white;
+}
+.icon-arts-culture{
+  background-color: $arts-culture;
+  color: white;
+}
+.icon-civic-vitality{
+  background-color: $civic-vitality-governance;
+  color: white;
+}
+.icon-economy{
+  background-color: $economy;
+  color: white;
+}
+.icon-education{
+  background-color: $education;
+  color: white;
+}
+.icon-environment-energy{
+  background-color: $environment-energy;
+  color: white;
+}
+.icon-housing{
+  background-color: $housing;
+  color: white;
+}
+.icon-land-use-zoning{
+  background-color: $land-use-zoning;
+  color: white;
+}
+.icon-public-health{
+  background-color: $public-health;
+  color: white;
+}
+.icon-public-safety{
+  background-color: $public-safety;
+  color: white;
+}
+.icon-technology{
+  background-color: $technology;
+  color: white;
+}
+.icon-transportation{
+  background-color: $transportation;
+  color: white;
+}
+.icon-geographic-boundaries{
+  background-color: $geographic-boundaries;
+  color: white;
+}
 
 // VISUALIZATIONS, THUMBNAILS
 
@@ -530,8 +463,8 @@ div.col-md-2.col-md-offset-1.col-sm-3.col-sm-offset-1.col-xs-12.col-xs-offset-0.
 }
 
 div.static-map-preview img {
-  width: 360px;
-  height: 360px;
+  margin-top: 75px;
+  width: 550%;
 }
 
 div.col-xs-12.static-map-preview {
@@ -607,28 +540,37 @@ ul.none {
 
 // SNAPSHOTS
 
-.subregion {
+.snapshot.municipality {
+  position: relative;
+  height: 350px;
+  padding: 0 0 40px 0;
+  text-align: center;
+}
+.snapshot.subregion {
   width:  880px;
   height: 460px;
 }
 
-.municipality {
-  width:  335px;
-  height: 255px;
+p.sources {
+  margin-left: 30px;
+  text-align: left;
 }
+// img.snapshot-vis {
+//   width: 333px;
+//   height: 255px;
+//   padding-bottom: -5px;
+// }
 
-.area-summary {
-  padding: 20px 0;
-}
+// .snapshot-preview {
+//   margin: 20px 0px;
+//   padding: 0px;
+// }
 
-//div.static-map-preview {
-//  padding: 20px 0;
-//  img {
-//    padding:        20px 0;
-//    max-width:     200px;
-//    max-height:    200px;
-//  }
-//}
+// .snapshot-preview-title {
+//   font-size: 1.3em;
+//   margin-top: 30px;
+//   margin-bottom: 10px;
+// }
 
 
 ul.chosen-results {

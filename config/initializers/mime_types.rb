@@ -6,3 +6,4 @@
 Mime::Type.register 'application/octet-stream', :dump
 Mime::Type.register 'application/vnd.geo+json', :geojson
 Mime::Type.register 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', :xlsx
+Mime::Type.register 'application/x-font-woff', :woff

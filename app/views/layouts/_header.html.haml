@@ -1,5 +1,5 @@
 %nav.navbar.navbar-default.navbar-fixed-top{role: 'navigation'}
-  %a.beta{href: '#', data: {toggle: 'modal', target: '#beta'}} Beta
+  %a.beta.header-item{href: '#', data: {toggle: 'modal', target: '#beta'}} Beta
   %div.container
     %div.navbar-header
       %button.navbar-toggle{type: "button", data: {toggle: "collapse", target: "#main-header"}}
@@ -14,7 +14,7 @@
 
 
         %li.dropdown
-          %a.dropdown-toggle{href: "#", data: {toggle: 'dropdown'}}
+          %a.dropdown-toggle.header-item{href: "#", data: {toggle: 'dropdown'}}
             Explore Data
             %b.caret
           %ul.dropdown-menu
@@ -25,7 +25,7 @@
 
         
         %li.dropdown
-          %a.dropdown-toggle{href: "#", data: {toggle: 'dropdown'}}
+          %a.dropdown-toggle.header-item{href: "#", data: {toggle: 'dropdown'}}
             Community Snapshots
             %b.caret
           %ul.dropdown-menu
@@ -34,7 +34,7 @@
 
 
         %li.dropdown
-          %a.dropdown-toggle{href: "#", data: {toggle: 'dropdown'}}
+          %a.dropdown-toggle.header-item{href: "#", data: {toggle: 'dropdown'}}
             Resources
             %b.caret
           %ul.dropdown-menu
@@ -42,7 +42,7 @@
 
 
         %li.dropdown
-          %a.dropdown-toggle{href: "#", data: {toggle: 'dropdown'}}
+          %a.dropdown-toggle.header-item{href: "#", data: {toggle: 'dropdown'}}
             Community
             %b.caret
           %ul.dropdown-menu
@@ -50,18 +50,18 @@
 
         - if signed_in?
           %li.dropdown
-            %a#user-menu.dropdown-toggle{href: "#", data: {toggle: 'dropdown'}}
+            %a#user-menu.dropdown-toggle.header-item{href: "#", data: {toggle: 'dropdown'}}
               Hi, #{current_user.fname}
               %b.caret
             %ul.dropdown-menu
               %li= link_to 'My Profile', current_user
               %li= link_to 'Log out', signout_path, method: 'delete'
         - else
-          %li= link_to 'Log in', signin_path
+          %li.header-item= link_to 'Log in', signin_path
 
 
         =form_tag '/search', method: :get, data: {role: 'search'}, class: "navbar-form navbar-right" do
-          %div.input-group
+          %div.input-group.header-item
             = text_field_tag :search, params[:search], class: "typeahead form-control", placeholder: "Search for data"
             %span.input-group-btn
               %button.btn.btn-success
