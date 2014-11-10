@@ -31,3 +31,6 @@
 /public/layers/exports/
 
 sloccount.txt
+
+/public/assets/
+assets_manifest.json

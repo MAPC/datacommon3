@@ -1,5 +1,5 @@
 - if !vis.image_path(@s.geography).nil?
-  %img{id: "vis-#{vis.id}", src: vis.image_path(@s.geography)}
+  = image_tag vis.image_path(@s.geography), id: "vis-#{vis.id}"
 
   :javascript
     $(document).on('ready', function () {

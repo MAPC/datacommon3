@@ -44,20 +44,6 @@ CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
 COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
 
 
---
--- Name: postgis; Type: EXTENSION; Schema: -; Owner: -
---
-
-CREATE EXTENSION IF NOT EXISTS postgis WITH SCHEMA public;
-
-
---
--- Name: EXTENSION postgis; Type: COMMENT; Schema: -; Owner: -
---
-
-COMMENT ON EXTENSION postgis IS 'PostGIS geometry, geography, and raster spatial types and functions';
-
-
 SET search_path = metadata, pg_catalog;
 
 --
@@ -161,25 +147,6 @@ $$;
 
 SET search_path = gisdata, pg_catalog;
 
-SET default_tablespace = '';
-
-SET default_with_oids = false;
-
---
--- Name: ma_municipal; Type: TABLE; Schema: gisdata; Owner: -; Tablespace: 
---
-
-CREATE TABLE ma_municipal (
-    gid integer NOT NULL,
-    muni_id smallint,
-    municipal character varying(35),
-    the_geom public.geometry,
-    CONSTRAINT enforce_dims_the_geom CHECK ((public.st_ndims(the_geom) = 2)),
-    CONSTRAINT enforce_geotype_the_geom CHECK (((public.geometrytype(the_geom) = 'MULTIPOLYGON'::text) OR (the_geom IS NULL))),
-    CONSTRAINT enforce_srid_the_geom CHECK ((public.st_srid(the_geom) = 26986))
-);
-
-
 --
 -- Name: ma_municipal_gid_seq; Type: SEQUENCE; Schema: gisdata; Owner: -
 --
@@ -190,13 +157,6 @@ CREATE SEQUENCE ma_municipal_gid_seq
     NO MINVALUE
     NO MAXVALUE
     CACHE 1;
-
-
---
--- Name: ma_municipal_gid_seq; Type: SEQUENCE OWNED BY; Schema: gisdata; Owner: -
---
-
-ALTER SEQUENCE ma_municipal_gid_seq OWNED BY ma_municipal.gid;
 
 
 SET search_path = mapc, pg_catalog;
@@ -213,6 +173,10 @@ CREATE SEQUENCE health_births_m_seq
     CACHE 1;
 
 
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
 --
 -- Name: health_births_m; Type: TABLE; Schema: mapc; Owner: -; Tablespace: 
 --
@@ -227,6 +191,117 @@ CREATE TABLE health_births_m (
 
 
 SET search_path = metadata, pg_catalog;
+
+--
+-- Name: _geo_extents; Type: TABLE; Schema: metadata; Owner: -; Tablespace: 
+--
+
+CREATE TABLE _geo_extents (
+    id integer NOT NULL,
+    title text,
+    createdate date,
+    moddate date,
+    publisher text,
+    contributr text,
+    coverage text,
+    universe text,
+    schema text,
+    tablename text,
+    join_key text,
+    table_suffix text,
+    key_desc text,
+    key_name text
+);
+
+
+--
+-- Name: _geo_extents_geo_layers_seq; Type: SEQUENCE; Schema: metadata; Owner: -
+--
+
+CREATE SEQUENCE _geo_extents_geo_layers_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: _geo_extents_geo_layers; Type: TABLE; Schema: metadata; Owner: -; Tablespace: 
+--
+
+CREATE TABLE _geo_extents_geo_layers (
+    id integer DEFAULT nextval('_geo_extents_geo_layers_seq'::regclass) NOT NULL,
+    geo_layer_id integer,
+    geo_extent_id integer,
+    geo_layer_key text,
+    geo_extent_key text
+);
+
+
+--
+-- Name: _geo_extents_id_seq; Type: SEQUENCE; Schema: metadata; Owner: -
+--
+
+CREATE SEQUENCE _geo_extents_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: _geo_extents_id_seq; Type: SEQUENCE OWNED BY; Schema: metadata; Owner: -
+--
+
+ALTER SEQUENCE _geo_extents_id_seq OWNED BY _geo_extents.id;
+
+
+--
+-- Name: _geo_layers; Type: TABLE; Schema: metadata; Owner: -; Tablespace: 
+--
+
+CREATE TABLE _geo_layers (
+    id integer NOT NULL,
+    title text,
+    alt_title text,
+    descriptn text,
+    topic text,
+    category text,
+    creator text,
+    createdate date,
+    moddate date,
+    publisher text,
+    contributr text,
+    coverage text,
+    universe text,
+    schema text,
+    tablename text,
+    tablenum text,
+    institution_id integer,
+    datesavail text
+);
+
+
+--
+-- Name: _geo_layers_id_seq; Type: SEQUENCE; Schema: metadata; Owner: -
+--
+
+CREATE SEQUENCE _geo_layers_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: _geo_layers_id_seq; Type: SEQUENCE OWNED BY; Schema: metadata; Owner: -
+--
+
+ALTER SEQUENCE _geo_layers_id_seq OWNED BY _geo_layers.id;
+
 
 --
 -- Name: _public_tables_seq; Type: SEQUENCE; Schema: metadata; Owner: -
@@ -5355,29 +5430,40 @@ CREATE TABLE weave_visualization (
 --
 
 CREATE VIEW searches AS
-(((((SELECT weave_visualization.id AS searchable_id, 'Visualization'::text AS searchable_type, weave_visualization.title AS term FROM weave_visualization UNION SELECT weave_visualization.id AS searchable_id, 'Visualization'::text AS searchable_type, weave_visualization.abstract AS term FROM weave_visualization) UNION SELECT layers.id AS searchable_id, 'Layer'::text AS searchable_type, layers.title AS term FROM layers) UNION SELECT layers.id AS searchable_id, 'Layer'::text AS searchable_type, layers.alt_title AS term FROM layers) UNION SELECT layers.id AS searchable_id, 'Layer'::text AS searchable_type, layers.descriptn AS term FROM layers) UNION SELECT mbdc_calendar.id AS searchable_id, 'StaticMap'::text AS searchable_type, mbdc_calendar.title AS term FROM mbdc_calendar) UNION SELECT mbdc_calendar.id AS searchable_id, 'StaticMap'::text AS searchable_type, mbdc_calendar.abstract AS term FROM mbdc_calendar;
-
-
---
--- Name: snapshots_regionalunit; Type: TABLE; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE TABLE snapshots_regionalunit (
-    id integer NOT NULL,
-    unitid character varying(20),
-    name character varying(100) NOT NULL,
-    slug character varying(50) NOT NULL,
-    regiontype_id integer,
-    geometry geometry NOT NULL,
-    short_desc text,
-    short_desc_markup_type character varying(30) NOT NULL,
-    _short_desc_rendered text NOT NULL,
-    subunit_ids character varying(255),
-    institution_id integer,
-    CONSTRAINT enforce_dims_geometry CHECK ((st_ndims(geometry) = 2)),
-    CONSTRAINT enforce_geotype_geometry CHECK (((geometrytype(geometry) = 'MULTIPOLYGON'::text) OR (geometry IS NULL))),
-    CONSTRAINT enforce_srid_geometry CHECK ((st_srid(geometry) = 26986))
-);
+        (        (        (        (        (         SELECT weave_visualization.id AS searchable_id,
+                                                    'Visualization'::text AS searchable_type,
+                                                    weave_visualization.title AS term
+                                                   FROM weave_visualization
+                                        UNION
+                                                 SELECT weave_visualization.id AS searchable_id,
+                                                    'Visualization'::text AS searchable_type,
+                                                    weave_visualization.abstract AS term
+                                                   FROM weave_visualization)
+                                UNION
+                                         SELECT layers.id AS searchable_id,
+                                            'Layer'::text AS searchable_type,
+                                            layers.title AS term
+                                           FROM layers)
+                        UNION
+                                 SELECT layers.id AS searchable_id,
+                                    'Layer'::text AS searchable_type,
+                                    layers.alt_title AS term
+                                   FROM layers)
+                UNION
+                         SELECT layers.id AS searchable_id,
+                            'Layer'::text AS searchable_type,
+                            layers.descriptn AS term
+                           FROM layers)
+        UNION
+                 SELECT mbdc_calendar.id AS searchable_id,
+                    'StaticMap'::text AS searchable_type,
+                    mbdc_calendar.title AS term
+                   FROM mbdc_calendar)
+UNION
+         SELECT mbdc_calendar.id AS searchable_id,
+            'StaticMap'::text AS searchable_type,
+            mbdc_calendar.abstract AS term
+           FROM mbdc_calendar;
 
 
 --
@@ -5390,13 +5476,6 @@ CREATE SEQUENCE snapshots_regionalunit_id_seq
     NO MINVALUE
     NO MAXVALUE
     CACHE 1;
-
-
---
--- Name: snapshots_regionalunit_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE snapshots_regionalunit_id_seq OWNED BY snapshots_regionalunit.id;
 
 
 --
@@ -5430,6 +5509,36 @@ CREATE SEQUENCE snapshots_visualization_id_seq
 --
 
 ALTER SEQUENCE snapshots_visualization_id_seq OWNED BY snapshots_visualization.id;
+
+
+--
+-- Name: snapshots_visualization_source; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE snapshots_visualization_source (
+    id integer NOT NULL,
+    visualization_id integer NOT NULL,
+    datasource_id integer NOT NULL
+);
+
+
+--
+-- Name: snapshots_visualization_source_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE snapshots_visualization_source_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: snapshots_visualization_source_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE snapshots_visualization_source_id_seq OWNED BY snapshots_visualization_source.id;
 
 
 --
@@ -5541,13 +5650,20 @@ CREATE SEQUENCE weave_visualization_topics_id_seq
 ALTER SEQUENCE weave_visualization_topics_id_seq OWNED BY weave_visualization_topics.id;
 
 
-SET search_path = gisdata, pg_catalog;
+SET search_path = metadata, pg_catalog;
 
 --
--- Name: gid; Type: DEFAULT; Schema: gisdata; Owner: -
+-- Name: id; Type: DEFAULT; Schema: metadata; Owner: -
 --
 
-ALTER TABLE ONLY ma_municipal ALTER COLUMN gid SET DEFAULT nextval('ma_municipal_gid_seq'::regclass);
+ALTER TABLE ONLY _geo_extents ALTER COLUMN id SET DEFAULT nextval('_geo_extents_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: metadata; Owner: -
+--
+
+ALTER TABLE ONLY _geo_layers ALTER COLUMN id SET DEFAULT nextval('_geo_layers_id_seq'::regclass);
 
 
 SET search_path = public, pg_catalog;
@@ -5654,14 +5770,14 @@ ALTER TABLE ONLY pages ALTER COLUMN id SET DEFAULT nextval('pages_id_seq'::regcl
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
-ALTER TABLE ONLY snapshots_regionalunit ALTER COLUMN id SET DEFAULT nextval('snapshots_regionalunit_id_seq'::regclass);
+ALTER TABLE ONLY snapshots_visualization ALTER COLUMN id SET DEFAULT nextval('snapshots_visualization_id_seq'::regclass);
 
 
 --
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
-ALTER TABLE ONLY snapshots_visualization ALTER COLUMN id SET DEFAULT nextval('snapshots_visualization_id_seq'::regclass);
+ALTER TABLE ONLY snapshots_visualization_source ALTER COLUMN id SET DEFAULT nextval('snapshots_visualization_source_id_seq'::regclass);
 
 
 --
@@ -5692,16 +5808,6 @@ ALTER TABLE ONLY weave_visualization_datasources ALTER COLUMN id SET DEFAULT nex
 ALTER TABLE ONLY weave_visualization_topics ALTER COLUMN id SET DEFAULT nextval('weave_visualization_topics_id_seq'::regclass);
 
 
-SET search_path = gisdata, pg_catalog;
-
---
--- Name: ma_municipal_pkey; Type: CONSTRAINT; Schema: gisdata; Owner: -; Tablespace: 
---
-
-ALTER TABLE ONLY ma_municipal
-    ADD CONSTRAINT ma_municipal_pkey PRIMARY KEY (gid);
-
-
 SET search_path = mapc, pg_catalog;
 
 --
@@ -5713,6 +5819,30 @@ ALTER TABLE ONLY health_births_m
 
 
 SET search_path = metadata, pg_catalog;
+
+--
+-- Name: _geo_extents_geo_layers_pkey; Type: CONSTRAINT; Schema: metadata; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY _geo_extents_geo_layers
+    ADD CONSTRAINT _geo_extents_geo_layers_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: _geo_extents_pkey; Type: CONSTRAINT; Schema: metadata; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY _geo_extents
+    ADD CONSTRAINT _geo_extents_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: _geo_layers_pkey; Type: CONSTRAINT; Schema: metadata; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY _geo_layers
+    ADD CONSTRAINT _geo_layers_pkey PRIMARY KEY (id);
+
 
 --
 -- Name: _public_tables_pkey; Type: CONSTRAINT; Schema: metadata; Owner: -; Tablespace: 
@@ -7229,14 +7359,6 @@ ALTER TABLE ONLY pages
 
 
 --
--- Name: snapshots_regionalunit_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
---
-
-ALTER TABLE ONLY snapshots_regionalunit
-    ADD CONSTRAINT snapshots_regionalunit_pkey PRIMARY KEY (id);
-
-
---
 -- Name: snapshots_visualization__visualization_id_34c1e30e30858e56_uniq; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7245,11 +7367,27 @@ ALTER TABLE ONLY snapshots_visualization_topics
 
 
 --
+-- Name: snapshots_visualization__visualization_id_7697a44685099f5a_uniq; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY snapshots_visualization_source
+    ADD CONSTRAINT snapshots_visualization__visualization_id_7697a44685099f5a_uniq UNIQUE (visualization_id, datasource_id);
+
+
+--
 -- Name: snapshots_visualization_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY snapshots_visualization
     ADD CONSTRAINT snapshots_visualization_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: snapshots_visualization_source_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY snapshots_visualization_source
+    ADD CONSTRAINT snapshots_visualization_source_pkey PRIMARY KEY (id);
 
 
 --
@@ -7441,38 +7579,24 @@ CREATE INDEX mbdc_topic_slug_like ON mbdc_topic USING btree (slug varchar_patter
 
 
 --
--- Name: snapshots_regionalunit_geometry_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX snapshots_regionalunit_geometry_id ON snapshots_regionalunit USING gist (geometry);
-
-
---
--- Name: snapshots_regionalunit_regiontype_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX snapshots_regionalunit_regiontype_id ON snapshots_regionalunit USING btree (regiontype_id);
-
-
---
--- Name: snapshots_regionalunit_slug; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX snapshots_regionalunit_slug ON snapshots_regionalunit USING btree (slug);
-
-
---
--- Name: snapshots_regionalunit_slug_like; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX snapshots_regionalunit_slug_like ON snapshots_regionalunit USING btree (slug varchar_pattern_ops);
-
-
---
 -- Name: snapshots_visualization_regiontype_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE INDEX snapshots_visualization_regiontype_id ON snapshots_visualization USING btree (regiontype_id);
+
+
+--
+-- Name: snapshots_visualization_source_datasource_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX snapshots_visualization_source_datasource_id ON snapshots_visualization_source USING btree (datasource_id);
+
+
+--
+-- Name: snapshots_visualization_source_visualization_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX snapshots_visualization_source_visualization_id ON snapshots_visualization_source USING btree (visualization_id);
 
 
 --
@@ -7616,6 +7740,14 @@ ALTER TABLE ONLY snapshots_visualization_topics
 
 ALTER TABLE ONLY mbdc_featured
     ADD CONSTRAINT visualization_id_refs_id_17183d0f FOREIGN KEY (visualization_id) REFERENCES weave_visualization(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: visualization_id_refs_id_4779ee3461d3a108; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY snapshots_visualization_source
+    ADD CONSTRAINT visualization_id_refs_id_4779ee3461d3a108 FOREIGN KEY (visualization_id) REFERENCES snapshots_visualization(id) DEFERRABLE INITIALLY DEFERRED;
 
 
 --

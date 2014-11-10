@@ -3,7 +3,7 @@
   %p
     by
     #{link_to feature.owner} | Year(s) #{feature.year}
-  %img.feature{id: "vis-#{feature.id}", src: feature.full_image_path}
+  = image_tag feature.full_image_path, id: "vis-#{feature.id}", class: "feature"
   %p= data_sources_list feature
   %p= issue_areas_list  feature
 

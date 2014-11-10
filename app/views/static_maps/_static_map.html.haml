@@ -1,10 +1,10 @@
 .col-xs-12.static-map-preview
   .row
     .col-md-2.col-md-offset-1.col-sm-3.col-sm-offset-1.col-xs-12.col-xs-offset-0.center
-      =link_to static_map.pdf_page_src, target: '_blank' do
-        %img.map-preview{src: static_map.thumbnail_src}
+      = link_to static_map.pdf_page_src, target: '_blank' do
+        = image_tag static_map.thumbnail_src, class: "map-preview"
     .col-sm-7.col-sm-offset-1.col-xs-10.col-xs-offset-1
-      =link_to static_map.pdf_page_src, target: '_blank' do
+      = link_to static_map.pdf_page_src, target: '_blank' do
         %h3= static_map.title
       %p=  static_map.date + ", " + static_map.institution.short_name
       %p.map-abstract=  static_map.abstract

@@ -28,6 +28,9 @@ module Datacommon
     config.autoload_paths << Rails.root.join('app','lib')
 
     config.assets.enabled = true
-    config.assets.paths <<  Rails.root.join('app', 'assets', 'fonts')
+    config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+    config.assets.paths << Rails.root.join('public', 'dynamic_visualizations')
+    config.assets.paths << Rails.root.join('public', 'layers')
+    config.assets.paths << Rails.root.join('public', 'visualizations')
   end
 end

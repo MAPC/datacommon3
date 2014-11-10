@@ -1,6 +1,6 @@
 .col-md-3.col-sm-6.col-xs-12.vis-preview
   =link_to vis do
-    %img{src: vis.gallery_image_path, alt: vis.title}
+    = image_tag src: vis.gallery_image_path, alt: vis.title
     - if vis.private?
       %span.badge Private
     %p.vis-title= vis.title
