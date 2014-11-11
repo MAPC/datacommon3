@@ -1,9 +1,11 @@
 %h1= link_to "< #{@s.geography}", @s.geography
 %h2= @s.topic
 
+
 - @s.visualizations.each do |vis|
-  .col-sm-6.col-xs-12
-    .snapshot.municipality
-      -# .snapshot-preview-title= vis # was displaying double when we put
-      -#                              # title into vis/preview
+  - if @s.area_type_name == 'municipality'
+    .col-sm-6.col-xs-12
+  - else
+    .col-xs-12.center
+      .snapshot-preview-title
       = render partial: 'visualizations/preview', object: vis, as: :vis
