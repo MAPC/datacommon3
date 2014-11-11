@@ -4,5 +4,6 @@
 - @s.visualizations.each do |vis|
   .col-sm-6.col-xs-12
     .snapshot.municipality
-      .snapshot-preview-title= vis
+      -# .snapshot-preview-title= vis # was displaying double when we put
+      -#                              # title into vis/preview
       = render partial: 'visualizations/preview', object: vis, as: :vis

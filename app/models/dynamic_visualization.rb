@@ -77,7 +77,7 @@ class DynamicVisualization < ActiveRecord::Base
   # Render session state for an `object` that has
   # fields `unitid`, `name`, and `subunit_ids`.
   def rendered_state(object)
-    bracketed    = /(\{{2}\s*regionalunit.unitid\s*\}{2})/i  # was /(\{{2}.*\}{2})/i
+    bracketed = /(\{{2}\s*regionalunit.{0,4}unit_?ids?\s*\}{2})/i # was /(\{{2}.*\}{2})/i, then /(\{{2}\s*regionalunit.unitid\s*\}{2})/i
     # Capital S is to match only non-whitespace chars
     inside_brackets  = /\{{2}\s*(\S*)\s*\}{2}/i
 

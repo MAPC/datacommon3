@@ -135,15 +135,17 @@ p.vis-title {
   margin-bottom: -10px;
 }
 
-// .navbar-nav {
-//   overflow: hidden;
-//   overflow-wrap: none;
-// }
+.navbar-nav {
+  background-color: $dc-blue;
+  // overflow: hidden;
+  // overflow-wrap: none;
+}
 
 
 a.dropdown-toggle {
   font-weight: 300;
   color: white !important;
+  background-color: $dc-blue !important;
 }
 
 .header-item {
@@ -154,9 +156,7 @@ a.dropdown-toggle {
   color: white !important;
 }
 
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
+
 
 .navbar {
   height: 80px;
@@ -171,17 +171,23 @@ a.dropdown-toggle {
 }
 
 .navbar-nav {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 300;
 
   @media (max-width: 1200px) {
-    font-size: 13px;
+    font-size: 11px;
+  }
+}
+
+@media (min-width: 993px) {
+  .dropdown:hover .dropdown-menu {
+    display: block;
   }
 }
 
 .navbar.navbar-default.navbar-fixed-top {
-    background-color: $dc-blue;
-    border-color: transparent;
+  background-color: $dc-blue;
+  border-color: transparent;
 }
 
 input#search {
@@ -550,6 +556,7 @@ ul.none {
 .snapshot.municipality {
   position: relative;
   height: 350px;
+  margin-top: 50px;
   padding: 0 0 40px 0;
   text-align: center;
 }
@@ -599,6 +606,7 @@ ul.chosen-results {
   width: 100%;
   min-width: 100%;
   max-width: 100%;
+  margin-bottom: 15px;
   display: block;
   float: left;
 }

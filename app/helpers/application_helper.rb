@@ -1,9 +1,7 @@
 module ApplicationHelper
 
   def topics
-    topics = IssueArea.all.to_a
-    topics.pop
-    topics
+    IssueArea.all
   end
 
 
@@ -13,7 +11,7 @@ module ApplicationHelper
 
 
   def community_pages
-    Page.institution_topic(@institution, 'community')
+    Page.institution_topic(@institution, 'community').reverse
   end
 
 

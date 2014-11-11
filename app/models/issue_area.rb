@@ -10,7 +10,7 @@ class IssueArea < ActiveRecord::Base
     foreign_key: :topic_id,
     association_foreign_key: :visualization_id
 
-  default_scope { order('"order" ASC') }
+  default_scope { where("#{self.table_name}.id < ?", 13).order('"order" ASC') }
 
   def sort_order
     self.send(:order)
