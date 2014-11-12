@@ -31,6 +31,7 @@ class LayersController < ApplicationController
 
       Zip::File.open( zip_file_name, Zip::File::CREATE) do |zip|
         [spatial_files, tabular_files, metadata_file].flatten.uniq.each do |file|
+          assert_file_exists file
           filename = file.rpartition('/').last
           zip.add(filename, file)
         end
@@ -38,8 +39,17 @@ class LayersController < ApplicationController
     end
 
     send_file zip_file_name, filename: "#{File.basename(zip_file_name)}.zip", type: :zip
-    
-
   end
+
+  
+
+  private
+
+  def assert_file_exists(file)
+    unless File.exists? file
+      raise IOError, "File at #{file} could not be found."
+    end
+  end
+
 
 end

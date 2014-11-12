@@ -517,10 +517,10 @@ div.col-sm-7.col-sm-offset-1.col-xs-10.col-xs-offset-1 p {
 div.col-sm-7.col-sm-offset-1.col-xs-10.col-xs-offset-1 p.map-abstract {
   padding: 10px;
   opacity: 0;
-  -webkit-transition: opacity 1500ms;
-  -moz-transition: opacity 1500ms;
-  -o-transition: opacity 1500ms;
-  transition: opacity 1500ms;
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  transition: opacity 500ms;
 }
 
 div.col-sm-7.col-sm-offset-1.col-xs-10.col-xs-offset-1 p.map-abstract:hover {
