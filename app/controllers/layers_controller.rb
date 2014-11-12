@@ -24,7 +24,7 @@ class LayersController < ApplicationController
     tabular_files = Dir.glob( File.join(tabular, "#{layer.tablename}#{extent.table_suffix}.csv") )
     metadata_file = Dir.glob( File.join(tabular, "#{layer.tablename}#{extent.table_suffix}_meta.csv") )
 
-    zip_file_name = File.join(Rails.root, 'tmp', 'downloads', "#{layer.title} (#{extent.title})")
+    zip_file_name = File.join(Rails.root, 'tmp', 'downloads', "#{layer.title} (#{extent.title}).zip")
 
     unless File.exists? zip_file_name
       FileUtils.mkdir_p( File.dirname(zip_file_name) )
@@ -38,7 +38,7 @@ class LayersController < ApplicationController
       end
     end
 
-    send_file zip_file_name, filename: "#{File.basename(zip_file_name)}.zip", type: :zip
+    send_file zip_file_name, filename: "#{File.basename(zip_file_name)}", type: :zip
   end
 
   
@@ -46,6 +46,7 @@ class LayersController < ApplicationController
   private
 
   def assert_file_exists(file)
+    puts file.inspect
     unless File.exists? file
       raise IOError, "File at #{file} could not be found."
     end
