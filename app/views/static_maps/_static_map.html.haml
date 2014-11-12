@@ -8,6 +8,6 @@
         %h3= static_map.title
       %p=  static_map.date + ", " + static_map.institution.short_name
       %p.map-abstract
-        = link_to static_map.pdf_page_src do
+        = link_to static_map.pdf_page_src, target: '_blank' do
           = truncate(static_map.abstract, length: 400)
           = link_to "Read More", static_map.pdf_page_src

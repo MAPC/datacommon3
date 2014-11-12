@@ -41,7 +41,10 @@
 
   %hr
   %div.row-lower
-    = render partial: 'layouts/logos', collection: @institution.branding.logos, as: :logo, locals: { col_width: (12 / @institution.branding.logo_count) }
+    - @institution.branding.logos.each do |logo|
+      %div.col-xs-12.frame{class: "col-sm-#{(12 / @institution.branding.logo_count)}"}
+        %span.helper
+        = image_tag logo['src'], alt: logo['alt'], class: 'aligner'
 
   %div.row
     %div.col-xs-12
