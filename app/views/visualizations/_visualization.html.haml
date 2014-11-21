@@ -2,7 +2,7 @@
   .row
     .col-md-2.col-md-offset-1.col-sm-3.col-sm-offset-1.col-xs-12.col-xs-offset-0.center
       =link_to visualization, target: '_blank' do
-        %img.map-preview{src: visualization.gallery_image_path}
+        %img.map-preview{src: visualization.image.url(:gallery)}
     .col-sm-7.col-sm-offset-1.col-xs-10.col-xs-offset-1
       =link_to visualization, target: '_blank' do
         %h3= visualization.title

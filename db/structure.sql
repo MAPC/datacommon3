@@ -44,6 +44,20 @@ CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
 COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
 
 
+--
+-- Name: postgis; Type: EXTENSION; Schema: -; Owner: -
+--
+
+CREATE EXTENSION IF NOT EXISTS postgis WITH SCHEMA public;
+
+
+--
+-- Name: EXTENSION postgis; Type: COMMENT; Schema: -; Owner: -
+--
+
+COMMENT ON EXTENSION postgis IS 'PostGIS geometry, geography, and raster spatial types and functions';
+
+
 SET search_path = metadata, pg_catalog;
 
 --
@@ -5421,7 +5435,11 @@ CREATE TABLE weave_visualization (
     original_id integer,
     featured integer,
     institution_id integer DEFAULT 1,
-    permission character varying(255) DEFAULT 'private'::character varying
+    permission character varying(255) DEFAULT 'private'::character varying,
+    image_file_name character varying(255),
+    image_content_type character varying(255),
+    image_file_size integer,
+    image_updated_at timestamp without time zone
 );
 
 
@@ -5430,40 +5448,40 @@ CREATE TABLE weave_visualization (
 --
 
 CREATE VIEW searches AS
-        (        (        (        (        (         SELECT weave_visualization.id AS searchable_id,
-                                                    'Visualization'::text AS searchable_type,
-                                                    weave_visualization.title AS term
-                                                   FROM weave_visualization
-                                        UNION
-                                                 SELECT weave_visualization.id AS searchable_id,
-                                                    'Visualization'::text AS searchable_type,
-                                                    weave_visualization.abstract AS term
-                                                   FROM weave_visualization)
-                                UNION
-                                         SELECT layers.id AS searchable_id,
-                                            'Layer'::text AS searchable_type,
-                                            layers.title AS term
-                                           FROM layers)
-                        UNION
-                                 SELECT layers.id AS searchable_id,
-                                    'Layer'::text AS searchable_type,
-                                    layers.alt_title AS term
-                                   FROM layers)
-                UNION
-                         SELECT layers.id AS searchable_id,
-                            'Layer'::text AS searchable_type,
-                            layers.descriptn AS term
-                           FROM layers)
-        UNION
-                 SELECT mbdc_calendar.id AS searchable_id,
-                    'StaticMap'::text AS searchable_type,
-                    mbdc_calendar.title AS term
-                   FROM mbdc_calendar)
+ SELECT weave_visualization.id AS searchable_id,
+    'Visualization'::text AS searchable_type,
+    weave_visualization.title AS term
+   FROM weave_visualization
 UNION
-         SELECT mbdc_calendar.id AS searchable_id,
-            'StaticMap'::text AS searchable_type,
-            mbdc_calendar.abstract AS term
-           FROM mbdc_calendar;
+ SELECT weave_visualization.id AS searchable_id,
+    'Visualization'::text AS searchable_type,
+    weave_visualization.abstract AS term
+   FROM weave_visualization
+UNION
+ SELECT layers.id AS searchable_id,
+    'Layer'::text AS searchable_type,
+    layers.title AS term
+   FROM layers
+UNION
+ SELECT layers.id AS searchable_id,
+    'Layer'::text AS searchable_type,
+    layers.alt_title AS term
+   FROM layers
+UNION
+ SELECT layers.id AS searchable_id,
+    'Layer'::text AS searchable_type,
+    layers.descriptn AS term
+   FROM layers
+UNION
+ SELECT mbdc_calendar.id AS searchable_id,
+    'StaticMap'::text AS searchable_type,
+    mbdc_calendar.title AS term
+   FROM mbdc_calendar
+UNION
+ SELECT mbdc_calendar.id AS searchable_id,
+    'StaticMap'::text AS searchable_type,
+    mbdc_calendar.abstract AS term
+   FROM mbdc_calendar;
 
 
 --
@@ -5476,6 +5494,28 @@ CREATE SEQUENCE snapshots_regionalunit_id_seq
     NO MINVALUE
     NO MAXVALUE
     CACHE 1;
+
+
+--
+-- Name: snapshots_regionalunit; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE snapshots_regionalunit (
+    id integer DEFAULT nextval('snapshots_regionalunit_id_seq'::regclass) NOT NULL,
+    unitid character varying(20),
+    name character varying(100) NOT NULL,
+    slug character varying(50) NOT NULL,
+    regiontype_id integer,
+    geometry geometry NOT NULL,
+    short_desc text,
+    short_desc_markup_type character varying(30) NOT NULL,
+    _short_desc_rendered text NOT NULL,
+    subunit_ids character varying(255),
+    institution_id integer,
+    CONSTRAINT enforce_dims_geometry CHECK ((st_ndims(geometry) = 2)),
+    CONSTRAINT enforce_geotype_geometry CHECK (((geometrytype(geometry) = 'MULTIPOLYGON'::text) OR (geometry IS NULL))),
+    CONSTRAINT enforce_srid_geometry CHECK ((st_srid(geometry) = 26986))
+);
 
 
 --
@@ -7359,6 +7399,14 @@ ALTER TABLE ONLY pages
 
 
 --
+-- Name: snapshots_regionalunit_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY snapshots_regionalunit
+    ADD CONSTRAINT snapshots_regionalunit_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: snapshots_visualization__visualization_id_34c1e30e30858e56_uniq; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7579,6 +7627,34 @@ CREATE INDEX mbdc_topic_slug_like ON mbdc_topic USING btree (slug varchar_patter
 
 
 --
+-- Name: snapshots_regionalunit_geometry_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX snapshots_regionalunit_geometry_id ON snapshots_regionalunit USING gist (geometry);
+
+
+--
+-- Name: snapshots_regionalunit_regiontype_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX snapshots_regionalunit_regiontype_id ON snapshots_regionalunit USING btree (regiontype_id);
+
+
+--
+-- Name: snapshots_regionalunit_slug; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX snapshots_regionalunit_slug ON snapshots_regionalunit USING btree (slug);
+
+
+--
+-- Name: snapshots_regionalunit_slug_like; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX snapshots_regionalunit_slug_like ON snapshots_regionalunit USING btree (slug varchar_pattern_ops);
+
+
+--
 -- Name: snapshots_visualization_regiontype_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7793,4 +7869,8 @@ INSERT INTO schema_migrations (version) VALUES ('20141021182918');
 INSERT INTO schema_migrations (version) VALUES ('20141021183232');
 
 INSERT INTO schema_migrations (version) VALUES ('20141031173625');
+
+INSERT INTO schema_migrations (version) VALUES ('20141121191140');
+
+INSERT INTO schema_migrations (version) VALUES ('20141121215139');
 

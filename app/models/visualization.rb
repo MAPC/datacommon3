@@ -12,9 +12,9 @@ class Visualization < ActiveRecord::Base
     join_table: :weave_visualization_topics,
     association_foreign_key: :topic_id
 
-  # has_attached_file :image,
-  #                    styles: { gallery: ['205x137>', :png], featured: ['455x305>', :png] },
-  #                    url: ":class/images/:style/:id_:style.:extension"
+  has_attached_file :image, styles: { gallery: ['205x137>', :png],
+                                      featured: ['455x305>', :png] }
+  validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
   belongs_to :institution
   belongs_to :user, foreign_key: :owner_id
@@ -27,7 +27,7 @@ class Visualization < ActiveRecord::Base
   end
 
   validates :title,      presence: true, length: { minimum: 3,  maximum: 140 }
-  validates :year,       presence: true, length: { minimum: 4,  maximum: 20  }
+  validates :year,       presence: true, length: { minimum: 4,  maximum: 50  }
   # validates :abstract,   presence: true, length: { minimum: 70, maximum: 560 }
   validates :permission, presence: true, inclusion: { in: PERMISSIONS,
              message: "Permission must be 'public' or 'private', but you assigned \"%{value}\"." }
@@ -86,27 +86,9 @@ class Visualization < ActiveRecord::Base
     owner.name
   end
 
+
   def abstract
     read_attribute(:abstract).presence || "No abstract."
-  end
-
-  def base_image_path
-    "/visualizations/images/#{id}"
-  end
-
-
-  def full_image_path
-    "/visualizations/images/#{id}.png"
-  end  
-
-
-  def gallery_image_path
-    "#{base_image_path}_gallery.png"
-  end
-
-
-  def preview_image_path
-    "#{base_image_path}_featured.png"
   end
 
 

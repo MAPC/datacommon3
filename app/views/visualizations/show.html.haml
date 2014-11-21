@@ -2,7 +2,7 @@
 
 %div.col-md-8.col-xs-12.vis-main
   %h3= @visualization.title
-  %img.feature{id: "vis-#{@visualization.id}", src: @visualization.full_image_path}
+  %img.feature{id: "vis-#{@visualization.id}", src: @visualization.image.url}
     %p#clickto
       %small Click to activate interactive visualization. (Flash required)
 

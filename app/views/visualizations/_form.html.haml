@@ -8,7 +8,7 @@
       - if params[:action] == 'new'
         #vis-new
       - else
-        %img.feature{id: "vis-#{@visualization.id}", src: @visualization.full_image_path}
+        %img.feature{id: "vis-#{@visualization.id}", src: @visualization.image.url}
         %p#clickto
           %small Click to activate interactive visualization. (Flash required)
 
