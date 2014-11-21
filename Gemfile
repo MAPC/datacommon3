@@ -49,7 +49,6 @@ gem 'stamp', '0.6.0' # Convenient timestamping
 
 group :development, :test do
   gem 'rspec-rails',        '2.13.1'
-  gem 'cucumber-rails',     require: false
   gem 'database_cleaner'
 
   gem 'factory_girl_rails', '~> 4.0'

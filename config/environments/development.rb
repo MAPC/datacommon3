@@ -38,27 +38,9 @@ Rails.application.configure do
   # Paperclip configuration: attachments with Amazon S3 uploads
   Paperclip.options[:command_path] = "/usr/local/bin/convert"
   
-
-  if ENV['LOCAL_STORAGE']
-    config.paperclip_defaults = {
-      storage: :filesystem,
-      url:    "#{Rails.public_path}/system/#{Rails.env}/:path",
-      s3_credentials: {
-        bucket:           'files.dev.datacommon.org',
-        access_key_id:     ENV['AWS_ACCESS_KEY_ID'],
-        secret_access_key: ENV['AWS_SECRET_ACCESS_KEY']
-      }
-    }
-  else
-    config.paperclip_defaults = {
-      storage: :s3,
-      url:    "#{Rails.env}/:path",
-      s3_credentials: {
-        bucket:           'files.dev.datacommon.org',
-        access_key_id:     ENV['AWS_ACCESS_KEY_ID'],
-        secret_access_key: ENV['AWS_SECRET_ACCESS_KEY']
-      }
-    }
-  end
+  config.paperclip_defaults = {
+    storage: :filesystem,
+    url:    "#{Rails.public_path}/system/:path",
+  }
 
 end

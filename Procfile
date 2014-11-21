@@ -1,1 +1,1 @@
-web: unicorn_rails -c config/unicorn/staging.rb
+web: rails server --port=8016

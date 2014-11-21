@@ -17,19 +17,19 @@ timeout 30
 pid '/tmp/unicorn.datacommon.pid'
 
 # Production-specific settings
-if env == 'production'
-  # Help ensure your application will always spawn in the
-  # symlinked 'current' directory that Capistrano sets up
-  deploy_to = '/home/deployer/apps/staging.datacommon.org'
-  working_directory "#{deploy_to}/current"
+# if env == 'production'
+#   # Help ensure your application will always spawn in the
+#   # symlinked 'current' directory that Capistrano sets up
+#   deploy_to = '/home/deployer/apps/staging.datacommon.org'
+#   working_directory "#{deploy_to}/current"
 
-  # feel free to point this anywhere accessible on the filesystem
-  # user 'ubuntu', 'www-data'
-  shared_path = "#{deploy_to}/shared"
+#   # feel free to point this anywhere accessible on the filesystem
+#   # user 'ubuntu', 'www-data'
+#   shared_path = "#{deploy_to}/shared"
 
-  stderr_path "#{shared_path}/log/unicorn.stderr.log"
-  stdout_path "#{shared_path}/log/unicorn.stdout.log"
-end
+#   stderr_path "#{shared_path}/log/unicorn.stderr.log"
+#   stdout_path "#{shared_path}/log/unicorn.stdout.log"
+# end
 
 before_fork do |server, worker|
   # the following is highly recommended for Rails + 'preload_app true'
