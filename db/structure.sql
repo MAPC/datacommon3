@@ -5039,7 +5039,12 @@ CREATE TABLE institutions (
     short_name character varying(255),
     long_name character varying(255),
     subdomain character varying(255),
-    region_id integer
+    region_id integer,
+    logo_file_name character varying(255),
+    logo_content_type character varying(255),
+    logo_file_size integer,
+    logo_updated_at timestamp without time zone,
+    retina_dimensions text
 );
 
 
@@ -7873,4 +7878,8 @@ INSERT INTO schema_migrations (version) VALUES ('20141031173625');
 INSERT INTO schema_migrations (version) VALUES ('20141121191140');
 
 INSERT INTO schema_migrations (version) VALUES ('20141121215139');
+
+INSERT INTO schema_migrations (version) VALUES ('20141121234755');
+
+INSERT INTO schema_migrations (version) VALUES ('20141122001639');
 

@@ -39,7 +39,7 @@
   %hr
   %div.row-lower
     - @institution.branding.logos.each do |logo|
-      %div.col-xs-12.frame{class: "col-sm-#{(12 / @institution.branding.logo_count)}"}
+      %div.col-xs-12.frame{class: "col-sm-#{(12 / @institution.branding.logos.count)}"}
         %span.helper
         = image_tag logo['src'], alt: logo['alt'], class: 'aligner'
 

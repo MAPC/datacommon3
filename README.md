@@ -1,0 +1,4 @@
+
+```
+foreman run rails c
+```

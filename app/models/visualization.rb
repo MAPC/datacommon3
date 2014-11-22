@@ -27,7 +27,7 @@ class Visualization < ActiveRecord::Base
   end
 
   validates :title,      presence: true, length: { minimum: 3,  maximum: 140 }
-  validates :year,       presence: true, length: { minimum: 4,  maximum: 50  }
+  validates :year,       allow_blank: true, length: { minimum: 4,  maximum: 50  }
   # validates :abstract,   presence: true, length: { minimum: 70, maximum: 560 }
   validates :permission, presence: true, inclusion: { in: PERMISSIONS,
              message: "Permission must be 'public' or 'private', but you assigned \"%{value}\"." }

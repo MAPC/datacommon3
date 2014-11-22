@@ -16,6 +16,7 @@
 //= require chosen.jquery
 //require turbolinks
 //= require swfobject
+//= require retina
 //= require_tree .
 
 $(document).on('ready', function () {

@@ -1,0 +1,9 @@
+---
+:Institution:
+  :logo:
+  - :favicon
+  - :header
+:Visualization:
+  :image:
+  - :featured
+  - :gallery

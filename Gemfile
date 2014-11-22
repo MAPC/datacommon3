@@ -33,6 +33,7 @@ gem 'turbolinks',   '2.4.0' # Following links are faster.
 
 # Files
 gem 'paperclip', '~> 3.0' # Handle file attachments
+gem 'retina_rails'
 gem 'aws-sdk',   '1.33.0' # Upload files to Amazon S3
 gem 'rubyzip', '>= 1.0.0', require: 'zip' # Zip files for downloading
 
@@ -45,6 +46,7 @@ gem 'unicorn-rails'     # Use Unicorn as the app server
 # Utilities
 gem 'mail'
 gem 'stamp', '0.6.0' # Convenient timestamping
+gem 'wannabe_bool'   # To convert ENV strings to booleans
 
 
 group :development, :test do

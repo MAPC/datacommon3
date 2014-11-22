@@ -36,7 +36,7 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   # Paperclip configuration: attachments with Amazon S3 uploads
-  Paperclip.options[:command_path] = "/usr/local/bin/convert"
+  Paperclip.options[:command_path] = "/usr/local/bin/"
   
   config.paperclip_defaults = {
     storage: :filesystem,
