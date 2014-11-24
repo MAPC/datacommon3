@@ -224,7 +224,11 @@ CREATE TABLE _geo_extents (
     join_key text,
     table_suffix text,
     key_desc text,
-    key_name text
+    key_name text,
+    zipped_shapefile_file_name character varying(255),
+    zipped_shapefile_content_type character varying(255),
+    zipped_shapefile_file_size integer,
+    zipped_shapefile_updated_at timestamp without time zone
 );
 
 
@@ -294,7 +298,11 @@ CREATE TABLE _geo_layers (
     tablename text,
     tablenum text,
     institution_id integer,
-    datesavail text
+    datesavail text,
+    csv_file_name character varying(255),
+    csv_content_type character varying(255),
+    csv_file_size integer,
+    csv_updated_at timestamp without time zone
 );
 
 
@@ -7882,4 +7890,10 @@ INSERT INTO schema_migrations (version) VALUES ('20141121215139');
 INSERT INTO schema_migrations (version) VALUES ('20141121234755');
 
 INSERT INTO schema_migrations (version) VALUES ('20141122001639');
+
+INSERT INTO schema_migrations (version) VALUES ('20141124155155');
+
+INSERT INTO schema_migrations (version) VALUES ('20141124155210');
+
+INSERT INTO schema_migrations (version) VALUES ('20141124161012');
 
