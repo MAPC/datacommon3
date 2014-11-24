@@ -15,8 +15,8 @@ class DynamicVisualization < ActiveRecord::Base
   #       sessionstate column than the below. It's 
   #       probably in the Metaprogramming book.
 
-  has_attached_file :session_xml
-  validates_attachment_content_type :image, content_type: /\A.*\/xml\Z/
+  # has_attached_file :session_xml
+  # validates_attachment_content_type :image, content_type: /\A.*\/xml\Z/
 
 
   def to_s

@@ -9,8 +9,8 @@ class Layer < ActiveRecord::Base
     association_foreign_key: :geo_extent_id
 
   # TODO: This is unused at the moment.
-  has_attached_file :csv
-  validates_attachment_content_type :csv, content_type: /\A.*\/csv\Z/
+  # has_attached_file :csv
+  # validates_attachment_content_type :csv, content_type: /\A.*\/csv\Z/
 
   def csv_for(object)
     file = File.open "#{Rails.public_path}/system/"
