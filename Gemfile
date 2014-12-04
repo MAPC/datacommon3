@@ -16,7 +16,7 @@ gem 'chosen-rails',         '1.1.0'    # Use Chosen for friendly dropdowns
 gem 'nokogiri',             '>= 1.4.4' # Parsing XML
 
 # Styles
-# gem 'bootstrap-sass',       '~> 3.2.0' # Responsive base styles
+gem 'bootstrap-sass',       '~> 3.2.0' # Responsive base styles
 gem 'sass-rails',           '4.0.3' # Use SCSS for stylesheets
 # gem 'compass-rails'
 
