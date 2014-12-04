@@ -19,7 +19,7 @@
 /config/database.yml
 /config/secrets.yml
 
-.env
+.env*
 .DS_Store
 
 # Don't get the data dumps
