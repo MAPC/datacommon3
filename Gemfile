@@ -10,9 +10,10 @@ gem 'has_scope',            '0.5.1'  # Handle multiply-scoped models
 gem 'lazy_columns', github: 'jorgemanrubia/lazy_columns' # Lazy-load large columns
 
 # Views
-gem 'kaminari',             '0.16.1' # Pagination
-gem 'haml-rails',           '0.5.3'  # HAML views
-gem 'chosen-rails',         '1.1.0'  # Use Chosen for friendly dropdowns
+gem 'kaminari',             '0.16.1'   # Pagination
+gem 'haml-rails',           '0.5.3'    # HAML views
+gem 'chosen-rails',         '1.1.0'    # Use Chosen for friendly dropdowns
+gem 'nokogiri',             '>= 1.4.4' # Parsing XML
 
 # Styles
 # gem 'bootstrap-sass',       '~> 3.2.0' # Responsive base styles

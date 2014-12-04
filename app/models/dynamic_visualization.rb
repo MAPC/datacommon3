@@ -1,3 +1,5 @@
+require 'nokogiri'
+
 class DynamicVisualization < ActiveRecord::Base
   self.table_name = 'snapshots_visualization'
 
@@ -23,54 +25,16 @@ class DynamicVisualization < ActiveRecord::Base
     data_sources.map {|s| s.title}.join(', ')
   end
 
-  def basepath
-    "#{Rails.public_path}/dynamic_visualizations"
-  end
-
-
-  def filename
-    filename = read_attribute(:sessionstate).rpartition('/').last
-    filename.split('.').first
-  end
-
-
-  def base_image_path
-    "#{basepath}/images/#{filename}.png"
-  end
-
-
-  def image_path(object, method=:slug)
-    if has_preview?(object, method)
-      # TODO return object.to_s instead of sending methods if it's already
-      #      a string or an integer
-      "/dynamic_visualizations/images/#{object.send(method)}/#{id}.png"
-    end
-  end
-
 
   def preview_path(object, method=:slug)
-    "#{basepath}/images/#{object.send(method)}/#{id}.png"
+    return "/dynamic_visualizations/images/#{object.send(method)}/#{id}.png" if Rails.env == 'development'
+    return "http://#{ENV.fetch('S3_BUCKET_NAME')}/dynamic_visualizations/images/#{object.send(method)}/#{id}.png" if Rails.env == 'production'
   end
 
 
-  def has_preview?(object, method=:slug)
-    File.exists? preview_path(object, method)
-  end
-
-
-  def has_no_preview?(object, method=:slug)
-    !has_preview?(object, method)
-  end
-
-  
-  def sessionstate_path
-    read_attribute(:sessionstate)
-  end
-  
-
-  def sessionstate
-    file_path = "#{basepath}/sessionstates/#{filename}.xml"
-    File.open(File.expand_path(file_path), 'rb') { |file| file.read }
+  def preview_url(object, method=:slug)
+    return "/system/dynamic_visualizations/images/#{object.send(method)}/#{id}.png" if Rails.env == 'development'
+    return "http://#{ENV.fetch('S3_BUCKET_NAME')}/dynamic_visualizations/images/#{object.send(method)}/#{id}.png" if Rails.env == 'production'
   end
 
 
@@ -81,7 +45,13 @@ class DynamicVisualization < ActiveRecord::Base
     # Capital S is to match only non-whitespace chars
     inside_brackets  = /\{{2}\s*(\S*)\s*\}{2}/i
 
-    state    = sessionstate.dup
+    if Rails.env == 'development'
+      state = Nokogiri::XML(open("#{Rails.public_path}/system#{session_state.path}")).to_s
+    end
+
+    if Rails.env == 'production'
+      state = Nokogiri::XML(open(session_state.url)).to_s
+    end
     captures = state.match(bracketed).captures
 
     captures.each do |expression|
