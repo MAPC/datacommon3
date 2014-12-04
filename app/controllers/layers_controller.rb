@@ -32,8 +32,8 @@ class LayersController < ApplicationController
     spatial  = File.join spatial_dir,  "#{extent.tablename}.zip"
 
     if Rails.env == 'production'
-      tabular  = open(tabular)   {|f| f.read}
-      spatial  = open(spatial)   {|f| f.read}
+      tabular  = open(tabular)  {|f| f.read}
+      spatial  = open(spatial)  {|f| f.read}
       metadata = open(metadata) {|f| f.read}
     else
       tabular  = File.open(tabular)
