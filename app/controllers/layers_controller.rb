@@ -15,15 +15,31 @@ class LayersController < ApplicationController
   def download
     layer  = Layer.find_by tablename: params[:id]
     extent = SpatialExtent.find params[:extent_id]
-    sys_path = Rails.public_path, 'system'
+    if Rails.env == 'production'
+      sys_path = "https://s3.amazonaws.com/#{ENV.fetch('S3_BUCKET_NAME')}"
+    else
+      sys_path = Rails.public_path, 'system'
+    end
+
+
 
     tabular_dir  = File.join( sys_path, 'layers', 'csvs' )
     metadata_dir = File.join( sys_path, 'layers', 'metadata' )
     spatial_dir  = File.join( sys_path, 'spatial_extents', 'zipped_shapefiles' )
     
-    tabular  = File.open( File.join tabular_dir,  "#{layer.tablename}#{extent.table_suffix}.csv" )
-    metadata = File.open( File.join metadata_dir, "#{layer.tablename}#{extent.table_suffix}_meta.csv" )
-    spatial  = File.open( File.join spatial_dir,  "#{extent.tablename}.zip" )
+    tabular  = File.join tabular_dir,  "#{layer.tablename}#{extent.table_suffix}.csv"
+    metadata = File.join metadata_dir, "#{layer.tablename}#{extent.table_suffix}_meta.csv"
+    spatial  = File.join spatial_dir,  "#{extent.tablename}.zip"
+
+    if Rails.env == 'production'
+      tabular  = open(tabular)   {|f| f.read}
+      spatial  = open(spatial)   {|f| f.read}
+      metadata = open(metadata) {|f| f.read}
+    else
+      tabular  = File.open(tabular)
+      spatial  = File.open(spatial)
+      metadata = File.open(metadata)
+    end
     
     zip_file_name = File.join(Rails.root, 'tmp', 'downloads', "#{layer.title} (#{extent.title}).zip")
 
