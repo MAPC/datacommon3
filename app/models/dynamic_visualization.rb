@@ -11,12 +11,8 @@ class DynamicVisualization < ActiveRecord::Base
     join_table: :snapshots_visualization_topics,
     association_foreign_key: :topic_id
 
-  # TODO: There's a more concise way to alias the
-  #       sessionstate column than the below. It's 
-  #       probably in the Metaprogramming book.
-
-  # has_attached_file :session_xml
-  # validates_attachment_content_type :image, content_type: /\A.*\/xml\Z/
+  has_attached_file :session_state, path: "/:class/:attachment/:filename"
+  validates_attachment_content_type :session_state, content_type: /\A.*\/xml\Z/
 
 
   def to_s
@@ -46,7 +42,7 @@ class DynamicVisualization < ActiveRecord::Base
   def image_path(object, method=:slug)
     if has_preview?(object, method)
       # TODO return object.to_s instead of sending methods if it's already
-      # a string or an integer
+      #      a string or an integer
       "/dynamic_visualizations/images/#{object.send(method)}/#{id}.png"
     end
   end

@@ -3,6 +3,9 @@
   :logo:
   - :favicon
   - :header
+:StaticMap:
+  :map:
+  - :thumbnail
 :Visualization:
   :image:
   - :featured

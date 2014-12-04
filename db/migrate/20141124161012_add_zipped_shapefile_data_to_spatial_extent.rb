@@ -1,11 +1,23 @@
+ActiveRecord::Base.establish_connection :geographic
+
 class AddZippedShapefileDataToSpatialExtent < ActiveRecord::Migration
+
+  disable_ddl_transaction!
+
   def up
     SpatialExtent.find_each do |s|
+      puts "SpatialExtent: #{s.id} #{s.title}"
       s.zipped_shapefile_file_name    = "#{s.tablename}.zip"
-      f = File.open("#{Rails.public_path}/system/spatial_extents/zipped_shapefiles/#{s.zipped_shapefile_file_name}")
-      s.zipped_shapefile_file_size    = f.size
-      s.zipped_shapefile_content_type = IO.popen(["file", "--brief", "--mime-type", f.path], in: :close, err: :close).read.chomp
+      puts "URL: #{s.zipped_shapefile.url}"
+      
+      file = open(s.zipped_shapefile.url) {|f| f.read }
+      s.zipped_shapefile_file_size    = file.size
+
+      # Next line used to be
+      # IO.popen(["file", "--brief", "--mime-type", f.path], in: :close, err: :close).read.chomp
+      s.zipped_shapefile_content_type = 'application/zip' 
       s.zipped_shapefile_updated_at   = Time.now
+      
       if !s.valid?
         puts s.errors.full_messages 
       end

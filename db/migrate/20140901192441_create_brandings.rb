@@ -6,5 +6,8 @@ class CreateBrandings < ActiveRecord::Migration
       t.string  :tagline
       t.string  :map_gallery_intro
     end
+    
+    Branding.create_or_update({ id: 1, institution_id: 1 })
+    Branding.create_or_update({ id: 2, institution_id: 2 })
   end
 end

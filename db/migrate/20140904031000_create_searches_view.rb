@@ -27,6 +27,7 @@ class CreateSearchesView < ActiveRecord::Migration
           weave_visualization.title AS term
         FROM weave_visualization
 
+
         UNION
 
 
@@ -36,32 +37,6 @@ class CreateSearchesView < ActiveRecord::Migration
           weave_visualization.abstract AS term
         FROM weave_visualization
 
-        UNION
-
-
-        SELECT
-          layers.id AS searchable_id,
-          'Layer' AS searchable_type,
-          layers.title AS term
-        FROM layers
-
-        UNION
-
-
-        SELECT
-          layers.id AS searchable_id,
-          'Layer' AS searchable_type,
-          layers.alt_title AS term
-        FROM layers
-
-        UNION
-
-
-        SELECT
-          layers.id AS searchable_id,
-          'Layer' AS searchable_type,
-          layers.descriptn AS term
-        FROM layers
 
         UNION
 
@@ -72,6 +47,7 @@ class CreateSearchesView < ActiveRecord::Migration
           mbdc_calendar.title AS term
         FROM mbdc_calendar
 
+
         UNION
 
 
@@ -81,15 +57,45 @@ class CreateSearchesView < ActiveRecord::Migration
           mbdc_calendar.abstract AS term
         FROM mbdc_calendar
 
+        
+        UNION
+
+
+        SELECT
+          _geo_layers.id AS searchable_id,
+          'Layer' AS searchable_type,
+          _geo_layers.title AS term
+        FROM _geo_layers
+
+
+        UNION
+
+
+        SELECT
+          _geo_layers.id AS searchable_id,
+          'Layer' AS searchable_type,
+          _geo_layers.alt_title AS term
+        FROM _geo_layers
+
+
+        UNION
+
+
+        SELECT
+          _geo_layers.id AS searchable_id,
+          'Layer' AS searchable_type,
+          _geo_layers.descriptn AS term
+        FROM _geo_layers
+
     """
     query = q.gsub("\n", '').gsub(/\s{2,}/, ' ')
     execute query
 
     execute "CREATE INDEX index_weave_visualization_on_title ON weave_visualization USING gin(to_tsvector('english',title))"
     execute "CREATE INDEX index_weave_visualization_on_abstract ON weave_visualization USING gin(to_tsvector('english',abstract))"
-    execute "CREATE INDEX index_layers_on_title ON layers USING gin(to_tsvector('english',title))"
-    execute "CREATE INDEX index_layers_on_alt_title ON layers USING gin(to_tsvector('english',alt_title))"
-    execute "CREATE INDEX index_layers_on_descriptn ON layers USING gin(to_tsvector('english',descriptn))"
+    # execute "CREATE INDEX index_layers_on_title ON _geo_layers USING gin(to_tsvector('english',title))"
+    # execute "CREATE INDEX index_layers_on_alt_title ON _geo_layers USING gin(to_tsvector('english',alt_title))"
+    # execute "CREATE INDEX index_layers_on_descriptn ON _geo_layers USING gin(to_tsvector('english',descriptn))"
     execute "CREATE INDEX index_mbdc_calendar_on_title ON mbdc_calendar USING gin(to_tsvector('english',title))"
     execute "CREATE INDEX index_mbdc_calendar_on_abstract ON mbdc_calendar USING gin(to_tsvector('english',abstract))"
   end
@@ -98,9 +104,9 @@ class CreateSearchesView < ActiveRecord::Migration
     execute "DROP VIEW searches"
     execute "DROP INDEX index_weave_visualization_on_title"
     execute "DROP INDEX index_weave_visualization_on_abstract"
-    execute "DROP INDEX index_layers_on_title"
-    execute "DROP INDEX index_layers_on_alt_title"
-    execute "DROP INDEX index_layers_on_descriptn"
+    # execute "DROP INDEX index_layers_on_title"
+    # execute "DROP INDEX index_layers_on_alt_title"
+    # execute "DROP INDEX index_layers_on_descriptn"
     execute "DROP INDEX index_mbdc_calendar_on_title"
     execute "DROP INDEX index_mbdc_calendar_on_abstract"
   end

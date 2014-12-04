@@ -11,13 +11,13 @@
 // about supported directives.
 //
 //= require jquery
-//= require bootstrap-sprockets
 //= require jquery_ujs
-//= require chosen.jquery
-//require turbolinks
+//= require bootstrap.min
+//= require chosen.jquery.min
 //= require swfobject
 //= require retina
 //= require_tree .
+
 
 $(document).on('ready', function () {
 

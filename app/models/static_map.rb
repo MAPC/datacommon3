@@ -11,6 +11,7 @@ class StaticMap < ActiveRecord::Base
     foreign_key:             :calendar_id,
     association_foreign_key: :topic_id
 
+  has_attached_file :map, styles: { thumbnail: ['500x375>', :png] }
   
   belongs_to :institution
   

@@ -41,6 +41,7 @@ Rails.application.configure do
   config.paperclip_defaults = {
     storage: :filesystem,
     url: "/system/:class/:attachment/:style/:filename",
+    path: "#{Rails.public_path}/system/:class/:attachment/:style/:filename",
   }
 
 end
