@@ -33,9 +33,10 @@ gem 'turbolinks',   '2.4.0' # Following links are faster.
 
 
 # Files
-gem 'paperclip', '~> 3.0' # Handle file attachments
+gem 'paperclip',  '~> 3.0' # Handle file attachments
 gem 'retina_rails'
-gem 'aws-sdk',   '1.33.0' # Upload files to Amazon S3
+gem 'aws-sdk',    '1.33.0' # Upload files to Amazon S3
+gem 'asset_sync'           # Upload assets to S3
 gem 'rubyzip', '>= 1.0.0', require: 'zip' # Zip files for downloading
 
 
