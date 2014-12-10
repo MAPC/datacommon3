@@ -19,4 +19,6 @@ class SpatialExtent < ActiveRecord::Base
     title
   end
 
+  alias_attribute :description, :desc
+
 end

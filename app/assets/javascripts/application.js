@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap.min
+//= require bootstrap
 //= require chosen.jquery.min
 //= require swfobject
 //= require retina

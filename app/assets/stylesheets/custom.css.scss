@@ -146,6 +146,11 @@ a.dropdown-toggle {
   font-weight: 300;
   color: white !important;
   background-color: $dc-blue !important;
+  border-color: $dc-blue !important;
+}
+
+.dropdown-menu {
+  margin-top: 0px !important;
 }
 
 .header-item {

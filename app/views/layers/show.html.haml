@@ -1,9 +1,11 @@
-%h1= link_to "< Layers", layers_path
+%h1= link_to "< Data", layers_path
 
 %h2= @layer.title
 %p=  @layer.description
 
 .row
+  -# There used to be a map here.
+  -# It might someday preview a layer's tileset.
   -# .col-sm-6.col-xs-12
   -#   #map.tall
    
@@ -49,19 +51,35 @@
             .modal-footer
               %button.btn.btn-default{type: 'button', data: {dismiss: 'modal'}} Close window
 
+      #geographies.modal.fade{role: 'dialog'}
+        .modal-dialog
+          .modal-content
+            .modal-header
+              %button.close{type: 'button', data: {dismiss: 'modal'}} &times;
+              %h3 Description of available geographies
+            .modal-body
+              - @layer.spatial_extents.each do |extent|
+                %h5= extent
+                %p= extent.description
+            .modal-footer
+              %button.btn.btn-default{type: 'button', data: {dismiss: 'modal'}} Close window
+
 
     .center
 
       .dropdown.btn-group
         %a.btn.btn-success.dropdown-toggle{href: '#', data: {toggle: "dropdown"}}
           %span.glyphicon.glyphicon-cloud-download
-          Download Layer and Metadata
+          Download Data and Metadata
           %span.caret
         %ul.dropdown-menu
           %li.dropdown-header Spatial
           - @layer.spatial_extents.each do |extent|
             %li= link_to "#{extent}", download_layer_path(@layer, extent_id: extent.id)
-          
+      &nbsp;
+      %small
+        %a{href: '#', data: {toggle: 'modal', target: '#geographies'}}
+          What are these geographies?
 
 :javascript
 

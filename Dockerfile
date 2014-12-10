@@ -11,7 +11,7 @@ MAINTAINER Matt Cloyd "mcloyd@mapc.org"
 
 # Change .env.dev to whichever .env file you are building for.
 ADD .env.dev /usr/src/app/.env
-# RUN foreman run -e .env rake assets:precompile
+RUN foreman run -e .env rake assets:precompile
 
 # Unicorn runs on port 8016
 EXPOSE 8016

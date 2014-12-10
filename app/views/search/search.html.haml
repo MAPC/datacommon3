@@ -1,8 +1,21 @@
 %h1 "#{params[:search]}"
 %h2.page-header Search Results
 
-- @results.each do |result|
-  - unless result.nil?
-    = render partial: "#{result.class.name.tableize}/#{result.class.name.underscore}", locals: {:"#{result.class.name.underscore}" => result}
+%h3 Data
+= render @results.layers
+
+%br
+%br
+
+%h3 Visualizations
+= render @results.visualizations
+
+%br
+%br
+
+%h3 Maps
+= render @results.static_maps
+
+
 
 -#= paginate @results

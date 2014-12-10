@@ -2,7 +2,8 @@ class SearchController < ApplicationController
   before_filter :load_institution
 
   def search
-    @results = Search.new(query: search_param).results#.page(params[:page])
+    results  = Search.new(query: search_param).results.compact#.page(params[:page])
+    @results = SearchFacade.new(results)
   end
 
   def suggest
