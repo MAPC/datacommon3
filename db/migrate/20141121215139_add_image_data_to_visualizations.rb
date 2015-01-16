@@ -3,6 +3,7 @@ class AddImageDataToVisualizations < ActiveRecord::Migration
     Visualization.all.each do |v|
       puts "Visualization: #{v.id}"
       v.image_file_name    = "#{v.id}.png"
+      puts "\t URL: #{v.image.url}"
       v.image_content_type = "image/png"
       v.image_file_size    = open(v.image.url) { |f| f.read }.size
       v.image_updated_at   = Time.now

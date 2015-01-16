@@ -9,8 +9,8 @@ MAINTAINER Matt Cloyd "mcloyd@mapc.org"
 # .env.prep for the staging server
 # .env.live for the production server
 
-# Change .env.dev to whichever .env file you are building for.
-ADD .env.dev /usr/src/app/.env
+# Change .env.* to whichever .env file you are building for.
+ADD .env.prod /usr/src/app/.env
 RUN foreman run -e .env rake assets:precompile
 
 # Unicorn runs on port 8016

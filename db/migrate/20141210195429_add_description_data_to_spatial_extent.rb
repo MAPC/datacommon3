@@ -1,3 +1,5 @@
+ActiveRecord::Base.establish_connection :geographic
+
 class AddDescriptionDataToSpatialExtent < ActiveRecord::Migration
   def up
     SpatialExtent.find_by( title: "Census Block Groups"        ).update_attribute(:desc, "A Census Block Group is a geographical unit used by the United States Census Bureau which is between the Census Tract and the Census Block. It is the smallest geographical unit for which the bureau publishes sample data, i.e. data which is only collected from a fraction of all households. Typically, Block Groups have a population of 600 to 3,000 people. Source: Wikipedia"                                                                                                                                                             )

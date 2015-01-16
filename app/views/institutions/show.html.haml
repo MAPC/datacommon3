@@ -15,6 +15,47 @@
     %a.right.carousel-control{href: "#carousel-dc", role: "button", data: {slide: "next"}}
       %span.glyphicon.glyphicon-chevron-right
 
+.row
+  .exp.col-xs-8.col-xs-offset-2.col-sm-offset-0.col-sm-6.col-md-3
+    = link_to layers_path do
+      %h5.exp.data-catalog          Data Catalog
+      = image_tag 'explanations/data-catalog.png', class: 'explanation-icon'
+    %p
+      Download over 300 datasets, available in tabular and spatial formats, from the 
+      = succeed '.' do
+        = link_to 'Data Catalog', layers_path
+      Search for data by topic, dataset, or keyword, and download for whatever geography you need.
+
+  .exp.col-xs-8.col-xs-offset-2.col-sm-offset-0.col-sm-6.col-md-3
+    = link_to municipalities_path do
+      %h5.exp.community-snapshots   Community Snapshots
+      = image_tag 'explanations/community-snapshots.png', class: 'explanation-icon'
+    %p
+      Find topical data by municipality or subregion in 
+      = succeed '.' do
+        = link_to 'Community Snapshots', municipalities_path
+      Essentially a dashboard about housing, education, the arts, and more, tailored to your community.
+
+  .exp.col-xs-8.col-xs-offset-2.col-sm-offset-0.col-sm-6.col-md-3
+    = link_to visualizations_path do
+      %h5.exp.visualization-gallery Visualization Gallery
+      = image_tag 'explanations/visualization-gallery.png', class: 'explanation-icon'
+    %p
+      Access hundreds of user-made maps, charts, tables and more in the 
+      = succeed '.' do
+        = link_to 'Visualization Gallery', visualizations_path
+      Explore these visualizations by topic area, dataset, or keyword, and learn how to make your own.
+
+  .exp.col-xs-8.col-xs-offset-2.col-sm-offset-0.col-sm-6.col-md-3
+    = link_to static_maps_path do
+      %h5.exp.map-gallery           Map Gallery
+      = image_tag 'explanations/map-gallery.png', class: 'explanation-icon'
+    %p
+      View mapping and data projects completed by regional planning agencies in the
+      = succeed '.' do
+        = link_to 'Map Gallery', static_maps_path
+      For beginner data users or regional planning enthusiests, this is a great way to learn more about work going on around the region.
+
 
 .row
   .col-xs-10.col-xs-offset-1

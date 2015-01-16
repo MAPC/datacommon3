@@ -100,6 +100,7 @@ h5.center {
   text-transform: uppercase;
 }
 
+
 p a {
   color: $dc-blue;
   font-weight: 400;
@@ -296,6 +297,46 @@ img.header-logo {
     color: #FFFFFF;
   }
 }
+
+
+img.explanation-icon {
+  display: block;
+  margin: 0px auto;
+  max-width: 200px;
+  max-height: 175px;
+}
+
+h5.exp {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.6em;
+  color: white;
+  height: auto;
+  padding: 10px;
+  overflow: hidden;
+}
+
+div.exp { 
+  a { text-decoration: none !important; }
+  h5:hover { opacity: 0.8; }
+}
+
+.data-catalog {
+  background-color: #660066;
+}
+.community-snapshots {
+  background-color: #00bfac;
+}
+.visualization-gallery {
+  background-color: #46ad24;
+}
+.map-gallery {
+  background-color: #ff6633;
+}
+
+
+
 
 .featured-text {
   background:     rgba(0,0,0,0.5);
