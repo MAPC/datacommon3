@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/MAPC/datacommon3.svg?branch=master)](https://travis-ci.org/MAPC/datacommon3)
 
 ```
 foreman run rails c
