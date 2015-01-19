@@ -5,7 +5,7 @@ default: &default
   password: <%= ENV.fetch('DB_PASSWORD') { nil } %>
   host:     <%= ENV.fetch('DB_PORT_5432_TCP_ADDR') { 'localhost' } %>
   port:     <%= ENV.fetch('DB_PORT_5432_TCP_PORT') { '5432' }      %>
-  schema_search_path: "public"
+  schema_search_path: "datacommon,public"
   timeout:  5000
   pool:     5
 
@@ -18,7 +18,7 @@ geographic:
 
 development: &development
   <<: *default
-  schema_search_path: "metadata,public"
+  schema_search_path: "public"
 
 
 production: &production
