@@ -40,15 +40,18 @@ gem 'asset_sync'           # Upload assets to S3
 gem 'rubyzip', '>= 1.0.0', require: 'zip' # Zip files for downloading
 
 
-# Server
-gem 'foreman', '0.75.0' # Manage the server and auxiliary processes
-gem 'unicorn-rails'     # Use Unicorn as the app server
-
-
 # Utilities
 gem 'mail'
 gem 'stamp', '0.6.0' # Convenient timestamping
 gem 'wannabe_bool'   # To convert ENV strings to booleans
+
+
+# Server
+gem 'foreman', '0.75.0' # Manage the server and auxiliary processes
+
+group :production do
+  gem 'unicorn-rails'     # Use Unicorn as the app server
+end
 
 
 group :development, :test do
@@ -78,6 +81,10 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   # gem 'spring'
+end
+
+group :test do
+  gem 'rake'
 end
 
 
