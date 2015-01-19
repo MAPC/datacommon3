@@ -1,1 +1,1 @@
-web: rails server --port=8016
+web: rails server
