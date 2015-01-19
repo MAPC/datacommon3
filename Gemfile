@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.1.1'
 
 gem 'rails',                '4.1.5'
 
@@ -51,6 +52,7 @@ gem 'foreman', '0.75.0' # Manage the server and auxiliary processes
 
 group :production do
   gem 'unicorn-rails'     # Use Unicorn as the app server
+  gem 'rails_12factor'
 end
 
 
