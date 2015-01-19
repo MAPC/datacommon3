@@ -1,4 +1,4 @@
-ActiveRecord::Base.establish_connection :geographic
+# ActiveRecord::Base.establish_connection :geographic
 
 class AddZippedShapefileDataToSpatialExtent < ActiveRecord::Migration
 
@@ -7,7 +7,7 @@ class AddZippedShapefileDataToSpatialExtent < ActiveRecord::Migration
   def up
     SpatialExtent.find_each do |s|
       puts "SpatialExtent: #{s.id} #{s.title}"
-      s.zipped_shapefile_file_name    = "#{s.tablename}.zip"
+      s.zipped_shapefile_file_name = "#{s.tablename}.zip"
       puts "URL: #{s.zipped_shapefile.url}"
       
       file = open(s.zipped_shapefile.url) {|f| f.read }

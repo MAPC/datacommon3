@@ -87,7 +87,7 @@ Rails.application.configure do
     storage: :s3,
     url:  ":s3_domain_url",
     path: "/:class/:attachment/:style/:filename",
-    default_url: "http://metrobostondatacommon.org/site_media/weave_thumbnails/:id_:style.:extension",
+    default_url: "http://metrobostondatacommon.org/site_media/weave_thumbnails/:id_featured.:extension",
     s3_host_name: 's3-website-us-east-1.amazonaws.com',
     s3_credentials: {
       bucket:            ENV.fetch('S3_BUCKET_NAME'),

@@ -1,4 +1,4 @@
-ActiveRecord::Base.establish_connection :geographic
+# ActiveRecord::Base.establish_connection :geographic
 
 class AddDescriptionToSpatialExtent < ActiveRecord::Migration
   def change
