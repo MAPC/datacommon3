@@ -1,6 +1,6 @@
 class SpatialExtent < ActiveRecord::Base
 
-  # self.establish_connection :geographic if Rails.env == 'production'
+  self.establish_connection :geographic
   self.table_name = '_geo_extents'
 
   has_and_belongs_to_many :layers,

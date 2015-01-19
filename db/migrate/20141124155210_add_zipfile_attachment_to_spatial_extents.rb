@@ -1,4 +1,4 @@
-# ActiveRecord::Base.establish_connection :geographic
+ActiveRecord::Base.establish_connection :geographic
 
 class AddZipfileAttachmentToSpatialExtents < ActiveRecord::Migration
   def up

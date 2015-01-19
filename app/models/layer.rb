@@ -1,7 +1,7 @@
 class Layer < ActiveRecord::Base
   belongs_to :institution
 
-  # self.establish_connection :geographic if Rails.env == 'production'
+  self.establish_connection :geographic
   self.table_name = '_geo_layers'
 
   has_and_belongs_to_many :spatial_extents,
