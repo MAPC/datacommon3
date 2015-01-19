@@ -15,9 +15,6 @@
 /log/*.log
 /tmp
 
-# Don't really want connection details out
-/config/secrets.yml
-
 .env*
 .DS_Store
 
