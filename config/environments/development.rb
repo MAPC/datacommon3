@@ -36,12 +36,32 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   # Paperclip configuration: attachments with Amazon S3 uploads
-  Paperclip.options[:command_path] = "/usr/local/bin/"
+  Paperclip.options[:command_path] = "/usr/local/bin/convert"
   
-  config.paperclip_defaults = {
-    storage: :filesystem,
-    url: "/system/:class/:attachment/:style/:filename",
-    path: "#{Rails.public_path}/system/:class/:attachment/:style/:filename",
-  }
+  if ENV['FILESYSTEM_STORAGE']
+
+    config.paperclip_defaults = {
+      storage: :filesystem,
+      url: "/system/:class/:attachment/:style/:filename",
+      path: "#{Rails.public_path}/system/:class/:attachment/:style/:filename",
+    }
+
+  else
+
+    config.paperclip_defaults = {
+      storage: :s3,
+      url:  ":s3_domain_url",
+      path: "/:class/:attachment/:style/:filename",
+      default_url: "http://metrobostondatacommon.org/site_media/weave_thumbnails/:id_featured.:extension",
+      s3_host_name: 's3-website-us-east-1.amazonaws.com',
+      s3_credentials: {
+        bucket:            ENV.fetch('S3_BUCKET_NAME'),
+        access_key_id:     ENV.fetch('AWS_ACCESS_KEY_ID'),
+        secret_access_key: ENV.fetch('AWS_SECRET_ACCESS_KEY')
+      },
+      s3_permissions: :public_read
+    }
+    
+  end
 
 end
