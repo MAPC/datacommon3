@@ -7,4 +7,8 @@ class Profile < ActiveRecord::Base
     read_attribute(:name).titleize
   end
 
+  def fname
+    user.fname
+  end
+
 end
