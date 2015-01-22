@@ -23,7 +23,7 @@ class StaticMap < ActiveRecord::Base
   end
 
 
-  paginates_per 8
+  paginates_per 9
 
 
   def date

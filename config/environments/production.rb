@@ -97,3 +97,6 @@ Rails.application.configure do
     s3_permissions: :public_read
   }
 end
+
+Rails.logger = Logger.new(STDOUT)
+Rails.logger.level = 0
