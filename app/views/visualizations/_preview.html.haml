@@ -1,18 +1,13 @@
 %h5= vis
-= image_tag vis.preview_url(@s.geography), id: "vis-#{vis.id}"
-
 .snapshot-vis{class: "#{@s.area_type_name}", id: "vis-#{vis.id}"}
+  = image_tag vis.preview_url(@s.geography), id: "vis-#{vis.id}"
+  -# %script{id: "sessionstate-#{vis.id}", type: 'text/xml'}
+  -#   #{vis.rendered_state(@s.geography).html_safe}
 
-
--# %script{id: "sessionstate-#{vis.id}", type: 'text/xml'}
--#   #{vis.rendered_state(@s.geography).html_safe}
-
-:javascript
-  $(document).on('ready', function () {
-    DC.embedWeaveOnClick("#vis-#{vis.id}", '#{@s.geography_slug}', '#{@s.area_type_name.pluralize}');
-  });
-
-
+  :javascript
+    $(document).on('ready', function () {
+      DC.embedWeaveOnClick("#vis-#{vis.id}", '#{@s.geography_slug}', '#{@s.area_type_name.pluralize}');
+    });
 
 -# :javascript
 
