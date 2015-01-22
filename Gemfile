@@ -46,13 +46,13 @@ gem 'mail'
 gem 'stamp', '0.6.0' # Convenient timestamping
 gem 'wannabe_bool'   # To convert ENV strings to booleans
 
-
 # Server
 gem 'foreman', '0.75.0' # Manage the server and auxiliary processes
 
 group :production do
   gem 'unicorn-rails'     # Use Unicorn as the app server
   gem 'rails_12factor'
+  gem 'airbrake'
 end
 
 
