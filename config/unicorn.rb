@@ -1,26 +1,29 @@
-# Set environment to development unless something else is specified.
-env = ENV['RAILS_ENV'] || 'development'
+# Set app_name to the root folder
+app_name = File.basename( File.expand_path("../..", __FILE__) )
 
-worker_processes 4
+# Set environment to development unless something else is specified.
+env = ENV.fetch('RAILS_ENV') { 'development' }
+
+worker_processes ENV.fetch('WEB_WORKERS') { 4 }
 
 # listen on both a Unix domain socket and a TCP port,
 # we use a shorter backlog for quicker failover when busy
-listen '/tmp/datacommon.socket', backlog: 64
-listen 8016
+listen "/tmp/#{ app_name }.socket", backlog: 64
+listen ENV.fetch('PORT') { 3000 }
 
 # Preload our app for more specified
 preload_app true
 
 # Shut down workers after 30 seconds instead of the default 60
-timeout 30
+timeout ENV.fetch('WEB_WORKERS_TIMEOUT') { 30 }
 
-pid '/tmp/unicorn.datacommon.pid'
+pid "/tmp/unicorn.#{ app_name }.pid"
 
 # Production-specific settings
-# if env == 'production'
+if env == 'production'
 #   # Help ensure your application will always spawn in the
 #   # symlinked 'current' directory that Capistrano sets up
-#   deploy_to = '/home/deployer/apps/staging.datacommon.org'
+#   deploy_to = "/home/deployer/apps/staging.#{ app_name }.org"
 #   working_directory "#{deploy_to}/current"
 
 #   # feel free to point this anywhere accessible on the filesystem
@@ -29,7 +32,7 @@ pid '/tmp/unicorn.datacommon.pid'
 
 #   stderr_path "#{shared_path}/log/unicorn.stderr.log"
 #   stdout_path "#{shared_path}/log/unicorn.stdout.log"
-# end
+end
 
 before_fork do |server, worker|
   # the following is highly recommended for Rails + 'preload_app true'
@@ -40,7 +43,7 @@ before_fork do |server, worker|
 
   # Before forking, kill the master process that belongs to the
   # .oldbin PID. This enables 0 downtime deploys
-  old_pid = '/tmp/unicorn.datacommon.pid.oldbin'
+  old_pid = "/tmp/unicorn.#{ app_name }.pid.oldbin"
 
   if File.exists?(old_pid) && server.pid != old_pid
     begin

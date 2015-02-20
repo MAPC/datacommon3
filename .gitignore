@@ -4,30 +4,25 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
+# Mac OS X: Add '.DS_Store' to your ~/.gitignore_global
+
+# Ignore .env files, containing sensitive information
+.env*
+
 # Ignore bundler config.
 /.bundle
 
 # Ignore the default SQLite database.
-/db/*.sqlite3
-/db/*.sqlite3-journal
+/db/*.sqlite3*
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
 
-.env*
-.DS_Store
+# Ignore data dumps
+/db/data/
 
-# Don't get the data dumps
-/db/data/*
-
-# Don't include the thumbnails in git
-/public/visualizations/
-/public/dynamic_visualizations/
-/public/layers/exports/
+# Ignore uploads, attachments, and assets
 /public/system
-
-sloccount.txt
-
-/public/assets/
+/public/assets
 assets_manifest.json
