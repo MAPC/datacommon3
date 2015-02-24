@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe User do
 
-  subject(:user) { create(:user) }
+  subject(:user) { build(:user) }
   
   it "has a valid factory" do
     expect(user).to be_valid
@@ -41,6 +41,15 @@ describe User do
       expect(build(:user, username: nil)).to_not be_valid
     end
 
+    it 'requires a unique username' do
+      user1 = build(:new_user,  username: "the_user_name")
+      user2 = build(:new_user,  username: "the_user_name")
+      expect(user1).to be_valid
+      expect(user2).to be_valid
+      user1.save!
+      expect(user2).not_to be_valid
+    end
+
     it 'requires an valid email address' do
       expect(build(:user, email:  '')).to_not be_valid
       expect(build(:user, email: nil)).to_not be_valid
@@ -50,6 +59,7 @@ describe User do
     it 'requires a unique email address' do
       user1 = create(:new_user, email: "the.same@email.net")
       user2 = build(:new_user,  email: "the.same@email.net")
+      expect(user1).not_to be_valid
       expect(user2).not_to be_valid
     end
 
