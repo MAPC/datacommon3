@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141031173625) do
+ActiveRecord::Schema.define(version: nil) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -131,8 +131,18 @@ ActiveRecord::Schema.define(version: 20141031173625) do
   add_index "mbdc_topic", ["slug"], name: "mbdc_topic_slug_like", using: :btree
 
 
-# Could not dump table "snapshots_regionalunit" because of following StandardError
-#   Unknown type 'geometry' for column 'geometry'
+  create_table "snapshots_regionalunit", force: true do |t|
+    t.string   :unitid
+    t.string   :name,                   null: false
+    t.string   :slug,                   null: false
+    t.integer  :regiontype_id
+    t.geometry :geometry,               null: false
+    t.text     :short_desc
+    t.string   :short_desc_markup_type, null: false
+    t.text     :_short_desc_rendered,   null: false
+    t.string   :subunit_ids
+  end
+
 
   create_table "snapshots_visualization", force: true do |t|
     t.string  "title",         limit: 100,             null: false
@@ -153,14 +163,6 @@ ActiveRecord::Schema.define(version: 20141031173625) do
   add_index "snapshots_visualization_topics", ["visualization_id", "topic_id"], name: "snapshots_visualization__visualization_id_34c1e30e30858e56_uniq", unique: true, using: :btree
   add_index "snapshots_visualization_topics", ["visualization_id"], name: "snapshots_visualization_topics_visualization_id", using: :btree
 
-  create_table "spatial_ref_sys", id: false, force: true do |t|
-    t.integer "srid",                   null: false
-    t.string  "auth_name", limit: 256
-    t.integer "auth_srid"
-    t.string  "srtext",    limit: 2048
-    t.string  "proj4text", limit: 2048
-  end
-
   create_table "weave_visualization", force: true do |t|
     t.string   "title",          limit: 100
     t.text     "abstract"
@@ -169,7 +171,6 @@ ActiveRecord::Schema.define(version: 20141031173625) do
     t.text     "sessionstate",                                   null: false
     t.string   "year",           limit: 50
     t.integer  "original_id"
-    t.integer  "featured"
   end
 
   add_index "weave_visualization", ["original_id"], name: "weave_visualization_original_id", using: :btree

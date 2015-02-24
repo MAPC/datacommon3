@@ -6,6 +6,6 @@ class ApplicationController < ActionController::Base
 
   def load_institution
     subdomain = request.subdomain.split('.').first
-    @institution = Institution.find_by(subdomain: subdomain) || Institution.find(2)
+    @institution = Institution.find_by(subdomain: subdomain) || Naught.build { |b| b.black_hole }
   end
 end

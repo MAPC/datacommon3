@@ -3,7 +3,7 @@ class ChangeDefaultUserValues < ActiveRecord::Migration
     change_column_default :auth_user, :is_active,    true
     change_column_default :auth_user, :is_staff,     false
     change_column_default :auth_user, :is_superuser, false
-    change_column_default :auth_user, :date_joined,  Time.now
-    change_column_default :auth_user, :last_login,   Time.now
+    execute('ALTER TABLE "auth_user" ALTER COLUMN "date_joined" SET DEFAULT CURRENT_DATE')
+    execute('ALTER TABLE "auth_user" ALTER COLUMN "last_login" SET DEFAULT CURRENT_DATE')
   end
 end

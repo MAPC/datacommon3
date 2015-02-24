@@ -6,6 +6,7 @@ gem 'rails',                '4.1.5'
 
 # Database
 gem 'pg',                   '0.17.1'   # Use PostgreSQL as the database for Active Record
+gem 'postgres_ext-postgis'             # PostGIS Column Support
 gem 'textacular',           '3.2.0'    # Enables PostgreSQL Fulltext Search
 gem 'has_scope',            '0.5.1'    # Handle multiply-scoped models
 gem 'lazy_columns',
@@ -38,7 +39,7 @@ gem 'turbolinks',   '2.4.0' # Following links are faster.
 
 
 # Files
-gem 'paperclip',   '~> 3.0' # Handle file attachments
+gem 'paperclip',   '4.2.0' # Handle file attachments
 gem 'retina_rails'
 gem 'aws-sdk',     '1.33.0' # Upload files to Amazon S3
 gem 'asset_sync'            # Upload assets to S3

@@ -7,7 +7,7 @@
         %div.col-sm-3.col-sm-offset-0.col-xs-12.col-xs-offset-1.links
           %h5 About the DataCommon
           %ul
-            = render partial: 'pages/link', collection: about_pages, as: :page
+            -# = render partial: 'pages/link', collection: about_pages, as: :page
             %li
               = link_to "https://www.facebook.com/MAPCMetroBoston" do
                 .social-icon= image_tag 'facebook_50.png',width: 30, alt: 'MAPC Facebook', target: "_blank"
@@ -36,18 +36,18 @@
         %div.col-sm-3.col-sm-offset-0.col-xs-12.col-xs-offset-1.links
           %h5 Learning Community
           %ul
-            = render partial: 'pages/link', collection: community_pages, as: :page
+            -# = render partial: 'pages/link', collection: community_pages, as: :page
 
           %h5 Resources
           %ul
-            = render partial: 'pages/link', collection: resources_pages, as: :page
+            -# = render partial: 'pages/link', collection: resources_pages, as: :page
 
   %hr
   %div.row-lower
-    - @institution.branding.logos.each do |logo|
-      %div.col-xs-12{class: "col-sm-#{(12 / @institution.branding.logos.count)}"}
-        %span.helper
-        = image_tag logo['src'], alt: logo['alt'], class: 'aligner'
+    -# - @institution.branding.logos.each do |logo|
+      -# %div.col-xs-12{class: "col-sm-#{(12 / @institution.branding.logos.count)}"}
+        -# %span.helper
+        -# = image_tag logo['src'], alt: logo['alt'], class: 'aligner'
 
   %div.row
     %div.col-xs-12

@@ -1,7 +1,7 @@
 class Page < ActiveRecord::Base
 
   belongs_to :institution
-  belongs_to :page_topi
+  belongs_to :page_topic
 
   def self.default_scope
     order(:sort_order)

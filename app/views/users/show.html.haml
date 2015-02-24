@@ -1,6 +1,6 @@
 .row.profile
   .col-md-1.col-sm-2.col-sm-offset-1.col-xs-3.col-xs-offset-0
-    = image_tag avatar_url(@profile.user), alt: @profile.name
+    -# = image_tag avatar_url(@profile.user), alt: @profile.name
   .col-md-3.col-sm-4.col-xs-8.info
     %h3=  @profile.name
     - if current_user? @profile.user
