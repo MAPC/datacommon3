@@ -4,7 +4,7 @@ describe User do
 
   subject(:user) { create(:user) }
   
-  it "should have a valid factory" do
+  it "has a valid factory" do
     expect(user).to be_valid
   end
 
@@ -30,6 +30,28 @@ describe User do
   it 'generates a Gravatar URL with a given size' do
     gravatar_id = Digest::MD5.hexdigest(user.email)  
     expect(user.avatar_url(100)).to eq("http://gravatar.com/avatar/#{gravatar_id}.png?s=100")
+  end
+
+  describe 'validations' do
+    
+    subject(:user) { build(:new_user) }
+
+    it 'requires a username' do
+      expect(build(:user, username:  '')).to_not be_valid
+      expect(build(:user, username: nil)).to_not be_valid
+    end
+
+    it 'requires an valid email address' do
+      expect(build(:user, email:  '')).to_not be_valid
+      expect(build(:user, email: nil)).to_not be_valid
+      expect(build(:user, email: 'email-at.net')).to_not be_valid
+    end
+
+    it 'requires a unique email address' do
+      user1 = create(:new_user, email: "the.same@email.net")
+      user2 = build(:new_user,  email: "the.same@email.net")
+      expect(user2).not_to be_valid
+    end
   end
 
   # Mock profiles?

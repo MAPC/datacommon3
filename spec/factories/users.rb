@@ -32,7 +32,7 @@ FactoryGirl.define do
     is_superuser true
   end
 
-  factory :inactive_user, class: User do
+  factory :new_user, aliases: [:inactive_user], class: User do
     username   "inactive"
     first_name "In"
     last_name  "Active"
