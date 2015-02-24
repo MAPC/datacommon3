@@ -38,6 +38,7 @@ FactoryGirl.define do
     last_name  "Active"
     email      "inactive@email.net"
     password   "passw0rd"
+    password_confirmation { password }
     is_staff     false
     is_active    false
     is_superuser false

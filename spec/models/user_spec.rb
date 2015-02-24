@@ -52,6 +52,25 @@ describe User do
       user2 = build(:new_user,  email: "the.same@email.net")
       expect(user2).not_to be_valid
     end
+
+    it 'requires a first and last name' do
+      expect(build(:user, first_name: '')).to_not be_valid
+      expect(build(:user, last_name:  '')).to_not be_valid
+    end
+
+    it 'requires a first and last name no more than 30 characters' do
+      expect(build(:user, first_name: 'f'*31 )).to_not be_valid
+      expect(build(:user, last_name:  'l'*31 )).to_not be_valid
+    end
+
+    it 'requires a confirmed password between 5 and 128 characters' do
+      expect(build(:user, password: '')).to_not be_valid
+      expect(build(:user, password: '1234')).to_not be_valid
+      expect(build(:user, password: 'p'*129 )).to_not be_valid
+      expect(build(:user, password: nil)).to_not be_valid
+      expect(build(:user, password_confirmation: '')).to_not be_valid
+    end
+
   end
 
   # Mock profiles?

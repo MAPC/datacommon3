@@ -14,14 +14,14 @@ class User < ActiveRecord::Base
 
 
   validates :username,   presence: true, length: { minimum: 5, maximum: 30 }, uniqueness: true
-  # validates :first_name, presence: true, length: { maximum: 30 }
-  # validates :last_name,  presence: true, length: { maximum: 30 }
+  validates :first_name, presence: true, length: { maximum: 30 }
+  validates :last_name,  presence: true, length: { maximum: 30 }
 
   validates :email,      presence: true, length: { minimum: 5, maximum: 75 }, uniqueness: true
   validate  :valid_email
 
-  # validates :password,   presence: true, length: { minimum: 5, maximum: 128 }
-  # validates_confirmation_of :password
+  validates :password,   presence: true, length: { minimum: 5, maximum: 128 }
+  validates_confirmation_of :password
   
   def name
     profile ? profile.name.titleize : full_name_or_username
