@@ -26,21 +26,11 @@ ActiveRecord::Schema.define(version: 20141031173625) do
     t.boolean  "is_staff",                   default: false,                 null: false
     t.boolean  "is_active",                  default: true,                  null: false
     t.boolean  "is_superuser",               default: false,                 null: false
-    t.datetime "last_login",                 default: '2014-10-21 18:32:24', null: false
-    t.datetime "date_joined",                default: '2014-10-21 18:32:24', null: false
-    t.string   "remember_token"
+    t.datetime "last_login",                                                 null: false
+    t.datetime "date_joined",                                                null: false
   end
 
-  add_index "auth_user", ["remember_token"], name: "index_auth_user_on_remember_token", using: :btree
   add_index "auth_user", ["username"], name: "auth_user_username_key", unique: true, using: :btree
-
-  create_table "brandings", force: true do |t|
-    t.integer "institution_id"
-    t.string  "logo_url"
-    t.string  "tagline"
-    t.string  "map_gallery_intro"
-    t.text    "logos",             default: "[]"
-  end
 
   create_table "core_genericobjectrolemapping", force: true do |t|
     t.string  "subject",      limit: 100, null: false
@@ -52,34 +42,6 @@ ActiveRecord::Schema.define(version: 20141031173625) do
   add_index "core_genericobjectrolemapping", ["object_ct_id"], name: "core_genericobjectrolemapping_object_ct_id", using: :btree
   add_index "core_genericobjectrolemapping", ["role_id"], name: "core_genericobjectrolemapping_role_id", using: :btree
   add_index "core_genericobjectrolemapping", ["subject", "object_ct_id", "object_id", "role_id"], name: "core_genericobjectrolemapping_subject_object_ct_id_object_i_key", unique: true, using: :btree
-
-  create_table "institutions", force: true do |t|
-    t.string  "short_name"
-    t.string  "long_name"
-    t.string  "subdomain"
-    t.integer "region_id"
-  end
-
-  create_table "layers", force: true do |t|
-    t.string  "title"
-    t.string  "alt_title"
-    t.string  "descriptn"
-    t.string  "subject"
-    t.string  "creator"
-    t.string  "createdate"
-    t.string  "moddate"
-    t.string  "publisher"
-    t.string  "contributr"
-    t.string  "coverage"
-    t.string  "universe"
-    t.string  "schema"
-    t.string  "tablename"
-    t.string  "tablenum"
-    t.integer "institution_id"
-    t.string  "join_key"
-    t.string  "preview_image"
-    t.string  "datesavail"
-  end
 
   create_table "maps_contact", force: true do |t|
     t.integer  "user_id"
@@ -97,7 +59,7 @@ ActiveRecord::Schema.define(version: 20141031173625) do
     t.string   "website_url",     limit: 200
     t.boolean  "mapc_newsletter",             default: false,                 null: false
     t.boolean  "mbdc_newsletter",             default: false,                 null: false
-    t.datetime "last_modified",               default: '2014-10-21 18:34:11', null: false
+    t.datetime "last_modified",                                               null: false
   end
 
   add_index "maps_contact", ["user_id"], name: "maps_contact_user_id", using: :btree
@@ -109,7 +71,6 @@ ActiveRecord::Schema.define(version: 20141031173625) do
     t.text    "abstract",                               null: false
     t.string  "pdf_page",       limit: 100,             null: false
     t.string  "thumbnail",      limit: 100,             null: false
-    t.integer "institution_id",             default: 1
   end
 
   create_table "mbdc_calendar_sources", force: true do |t|
@@ -158,7 +119,6 @@ ActiveRecord::Schema.define(version: 20141031173625) do
     t.boolean "active",                                      null: false
     t.string  "content_markup_type", limit: 30,              null: false
     t.text    "_content_rendered",                           null: false
-    t.integer "institution_id",                  default: 1
   end
 
   create_table "mbdc_topic", force: true do |t|
@@ -170,12 +130,6 @@ ActiveRecord::Schema.define(version: 20141031173625) do
   add_index "mbdc_topic", ["slug"], name: "mbdc_topic_slug", using: :btree
   add_index "mbdc_topic", ["slug"], name: "mbdc_topic_slug_like", using: :btree
 
-  create_table "pages", force: true do |t|
-    t.integer "institution_id"
-    t.integer "sort_order"
-    t.string  "topic_id"
-    t.string  "slug"
-  end
 
 # Could not dump table "snapshots_regionalunit" because of following StandardError
 #   Unknown type 'geometry' for column 'geometry'
@@ -216,8 +170,6 @@ ActiveRecord::Schema.define(version: 20141031173625) do
     t.string   "year",           limit: 50
     t.integer  "original_id"
     t.integer  "featured"
-    t.integer  "institution_id",             default: 1
-    t.string   "permission",                 default: "private"
   end
 
   add_index "weave_visualization", ["original_id"], name: "weave_visualization_original_id", using: :btree

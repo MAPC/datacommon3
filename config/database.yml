@@ -2,7 +2,7 @@
 
 default: &default
   adapter:  postgresql
-  database: <%= ENV.fetch('DB_NAME') { 'datacommon_dev' } %>
+  database: <%= ENV.fetch('DB_NAME') { 'dc3_dev' } %>
   username: <%= ENV.fetch('DB_USERNAME') { nil } %>
   password: <%= ENV.fetch('DB_PASSWORD') { nil } %>
   host:     <%= ENV.fetch('DB_PORT_5432_TCP_ADDR') { 'localhost' } %>
@@ -30,5 +30,5 @@ production: &production
 # Do not set this db to the same as development or production.
 test: &test
   <<: *default
-  database: datacommon_test
+  database: dc3_test
   host:     localhost

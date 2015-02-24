@@ -49,8 +49,8 @@ gem 'rubyzip',     '>= 1.0.0', require: 'zip' # Zip files for downloading
 gem 'mail'
 gem 'stamp', '0.6.0' # Convenient timestamping
 gem 'wannabe_bool'   # To convert ENV strings to booleans
-# Use to generate password. Also used in has_secure_password
-gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7' # Use to generate password. Also used in has_secure_password
+gem 'naught'         # In case we can introduce the NullObject pattern somewhere
 
 
 # Server
