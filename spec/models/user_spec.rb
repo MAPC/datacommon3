@@ -41,9 +41,9 @@ describe User do
       expect(build(:user, username: nil)).to_not be_valid
     end
 
-    it 'requires a unique username' do
+    it 'requires a unique username, case-insensitive' do
       user1 = build(:new_user,  username: "the_user_name")
-      user2 = build(:new_user,  username: "the_user_name")
+      user2 = user1.dup ; user2.username.upcase!
       expect(user1).to be_valid
       expect(user2).to be_valid
       user1.save!
@@ -57,10 +57,21 @@ describe User do
     end
 
     it 'requires a unique email address' do
-      user1 = create(:new_user, email: "the.same@email.net")
-      user2 = build(:new_user,  email: "the.same@email.net")
-      expect(user1).not_to be_valid
-      expect(user2).not_to be_valid
+      user1 = build(:new_user, email: "the.same@email.net")
+      user2 = user1.dup
+      expect(user1).to be_valid
+      expect(user2).to be_valid
+      user1.save!
+      expect(user2).to_not be_valid
+    end
+
+    it 'requires a unique email address, case-insensitive' do
+      user1 = build(:new_user, email: "the.same@email.net")
+      user2 = user1.dup ; user2.email.upcase!
+      expect(user1).to be_valid
+      expect(user2).to be_valid
+      user1.save!
+      expect(user2).to_not be_valid
     end
 
     it 'requires a first and last name' do

@@ -13,11 +13,11 @@ class User < ActiveRecord::Base
   has_many :visualizations, foreign_key: :owner_id
 
 
-  validates :username,   presence: true, length: { minimum: 5, maximum: 30 }, uniqueness: true
+  validates :username,   presence: true, length: { minimum: 5, maximum: 30 }, uniqueness: { case_sensitive: false }
   validates :first_name, presence: true, length: { maximum: 30 }
   validates :last_name,  presence: true, length: { maximum: 30 }
 
-  validates :email,      presence: true, length: { minimum: 5, maximum: 75 }, uniqueness: true
+  validates :email,      presence: true, length: { minimum: 5, maximum: 75 }, uniqueness: { case_sensitive: false }
   validate  :valid_email
 
   validates :password,   presence: true, length: { minimum: 5, maximum: 128 }
