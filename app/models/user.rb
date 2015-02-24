@@ -32,7 +32,10 @@ class User < ActiveRecord::Base
     f.split(' ').first.capitalize
   end
 
-  def avatar_url ; "" ; end
+  def avatar_url(size=75)
+    gravatar_id = Digest::MD5.hexdigest(email)
+    "http://gravatar.com/avatar/#{gravatar_id}.png?s=#{size}"
+  end
 
 
   def to_s

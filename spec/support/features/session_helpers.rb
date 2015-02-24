@@ -20,7 +20,7 @@ module Features
       click_button 'Sign in'
     end
 
-    def request_password_reset_with(email)
+    def request_password_reset_for(user)
       visit password_reset_path
       fill_in 'Email', with: user.email
       click_button 'Request password reset'
