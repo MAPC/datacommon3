@@ -1,16 +1,16 @@
-%div
-  %h3= link_to feature.title, feature
-  %p
-    by
-    #{link_to feature.owner} | Year(s) #{feature.year}
-  = image_tag feature.image.url, id: "vis-#{feature.id}", class: "feature"
-  %p= data_sources_list feature
-  %p= issue_areas_list  feature
+-# %div
+-#   %h3= link_to feature.title, feature
+-#   %p
+-#     by
+-#     #{link_to feature.owner} | Year(s) #{feature.year}
+-#   = image_tag feature.image.url, id: "vis-#{feature.id}", class: "feature"
+-#   %p= data_sources_list feature
+-#   %p= issue_areas_list  feature
 
-:javascript
+-# :javascript
 
-  $(document).on('ready', function () {
-    console.log('ready');
-    DC.synchEmbedWeaveOnClick("#vis-#{feature.id}", #{feature.sessionstate});
-  });
-  
+-#   $(document).on('ready', function () {
+-#     console.log('ready');
+-#     DC.synchEmbedWeaveOnClick("#vis-#{feature.id}", #{feature.sessionstate});
+-#   });
+-#   

@@ -12,11 +12,12 @@ module Features
       click_button 'Sign up'
     end
 
-    def sign_in
-      user = create(:user)
+    def sign_in(user, options={})
       visit signin_path
-      fill_in 'Email', with: user.email
-      fill_in 'Password', with: user.password
+      fill_in 'Username',
+        with: options.fetch(:username) { user.username }
+      fill_in 'Password',
+        with: options.fetch(:password) { user.password }
       click_button 'Sign in'
     end
 

@@ -20,6 +20,7 @@ describe User do
     expect(user.to_s).to eq(user.name)
     expect(user.name).to eq("#{user.first_name} #{user.last_name}")
     expect(user.fname).to eq("#{user.first_name}")
+    expect(user.activated?).to eq(user.is_active)
   end
 
   it 'generates a Gravatar URL with default 75px' do
@@ -91,7 +92,10 @@ describe User do
       expect(build(:user, password: nil)).to_not be_valid
       expect(build(:user, password_confirmation: '')).to_not be_valid
     end
+  end
 
+  pending "#authenticated? returns false for a user with nil digest" do
+    expect(user.authenticated?(:remember, '')).to be_false
   end
 
   # Mock profiles?

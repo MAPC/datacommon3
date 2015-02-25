@@ -41,6 +41,9 @@ class User < ActiveRecord::Base
     "http://gravatar.com/avatar/#{gravatar_id}.png?s=#{size}"
   end
 
+  def activated?
+    is_active
+  end
 
   def to_s
     name
@@ -71,6 +74,14 @@ class User < ActiveRecord::Base
       nil
     end
   end
+
+
+  def authenticated?(attribute, token)
+    digest = send("#{attribute}_digest")
+    return false if digest.nil?
+    Digest::SHA1.hexdigest(token) == digest
+  end
+
 
   def self.new_token
     SecureRandom.urlsafe_base64
