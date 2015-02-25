@@ -60,16 +60,13 @@ class User < ActiveRecord::Base
   end
 
 
-  def self.authenticate(username, password)
-    user = find_by(username: username)
-    return nil if user.nil?
-    
+  def authenticate(password)
     # Password stored in db as {algorithm}${salt}${hash}
-    _, salt, hash = user.password.split '$'
+    _, salt, hash = password_digest.split '$'
 
-    if user && hash == Digest::SHA1.hexdigest(salt + password)
-      user.update_attribute :last_login, Time.now
-      user
+    if hash == Digest::SHA1.hexdigest(salt + password)
+      self.update_attribute :last_login, Time.now
+      self
     else
       nil
     end

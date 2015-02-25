@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_filter :load_institution
-  before_filter :correct_user, only: [:show]
+  # before_filter :correct_user, only: [:show]
 
 
   def new
@@ -14,6 +14,7 @@ class UsersController < ApplicationController
       @user.create_profile(name:  @user.first_name + " " + @user.last_name,
                            email: @user.email)
       sign_in @user
+      flash[:success] = "Welcome to the DataCommon!"
       redirect_to @user
     else
       render :new

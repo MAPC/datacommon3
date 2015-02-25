@@ -2,7 +2,7 @@
   .col-md-8.col-md-offset-2.col-sm-10.col-md-offset-1.col-xs-12.col-xs-offset-0
     %h1.page-header Sign in
     .form{role: 'form'}
-      = form_for(:session, url: sessions_path) do |f|
+      = form_for(:session, url: signin_path) do |f|
         .form-group
           = f.label      :username
           = f.text_field :username, class: 'form-control'

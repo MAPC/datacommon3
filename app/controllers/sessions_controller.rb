@@ -5,17 +5,13 @@ class SessionsController < ApplicationController
   end
 
   def create
-    username, password = params[:session][:username], params[:session][:password]
-    user = User.authenticate username, password
-    if user
+    user = User.find_by(username: params[:session][:username])
+    if user && user.authenticate(params[:session][:password])
       sign_in user
-      flash[:success] = "Welcome to the DataCommon!"
-      redirect_back_or user
+      redirect_to user
+      # redirect_back_or user
     else
-      flash.now[:danger] = <<-EOS
-        We don't know that username/password combination.
-        You may have mistyped something, or have CAPS LOCK on.
-      EOS
+      flash.now[:danger] = "Incorrect username and/or password."
       render 'new'
     end
   end

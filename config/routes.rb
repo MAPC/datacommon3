@@ -37,11 +37,12 @@ Rails.application.routes.draw do
 
   resources :users,  except: [:edit, :update, :destroy], path: 'profiles'
   resources :profiles, only: [:edit, :update, :destroy]
+  
   match '/signup', to: 'users#new', via: 'get'
-
-  resources :sessions, only: [:new, :create, :destroy]
-  match '/signin',  to: 'sessions#new',     via: 'get'
-  match '/signout', to: 'sessions#destroy', via: 'delete'
+  
+  get    'signin'  => 'sessions#new'
+  post   'signin'  => 'sessions#create'
+  delete 'signout' => 'sessions#destroy'
 
 
   resources :account_activations, only: [:edit]
