@@ -1,7 +1,11 @@
 class User < ActiveRecord::Base
   self.table_name = 'auth_user'
+  attr_accessor :remember_token, :activation_token
 
   before_create :create_remember_token
+  before_create :create_activation_digest
+
+  before_save :downcase_email
   
   # to be consistent with legacy database
   before_save :encrypt_password, if: Proc.new { |user| user.password_changed? }
@@ -68,10 +72,9 @@ class User < ActiveRecord::Base
     end
   end
 
-  def self.new_remember_token
+  def self.new_token
     SecureRandom.urlsafe_base64
   end
-
 
   def self.digest(token)
     Digest::SHA1.hexdigest(token.to_s)
@@ -84,10 +87,20 @@ class User < ActiveRecord::Base
       "#{first_name} #{last_name}".titleize.presence || username
     end
 
+    def downcase_email
+      self.email = email.downcase
+    end
+
+    def create_activation_digest
+      self.activation_token  = User.new_token
+      self.activation_digest = User.digest(activation_token)
+    end
+
     
     def create_remember_token
-      self.remember_token = User.digest(User.new_remember_token)
+      self.remember_token = User.digest(User.new_token)
     end
+
 
     def encrypt_password
       self.password = password_digest

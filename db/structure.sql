@@ -31,7 +31,9 @@ CREATE TABLE auth_user (
     is_superuser boolean DEFAULT false NOT NULL,
     last_login timestamp without time zone DEFAULT ('now'::text)::date NOT NULL,
     date_joined timestamp without time zone DEFAULT ('now'::text)::date NOT NULL,
-    remember_token character varying(255)
+    remember_token character varying(255),
+    activation_digest character varying(255),
+    activated_at timestamp without time zone
 );
 
 
@@ -1218,4 +1220,6 @@ INSERT INTO schema_migrations (version) VALUES ('20141122001639');
 INSERT INTO schema_migrations (version) VALUES ('20141203220622');
 
 INSERT INTO schema_migrations (version) VALUES ('20141204151129');
+
+INSERT INTO schema_migrations (version) VALUES ('20150224203903');
 

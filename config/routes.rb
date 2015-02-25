@@ -43,6 +43,10 @@ Rails.application.routes.draw do
   match '/signin',  to: 'sessions#new',     via: 'get'
   match '/signout', to: 'sessions#destroy', via: 'delete'
 
+
+  resources :account_activations, only: [:edit]
+
+  
   resources :page_topics, only: [:show], path: 'page_topics' do
     resources :pages, only: [:show], path: 'page'
   end
