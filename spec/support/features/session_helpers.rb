@@ -33,9 +33,9 @@ module Features
       click_link 'Sign out'
     end
 
-    def request_password_reset_for(user)
-      visit password_reset_path
-      fill_in 'Email', with: user.email
+    def request_password_reset_for(user, options={})
+      visit new_password_reset_path
+      fill_in 'Email', with: options.fetch(:email) { user.email }
       click_button 'Request password reset'
     end
 

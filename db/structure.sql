@@ -33,7 +33,9 @@ CREATE TABLE auth_user (
     date_joined timestamp without time zone DEFAULT ('now'::text)::date NOT NULL,
     remember_digest character varying(255),
     activation_digest character varying(255),
-    activated_at timestamp without time zone
+    activated_at timestamp without time zone,
+    reset_digest character varying(255),
+    reset_sent_at timestamp without time zone
 );
 
 
@@ -1226,4 +1228,6 @@ INSERT INTO schema_migrations (version) VALUES ('20150224203903');
 INSERT INTO schema_migrations (version) VALUES ('20150225194939');
 
 INSERT INTO schema_migrations (version) VALUES ('20150226213733');
+
+INSERT INTO schema_migrations (version) VALUES ('20150226215146');
 

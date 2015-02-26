@@ -1,24 +1,20 @@
 class User < ActiveRecord::Base
   self.table_name = 'auth_user'
-  attr_accessor :remember_token, :activation_token, :password
+  attr_accessor :remember_token, :activation_token, :reset_token, :password
 
-  before_create :create_activation_digest
   before_save :downcase_email
-  
-  # to be consistent with legacy database
   before_save :encrypt_password, if: Proc.new { |user| user.password? }
+  before_create :create_activation_digest
+  
   # before_save :set_timestamps,   if: Proc.new { |user| user.new_record?       }
   # before_save :set_default_permissions, if: Proc.new { |user| user.new_record? }
-
 
   has_one  :profile
   has_many :visualizations, foreign_key: :owner_id
 
-
   validates :username,   presence: true, length: { minimum: 5, maximum: 30 }, uniqueness: { case_sensitive: false }
   validates :first_name, presence: true, length: { maximum: 30 }
   validates :last_name,  presence: true, length: { maximum: 30 }
-
   validates :email,      presence: true, length: { minimum: 5, maximum: 75 }, uniqueness: { case_sensitive: false }
   validate  :valid_email
 
@@ -48,9 +44,6 @@ class User < ActiveRecord::Base
     is_active
   end
 
-  def send_activation_email
-    UserMailer.account_activation(self).deliver
-  end
 
   def to_s
     name
@@ -110,6 +103,15 @@ class User < ActiveRecord::Base
     Digest::SHA1.hexdigest(token.to_s)
   end
 
+  def reset_password!
+    create_reset_digest
+    send_password_reset_email
+  end
+
+  def new_account_followup_emails
+    send_activation_email
+  end
+
 
   private
 
@@ -125,6 +127,21 @@ class User < ActiveRecord::Base
       self.activation_token  = User.new_token
       self.activation_digest = User.digest(activation_token)
     end
+
+    def create_reset_digest
+      self.reset_token  = User.new_token
+      update_attribute(:reset_digest,  User.digest(reset_token))
+      update_attribute(:reset_sent_at, Time.zone.now)
+    end
+
+    def send_activation_email
+      UserMailer.account_activation(self).deliver
+    end
+
+    def send_password_reset_email
+      UserMailer.password_reset(self).deliver
+    end
+
 
     
     # def create_remember_token
