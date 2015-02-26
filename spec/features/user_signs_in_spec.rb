@@ -38,3 +38,14 @@ feature 'Active user signs in and out' do
     expect(page).to have_content("Sign in")
   end
 end
+
+feature 'Inactive user signs in' do
+
+  let(:user) { create(:inactive_user) }
+
+  scenario 'with valid information' do
+    sign_in user
+    expect(page).to have_content(user.first_name)
+    expect(page).to have_content("activate")
+  end
+end
