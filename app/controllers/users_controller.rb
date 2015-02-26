@@ -16,6 +16,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
+      @user.send_activation_email
       @user.create_profile(name:  @user.first_name + " " + @user.last_name,
                            email: @user.email)
       sign_in @user

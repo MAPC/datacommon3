@@ -41,8 +41,17 @@ class User < ActiveRecord::Base
     "http://gravatar.com/avatar/#{gravatar_id}.png?s=#{size}"
   end
 
+  def activate!
+    update_attribute(:is_active,    true)
+    update_attribute(:activated_at, Time.zone.now)
+  end
+
   def activated?
     is_active
+  end
+
+  def send_activation_email
+    UserMailer.account_activation(self).deliver
   end
 
   def to_s
