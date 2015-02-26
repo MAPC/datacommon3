@@ -18,6 +18,12 @@ module Features
         with: options.fetch(:username) { user.username }
       fill_in 'Password',
         with: options.fetch(:password) { user.password }
+      checked = options.fetch(:remember_me) { '1' }
+      if checked == '1'
+        check 'Remember me' 
+      elsif checked == 0
+        uncheck 'Remember me'
+      end
       click_button 'Sign in'
     end
 

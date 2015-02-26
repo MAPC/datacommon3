@@ -65,7 +65,7 @@ end
 
 
 group :development, :test do
-  gem 'rspec-rails',        '2.13.1'
+  gem 'rspec-rails',        '~> 2.14.0.rc1'
   gem 'database_cleaner'
 
   gem 'factory_girl_rails', '~> 4.0'

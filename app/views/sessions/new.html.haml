@@ -9,12 +9,15 @@
         .form-group
           = f.label          :password
           = f.password_field :password, class: 'form-control'
+        = f.label :remember_me, class: "checkbox inline" do
+          = f.check_box :remember_me
+          %span Remember me on this computer
 
         = f.submit 'Sign in', class: 'btn btn-large btn-success'
-    
+
     %br
     %br
-    
+
     %p
       Do you need an account?
       =link_to 'Sign up!', signup_path

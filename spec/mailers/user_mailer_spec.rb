@@ -8,9 +8,9 @@ describe UserMailer do
     let(:mail) { UserMailer.account_activation(user) }
 
     it "renders the headers" do
-      mail.subject.should eq("Activate your account")
-      mail.to.should eq([user.email])
-      mail.from.should eq(["no-reply@datacommon.org"])
+      expect(mail.subject).to eq("Activate your account")
+      expect(mail.to).to eq([user.email])
+      expect(mail.from).to eq(["no-reply@datacommon.org"])
     end
 
     it "renders the body" do
@@ -24,13 +24,13 @@ describe UserMailer do
     let(:mail) { UserMailer.password_reset }
 
     it "renders the headers" do
-      mail.subject.should eq("Password reset")
-      mail.to.should eq([user.email])
-      mail.from.should eq(["no-reply@datacommon.org"])
+      expect(mail.subject).to eq("Password reset")
+      expect(mail.to).to eq([user.email])
+      expect(mail.from).to eq(["no-reply@datacommon.org"])
     end
 
     it "renders the body" do
-      mail.body.encoded.should match("Hi")
+      expect(mail.body.encoded).to match("Hi")
     end
   end
 
