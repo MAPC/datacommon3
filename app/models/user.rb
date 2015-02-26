@@ -1,14 +1,12 @@
 class User < ActiveRecord::Base
   self.table_name = 'auth_user'
-  attr_accessor :remember_token, :activation_token
+  attr_accessor :remember_token, :activation_token, :password
 
-  # before_create :create_remember_token
   before_create :create_activation_digest
-
   before_save :downcase_email
   
   # to be consistent with legacy database
-  before_save :encrypt_password, if: Proc.new { |user| user.password_changed? }
+  before_save :encrypt_password, if: Proc.new { |user| user.password? }
   # before_save :set_timestamps,   if: Proc.new { |user| user.new_record?       }
   # before_save :set_default_permissions, if: Proc.new { |user| user.new_record? }
 
@@ -66,6 +64,11 @@ class User < ActiveRecord::Base
 
   def self.default_scope
     limit 10
+  end
+
+
+  def password?
+    password
   end
 
 
@@ -130,16 +133,10 @@ class User < ActiveRecord::Base
 
 
     def encrypt_password
-      self.password = password_digest
-    end
-
-
-    def password_digest
       salt = Digest::SHA1.hexdigest(username)[0..4]
       hash = Digest::SHA1.hexdigest(salt + password)
-      "sha1$#{salt}$#{hash}"
+      self.password_digest = "sha1$#{salt}$#{hash}"
     end
-
 
     # def set_timestamps
     #   date_joined = last_login = Time.now

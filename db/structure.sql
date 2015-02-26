@@ -25,7 +25,7 @@ CREATE TABLE auth_user (
     first_name character varying(30) NOT NULL,
     last_name character varying(30) NOT NULL,
     email character varying(75) NOT NULL,
-    password character varying(128) NOT NULL,
+    password_digest character varying(128) NOT NULL,
     is_staff boolean DEFAULT false NOT NULL,
     is_active boolean DEFAULT true NOT NULL,
     is_superuser boolean DEFAULT false NOT NULL,
@@ -1224,4 +1224,6 @@ INSERT INTO schema_migrations (version) VALUES ('20141204151129');
 INSERT INTO schema_migrations (version) VALUES ('20150224203903');
 
 INSERT INTO schema_migrations (version) VALUES ('20150225194939');
+
+INSERT INTO schema_migrations (version) VALUES ('20150226213733');
 
