@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_filter :load_institution
-  # before_filter :correct_user, only: [:show]
+  # before_filter :correct_user,   only: [:edit, :update]
+  # before_filter :logged_in_user, only: [:edit, :update]
 
 
   def show
@@ -49,6 +50,14 @@ class UsersController < ApplicationController
       end
 
       @profile = ProfileFacade.new(user, user.profile, visualizations)
+    end
+
+    def logged_in_user
+      unless logged_in?
+        store_location
+        flash[:danger] = "Please sign in."
+        redirect_to login_url
+      end
     end
 
 end

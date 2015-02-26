@@ -12,8 +12,7 @@ class SessionsController < ApplicationController
       message = "You haven't activated your account yet. "
       message += "Check your email for the activation link."
       flash[:warning] = message
-      redirect_to user
-      # redirect_back_or user
+      redirect_back_or user
     else
       flash.now[:danger] = "Incorrect username and/or password."
       render 'new'
