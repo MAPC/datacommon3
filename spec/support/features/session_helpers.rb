@@ -21,10 +21,20 @@ module Features
       click_button 'Sign in'
     end
 
+    def sign_out(*)
+      # Would prefer to visit signout_path, method: :delete
+      # but can't find documentation on such an option
+      click_link 'Sign out'
+    end
+
     def request_password_reset_for(user)
       visit password_reset_path
       fill_in 'Email', with: user.email
       click_button 'Request password reset'
+    end
+
+    def delete(path)
+      Capybara.current_session.driver.delete path
     end
 
   end

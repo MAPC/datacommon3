@@ -70,8 +70,8 @@ group :development, :test do
 
   gem 'factory_girl_rails', '~> 4.0'
   gem 'launchy'
-
-  gem 'spork-rails',        '4.0.0'
+  
+  gem 'zeus'
   gem 'childprocess',       '0.3.6'
   gem 'capybara',           '2.1.0'
 

@@ -94,8 +94,9 @@ describe User do
     end
   end
 
-  pending "#authenticated? returns false for a user with nil digest" do
+  specify "#authenticated? returns false for a user with nil remember digest" do
     expect(user.authenticated?(:remember, '')).to be_false
+    expect(user.authenticated?(:activation, '')).to be_false
   end
 
   # Mock profiles?

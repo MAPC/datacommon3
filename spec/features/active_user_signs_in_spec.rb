@@ -34,5 +34,7 @@ feature 'Active user signs in and out' do
     expect(page).to have_content(user.first_name)
     sign_out user
     expect(page).to have_content("Sign in")
+    delete signout_path
+    expect(page).to have_content("Sign in")
   end
 end

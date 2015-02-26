@@ -31,7 +31,7 @@ CREATE TABLE auth_user (
     is_superuser boolean DEFAULT false NOT NULL,
     last_login timestamp without time zone DEFAULT ('now'::text)::date NOT NULL,
     date_joined timestamp without time zone DEFAULT ('now'::text)::date NOT NULL,
-    remember_token character varying(255),
+    remember_digest character varying(255),
     activation_digest character varying(255),
     activated_at timestamp without time zone
 );
@@ -998,10 +998,10 @@ CREATE UNIQUE INDEX core_genericobjectrolemapping_subject_object_ct_id_object_i_
 
 
 --
--- Name: index_auth_user_on_remember_token; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+-- Name: index_auth_user_on_remember_digest; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
-CREATE INDEX index_auth_user_on_remember_token ON auth_user USING btree (remember_token);
+CREATE INDEX index_auth_user_on_remember_digest ON auth_user USING btree (remember_digest);
 
 
 --
@@ -1222,4 +1222,6 @@ INSERT INTO schema_migrations (version) VALUES ('20141203220622');
 INSERT INTO schema_migrations (version) VALUES ('20141204151129');
 
 INSERT INTO schema_migrations (version) VALUES ('20150224203903');
+
+INSERT INTO schema_migrations (version) VALUES ('20150225194939');
 

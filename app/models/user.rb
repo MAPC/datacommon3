@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   self.table_name = 'auth_user'
   attr_accessor :remember_token, :activation_token
 
-  before_create :create_remember_token
+  # before_create :create_remember_token
   before_create :create_activation_digest
 
   before_save :downcase_email
@@ -80,6 +80,16 @@ class User < ActiveRecord::Base
   end
 
 
+  def remember
+    self.remember_token = User.new_token
+    update_attribute(:remember_digest, User.digest(remember_token))
+  end
+
+  def forget
+    update_attribute(:remember_digest, nil)
+  end
+
+
   def self.new_token
     SecureRandom.urlsafe_base64
   end
@@ -105,9 +115,9 @@ class User < ActiveRecord::Base
     end
 
     
-    def create_remember_token
-      self.remember_token = User.digest(User.new_token)
-    end
+    # def create_remember_token
+    #   self.remember_token = User.digest(User.new_token)
+    # end
 
 
     def encrypt_password
