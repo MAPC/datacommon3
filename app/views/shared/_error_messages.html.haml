@@ -1,5 +1,10 @@
-#error_explanation.alert.alert-danger{style: 'display:none;'}
-  %ul
-    - if @visualization.errors.any?
-      - @visualization.errors.full_messages.each do |msg|
-        %li= msg
+#error_explanation
+  .alert.alert-danger
+    %ul
+      - if object.errors.any?
+        %p
+          The form has
+          = succeed '.' do
+            = pluralize(object.errors.count, "error")
+        - object.errors.full_messages.each do |msg|
+          %li= msg
