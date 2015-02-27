@@ -2,16 +2,21 @@ require 'spec_helper'
 
 feature 'User resets password' do
 
-  subject(:user) { 
-    user = create(:active_user)
-    sign_in user
+  subject(:user) { create(:active_user) }
+
+  background do
     user.reset_password!
-    user
-  }
-  
-  scenario 'with a valid token' do
-    visit edit_password_reset_path(user.reset_token, email: user.email)
-    expect(page).to have_content('Reset password')
+  end
+
+  feature 'with a valid token' do
+
+    background do
+      visit edit_password_reset_path(user.reset_token, email: user.email)
+    end
+
+    scenario 'it renders the reset password form' do
+      expect(page).to have_content('Reset password')
+    end
 
     scenario 'with a valid password and confirmation' do
       set_password
@@ -29,10 +34,12 @@ feature 'User resets password' do
     end
   end
 
-  scenario 'with an expired token'
-    # User.expire_reset_token
-    # user.update_attribute(:reset_sent_at, 121.minutes.ago)
-    #  set_password(confirmation: 'wrongpw')
+  scenario 'with an expired token' do
+    # Expire token
+    user.update_attribute(:reset_sent_at, 121.minutes.ago)
+    visit edit_password_reset_path(user.reset_token, email: user.email)
+    expect(page).to have_content("expired")
+  end
 
   scenario 'with the wrong token' do
     visit edit_password_reset_path('FHQWGADS', email: user.email)

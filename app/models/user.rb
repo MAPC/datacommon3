@@ -108,6 +108,10 @@ class User < ActiveRecord::Base
     send_password_reset_email
   end
 
+  def password_reset_expired?
+    reset_sent_at < 2.hours.ago
+  end
+
   def new_account_followup_emails
     send_activation_email
   end

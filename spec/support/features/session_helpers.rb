@@ -48,7 +48,7 @@ module Features
       confirm  = options.fetch(:confirmation) { password }
       fill_in 'Password',              with: password
       fill_in 'Password confirmation', with: confirm
-      click_button 'Submit'
+      click_button 'Update password'
     end
 
   end

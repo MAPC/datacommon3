@@ -73,7 +73,7 @@ group :development, :test do
   
   gem 'zeus'
   gem 'childprocess',       '0.3.6'
-  gem 'capybara',           '2.1.0'
+  gem 'capybara',           '~> 2.2.1'
 
   gem 'minitest'
 end
