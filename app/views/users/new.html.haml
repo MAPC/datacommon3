@@ -1,4 +1,5 @@
 %h1.page-header Sign Up
+
 %p Create a new account.
 %p.center
   %strong User accounts created in Beta are not secure, and may not carry over to the final release.
@@ -6,4 +7,33 @@
   %strong Do not use passwords here that you use for any other accounts.
 %br
 
-= render partial: 'form', locals: { button: 'Sign up' }
+.col-md-4.col-md-offset-4
+  .form.user-form{role: 'form'}
+    = form_for @user do |f|
+      = render 'shared/error_messages', object: @user
+      
+      .form-group
+        = f.label          :first_name
+        = f.text_field     :first_name,            class: 'form-control'
+
+      .form-group
+        = f.label          :last_name
+        = f.text_field     :last_name,             class: 'form-control'
+
+      .form-group
+        = f.label          :email, 'Email address'
+        = f.text_field     :email,                 class: 'form-control'
+
+      .form-group
+        = f.label          :username
+        = f.text_field     :username,              class: 'form-control'
+      
+      .form-group
+        = f.label          :password
+        = f.password_field :password,              class: 'form-control'
+      
+      .form-group
+        = f.label          :password_confirmation
+        = f.password_field :password_confirmation, class: 'form-control'
+
+      = f.submit 'Sign up', class: 'btn btn-large btn-success'
