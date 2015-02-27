@@ -43,5 +43,13 @@ module Features
       Capybara.current_session.driver.delete path
     end
 
+    def set_password(options={})
+      password = options.fetch(:password) { 'v4lidp4ssw0rd' }
+      confirm  = options.fetch(:confirmation) { password }
+      fill_in 'Password',              with: password
+      fill_in 'Password confirmation', with: confirm
+      click_button 'Submit'
+    end
+
   end
 end
