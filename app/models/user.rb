@@ -36,8 +36,9 @@ class User < ActiveRecord::Base
   end
 
   def activate!
-    update_attribute(:is_active,    true)
-    update_attribute(:activated_at, Time.zone.now)
+    update_attribute(:activation_token, nil)
+    update_attribute(:is_active,        true)
+    update_attribute(:activated_at,     Time.zone.now)
   end
 
   def activated?
