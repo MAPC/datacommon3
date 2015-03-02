@@ -29,21 +29,11 @@ class StaticMap < ActiveRecord::Base
     order('id DESC')
   end
 
+  alias_method :topics, :issue_areas
 
   paginates_per 9
-
-
+  
   def date
-    Date.new(year, month).stamp(:monthyear)
-  end
-
-
-  def thumbnail_src
-    "http://metrobostondatacommon.org/site_media/#{thumbnail}"
-  end
-
-
-  def pdf_page_src
-    "http://metrobostondatacommon.org/site_media/#{pdf_page}"
+    Date.new(year, month).to_s(:monthyear)
   end
 end

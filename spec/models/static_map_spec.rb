@@ -38,4 +38,24 @@ describe StaticMap do
     expect(build(:map, thumbnail: nil)).to be_valid
   end
 
+  specify "#date returns a stamped date" do
+    expect(map.date).to eq("January 2015")
+  end
+
+  it "orders itself by ID" do
+    map1 = create(:map)
+    map2 = create(:map)
+    expect(StaticMap.all).to eq([map2, map1])
+  end
+
+  it "has associations to data sources" do
+    expect(map).to respond_to(:data_sources)
+    expect(map.data_sources).to respond_to(:each)
+  end
+
+  it "has associations to topics" do
+    expect(map).to respond_to(:topics)
+    expect(map.topics).to respond_to(:each)
+  end
+
 end
