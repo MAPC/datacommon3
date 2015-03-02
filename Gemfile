@@ -47,7 +47,9 @@ gem 'rubyzip',     '>= 1.0.0', require: 'zip' # Zip files for downloading
 
 
 # Utilities
-gem 'mail'
+gem 'redis'          # Dependency for Resque
+gem 'resque'         # Process long-running jobs in the background
+gem 'resque_mailer'  # Process email in the background
 gem 'stamp', '0.6.0' # Convenient timestamping
 gem 'wannabe_bool'   # To convert ENV strings to booleans
 gem 'bcrypt', '~> 3.1.7' # Use to generate password. Also used in has_secure_password

@@ -54,7 +54,7 @@ Rails.application.configure do
   # config.cache_store = :mem_cache_store
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  config.action_controller.asset_host = "http://#{ENV['S3_BUCKET_NAME']}"
+  config.action_controller.asset_host = "http://#{ENV.fetch('S3_BUCKET_NAME')}"
 
   # Precompile additional assets.
   # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
@@ -63,6 +63,15 @@ Rails.application.configure do
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.smtp_settings = {
+    address:               "smtp.mandrillapp.com",
+    port:                  25,   # ports 587 and 2525 are also supported with STARTTLS
+    enable_starttls_auto:  true, # detects and uses STARTTLS
+    user_name:             ENV.fetch('MANDRILL_USERNAME'),
+    password:              ENV.fetch('MANDRILL_PASSWORD'), # SMTP password is any valid API key
+    authentication:        'login', # Mandrill supports 'plain' or 'login'
+    domain:                ENV.fetch('MANDRILL_DOMAIN') { 'datacommon.org' } # your domain to identify your server when connecting
+  }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).

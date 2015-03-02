@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  # mount Resque::Server.new, at: '/resque'
+  
   get 'dynamic_visualizations/image'
 
   match '/search',  to: 'search#search',  via: :get

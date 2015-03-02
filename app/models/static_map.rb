@@ -27,8 +27,7 @@ class StaticMap < ActiveRecord::Base
 
 
   def date
-    date = Date.new(year, month)
-    date.stamp("May 2014")
+    Date.new(year, month).stamp(:monthyear)
   end
 
 

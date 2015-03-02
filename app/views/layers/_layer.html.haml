@@ -1,5 +1,6 @@
 .row
   .col-xs-8.col-xs-offset-1
+
     %h3.layer.title= link_to layer.title, layer
     - if layer.coverage
       %p.layer.coverage
@@ -9,6 +10,6 @@
       - if layer.dates
         &nbsp;&bull;&nbsp; #{layer.dates}
     - if layer.created.presence
-      %p Created in #{layer.created}
+      %p Created in #{layer.created.stamp(:monthyear)}
     
     %p= layer.description

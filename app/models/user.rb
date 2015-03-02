@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   self.table_name = 'auth_user'
-  attr_accessor :remember_token, :activation_token, :reset_token, :password
+  attr_accessor :remember_token, :password
 
   before_save :downcase_email
   before_save :encrypt_password, if: Proc.new { |user| user.password? }
@@ -128,22 +128,24 @@ class User < ActiveRecord::Base
     end
 
     def create_activation_digest
-      self.activation_token  = User.new_token
+      activation_token       = User.new_token
+      self.activation_token  = activation_token
       self.activation_digest = User.digest(activation_token)
     end
 
     def create_reset_digest
-      self.reset_token  = User.new_token
+      reset_token = User.new_token
+      update_attribute(:reset_token,   reset_token)
       update_attribute(:reset_digest,  User.digest(reset_token))
       update_attribute(:reset_sent_at, Time.zone.now)
     end
 
     def send_activation_email
-      UserMailer.account_activation(self).deliver
+      UserMailer.account_activation(self.id).deliver
     end
 
     def send_password_reset_email
-      UserMailer.password_reset(self).deliver
+      UserMailer.password_reset(self.id).deliver
     end
 
 

@@ -35,7 +35,9 @@ CREATE TABLE auth_user (
     activation_digest character varying(255),
     activated_at timestamp without time zone,
     reset_digest character varying(255),
-    reset_sent_at timestamp without time zone
+    reset_sent_at timestamp without time zone,
+    activation_token character varying(255),
+    reset_token character varying(255)
 );
 
 
@@ -1230,4 +1232,6 @@ INSERT INTO schema_migrations (version) VALUES ('20150225194939');
 INSERT INTO schema_migrations (version) VALUES ('20150226213733');
 
 INSERT INTO schema_migrations (version) VALUES ('20150226215146');
+
+INSERT INTO schema_migrations (version) VALUES ('20150302164055');
 

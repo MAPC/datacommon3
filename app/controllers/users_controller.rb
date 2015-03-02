@@ -42,7 +42,7 @@ class UsersController < ApplicationController
 
 
     def correct_user
-      user    = User.find_by(username: params[:id])
+      user = User.find_by(username: params[:id])
 
       if current_user?(user)
         visualizations = Visualization.unscoped.where(owner_id: user.id).page(params[:page])
