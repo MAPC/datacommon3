@@ -15,6 +15,13 @@ class StaticMap < ActiveRecord::Base
   
   belongs_to :institution
   
+  validates :title,    presence: true
+  validates :abstract, presence: true
+  validates :month,    presence: true
+  validates :year,     presence: true
+  validates :map_file_name, presence: true
+  validates_attachment_content_type :map, :content_type => /\Aapplication\/pdf\Z/
+
   include InstitutionScope
   include DataResourceFilters
 
