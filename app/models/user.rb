@@ -41,10 +41,13 @@ class User < ActiveRecord::Base
     update_attribute(:activated_at,     Time.zone.now)
   end
 
-  def activated?
+  def active?
     is_active
   end
 
+  def activated?
+    active?
+  end
 
   def to_s
     name

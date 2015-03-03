@@ -381,12 +381,16 @@ CREATE TABLE mbdc_hero (
     navtitle character varying(50),
     navsubtitle character varying(50),
     content text,
-    image character varying(100) NOT NULL,
+    image character varying(100),
     "order" integer,
     active boolean NOT NULL,
     content_markup_type character varying(30) NOT NULL,
     _content_rendered text NOT NULL,
-    institution_id integer DEFAULT 1
+    institution_id integer DEFAULT 1,
+    image_file_name character varying(255),
+    image_content_type character varying(255),
+    image_file_size integer,
+    image_updated_at timestamp without time zone
 );
 
 
@@ -1234,4 +1238,6 @@ INSERT INTO schema_migrations (version) VALUES ('20150226213733');
 INSERT INTO schema_migrations (version) VALUES ('20150226215146');
 
 INSERT INTO schema_migrations (version) VALUES ('20150302164055');
+
+INSERT INTO schema_migrations (version) VALUES ('20150303200412');
 

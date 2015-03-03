@@ -35,7 +35,7 @@ class DataSource < ActiveRecord::Base
     end
 
     def use_or_create_slug
-      self.slug = title.parameterize unless self.slug.presence
+      self.slug ||= title.parameterize
     end
 
 end

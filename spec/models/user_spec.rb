@@ -23,6 +23,10 @@ describe User do
     expect(user.activated?).to eq(user.is_active)
   end
 
+  specify "#active? returns active state" do
+    expect(user.active?).to eq(user.is_active)
+  end
+
   it 'generates a Gravatar URL with default 75px' do
     gravatar_id = Digest::MD5.hexdigest(user.email)  
     expect(user.avatar_url).to eq("http://gravatar.com/avatar/#{gravatar_id}.png?s=75")
