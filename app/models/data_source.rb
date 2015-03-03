@@ -1,6 +1,14 @@
 class DataSource < ActiveRecord::Base
   self.table_name = 'mbdc_datasource'
 
+  HTTP_REGEX = /https?:\/\//
+  before_save :validate_http
+  before_save :use_or_create_slug
+
+  validates :title,       presence: true
+  validates :description, presence: true
+  validates :url,         presence: true
+
   lazy_load :description
 
   def self.default_scope
@@ -19,4 +27,15 @@ class DataSource < ActiveRecord::Base
     join_table:  :mbdc_calendar_sources,
     foreign_key:             :datasource_id,
     association_foreign_key: :calendar_id
+
+  private
+
+    def validate_http
+      self.url = "http://#{self.url}" unless HTTP_REGEX.match self.url
+    end
+
+    def use_or_create_slug
+      self.slug = title.parameterize unless self.slug.presence
+    end
+
 end

@@ -42,6 +42,10 @@ describe StaticMap do
     expect(map.date).to eq("January 2015")
   end
 
+  specify "#to_s returns the title" do
+    expect(map.to_s).to eq(map.title)
+  end
+
   it "orders itself by ID" do
     map1 = create(:map)
     map2 = create(:map)
@@ -57,5 +61,6 @@ describe StaticMap do
     expect(map).to respond_to(:topics)
     expect(map.topics).to respond_to(:each)
   end
+
 
 end

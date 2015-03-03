@@ -6,7 +6,7 @@
     .col-sm-7.col-sm-offset-1.col-xs-10.col-xs-offset-1
       = link_to static_map.map.url, target: '_blank' do
         %h3= static_map.title
-      %p=  static_map.date + ", " + static_map.institution.short_name
+      %p=  static_map.date # + ", " + static_map.institution.short_name
       %p.map-abstract
         = link_to static_map.map.url, target: '_blank' do
           = truncate(static_map.abstract, length: 400)

@@ -39,10 +39,6 @@ module Features
       click_button 'Request password reset'
     end
 
-    def delete(path)
-      Capybara.current_session.driver.delete path
-    end
-
     def set_password(options={})
       password = options.fetch(:password) { 'v4lidp4ssw0rd' }
       confirm  = options.fetch(:confirmation) { password }
