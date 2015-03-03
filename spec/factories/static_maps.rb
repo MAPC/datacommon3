@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :map, class: StaticMap do
-    title 'Map title'    
+    title 'Map title'
     abstract 'A long enough abstract, I hope.'
     month 1
     year  2015

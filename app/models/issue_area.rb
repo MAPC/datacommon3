@@ -1,5 +1,9 @@
 class IssueArea < ActiveRecord::Base
-    self.table_name = 'mbdc_topic'
+  self.table_name = 'mbdc_topic'
+
+  before_save :use_or_create_slug
+
+  validates :title, presence: true
 
   has_and_belongs_to_many :visualizations,
     join_table:  :weave_visualization_topics,
@@ -23,5 +27,11 @@ class IssueArea < ActiveRecord::Base
   def to_param
     slug
   end
+
+  private
+
+    def use_or_create_slug
+      self.slug = title.parameterize unless self.slug.presence
+    end
   
 end
