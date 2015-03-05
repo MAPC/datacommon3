@@ -19,6 +19,10 @@ describe IssueArea do
     expect(create(:topic, slug: nil).slug).to eq('public-health')
   end
 
-  it "can be ordered"
+  it "can be ordered" do
+    one   = create(:topic, active: true)
+    two   = create(:topic, active: false)
+    expect(IssueArea.all.count).to eq(1)
+  end
 
 end

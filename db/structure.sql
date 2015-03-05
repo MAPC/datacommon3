@@ -421,7 +421,8 @@ CREATE TABLE mbdc_topic (
     id integer NOT NULL,
     title character varying(100) NOT NULL,
     slug character varying(50) NOT NULL,
-    "order" integer
+    "order" integer,
+    active boolean DEFAULT false NOT NULL
 );
 
 
@@ -1240,4 +1241,6 @@ INSERT INTO schema_migrations (version) VALUES ('20150226215146');
 INSERT INTO schema_migrations (version) VALUES ('20150302164055');
 
 INSERT INTO schema_migrations (version) VALUES ('20150303200412');
+
+INSERT INTO schema_migrations (version) VALUES ('20150305202101');
 

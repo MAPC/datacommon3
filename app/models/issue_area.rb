@@ -14,7 +14,7 @@ class IssueArea < ActiveRecord::Base
     foreign_key: :topic_id,
     association_foreign_key: :visualization_id
 
-  default_scope { order('"order" ASC') }
+  default_scope { where(active: true).order('"order" ASC') }
 
   def sort_order
     self.send(:order)
