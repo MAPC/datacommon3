@@ -15,8 +15,11 @@ feature 'Visitor filters static maps' do
 
   scenario 'by topic' do
     topic = create(:topic)
-    visit static_maps_path
-    expect(page).to have_content topic.title
+    map  = create(:map, issue_areas: [topic])
+    map2 = create(:map, title: 'The other map')
+    visit static_maps_path(topic: topic.slug)
+    expect(page).to have_content map.title
+    expect(page).not_to have_content map2.title
   end
 
 end

@@ -50,4 +50,17 @@ describe Hero do
     expect(create(:hero)._content_rendered).to eq(hero.content)
   end
 
+  it "returns in order" do
+    hero_1 = create(:hero, order: 1, active: true)
+    hero_2 = create(:hero, order: 2, active: false)
+    hero_3 = create(:hero, order: 3, active: true)
+    expect(Hero.all).to eq([hero_1, hero_3])
+  end
+
+  it "returns a random Hero" do
+    hero_1 = create(:hero, active: true)
+    hero_2 = create(:hero, active: true)
+    expect([Hero.random].count).to eq(1)
+  end
+
 end

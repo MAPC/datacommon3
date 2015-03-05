@@ -12,7 +12,7 @@ class Hero < ActiveRecord::Base
   validates :active,   inclusion: { in: [true, false] }
   validates :content,  presence: true
 
-  has_attached_file :image, styles: { thumbnail: ['500x375>', :png] }
+  has_attached_file :image, styles: { preview: ['500x375>', :png] }
   validates :image_file_name, presence: true
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
   
@@ -20,10 +20,7 @@ class Hero < ActiveRecord::Base
     where(active: true).order(:order)
   end
 
-  def self.random
-    self.offset(rand(self.count(:all))).first
-  end
-
+  include RandomScope
   include InstitutionScope
 
   def image_src
