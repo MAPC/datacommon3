@@ -68,6 +68,7 @@ GEM
     chunky_png (1.3.4)
     climate_control (0.0.3)
       activesupport (>= 3.0)
+    cliver (0.3.2)
     cocaine (0.5.7)
       climate_control (>= 0.0.3, < 1.0)
     codeclimate-test-reporter (0.4.7)
@@ -231,6 +232,11 @@ GEM
       mime-types
     pg (0.17.1)
     pg_array_parser (0.0.9)
+    poltergeist (1.6.0)
+      capybara (~> 2.1)
+      cliver (~> 0.3.1)
+      multi_json (~> 1.0)
+      websocket-driver (>= 0.2.0)
     polyglot (0.3.5)
     postgres_ext (2.4.1)
       activerecord (>= 4.0.0)
@@ -347,6 +353,9 @@ GEM
     vegas (0.1.11)
       rack (>= 1.0.0)
     wannabe_bool (0.1.0)
+    websocket-driver (0.5.3)
+      websocket-extensions (>= 0.1.0)
+    websocket-extensions (0.1.2)
     xpath (2.0.0)
       nokogiri (~> 1.3)
     zeus (0.15.4)
@@ -380,6 +389,7 @@ DEPENDENCIES
   nokogiri (>= 1.4.4)
   paperclip (= 4.2.0)
   pg (= 0.17.1)
+  poltergeist
   postgres_ext-postgis
   rails (= 4.1.5)
   rails_12factor

@@ -21,7 +21,7 @@ describe DataSource do
   end
 
   it "generates a slug if given none" do
-    expect(create(:source, slug: nil).slug).to eq('acs')
+    expect(create(:source, title: "ACS", slug: nil).slug).to eq('acs')
   end
 
   it "requires a url" do

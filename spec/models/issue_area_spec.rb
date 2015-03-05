@@ -19,7 +19,6 @@ describe IssueArea do
     expect(create(:topic, slug: nil).slug).to eq('public-health')
   end
 
-  it "can be ordered" do
-  end
+  it "can be ordered"
 
 end

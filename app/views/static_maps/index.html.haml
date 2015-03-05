@@ -5,10 +5,11 @@
 
 %p.viewing
   You are viewing
-  =select_tag :topic, options_for_select(topic_options, params[:topic]), id: 'topic-select', class: 'chosen-select', data: { placeholder: "All Topics" }
+  -# =   select_tag :topic,       options_for_select(topic_options, params[:topic]),             id: 'topic-select',       class: 'chosen-select', data: { placeholder: "All Topics" }
+  = IssueArea.all.map(&:inspect)
   and
-  =select_tag :data_source, options_for_select(data_source_options, params[:data_source]), id: 'data-source-select', class: 'chosen-select', data: { placeholder: "All Data Sources" }
-  #{'.'}
+  = succeed '.' do
+    = select_tag :data_source, options_for_select(data_source_options, params[:data_source]), id: 'data-source-select', class: 'chosen-select', data: { placeholder: "All Data Sources" }
 
 = render @maps
 
