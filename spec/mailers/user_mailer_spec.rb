@@ -3,7 +3,7 @@ require "spec_helper"
 describe UserMailer do
 
   describe "account_activation" do
-    subject(:user) { create(:new_user, activation_token: User.new_token) }
+    subject(:user) { create(:user, :inactive, activation_token: User.new_token) }
     let(:mail) { UserMailer.account_activation(user) }
 
     it "renders the headers" do

@@ -1,0 +1,47 @@
+/*
+
+    Global: Topic colors & icons
+    
+    - Variables
+    - Background styles
+    - Icons
+
+*/
+
+$arts-culture:              #000066;
+$civic-vitality-governance: #006699;
+$demographics:              #660066;
+$economy:                   #00BFAC;
+$education:                 #46AD24;
+$environment-energy:        #91E248;
+$geographic-boundaries:     #999999;
+$housing:                   #FFEE2C;
+$land-use-zoning:           #FFCC00;
+$public-health:             #FF9900;
+$public-safety:             #FF6633;
+$technology:                #CC3300;
+$transportation:            #990033;
+
+
+$icon-color:                #FFFFFF;
+$icon-inverse:              #000000;
+
+.icon              { color: $icon-color }
+.icon.icon-inverse { color: $icon-inverse }
+
+
+// TODO: Make short slugs in Topic table                   //   Use like:
+.arts    { background-color: $arts-culture              }  // .icon.arts
+.civic   { background-color: $civic-vitality-governance }  // .icon.civic
+.demo    { background-color: $demographics              }  // .icon.demo
+.econ    { background-color: $economy                   }  // .icon.econ
+.edu     { background-color: $education                 }  // .icon.edu
+.env     { background-color: $environment-energy        }  // .icon.env
+.geo     { background-color: $geographic-boundaries     }  // .icon.geo
+.housing { background-color: $housing                   }  // .icon.housing
+.land    { background-color: $land-use-zoning           }  // .icon.land
+.health  { background-color: $public-health             }  // .icon.health
+.safe    { background-color: $public-safety             }  // .icon.safe
+.tech    { background-color: $technology                }  // .icon.tech
+.transpo { background-color: $transportation            }  // .icon.transpo
+

@@ -2,7 +2,7 @@ require 'spec_helper'
 
 feature 'User resets password' do
 
-  subject(:user) { create(:active_user) }
+  subject(:user) { create(:user, :active) }
 
   background do
     user.reset_password!

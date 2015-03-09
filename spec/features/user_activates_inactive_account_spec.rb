@@ -2,7 +2,7 @@ require 'spec_helper'
 
 feature 'User activates inactive account' do
 
-  subject(:user) { create(:inactive_user) }
+  subject(:user) { create(:user, :inactive) }
   
   scenario 'with a valid token' do
     visit edit_account_activation_path(user.activation_token, email: user.email)

@@ -3,44 +3,33 @@ FactoryGirl.define do
     username   "username"
     first_name "First"
     last_name  "Last"
-    email      "first@last.io"
+    sequence(:email) { |n| Faker::Internet.email("user_#{n}") }
     password   "pa55word"
+    is_active    true
     is_staff     false
-    is_active    true
     is_superuser false
-  end
 
-  factory :staff, class: User do
-    username   "staff"
-    first_name "Staff"
-    last_name  "Member"
-    email      "staff@mapc.org"
-    password   "pa55Word"
-    is_staff     true
-    is_active    true
-    is_superuser false
-  end
+    trait :active do
+      is_active  true
+    end
 
-  factory :admin, class: User do
-    username   "admin"
-    first_name "Admin"
-    last_name  "Istrator"
-    email      "admin@mapc.org"
-    password   "pa55W0rd"
-    is_staff     true
-    is_active    true
-    is_superuser true
-  end
+    trait :inactive do
+      is_active  false
+    end
 
-  factory :new_user, aliases: [:inactive_user], class: User do
-    username   "inactive"
-    first_name "In"
-    last_name  "Active"
-    email      "inactive@email.net"
-    password   "passw0rd"
-    password_confirmation { password }
-    is_staff     false
-    is_active    false
-    is_superuser false
+    trait :staff do
+      first_name "Steff"
+      last_name  "Membre"
+      is_staff    true
+    end
+
+    trait :admin do
+      first_name  "Addy"
+      last_name   "Ministrador"
+      is_staff     true
+      is_active    true
+      is_superuser true
+    end
+
   end
 end

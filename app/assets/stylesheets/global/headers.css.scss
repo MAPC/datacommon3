@@ -1,0 +1,68 @@
+/*  Global: Headers         */
+
+/* ( Global: DataCommon brand colors  TODO: This is already getting out of hand) */
+
+$dc-blue:                   #556C98;
+$dc-green:                  #7AC142; // formerly, #BDD431
+
+
+$dc-h1:   'Oswald',  sans-serif;  // TODO: May want to order
+$dc-h2:   'Roboto',  sans-serif;  // serif, sans-serif differently,
+$dc-h3:   'Oswald',  sans-serif;
+$dc-h4:   'Rokkitt', serif;
+$dc-h5:   'Oswald',  sans-serif;
+$dc-body: 'Roboto',  sans-serif;
+
+
+h1, h2, h3, h4, h5, h6 {
+  color: $dc-blue
+}
+
+
+h1 {
+  font-family:    $dc-h1    !important;
+  font-size:      2em       !important;
+  font-weight:    700       !important;
+  text-transform: uppercase !important;
+  color:          $dc-blue  !important;
+  padding-top:    20px;
+}
+
+
+h2.page-header {
+  font-family: $dc-h2;
+  font-size:       1.5em;
+  font-weight:   300;
+  margin-top:     20px;
+  margin-bottom:  10px;
+}
+
+
+h3 {
+  font-family: $dc-h3;
+  a {
+    // font-family: "Rokkitt", serif;
+    font-size:    1.2em;
+    padding-top: 20px;
+  }
+}
+
+
+h4 {
+  padding-top:  20px;
+  font-family:  $dc-h4;
+  font-size:    1.5em;
+}
+
+
+h5 {
+  font-family: $dc-h5;
+}
+
+
+h5.center {
+  font-family:    $dc-h5;
+  font-weight:    700;
+  font-size:      1.3em;
+  text-transform: uppercase;
+}

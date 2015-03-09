@@ -35,6 +35,44 @@ class Hero < ActiveRecord::Base
     title
   end
 
+  rails_admin do
+    list do
+      field :title
+      field :order
+      field :active
+    end
+    edit do
+      field :title
+      field :subtitle
+      field :navtitle do
+        label "Link title"
+      end
+      field :navsubtitle do
+        label "Link subtitle"
+      end
+      field :content do
+        label "Raw content"
+      end
+      field :content_markup_type do
+        label "Content markup type"
+        help "One of 'html' (default), 'markdown', or 'raw'."
+      end
+      field :image, :paperclip
+      field :order do
+        label "Sort order"
+      end
+      field :active
+      field :institution do
+        visible false
+        # TODO: Default to the user's institution if staff,
+        # but allow any if the current user is an admin.
+        # default_value do
+        #   bindings[:view]._current_user.institution.id
+        # end
+      end
+    end
+  end
+
   private
 
     def create_or_use_nav_titles

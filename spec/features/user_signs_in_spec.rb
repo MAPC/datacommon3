@@ -41,7 +41,7 @@ end
 
 feature 'Inactive user signs in' do
 
-  let(:user) { create(:inactive_user) }
+  let(:user) { create(:user, :inactive) }
 
   scenario 'with valid information' do
     sign_in user

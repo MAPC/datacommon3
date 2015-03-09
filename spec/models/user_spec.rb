@@ -39,7 +39,7 @@ describe User do
 
   describe 'validations' do
     
-    subject(:user) { build(:new_user) }
+    subject(:user) { build(:user, :inactive) }
 
     it 'requires a username' do
       expect(build(:user, username:  '')).to_not be_valid
@@ -47,7 +47,7 @@ describe User do
     end
 
     it 'requires a unique username, case-insensitive' do
-      user1 = build(:new_user,  username: "the_user_name")
+      user1 = build(:user, :inactive, username: "the_user_name")
       user2 = user1.dup ; user2.username.upcase!
       expect(user1).to be_valid
       expect(user2).to be_valid
@@ -62,7 +62,7 @@ describe User do
     end
 
     it 'requires a unique email address' do
-      user1 = build(:new_user, email: "the.same@email.net")
+      user1 = build(:user, :inactive, email: "the.same@email.net")
       user2 = user1.dup
       expect(user1).to be_valid
       expect(user2).to be_valid
@@ -71,7 +71,7 @@ describe User do
     end
 
     it 'requires a unique email address, case-insensitive' do
-      user1 = build(:new_user, email: "the.same@email.net")
+      user1 = build(:user, :inactive, email: "the.same@email.net")
       user2 = user1.dup ; user2.email.upcase!
       expect(user1).to be_valid
       expect(user2).to be_valid
