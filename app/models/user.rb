@@ -49,10 +49,18 @@ class User < ActiveRecord::Base
     active?
   end
 
+  def staff?
+    is_staff
+  end
+
+  def admin?
+    is_superuser
+  end
+
+
   def to_s
     name
   end
-
 
   def to_param
     username

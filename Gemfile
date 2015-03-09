@@ -46,6 +46,11 @@ gem 'asset_sync'            # Upload assets to S3
 gem 'rubyzip',     '>= 1.0.0', require: 'zip' # Zip files for downloading
 
 
+# Admin
+gem 'rails_admin'    # Manage resources
+gem 'cancan'         # Authorize admin
+
+
 # Utilities
 gem 'redis'          # Dependency for Resque
 gem 'resque'         # Process long-running jobs in the background
