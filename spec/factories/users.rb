@@ -1,9 +1,9 @@
 FactoryGirl.define do
   factory :user, aliases: [:active_user] do
-    username   "username"
-    first_name "First"
-    last_name  "Last"
-    sequence(:email) { |n| Faker::Internet.email("user_#{n}") }
+    username   { Faker::Internet.user_name(10) }
+    first_name { Faker::Name.first_name    }
+    last_name  { Faker::Name.last_name     }
+    email      { Faker::Internet.email     }
     password   "pa55word"
     is_active    true
     is_staff     false

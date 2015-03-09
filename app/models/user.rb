@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
 
   has_one  :profile
   has_many :visualizations, foreign_key: :owner_id
+  belongs_to :institution
 
   validates :username,   presence: true, length: { minimum: 5, maximum: 30 }, uniqueness: { case_sensitive: false }
   validates :first_name, presence: true, length: { maximum: 30 }

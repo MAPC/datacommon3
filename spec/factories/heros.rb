@@ -10,6 +10,10 @@ FactoryGirl.define do
     image_content_type 'image/png'
     image_file_size     2024
     image_updated_at    Time.now
+
+    trait :active do
+      active true
+    end
   end
 
 end

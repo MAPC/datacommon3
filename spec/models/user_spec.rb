@@ -14,6 +14,8 @@ describe User do
     expect(user).to respond_to(:avatar_url)
     expect(user).to respond_to(:profile)
     expect(user).to respond_to(:visualizations)
+    expect(user).to respond_to(:institution)
+    expect(user).to respond_to(:institution_id)
   end
 
   it 'has helper methods' do
@@ -96,6 +98,10 @@ describe User do
       expect(build(:user, password: nil)).to_not be_valid
       expect(build(:user, password_confirmation: '')).to_not be_valid
     end
+
+    # TODO: Through the console, can't update without password.
+    # May want to test for this later.
+
   end
 
   specify "#authenticated? returns false for a user with nil remember digest" do

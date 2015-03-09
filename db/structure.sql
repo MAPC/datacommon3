@@ -37,7 +37,8 @@ CREATE TABLE auth_user (
     reset_digest character varying(255),
     reset_sent_at timestamp without time zone,
     activation_token character varying(255),
-    reset_token character varying(255)
+    reset_token character varying(255),
+    institution_id integer
 );
 
 
@@ -1007,6 +1008,13 @@ CREATE UNIQUE INDEX core_genericobjectrolemapping_subject_object_ct_id_object_i_
 
 
 --
+-- Name: index_auth_user_on_institution_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_auth_user_on_institution_id ON auth_user USING btree (institution_id);
+
+
+--
 -- Name: index_auth_user_on_remember_digest; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1243,4 +1251,6 @@ INSERT INTO schema_migrations (version) VALUES ('20150302164055');
 INSERT INTO schema_migrations (version) VALUES ('20150303200412');
 
 INSERT INTO schema_migrations (version) VALUES ('20150305202101');
+
+INSERT INTO schema_migrations (version) VALUES ('20150309191247');
 

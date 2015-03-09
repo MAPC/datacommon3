@@ -16,7 +16,7 @@ class Hero < ActiveRecord::Base
   validates :image_file_name, presence: true
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
   
-  def self.default_scope
+  def self.active
     where(active: true).order(:order)
   end
 
@@ -37,9 +37,13 @@ class Hero < ActiveRecord::Base
 
   rails_admin do
     list do
+      scopes [nil, :active]
       field :title
       field :order
       field :active
+      field :institution_id do
+        formatted_value { Institution.find_by(id: bindings[:object].institution_id).try(:short_name) }
+      end
     end
     edit do
       field :title
@@ -64,11 +68,11 @@ class Hero < ActiveRecord::Base
       field :active
       field :institution do
         visible false
-        # TODO: Default to the user's institution if staff,
+        # Default to the user's institution if staff,
         # but allow any if the current user is an admin.
-        # default_value do
-        #   bindings[:view]._current_user.institution.id
-        # end
+        default_value do
+          bindings[:view]._current_user.institution_id
+        end
       end
     end
   end
