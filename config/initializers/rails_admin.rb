@@ -1,5 +1,6 @@
 RailsAdmin.config do |config|
 
+  config.main_app_name = ["DataCommon", "Admin"]
   ### Popular gems integration
 
   ## == Devise ==
@@ -31,4 +32,6 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
+  config.excluded_models = %w( Ability Geometry Layer Search SpatialExtent )
 end

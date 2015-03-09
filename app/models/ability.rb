@@ -9,11 +9,11 @@ class Ability
       can :access, :rails_admin
       can :dashboard
 
-      can :manage, StaticMap,    institution_id: user.institution.id
-      can :manage, Hero,         institution_id: user.institution.id
-      can :update, Municipality, institution_id: user.institution.id
-      can :update, Subregion,    institution_id: user.institution.id
-      can :update, Institution,  institution_id: user.institution.id
+      can :manage, StaticMap    #, institution_id: user.institution_id
+      can :manage, Hero         #, institution_id: user.institution_id
+      can [:read, :update], Municipality #, institution_id: user.institution_id
+      can [:read, :update], Subregion    #, institution_id: user.institution_id
+      can [:read, :update], Institution  #, institution_id: user.institution_id
 
       if user.admin?
         can :manage, :all

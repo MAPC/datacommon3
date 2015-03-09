@@ -67,18 +67,22 @@ gem 'foreman', '0.75.0' # Manage the server and auxiliary processes
 
 group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  # gem 'spring'
+  gem 'spring'
 end
 
 
 group :development, :test do
+
+  gem 'spring-commands-rspec'
+
   gem 'rspec-rails',        '~> 2.14.0.rc1'
   gem 'database_cleaner'
 
   gem 'factory_girl_rails', '~> 4.0'
   gem 'launchy'
   
-  gem 'zeus'
+  gem 'guard-rspec'
+  # gem 'zeus'
   gem 'childprocess',       '0.3.6'
   gem 'capybara',           '~> 2.2.1'
   gem 'poltergeist'
