@@ -25,6 +25,11 @@ describe User do
     expect(user.activated?).to eq(user.is_active)
   end
 
+  it 'treats edge case names with respect' do
+    user = build(:user, first_name: "Edmund", last_name: "O'Reilly")
+    expect(user.name).to eq("Edmund O'Reilly")
+  end
+
   specify "#active? returns active state" do
     expect(user.active?).to eq(user.is_active)
   end

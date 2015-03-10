@@ -13,7 +13,7 @@ class Ability
       can [:read, :create, :update], Hero,      institution_id: user.institution_id
       can [:read, :update], Municipality #, institution_id: user.institution_id
       can [:read, :update], Subregion    #, institution_id: user.institution_id
-      can [:read, :update], Institution  #, institution_id: user.institution_id
+      can [:read, :update], Institution,                    id: user.institution_id
 
       if user.admin?
         can :manage, :all

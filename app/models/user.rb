@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
   validates_confirmation_of :password
   
   def name
-    profile ? profile.name.titleize : full_name_or_username
+    profile ? profile.name : full_name_or_username
   end
 
   def fname
@@ -133,7 +133,7 @@ class User < ActiveRecord::Base
   private
 
     def full_name_or_username
-      "#{first_name} #{last_name}".titleize.presence || username
+      "#{first_name} #{last_name}".presence || username
     end
 
     def downcase_email

@@ -46,9 +46,6 @@ feature 'Staff can manage maps' do
   end
 end
 
-
-require 'spec_helper'
-
 feature 'admin can manage maps' do
   let!(:admin) { create(:user, :admin, institution_id: 1) }
 

@@ -3,7 +3,7 @@ class Institution < ActiveRecord::Base
   has_one  :branding
 
   has_many :heros
-  has_many :layers
+  # has_many :layers
   has_many :pages
   has_many :static_maps
   has_many :visualizations
@@ -37,5 +37,50 @@ class Institution < ActiveRecord::Base
   end
 
   # alias_attribute :muni_id, :region_id
+
+  rails_admin do
+    list do
+      # scopes [nil]
+      field :short_name do
+        column_width 150
+      end
+      field :subdomain do
+        label "domain"
+        column_width 200
+        formatted_value { "#{bindings[:object].subdomain}.datacommon.org" }
+      end
+      field :id do
+        label "ID"
+        column_width 75
+      end
+      field :visualizations do
+        label "Visuals"
+        formatted_value { bindings[:object].visualizations.count }
+        column_width 75
+      end
+      field :maps do
+        formatted_value { bindings[:object].static_maps.count }
+        column_width 75
+      end
+      field :municipalities do
+        label "Munis"
+        formatted_value { bindings[:object].municipalities.count }
+        column_width 75
+      end
+      field :subregions do
+        formatted_value { bindings[:object].subregions.count }
+        column_width 75
+      end
+    end
+    edit do
+      field :short_name
+      field :long_name
+      field :subdomain
+      field :region_id
+      # field :retina_dimensions
+      field :logo, :paperclip
+    end
+  end
+
   
 end
