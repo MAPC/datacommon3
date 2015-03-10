@@ -11,9 +11,9 @@ class InstitutionsController < ApplicationController
     # @dashboard.datasets -> most recent datasets
     # @dashboard = InstitutionDashboard.new(Institution.find_by(id: id))
 
-    @heros   =   [Naught.build {|b| b.black_hole}] # Hero.institution(@institution).limit(3)
-    @feature =   [Naught.build {|b| b.black_hole}] # Visualization.where(institution_id: @institution.id).featured.sample
-
+    @heros   =   [Naught.build {|b| b.black_hole}] # Hero.institution(@institution).limit(3) # TODO: Unset limit here, set in volidations
+    @feature =   [Naught.build {|b| b.black_hole}] # institution.featured_visualization
+    
     if @feature.nil?
       @feature = [Naught.build {|b| b.black_hole}] # Visualization.where(institution_id: @institution.id).sample
     end

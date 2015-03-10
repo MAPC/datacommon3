@@ -40,4 +40,37 @@ class StaticMap < ActiveRecord::Base
   def date
     Date.new(year, month).to_s(:monthyear)
   end
+
+   rails_admin do
+    list do
+      field :title
+      field :date do
+        formatted_value { bindings[:object].date }
+      end
+      field :abstract do
+        formatted_value { bindings[:object].abstract[0..50] }
+      end
+      field :institution_id do
+        formatted_value {
+          Institution.find_by(id: bindings[:object].institution_id).try(:short_name)
+        }
+      end
+    end
+
+    edit do
+      field :title
+      field :abstract
+      field :map, :paperclip do
+        label "File upload"
+      end
+      field :month do
+        help "Required. A number from 1-12."
+      end
+      field :year
+      field :data_sources
+      field :issue_areas
+    end
+  end
+
+
 end

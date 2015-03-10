@@ -25,7 +25,8 @@ class Snapshot
 
   
   def options_for_area
-    @geography.class.only_inst(@institution).map {|g| [g.name, g.slug]}
+    @institution.send(@geography.pluralize).map {|g| [g.name, g.slug]}
+    # @geography.class.only_inst(@institution).map {|g| [g.name, g.slug]}
   end
 
   

@@ -32,6 +32,10 @@ class Institution < ActiveRecord::Base
     camel_name
   end
 
+  def featured_visualization
+    visualizations.featured.first # was #sample not #first
+  end
+
   # alias_attribute :muni_id, :region_id
   
 end

@@ -2,7 +2,7 @@ class SubregionsController < ApplicationController
   before_filter :load_institution
   
   def index
-    @geographies = Subregion.only_inst(@institution)
+    @geographies = @institution.subregions
     render 'snapshots/index'
   end
 

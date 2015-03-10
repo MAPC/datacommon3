@@ -10,8 +10,10 @@ class VisualizationsController < ApplicationController
   
 
   def index
-    visualizations = apply_scopes(Visualization.institution(@institution)).page(params[:page])
-    @gallery = Gallery.new(visualizations)
+    # visualizations = apply_scopes(Visualization.institution(@institution)).page(params[:page])
+    @gallery = Gallery.new(
+      apply_scopes(@institution.visualizations).page(params[:page]
+    )
   end
 
 

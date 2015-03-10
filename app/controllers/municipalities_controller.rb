@@ -2,7 +2,7 @@ class MunicipalitiesController < ApplicationController
   before_filter :load_institution
   
   def index
-    @geographies = Municipality.only_inst(@institution)
+    @geographies = @institution.municipalities
     render 'snapshots/index'
   end
 

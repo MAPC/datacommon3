@@ -42,7 +42,9 @@ class Hero < ActiveRecord::Base
       field :order
       field :active
       field :institution_id do
-        formatted_value { Institution.find_by(id: bindings[:object].institution_id).try(:short_name) }
+        formatted_value {
+          Institution.find_by(id: bindings[:object].institution_id).try(:short_name)
+        }
       end
     end
     edit do
