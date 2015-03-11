@@ -52,15 +52,37 @@ describe StaticMap do
     expect(StaticMap.all).to eq([map2, map1])
   end
 
-  it "has associations to data sources" do
-    expect(map).to respond_to(:data_sources)
-    expect(map.data_sources).to respond_to(:each)
+  describe "institution scope" do
+    let(:map_1) { create(:map, institution_id: 2) }
+    let(:map_2) { create(:map, institution_id: 1) }
+    let(:inst)  { create(:institution, id: 1) }
+
+    context "without institutions" do
+      it "returns all heros in order of creation" do
+        expect(StaticMap.institution()).to eq([map_1, map_2])
+      end
+    end
+
+    context "with institutions" do
+      it "returns all heros sorted to = institution#id" do
+        results = StaticMap.institution(inst)
+        expect(results).to eq([map_2, map_1])
+      end
+
+      it "returns all heros sorted to = institution_id" do
+        results = StaticMap.institution(inst.id)
+        expect(results).to eq([map_2, map_1])
+      end
+    end
   end
 
-  it "has associations to topics" do
-    expect(map).to respond_to(:topics)
-    expect(map.topics).to respond_to(:each)
+  describe "associations" do
+    it "has them" do
+      [:data_sources, :topics].each do |assoc|
+        expect(map).to respond_to(assoc)
+        expect(map.send(assoc)).to respond_to(:each)    
+      end
+    end
   end
-
 
 end

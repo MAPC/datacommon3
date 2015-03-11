@@ -21,7 +21,6 @@ class Hero < ActiveRecord::Base
   end
 
   include RandomScope
-  include InstitutionScope
 
   def image_src
     "http://metrobostondatacommon.org/site_media/#{image}"

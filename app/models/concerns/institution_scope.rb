@@ -4,8 +4,8 @@ module InstitutionScope
   module ClassMethods
 
     def institution(institution=nil)
-      institution = build_null_institution if institution.nil?
-      self.unscoped.order("CASE WHEN institution_id = #{institution.id} THEN 0 ELSE 1 END")#.try(:default_scope)
+      institution_id = id_or_object_for(institution)
+      self.unscoped.order("CASE WHEN institution_id = #{institution_id} THEN 0 ELSE 1 END")#.try(:default_scope)
     end
 
     # TOD: This should just be institution.collaborators
@@ -15,6 +15,15 @@ module InstitutionScope
 
 
     private
+
+      def id_or_object_for(institution_or_id)
+        return null_institution.id if institution_or_id.nil?
+        institution_or_id.try(:id) || institution_or_id
+      end
+
+      def null_institution
+        @null_institution ||= build_null_institution
+      end
 
       def build_null_institution
         Naught.build { |b|

@@ -22,7 +22,7 @@ class StaticMap < ActiveRecord::Base
   validates :map_file_name, presence: true
   validates_attachment_content_type :map, :content_type => /\Aapplication\/pdf\Z/
 
-  # include InstitutionScope
+  include InstitutionScope
   include DataResourceFilters
 
   def self.default_scope
