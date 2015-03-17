@@ -17,6 +17,7 @@ class ApplicationController < ActionController::Base
     @null_institution ||= Naught.build { |b| 
       b.mimic Institution
       b.black_hole
+      def id ; "NULL" ; end
     }
   end
 

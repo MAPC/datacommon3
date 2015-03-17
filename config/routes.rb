@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  resources :snapshots, only: [:index, :show] do
+    resources :topics,  only: [:show], on: :member, path: '', to: 'snapshots#detail'
+  end
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   # mount Resque::Server.new, at: '/resque'
   

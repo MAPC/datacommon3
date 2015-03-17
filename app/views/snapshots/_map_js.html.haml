@@ -1,17 +1,3 @@
-.row
-  .col-sm-4.col-xs-12
-    %h1 #{@geography}: Overview
-    %p.description= @geography.description
-    %br
-    = render partial: 'select', locals: {type: @geography.type, selected: @geography}
-  
-  .col-sm-8.col-xs-12.center
-    #map
-
-.row
-  = render partial: 'snapshots/topic_preview', collection: topics, as: :topic
-
-
 :javascript
 
 $(document).on('ready', function () {
@@ -20,10 +6,18 @@ $(document).on('ready', function () {
       tiles   = L.tileLayer("http://tiles.mapc.org/basemap/{z}/{x}/{y}.png", {
         attribution: 'Tiles by <a href="http://www.mapc.org/" target="_blank">Metropolitan Area Planning Council</a>.',
         maxZoom:      17
-      }).addTo(map),
-      geojson = JSON.parse(#{@geography.to_geojson}),
+  }).addTo(map),
+      geojson = JSON.parse(#{geography.to_geojson}),
       geojlyr = L.geoJson(geojson).addTo(map);
-  
+
+
   map.fitBounds(geojlyr.getBounds());
 
+  $('#area-select').on('change', function () {
+    var url = $( this ).val(); // get selected value
+    if (url) { // require a URL
+      window.location = "/snapshots/" + url; // redirect
+    }
+    return false;
+  });
 });

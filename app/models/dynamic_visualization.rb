@@ -3,14 +3,14 @@ require 'nokogiri'
 class DynamicVisualization < ActiveRecord::Base
   self.table_name = 'snapshots_visualization'
 
-  has_and_belongs_to_many :data_sources,
-    join_table: :snapshots_visualization_source,
-    foreign_key: :visualization_id,
+  has_and_belongs_to_many    :data_sources,
+    join_table:              :snapshots_visualization_source,
+    foreign_key:             :visualization_id,
     association_foreign_key: :datasource_id
 
-  has_and_belongs_to_many :issue_areas,
-    foreign_key: :visualization_id,
-    join_table: :snapshots_visualization_topics,
+  has_and_belongs_to_many    :issue_areas,
+    foreign_key:             :visualization_id,
+    join_table:              :snapshots_visualization_topics,
     association_foreign_key: :topic_id
 
   has_attached_file :session_state, path: "/:class/:attachment/:filename"

@@ -1,0 +1,16 @@
+= form_tag '', method: :get do
+  = select_tag :slug, options_for_area(type, selected), include_blank: true, id: 'area-select', class: 'chosen-select', data: { placeholder: "Choose #{indef_article type}" }
+
+:javascript
+
+$(document).on('ready', function () {
+  
+  $('#area-select').on('change', function () {
+    var url = $( this ).val();               // get selected value
+    if (url) {                               // require a URL
+      window.location = "/snapshots/" + url; // redirect
+    }
+    return false;
+  });
+
+});

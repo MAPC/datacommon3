@@ -1,34 +1,16 @@
-- area_type_name = @geographies.first.class.name.downcase
+- type = @geographies.first.type
 
-%h1 #{area_type_name.capitalize} Snapshots
+%h1 #{type.capitalize} Snapshots
 %h3.page-header Regional Trends and Current Conditions
 
-%br
-%br
+.break
 
 .row
-  .col-sm-6
+  .col-xs-12
+    .geography-selector
+    = render partial: 'select', locals: {type: type, selected: nil}
+
+.row
+  .col-xs-12
     %p
-      Community Snapshots are a quick and easy way to access basic information about a #{area_type_name}. The snapshots pull together a wide range of data on each #{area_type_name}, and are a great place to start investigating what data we have available.
-  .col-sm-4.col-sm-offset-1.col-xs-offset-0.center
-    %p
-      %strong What #{area_type_name} would you like to learn about?
-
-    =form_tag '', method: :get do
-      =select_tag :municipality_id, options_for_select(@geographies.map {|g| [g.name, g.slug]}), include_blank: true, id: 'area-select', class: 'chosen-select', data: { placeholder: "Choose #{indef_article area_type_name}" }
-
-%br
-%br
-%br
-
-:javascript
-
-$(document).on('ready', function () {
-  $('#area-select').on('change', function () {
-    var url = $( this ).val(); // get selected value
-    if (url) { // require a URL
-      window.location = "/#{area_type_name.pluralize}/" + url; // redirect
-    }
-    return false;
-  });
-});
+      Community Snapshots are a quick and easy way to access basic information about a #{type}. The snapshots pull together a wide range of data on each #{type}, and are a great place to start investigating what data we have available.

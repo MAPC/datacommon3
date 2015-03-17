@@ -1,0 +1,7 @@
+.col-md-4.col-sm-6.col-xs-12
+  .municipality.snapshot
+    -# .snapshot > .title should do what's needed
+    .title
+
+    = link_to snapshot_topic_path(topic)
+      = topic.title
