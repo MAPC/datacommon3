@@ -1,0 +1,7 @@
+.col-md-4.col-sm-6.col-xs-12
+  .snapshot{class: @geography.type}
+    -# .snapshot > .title should do what's needed
+    .title
+      = link_to snapshot_topic_path(@geography, topic) do
+        = topic.title
+        = image_tag "http://placehold.it/300x185"

@@ -1,3 +1,6 @@
+.col-sm-8.col-xs-12.center
+  #map.snapshot.map
+
 :javascript
 
 $(document).on('ready', function () {
@@ -6,18 +9,10 @@ $(document).on('ready', function () {
       tiles   = L.tileLayer("http://tiles.mapc.org/basemap/{z}/{x}/{y}.png", {
         attribution: 'Tiles by <a href="http://www.mapc.org/" target="_blank">Metropolitan Area Planning Council</a>.',
         maxZoom:      17
-  }).addTo(map),
-      geojson = JSON.parse(#{geography.to_geojson}),
+      }).addTo(map),
+      geojson = JSON.parse(#{@geography.to_geojson}),
       geojlyr = L.geoJson(geojson).addTo(map);
-
-
+  
   map.fitBounds(geojlyr.getBounds());
 
-  $('#area-select').on('change', function () {
-    var url = $( this ).val(); // get selected value
-    if (url) { // require a URL
-      window.location = "/snapshots/" + url; // redirect
-    }
-    return false;
-  });
 });

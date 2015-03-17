@@ -1,29 +1,17 @@
+-# Introduces the area (muni, subregion, etc.) and shows the first
+-# dynamic (snapshot) visualization for each topic.
+
 .row
   .col-sm-4.col-xs-12
+    -# Introduce the geography
     %h1 #{@geography}: Overview
     %p.description= @geography.description
     %br
     = render partial: 'select', locals: {type: @geography.type, selected: @geography}
-  
-  .col-sm-8.col-xs-12.center
-    #map
 
+  -# Show the preview map for the given geography.
+  = render partial: 'map', locals: {geography: @geography}
+
+-# Show the first dynamic visualization for every topic.
 .row
   = render partial: 'snapshots/topic_preview', collection: topics, as: :topic
-
-
-:javascript
-
-$(document).on('ready', function () {
-
-  var map     = L.map('map', {scrollWheelZoom: false}).setView([42.3580, -71.0616], 8),
-      tiles   = L.tileLayer("http://tiles.mapc.org/basemap/{z}/{x}/{y}.png", {
-        attribution: 'Tiles by <a href="http://www.mapc.org/" target="_blank">Metropolitan Area Planning Council</a>.',
-        maxZoom:      17
-      }).addTo(map),
-      geojson = JSON.parse(#{@geography.to_geojson}),
-      geojlyr = L.geoJson(geojson).addTo(map);
-  
-  map.fitBounds(geojlyr.getBounds());
-
-});

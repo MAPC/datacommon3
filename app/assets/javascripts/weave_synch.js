@@ -182,7 +182,7 @@ DC.getBase64 = function (weave_id, callback) {
 
 
 DC.establishAllBase64 = function () {
-  var visuals = $('.snapshot-vis');
+  var visuals = $('.visual.preview');
 
   $.each(visuals, function (idx, div) {
     div.click();

@@ -1,19 +1,16 @@
-%h4 #{topic}
-%p.small Remember you have a reference to #{@geography}.
+-# Renders the topic title, the preview of the first dynamic visualization
+-# belonging to the topic, then the link to the topic detail page.
+-# TODO: .col-md-4 may not meet the needs of .subregion
 
--# = render partial: 'snapshots/topic', object: @geography
+.col-md-4.col-sm-6.col-xs-12
+  .snapshot{class: @geography.type}
+    -# TODO write .snapshot > .title to be 
+    .topic.title
+      = link_to snapshot_topic_path(@geography, topic) do
+        %h4
+          = topic
+          %span.small view all
+          -#= @geography
 
--# - if @s.area_type_name == 'municipality'
--#   .col-md-4.col-sm-6.col-xs-12
--#     .snapshot.municipality
--#       .snapshot-preview-title.center
--#         =link_to eval("#{@s.area_type_name}_topic_path(@s.geography, topic.topic)") do
--#           = topic.topic.title
--#           %br
--#           .small (View All)
--#       = render partial: 'visualizations/preview', object: topic.visual, as: :vis
--# - else
--#   .col-xs-12.center.snapshot-preview
--#     .snapshot-preview-title
--#       = link_to topic.topic.title, eval("#{@s.area_type_name}_topic_path(@s.geography, topic.topic)")
--#     = render partial: 'visualizations/preview', object: topic.visual, as: :vis
+    - visual = topic.dynamic_visualizations.first
+    = render partial: 'visualizations/preview', object: visual, as: :visual
