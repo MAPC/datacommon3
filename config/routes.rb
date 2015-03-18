@@ -19,27 +19,28 @@ Rails.application.routes.draw do
 
   resources :institutions,   only: [:show]
 
-  resources :layers,         except: [:new, :create, :edit, :update, :destroy], concerns: :paginatable do
+  resources :layers,         only: [:index, :show], concerns: :paginatable do
     match :download, to: 'layers#download',      on: :member, via: :get
     match :meta,     to: 'layers#meta_download', on: :member, via: :get
   end
 
   resources :visualizations, concerns: :paginatable
+  
   resources :static_maps,    only: [:index, :show], concerns: :paginatable,
                              path: 'gallery'
 
   resources :municipalities, only: [:index, :show] do
-    resources :topics, on:    :member,        path: '',
-                       only: [:show], to:   'municipalities#topic'
-    get 'state/:vis_id', on: :member, to: 'municipalities#rendered_state'
-    post :image
+  #   resources :topics, on:    :member,        path: '',
+  #                      only: [:show], to:   'municipalities#topic'
+  #   get 'state/:vis_id', on: :member, to: 'municipalities#rendered_state'
+  #   post :image
   end
 
   resources :subregions,     only: [:index, :show] do
-    resources :topics, on:    :member, path: '',
-                       only: [:show],  to: 'subregions#topic'
-    get 'state/:vis_id', on: :member, to: 'subregions#rendered_state'
-    post :image
+  #   resources :topics, on:    :member, path: '',
+  #                      only: [:show],  to: 'subregions#topic'
+  #   get 'state/:vis_id', on: :member, to: 'subregions#rendered_state'
+  #   post :image
   end
 
   resources :users,  except: [:edit, :update, :destroy], path: 'profiles'
@@ -55,9 +56,9 @@ Rails.application.routes.draw do
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
   
-  resources :page_topics, only: [:show], path: 'page_topics' do
-    resources :pages, only: [:show], path: 'page'
-  end
+  # resources :page_topics, only: [:show], path: 'page_topics' do
+  #   resources :pages, only: [:show], path: 'page'
+  # end
 
   match '', to: 'institutions#show', constraints: {subdomain: /.+/}, via: [:get]
   root      to: 'institutions#show'

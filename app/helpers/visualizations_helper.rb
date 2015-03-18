@@ -1,13 +1,13 @@
 module VisualizationsHelper
 
-  def topic_options
-    options  = IssueArea.all.map {|i| [i.title, i.slug]}
-    options.unshift ['All Topics', nil]
-  end
+  def list_relation(object, relation, options={})
+    relation = relation.to_s
+    relation_method = relation.pluralize.to_sym
+    related_objects = object.send( relation_method )
+    plural_word     = relation.pluralize( related_objects.count ).capitalize
+    join_token      = options.fetch(:join_with) { ', ' }
 
-  def data_source_options
-    options  = DataSource.all.map {|i| [i.title, i.id]}
-    options.unshift ['All Data Sources', nil]
+    "#{ plural_word }: #{ related_objects.join( join_token ) }"
   end
 
 end

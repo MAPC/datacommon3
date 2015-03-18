@@ -502,7 +502,8 @@ CREATE TABLE snapshots_regionalunit (
     short_desc_markup_type character varying(255) NOT NULL,
     _short_desc_rendered text NOT NULL,
     subunit_ids character varying(255),
-    institution_id integer DEFAULT 1
+    institution_id integer DEFAULT 1,
+    type character varying(255) DEFAULT 'municipality'::character varying
 );
 
 
@@ -1253,4 +1254,6 @@ INSERT INTO schema_migrations (version) VALUES ('20150303200412');
 INSERT INTO schema_migrations (version) VALUES ('20150305202101');
 
 INSERT INTO schema_migrations (version) VALUES ('20150309191247');
+
+INSERT INTO schema_migrations (version) VALUES ('20150318160938');
 

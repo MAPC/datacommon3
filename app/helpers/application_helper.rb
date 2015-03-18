@@ -8,20 +8,19 @@ module ApplicationHelper
     options_for_select(objects.map {|g| [g.name, g.slug]})
   end
 
-  def options_for_area(type, selected)
-    # TODO: Don't break the Law of Demeter
-    geographies = Geography
-                    .pluck(:name, :slug)
-                    # .where(type: params[:type])
-                    # .where(institution_id: @institution.id)
-                      
-    options_for_select(geographies, selected)
-  end
-
   def about_pages
     Page.institution_topic(@institution, 'about')
   end
 
+  def topic_options
+    options  = IssueArea.all.map {|i| [i.title, i.slug]}
+    options.unshift ['All Topics', nil]
+  end
+
+  def data_source_options
+    options  = DataSource.all.map {|i| [i.title, i.id]}
+    options.unshift ['All Data Sources', nil]
+  end
 
   def community_pages
     Page.institution_topic(@institution, 'community').reverse

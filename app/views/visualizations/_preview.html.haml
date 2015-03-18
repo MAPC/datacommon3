@@ -1,8 +1,16 @@
-%h5= Faker::Name.title
-= image_tag "http://placehold.it/325x200"
+-# This is a mock visualization which will be removed
+-#    once actual visualizations are added.
+
+- visual = OpenStruct.new(sources: ["Census", "MA Elections Division"])
+- visual.years = %w( 2000 2010 2013 )
+- visual.title = Faker::Name.title
+- visual.preview_url = "http://placehold.it/325x200"
+
+%h5= visual.title
+= image_tag visual.preview_url
 %ul.caption
-  %li Sources: Census, MA Elections Division
-  %li Years: 2000, 2010, 2013
+  %li= list_relation(visual, :sources)
+  %li= list_relation(visual, :years)
 
 -# %h5= vis
 -# .visual.preview{class: "#{@s.area_type_name}", id: "vis-#{vis.id}"}
