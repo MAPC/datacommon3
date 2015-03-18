@@ -22,7 +22,7 @@ describe StaticMap do
   end
 
   it "requires an attachment" do
-    expect(build(:map_without_attachment)).to_not be_valid
+    expect(build(:map, :no_attachment)).to_not be_valid
   end
 
   it "requires a PDF attachment" do

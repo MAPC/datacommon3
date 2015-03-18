@@ -30,8 +30,11 @@ describe DynamicVisualization do
     expect(build(:dynamic_visual, year: '009')).to_not be_valid
   end
 
-  it 'requires a session state'
-  it 'returns comma-separated years as a formatted string'
+  it 'returns comma-separated years as an enumerable' do
+    expect(build(:dynamic_visual, year: "2000,2012").years).to eq(["2000", "2012"])
+    expect(build(:dynamic_visual, year: "2000").years).to eq(["2000"])
+    expect(build(:dynamic_visual, year: "5 yr average").years).to eq(["5 yr average"])
+  end
 
   describe 'preview' do
 

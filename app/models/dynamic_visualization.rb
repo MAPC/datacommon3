@@ -86,7 +86,7 @@ class DynamicVisualization < ActiveRecord::Base
     def preview_the(symbol, object, method=:slug)
       string = Rails.configuration.paperclip_defaults[symbol].dup
 
-      preview_rules = [
+      replacements = [
         [/:style/,      object.send(method)                 ],
         [/:class/,      self.class.name.underscore.pluralize],
         [/:attachment/, 'images'                            ],
@@ -95,7 +95,7 @@ class DynamicVisualization < ActiveRecord::Base
         [/:extension/,  'png'                               ]
       ]
 
-      preview_rules.each { |e| string.gsub!(e.first, e.last) }
+      replacements.each { |e| string.gsub!(e.first, e.last) }
       string
     end
 
