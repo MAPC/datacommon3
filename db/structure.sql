@@ -564,6 +564,36 @@ ALTER SEQUENCE snapshots_visualization_id_seq OWNED BY snapshots_visualization.i
 
 
 --
+-- Name: snapshots_visualization_source; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE snapshots_visualization_source (
+    id integer NOT NULL,
+    visualization_id integer NOT NULL,
+    datasource_id integer NOT NULL
+);
+
+
+--
+-- Name: snapshots_visualization_source_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE snapshots_visualization_source_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: snapshots_visualization_source_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE snapshots_visualization_source_id_seq OWNED BY snapshots_visualization_source.id;
+
+
+--
 -- Name: snapshots_visualization_topics; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -804,6 +834,13 @@ ALTER TABLE ONLY snapshots_visualization ALTER COLUMN id SET DEFAULT nextval('sn
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
+ALTER TABLE ONLY snapshots_visualization_source ALTER COLUMN id SET DEFAULT nextval('snapshots_visualization_source_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
 ALTER TABLE ONLY snapshots_visualization_topics ALTER COLUMN id SET DEFAULT nextval('snapshots_visualization_topics_id_seq'::regclass);
 
 
@@ -941,11 +978,27 @@ ALTER TABLE ONLY snapshots_regionalunit
 
 
 --
+-- Name: snapshots_visualization__visualization_id_7697a44685099f5a_uniq; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY snapshots_visualization_source
+    ADD CONSTRAINT snapshots_visualization__visualization_id_7697a44685099f5a_uniq UNIQUE (visualization_id, datasource_id);
+
+
+--
 -- Name: snapshots_visualization_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY snapshots_visualization
     ADD CONSTRAINT snapshots_visualization_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: snapshots_visualization_source_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY snapshots_visualization_source
+    ADD CONSTRAINT snapshots_visualization_source_pkey PRIMARY KEY (id);
 
 
 --
@@ -1121,6 +1174,20 @@ CREATE INDEX snapshots_visualization_regiontype_id ON snapshots_visualization US
 
 
 --
+-- Name: snapshots_visualization_source_datasource_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX snapshots_visualization_source_datasource_id ON snapshots_visualization_source USING btree (datasource_id);
+
+
+--
+-- Name: snapshots_visualization_source_visualization_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX snapshots_visualization_source_visualization_id ON snapshots_visualization_source USING btree (visualization_id);
+
+
+--
 -- Name: snapshots_visualization_topics_topic_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1195,6 +1262,14 @@ CREATE INDEX weave_visualization_topics_topic_id ON weave_visualization_topics U
 --
 
 CREATE INDEX weave_visualization_topics_visualization_id ON weave_visualization_topics USING btree (visualization_id);
+
+
+--
+-- Name: visualization_id_refs_id_4779ee3461d3a108; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY snapshots_visualization_source
+    ADD CONSTRAINT visualization_id_refs_id_4779ee3461d3a108 FOREIGN KEY (visualization_id) REFERENCES snapshots_visualization(id) DEFERRABLE INITIALLY DEFERRED;
 
 
 --

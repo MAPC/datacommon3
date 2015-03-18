@@ -23,6 +23,33 @@ class DynamicVisualization < ActiveRecord::Base
   has_attached_file :session_state, path: "/:class/:attachment/:filename"
   validates_attachment_content_type :session_state, content_type: /\A.*\/xml\Z/
 
+  alias_attribute :sources, :data_sources
+
+  def preview(geo, method=:slug)
+    @preview ||= OpenStruct.new(
+      path: preview_the(:path, geo, method=:slug),
+      url:  preview_the(:url,  geo, method=:slug)
+    )
+  end
+
+  # Render session state for an `object` that has
+  # fields `unitid`, `name`, and `subunit_ids`.
+  # Make this Rubyish. It should be ERB.
+  # http://stackoverflow.com/questions/8954706/render-an-erb-template-with-values-from-a-hash#8955121
+  # http://www.kuwata-lab.com/erubis/users-guide.02.html#tut-basic
+  # http://www.kuwata-lab.com/erubis/users-guide.02.html#tut-context
+  def rendered_state(object)
+    "<xml>RENDERED STATE</xml>".html_safe
+    # Ideally, with private method erb wrapping Erubis
+    # erb( session_state, object )
+  end
+
+  alias_method :state, :rendered_state
+
+  def sessionstate
+    "/snapshots/visualizations/#{session_state_file_name}"
+  end
+
   def to_s
     title
   end
@@ -31,55 +58,8 @@ class DynamicVisualization < ActiveRecord::Base
     year.split(',')
   end
 
-  alias_attribute :sources, :data_sources
-
-
-  def preview(geo, method=:slug)
-    @preview ||= OpenStruct.new(
-      path: preview_the(:path, geo, method=:slug),
-      url:  preview_the(:url,  geo, method=:slug)
-    )
-  end
-  # TODO: Refactor preview into its own object or at least struct
-
-  # Render session state for an `object` that has
-  # fields `unitid`, `name`, and `subunit_ids`.
-  def rendered_state(object)
-    "RENDERED STATE"
-    # bracketed = /(\{{2}\s*regionalunit.{0,4}unit_?ids?\s*\}{2})/i # was /(\{{2}.*\}{2})/i, then /(\{{2}\s*regionalunit.unitid\s*\}{2})/i
-    # # Capital S is to match only non-whitespace chars
-    # inside_brackets  = /\{{2}\s*(\S*)\s*\}{2}/i
-
-    # if Rails.env == 'development'
-    #   state = Nokogiri::XML(open("#{Rails.public_path}/system#{session_state.path}")).to_s
-    # end
-
-    # if Rails.env == 'production'
-    #   state = Nokogiri::XML(open(session_state.url)).to_s
-    # end
-    # captures = state.match(bracketed).captures
-
-    # captures.each do |expression|
-    #   full_method     = expression.match(inside_brackets).captures.first # 'regionalunit.unitd'
-    #   replacer_method = full_method.partition('.').last.strip            # 'unitid'
-    #   replacer_method = replacer_method.gsub(/\|.*/, '')                 # remove Django filters
-    #   state.gsub!( expression, object.send(replacer_method) )            # @municipality.send('unitid')
-    #   puts "#{expression} => #{replacer_method}"
-    # end
-
-    # state.gsub!( /,352/, ',402' )
-    # state
-  end
-
-  def sessionstate
-    "/snapshots/visualizations/#{session_state_file_name}"
-  end
 
   private
-
-    def set_legacy_sessionstate
-      self.sessionstate = sessionstate
-    end
 
     # object: geography (municipality or subregion object)
     # method: method to send it in order to get the right file path
@@ -97,6 +77,10 @@ class DynamicVisualization < ActiveRecord::Base
 
       replacements.each { |e| string.gsub!(e.first, e.last) }
       string
+    end
+
+    def set_legacy_sessionstate
+      self.sessionstate = sessionstate
     end
 
 

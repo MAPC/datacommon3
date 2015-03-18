@@ -12,5 +12,5 @@
           %span.small view all
           -#= @geography
 
-    - visual = topic.dynamic_visualizations.first || DynamicVisualization.firstifif
+    - visual = topic.dynamic_visualizations.first || DynamicVisualization.first
     = render partial: 'visualizations/preview', object: visual, as: :visual
