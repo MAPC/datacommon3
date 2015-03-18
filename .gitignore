@@ -19,8 +19,9 @@
 /log/*.log
 /tmp
 
-# Ignore data dumps
+# Ignore data dumps and 'pending migrations' in the sidelines
 /db/data/
+/db/pending_migrations/
 
 # Ignore uploads, attachments, and assets
 /public/system

@@ -159,6 +159,11 @@ ActiveRecord::Schema.define(version: nil) do
     t.integer "topic_id",         null: false
   end
 
+  create_table "snapshots_visualization_source", force: true do |t|
+    t.integer "visualization_id", null: false
+    t.integer "datasource_id",    null: false
+  end
+
   add_index "snapshots_visualization_topics", ["topic_id"], name: "snapshots_visualization_topics_topic_id", using: :btree
   add_index "snapshots_visualization_topics", ["visualization_id", "topic_id"], name: "snapshots_visualization__visualization_id_34c1e30e30858e56_uniq", unique: true, using: :btree
   add_index "snapshots_visualization_topics", ["visualization_id"], name: "snapshots_visualization_topics_visualization_id", using: :btree

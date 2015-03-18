@@ -536,7 +536,7 @@ CREATE TABLE snapshots_visualization (
     regiontype_id integer DEFAULT 1 NOT NULL,
     sessionstate character varying(100) NOT NULL,
     year character varying(20),
-    overviewmap boolean NOT NULL,
+    overviewmap boolean DEFAULT false NOT NULL,
     session_state_file_name character varying(255),
     session_state_content_type character varying(255),
     session_state_file_size integer,
@@ -1256,4 +1256,6 @@ INSERT INTO schema_migrations (version) VALUES ('20150305202101');
 INSERT INTO schema_migrations (version) VALUES ('20150309191247');
 
 INSERT INTO schema_migrations (version) VALUES ('20150318160938');
+
+INSERT INTO schema_migrations (version) VALUES ('20150318181627');
 

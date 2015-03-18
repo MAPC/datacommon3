@@ -12,7 +12,7 @@ FactoryGirl.define do
     pdf_page          'legacy_pdf_location.pdf'
     thumbnail         'thumbnail/path'
 
-    factory :map_without_attachment do
+    trait :no_attachment do
       map_file_name    nil
       map_content_type nil
       map_file_size    nil
