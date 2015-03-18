@@ -59,7 +59,7 @@ describe StaticMap do
 
     context "without institutions" do
       it "returns all heros in order of creation" do
-        expect(StaticMap.institution()).to eq([map_1, map_2])
+        expect(StaticMap.institution(nil, default: false)).to eq([map_1, map_2])
       end
     end
 

@@ -2,8 +2,8 @@ class Geography < ActiveRecord::Base
   self.table_name = 'snapshots_regionalunit'
   self.inheritance_column = nil # The :type column tried to find a STI subclass
 
-  # belongs_to :institution
-  # include InstitutionScope
+  belongs_to :institution
+  include InstitutionScope
 
   def self.default_scope
     order :name
