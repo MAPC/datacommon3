@@ -53,6 +53,32 @@ class DynamicVisualization < ActiveRecord::Base
     year.split(',')
   end
 
+  rails_admin do
+    list do
+      field :title
+      field :year do
+        formatted_value { bindings[:object].years.join(', ') }
+      end
+      field :topics do
+        formatted_value { bindings[:object].topics.map(&:to_s).join(', ') }
+      end
+      field :session_state_file_name do
+        label "Filename"
+      end
+      field :session_state_updated_at do
+        label "Updated"
+      end
+    end
+
+    edit do
+      field :title
+      field :year
+      field :session_state, :paperclip
+      field :data_sources
+      field :issue_areas
+    end
+  end
+
 
   private
 

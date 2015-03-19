@@ -109,11 +109,7 @@ describe DynamicVisualization do
     end
   end
 
-  # Pick up here
-  pending "scopes" do
-    pending "data source"
-    pending "topic"
-  end
+  pending "data source and topic filters"
 
 end
 

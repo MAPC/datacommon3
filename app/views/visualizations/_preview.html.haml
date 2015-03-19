@@ -4,7 +4,7 @@
 %h5= visual.title
 
 .visual.preview
-  = image_tag visual.preview(@geography).url, id: "visual-#{visual.id}"
+  = image_tag visual.preview(geography).url, id: "visual-#{visual.id}"
 
 %ul.caption
   %li= list_relation(visual, :sources)
@@ -12,7 +12,7 @@
 
 
 %script{id: "sessionstate-#{visual.id}", type: 'text/xml'}
-  = visual.state(@geography)
+  = visual.state(geography)
 
 -#   :javascript
 -#     $(document).on('ready', function () {

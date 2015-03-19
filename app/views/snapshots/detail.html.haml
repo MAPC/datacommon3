@@ -1,2 +1,16 @@
-= @snapshot.topic     # i.e. Economy
-= @snapshot.geography # i.e. Boston
+- @snap = @snapshot
+
+%h1= link_to "< #{@snap.geography}", snapshot_path(@snap.geography)
+%h1= @snap.topic
+
+-#   Maybe a TODO
+-# Partials don't fully work because visualizations/preview is not
+-# contained by a div. There's a way to refactor it so you pass
+-# in the snapshot's topic header but it's not worth my time right now.
+-#      i.e. locals: { extra_header: topic } > gets rendered as a H4
+
+.row
+  - @snap.visuals.each do |visual|
+    .col-md-4.col-sm-6.col-xs-12
+      .snapshot{class: @snap.geography.type}
+        = render partial: 'visualizations/preview', object: visual, as: :visual, locals: { geography: @snap.geography }

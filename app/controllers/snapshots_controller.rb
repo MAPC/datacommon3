@@ -13,8 +13,8 @@ class SnapshotsController < ApplicationController
   # /snapshots/boston/{economy|demographics}
   def detail
     @snapshot = SnapshotFacade.new(
-      geography: params[:slug],
-      topic:     params[:topic]
+      geography: params[:snapshot_id],
+      topic:     params[:id]
     )
   end
 end

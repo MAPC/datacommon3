@@ -4,13 +4,11 @@
 
 .col-md-4.col-sm-6.col-xs-12
   .snapshot{class: @geography.type}
-    -# TODO write .snapshot > .title to be 
     .topic.title
       = link_to snapshot_topic_path(@geography, topic) do
         %h4
           = topic
           %span.small view all
-          -#= @geography
 
     - visual = topic.dynamic_visualizations.first || DynamicVisualization.first
-    = render partial: 'visualizations/preview', object: visual, as: :visual
+    = render partial: 'visualizations/preview', object: visual, as: :visual, locals: { geography: @geography }
