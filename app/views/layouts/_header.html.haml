@@ -60,7 +60,6 @@
           %li.header-item= link_to 'Sign in',  signin_path
           %li.header-item= link_to 'Sign up', signup_path
 
-
         =form_tag '/search', method: :get, data: {role: 'search'}, class: "navbar-form navbar-right" do
           %div.input-group.header-item
             = text_field_tag :search, params[:search], class: "typeahead form-control", placeholder: "Search for data"

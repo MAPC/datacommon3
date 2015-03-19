@@ -13,11 +13,10 @@
     .row.featured
       = yield :featured
     
+    = render 'shared/flash'
     .container
       .row
         = render 'layouts/header'
-        = render 'layouts/flash'
-
       .row
         .container
           = yield

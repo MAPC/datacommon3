@@ -1,0 +1,15 @@
+- if flash
+  - flash.each do |key, value|
+    %div{class: "alert alert-#{key}"}
+      %a.removable.left
+        %span.glyphicon.glyphicon-remove
+      = value
+
+:javascript
+
+  $(document).on('ready', function () {
+    $('.removable').on('click', function() {
+      $( this ).parent().slideUp();
+    });
+
+  });
