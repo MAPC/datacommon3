@@ -6,7 +6,6 @@
     -# Introduce the geography
     %h1 #{@geography}: Overview
     %p.description= @geography.description
-    %br
     = render partial: 'select', locals: {type: @geography.type, selected: @geography}
 
   -# Show the preview map for the given geography.

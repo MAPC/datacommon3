@@ -1,5 +1,7 @@
-= form_tag '', method: :get do
-  = select_tag :slug, options_for_area(nil, selected), include_blank: true, id: 'area-select', class: 'chosen-select', data: { placeholder: "Choose a municipality or subregion" }
+.geography-selector
+  %h5 Select a community
+  = form_tag '', method: :get do
+    = select_tag :slug, options_for_area(nil, selected), include_blank: true, id: 'area-select', class: 'chosen-select', data: { placeholder: "Choose a municipality or subregion" }
 
 :javascript
 

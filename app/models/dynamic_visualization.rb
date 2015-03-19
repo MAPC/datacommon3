@@ -1,5 +1,3 @@
-require 'nokogiri'
-
 class DynamicVisualization < ActiveRecord::Base
   self.table_name = 'snapshots_visualization'
 
@@ -26,6 +24,9 @@ class DynamicVisualization < ActiveRecord::Base
   alias_attribute :sources, :data_sources
   alias_attribute :unitid,  :unit_id
 
+
+  # TODO InstitutionScope
+
   def preview(geo, method=:slug)
     @preview ||= OpenStruct.new(
       path: preview_the(:path, geo, method=:slug),
@@ -33,12 +34,8 @@ class DynamicVisualization < ActiveRecord::Base
     )
   end
 
-  # Render session state for an `object` that has
-  # fields `unitid`, `name`, and `subunit_ids`.
-  # Make this Rubyish. It should be ERB.
-  # http://stackoverflow.com/questions/8954706/render-an-erb-template-with-values-from-a-hash#8955121
-  # http://www.kuwata-lab.com/erubis/users-guide.02.html#tut-basic
-  # http://www.kuwata-lab.com/erubis/users-guide.02.html#tut-context
+  # Render session state for an object (probably Geography) that has
+  # fields :unitid, :name, and :subunit_ids.
   def rendered_state(object)
     render_erb( object )
   end
@@ -84,7 +81,7 @@ class DynamicVisualization < ActiveRecord::Base
 
     def render_erb(object)
       template = File.read( self.session_state.path )
-      Erubis::Eruby.new(template).result(binding())
+      Erubis::Eruby.new(template).result(binding()).html_safe
     end
 
 

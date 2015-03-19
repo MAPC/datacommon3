@@ -58,18 +58,18 @@ describe StaticMap do
     let(:inst)  { create(:institution, id: 1) }
 
     context "without institutions" do
-      it "returns all heros in order of creation" do
+      it "returns all maps in order of creation" do
         expect(StaticMap.institution(nil, default: false)).to eq([map_1, map_2])
       end
     end
 
     context "with institutions" do
-      it "returns all heros sorted to = institution#id" do
+      it "returns all maps sorted to = institution#id" do
         results = StaticMap.institution(inst)
         expect(results).to eq([map_2, map_1])
       end
 
-      it "returns all heros sorted to = institution_id" do
+      it "returns all maps sorted to = institution_id" do
         results = StaticMap.institution(inst.id)
         expect(results).to eq([map_2, map_1])
       end

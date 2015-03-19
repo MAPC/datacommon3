@@ -6,7 +6,7 @@ class Geography < ActiveRecord::Base
   include InstitutionScope
 
   def self.default_scope
-    order :name
+    order(:type).order(:name)
   end
 
   alias_attribute :description, :short_desc
