@@ -33,8 +33,6 @@ class StaticMap < ActiveRecord::Base
     title
   end
 
-  alias_method :topics, :issue_areas
-
   paginates_per 9
   
   def date

@@ -13,6 +13,8 @@ class DynamicVisualization < ActiveRecord::Base
     join_table:              :snapshots_visualization_topics,
     association_foreign_key: :topic_id
 
+  include DataResourceFilters
+
   validates :title,       presence: true, length: { minimum: 9 }
   validates :year,        presence: true, length: { minimum: 4 }
   validates :session_state_file_name, presence: true
@@ -23,9 +25,6 @@ class DynamicVisualization < ActiveRecord::Base
 
   alias_attribute :sources, :data_sources
   alias_attribute :unitid,  :unit_id
-
-
-  # TODO InstitutionScope
 
   def preview(geo, method=:slug)
     @preview ||= OpenStruct.new(
@@ -75,13 +74,13 @@ class DynamicVisualization < ActiveRecord::Base
       string
     end
 
-    def set_legacy_sessionstate
-      self.sessionstate = sessionstate
-    end
-
     def render_erb(object)
       template = File.read( self.session_state.path )
       Erubis::Eruby.new(template).result(binding()).html_safe
+    end
+
+    def set_legacy_sessionstate
+      self.sessionstate = sessionstate
     end
 
 

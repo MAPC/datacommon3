@@ -99,6 +99,22 @@ describe DynamicVisualization do
     end
   end
 
+  
+  describe "associations" do
+    it "has them" do
+      [:data_sources, :topics].each do |assoc|
+        expect(visual).to respond_to(assoc)
+        expect(visual.send(assoc)).to respond_to(:each)    
+      end
+    end
+  end
+
+  # Pick up here
+  pending "scopes" do
+    pending "data source"
+    pending "topic"
+  end
+
 end
 
 
