@@ -9,8 +9,8 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       sign_in user
       params[:session][:remember_me] == '1' ? remember(user) : forget(user)
-      message = "You haven't activated your account yet. "
-      message += "Check your email for the activation link."
+      message = "Welcome! We see you haven't activated your account yet. "
+      message += "Please check your email for the activation link."
       flash[:warning] = message
       redirect_back_or user
     else
@@ -21,6 +21,7 @@ class SessionsController < ApplicationController
 
   def destroy
     sign_out if signed_in?
+    flash[:success] = "See you later!"
     redirect_to root_url
   end
 end

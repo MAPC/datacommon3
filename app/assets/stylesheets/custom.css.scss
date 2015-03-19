@@ -97,22 +97,27 @@ a > .glyphicon-remove {
 }
 
 
-a.dropdown-toggle {
-  font-weight: 300;
+a > .dropdown {
   color: white !important;
-  background-color: $dc-blue !important;
-  border-color: $dc-blue !important;
+  font-weight: 300;
 }
 
-.dropdown-menu {
-  margin-top: 0px !important;
-}
+// a.dropdown-toggle {
+//   font-weight: 300;
+//   color: white !important;
+//   background-color: $dc-blue !important;
+//   border-color: $dc-blue !important;
+// }
 
-.header-item {
+// .dropdown-menu {
+//   margin-top: 0px !important;
+// }
+
+.navbar-nav > li {
   margin-top: 15px;
 }
 
-.header-item a {
+.navbar-nav > li > a {
   color: white !important;
 }
 
@@ -123,20 +128,21 @@ a.dropdown-toggle {
 }
 
 .navbar-brand {
-  padding: 0;
-  margin:  0;
+  min-width: 225px;
   img {
-    max-width: 225px;
+    margin-top: -7px;
+    max-width: 200px;
+    max-height: 65px;
   }
 }
 
 .navbar-nav {
-  font-size: 12px;
-  font-weight: 300;
+  // font-size: 12px;
+  font-weight: 400;
 
-  @media (max-width: 1200px) {
-    font-size: 11px;
-  }
+//   @media (max-width: 1200px) {
+//     font-size: 11px;
+//   }
 }
 
 @media (min-width: 993px) {

@@ -12,7 +12,7 @@ feature 'Active user signs in' do
   scenario 'with wrong username' do
     sign_in user, username: "wrong_username"
     expect(page).to_not have_content(user.first_name)
-    expect(page).to have_content("Sign in")
+    expect(page).to have_content("Log in")
     expect(page).to have_content("Incorrect")
     visit root_path
     expect(page).not_to have_content("Incorrect")
@@ -21,7 +21,7 @@ feature 'Active user signs in' do
   scenario 'with wrong password' do
     sign_in user, password: "wrong_password"
     expect(page).to_not have_content(user.first_name)
-    expect(page).to have_content("Sign in")
+    expect(page).to have_content("Log in")
   end
 
 end
@@ -33,9 +33,9 @@ feature 'Active user signs in and out' do
     sign_in user
     expect(page).to have_content(user.first_name)
     sign_out user
-    expect(page).to have_content("Sign in")
+    expect(page).to have_content("Log in")
     delete signout_path
-    expect(page).to have_content("Sign in")
+    expect(page).to have_content("Log in")
   end
 end
 

@@ -1,7 +1,8 @@
 .form.vis-form{role: 'form'}
   = form_for @visualization, remote: true, format: :json do |f|
-    = render 'shared/error_messages'
-    = render 'shared/success_messages'
+    - if @visualization.errors
+      = render partial: 'shared/error_messages',   object: @visualization, as: :object
+      = render partial: 'shared/success_messages', object: @visualization, as: :object
 
     .col-md-9.col-sm-12
 
@@ -20,8 +21,6 @@
             %li Select from the "Tools" menu above to add a visualization type. Examples: Add Map; Add Bar Chart.
             %li
               Modify the settings by clicking the gear icon in the top left corner. Load data and customize the display of the visualization. For further assistance see the
-              = succeed '.' do
-                = link_to page_topic_page_path("resources", "training-guides-and-tutorials"), 'Training Guides and Tutorials'
             %li Populate attributes on the right with Title, Abstract, Data Sources, etc. before clicking the "Create" button to save your visualization.
 
     .col-md-3.col-sm-12
@@ -56,7 +55,7 @@
       .form-group
         = f.label      :institution_id
         %br
-        = f.collection_select(:institution_id, Institution.all, :id, :short_name, selected: @institution.id)
+        -# = f.collection_select(:institution_id, Institution.all, :id, :short_name, selected: @institution.id)
       
 
       .form-group
