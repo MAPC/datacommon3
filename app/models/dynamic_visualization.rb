@@ -20,10 +20,11 @@ class DynamicVisualization < ActiveRecord::Base
   validates :session_state_file_name, presence: true
   validates :overviewmap, inclusion: { in: [true, false] }
 
-  has_attached_file :session_state, path: "/:class/:attachment/:filename"
+  has_attached_file :session_state
   validates_attachment_content_type :session_state, content_type: /\A.*\/xml\Z/
 
   alias_attribute :sources, :data_sources
+  alias_attribute :unitid,  :unit_id
 
   def preview(geo, method=:slug)
     @preview ||= OpenStruct.new(
@@ -39,9 +40,7 @@ class DynamicVisualization < ActiveRecord::Base
   # http://www.kuwata-lab.com/erubis/users-guide.02.html#tut-basic
   # http://www.kuwata-lab.com/erubis/users-guide.02.html#tut-context
   def rendered_state(object)
-    "<xml>RENDERED STATE</xml>".html_safe
-    # Ideally, with private method erb wrapping Erubis
-    # erb( session_state, object )
+    render_erb( object )
   end
 
   alias_method :state, :rendered_state
@@ -81,6 +80,11 @@ class DynamicVisualization < ActiveRecord::Base
 
     def set_legacy_sessionstate
       self.sessionstate = sessionstate
+    end
+
+    def render_erb(object)
+      template = File.read( self.session_state.path )
+      Erubis::Eruby.new(template).result(binding())
     end
 
 
