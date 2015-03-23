@@ -36,8 +36,8 @@
               %li= link_to 'My Profile', current_user
               %li= link_to 'Sign out', signout_path, method: 'delete'
         - else
-          %li= link_to 'Sign up', signup_path, class: "btn btn-primary"
-          %li= link_to 'Log in',  login_path
+          %li= link_to 'Sign up', signup_path, class: "btn btn-primary", id: "btn-signup"
+          %li= link_to 'Log in',  login_path, id: "btn-login"
           
 
         %li

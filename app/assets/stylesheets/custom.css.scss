@@ -96,22 +96,12 @@ a > .glyphicon-remove {
   margin-bottom: -10px !important;
 }
 
+/* HEADER */
 
 a > .dropdown {
   color: white !important;
   font-weight: 300;
 }
-
-// a.dropdown-toggle {
-//   font-weight: 300;
-//   color: white !important;
-//   background-color: $dc-blue !important;
-//   border-color: $dc-blue !important;
-// }
-
-// .dropdown-menu {
-//   margin-top: 0px !important;
-// }
 
 .navbar-nav > li {
   margin-top: 15px;
@@ -120,8 +110,6 @@ a > .dropdown {
 .navbar-nav > li > a {
   color: white !important;
 }
-
-
 
 .navbar {
   height: 80px;
@@ -137,12 +125,7 @@ a > .dropdown {
 }
 
 .navbar-nav {
-  // font-size: 12px;
   font-weight: 400;
-
-//   @media (max-width: 1200px) {
-//     font-size: 11px;
-//   }
 }
 
 @media (min-width: 993px) {
@@ -153,20 +136,31 @@ a > .dropdown {
 
 .navbar.navbar-default.navbar-fixed-top {
   background-color: $dc-blue;
+  letter-spacing: 0.05em;
   border-color: transparent;
-}
-
-input#search {
-
-  @media (max-width: 1200px) {
-    width: 67px;
-  }
 }
 
 img.header-logo {
   margin-top: 0px;
   height: inherit;
 }
+
+#btn-signup {
+  font-weight: 600;
+  &:hover {
+    color: #428BCA !important;
+    background-color: #FFF;
+    border-color: #428BCA;
+  }
+}
+
+input#search {
+  @media (max-width: 1200px) {
+    width: 100px;
+  }
+}
+
+
 
 
 .carousel {
