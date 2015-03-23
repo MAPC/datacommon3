@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/MAPC/ckan_api.git
-  revision: 829ac1a10f1f5375380f367dc4ccea018db1c6bc
+  revision: daeb643cc8119dda68b4050c99525cee27b5118b
   branch: develop
   specs:
     ckan (0.0.3)

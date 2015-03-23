@@ -1,0 +1,17 @@
+- org = dataset.organization.presence ? dataset.organization.fetch("title") : nil
+
+.row
+  .col-xs-12
+
+    %h4.dataset.title= link_to dataset.title, layer_path(dataset.id, page: params[:page])
+    %ul
+      %li= "Dataset: #{dataset.id}"
+      %li= "License: #{dataset.license_title}"
+      -if org
+        %li= "Organization: #{org}"
+      %li= "Last Updated: #{Date.parse(dataset.revision_timestamp).to_s(:monthyear)}"
+
+-# dates
+-# created
+-# description
+-# coverage

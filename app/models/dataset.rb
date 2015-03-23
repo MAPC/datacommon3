@@ -14,14 +14,28 @@ class Dataset
   def self.page(page_number=nil, options={})
     # TODO: Use splat so .page(1) and .page(paginates_per: 5)
     #       are both valid method calls.
-    page_number ||= 1
+    page_number   = (page_number || 1).to_i
     paginates_per = options.fetch(:paginates_per) { 10 }
 
-    CKAN::Package.find( 
+    puts "page_number: #{page_number}"
+    puts "paginates_per: #{paginates_per}"
+
+    records = CKAN::Package.find( 
       rows:   paginates_per,
       start:  page_number * paginates_per
     )
+    OpenStruct.new(records: records,
+      current_page: page_number,
+      total_pages: 100,
+      per_page: 10,
+      )
   end
-
   
+end
+
+
+class CKAN::Package
+  def to_partial_path
+    "datasets/dataset"
+  end
 end

@@ -1,93 +1,96 @@
-%h1= link_to "< Data", layers_path
+%h1= link_to "< Data", layers_path(page: params[:page])
 
-%h2= @layer.title
-%p=  @layer.description
+%h2= @dataset.title
+%p= @dataset.try(:description)
 
-.row
-  -# There used to be a map here.
-  -# It might someday preview a layer's tileset.
-  -# .col-sm-6.col-xs-12
-  -#   #map.tall
+-# %h2= @layer.title
+-# %p=  @layer.description
+
+-# .row
+-#   -# There used to be a map here.
+-#   -# It might someday preview a layer's tileset.
+-#   -# .col-sm-6.col-xs-12
+-#   -#   #map.tall
    
 
-  .col-sm-6.col-xs-12
+-#   .col-sm-6.col-xs-12
 
-    %table.metadata
-      %tr
-        %td Category
-        %td #{@layer.category}
-      %tr
-        %td Creator
-        %td #{@layer.creator}
-      %tr
-        %td Publisher
-        %td #{@layer.publisher}
-      %tr
-        %td Dates Available
-        %td #{@layer.datesavail}
-      %tr
-        %td Spatial Coverage
-        %td #{@layer.coverage}
-      %tr
-        %td Last Updated
-        %td #{@layer.moddate}
-      %tr
-        %td
-          Universe
-          %br
-          %small
-            %a{href: '#', data: {toggle: 'modal', target: '#universe'}} What is a 'universe'?
-        %td #{@layer.universe}
+-#     %table.metadata
+-#       %tr
+-#         %td Category
+-#         %td #{@layer.category}
+-#       %tr
+-#         %td Creator
+-#         %td #{@layer.creator}
+-#       %tr
+-#         %td Publisher
+-#         %td #{@layer.publisher}
+-#       %tr
+-#         %td Dates Available
+-#         %td #{@layer.datesavail}
+-#       %tr
+-#         %td Spatial Coverage
+-#         %td #{@layer.coverage}
+-#       %tr
+-#         %td Last Updated
+-#         %td #{@layer.moddate}
+-#       %tr
+-#         %td
+-#           Universe
+-#           %br
+-#           %small
+-#             %a{href: '#', data: {toggle: 'modal', target: '#universe'}} What is a 'universe'?
+-#         %td #{@layer.universe}
 
-      #universe.modal.fade{role: 'dialog'}
-        .modal-dialog
-          .modal-content
-            .modal-header
-              %button.close{type: 'button', data: {dismiss: 'modal'}} &times;
-              %h3 What is a 'universe'?
-            .modal-body
-              %p
-                The universe describes the total number of units in the dataset of interest. For example, the universe for 'Population' is the total population, whereas the universe for 'Labor Force' is the population ages 16 and older, since 16 is the legal age for working in the U.S.
-            .modal-footer
-              %button.btn.btn-default{type: 'button', data: {dismiss: 'modal'}} Close window
+-#       #universe.modal.fade{role: 'dialog'}
+-#         .modal-dialog
+-#           .modal-content
+-#             .modal-header
+-#               %button.close{type: 'button', data: {dismiss: 'modal'}} &times;
+-#               %h3 What is a 'universe'?
+-#             .modal-body
+-#               %p
+-#                 The universe describes the total number of units in the dataset of interest. For example, the universe for 'Population' is the total population, whereas the universe for 'Labor Force' is the population ages 16 and older, since 16 is the legal age for working in the U.S.
+-#             .modal-footer
+-#               %button.btn.btn-default{type: 'button', data: {dismiss: 'modal'}} Close window
 
-      #geographies.modal.fade{role: 'dialog'}
-        .modal-dialog
-          .modal-content
-            .modal-header
-              %button.close{type: 'button', data: {dismiss: 'modal'}} &times;
-              %h3 Description of available geographies
-            .modal-body
-              - @layer.spatial_extents.each do |extent|
-                %h5= extent
-                %p= extent.description
-            .modal-footer
-              %button.btn.btn-default{type: 'button', data: {dismiss: 'modal'}} Close window
+-#       #geographies.modal.fade{role: 'dialog'}
+-#         .modal-dialog
+-#           .modal-content
+-#             .modal-header
+-#               %button.close{type: 'button', data: {dismiss: 'modal'}} &times;
+-#               %h3 Description of available geographies
+-#             .modal-body
+-#               - @layer.spatial_extents.each do |extent|
+-#                 %h5= extent
+-#                 %p= extent.description
+-#             .modal-footer
+-#               %button.btn.btn-default{type: 'button', data: {dismiss: 'modal'}} Close window
 
 
-    .center
+-#     .center
 
-      .dropdown.btn-group
-        %a.btn.btn-success.dropdown-toggle{href: '#', data: {toggle: "dropdown"}}
-          %span.glyphicon.glyphicon-cloud-download
-          Download Data and Metadata
-          %span.caret
-        %ul.dropdown-menu
-          %li.dropdown-header Spatial
-          - @layer.spatial_extents.each do |extent|
-            %li= link_to "#{extent}", download_layer_path(@layer, extent_id: extent.id)
-      &nbsp;
-      %small
-        %a{href: '#', data: {toggle: 'modal', target: '#geographies'}}
-          What are these geographies?
+-#       .dropdown.btn-group
+-#         %a.btn.btn-success.dropdown-toggle{href: '#', data: {toggle: "dropdown"}}
+-#           %span.glyphicon.glyphicon-cloud-download
+-#           Download Data and Metadata
+-#           %span.caret
+-#         %ul.dropdown-menu
+-#           %li.dropdown-header Spatial
+-#           - @layer.spatial_extents.each do |extent|
+-#             %li= link_to "#{extent}", download_layer_path(@layer, extent_id: extent.id)
+-#       &nbsp;
+-#       %small
+-#         %a{href: '#', data: {toggle: 'modal', target: '#geographies'}}
+-#           What are these geographies?
 
-:javascript
+-# :javascript
 
-$(document).on('ready', function () {
+-# $(document).on('ready', function () {
 
-  var map   = L.map('map', {scrollWheelZoom: false}).setView([42.3580, -71.0616], 12),
-      tiles = L.tileLayer("http://tiles.mapc.org/basemap/{z}/{x}/{y}.png", {
-          attribution: 'Tiles by <a href="http://www.mapc.org/" target="_blank">Metropolitan Area Planning Council</a>.',
-          maxZoom:      17
-    }).addTo(map);
-});
+-#   var map   = L.map('map', {scrollWheelZoom: false}).setView([42.3580, -71.0616], 12),
+-#       tiles = L.tileLayer("http://tiles.mapc.org/basemap/{z}/{x}/{y}.png", {
+-#           attribution: 'Tiles by <a href="http://www.mapc.org/" target="_blank">Metropolitan Area Planning Council</a>.',
+-#           maxZoom:      17
+-#     }).addTo(map);
+-# });

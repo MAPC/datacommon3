@@ -2,11 +2,12 @@ class LayersController < ApplicationController
   before_filter :load_institution
 
   def index
-    @packages = Package.all
+    @datasets = Dataset.page(params[:page])
   end
 
   def show
-    @package = Package.find(id: params[:id])
+    @dataset = Dataset.find_by(id: params[:id]).first
+    # TODO: Fix the model so we don't need #first
   end
 
   def download
