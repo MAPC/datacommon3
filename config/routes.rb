@@ -48,8 +48,8 @@ Rails.application.routes.draw do
   
   match '/signup', to: 'users#new', via: 'get'
   
-  get    'signin'  => 'sessions#new'
-  post   'signin'  => 'sessions#create'
+  get    'login'  => 'sessions#new'
+  post   'login'  => 'sessions#create'
   delete 'signout' => 'sessions#destroy'
 
 

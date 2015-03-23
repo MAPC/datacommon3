@@ -23,6 +23,7 @@ class ApplicationController < ActionController::Base
 
   rescue_from CanCan::AccessDenied do |exception|
     store_location
-    redirect_to main_app.root_path, alert: exception.message
+    flash[:danger] = exception.message
+    redirect_to main_app.root_path
   end
 end

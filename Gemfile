@@ -12,6 +12,10 @@ gem 'has_scope',            '0.5.1'    # Handle multiply-scoped models
 gem 'lazy_columns',
   github: 'jorgemanrubia/lazy_columns' # Lazy-load large columns
 
+# CKAN Data Store
+gem 'ckan',                            # Read data from CKAN store
+  github: 'MAPC/ckan_api',
+  branch: 'develop'
 
 # Views
 gem 'kaminari',             '0.16.1'   # Pagination

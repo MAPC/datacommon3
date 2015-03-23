@@ -67,6 +67,7 @@ class DynamicVisualization < ActiveRecord::Base
       end
       field :session_state_updated_at do
         label "Updated"
+        # TODO: column_width 100
       end
     end
 

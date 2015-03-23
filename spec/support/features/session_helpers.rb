@@ -13,7 +13,7 @@ module Features
     end
 
     def sign_in(user, options={})
-      visit signin_path
+      visit login_path
       fill_in 'Username',
         with: options.fetch(:username) { user.username }
       fill_in 'Password',
@@ -24,7 +24,7 @@ module Features
       elsif checked == 0
         uncheck 'Remember me'
       end
-      click_button 'Sign in'
+      click_button 'Log in'
     end
 
     def sign_out(*)
