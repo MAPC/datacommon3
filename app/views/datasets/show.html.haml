@@ -1,9 +1,9 @@
-%h1= link_to "< Data", layers_path(page: params[:page])
+%h1= link_to "< Data", datasets_path(page: params[:page])
 
-%h2= @dataset.title
+%h2.layer.title= @dataset.title
 %p=  @dataset.try(:description)
 
-%hr 
+.page-header
 
 .row
   .col-sm-6.col-xs-12
@@ -23,9 +23,9 @@
         %button.close{type: 'button', data: {dismiss: 'modal'}} &times;
         %h3 Description of available geographies
       .modal-body
-        - @dataset.resources.each do |extent|
-          %h5= extent
-          %p= extent.description
+        - @dataset.resources.each do |resource|
+          %h5= resource
+          %p=  resource.description
       .modal-footer
         %button.btn.btn-default{type: 'button', data: {dismiss: 'modal'}} Close window
 

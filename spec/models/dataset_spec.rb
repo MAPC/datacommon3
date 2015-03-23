@@ -24,20 +24,20 @@ describe Dataset do
     end
 
     it "custom paginates with options" do
-      results = Dataset.page(2, paginates_per: 5)
+      results = Dataset.page(2, per_page: 5)
       expect(results).to have(5).items
     end
 
-    it "defaults to page 1" do
+    it "defaults to page 1", vcr: true do
       nil_page = Dataset.page.map(&:id)
       one_page = Dataset.page(1).map(&:id)
       
       expect(nil_page).to eq(one_page)
-      expect(Dataset.page(nil, paginates_per: 5)).to have(5).items
+      expect(Dataset.page(nil, per_page: 5)).to have(5).items
     end
 
     pending "doesn't care if you give it a page number" do
-      expect(Dataset.page(paginates_per: 5)).to have(5).items
+      expect(Dataset.page(per_page: 5)).to have(5).items
     end
 
   end

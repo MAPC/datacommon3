@@ -2,8 +2,8 @@
 
 .row
   .col-sm-5.col-xs-12.col-sm-offset-1.col-xs-offset-0
-    %h4.dataset.title
-      = link_to dataset.title, layer_path(dataset.id, page: params[:page])
+    %h3.title
+      = link_to dataset.title, dataset_path(dataset.id, page: params[:page])
   .col-sm-6.col-xs-12
     %ul.none
       %li= "Last Updated: #{Date.parse(dataset.revision_timestamp).to_s(:monthyear)}"

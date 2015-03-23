@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - nginx/1.1.19
       Date:
-      - Mon, 23 Mar 2015 15:49:49 GMT
+      - Mon, 23 Mar 2015 20:37:41 GMT
       Content-Type:
       - application/json;charset=utf-8
       Transfer-Encoding:
@@ -128,5 +128,5 @@ http_interactions:
         "SMHI Open data", "revision_id": "135adc9b-7453-4391-87b1-791a34604045"}],
         "search_facets": {}}}'
     http_version: 
-  recorded_at: Mon, 23 Mar 2015 15:49:50 GMT
+  recorded_at: Mon, 23 Mar 2015 20:37:42 GMT
 recorded_with: VCR 2.9.3

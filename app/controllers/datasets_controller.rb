@@ -1,4 +1,4 @@
-class LayersController < ApplicationController
+class DatasetsController < ApplicationController
   before_filter :load_institution
 
   def index

@@ -28,7 +28,11 @@ class Dataset
       records:      records,
       current_page: page_number,
       total_pages:  total_pages,
-      per_page:     per_page
+      per_page:     per_page,
+      count:        records.count,
+      length:       records.length,
+      size:         records.size,
+      each:         records.each
     )
   end
 

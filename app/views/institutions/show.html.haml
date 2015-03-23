@@ -17,13 +17,13 @@
 
 .row
   .exp.col-xs-8.col-xs-offset-2.col-sm-offset-0.col-sm-6.col-md-3
-    = link_to layers_path do
+    = link_to datasets_path do
       %h5.exp.data-catalog          Data Catalog
       = image_tag 'explanations/data-catalog.png', class: 'explanation-icon'
     %p
       Download over 300 datasets, available in tabular and spatial formats, from the 
       = succeed '.' do
-        = link_to 'Data Catalog', layers_path
+        = link_to 'Data Catalog', datasets_path
       Search for data by topic, dataset, or keyword, and download for whatever geography you need.
 
   .exp.col-xs-8.col-xs-offset-2.col-sm-offset-0.col-sm-6.col-md-3

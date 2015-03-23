@@ -5,10 +5,10 @@
     %td= "TODO: dataset.category"
   %tr
     %td Creator
-    %td= dataset.author
+    %td= dataset.author.presence || "Unknown"
   %tr
     %td Publisher
-    %td= dataset.organization["title"]
+    %td= dataset.organization ? dataset.organization["title"] : "Unknown"
   %tr
     %td Dates Available
     %td= "TODO: dataset.spatial_coverage"
@@ -29,7 +29,7 @@
       %br
       %small
         %a{href: '#', data: {toggle: 'modal', target: '#universe'}} What is a 'universe'?
-    %td= dataset.try(:universe)
+    %td= "TODO: dataset.universe"
 
 #universe.modal.fade{role: 'dialog'}
   .modal-dialog
@@ -53,7 +53,7 @@
 -#     %ul.dropdown-menu
 -#       %li.dropdown-header Spatial
 -#       - dataset.try(:spatial_extents).each do |extent|
--#         %li= link_to "#{extent}", download_layer_path(dataset,try(: extent_id): extent.id)
+-#         %li= link_to "#{extent}", download_dataset_path(dataset,try(: extent_id): extent.id)
 -#   &nbsp;
 -#   %small
 -#     %a{href: '#', data: {toggle: 'modal', target: '#geographies'}}

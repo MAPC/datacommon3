@@ -16,18 +16,16 @@ Rails.application.routes.draw do
     get '(page/:page)', :action => :index, :on => :collection, :as => ''
   end
 
-
   resources :institutions,   only: [:show]
 
-  resources :layers,         only: [:index, :show], concerns: :paginatable do
-    match :download, to: 'layers#download',      on: :member, via: :get
-    match :meta,     to: 'layers#meta_download', on: :member, via: :get
+  resources :datasets, only: [:index, :show], concerns: :paginatable do
+    match :download, to: 'datasets#download', on: :member, via: :get
   end
 
   resources :visualizations, concerns: :paginatable
   
-  resources :static_maps,    only: [:index, :show], concerns: :paginatable,
-                             path: 'gallery'
+  resources :static_maps, only: [:index, :show], concerns: :paginatable,
+                          path: 'maps'
 
   resources :municipalities, only: [:index, :show] do
   #   resources :topics, on:    :member,        path: '',
