@@ -6,11 +6,11 @@
       = link_to dataset.title, layer_path(dataset.id, page: params[:page])
   .col-sm-6.col-xs-12
     %ul.none
-      %li= "Dataset: #{dataset.id}"
-      %li= "License: #{dataset.license_title}"
+      %li= "Last Updated: #{Date.parse(dataset.revision_timestamp).to_s(:monthyear)}"
+      %li= "Created: #{Date.parse(dataset.metadata_created).to_s(:monthyear)}"
       -if org
         %li= "Organization: #{org}"
-      %li= "Last Updated: #{Date.parse(dataset.revision_timestamp).to_s(:monthyear)}"
+      %li= "#{dataset.resources.count} " << "resource".pluralize(dataset.resources)
 
 -# dates
 -# created
