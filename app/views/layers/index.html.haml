@@ -1,11 +1,8 @@
 %h1 Data Catalog
-%h2.page-header Search for datasets that fit your needs, then download the data and metadata.
+- if params[:page].nil? || params[:page] == 1
+  %h2 Discover and download data about the region.
 
-%p
-  You are viewing
-  %strong All Topics
-  and
-  %strong All Data Sources.
+.page-header
 
 = render partial: 'datasets/dataset', collection: @datasets.records
 
