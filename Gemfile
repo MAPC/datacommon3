@@ -18,17 +18,13 @@ gem 'ckan',                            # Read data from CKAN store
   branch: 'develop'
 
 # Views
-gem 'kaminari',             '0.16.1'   # Pagination
 gem 'haml-rails',           '0.5.3'    # HAML views
-gem 'chosen-rails',         '1.1.0'    # Use Chosen for friendly dropdowns
-gem 'nokogiri',             '>= 1.4.4' # Parsing XML
-
+gem 'kaminari',             '0.16.1'   # Pagination
 
 # Styles
-gem 'bootstrap-sass',       '~> 3.2.0' # Responsive base styles
 gem 'sass-rails',           '4.0.3'    # Use SCSS for stylesheets
-# gem 'compass-rails'
-
+gem 'bootstrap-sass',       '~> 3.2.0' # Responsive base styles
+gem 'chosen-rails',         '1.1.0'    # Chosen, for friendly dropdowns
 
 # Javascript
 gem 'jquery-rails',         '3.1.2'    # Use jquery as the JavaScript library
@@ -43,26 +39,29 @@ gem 'turbolinks',   '2.4.0' # Following links are faster.
 
 
 # Files
-gem 'paperclip',   '4.2.0' # Handle file attachments
-gem 'retina_rails'
+gem 'paperclip',   '4.2.0'  # Handle file attachments
+gem 'retina_rails'          # Load high-res images on Retina displays
 gem 'aws-sdk',     '1.33.0' # Upload files to Amazon S3
 gem 'asset_sync'            # Upload assets to S3
 gem 'rubyzip',     '>= 1.0.0', require: 'zip' # Zip files for downloading
 
 
 # Admin
-gem 'rails_admin'    # Manage resources
-gem 'cancan'         # Authorize admin
+gem 'rails_admin'        # Manage resources
+gem 'cancan'             # Authorize admin
+
+
+# Background Jobs
+gem 'redis'              # Dependency for Resque
+gem 'resque'             # Process long-running jobs in the background
+gem 'resque_mailer'      # Process email in the background
 
 
 # Utilities
-gem 'redis'          # Dependency for Resque
-gem 'resque'         # Process long-running jobs in the background
-gem 'resque_mailer'  # Process email in the background
-gem 'stamp', '0.6.0' # Convenient timestamping
-gem 'wannabe_bool'   # To convert ENV strings to booleans
-gem 'bcrypt', '~> 3.1.7' # Use to generate password. Also used in has_secure_password
-gem 'naught'         # In case we can introduce the NullObject pattern somewhere
+gem 'bcrypt', '~> 3.1.7' # Helps generate password, used in has_secure_password
+gem 'naught'             # Helps build null objects
+gem 'stamp', '0.6.0'     # Convenient timestamping
+gem 'wannabe_bool'       # To convert boolean-ish values to booleans
 
 
 # Server
@@ -76,23 +75,21 @@ end
 
 
 group :development, :test do
+  gem 'rspec-rails',  '~> 2.14.0.rc1' # Stick to a specific version
 
-  gem 'spring-commands-rspec'
-
-  gem 'rspec-rails',        '~> 2.14.0.rc1'
+  gem 'factory_girl_rails',  '~> 4.0' # Build factories quickly
   gem 'database_cleaner'
-  gem 'faker'
+  gem 'guard-rspec'                   # Autorun tests and keep Rails loaded
+  gem 'capybara',          '~> 2.2.1' # DSL for integration tests
+  gem 'launchy'                       # Enable save_and_open_page
+  gem 'faker'                         # Generate fake data
+  gem 'vcr',                 '~> 2.4' # Record API calls for tests
 
-  gem 'factory_girl_rails', '~> 4.0'
-  gem 'launchy'
-  
-  gem 'guard-rspec'
-  # gem 'zeus'
-  gem 'childprocess',       '0.3.6'
-  gem 'capybara',           '~> 2.2.1'
+  gem 'childprocess',         '0.3.6' # Fix a version conflict
   gem 'poltergeist'
-
-  gem 'minitest'
+  gem 'webmock',          '~> 1.8.4', # Faking requests (supports VCR)
+    require: false 
+  gem 'minitest'                      # Unclear why we use this
 end
 
 
@@ -103,7 +100,7 @@ end
 
 
 group :production do
-  gem 'unicorn-rails'     # Use Unicorn as the app server
-  gem 'rails_12factor'
-  gem 'airbrake'
+  gem 'unicorn-rails'  # Use Unicorn as the app server
+  gem 'rails_12factor' # Serves static assets and logs to stdout
+  gem 'airbrake'       # Reports application errors
 end

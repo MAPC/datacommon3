@@ -1,0 +1,442 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://demo.ckan.org/api/3/action/package_search?rows=10&start=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Mon, 23 Mar 2015 16:06:52 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - POST, PUT, GET, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-CKAN-API-KEY, Authorization, Content-Type
+    body:
+      encoding: UTF-8
+      string: '{"help": "\n    Searches for packages satisfying a given search criteria.\n\n    This
+        action accepts solr search query parameters (details below), and\n    returns
+        a dictionary of results, including dictized datasets that match\n    the search
+        criteria, a search count and also facet information.\n\n    **Solr Parameters:**\n\n    For
+        more in depth treatment of each paramter, please read the `Solr\n    Documentation
+        <http://wiki.apache.org/solr/CommonQueryParameters>`_.\n\n    This action
+        accepts a *subset* of solr''s search query parameters:\n\n\n    :param q:
+        the solr query.  Optional.  Default: `\"*:*\"`\n    :type q: string\n    :param
+        fq: any filter queries to apply.  Note: `+site_id:{ckan_site_id}`\n        is
+        added to this string prior to the query being executed.\n    :type fq: string\n    :param
+        sort: sorting of the search results.  Optional.  Default:\n        ''relevance
+        asc, metadata_modified desc''.  As per the solr\n        documentation, this
+        is a comma-separated string of field names and\n        sort-orderings.\n    :type
+        sort: string\n    :param rows: the number of matching rows to return.\n    :type
+        rows: int\n    :param start: the offset in the complete result for where the
+        set of\n        returned datasets should begin.\n    :type start: int\n    :param
+        facet: whether to enable faceted results.  Default: \"true\".\n    :type facet:
+        string\n    :param facet.mincount: the minimum counts for facet fields should
+        be\n        included in the results.\n    :type facet.mincount: int\n    :param
+        facet.limit: the maximum number of values the facet fields return.\n        A
+        negative value means unlimited. This can be set instance-wide with\n        the
+        :ref:`search.facets.limit` config option. Default is 50.\n    :type facet.limit:
+        int\n    :param facet.field: the fields to facet upon.  Default empty.  If
+        empty,\n        then the returned facet information is empty.\n    :type facet.field:
+        list of strings\n\n\n    The following advanced Solr parameters are supported
+        as well. Note that\n    some of these are only available on particular Solr
+        versions. See Solr''s\n    `dismax`_ and `edismax`_ documentation for further
+        details on them:\n\n    ``qf``, ``wt``, ``bf``, ``boost``, ``tie``, ``defType``,
+        ``mm``\n\n\n    .. _dismax: http://wiki.apache.org/solr/DisMaxQParserPlugin\n    ..
+        _edismax: http://wiki.apache.org/solr/ExtendedDisMax\n\n\n    **Results:**\n\n    The
+        result of this action is a dict with the following keys:\n\n    :rtype: A
+        dictionary with the following keys\n    :param count: the number of results
+        found.  Note, this is the total number\n        of results found, not the
+        total number of results returned (which is\n        affected by limit and
+        row parameters used in the input).\n    :type count: int\n    :param results:
+        ordered list of datasets matching the query, where the\n        ordering defined
+        by the sort parameter used in the query.\n    :type results: list of dictized
+        datasets.\n    :param facets: DEPRECATED.  Aggregated information about facet
+        counts.\n    :type facets: DEPRECATED dict\n    :param search_facets: aggregated
+        information about facet counts.  The outer\n        dict is keyed by the facet
+        field name (as used in the search query).\n        Each entry of the outer
+        dict is itself a dict, with a \"title\" key, and\n        an \"items\" key.  The
+        \"items\" key''s value is a list of dicts, each with\n        \"count\", \"display_name\"
+        and \"name\" entries.  The display_name is a\n        form of the name that
+        can be used in titles.\n    :type search_facets: nested dict of dicts.\n    :param
+        use_default_schema: use default package schema instead of\n        a custom
+        schema defined with an IDatasetForm plugin (default: False)\n    :type use_default_schema:
+        bool\n\n    An example result: ::\n\n     {''count'': 2,\n      ''results'':
+        [ { <snip> }, { <snip> }],\n      ''search_facets'': {u''tags'': {''items'':
+        [{''count'': 1,\n                                             ''display_name'':
+        u''tolstoy'',\n                                             ''name'': u''tolstoy''},\n                                            {''count'':
+        2,\n                                             ''display_name'': u''russian'',\n                                             ''name'':
+        u''russian''}\n                                           ]\n                                 }\n                       }\n     }\n\n    **Limitations:**\n\n    The
+        full solr query language is not exposed, including.\n\n    fl\n        The
+        parameter that controls which fields are returned in the solr\n        query
+        cannot be changed.  CKAN always returns the matched datasets as\n        dictionary
+        objects.\n    ", "success": true, "result": {"count": 1058, "sort": "score
+        desc, metadata_modified desc", "facets": {}, "results": [{"license_title":
+        "License Not Specified", "maintainer": "", "relationships_as_object": [],
+        "private": false, "maintainer_email": "", "revision_timestamp": "2015-03-19T12:00:54.870288",
+        "id": "9ac6aee4-3882-41a1-ae4e-eef9ccb21745", "metadata_created": "2015-03-19T11:59:31.106916",
+        "metadata_modified": "2015-03-19T12:00:54.892337", "author": "", "author_email":
+        "", "state": "active", "version": "", "creator_user_id": "c2231098-a2ee-4b6c-8774-d4b7357d5ba1",
+        "type": "dataset", "resources": [{"resource_group_id": "6c2bc001-d08d-44c7-a227-6f0cf47c6d49",
+        "cache_last_updated": null, "revision_timestamp": "2015-03-19T12:00:54.870288",
+        "webstore_last_updated": null, "id": "dfc159ce-6d54-4df8-b32c-512d5b7e7b90",
+        "size": null, "state": "active", "hash": "", "description": "", "format":
+        "CSV", "tracking_summary": {"total": 0, "recent": 0}, "last_modified": null,
+        "url_type": "upload", "mimetype": null, "cache_url": null, "name": "testofcsvfile",
+        "created": "2015-03-19T12:00:27.535284", "url": "http://demo.ckan.org/dataset/9ac6aee4-3882-41a1-ae4e-eef9ccb21745/resource/dfc159ce-6d54-4df8-b32c-512d5b7e7b90/download/uskladneniejablkahrusiek.csv",
+        "webstore_url": null, "mimetype_inner": null, "position": 0, "revision_id":
+        "18a31793-207f-4785-a826-cb0590f5433f", "resource_type": null}], "num_resources":
+        1, "tags": [{"vocabulary_id": null, "display_name": "test", "name": "test",
+        "revision_timestamp": "2015-03-19T11:59:31.106916", "state": "active", "id":
+        "bd015905-13b6-4bfe-a393-edf4330b6db5"}], "tracking_summary": {"total": 0,
+        "recent": 0}, "groups": [], "license_id": "notspecified", "relationships_as_subject":
+        [], "num_tags": 1, "organization": null, "name": "testofcsvfile", "isopen":
+        false, "url": "", "notes": "", "owner_org": null, "extras": [], "title": "testofcsvfile",
+        "revision_id": "18a31793-207f-4785-a826-cb0590f5433f"}, {"license_title":
+        "License Not Specified", "maintainer": "", "relationships_as_object": [],
+        "private": false, "maintainer_email": "", "revision_timestamp": "2015-03-18T21:47:39.031508",
+        "id": "bc43e29e-25c6-4f10-896a-aa38c775ba60", "metadata_created": "2015-03-18T21:46:33.869892",
+        "metadata_modified": "2015-03-18T23:09:27.571038", "author": "", "author_email":
+        "", "state": "active", "version": "", "creator_user_id": "82521d72-5f31-462b-99e8-02e2b827219b",
+        "type": "dataset", "resources": [{"resource_group_id": "1f8dcf55-cfb8-4c9c-b2ba-501ebdde7e8f",
+        "cache_last_updated": null, "revision_timestamp": "2015-03-18T21:47:34.388625",
+        "webstore_last_updated": null, "id": "27c4f5aa-06fb-4d7e-a6a8-5eec260eb76e",
+        "size": null, "state": "active", "hash": "", "description": "", "format":
+        "", "tracking_summary": {"total": 0, "recent": 0}, "last_modified": null,
+        "url_type": null, "mimetype": null, "cache_url": null, "name": "", "created":
+        "2015-03-18T21:47:34.411062", "url": "http://cheschifolafiga.altervista.org/",
+        "webstore_url": null, "mimetype_inner": null, "position": 0, "revision_id":
+        "3a2d1782-ae53-43da-abde-53deff37db8f", "resource_type": null}, {"fileUpload1":
+        "FieldStorage(''fileUpload1'', u''rebirth stazioni merci e risorse.xlsx'')",
+        "cache_last_updated": null, "revision_timestamp": "2015-03-18T23:09:27.569620",
+        "webstore_last_updated": null, "id": "64c09853-d6d5-4f51-bb6e-43e6a37af2db",
+        "size": null, "resource_group_id": "1f8dcf55-cfb8-4c9c-b2ba-501ebdde7e8f",
+        "state": "active", "hash": "", "description": "", "format": "", "tracking_summary":
+        {"total": 0, "recent": 0}, "last_modified": null, "url_type": null, "mimetype":
+        null, "cache_url": null, "name": null, "created": "2015-03-18T22:02:42.858986",
+        "url": "http://lolasd", "webstore_url": null, "mimetype_inner": null, "position":
+        1, "revision_id": "c2ba4e22-c4b7-4022-b09a-554d49344cc3", "resource_type":
+        null}, {"resource_group_id": "1f8dcf55-cfb8-4c9c-b2ba-501ebdde7e8f", "cache_last_updated":
+        null, "revision_timestamp": "2015-03-18T23:09:27.569620", "webstore_last_updated":
+        null, "id": "9c870f6b-2ab9-46b9-b365-5fed22a6ce7d", "size": null, "state":
+        "active", "hash": "", "description": "", "format": "", "tracking_summary":
+        {"total": 0, "recent": 0}, "last_modified": null, "url_type": "upload", "mimetype":
+        null, "cache_url": null, "name": null, "created": "2015-03-18T23:09:27.604064",
+        "url": "http://demo.ckan.org/dataset/bc43e29e-25c6-4f10-896a-aa38c775ba60/resource/9c870f6b-2ab9-46b9-b365-5fed22a6ce7d/download/rebirthstazionimercierisorse.xlsx",
+        "webstore_url": null, "mimetype_inner": null, "position": 2, "revision_id":
+        "c2ba4e22-c4b7-4022-b09a-554d49344cc3", "resource_type": null}], "num_resources":
+        3, "tags": [], "tracking_summary": {"total": 0, "recent": 0}, "groups": [{"display_name":
+        "lol", "description": "LOL", "image_display_url": "", "title": "lol", "id":
+        "7d6cfbb9-794f-4a7c-ae34-6e251fcbe041", "name": "lolgroup"}], "license_id":
+        "notspecified", "relationships_as_subject": [], "num_tags": 0, "organization":
+        {"description": "LOL", "created": "2015-03-12T16:26:16.256701", "title": "lol",
+        "name": "lol", "revision_timestamp": "2015-03-12T16:26:16.209145", "is_organization":
+        true, "state": "active", "image_url": "", "revision_id": "c13308ac-0dc6-4043-a5b7-95ddd65353d9",
+        "type": "organization", "id": "4f88b884-aff6-4438-879d-cebb18bf7d31", "approval_status":
+        "approved"}, "name": "lolasd2urlbis", "isopen": false, "url": "", "notes":
+        "", "owner_org": "4f88b884-aff6-4438-879d-cebb18bf7d31", "extras": [], "title":
+        "lolasd2", "revision_id": "ca00fb96-77a5-4adb-9aee-ded0fdebb1aa"}, {"license_title":
+        "License Not Specified", "maintainer": "", "relationships_as_object": [],
+        "private": false, "maintainer_email": "", "revision_timestamp": "2015-03-18T19:36:28.051566",
+        "id": "53c0cdf7-f1a2-4b3c-ba34-256aa6f03dbf", "metadata_created": "2015-03-18T19:35:13.973940",
+        "metadata_modified": "2015-03-18T19:36:28.053083", "author": "", "author_email":
+        "", "state": "active", "version": "", "creator_user_id": "82521d72-5f31-462b-99e8-02e2b827219b",
+        "type": "dataset", "resources": [{"resource_group_id": "035d8ee4-5a46-4b2d-9611-361432592aa8",
+        "cache_last_updated": null, "revision_timestamp": "2015-03-18T19:36:23.004233",
+        "webstore_last_updated": null, "id": "b8bd53f6-2568-4cd2-bc1b-7e10146afe86",
+        "size": null, "state": "active", "hash": "", "description": "", "format":
+        "", "tracking_summary": {"total": 0, "recent": 0}, "last_modified": null,
+        "url_type": null, "mimetype": null, "cache_url": null, "name": "Empty", "created":
+        "2015-03-18T19:36:23.027674", "url": "http://www.example.org", "webstore_url":
+        null, "mimetype_inner": null, "position": 0, "revision_id": "d90bd6bc-0767-4b1f-b601-6907bf9a798f",
+        "resource_type": null}], "num_resources": 1, "tags": [], "tracking_summary":
+        {"total": 0, "recent": 0}, "groups": [], "license_id": "notspecified", "relationships_as_subject":
+        [], "num_tags": 0, "organization": null, "name": "lolasd", "isopen": false,
+        "url": "", "notes": "", "owner_org": null, "extras": [], "title": "lolasd",
+        "revision_id": "89c6f808-695c-4387-9300-1eb07afe1725"}, {"license_title":
+        null, "maintainer": null, "relationships_as_object": [], "private": false,
+        "maintainer_email": null, "revision_timestamp": "2015-03-18T05:16:52.873219",
+        "id": "333cf726-8aa9-4b83-a5e7-e0d823bb483b", "metadata_created": "2015-03-18T05:16:52.873219",
+        "metadata_modified": "2015-03-18T05:16:52.887481", "author": null, "author_email":
+        null, "state": "active", "version": null, "creator_user_id": "c735b985-ccda-439b-9dcd-416f7cba913d",
+        "type": "dataset", "resources": [], "num_resources": 0, "tags": [], "tracking_summary":
+        {"total": 0, "recent": 0}, "groups": [], "license_id": null, "relationships_as_subject":
+        [], "num_tags": 0, "organization": null, "name": "arudataset", "isopen": false,
+        "url": null, "notes": "A long description of my dataset", "owner_org": null,
+        "extras": [], "title": "arudataset", "revision_id": "c4a3579d-1fda-4e30-a9a7-d5b9e8bc3e00"},
+        {"license_title": "License Not Specified", "maintainer": "", "relationships_as_object":
+        [], "private": false, "maintainer_email": "", "revision_timestamp": "2015-03-18T04:47:34.461636",
+        "id": "3a633678-4a40-419c-8ce9-25d0a10b5818", "metadata_created": "2015-03-18T04:42:13.496524",
+        "metadata_modified": "2015-03-18T04:47:34.463134", "author": "", "author_email":
+        "", "state": "active", "version": "", "creator_user_id": "c735b985-ccda-439b-9dcd-416f7cba913d",
+        "type": "dataset", "resources": [{"resource_group_id": "25a8c9e6-a5fd-4ebc-8699-f84a30486ad0",
+        "cache_last_updated": null, "revision_timestamp": "2015-03-18T04:47:22.625321",
+        "webstore_last_updated": null, "id": "c57e9047-7fae-4d8d-b6dd-3d3921a420cc",
+        "size": null, "state": "active", "hash": "", "description": "", "format":
+        "", "tracking_summary": {"total": 0, "recent": 0}, "last_modified": null,
+        "url_type": null, "mimetype": null, "cache_url": null, "name": "demo", "created":
+        "2015-03-18T04:47:23.118342", "url": "http://demo.ckan.org/", "webstore_url":
+        null, "mimetype_inner": null, "position": 0, "revision_id": "201287de-82aa-47df-bbd8-45cd68d6b4a4",
+        "resource_type": null}], "num_resources": 1, "tags": [], "tracking_summary":
+        {"total": 0, "recent": 0}, "groups": [], "license_id": "notspecified", "relationships_as_subject":
+        [], "num_tags": 0, "organization": null, "name": "arutest", "isopen": false,
+        "url": "", "notes": "data", "owner_org": null, "extras": [], "title": "test",
+        "revision_id": "5aafdde9-8572-4c1c-8486-fb71c0e8df1a"}, {"license_title":
+        "License Not Specified", "maintainer": "", "relationships_as_object": [],
+        "private": false, "maintainer_email": "", "revision_timestamp": "2015-03-18T03:13:33.305527",
+        "id": "f9a2308d-e524-4550-a745-c6e42927cb27", "metadata_created": "2015-03-18T03:12:50.242163",
+        "metadata_modified": "2015-03-18T03:13:33.307060", "author": "", "author_email":
+        "", "state": "active", "version": "", "creator_user_id": "b30b4f77-c1b3-421b-974e-0b4efce927dc",
+        "type": "dataset", "resources": [{"resource_group_id": "711313d6-eae8-4eaa-8c41-b9f346bc604f",
+        "cache_last_updated": null, "revision_timestamp": "2015-03-18T03:13:29.960467",
+        "webstore_last_updated": null, "id": "5281f5e0-3e09-4c56-995e-7db3486787a9",
+        "size": null, "state": "active", "hash": "", "description": "", "format":
+        "", "tracking_summary": {"total": 0, "recent": 0}, "last_modified": null,
+        "url_type": null, "mimetype": null, "cache_url": null, "name": "", "created":
+        "2015-03-18T03:13:29.985654", "url": "https://www.google.com.sg/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0CAcQjRw&url=http%3A%2F%2Fdocs.ckan.org%2Fen%2Flatest%2Ftheming%2Ftemplates.html&ei=Su0IVaTMC9DguQSmuYHQAQ&bvm=bv.88198703,d.c2E&psig=AFQjCNGOIbhFAKr2XIV28xMYrKR-NQrHHg&ust=1426734788514230",
+        "webstore_url": null, "mimetype_inner": null, "position": 0, "revision_id":
+        "4b8d87e6-cc4e-435e-9036-eab1869d9830", "resource_type": null}], "num_resources":
+        1, "tags": [], "tracking_summary": {"total": 0, "recent": 0}, "groups": [],
+        "license_id": "notspecified", "relationships_as_subject": [], "num_tags":
+        0, "organization": null, "name": "addmydataset", "isopen": false, "url": "",
+        "notes": "", "owner_org": null, "extras": [], "title": "addmydataset", "revision_id":
+        "59832ece-7252-4840-9c1e-6c1e83384f69"}, {"license_title": "\u5176\u4ed6(\u5f00\u653e)",
+        "maintainer": "", "relationships_as_object": [], "private": false, "maintainer_email":
+        "", "revision_timestamp": "2015-03-18T02:33:47.258140", "id": "aa6b7e1b-0cf8-4e8c-88b6-f8f7cbdf04e2",
+        "metadata_created": "2015-03-18T02:33:00.767454", "metadata_modified": "2015-03-18T02:33:47.259595",
+        "author": "", "author_email": "", "state": "active", "version": "", "creator_user_id":
+        "87820fda-a831-475a-a1a1-49d7b50b8ca2", "type": "dataset", "resources": [{"resource_group_id":
+        "2a4e56aa-ab0d-4327-8e35-6ecfa56b2f2c", "cache_last_updated": null, "revision_timestamp":
+        "2015-03-18T02:33:47.258140", "webstore_last_updated": null, "id": "693d0d45-262a-4a36-8727-c1647fe02fda",
+        "size": null, "state": "active", "hash": "", "description": "baidu", "format":
+        "", "tracking_summary": {"total": 0, "recent": 0}, "last_modified": null,
+        "url_type": null, "mimetype": null, "cache_url": null, "name": "\u6211\u53bb\u6076\u8da3\u5473",
+        "created": "2015-03-18T02:33:40.070148", "url": "http://www.baidu.com", "webstore_url":
+        null, "mimetype_inner": null, "position": 0, "revision_id": "196e9629-304e-4049-b71c-ef3d390aa33a",
+        "resource_type": null}], "num_resources": 1, "tags": [{"vocabulary_id": null,
+        "display_name": "\u7ecf\u6d4e", "name": "\u7ecf\u6d4e", "revision_timestamp":
+        "2015-03-18T02:33:00.767454", "state": "active", "id": "31857ff8-c95e-4973-837e-99d6999c0904"}],
+        "tracking_summary": {"total": 0, "recent": 0}, "groups": [], "license_id":
+        "other-open", "relationships_as_subject": [], "num_tags": 1, "organization":
+        null, "name": "113214", "isopen": true, "url": "", "notes": "21312", "owner_org":
+        null, "extras": [], "title": "\u4f01\u7a33", "revision_id": "196e9629-304e-4049-b71c-ef3d390aa33a"},
+        {"license_title": "License Not Specified", "maintainer": "", "relationships_as_object":
+        [], "private": false, "maintainer_email": "", "revision_timestamp": "2015-03-18T02:21:08.358080",
+        "id": "46a24974-7798-4ca0-a56b-ea36ca4e6f3a", "metadata_created": "2015-03-18T02:19:00.458759",
+        "metadata_modified": "2015-03-18T02:23:42.699056", "author": "RIESGOS LABORALES
+        Datos Abiertos", "author_email": "mintrabajo.gov.co", "state": "active", "version":
+        "1.0", "creator_user_id": "d862f6c0-f72f-462c-b3b1-6175463bd914", "type":
+        "dataset", "resources": [{"resource_group_id": "1f028b13-7f1f-4adf-93b0-d3304983f896",
+        "cache_last_updated": null, "revision_timestamp": "2015-03-18T02:20:44.952472",
+        "webstore_last_updated": "2015-03-18T02:20:44.814633", "id": "912b9d7f-56bf-4177-b39d-db79ef4ff258",
+        "size": null, "state": "active", "hash": "da788ac02063c02fd2c78a4e8ffa8418",
+        "description": "El cuadro presenta a junio de 2013 por Administradora de Riesgos
+        Laborales la tasa de n\u00famero de muertes por accidente de trabajo por cada
+        100.000 afiliados, se detallan el n\u00famero de presuntas muertes reportadas
+        por las empresas y el n\u00famero de muertes calificadas como laborales.",
+        "format": "CSV", "tracking_summary": {"total": 0, "recent": 0}, "last_modified":
+        null, "url_type": "upload", "mimetype": null, "cache_url": null, "name": "Resumen
+        tasa de muertes por accidente de trabajo por administradora de riesgos laborales",
+        "created": "2015-03-18T02:20:36.065611", "url": "http://demo.ckan.org/dataset/46a24974-7798-4ca0-a56b-ea36ca4e6f3a/resource/912b9d7f-56bf-4177-b39d-db79ef4ff258/download/indicadoresporarlcuadro12.xlsx",
+        "webstore_url": "active", "mimetype_inner": null, "position": 0, "revision_id":
+        "78b81fc0-d19b-4fef-aa49-69d97e82d3d8", "resource_type": null}, {"resource_group_id":
+        "1f028b13-7f1f-4adf-93b0-d3304983f896", "cache_last_updated": null, "revision_timestamp":
+        "2015-03-18T02:23:42.697258", "webstore_last_updated": "2015-03-18T02:23:42.502413",
+        "id": "a3b72217-ea9d-42cf-804d-048cb180d027", "size": null, "state": "active",
+        "hash": "061e865bd0fe1fd72706048cf6c296d6", "description": "El siguiente cuadro
+        presenta el comparativo y comportamiento de las muertes causadas por accidentes
+        de trabajo frente a los a\u00f1os anteriores.", "format": "CSV", "tracking_summary":
+        {"total": 0, "recent": 0}, "last_modified": null, "url_type": "upload", "mimetype":
+        null, "cache_url": null, "name": "Comparativo de muertes por accidente de
+        trabajo respecto a a\u00f1os anteriores.", "created": "2015-03-18T02:23:34.007768",
+        "url": "http://demo.ckan.org/dataset/46a24974-7798-4ca0-a56b-ea36ca4e6f3a/resource/a3b72217-ea9d-42cf-804d-048cb180d027/download/indicadoresporarlcuadro13.xlsx",
+        "webstore_url": "active", "mimetype_inner": null, "position": 1, "revision_id":
+        "44f03c8c-a013-4051-85fe-b9df9f8d1330", "resource_type": null}], "num_resources":
+        2, "tags": [{"vocabulary_id": null, "display_name": "ARL", "name": "ARL",
+        "revision_timestamp": "2015-03-18T02:19:00.458759", "state": "active", "id":
+        "8e1d5d59-6371-4e1e-b5cb-db91c02e2aad"}, {"vocabulary_id": null, "display_name":
+        "Riesgos Laborales", "name": "Riesgos Laborales", "revision_timestamp": "2015-03-18T02:19:00.458759",
+        "state": "active", "id": "aee2b23c-6ecf-4135-8fef-e5bb6d04e3a4"}, {"vocabulary_id":
+        null, "display_name": "Seguridad", "name": "Seguridad", "revision_timestamp":
+        "2015-03-18T02:19:00.458759", "state": "active", "id": "e3b1ab5b-e149-49e0-a7ec-f7b49332db88"},
+        {"vocabulary_id": null, "display_name": "accidente de trabajo", "name": "accidente
+        de trabajo", "revision_timestamp": "2015-03-18T02:19:00.458759", "state":
+        "active", "id": "58056e0a-ccfb-4941-8bfa-832c501a8dfe"}], "tracking_summary":
+        {"total": 0, "recent": 0}, "groups": [], "license_id": "notspecified", "relationships_as_subject":
+        [], "num_tags": 4, "organization": {"description": "MISI\u00d3N: Formular,
+        adoptar y orientar la pol\u00edtica p\u00fablica en materia laboral que contribuya
+        a mejorar la calidad de vida de los colombianos, para garantizar el derecho
+        al trabajo decente, mediante la identificaci\u00f3n e implementaci\u00f3n
+        de estrategias de generaci\u00f3n y formalizaci\u00f3n del empleo; respeto
+        a los derechos fundamentales del trabajo y la promoci\u00f3n del di\u00e1logo
+        social y el aseguramiento para la vejez.", "created": "2015-03-14T19:09:36.144373",
+        "title": "Ministerio del Trabajo", "name": "ministerio-del-trabajo", "revision_timestamp":
+        "2015-03-14T19:09:35.773836", "is_organization": true, "state": "active",
+        "image_url": "20150314-190935.769726mintrabajo.png", "revision_id": "80dc120a-a60a-4607-a17a-14f065c2ffbf",
+        "type": "organization", "id": "851ec47b-e6b9-4247-a6e3-4d368b306f1e", "approval_status":
+        "approved"}, "name": "indicador-del-numero-de-muertes-por-accidente-de-trabajo-por-administradora-de-riesgos-laborales",
+        "isopen": false, "url": "http://www.mintrabajo.gov.co/", "notes": "Este indicador
+        mide cuantos trabajadores murieron por accidente laboral\r\npor cada cien
+        mil (100.000) trabajadores afiliados, al Sistema de\r\nRiesgos Laborales.
+        ", "owner_org": "851ec47b-e6b9-4247-a6e3-4d368b306f1e", "extras": [], "title":
+        "INDICADOR DEL N\u00daMERO DE MUERTES POR ACCIDENTE DE TRABAJO POR ADMINISTRADORA
+        DE RIESGOS LABORALES", "revision_id": "a1d4e174-36ed-45cb-8db9-dbf9e785f71c"},
+        {"license_title": "License Not Specified", "maintainer": "", "relationships_as_object":
+        [], "private": false, "maintainer_email": "", "revision_timestamp": "2015-03-18T02:06:36.773815",
+        "id": "e1ea8845-5b84-46d1-a2e8-22d609882fee", "metadata_created": "2015-03-18T02:01:54.547361",
+        "metadata_modified": "2015-03-18T02:14:46.480073", "author": "RIESGOS LABORALES
+        Datos Abiertos", "author_email": "mintrabajo.gov.co", "state": "active", "version":
+        "1.0", "creator_user_id": "d862f6c0-f72f-462c-b3b1-6175463bd914", "type":
+        "dataset", "resources": [{"resource_group_id": "e514c922-d11f-4c3c-a974-7a94b377840c",
+        "cache_last_updated": null, "revision_timestamp": "2015-03-18T02:06:12.675608",
+        "webstore_last_updated": "2015-03-18T02:06:12.546837", "id": "64a1975d-d131-4cde-a9fe-a5e3bf55fd59",
+        "size": null, "state": "active", "hash": "73950108a01cc5b0fc8499daaf7ffcb8",
+        "description": "El cuadro presenta a junio de 2013 por Administradora de Riesgos
+        Laborales la tasa de enfermedad por cada 100.000 afiliados, se detallan el
+        n\u00famero de presuntas enfermedades reportadas por las empresas y el n\u00famero
+        de enfermedades calificadas como laborales.\r\nEn cuanto al n\u00famero de
+        enfermedades laborales la ARL Mapfre presenta la mayor tasa de enfermedad
+        calificada como laboral, es decir, por cada 100.000 afiliados de la ARL Mapfre
+        presenta 100 afiliados con enfermedad laboral. \r\n", "format": "CSV", "tracking_summary":
+        {"total": 0, "recent": 0}, "last_modified": null, "url_type": "upload", "mimetype":
+        null, "cache_url": null, "name": "Resumen tasa de enfermedad por administradora
+        de riesgos laborales", "created": "2015-03-18T02:06:03.207349", "url": "http://demo.ckan.org/dataset/e1ea8845-5b84-46d1-a2e8-22d609882fee/resource/64a1975d-d131-4cde-a9fe-a5e3bf55fd59/download/indicadoresporarlcuadro10.xlsx",
+        "webstore_url": "active", "mimetype_inner": null, "position": 0, "revision_id":
+        "12a6ad48-e225-4550-8743-898f6bc65e01", "resource_type": null}, {"resource_group_id":
+        "e514c922-d11f-4c3c-a974-7a94b377840c", "cache_last_updated": null, "revision_timestamp":
+        "2015-03-18T02:14:46.478407", "webstore_last_updated": "2015-03-18T02:14:46.265929",
+        "id": "7df8e81e-bbac-427c-b39e-dbc3b610b664", "size": null, "state": "active",
+        "hash": "19e2ca9eb0229c46e5614122a9ec8cd0", "description": "El siguiente cuadro
+        presenta el comparativo y comportamiento frente a los a\u00f1os anteriores.",
+        "format": "CSV", "tracking_summary": {"total": 0, "recent": 0}, "last_modified":
+        null, "url_type": "upload", "mimetype": null, "cache_url": null, "name": "Comparativo
+        de enfermedades laborales por arl respecto a a\u00f1os anteriores", "created":
+        "2015-03-18T02:12:00.898939", "url": "http://demo.ckan.org/dataset/e1ea8845-5b84-46d1-a2e8-22d609882fee/resource/7df8e81e-bbac-427c-b39e-dbc3b610b664/download/indicadoresporarlcuadro11.xlsx",
+        "webstore_url": "active", "mimetype_inner": null, "position": 1, "revision_id":
+        "573e908b-6ba5-4e3d-915b-7b31c7ce163c", "resource_type": null}], "num_resources":
+        2, "tags": [{"vocabulary_id": null, "display_name": "ARL", "name": "ARL",
+        "revision_timestamp": "2015-03-18T02:01:54.547361", "state": "active", "id":
+        "8e1d5d59-6371-4e1e-b5cb-db91c02e2aad"}, {"vocabulary_id": null, "display_name":
+        "Health", "name": "Health", "revision_timestamp": "2015-03-18T02:01:54.547361",
+        "state": "active", "id": "4e9c4285-5f06-4ce3-8812-97b6a0ff7140"}, {"vocabulary_id":
+        null, "display_name": "enfermedad laboral", "name": "enfermedad laboral",
+        "revision_timestamp": "2015-03-18T02:01:54.547361", "state": "active", "id":
+        "423d0755-94cd-4d6b-9aea-a221e998f7d1"}, {"vocabulary_id": null, "display_name":
+        "riesgos laborales", "name": "riesgos laborales", "revision_timestamp": "2015-03-18T02:01:54.547361",
+        "state": "active", "id": "a1ba49af-3c2a-42b3-9f79-d0eeface2422"}], "tracking_summary":
+        {"total": 0, "recent": 0}, "groups": [], "license_id": "notspecified", "relationships_as_subject":
+        [], "num_tags": 4, "organization": {"description": "MISI\u00d3N: Formular,
+        adoptar y orientar la pol\u00edtica p\u00fablica en materia laboral que contribuya
+        a mejorar la calidad de vida de los colombianos, para garantizar el derecho
+        al trabajo decente, mediante la identificaci\u00f3n e implementaci\u00f3n
+        de estrategias de generaci\u00f3n y formalizaci\u00f3n del empleo; respeto
+        a los derechos fundamentales del trabajo y la promoci\u00f3n del di\u00e1logo
+        social y el aseguramiento para la vejez.", "created": "2015-03-14T19:09:36.144373",
+        "title": "Ministerio del Trabajo", "name": "ministerio-del-trabajo", "revision_timestamp":
+        "2015-03-14T19:09:35.773836", "is_organization": true, "state": "active",
+        "image_url": "20150314-190935.769726mintrabajo.png", "revision_id": "80dc120a-a60a-4607-a17a-14f065c2ffbf",
+        "type": "organization", "id": "851ec47b-e6b9-4247-a6e3-4d368b306f1e", "approval_status":
+        "approved"}, "name": "indicador-de-enfermedades-por-administrador-de-riesgos-laborales",
+        "isopen": false, "url": "http://www.mintrabajo.gov.co/", "notes": "Este indicador
+        mide qu\u00e9 porcentaje, de cada 100.000 trabajadores\r\nfueron calificados
+        como enfermedad laboral. ", "owner_org": "851ec47b-e6b9-4247-a6e3-4d368b306f1e",
+        "extras": [], "title": "INDICADOR DE ENFERMEDADES POR ADMINISTRADOR DE RIESGOS
+        LABORALES", "revision_id": "88e6051b-3dca-4fe5-b3a8-bba9db411f80"}, {"license_title":
+        "License Not Specified", "maintainer": "", "relationships_as_object": [],
+        "private": false, "maintainer_email": "", "revision_timestamp": "2015-03-18T01:48:56.865463",
+        "id": "ee6c661a-7254-408f-9a46-e776ef49c6c4", "metadata_created": "2015-03-18T01:44:44.886179",
+        "metadata_modified": "2015-03-18T01:56:59.803563", "author": "RIESGOS LABORALES
+        Datos Abiertos", "author_email": "mintrabajo.gov.co", "state": "active", "version":
+        "1.0", "creator_user_id": "d862f6c0-f72f-462c-b3b1-6175463bd914", "type":
+        "dataset", "resources": [{"resource_group_id": "dc1ed17d-9b32-4200-86cc-09ac7cf8425a",
+        "cache_last_updated": null, "revision_timestamp": "2015-03-18T01:47:54.282363",
+        "webstore_last_updated": "2015-03-18T01:47:54.151908", "id": "ab55fe9e-aa71-47b3-84dc-c7cd87ff7a90",
+        "size": null, "state": "active", "hash": "ea92938ee93983d266667c4f64ecb1ca",
+        "description": "presenta a junio de 2013 por Administradora de Riesgos Laborales
+        la tasa de\r\naccidentalidad por cada 100 afiliados, se detallan el n\u00famero
+        de los presuntos accidentes reportados por las empresas el n\u00famero de
+        los accidentes calificados como laborales.\r\nEn cuanto al n\u00famero de
+        accidentes laborales la ARL Sura presenta la mayor tasa de accidentes calificado,
+        es decir, por cada 100 afiliados de la ARL Sura 4,92 afiliados fueron calificados
+        como accidente laboral.\r\nSeguidas por las ARL Colpatria y Colmena, que presentan
+        por cada 100 afiliados a sus entidades 4 afiliados accidentados laboralmente.\r\nEn
+        cuanto a los presuntos accidentes reportados por las empresas la ARL Mapfre
+        presenta la mayor tasa de presuntos accidentes a junio de 2013, es importante
+        precisar que estos no se encuentran con calificaci\u00f3n en firme, la tasa
+        que presenta es de 6 afiliados con presunto accidente laboral de cada 100\r\nafiliados
+        d\u00e9 esa ARL. ", "format": "CSV", "tracking_summary": {"total": 0, "recent":
+        0}, "last_modified": null, "url_type": "upload", "mimetype": null, "cache_url":
+        null, "name": "Tasa de accidentalidad por cada 100 afiliados a junio de 2013",
+        "created": "2015-03-18T01:47:45.475879", "url": "http://demo.ckan.org/dataset/ee6c661a-7254-408f-9a46-e776ef49c6c4/resource/ab55fe9e-aa71-47b3-84dc-c7cd87ff7a90/download/indicadoresporarlcuadro8.xlsx",
+        "webstore_url": "active", "mimetype_inner": null, "position": 0, "revision_id":
+        "deddc964-1e0f-49b7-8366-59fefa7b3596", "resource_type": null}, {"resource_group_id":
+        "dc1ed17d-9b32-4200-86cc-09ac7cf8425a", "cache_last_updated": null, "revision_timestamp":
+        "2015-03-18T01:56:59.801914", "webstore_last_updated": "2015-03-18T01:56:59.606466",
+        "id": "431c86c9-1748-4ebb-b9bb-38270730763f", "size": null, "state": "active",
+        "hash": "c85aa4d08df86171d8aba33d270472ab", "description": "El siguiente cuadro
+        presenta el comparativo y comportamiento de la tasa de accidentalidad por
+        administradora de riesgos laborales frente a los a\u00f1os anteriores", "format":
+        "CSV", "tracking_summary": {"total": 0, "recent": 0}, "last_modified": null,
+        "url_type": "upload", "mimetype": null, "cache_url": null, "name": "Comparativo
+        de accidentalidad por arl frente a a\u00f1os anteriores", "created": "2015-03-18T01:56:51.209834",
+        "url": "http://demo.ckan.org/dataset/ee6c661a-7254-408f-9a46-e776ef49c6c4/resource/431c86c9-1748-4ebb-b9bb-38270730763f/download/indicadoresporarlcuadro9.xlsx",
+        "webstore_url": "active", "mimetype_inner": null, "position": 1, "revision_id":
+        "4cc89a82-4466-465c-9e1b-f628f958664e", "resource_type": null}], "num_resources":
+        2, "tags": [{"vocabulary_id": null, "display_name": "ARL", "name": "ARL",
+        "revision_timestamp": "2015-03-18T01:44:44.886179", "state": "active", "id":
+        "8e1d5d59-6371-4e1e-b5cb-db91c02e2aad"}, {"vocabulary_id": null, "display_name":
+        "Accidente de trabajo", "name": "Accidente de trabajo", "revision_timestamp":
+        "2015-03-18T01:44:44.886179", "state": "active", "id": "5e81b826-9d9e-493b-a259-7ed9bcb67069"},
+        {"vocabulary_id": null, "display_name": "Seguridad", "name": "Seguridad",
+        "revision_timestamp": "2015-03-18T01:44:44.886179", "state": "active", "id":
+        "e3b1ab5b-e149-49e0-a7ec-f7b49332db88"}], "tracking_summary": {"total": 0,
+        "recent": 0}, "groups": [], "license_id": "notspecified", "relationships_as_subject":
+        [], "num_tags": 3, "organization": {"description": "MISI\u00d3N: Formular,
+        adoptar y orientar la pol\u00edtica p\u00fablica en materia laboral que contribuya
+        a mejorar la calidad de vida de los colombianos, para garantizar el derecho
+        al trabajo decente, mediante la identificaci\u00f3n e implementaci\u00f3n
+        de estrategias de generaci\u00f3n y formalizaci\u00f3n del empleo; respeto
+        a los derechos fundamentales del trabajo y la promoci\u00f3n del di\u00e1logo
+        social y el aseguramiento para la vejez.", "created": "2015-03-14T19:09:36.144373",
+        "title": "Ministerio del Trabajo", "name": "ministerio-del-trabajo", "revision_timestamp":
+        "2015-03-14T19:09:35.773836", "is_organization": true, "state": "active",
+        "image_url": "20150314-190935.769726mintrabajo.png", "revision_id": "80dc120a-a60a-4607-a17a-14f065c2ffbf",
+        "type": "organization", "id": "851ec47b-e6b9-4247-a6e3-4d368b306f1e", "approval_status":
+        "approved"}, "name": "indicador-de-accidentalidad-por-administradora-de-riesgos-laborales",
+        "isopen": false, "url": "http://www.mintrabajo.gov.co/", "notes": "Este indicador
+        reporta los accidentes que el empleador cree que es\r\naccidente de trabajo
+        pero las Administradoras de Riesgos Laborales aun\r\nno lo ha reconocido.",
+        "owner_org": "851ec47b-e6b9-4247-a6e3-4d368b306f1e", "extras": [], "title":
+        "INDICADOR DE ACCIDENTALIDAD POR ADMINISTRADORA DE RIESGOS LABORALES", "revision_id":
+        "99474ae9-465f-482d-a465-7ae07f62d7d1"}], "search_facets": {}}}'
+    http_version: 
+  recorded_at: Mon, 23 Mar 2015 16:06:53 GMT
+recorded_with: VCR 2.9.3

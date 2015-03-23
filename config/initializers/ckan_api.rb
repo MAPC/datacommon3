@@ -1,0 +1,1 @@
+CKAN::API.api_url = ENV.fetch('CKAN_API_URL') { "http://demo.ckan.org/api/3/" }

@@ -98,6 +98,8 @@ GEM
       sass (~> 3.2.19)
     compass-rails (2.0.0)
       compass (>= 0.12.2)
+    crack (0.4.2)
+      safe_yaml (~> 1.0.0)
     database_cleaner (1.4.1)
     diff-lcs (1.2.5)
     docile (1.1.5)
@@ -161,7 +163,7 @@ GEM
       fog-xml
     fog-json (1.0.0)
       multi_json (~> 1.0)
-    fog-profitbricks (0.0.1)
+    fog-profitbricks (0.0.2)
       fog-core
       fog-xml
       nokogiri
@@ -382,8 +384,6 @@ GEM
       tilt (~> 1.3, >= 1.3.4)
     slop (3.6.0)
     spring (1.3.3)
-    spring-commands-rspec (1.0.4)
-      spring (>= 0.9.1)
     sprockets (2.11.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -422,9 +422,13 @@ GEM
       rack
       unicorn
     uuidtools (2.1.5)
+    vcr (2.9.3)
     vegas (0.1.11)
       rack (>= 1.0.0)
     wannabe_bool (0.1.0)
+    webmock (1.8.11)
+      addressable (>= 2.2.7)
+      crack (>= 0.1.7)
     websocket-driver (0.5.3)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
@@ -460,7 +464,6 @@ DEPENDENCIES
   lazy_columns!
   minitest
   naught
-  nokogiri (>= 1.4.4)
   paperclip (= 4.2.0)
   pg (= 0.17.1)
   poltergeist
@@ -477,10 +480,11 @@ DEPENDENCIES
   rubyzip (>= 1.0.0)
   sass-rails (= 4.0.3)
   spring
-  spring-commands-rspec
   stamp (= 0.6.0)
   textacular (= 3.2.0)
   turbolinks (= 2.4.0)
   uglifier (>= 1.3.0)
   unicorn-rails
+  vcr (~> 2.4)
   wannabe_bool
+  webmock (~> 1.8.4)
