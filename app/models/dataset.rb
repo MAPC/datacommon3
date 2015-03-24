@@ -10,6 +10,10 @@ class Dataset
     def method_missing(method_name, *args, &block)
       records.send(method_name, args)
     end
+
+    def limit_value
+      per_page
+    end
   end
 
   DEFAULT_PER_PAGE = 10
