@@ -1,24 +1,11 @@
 - content_for :featured do
-
-  #carousel-dc.carousel.slide{data: {ride: "carousel", interval: 15000}}
-
-    %ol.carousel-indicators
-      %li.active{data: {target: "#carousel-dc", "slide-to" => "0"}}
-      %li{       data: {target: "#carousel-dc", "slide-to" => "1"}}
-      %li{       data: {target: "#carousel-dc", "slide-to" => "2"}}
-
-    .carousel-inner
-      = render partial: 'heros/hero', collection: @heros, as: :hero, locals: { first: @heros.first }
-      
-    %a.left.carousel-control{href: "#carousel-dc", role: "button", data: {slide: "prev"}}
-      %span.glyphicon.glyphicon-chevron-left
-    %a.right.carousel-control{href: "#carousel-dc", role: "button", data: {slide: "next"}}
-      %span.glyphicon.glyphicon-chevron-right
+  = image_tag "https://unsplash.it/1400/300?image=621"
+  
 
 .row
-  .exp.col-xs-8.col-xs-offset-2.col-sm-offset-0.col-sm-6.col-md-3
+  .col-sm-3.col-xs-12.explanation
     = link_to datasets_path do
-      %h5.exp.data-catalog          Data Catalog
+      %h5.explanation.data-catalog          Data Catalog
       = image_tag 'explanations/data-catalog.png', class: 'explanation-icon'
     %p
       Download over 300 datasets, available in tabular and spatial formats, from the 
@@ -26,9 +13,9 @@
         = link_to 'Data Catalog', datasets_path
       Search for data by topic, dataset, or keyword, and download for whatever geography you need.
 
-  .exp.col-xs-8.col-xs-offset-2.col-sm-offset-0.col-sm-6.col-md-3
+  .col-sm-3.col-xs-12.explanation
     = link_to municipalities_path do
-      %h5.exp.community-snapshots   Community Snapshots
+      %h5.explanation.community-snapshots   Community Snapshots
       = image_tag 'explanations/community-snapshots.png', class: 'explanation-icon'
     %p
       Find topical data by municipality or subregion in 
@@ -36,9 +23,9 @@
         = link_to 'Community Snapshots', municipalities_path
       Essentially a dashboard about housing, education, the arts, and more, tailored to your community.
 
-  .exp.col-xs-8.col-xs-offset-2.col-sm-offset-0.col-sm-6.col-md-3
+  .col-sm-3.col-xs-12.explanation
     = link_to visualizations_path do
-      %h5.exp.visualization-gallery Visualization Gallery
+      %h5.explanation.visualization-gallery Visualization Gallery
       = image_tag 'explanations/visualization-gallery.png', class: 'explanation-icon'
     %p
       Access hundreds of user-made maps, charts, tables and more in the 
@@ -46,9 +33,9 @@
         = link_to 'Visualization Gallery', visualizations_path
       Explore these visualizations by topic area, dataset, or keyword, and learn how to make your own.
 
-  .exp.col-xs-8.col-xs-offset-2.col-sm-offset-0.col-sm-6.col-md-3
+  .col-sm-3.col-xs-12.explanation
     = link_to static_maps_path do
-      %h5.exp.map-gallery           Map Gallery
+      %h5.explanation.map-gallery           Map Gallery
       = image_tag 'explanations/map-gallery.png', class: 'explanation-icon'
     %p
       View mapping and data projects completed by regional planning agencies in the
@@ -58,18 +45,21 @@
 
 
 .row
-  .col-xs-10.col-xs-offset-1
+  .col-xs-8
     %h1 Featured Visualization
-.row
-  .col-md-7.col-md-offset-1.col-sm-12
-    = render partial: 'visualizations/feature', locals: { feature: @feature }
-  .col-md-3.col-md-offset-0.col-sm-8.col-sm-offset-2
-    %h5.center Find Visualizations by Topic
-    .list-group
-      = render partial: 'topics/topic', collection: topics
+    = image_tag "https://unsplash.it/700/432?image=618"
 
+    -# = render partial: 'visualizations/feature', locals: { feature: @feature }
+  .col-xs-4
+    %h1.center Data By Topic
+    .list-group
+      -# = render partial: 'topics/topic',  collection: topics, locals: { path: 'visualizations' }
+      = render partial: 'topics/square', collection: topics, as: :topic, locals: { path: 'visualizations' }
 
 .row
   .col-xs-12
+    .page-header
     %h1 Recent Visualizations
-  = render partial: 'visualizations/thumbnail', collection: recent_visualizations, as: :vis
+    - 4.times do
+      .spaced= image_tag "https://unsplash.it/200/115?image=618"  
+    -# = render partial: 'visualizations/thumbnail', collection: recent_visualizations, as: :vis
