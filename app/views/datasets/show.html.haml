@@ -8,12 +8,16 @@
 .row
   .col-sm-6.col-xs-12
     = render partial: 'datasets/metadata', object: @dataset, as: :dataset 
-    -# = @dataset.inspect
   
   .col-sm-6.col-xs-12
-    %h3 Download
-    %table.metadata
+    %h4
+      %span.glyphicon.glyphicon-cloud-download
+      Download
+    %table.metadata{style: "clear:both;"}
       = render partial: 'datasets/resource', collection: @dataset.resources
+    %small
+      %a{href: '#', data: {toggle: 'modal', target: '#geographies'}}
+        What are these geographies?
     -# #map.snapshot.map
 
 #geographies.modal.fade{role: 'dialog'}
@@ -24,8 +28,9 @@
         %h3 Description of available geographies
       .modal-body
         - @dataset.resources.each do |resource|
-          %h5= resource
+          %h5= resource.name
           %p=  resource.description
+          %br
       .modal-footer
         %button.btn.btn-default{type: 'button', data: {dismiss: 'modal'}} Close window
 
