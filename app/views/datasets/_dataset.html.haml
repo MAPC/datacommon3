@@ -10,7 +10,8 @@
       %li= "Created: #{Date.parse(dataset.metadata_created).to_s(:monthyear)}"
       -if org
         %li= "Organization: #{org}"
-      %li= "#{dataset.resources.count} " << "resource".pluralize(dataset.resources)
+      %li
+        %small= "#{dataset.resources.count} " << "resource".pluralize(dataset.resources.count)
 
 -# dates
 -# created

@@ -1,13 +1,18 @@
 class Dataset
 
-  DEFAULT_PER_PAGE = 10
-
-  Dataset = Struct.new(:records, :current_page, :total_pages, :per_page) do
-    def method_missing(method_name, *args, &block)
-      records.send(method_name, args, block)
+  dstruct = Struct.new("Dataset", :records, :per_page, :current_page, :total_pages) do
+    %w( count size length each map ).each do |method_name|
+      define_method method_name do
+        records.send(method_name)
+      end
     end
-    def limit_value ; end # Pagination claimed records did not have limit_value
+    
+    def method_missing(method_name, *args, &block)
+      records.send(method_name, args)
+    end
   end
+
+  DEFAULT_PER_PAGE = 10
 
   def self.all
     CKAN::Package.find()
@@ -25,7 +30,7 @@ class Dataset
     per_page     = options.fetch(:per_page) { DEFAULT_PER_PAGE }
     
     records = CKAN::Package.find(rows: per_page, start: current_page * per_page)
-    Dataset.new(records, current_page, total_pages, per_page)
+    Struct::Dataset.new(records, per_page, current_page, total_pages)
   end
 
   def self.total_pages(per_page=DEFAULT_PER_PAGE)

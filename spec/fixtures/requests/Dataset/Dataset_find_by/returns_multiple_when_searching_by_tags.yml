@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - nginx/1.1.19
       Date:
-      - Mon, 23 Mar 2015 20:37:41 GMT
+      - Tue, 24 Mar 2015 16:21:21 GMT
       Content-Type:
       - application/json;charset=utf-8
       Transfer-Encoding:
@@ -374,5 +374,5 @@ http_interactions:
         "revision_id": "51eaeed3-cb4f-47c4-8bba-fe46c0b2b846"}], "search_facets":
         {}}}'
     http_version: 
-  recorded_at: Mon, 23 Mar 2015 20:37:42 GMT
+  recorded_at: Tue, 24 Mar 2015 16:21:26 GMT
 recorded_with: VCR 2.9.3

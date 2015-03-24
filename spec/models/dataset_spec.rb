@@ -1,38 +1,46 @@
 require 'spec_helper'
 
+VCR.configure do |config|
+  config.ignore_request do |request|
+    request.include? "package_list"
+  end
+end
+
 describe Dataset do
   
   pending "Dataset#all" do
     expect(Dataset.all().count).to be_between(900,1200)
   end
 
-  describe "Dataset#find_by", vcr: true do
-    it "returns one object if searching by ID" do
+  describe "Dataset#find_by" do
+    it "returns one object if searching by ID", vcr: true do
       expect(
         Dataset.find_by(id: "3dbae792-3443-4171-bb10-afb8759364c3")
       ).to have(1).item
     end
 
-    it "returns multiple when searching by tags" do
+    it "returns multiple when searching by tags", vcr: true do
       expect(Dataset.find_by(tags: "government")).to have_at_least(3).items
     end
   end
 
-  describe "Dataset#page", vcr: true do
-    it "paginates results" do
+  describe "Dataset#page" do
+    it "paginates results", vcr: true do
       expect(Dataset.page(1)).to have(10).items
     end
 
-    it "custom paginates with options" do
+    it "custom paginates with options", vcr: true do
       results = Dataset.page(2, per_page: 5)
       expect(results).to have(5).items
     end
 
     it "defaults to page 1", vcr: true do
-      nil_page = Dataset.page.map(&:id)
-      one_page = Dataset.page(1).map(&:id)
-      
+      nil_page = Dataset.page.records.map(&:id)
+      one_page = Dataset.page(1).records.map(&:id)
       expect(nil_page).to eq(one_page)
+    end
+
+    it "defaults to page 1 and takes options", vcr: true do
       expect(Dataset.page(nil, per_page: 5)).to have(5).items
     end
 
