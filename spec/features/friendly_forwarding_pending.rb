@@ -4,7 +4,7 @@ feature 'Friendly forwarding' do
   
   subject(:user) { create(:user) }
   scenario 'active user logs in' do
-    get edit_profile_path(user)
+    visit edit_profile_path(user)
     sign_in user
     expect(page).to have_content('Edit Profile')
   end
