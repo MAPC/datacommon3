@@ -75,11 +75,12 @@ end
 
 
 group :development, :test do
-  gem 'rspec-rails',  '~> 2.14.0.rc1' # Stick to a specific version
+  gem 'rspec-rails',  '~> 2.14.0' # Stick to a specific version
 
+  gem 'spring-commands-rspec', '~> 1.0'
   gem 'factory_girl_rails',  '~> 4.0' # Build factories quickly
   gem 'database_cleaner'
-  gem 'guard-rspec'                   # Autorun tests and keep Rails loaded
+  gem 'guard-rspec',          '4.3.1' # Autorun tests and keep Rails loaded
   gem 'capybara',          '~> 2.2.1' # DSL for integration tests
   gem 'launchy'                       # Enable save_and_open_page
   gem 'faker'                         # Generate fake data
