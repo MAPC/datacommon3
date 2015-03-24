@@ -45,15 +45,16 @@
 
 
 .row
-  .col-xs-8
+  .col-md-8.col-sm-12
     %h1 Featured Visualization
     = image_tag "https://unsplash.it/700/432?image=618"
 
     -# = render partial: 'visualizations/feature', locals: { feature: @feature }
-  .col-xs-4
-    %h1.center Data By Topic
-    .list-group
+  .col-md-4.col-sm-12
+    %h1.center Visualiations by Topic
+    -# .list-group
       -# = render partial: 'topics/topic',  collection: topics, locals: { path: 'visualizations' }
+    .icon-center-group
       = render partial: 'topics/square', collection: topics, as: :topic, locals: { path: 'visualizations' }
 
 .row
