@@ -11,8 +11,7 @@ class DatasetsController < ApplicationController
   end
 
   def show
-    # TODO: Fix the model so we don't need #first
-    @dataset = Dataset.find_by(id: params[:id]).first
+    @dataset = Dataset.find_by(id: params[:id])
   end
 
   def download

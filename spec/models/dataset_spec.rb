@@ -14,9 +14,7 @@ describe Dataset do
 
   describe "Dataset#find_by" do
     it "returns one object if searching by ID", vcr: true do
-      expect(
-        Dataset.find_by(id: "3dbae792-3443-4171-bb10-afb8759364c3")
-      ).to have(1).item
+      expect( Dataset.find_by(id: "3dbae792-3443-4171-bb10-afb8759364c3") ).to be_a(CKAN::Package)
     end
 
     it "returns multiple when searching by tags", vcr: true do

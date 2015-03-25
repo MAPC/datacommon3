@@ -18,13 +18,22 @@ class Dataset
 
   DEFAULT_PER_PAGE = 10
 
+  def self.per_page
+    DEFAULT_PER_PAGE
+  end
+
   def self.all
     CKAN::Package.find()
   end
 
-  def self.find_by(hash)
-    packages = CKAN::Package.find(hash)
-    hash.keys.include?(:id) ? packages.first : packages
+  def self.find_by(options)
+    records = CKAN::Package.find(options)
+    return records.first if options[:q].include?("id")
+
+    current_page = options.fetch(:page) { 1 }
+    per_page     = options.fetch(:per_page) { DEFAULT_PER_PAGE }
+    total_pages  = records.length / per_page
+    Struct::Dataset.new(records, per_page, current_page, total_pages)
   end
 
   def self.page(current_page=nil, options={})
