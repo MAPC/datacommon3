@@ -4,9 +4,8 @@ VCR.configure do |config|
   config.cassette_library_dir = 'spec/fixtures/requests'
   config.hook_into :webmock
   config.configure_rspec_metadata! # Auto-name requests based on test name
-  
-  config.ignore_request do |request|
-    request.include? "package_list"
-  end
-
+  config.default_cassette_options = { record: :new_episodes }
 end
+
+# Good VCR reference -- may want to use more of the items in here.
+# http://tech.xogroupinc.com/post/88009141839/speeding-up-rspec-integration-testing-with-the-vcr

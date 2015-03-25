@@ -26,6 +26,10 @@ class Dataset
     CKAN::Package.find()
   end
 
+  def self.count
+    self.all.count
+  end
+
   def self.find_by(options)
     records = CKAN::Package.find(options)
     return records.first if options[:q].include?("id")

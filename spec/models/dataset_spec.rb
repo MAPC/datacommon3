@@ -1,20 +1,26 @@
 require 'spec_helper'
 
-VCR.configure do |config|
-  config.ignore_request do |request|
-    request.include? "package_list"
-  end
-end
-
 describe Dataset do
   
-  pending "Dataset#all" do
-    expect(Dataset.all().count).to be_between(900,1200)
+  describe "Dataset#all" do
+    it "returns all available datasets", vcr: true do
+      expect(Dataset.all).to have_at_least(900).items
+    end
+  end
+
+  describe "Dataset#count" do
+    it "is equal to #all#count", vcr: true do
+      all_count  = Dataset.all.count
+      just_count = Dataset.count
+      expect(just_count).to eq(all_count)
+    end
   end
 
   describe "Dataset#find_by" do
     it "returns one object if searching by ID", vcr: true do
-      expect( Dataset.find_by(id: "3dbae792-3443-4171-bb10-afb8759364c3") ).to be_a(CKAN::Package)
+      expect(
+        Dataset.find_by(id: "3dbae792-3443-4171-bb10-afb8759364c3")
+      ).to be_a(CKAN::Package)
     end
 
     it "returns multiple when searching by tags", vcr: true do
@@ -28,7 +34,7 @@ describe Dataset do
   # commented them out. The functionality is largely there.
   # TODO: Fix this.
   describe "Dataset#page" do
-    pending "paginates results", vcr: true do
+    it "paginates results", vcr: true do
       expect(Dataset.page(1)).to have(10).items
     end
 
@@ -37,13 +43,13 @@ describe Dataset do
       expect(results).to have(5).items
     end
 
-    pending "defaults to page 1", vcr: true do
+    it "defaults to page 1", vcr: true do
       nil_page = Dataset.page.records.map(&:id)
       one_page = Dataset.page(1).records.map(&:id)
       expect(nil_page).to eq(one_page)
     end
 
-    pending "defaults to page 1 and takes options", vcr: true do
+    it "defaults to page 1 and takes options", vcr: true do
       expect(Dataset.page(nil, per_page: 5)).to have(5).items
     end
 
