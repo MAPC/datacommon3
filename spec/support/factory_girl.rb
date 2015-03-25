@@ -2,8 +2,7 @@ RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
 
   factories_to_lint = FactoryGirl.factories.reject do |factory|
-    factory.name =~ /map_without_attachment/
-    factory.name =~ /geography/
+    factory.name =~ /geography|visualization/
   end
 
   config.before(:suite) do

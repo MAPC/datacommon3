@@ -3,6 +3,7 @@ class Visualization < ActiveRecord::Base
   PERMISSIONS = ['public', 'private']
 
   before_save :update_time
+  # before_save :institution_or_default
   
   has_and_belongs_to_many :data_sources,
     join_table: :weave_visualization_datasources,
@@ -16,7 +17,7 @@ class Visualization < ActiveRecord::Base
                                       featured: ['455x305>', :png] }
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
-  belongs_to :institution
+  # belongs_to :institution
   belongs_to :user, foreign_key: :owner_id
 
   include InstitutionScope
@@ -26,14 +27,14 @@ class Visualization < ActiveRecord::Base
     order('id DESC').where(permission: 'public')
   end
 
-  validates :title,      presence: true, length: { minimum: 3,  maximum: 140 }
-  validates :year,       allow_blank: true, length: { minimum: 4,  maximum: 50  }
+  validates :title, presence: true, length: { minimum: 3,  maximum: 140 }
+  validates :year,  allow_blank: true, length: { minimum: 4,  maximum: 50  }
   # validates :abstract,   presence: true, length: { minimum: 70, maximum: 560 }
-  validates :permission, presence: true, inclusion: { in: PERMISSIONS,
-             message: "Permission must be 'public' or 'private', but you assigned \"%{value}\"." }
+  # validates :permission, presence: true, inclusion: { in: PERMISSIONS,
+  #            message: "Permission must be 'public' or 'private', but you assigned \"%{value}\"." }
   # validates :data_source_ids, allow_blank: true, inclusion: { in: DataSource.pluck(:id) }
   # validates :issue_area_ids,  allow_blank: true, inclusion: { in: IssueArea.pluck(:id) }
-  validates :institution_id,  allow_blank: true, inclusion: { in: Institution.pluck(:id) }
+  # validates :institution_id, allow_blank: true, inclusion: { in: Institution.pluck(:id) }
 
   validates :sessionstate, presence: true, length: { minimum: 100 }
 
@@ -112,5 +113,9 @@ class Visualization < ActiveRecord::Base
     def update_time
       self.last_modified = Time.now
     end
+
+    # def institution_or_default
+    #   self.institution_id = self.institution_id || 1 # defaults to 1
+    # end
 
 end

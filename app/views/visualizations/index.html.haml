@@ -4,27 +4,20 @@
 
 %p.viewing
   You are viewing
-  =select_tag :topic, options_for_select(topic_options, params[:topic]), id: 'topic-select', class: 'chosen-select', data: { placeholder: "All Topics" }
+  = render partial: 'shared/select', object: 'topic', as: :object
   and
-  =select_tag :data_source, options_for_select(data_source_options, params[:data_source]), id: 'data-source-select', class: 'chosen-select', data: { placeholder: "All Data Sources" }
-  #{'.'}
+  = succeed '.' do
+    = render partial: 'shared/select', object: 'data_source', as: :object
 
 
-.row
-  = render partial: 'thumbnail', collection: @gallery.visualizations[0..3], as: :vis
-.row
-  = render partial: 'thumbnail', collection: @gallery.visualizations[4..7], as: :vis
-.row.center
-  = paginate @gallery.visualizations, window: 1, outer_window: 1
-
-
-- if @gallery.visualizations.empty?
+- if @visualizations.empty?
   %p
     There are no visualizations that match your selections. Maybe try another selection, or
     = link_to 'create one yourself!', new_visualization_path
+- else
+  = render @visualizations
 
-
-
+= paginate @visualizations, window: 1, outer_window: 1
 
 :javascript
   $('.chosen-select').on('change', function () {
