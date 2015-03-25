@@ -3,7 +3,7 @@ class Visualization < ActiveRecord::Base
   PERMISSIONS = ['public', 'private']
 
   before_save :update_time
-  # before_save :institution_or_default
+  before_validation :stringify_permissions
   
   has_and_belongs_to_many :data_sources,
     join_table: :weave_visualization_datasources,
@@ -13,85 +13,73 @@ class Visualization < ActiveRecord::Base
     join_table: :weave_visualization_topics,
     association_foreign_key: :topic_id
 
-  has_attached_file :image, styles: { gallery: ['205x137>', :png],
+  has_attached_file :image, styles: { gallery:  ['205x137>', :png],
                                       featured: ['455x305>', :png] }
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
-  # belongs_to :institution
+  belongs_to :institution
   belongs_to :user, foreign_key: :owner_id
+
+  lazy_load :sessionstate
 
   include InstitutionScope
   include DataResourceFilters
+  include RandomScope
+
+  validates :title,      presence: true, length: { minimum: 3,  maximum: 140 }
+  validates :abstract,   presence: true, length: { minimum: 70, maximum: 560 }
+  validates :permission, presence: true, inclusion: { in: PERMISSIONS,
+             message:   "Permission must be 'public' or 'private', but you assigned \"%{value}\"." }
+  validates :sessionstate, presence: true, length: { minimum: 100 }
+  validates :year,       allow_blank: true, length: { minimum: 4,  maximum: 50  }
+
+  validates :institution_id, allow_blank: true,
+    inclusion: { in: [1,2],
+    message: "must be one of #{[1,2]}, but you assigned \"%{value}\"."
+  }
+
+  paginates_per 12
 
   def self.default_scope
     order('id DESC').where(permission: 'public')
   end
 
-  validates :title, presence: true, length: { minimum: 3,  maximum: 140 }
-  validates :year,  allow_blank: true, length: { minimum: 4,  maximum: 50  }
-  # validates :abstract,   presence: true, length: { minimum: 70, maximum: 560 }
-  # validates :permission, presence: true, inclusion: { in: PERMISSIONS,
-  #            message: "Permission must be 'public' or 'private', but you assigned \"%{value}\"." }
-  # validates :data_source_ids, allow_blank: true, inclusion: { in: DataSource.pluck(:id) }
-  # validates :issue_area_ids,  allow_blank: true, inclusion: { in: IssueArea.pluck(:id) }
-  # validates :institution_id, allow_blank: true, inclusion: { in: Institution.pluck(:id) }
-
-  validates :sessionstate, presence: true, length: { minimum: 100 }
-
-  lazy_load :sessionstate
-
-  paginates_per 8
-  # max_paginates_per 16
-
   def self.featured
+    # TODO: Try: where(:featured)
     self.where('featured IS NOT NULL').order(:featured)
   end
-
-  
-  def self.random
-    self.offset(rand(self.count(:all))).first
-  end
-
 
   def self.showing # for use when showing details
     self.includes(:issue_areas)
   end
 
-
   def self.recent(count=4)
     self.order('last_modified DESC').limit(count)
   end
-
 
   def self.public
     where(permission: 'public')
   end
 
-
   def self.private
     where(permission: 'private')
   end
-
 
   def private?
     permission == "private"
   end
 
-
   def public?
     !private?
   end
-
 
   def owner_display_name
     owner.name
   end
 
-
   def abstract
     read_attribute(:abstract).presence || "No abstract."
   end
-
 
   def to_s
     title
@@ -114,8 +102,8 @@ class Visualization < ActiveRecord::Base
       self.last_modified = Time.now
     end
 
-    # def institution_or_default
-    #   self.institution_id = self.institution_id || 1 # defaults to 1
-    # end
+    def stringify_permissions
+      self.permission = self.permission.to_s
+    end
 
 end
