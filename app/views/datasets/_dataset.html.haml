@@ -1,6 +1,6 @@
 - org = dataset.organization.presence ? dataset.organization.fetch("title") : nil
 
-.row
+.row.dataset
   .col-sm-5.col-xs-12.col-sm-offset-1.col-xs-offset-0
     %h3.title
       = link_to dataset.title, dataset_path(dataset.id, params)

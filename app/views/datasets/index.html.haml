@@ -11,7 +11,8 @@
 
 .page-header
 
-= render partial: 'datasets/dataset', collection: @datasets.records
+#datasets
+  = render partial: 'datasets/dataset', collection: @datasets.records
 
 .row.center
   = paginate @datasets
