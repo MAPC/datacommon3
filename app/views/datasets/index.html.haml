@@ -2,9 +2,27 @@
 - if params[:page].nil? || params[:page] == 1
   %h2 Discover and download data about the region.
 
+%hr
+
+%p.viewing
+  You are viewing
+  = succeed '.' do
+    = render partial: 'shared/select', object: 'topic', as: :object
+
 .page-header
 
-= render partial: 'datasets/dataset', collection: @datasets.records
+= render partial: 'datasets/dataset', collection: @datasets
 
 .row.center
   = paginate @datasets
+
+
+:javascript
+  $('.chosen-select').on('change', function () {
+    var topic = $('#topic-select').val(),
+        url   = '#{datasets_path}' + '?topic=' + topic;
+    if (url) { // require a URL
+      window.location = url; // redirect
+    }
+    return false;
+  });

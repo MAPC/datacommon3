@@ -1,0 +1,5 @@
+- options     = :"#{object}_options"
+- id          =  "#{object.dasherize}-select"
+- placeholder =  "All #{object.pluralize}"
+
+= select_tag object, options_for_select(send(options), params[object]), id: id, class: 'chosen-select', data: { placeholder: placeholder }

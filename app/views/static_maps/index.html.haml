@@ -5,10 +5,10 @@
 
 %p.viewing
   You are viewing
-  = select_tag :topic,       options_for_select(topic_options, params[:topic]),             id: 'topic-select',       class: 'chosen-select', data: { placeholder: "All Topics" }
+  = render partial: 'shared/select', object: 'topic', as: :object
   and
   = succeed '.' do
-    = select_tag :data_source, options_for_select(data_source_options, params[:data_source]), id: 'data-source-select', class: 'chosen-select', data: { placeholder: "All Data Sources" }
+    = render partial: 'shared/select', object: 'data_source', as: :object
 
 = render @maps
 
@@ -26,7 +26,7 @@
 
 :javascript
   $('.chosen-select').on('change', function () {
-    var topic       = $('#topic-select').val(), // get selected values
+    var topic       = $('#topic-select').val(),       // get selected values
         data_source = $('#data-source-select').val(),
         url = '#{static_maps_path}' + '?topic=' + topic + '&data_source=' + data_source;
     if (url) { // require a URL
