@@ -107,5 +107,6 @@ Rails.application.configure do
   }
 end
 
+# TODO: Shouldn't need this with rails_12factor
 Rails.logger = Logger.new(STDOUT)
 Rails.logger.level = 0

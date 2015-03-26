@@ -34,8 +34,8 @@ class Visualization < ActiveRecord::Base
   validates :year,       allow_blank: true, length: { minimum: 4,  maximum: 50  }
 
   validates :institution_id, allow_blank: true,
-    inclusion: { in: [1,2],
-    message: "must be one of #{[1,2]}, but you assigned \"%{value}\"."
+    inclusion: { in: (Institution.pluck(:id).presence || [1]),
+    message: "must be one of #{(Institution.pluck(:id).presence || [1])}, but you assigned \"%{value}\"."
   }
 
   paginates_per 12

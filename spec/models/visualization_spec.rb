@@ -2,9 +2,6 @@ require 'spec_helper'
 
 describe Visualization do
   subject(:visual) { build(:visualization) }
-  before { 
-    Institution.stub(:pluck) { [1,2] }
-  }
 
   it "has a valid factory" do
     expect(visual).to be_valid
