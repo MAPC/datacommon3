@@ -1,49 +1,57 @@
 %nav.navbar.navbar-default.navbar-fixed-top{role: 'navigation'}
   
-  %div.container
+  %div.container-fluid
     %div.navbar-header
       %button.navbar-toggle{type: "button", data: {toggle: "collapse", target: "#main-header"}}
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
       = link_to root_path, class: 'navbar-brand' do
-        = image_tag "http://placehold.it/200x65"
+        = image_tag "http://placehold.it/120x20"
         -# .header-logo= image_tag @institution.logo.url(:header), alt: "#{@institution} DataCommon"
 
     %div.collapse.navbar-collapse#main-header
-      %ul.nav.navbar-nav
-
-        %li= link_to 'Data', datasets_path
-        %li= link_to 'Maps', static_maps_path
-        %li.dropdown
-          %a.dropdown-toggle{href: "#", data: {toggle: 'dropdown'}}
-            Visualizations
-            %b.caret
-          %ul.dropdown-menu
-            %li= link_to 'Gallery',          visualizations_path
-            %li= link_to 'Community Snapshots',   snapshots_path
-            %li= link_to 'Make Your Own', new_visualization_path
-        %li= link_to 'Workshops', '#'
-        %li= link_to 'Blog',      'http://data.mapc.org/blog'
-
-
+      %ul.nav.navbar-nav.navbar-right
+        -# Login / User Menu
         - if signed_in?
           %li.dropdown
             %a#user-menu.dropdown-toggle{href: "#", data: {toggle: 'dropdown'}}
-              Hi, #{current_user.fname}
+              Hi, #{ current_user }
               %b.caret
             %ul.dropdown-menu
               %li= link_to 'My Profile', current_user
               %li= link_to 'Sign out', signout_path, method: 'delete'
         - else
-          %li= link_to 'Sign up', signup_path, class: "btn btn-primary", id: "btn-signup"
-          %li= link_to 'Log in',  login_path, id: "btn-login"
-          
+          %li= link_to 'Log in',  login_path,  id: 'btn-login'
+          %li= link_to 'Sign up', signup_path, id: 'btn-signup', class: 'btn btn-primary'
 
-        %li
-          = form_tag '/search', method: :get, data: {role: 'search'}, class: "navbar-form navbar-right" do
-            %div.input-group
-              = text_field_tag :search, params[:search], class: "typeahead form-control", placeholder: "Search for data"
-              %span.input-group-btn
-                %button.btn.btn-success
-                  %span.glyphicon.glyphicon-search
+      %ul.nav.navbar-nav
+        %li= link_to 'Data', datasets_path      
+        %li= link_to 'Maps', static_maps_path
+      
+        -# Visualizations
+        %li.dropdown
+          %a.dropdown-toggle{href: '#', data: {toggle: 'dropdown'}}
+            Visualizations
+            %b.caret
+          %ul.dropdown-menu
+            %li= link_to 'Gallery',       visualizations_path
+            %li= link_to 'Make Your Own', new_visualization_path
+      
+        %li= link_to 'Communities', snapshots_path
+      
+        -# Resources
+        %li.dropdown
+          %a.dropdown-toggle{href: "#", data: {toggle: 'dropdown'}}
+            Resources
+            %b.caret
+          %ul.dropdown-menu
+            %li= link_to 'Workshops', '#'
+            %li= link_to 'Blog',      'http://datablog.mapc.org/'
+
+      = form_tag '/search', method: :get, data: {role: 'search'}, class: "navbar-form navbar-left" do
+        .input-group
+          = text_field_tag :search, params[:search], class: "typeahead form-control", placeholder: "Search for data"
+          %span.input-group-btn
+            %button.btn.btn-success
+              %span.glyphicon.glyphicon-search
