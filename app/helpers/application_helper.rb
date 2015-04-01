@@ -1,5 +1,9 @@
 module ApplicationHelper
 
+  def institutions_exist
+    Institution.count > 0
+  end
+
   def topics
     IssueArea.all
   end

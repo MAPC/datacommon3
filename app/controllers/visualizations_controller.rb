@@ -96,7 +96,7 @@ class VisualizationsController < ApplicationController
       unless signed_in?
         flash[:warning] = SIGN_IN_FIRST
         store_location
-        redirect_to signin_url
+        redirect_to login_url
       end
     end
 
@@ -117,7 +117,7 @@ class VisualizationsController < ApplicationController
       unless current_user?(@visualization.owner)
         flash[:danger] = ONLY_OWNER_MAY_EDIT
         store_location
-        redirect_to signin_url
+        redirect_to login_url
       end
     end
 

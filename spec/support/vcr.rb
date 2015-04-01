@@ -8,6 +8,7 @@ VCR.configure do |config|
     record: :new_episodes,
     re_record_interval: 1.week
   }
+  config.ignore_localhost = true
 end
 
 # Good VCR reference -- may want to use more of the items in here.

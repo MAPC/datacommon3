@@ -39,12 +39,12 @@ gem 'turbolinks',   '2.4.0' # Following links are faster.
 
 
 # Files
-gem 'paperclip',   '4.2.0'  # Handle file attachments
-gem 'retina_rails'          # Load high-res images on Retina displays
-gem 'aws-sdk',     '1.33.0' # Upload files to Amazon S3
-gem 'asset_sync'            # Upload assets to S3
-gem 'rubyzip',     '>= 1.0.0', require: 'zip' # Zip files for downloading
-
+gem 'paperclip',   '4.2.0'    # Handle file attachments
+gem 'retina_rails'            # Load high-res images on Retina displays
+gem 'aws-sdk',     '1.33.0'   # Upload files to Amazon S3
+gem 'asset_sync'              # Upload assets to S3
+gem 'rubyzip',     '>= 1.0.0' # Zip files for downloading
+gem 'zip-zip'
 
 # Admin
 gem 'rails_admin'        # Manage resources
@@ -78,19 +78,20 @@ group :development, :test do
   gem 'rspec-rails',  '~> 2.14.0' # Stick to a specific version
 
   gem 'spring-commands-rspec', '~> 1.0'
-  gem 'factory_girl_rails',  '~> 4.0' # Build factories quickly
+  gem 'factory_girl_rails',    '~> 4.0' # Build factories quickly
   gem 'database_cleaner'
-  gem 'guard-rspec',          '4.3.1' # Autorun tests and keep Rails loaded
-  gem 'capybara',          '~> 2.2.1' # DSL for integration tests
-  gem 'launchy'                       # Enable save_and_open_page
-  gem 'faker'                         # Generate fake data
-  gem 'vcr',                 '~> 2.4' # Record API calls for tests
+  gem 'guard-rspec',            '4.3.1' # Autorun tests and keep Rails loaded
+  gem 'capybara',            '~> 2.2.1' # DSL for integration tests
+  gem 'launchy'                         # Enable save_and_open_page
+  gem 'faker'                           # Generate fake data
+  gem 'vcr',                   '~> 2.4' # Record API calls for tests
 
-  gem 'childprocess',         '0.3.6' # Fix a version conflict
-  gem 'poltergeist'
-  gem 'webmock',          '~> 1.8.4', # Faking requests (supports VCR)
+
+  gem 'capybara-webkit'
+  gem 'childprocess',          '~> 0.5' # Fix a version conflict
+  gem 'webmock',            '~> 1.8.4', # Faking requests (supports VCR)
     require: false 
-  gem 'minitest'                      # Unclear why we use this
+  gem 'minitest'                        # Unclear why we use this
 end
 
 

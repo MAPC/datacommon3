@@ -55,7 +55,10 @@
       .form-group
         = f.label      :institution_id
         %br
-        -# = f.collection_select(:institution_id, Institution.all, :id, :short_name, selected: @institution.id)
+        - if institutions_exist
+          = f.collection_select(:institution_id, Institution.all, :id, :short_name)
+        - else
+          None
       
 
       .form-group

@@ -36,6 +36,6 @@ $(document).ready ->
       $error_container.append("<li>" + message)
 
   $('.form').on 'ajax:before', (xhr, settings) ->
-    $session_state_field = $('#visualization_sessionstate')
-    $session_state = JSON.stringify(DC.weave.getSessionState([]))
-    $session_state_field.val($session_state)
+    $session_state_field = $('#visualization_sessionstate')       # Look up the field
+    $session_state = JSON.stringify(DC.weave.getSessionState([])) # Get the session state value
+    $session_state_field.val($session_state)                      # Set the session state field as the session state value before submitting
