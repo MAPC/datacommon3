@@ -21,7 +21,10 @@
 
 @import "global/colors";
 @import "global/fonts";
-@import "global/headers";
+@import "global/headers";   // i.e. h1, h2
+@import "global/alerts";    // for error messages / flash
+@import "global/header";    // i.e. styles for _header navbar
+
 
 /*  Global: Body             */
 
@@ -31,9 +34,6 @@ body {
   font-family: $dc-body !important;
   font-weight: 300;
 }
-
-
-
 
 
 p a {
@@ -67,108 +67,6 @@ p.vis-title {
   text-align: center;
 }
 
-
-/* FLASH */
-
-a > .glyphicon-remove {
-  color: #666666;
-  text-decoration: none;
-  margin: 0 8px; 
-  
-  &:hover {
-    color: #333333;
-    text-decoration: none;
-  }
-}
-
-.left  { float: left; }
-.right { float: right; }
-
-.no-class { }
-
-.alert {
-  margin-top: 10px; 
-  margin-bottom: -10px !important;
-}
-
-/* HEADER */
-
-#btn-signup {
-  color: white !important;
-  font-weight: 600;
-  padding:  5px 15px;
-  margin:  10px  0;
-  &:hover { 
-    color: #777 !important;
-  }
-}
-
-input#search {
-  
-  @media (min-width: 770px) {
-    max-width: 195px;
-  }
-
-  @media (max-width: 1200px) and (min-width: 995px) {
-    width: 130px;
-  }
-}
-
-/* TODO: PROGRESSIVELY UNCOMMENT
-
-a > .dropdown {
-  color: white !important;
-}
-
-.navbar-nav {
-  background-color: $dc-blue;
-  // overflow: hidden;
-  // overflow-wrap: none;
-}
-
-.navbar-nav > li {
-  margin-top: 15px;
-}
-
-.navbar-nav > li > a {
-  color: white !important;
-}
-
-.navbar {
-  height: 80px;
-}
-
-.navbar-brand {
-  min-width: 225px;
-  img {
-    margin-top: -7px;
-    max-width: 200px;
-    max-height: 65px;
-  }
-}
-
-.navbar-nav {
-  font-weight: 400;
-}
-
-@media (min-width: 993px) {
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-}
-
-.navbar.navbar-default.navbar-fixed-top {
-  background-color: $dc-blue;
-  letter-spacing: 0.05em;
-  border-color: transparent;
-}
-
-img.header-logo {
-  margin-top: 0px;
-  height: inherit;
-}
-
-*/
 
 /*     HERO     */
 

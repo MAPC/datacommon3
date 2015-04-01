@@ -1,0 +1,65 @@
+/*
+
+    Global: Header / navbar
+    
+    - Brand / logo
+    - Dropdowns
+    - Search bar
+
+*/
+
+
+// TODO: Duplicate variables. Not sure how to 
+// have them share across files.
+$dc-blue:   #556C98;
+$education: #46AD24;
+
+#header {
+  background-color: $dc-blue;
+}
+
+.navbar-nav > li > a {
+  letter-spacing: 0.03em;
+  color: #EEE !important;
+
+  &:hover {
+    color: #FFF !important;
+  }
+}
+
+a.dropdown-toggle {
+  background-color: $dc-blue !important;
+  border-color:     $dc-blue !important;
+}
+
+.dropdown:hover .dropdown-menu {
+  @media (min-width: 993px) {
+    display: block;
+  }
+}
+
+.navbar-brand > img {
+  position: relative;
+  top: -15px;
+}
+
+#btn-signup {
+  // color: white !important;
+  font-weight: 600;
+  padding:  5px 15px;
+  margin:  10px  0;
+  &:hover { 
+    background-color: $education !important;
+    border-color:     $education !important;
+  }
+}
+
+input#search {
+  @media (min-width: 770px) {
+    max-width: 195px;
+  }
+  @media (max-width: 1200px) and (min-width: 995px) {
+    width: 130px;
+  }
+}
+

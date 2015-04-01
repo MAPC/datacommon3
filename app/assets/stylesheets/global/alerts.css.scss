@@ -1,0 +1,26 @@
+/*
+
+    Global: Alerts (the flash) & form messages
+
+*/
+
+a > .glyphicon-remove {
+  color: #666666;
+  text-decoration: none;
+  margin: 0 8px; 
+  
+  &:hover {
+    color: #333333;
+    text-decoration: none;
+  }
+}
+
+.left  { float: left; }
+.right { float: right; }
+
+.no-class { }
+
+.alert {
+  margin-top: 10px; 
+  margin-bottom: -10px !important;
+}
