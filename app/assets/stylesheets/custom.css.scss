@@ -94,6 +94,21 @@ a > .glyphicon-remove {
 .alert {
   margin-top: 10px; 
   margin-bottom: -10px !important;
+  ul {
+    position: relative;
+    left:     30px;
+    margin-top: -20px;
+    
+    li {
+      position: inherit;
+      left:     inherit;
+    
+      &:first-child { 
+        list-style-type: none;
+        left: 0px;
+      }
+    }
+  }
 }
 
 /* HEADER */
@@ -698,5 +713,6 @@ img.aligner {
 //   max-height: 100px;
 // }
 
+.no-bullet { list-style-type: none; }
 
 @import "global/shame"

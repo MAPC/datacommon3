@@ -2,40 +2,61 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-
 $(document).ready ->
 
-  $(document).bind "ajaxSuccess", ".form", (event, xhr, settings) ->
-    $thing_form = $(event.data)
-    $error_container = $("#error_explanation", $thing_form)
-    $error_container.hide()
+  # Prepare elements before AJAX call
+  $flash = $("#flash")
+  $alert = $('<div>' ).addClass('alert alert-danger')
+  $success = $('<div>' ).addClass('alert alert-success')
+  $err_intro = $('<li>Almost there! Please fix the errors and try again.</li>')
+  $submit = $('.btn.btn-success')
 
-    $success_container = $("#success_explanation", $thing_form)
-    $success_container_ul = $("ul", $success_container)
-    $success_container.show()
+  # Add glyphicon 'x' link to the pending alert.
+  $alert.append('<a class="removable left">')
+  $alert.append('<span class="glyphicon glyphicon-remove">')
+  
+  $success.append('<a class="removable left">')
+  $success.append('<span class="glyphicon glyphicon-remove">')
 
-    $vis   = xhr.responseJSON
+  # Define function to hide Flash
+  hide_flash = -> $flash.trigger('click')
 
-    $('.btn.btn-success').remove()
-    $thing_form.append("<a href='" + $vis.id + "'>View your visualization.</a>")
-
-    $("<li>").html($vis.title + " saved. You will be redirected to it in a few seconds. If that doesn't happen, <a href='" + $vis.id + "'>view it here.</a>").appendTo $success_container
-
-    redirect = -> window.location = '/visualizations/' + $vis.id
-    setTimeout redirect, 5000
+  # TODO: Refresh .removable #click handler
 
 
-  $(document).bind "ajaxError", ".form", (event, jqxhr, settings, exception) ->
-    $thing_form = $(event.data)
-    $error_container = $("#error_explanation", $thing_form)
-    $error_container_ul = $("ul", $error_container)
-    $error_container.show()
-    if $("li", $error_container_ul).length
-      $("li", $error_container_ul).clear()
-    $.each jqxhr.responseJSON, (index, message) ->
-      $error_container.append("<li>" + message)
-
+  # Before the form submits the AJAX request, get the Weave
+  # sessionstate, then append it to the hidden sessionstate field.
   $('.form').on 'ajax:before', (xhr, settings) ->
-    $session_state_field = $('#visualization_sessionstate')       # Look up the field
-    $session_state = JSON.stringify(DC.weave.getSessionState([])) # Get the session state value
-    $session_state_field.val($session_state)                      # Set the session state field as the session state value before submitting
+    $submit.addClass('disabled');
+    $submit.attr('value', 'Creating...')
+    $weave_state = JSON.stringify( DC.weave.getSessionState([]) )
+    $('#visualization_sessionstate').val( $weave_state )
+
+
+  # Handle success
+  $(document).bind "ajaxSuccess", ".form", (event, xhr, settings) ->
+    $flash.empty()
+    $vis = xhr.responseJSON
+    $p   = $('<p>').appendTo($success)
+    $p.append("Saved visualization. You can keep editing, or <a href='" + $vis.id + "'>view it here.</a>")
+    $flash.append($success)
+
+    $submit.removeClass('disabled')
+    $submit.attr('value', 'Update')
+
+    setTimeout hide_flash, 15000
+    
+
+  # Handle error messages on submit
+  $(document).bind "ajaxError", ".form", (event, jqxhr, settings, exception) ->
+    $flash.empty()                    # Clear out the flash
+    $ul = $('<ul>').appendTo($alert)  # Add a list
+    $ul.append($err_intro)            # Introduce the errors
+
+    # Add each error message to the list.
+    $.each jqxhr.responseJSON, (index, message) ->
+      $ul.append("<li>" + message + "</li>")
+    $flash.append($alert)  # Add the flash to the DOM
+
+    $submit.removeClass('disabled')
+    $submit.attr('value', 'Create')

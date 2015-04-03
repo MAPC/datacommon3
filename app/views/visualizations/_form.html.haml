@@ -1,9 +1,8 @@
+#error_explanation
+#success_explanation
+
 .form.vis-form{role: 'form'}
   = form_for @visualization, remote: true, format: :json do |f|
-    - if @visualization.errors
-      = render partial: 'shared/error_messages',   object: @visualization, as: :object
-      = render partial: 'shared/success_messages', object: @visualization, as: :object
-
     .col-md-9.col-sm-12
 
       - if params[:action] == 'new'
@@ -27,17 +26,17 @@
 
       .form-group
         = f.label      :title
-        = f.text_field :title, class: 'form-control'
+        = f.text_field :title, class: 'form-control',    placeholder: "Your Visualization's Title"
       
 
       .form-group
         = f.label      :year, 'Year(s)'
-        = f.text_field :year,  class: 'form-control'
+        = f.text_field :year,  class: 'form-control',    placeholder: "Dates of interest, i.e. 2009 - 2011"
       
 
       .form-group
         = f.label      :abstract
-        = f.text_area  :abstract, class: 'form-control'
+        = f.text_area  :abstract, class: 'form-control', placeholder: "Summarize what you are trying to visualize."
       
 
       .form-group
