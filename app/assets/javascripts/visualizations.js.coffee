@@ -2,6 +2,8 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
+# TODO: Rapid-fire successful updates simply append errors
+
 $(document).ready ->
 
   # Prepare elements before AJAX call
@@ -16,14 +18,14 @@ $(document).ready ->
   $alert.append( $glyph_string )
   $success.append( $glyph_string )
 
-  # Define function to hide Flash
-  hide_flash = -> $flash.trigger('click')
+  # Define function to hide flash
+  hide_flash = -> $('a', $flash).trigger('click')
 
   # Before the form submits the AJAX request, get the Weave
   # sessionstate, then append it to the hidden sessionstate field.
   $('.form').on 'ajax:before', (xhr, settings) ->
     $submit.addClass('disabled');
-    $submit.attr('value', 'Creating...')
+    $submit.attr('value', 'Saving...')
     $weave_state = JSON.stringify( DC.weave.getSessionState([]) )
     $('#visualization_sessionstate').val( $weave_state )
 
@@ -44,13 +46,13 @@ $(document).ready ->
     
 
   # Handle error messages on submit
-  $(document).bind "ajaxError", ".form", (event, jqxhr, settings, exception) ->
+  $(document).bind "ajaxError", ".form", (event, xhr, settings, exception) ->
     $flash.empty()                    # Clear out the flash
     $ul = $('<ul>').appendTo($alert)  # Add a list
     $ul.append($err_intro)            # Introduce the errors
 
     # Add each error message to the list.
-    $.each jqxhr.responseJSON, (index, message) ->
+    $.each xhr.responseJSON, (index, message) ->
       $ul.append("<li>" + message + "</li>")
     $flash.append($alert)  # Add the flash to the DOM
 
