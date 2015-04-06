@@ -37,6 +37,21 @@ class VisualizationsController < ApplicationController
     end
   end
 
+
+  def duplicate
+    @visualization = Visualization.find_by(id: params[:id]).dup
+    @visualization.owner_id = current_user.id
+    @visualization.institution_id = nil
+    @visualization.title << " (Copy)"
+
+    if @visualization.save
+      redirect_to edit_visualization_url(@visualization)
+    else
+      flash[:danger] = 'An unexpected error occurred when duplicating the visualization.'
+      redirect_to root_url
+    end
+  end
+
   
   def edit
   end

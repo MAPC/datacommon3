@@ -23,15 +23,13 @@ class ProfilesController < ApplicationController
 
     def correct_user
       
-      @profile = Profile.find_by(id: params[:id])
-      if @profile.nil?
-        @profile = User.find_by(username: params[:id]).profile
-      end
+      user = User.find_by(username: params[:id])
+      @profile = user.profile || Profile.find_or_create_by(id: params[:id])
 
-      unless current_user?(@profile.user)
+      unless current_user?(user)
         flash[:danger] = ONLY_OWNER_MAY_EDIT
         store_location
-        redirect_to signin_url
+        redirect_to login_url
       end
     end
 

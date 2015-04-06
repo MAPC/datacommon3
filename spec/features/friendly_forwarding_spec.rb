@@ -2,11 +2,11 @@ require 'spec_helper'
 
 feature 'Friendly forwarding' do 
   
-  subject(:user) { create(:user) }
+  before { @user = create(:user) }
   
   scenario 'active user logs in' do
-    visit edit_profile_path(user)
-    sign_in user
+    visit edit_profile_path(@user)
+    sign_in @user
     expect(page).to have_content('Edit Profile')
   end
 

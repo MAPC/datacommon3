@@ -12,17 +12,12 @@ $(document).ready ->
   $submit = $('.btn.btn-success')
 
   # Add glyphicon 'x' link to the pending alert.
-  $alert.append('<a class="removable left">')
-  $alert.append('<span class="glyphicon glyphicon-remove">')
-  
-  $success.append('<a class="removable left">')
-  $success.append('<span class="glyphicon glyphicon-remove">')
+  $glyph_string = '<a class="removable left"><span class="glyphicon glyphicon-remove"></a>'
+  $alert.append( $glyph_string )
+  $success.append( $glyph_string )
 
   # Define function to hide Flash
   hide_flash = -> $flash.trigger('click')
-
-  # TODO: Refresh .removable #click handler
-
 
   # Before the form submits the AJAX request, get the Weave
   # sessionstate, then append it to the hidden sessionstate field.
@@ -38,8 +33,9 @@ $(document).ready ->
     $flash.empty()
     $vis = xhr.responseJSON
     $p   = $('<p>').appendTo($success)
-    $p.append("Saved visualization. You can keep editing, or <a href='" + $vis.id + "'>view it here.</a>")
+    $p.append("Saved visualization. You can keep editing, or <a href='/visualizations/" + $vis.id + "'>view it here.</a>")
     $flash.append($success)
+    $('h1').text('Edit "' + $vis.title + '"')
 
     $submit.removeClass('disabled')
     $submit.attr('value', 'Update')

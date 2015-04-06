@@ -5,11 +5,11 @@
         %span.glyphicon.glyphicon-remove
       = value
 
-  :javascript
+:javascript
 
-    $(document).on('ready', function () {
-      $('.removable').on('click', function() {
-        $( this ).parent().slideUp();
-      });
-
+  $(document).on('ready', function () {
+    $( document ).on('click', '.removable', function() {
+      $( this ).parent().slideUp();
     });
+
+  });

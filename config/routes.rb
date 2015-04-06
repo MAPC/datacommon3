@@ -22,7 +22,9 @@ Rails.application.routes.draw do
     match :download, to: 'datasets#download', on: :member, via: :get
   end
 
-  resources :visualizations, concerns: :paginatable
+  resources :visualizations, concerns: :paginatable do
+    match :duplicate, to: 'visualizations#duplicate', on: :member, via: :get
+  end
   
   resources :static_maps, only: [:index, :show], concerns: :paginatable,
                           path: 'maps'
