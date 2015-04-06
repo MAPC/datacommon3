@@ -7,7 +7,7 @@
 $(document).on 'ready', ->
 
   # Client-side validations
-  $("#new_visualization, #edit_visualization").validate(
+  $("#new_visualization, .edit_visualization").validate(
 
     rules:
       "visualization[title]":
@@ -66,7 +66,7 @@ $(document).on 'ready', ->
 
   # Before the form submits the AJAX request, get the Weave
   # sessionstate, then append it to the hidden sessionstate field.
-  $("#new_visualization, #edit_visualization").on 'ajax:before', (xhr, settings) ->
+  $("#new_visualization, .edit_visualization").on 'ajax:before', (xhr, settings) ->
     submit.addClass('disabled');
     submit.attr('value', 'Saving...')
     weave_state = JSON.stringify( DC.weave.getSessionState([]) )
@@ -74,7 +74,7 @@ $(document).on 'ready', ->
 
 
   # Handle success
-  $("#new_visualization, #edit_visualization").bind "ajaxSuccess", (event, xhr, settings) ->
+  $("#new_visualization, .edit_visualization").bind "ajaxSuccess", (event, xhr, settings) ->
     flash.empty()
     vis = xhr.responseJSON
     p   = $('<p>').appendTo(success)
@@ -89,7 +89,7 @@ $(document).on 'ready', ->
     
 
   # Handle error messages on submit
-  $("#new_visualization, #edit_visualization").bind "ajaxError", (event, xhr, settings, exception) ->
+  $("#new_visualization, .edit_visualization").bind "ajaxError", (event, xhr, settings, exception) ->
     flash.empty()                   # Clear out the flash
     ul = $('<ul>').appendTo(alert)  # Add a list
     ul.append(err_intro)            # Introduce the errors

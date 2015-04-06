@@ -9,18 +9,18 @@ class Ability
       can :access, :rails_admin
       can :dashboard
 
-      can [:read, :create, :update], StaticMap, institution_id: user.institution_id
-      can [:read, :create, :update], Hero,      institution_id: user.institution_id
+      can [:read, :create, :update], StaticMap,     institution_id: user.institution_id
+      can [:read, :create, :update], Hero,          institution_id: user.institution_id
+      can [:read, :create, :update], Visualization, institution_id: user.institution_id
       
-      can [:read, :update], Municipality #, institution_id: user.institution_id
-      can [:read, :update], Subregion    #, institution_id: user.institution_id
-      can [:read, :update], Institution,                    id: user.institution_id
+      can [:read, :update],          Municipality,  institution_id: user.institution_id
+      can [:read, :update],          Subregion   ,  institution_id: user.institution_id
+      can [:read, :update],          Institution,               id: user.institution_id
       
-      can [:read],          DynamicVisualization
+      can [:read],                   DynamicVisualization
 
-      if user.admin?
-        can :manage, :all
-      end
+
+      can :manage, :all if user.admin?
     end
     # Define abilities for the passed in user here. For example:
     #

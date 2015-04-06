@@ -1,8 +1,8 @@
 FactoryGirl.define do
   factory :visualization, aliases: [:visual] do
-    title "title"
+    title "A Visualization Title"
     abstract "z"*90
     sessionstate "xml"*100
-    owner_id 1
+    association :owner, factory: :user
   end
 end

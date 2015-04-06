@@ -19,6 +19,7 @@ class Visualization < ActiveRecord::Base
 
   belongs_to :institution
   belongs_to :user, foreign_key: :owner_id
+  alias_attribute :owner, :user
 
   lazy_load :sessionstate
 
@@ -34,9 +35,11 @@ class Visualization < ActiveRecord::Base
   validates :year,       allow_blank: true, length: { minimum: 4,  maximum: 50  }
 
   validates :institution_id, allow_blank: true,
-    inclusion: { in: (Institution.pluck(:id).presence || [1]),
+    inclusion: { in: (Institution.pluck(:id).presence || [1,2]),
     message: "must be one of #{(Institution.pluck(:id).presence || [1])}, but you assigned \"%{value}\"."
   }
+
+  validates :user, presence: true
 
   paginates_per 12
 
@@ -86,6 +89,39 @@ class Visualization < ActiveRecord::Base
   end
 
   alias_method :owner, :user
+
+
+  rails_admin do
+    list do
+      field :title
+      field :abstract do
+        formatted_value { bindings[:object].abstract[0..50] }
+      end
+      field :owner do
+        formatted_value {
+          Institution.find_by(id: bindings[:object].owner_id)
+        }
+      end
+      field :institution_id do
+        formatted_value {
+          Institution.find_by(id: bindings[:object].institution_id).try(:short_name)
+        }
+      end
+    end
+
+    edit do
+      field :title
+      field :abstract
+      field :year
+      field :data_sources
+      field :issue_areas
+      field :featured
+      field :institution_id
+      field :permission
+      field :image, :paperclip
+      field :sessionstate
+    end
+  end
 
 
   private

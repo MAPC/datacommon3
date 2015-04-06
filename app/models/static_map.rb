@@ -39,7 +39,7 @@ class StaticMap < ActiveRecord::Base
     Date.new(year, month).to_s(:monthyear)
   end
 
-   rails_admin do
+  rails_admin do
     list do
       field :title
       field :date do

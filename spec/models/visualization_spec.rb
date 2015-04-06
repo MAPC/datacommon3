@@ -36,6 +36,11 @@ describe Visualization do
     expect(build(:visual, institution_id: 3)).to_not be_valid
   end
 
+  it "requires an owner" do
+    expect(build(:visual, owner:    nil)).to_not be_valid
+    expect(build(:visual, owner_id: nil)).to_not be_valid
+  end
+
   it "requires a reasonable sessionstate" do
     expect(build(:visual, sessionstate: nil)).to_not be_valid
     expect(build(:visual, sessionstate: "xml"*33)).to_not be_valid

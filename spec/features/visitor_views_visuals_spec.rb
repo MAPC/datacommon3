@@ -30,7 +30,7 @@ feature 'Visitor views single visualization' do
   end
 
   scenario 'shows visualizationd details' do
-    %w( title abstract owner_id ).each do |method|
+    %w( title abstract owner ).each do |method|
       expect(page).to have_content( @visual.send(method) )
     end
   end
