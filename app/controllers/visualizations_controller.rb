@@ -97,13 +97,11 @@ class VisualizationsController < ApplicationController
     SIGN_IN_FIRST = "Please sign in before you create a visualization."
 
     ONLY_OWNER_MAY_VIEW = <<-EOE
-      This visualization has been made private by the owner. 
-      Only the owner of a private visualization may view it.
+      This visualization has been made private. Only its owner may view it.
     EOE
 
     ONLY_OWNER_MAY_EDIT = <<-EOE
-      This visualization has been made private by the owner.
-      If you are the owner of this visualization, please log in to edit it.
+      Is this your visualization? Please log in to edit it.
     EOE
 
 

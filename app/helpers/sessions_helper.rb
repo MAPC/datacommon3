@@ -27,6 +27,8 @@ module SessionsHelper
     !current_user.nil?
   end
 
+  alias_method :logged_in?, :signed_in?
+
   # Remembers a user in a persistent session
   def remember(user)
     user.remember

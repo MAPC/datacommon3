@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_filter :load_institution
+  before_filter :logged_out, only: [:new]
   # before_filter :correct_user,   only: [:edit, :update]
   # before_filter :logged_in_user, only: [:edit, :update]
 
@@ -27,6 +28,20 @@ class UsersController < ApplicationController
     end
   end
 
+  def check_email
+    @user = User.find_by(email: check_params[:email])
+    respond_to do |format|
+      format.json { render json: !@user }
+    end
+  end
+
+  def check_username
+    @user = User.find_by(username: check_params[:username])
+    respond_to do |format|
+      format.json { render json: !@user }
+    end
+  end
+
 
   private
 
@@ -37,6 +52,10 @@ class UsersController < ApplicationController
                                    :email,
                                    :password,
                                    :password_confirmation)
+    end
+
+    def check_params
+      params.require(:user).permit(:email, :username)
     end
 
 
@@ -53,11 +72,19 @@ class UsersController < ApplicationController
       @profile = ProfileFacade.new(user, user.profile, visualizations)
     end
 
+
     def logged_in_user
       unless logged_in?
         store_location
         flash[:danger] = "Please sign in."
         redirect_to login_url
+      end
+    end
+
+    def logged_out
+      if logged_in?
+        flash[:danger] = "You are already logged in."
+        redirect_to current_user
       end
     end
 

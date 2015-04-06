@@ -43,6 +43,10 @@ Rails.application.routes.draw do
   #   post :image
   end
 
+  resources :users do
+    get 'check_email',    on: :collection
+    get 'check_username', on: :collection
+  end
   resources :users,  except: [:edit, :update, :destroy], path: 'profiles'
   resources :profiles, only: [:edit, :update, :destroy]
   

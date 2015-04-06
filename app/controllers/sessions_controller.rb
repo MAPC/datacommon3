@@ -20,8 +20,9 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    store_location
     sign_out if signed_in?
     flash[:success] = "See you later!"
-    redirect_to root_url
+    redirect_back_or root_url
   end
 end

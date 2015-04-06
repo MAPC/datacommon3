@@ -1,11 +1,13 @@
 $(document).on('ready', function () {
   
   $("#new_user").validate({
+    debug: true,
     rules: {
       "user[username]":   {
         required:  true,
         minlength: 5,
-        maxlength: 30
+        maxlength: 30,
+        remote:   "/users/check_username"
       },
       "user[first_name]": {
         required:  true,
@@ -19,7 +21,8 @@ $(document).on('ready', function () {
         required:  true,
         minlength: 5,
         maxlength: 75,
-        email:     true
+        email:     true,
+        remote:   "/users/check_email"
       },
       "user[password]":   {
         required:  true,
@@ -38,7 +41,8 @@ $(document).on('ready', function () {
       "user[username]":   {
         required: "Please enter a username.",
         minlength: "This must be between 5 and 30 characters long.",
-        maxlength: "This must be between 5 and 30 characters long."
+        maxlength: "This must be between 5 and 30 characters long.",
+        remote: "Sorry, this username is taken."
       },
       "user[first_name]": {
         required: "Please enter your firstname.",
@@ -52,7 +56,8 @@ $(document).on('ready', function () {
         required: "Please enter your email.",
         minlength: "This must be between 5 and 75 characters long.",
         maxlength: "This must be between 5 and 75 characters long.",
-        email: "Please enter a valid email address."
+        email: "Please enter a valid email address.",
+        remote: "We know this email address. Do you have an account?"
       },
       "user[password]":   {
         required: "Please enter a password.",

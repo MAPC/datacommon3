@@ -5,7 +5,6 @@
 :javascript
 
   $(document).on('ready', function () {
-    console.log('(edit) document ready');
     DC.synchEmbedWeaveOnClick("#vis-#{@visualization.id}", #{@visualization.sessionstate});
 
     $("#vis-#{@visualization.id}").click(function () {
