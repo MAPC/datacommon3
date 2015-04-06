@@ -13,7 +13,9 @@ class User < ActiveRecord::Base
   has_many :visualizations, foreign_key: :owner_id
   belongs_to :institution
 
-  validates :username,   presence: true, length: { minimum: 5, maximum: 30 }, uniqueness: { case_sensitive: false }
+  validates :username,   presence: true,
+            length:     { minimum: 5, maximum: 30 }, 
+            uniqueness: { case_sensitive: false, message: "Someone else has already taken that username." }
   validates :first_name, presence: true, length: { maximum: 30 }
   validates :last_name,  presence: true, length: { maximum: 30 }
   validates :email,      presence: true, length: { minimum: 5, maximum: 75 }, uniqueness: { case_sensitive: false }

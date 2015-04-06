@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require jquery.validate
 //= require chosen.jquery.min
 //= require swfobject
 //= require retina

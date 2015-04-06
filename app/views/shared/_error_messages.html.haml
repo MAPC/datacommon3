@@ -1,6 +1,6 @@
-#error_explanation
-  .alert.alert-danger
-    - if object.errors.any?
+- if object.errors.any?
+  #error_explanation
+    .alert.alert-danger
       %ul
         %li
           The form has

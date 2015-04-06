@@ -110,6 +110,22 @@ a > .glyphicon-remove {
   }
 }
 
+/* VALIDATION FORM ERRORS */
+
+label.error { 
+  color: #AA0000;
+}
+input.error {
+  border: 2px solid #AA0000;
+}
+
+label.valid {
+  color: #00AA00;
+}
+input.valid {
+  border: 2px solid #00AA00;
+}
+
 /* HEADER */
 
 a > .dropdown {
