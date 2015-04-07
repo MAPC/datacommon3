@@ -23,7 +23,11 @@ Rails.application.routes.draw do
   end
 
   resources :visualizations, concerns: :paginatable do
-    match :duplicate, to: 'visualizations#duplicate', on: :member, via: :get
+    member do
+      get  :duplicate
+      get  :session_state
+      post :upload_image
+    end
   end
   
   resources :static_maps, only: [:index, :show], concerns: :paginatable,

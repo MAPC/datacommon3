@@ -17,6 +17,16 @@ class VisualizationsController < ApplicationController
   def show
   end
 
+  def session_state
+    @visualization = Visualization.find_by(id: params[:id])
+    respond_to do |format|
+      format.json { render json: @visualization.sessionstate }
+    end
+  end
+
+  def upload_image
+  end
+
 
   def new
     @visualization = Visualization.new(institution_id: @institution)

@@ -202,31 +202,31 @@ DC.getAllBase64 = function () {
 }
 
 
-var weaveReady = function (weave) {
-  var weave_id = weave.id.split('-').pop();
-  DC.weave     = weave;
+// var weaveReady = function (weave) {
+//   var weave_id = weave.id.split('-').pop();
+//   DC.weave     = weave;
   
-  DC.logger.weaveReady(weave);
-  DC.weaves[weave_id] = weave;
+//   DC.logger.weaveReady(weave);
+//   DC.weaves[weave_id] = weave;
   
-  // IMPORTANT: Weave apparently cannot read XML session states
-  // directly. Instead of Weave checking if it's XML and doing
-  // the proper conversions, we are forced to do them here.
+//   // IMPORTANT: Weave apparently cannot read XML session states
+//   // directly. Instead of Weave checking if it's XML and doing
+//   // the proper conversions, we are forced to do them here.
 
-  console.log(DC.sessionStates[weave_id])
-  console.log( String(DC.sessionStates[weave_id]) );
+//   console.log(DC.sessionStates[weave_id])
+//   console.log( String(DC.sessionStates[weave_id]) );
 
-  if (String(DC.sessionStates[weave_id]) === "[object XMLDocument]") {
-    var stringState = (new XMLSerializer()).serializeToString(DC.sessionStates[weave_id])
-        objectState = weave.convertSessionStateXMLToObject(stringState);
+//   if (String(DC.sessionStates[weave_id]) === "[object XMLDocument]") {
+//     var stringState = (new XMLSerializer()).serializeToString(DC.sessionStates[weave_id])
+//         objectState = weave.convertSessionStateXMLToObject(stringState);
 
-    weave.setSessionState([], objectState);
-  } else {
-    weave.setSessionState([], DC.sessionStates[weave_id]);
-  }
+//     weave.setSessionState([], objectState);
+//   } else {
+//     weave.setSessionState([], DC.sessionStates[weave_id]);
+//   }
 
-  weave.setSessionState(["WeaveProperties"], {
-    backgroundColor: "16777215", // 'white'
-    showCopyright:    false
-  });
-}
+//   weave.setSessionState(["WeaveProperties"], {
+//     backgroundColor: "16777215", // 'white'
+//     showCopyright:    false
+//   });
+// }
