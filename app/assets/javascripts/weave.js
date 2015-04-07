@@ -24,7 +24,7 @@ var debug_log = function (message, type) {
   }
 }
 
-const DEBUG = false;
+const DEBUG = true;
 debug_log("DEBUG is TRUE. All debug_log messages will print.")
 
 const XML      = (new XMLSerializer());
@@ -88,25 +88,31 @@ var getProtocol = function() {
   return getLocation().protocol
 }
 
+var getLikelyId = function () {
+  var path = getLocation().pathname.split('/')
+  return path[path.length - 1]
+}
 
-var Visual = function (id, weave_object, sessionstate) {
-  this.id           = /(\d+)/.exec(id)[0] // Get any digits
+
+var Visual = function (id, sessionstate, pathname, format, params) {
+  this.id           = /(\d+)/.exec(id)[0] // Digits
   this.container    = $('#' + id)         // The div containing the image and eventually Flash
-  this.weave_object = weave_object        // The Flash object
+  this.weave_object = undefined           // The Flash object, starts out undefined
   this.sessionstate = sessionstate        // The JSON/XML representing the visualization
   this.png_string   = ''                  // The Base64 string that encodes a PNG
+  this.pathname     = (pathname) ? pathname : '/visualizations'
+  this.format       = (format)   ? format   : 'json'
+  this.params       = '?' + ((params) ? params : '')
 
-  this.width  = this.container.innerWidth()
-  this.height = this.container.innerHeight()
+  this.width  = this.container.innerWidth();
+  this.height = this.container.innerHeight();
 
-  this.upload_png_url   = getProtocol() + '//' + getHost() + '/visualizations/' + this.id + '/upload_image'
-  this.sessionstate_url = getProtocol() + '//' + getHost() + '/visualizations/' + this.id + '/session_state.json'
+  this.upload_png_url   = getProtocol() + '//' + getHost() + this.pathname + '/' + this.id + '/upload_image' + this.params
+  this.sessionstate_url = getProtocol() + '//' + getHost() + this.pathname + '/' + this.id + '/session_state.' + this.format + this.params
 
   var that = this;
 
-  this.preload_session_state( function(state) {
-    that.to_json();  // Assert session state is JSON
-    
+  this.preload_session_state( function(state) {  
     // Embed flash on click
     that.container.on('click', function () {
       that.embed_swf();
@@ -119,7 +125,7 @@ var Visual = function (id, weave_object, sessionstate) {
 // Return JSON sessionstate, regardless of whether it's stored as JSON
 Visual.prototype.to_json = function(callback) {
   if ( String(this.sessionstate) === "[object XMLDocument]" ) {
-    this.sessionstate = weave.convertSessionStateXMLToObject(
+    this.sessionstate = this.weave_object.convertSessionStateXMLToObject(
       XML.serializeToString( this.sessionstate )
     );
   }
@@ -128,7 +134,6 @@ Visual.prototype.to_json = function(callback) {
 
 
 Visual.prototype.set_session_state = function () {
-  this.weave_object = $('object#' + this.id)
   this.weave_object.setSessionState([], this.sessionstate);
 }
 
@@ -158,14 +163,14 @@ Visual.prototype.preload_session_state = function (callback) {
   if (this.sessionstate === undefined || this.sessionstate === '') {
     $.ajax({
       url:  that.sessionstate_url,
-      dataType: 'json',
+      dataType: that.format,
       success: function (data) {
         that.sessionstate = data;
-        debug_log("Good news! I GETted the session state from " + that.sessionstate_url + ".");
+        debug_log("Good news! I GETted the session state from " + that.sessionstate_url);
         return that.sessionstate;
       },
       error: function (error) {
-        console.error( "An error occurred when GETting " + that.sessionstate_url + ".");
+        console.error( "An error occurred when GETting " + that.sessionstate_url);
         console.dir( error );
         return false;
       }
@@ -181,12 +186,16 @@ Visual.prototype.weave_ready = function (weave) {
     this.weave_object = weave;
   }
 
-  this.weave_object.setSessionState(["WeaveProperties"], {
-    backgroundColor: "16777215", // 'white'
-    showCopyright:    false
-  });
+  var that = this;
 
-  this.weave_object.setSessionState([], this.sessionstate);
+  this.sessionstate = this.to_json(function () {
+    that.weave_object.setSessionState(["WeaveProperties"], {
+      backgroundColor: "16777215", // 'white'
+      showCopyright:    false
+    });
+
+    that.weave_object.setSessionState([], that.sessionstate);
+  });
 }
 
 

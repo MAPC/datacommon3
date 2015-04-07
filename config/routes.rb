@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
   resources :snapshots, only: [:index, :show] do
+    member do
+      get  :session_state
+      post :upload_image
+    end
     resources :topics,  only: [:show], on: :member, path: '', to: 'snapshots#detail'
   end
 

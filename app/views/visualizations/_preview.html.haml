@@ -4,28 +4,8 @@
 %h5= visual.title
 
 .visual.preview
-  = image_tag visual.preview(geography).url, id: "visual-#{visual.id}"
+  = image_tag visual.preview(geography).url, id: "#{visual.id}"
 
 %ul.caption
   %li= list_relation(visual, :sources)
   %li= list_relation(visual, :years)
-
-%script{id: "sessionstate-#{visual.id}", type: 'text/xml'}
-  = visual.state(geography)
-
--#   :javascript
--#     $(document).on('ready', function () {
--#       DC.embedWeaveOnClick("#vis-#{vis.id}", '#{@s.geography_slug}', '#{@s.area_type_name.pluralize}');
--#     });
-
--# -# :javascript
-
--# -#   $(document).on('ready', function () {
--# -#     var sessionstate = $("#sessionstate-#{vis.id}").html(),
--# -#         xmlstate     = (new DOMParser()).parseFromString(sessionstate, "text/xml")
--# -#     DC.embedWeaveAndUpload( "#vis-#{vis.id}",
--# -#                              xmlstate,
--# -#                              '#{@s.area_type_name.pluralize}',
--# -#                              '#{@s.area_type_id}',
--# -#                              '#{@s.geography_slug}' );
--# -#   });

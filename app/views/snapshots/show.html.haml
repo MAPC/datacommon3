@@ -14,3 +14,15 @@
 -# Show the first dynamic visualization for every topic.
 .row
   = render partial: 'snapshots/topic_preview', collection: topics, as: :topic
+
+:javascript
+
+  $(document).on('ready', function () {
+
+    $('.visual img').each( function() {
+      // Create a Visual from the DOM element
+      visual = new Visual( $(this).attr('id'), '', '/snapshots', 'xml', 'geography=' + getLikelyId() );
+      // Add the new Visual to the 'model'
+      Visuals[visual.id] = visual;
+    });
+  })
