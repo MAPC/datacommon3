@@ -6,8 +6,6 @@
 // Interface for simplifying the loading of
 // Weave visualizations.
 
-const DEBUG = true;
-
 var debug_log = function (message, type) {
   var message = "Weave: " + message
   if (DEBUG) {
@@ -26,8 +24,11 @@ var debug_log = function (message, type) {
   }
 }
 
-
+const DEBUG = false;
 debug_log("DEBUG is TRUE. All debug_log messages will print.")
+
+const XML      = (new XMLSerializer());
+const PNG_SPEC = "data:image/png;base64,";
 
 /*
 
@@ -40,9 +41,6 @@ debug_log("DEBUG is TRUE. All debug_log messages will print.")
 */
 
 var DC  = {};
-
-const XML      = (new XMLSerializer());
-const PNG_SPEC = "data:image/png;base64,";
 
 DC.weaveConfig = {
   flashUrl:         "http://metrobostondatacommon.org/weave/weave.swf",
@@ -61,15 +59,18 @@ DC.weaveConfig = {
 }
 
 
-// In the DOM, do:
-visuals = {}
+// Visuals is sort of like the Visualization model, used for lookup.
+var Visuals = {}
 
-$(document).on('ready', function() {  
-  $('.visual').each( function(i) {
-    v = new Visual( $(this).attr('id') )
-    visuals[v.id] = v
+var embed_on_click = function (selector) {
+  // Allow a selector to be passed in, but
+  // default to '.visual' as the visualization selector
+  selector = (selector) ? selector : '.visual';
+  $(selector).each( function() {
+    visual = new Visual( $(this).attr('id') ); // Create a Visual from the DOM element
+    Visuals[visual.id] = visual;               // Add the new Visual to the 'model'
   });
-});
+}
 
 // var v = new Visual('#9')
 
@@ -101,10 +102,10 @@ var Visual = function (id, weave_object, sessionstate) {
   this.upload_png_url   = getProtocol() + '//' + getHost() + '/visualizations/' + this.id + '/upload_image'
   this.sessionstate_url = getProtocol() + '//' + getHost() + '/visualizations/' + this.id + '/session_state.json'
 
-  var that = this
+  var that = this;
 
   this.preload_session_state( function(state) {
-    that.to_json()  // Assert session state is JSON
+    that.to_json();  // Assert session state is JSON
     
     // Embed flash on click
     that.container.on('click', function () {
@@ -126,18 +127,11 @@ Visual.prototype.to_json = function(callback) {
 }
 
 
-// Embed the Flash object into the container
-Visual.prototype.embed   = function() {
-  // If there's no sessionstate, get the sessionstate from a remote URL.
-  // Embed the JSON version of the sessionstate
-  this.embed_swf( this.set_session_state() )
-}
-
-
 Visual.prototype.set_session_state = function () {
   this.weave_object = $('object#' + this.id)
   this.weave_object.setSessionState([], this.sessionstate);
 }
+
 
 Visual.prototype.embed_swf = function (callback) {
   var that = this;  // get a local binding
@@ -181,17 +175,30 @@ Visual.prototype.preload_session_state = function (callback) {
 }
 
 
-var weaveReady = function (weave) {
+Visual.prototype.weave_ready = function (weave) {
+  // Set the weave_object if one is passed
+  if (weave !== undefined) {
+    this.weave_object = weave;
+  }
 
-  id = $(weave).attr('id')
-  visuals[id].weave_object = weave
-
-  weave.setSessionState(["WeaveProperties"], {
+  this.weave_object.setSessionState(["WeaveProperties"], {
     backgroundColor: "16777215", // 'white'
     showCopyright:    false
   });
 
-  weave.setSessionState([], visuals[id].sessionstate);
+  this.weave_object.setSessionState([], this.sessionstate);
+}
+
+
+// This is the only function outside the object-oriented paradigm.
+// weaveReady is called when a Weave Flash object is embedded.
+// This just delegates to Visual#weave_ready to do the work.
+
+var weaveReady = function (weave) {
+  // Get the ID of the Weave object, which corresponds
+  // to the ID of the visualization.
+  var id = $(weave).attr('id')
+  Visuals[id].weave_ready(weave)   // Delegate to the visual
 }
 
 
@@ -235,4 +242,4 @@ var weaveReady = function (weave) {
 // }
 
 debug_log('DC.weaveConfig contains:');
-debug_log(DC.weaveConfig, 'dir');
+debug_log(DC.weaveConfig);

@@ -27,3 +27,8 @@
 /public/system
 /public/assets
 assets_manifest.json
+
+
+# Ignore VCR fixtures. They keep regenerating, probably
+# due to a new_episodes strategy. Should fix this.
+/spec/fixtures/requests

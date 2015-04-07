@@ -30,9 +30,5 @@
 :javascript
   
   $(document).on('ready', function () {
-    DC.synchEmbedWeaveOnClick("#vis-#{@visualization.id}", #{@visualization.sessionstate});
-
-    $("#vis-#{@visualization.id}").click(function () {
-      $('#clickto').hide();
-    });
+    embed_on_click();
   });
