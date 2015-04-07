@@ -88,9 +88,10 @@ var getProtocol = function() {
   return getLocation().protocol
 }
 
-var getLikelyId = function () {
-  var path = getLocation().pathname.split('/')
-  return path[path.length - 1]
+var getLikelyId = function (which) {
+  var path = getLocation().pathname.split('/'),
+     which = (which) ? which : 1;
+  return path[path.length - which]
 }
 
 
@@ -102,7 +103,7 @@ var Visual = function (id, sessionstate, pathname, format, params) {
   this.png_string   = ''                  // The Base64 string that encodes a PNG
   this.pathname     = (pathname) ? pathname : '/visualizations'
   this.format       = (format)   ? format   : 'json'
-  this.params       = '?' + ((params) ? params : '')
+  this.params       = ((params) ? '?' + params : '')
 
   this.width  = this.container.innerWidth();
   this.height = this.container.innerHeight();
@@ -213,42 +214,44 @@ var weaveReady = function (weave) {
 
 
 // Get the PNG string from the Flash object
-// Visual.prototype.to_img  = function(callback) { 
-//   base_64_string = this.weave_object.evaluateExpression(
-//     null,
-//     'getBase64Image(Application.application.visDesktop)',
-//     null, 
-//     ['weave.utils.BitmapUtils', 'mx.core.Application']
-//   );
+Visual.prototype.to_img  = function(callback) { 
+  base_64_string = this.weave_object.evaluateExpression(
+    null,
+    'getBase64Image(Application.application.visDesktop)',
+    null, 
+    ['weave.utils.BitmapUtils', 'mx.core.Application']
+  );
 
-//   this.png_string = PNG_SPEC + base_64_string
-//   if (callback) {
-//     callback( this.png_string )
-//   } else {
-//     return this.png_string
-//   }
-// }
+  this.png_string = base_64_string
+  if (callback) {
+    callback( this.png_string )
+  } else {
+    return this.png_string
+  }
+}
 
 
 // Upload the PNG string to a remote URL
-// TODO: Set visualization preview to have class .visual, #id = object id
-// Visual.prototype.upload_img = function() {
-//   $.ajax({
-//     type: "POST",
-//     url:  this.upload_png_url,
-//     data: this.to_img(),
-//     success: function (data) {
-//       debug_log("Good news! I POSTed successfully to " + this.upload_png_url + ".");
-//       debug_log(data, 'dir');
-//       return data
-//     },
-//     error: function (error) {
-//       console.error( "An error occurred when uploading to " + this.upload_png_url + ".");
-//       console.dir( error );
-//       return false
-//     }
-//   });
-// }
+Visual.prototype.upload_img = function() {
+  var that = this;
+  $.ajax({
+    type: "POST",
+    url:  that.upload_png_url,
+    data: { data: String(that.to_img()) },
+    success: function (data) {
+      debug_log("Good news! I POSTed successfully to " + that.upload_png_url);
+      return data
+    },
+    error: function (error) {
+      debug_log( "An error occurred when uploading to " + that.upload_png_url, 'error');
+      debug_log( error );
+      return error
+    }
+  });
+}
+
+
+
 
 debug_log('DC.weaveConfig contains:');
 debug_log(DC.weaveConfig);

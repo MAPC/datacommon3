@@ -25,6 +25,25 @@ class VisualizationsController < ApplicationController
   end
 
   def upload_image
+    @visual  = Visualization.find_by id: params[:id]
+    decoded_file = Base64.decode64 params[:data]
+    
+    begin
+      file = Tempfile.new([@visual.id, '.png'])
+      file.binmode
+      file.write decoded_file
+      @visual.image = file
+      @visual.image_content_type = 'image/png'
+
+      if @visual.save!
+        render json: { message: "Successfully uploaded preview." }
+      else
+        render json: { message: "#{@visual.errors.full_messages.join(", ")}",
+                       status: :unprocessable_entity }
+      end
+    ensure
+      file.unlink
+    end
   end
 
 

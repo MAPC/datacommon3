@@ -24,26 +24,38 @@ class SnapshotsController < ApplicationController
     object  = Geography.find_by slug: params[:geography]
 
     respond_to do |format|
-      format.xml { render xml: @visual.rendered_state(object) }
+      format.xml  { render xml:  @visual.rendered_state(object) }
+      format.json { render json: @visual.rendered_state(object) }
     end
   end
 
 
   def upload_image
-    @visual  = DynamicVisualization.find_by id: params[:id]
-    png_data = Base64.decode64 params[:data]
+    @visual      = DynamicVisualization.find_by id: params[:id]
+    object       = Geography.find_by slug: params[:geography]
+    decoded_file = Base64.decode64 params[:data]
     
+    # Uses the preview#path helper defined in the model.
     filename = @visual.preview(object).path
     make_directory_for filename
+
+    # Write PNG data to the file
+    File.open(filename, 'wb') { |f| f.write decoded_file }
     
-    File.open(filename, 'wb') do |f|
-      f.write Base64.decode64(png_data)
+    if File.exists? filename
+      render json: { message: "Successfully uploaded preview." }
+    else
+      render json: { message: "Did not successfully save.",
+                     status: :unprocessable_entity }
     end
 
-    respond_to do |format|
-      # If the file is there (i.e. if it saved)
-      f.exists? ? format.json { render json: true } : format.json { render json: false }
-    end
   end
+
+  private
+    def make_directory_for(filename)
+      dirname = File.dirname(filename)
+      FileUtils.mkdir_p(dirname) unless File.directory?(dirname)
+    end
   
 end
+

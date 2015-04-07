@@ -14,3 +14,14 @@
     .col-md-4.col-sm-6.col-xs-12
       .snapshot{class: @snap.geography.type}
         = render partial: 'visualizations/preview', object: visual, as: :visual, locals: { geography: @snap.geography }
+
+:javascript
+
+  $(document).on('ready', function () {
+
+    $('.visual img').each( function() {
+      // Create a Visual from the DOM element
+      visual = new Visual( $(this).attr('id'), '', '/snapshots', 'xml', 'geography=' + getLikelyId(2) );
+      Visuals[visual.id] = visual; // Add the new Visual to the 'model'
+    });
+  })

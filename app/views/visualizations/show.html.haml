@@ -21,9 +21,9 @@
 
   %div.row
     %div.col-md-12
-      - if current_user?(@visualization.owner)
-        = link_to 'Edit', edit_visualization_path(@visualization), class: "btn btn-success"
       - if signed_in?
+        - if current_user?(@visualization.owner)
+          = link_to 'Edit', edit_visualization_path(@visualization), class: "btn btn-success"
         = link_to 'Duplicate', duplicate_visualization_path(@visualization), class: "btn btn-primary"
 
 

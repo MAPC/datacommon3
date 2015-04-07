@@ -22,7 +22,6 @@
     $('.visual img').each( function() {
       // Create a Visual from the DOM element
       visual = new Visual( $(this).attr('id'), '', '/snapshots', 'xml', 'geography=' + getLikelyId() );
-      // Add the new Visual to the 'model'
-      Visuals[visual.id] = visual;
+      Visuals[visual.id] = visual; // Add the new Visual to the 'model'
     });
   })
