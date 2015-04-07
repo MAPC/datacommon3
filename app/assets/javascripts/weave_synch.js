@@ -32,15 +32,15 @@ DC.weaveConfig = {
 
 DC.logger = {
   weaveStarted:  function (id) {
-    console.log('swfobject.embedSWF started loading visualization ' + id);
+    // console.log('swfobject.embedSWF started loading visualization ' + id);
   },
 
   weaveFinished: function (id) {
-    console.log('swfobject.embedSWF finished loading visualization ' + id);
+    // console.log('swfobject.embedSWF finished loading visualization ' + id);
   },
 
   weaveReady:    function (weave) {
-    console.log('#weaveReady was called with the following instance:');
+    // console.log('#weaveReady was called with the following instance:');
     console.dir(weave);
   }
 };
@@ -72,7 +72,7 @@ DC.embedWeaveAndUpload = function ( dom_id, sessionstate, area_type, area_id, sl
   // area_id:   'municipality_id', 'subregion_id'
   // slug:      'canton',          'metro-west'
   
-  console.log('embedWeaveAndUpload happening on ' + dom_id);
+  // console.log('embedWeaveAndUpload happening on ' + dom_id);
   
   var id = dom_id.split('-').pop();
 
@@ -95,11 +95,11 @@ DC.embedWeaveAndUpload = function ( dom_id, sessionstate, area_type, area_id, sl
         url: "/" + area_type + "/" + slug + "/image",
         data: data_object,
         success: function (data) {
-          console.log( dom_id + ": Good news! I POSTed successfully." );
-          console.log( "The data was " + data + "." );
+          // console.log( dom_id + ": Good news! I POSTed successfully." );
+          // console.log( "The data was " + data + "." );
         },
         error: function (e) {
-          console.log( "Such error with " + dom_id + ", wow." );
+          // console.log( "Such error with " + dom_id + ", wow." );
           console.dir( e );
         }
       });
@@ -109,10 +109,10 @@ DC.embedWeaveAndUpload = function ( dom_id, sessionstate, area_type, area_id, sl
 
 
 DC.synchEmbedWeaveOnClick = function (dom_elem, sessionstate) {
-  console.log('embed fn listening to ' + dom_elem);
+  // console.log('embed fn listening to ' + dom_elem);
   
   $(dom_elem).on('click', function () {
-    console.log('synchEmbedWeaveOnClick triggered');
+    // console.log('synchEmbedWeaveOnClick triggered');
 
     var id = dom_elem.split('-').pop();
 
@@ -123,10 +123,10 @@ DC.synchEmbedWeaveOnClick = function (dom_elem, sessionstate) {
 
 
 DC.embedWeaveOnClick = function (dom_elem, geo, area_type) {
-  console.log('embed fn listening to ' + dom_elem);
+  // console.log('embed fn listening to ' + dom_elem);
 
   $(dom_elem).on('click', function () {
-    console.log('synchEmbedWeaveOnClick triggered');
+    // console.log('synchEmbedWeaveOnClick triggered');
     
     var id = dom_elem.split('-').pop();
 
@@ -187,7 +187,7 @@ DC.establishAllBase64 = function () {
   $.each(visuals, function (idx, div) {
     div.click();
     var weave_id = $(div).attr('id').split('-').pop();
-    console.log("weave_id", weave_id);
+    // console.log("weave_id", weave_id);
 
     setTimeout(function () {
       var base64 = DC.weaves[weave_id].evaluateExpression(null, 'getBase64Image(Application.application.visDesktop)', null, ['weave.utils.BitmapUtils', 'mx.core.Application']);
@@ -213,8 +213,8 @@ var weaveReady = function (weave) {
   // directly. Instead of Weave checking if it's XML and doing
   // the proper conversions, we are forced to do them here.
 
-  // console.log(DC.sessionStates[weave_id])
-  // console.log( String(DC.sessionStates[weave_id]) );
+  console.log(DC.sessionStates[weave_id])
+  console.log( String(DC.sessionStates[weave_id]) );
 
   if (String(DC.sessionStates[weave_id]) === "[object XMLDocument]") {
     var stringState = (new XMLSerializer()).serializeToString(DC.sessionStates[weave_id])

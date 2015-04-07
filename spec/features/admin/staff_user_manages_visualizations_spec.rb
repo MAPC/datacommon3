@@ -26,9 +26,7 @@ feature 'Staff can manage visualizations' do
     visit "/admin/visualization/#{visualization.id}"
     click_link   'Edit'
     fill_in      'Title', with: 'An edited title'
-    save_and_open_page
     click_button 'Save'
-    save_and_open_page
     expect(page).to have_content("Details for Visualization 'An edited title'")
   end
 

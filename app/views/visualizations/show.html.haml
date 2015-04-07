@@ -2,7 +2,7 @@
 
 %div.col-md-8.col-xs-12.vis-main
   %h3= @visualization.title
-  %img.feature{id: "vis-#{@visualization.id}", src: @visualization.image.url}
+  %img.visual.feature{id: "#{@visualization.id}", src: @visualization.image.url}
     %p#clickto
       %small Click to activate interactive visualization. (Flash required)
 
@@ -30,7 +30,6 @@
 :javascript
   
   $(document).on('ready', function () {
-    console.log('document ready');
     DC.synchEmbedWeaveOnClick("#vis-#{@visualization.id}", #{@visualization.sessionstate});
 
     $("#vis-#{@visualization.id}").click(function () {

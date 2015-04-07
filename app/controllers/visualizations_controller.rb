@@ -39,10 +39,14 @@ class VisualizationsController < ApplicationController
 
 
   def duplicate
-    @visualization = Visualization.find_by(id: params[:id]).dup
-    @visualization.owner_id = current_user.id
-    @visualization.institution_id = nil
-    @visualization.title << " (Copy)"
+    template = Visualization.find_by(id: params[:id])
+    @visualization = template.dup
+    @visualization.assign_attributes(
+      title:          "#{template.title} (Copy)",
+      owner_id:       current_user.id,
+      original_id:    template.id,
+      institution_id: nil
+    )
 
     if @visualization.save
       redirect_to edit_visualization_url(@visualization)
