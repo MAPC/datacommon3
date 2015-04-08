@@ -98,7 +98,10 @@ $(document).on 'ready', ->
     object = $('object').attr('id')
     console.log object
     console.log Visuals[object]
-    Visuals[object].upload_img()
+    Visuals[object].upload_img (data) ->
+      if (Visuals["new"])
+        # Once it uploads, send it to #edit
+        window.location = getLocation().href.replace('new', Visuals["new"].id + '/edit')
 
     p   = $('<p>').appendTo(success)
     p.append("Saved visualization. You can keep editing, or <a href='/visualizations/" + vis.id + "'>view it here.</a>")

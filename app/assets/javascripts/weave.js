@@ -286,7 +286,7 @@ Visual.prototype.to_img  = function(callback) {
 
 
 // Upload the PNG string to a remote URL
-Visual.prototype.upload_img = function() {
+Visual.prototype.upload_img = function(callback) {
   var that = this;
   $.ajax({
     type: "POST",
@@ -294,12 +294,12 @@ Visual.prototype.upload_img = function() {
     data: { data: String(that.to_img()) },
     success: function (data) {
       debug_log("Good news! I POSTed successfully to " + that.upload_png_url());
-      return data
+      return (callback) ? callback(data) : data
     },
     error: function (error) {
       debug_log( "An error occurred when uploading to " + that.upload_png_url(), 'error');
       debug_log( error );
-      return error
+      return (callback) ? callback(error) : error
     }
   });
 }
