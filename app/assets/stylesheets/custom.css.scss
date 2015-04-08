@@ -47,30 +47,8 @@ p.vis-title {
   font-size: 1.2em !important;
 }
 
-.beta {
-  position: absolute;
-  top:  15px;
-  left: 20px;
-  font-weight: 700;
-  font-size: 1.1em;
-  color: $dc-green;
-  text-shadow: -3px -3px $dc-blue,
-                3px -3px $dc-blue,
-               -3px 3px $dc-blue,
-                3px 3px $dc-blue;
-  border-radius: 2px;
-  z-index: 10;
-
-}
-
 .center {
   text-align: center;
-}
-
-.navbar-nav {
-  background-color: $dc-blue;
-  // overflow: hidden;
-  // overflow-wrap: none;
 }
 
 /* FLASH */
@@ -126,70 +104,6 @@ label.valid {
 
 input.valid, textarea.valid, select.valid {
   border: 2px solid #00AA00;
-}
-
-/* HEADER */
-
-a > .dropdown {
-  color: white !important;
-  font-weight: 300;
-}
-
-.navbar-nav > li {
-  margin-top: 15px;
-}
-
-.navbar-nav > li > a {
-  color: white !important;
-}
-
-.navbar {
-  height: 80px;
-}
-
-.navbar-brand {
-  min-width: 225px;
-  img {
-    margin-top: -7px;
-    max-width: 200px;
-    max-height: 65px;
-  }
-}
-
-.navbar-nav {
-  font-weight: 400;
-}
-
-@media (min-width: 993px) {
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-}
-
-.navbar.navbar-default.navbar-fixed-top {
-  background-color: $dc-blue;
-  letter-spacing: 0.05em;
-  border-color: transparent;
-}
-
-img.header-logo {
-  margin-top: 0px;
-  height: inherit;
-}
-
-#btn-signup {
-  font-weight: 600;
-  &:hover {
-    color: #428BCA !important;
-    background-color: #FFF;
-    border-color: #428BCA;
-  }
-}
-
-input#search {
-  @media (max-width: 1200px) {
-    width: 70px;
-  }
 }
 
 
