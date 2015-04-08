@@ -196,11 +196,28 @@ input.valid, textarea.valid, select.valid {
     padding-bottom: 10px;
   }
 
+
 .featured {
-  color: #FFFFFF;
+  display: block;
+  margin-top: -20px;
+  padding-top: 100px;
+  
+  color: #EEEEEE;
   a a:hover a:visited {
     color: #FFFFFF;
   }
+  text-align: center;
+  text-shadow: 1px 1px 1px #000000;
+  
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size:    cover;
+  -o-background-size:      cover;
+  background-size:         cover;
+  background-image: url("https://unsplash.it/2000/400?image=650");
+  // 670
 }
 
 

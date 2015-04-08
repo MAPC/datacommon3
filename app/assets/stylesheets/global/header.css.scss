@@ -8,6 +8,9 @@
 
 */
 
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1200px;
 
 // TODO: Duplicate variables. Not sure how to 
 // have them share across files.
@@ -33,7 +36,7 @@ a.dropdown-toggle {
 }
 
 .dropdown:hover .dropdown-menu {
-  @media (min-width: 993px) {
+  @media (min-width: $screen-md) {
     display: block;
   }
 }
@@ -55,11 +58,17 @@ a.dropdown-toggle {
 }
 
 input#search {
-  @media (min-width: 770px) {
-    max-width: 195px;
+  // Extra small and small are collapsed -- full size
+  // Medium is shrunk
+  @media (min-width: $screen-md) {
+    max-width: 90px;
   }
-  @media (max-width: 1200px) and (min-width: 995px) {
-    width: 130px;
+  @media (min-width: 1030px) {
+    max-width: 125px;
+  }
+  // Large and above are expanded
+  @media (min-width: $screen-lg) {
+    max-width: 195px;
   }
 }
 
