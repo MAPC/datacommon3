@@ -1,0 +1,8 @@
+- path_name = path.presence ? "#{path}_path" : 'visualizations_path'
+
+%a.topic.square{href: send(path_name, topic: topic.slug)}
+  .col-xs-4
+    .topic.square
+      .icon{class: "icon #{topic.slug}"}
+      %br
+      %small= topic

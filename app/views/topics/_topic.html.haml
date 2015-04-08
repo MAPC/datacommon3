@@ -1,3 +1,5 @@
-%a.list-group-item.center.issue_area{href: visualizations_path(topic: topic.slug)}
-  .icon{class: "icon-#{topic.slug}"}
+- path_name = path.presence ? "#{path}_path" : 'visualizations_path'
+
+%a.list-group-item.center.topic{href: send(path_name, topic: topic.slug)}
+  .icon{class: "icon #{topic.slug}"}
   #{topic}

@@ -1,8 +1,6 @@
 %h1 Sign Up
 %h2.page-header Create a new account.
 
-= render 'shared/error_messages', object: @user
-%br
 .col-md-4.col-md-offset-4
   .form.user-form{role: 'form'}
     = form_for @user do |f|
@@ -19,10 +17,6 @@
         = f.label          :email, 'Email address'
         = f.text_field     :email,                 class: 'form-control'
 
-      .form-group
-        = f.label          :username
-        = f.text_field     :username,              class: 'form-control'
-      
       .form-group
         = f.label          :password
         = f.password_field :password,              class: 'form-control'

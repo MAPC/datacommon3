@@ -1,4 +1,3 @@
-%h1 Data Catalog
 - if params[:page].nil? || params[:page] == 1
   %h2 Discover and download data about the region.
 
@@ -10,6 +9,10 @@
     = render partial: 'shared/select', object: 'topic', as: :object
 
 .page-header
+  %h1 Data Catalog
+  %h2.page-header Discover and download data about the region.
+- else
+  %h2.page-header Data Catalog
 
 #datasets
   = render partial: 'datasets/dataset', collection: @datasets.records
