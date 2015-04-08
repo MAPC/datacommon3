@@ -1,9 +1,9 @@
 %script{type: "text/javascript", src: "http://metrobostondatacommon.org/media/swfobject/swfobject.js"}
 
-%div.col-md-8.col-xs-12.vis-main
+%div.col-md-8.col-xs-12.visual
   %h3= @visualization.title
-  %img.visual.feature{id: "#{@visualization.id}", src: @visualization.image.url}
-    %p#clickto
+  %img.feature{id: "#{@visualization.id}", src: @visualization.image.url}
+    %p.pre-weave
       %small Click to activate interactive visualization. (Flash required)
 
 %div.col-md-4.col-xs-12.vis-sidebar
@@ -30,5 +30,5 @@
 :javascript
   
   $(document).on('ready', function () {
-    embed_on_click();
+    embed_on_click('.visual img');
   });

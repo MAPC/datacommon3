@@ -3,10 +3,10 @@
     .col-md-9.col-sm-12
 
       - if params[:action] == 'new'
-        #vis-new
+        #new
       - else
-        %img.feature{id: "vis-#{@visualization.id}", src: @visualization.image.url}
-        %p#clickto
+        %img.feature{id: "#{@visualization.id}", src: @visualization.image.url}
+        %p.pre-weave
           %small Click to activate interactive visualization. (Flash required)
 
       .row

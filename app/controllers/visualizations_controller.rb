@@ -29,11 +29,14 @@ class VisualizationsController < ApplicationController
     decoded_file = Base64.decode64 params[:data]
     
     begin
-      file = Tempfile.new([@visual.id, '.png'])
+      file = Tempfile.new([@visual.id.to_s, ".png"])
       file.binmode
       file.write decoded_file
+
       @visual.image = file
       @visual.image_content_type = 'image/png'
+
+      file.close
 
       if @visual.save!
         render json: { message: "Successfully uploaded preview." }

@@ -18,23 +18,22 @@ gem 'ckan',                            # Read data from CKAN store
   branch: 'develop'
 
 # Views
-gem 'haml-rails',           '0.5.3'    # HAML views
-gem 'kaminari',             '0.16.1'   # Pagination
+gem 'haml-rails',              '0.5.3' # HAML views
+gem 'kaminari',               '0.16.1' # Pagination
 
 # Styles
-gem 'sass-rails',           '4.0.3'    # Use SCSS for stylesheets
+gem 'sass-rails',              '4.0.3' # Use SCSS for stylesheets
 gem 'bootstrap-sass',       '~> 3.2.0' # Responsive base styles
-gem 'chosen-rails',         '1.1.0'    # Chosen, for friendly dropdowns
+gem 'chosen-rails',            '1.1.0' # Chosen, for friendly dropdowns
 
 # Javascript
-gem 'jquery-rails',         '3.1.2'    # Use jquery as the JavaScript library
+gem 'jquery-rails',            '3.1.2' # Use jquery as the JavaScript library
 gem 'uglifier',             '>= 1.3.0' # Compressor for JavaScript assets
 gem 'coffee-rails',         '~> 4.0.0' # Use CoffeeScript for .js.coffee assets and views
+# gem 'remotipart',              '1.2.1' # Help bind Ajax events to forms
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
-# Disabled because this might be messing up JavaScript loads,
-# at least as the JS is written now.
 gem 'turbolinks',   '2.4.0' # Following links are faster.
 
 

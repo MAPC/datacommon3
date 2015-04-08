@@ -7,19 +7,19 @@
 // Weave visualizations.
 
 var debug_log = function (message, type) {
-  var message = "Weave: " + message
+  var prefix = "Weave: "
   if (DEBUG) {
     switch(type) {
       case 'dir':
         console.dir( message )
       break
       case 'warn':
-        console.warn( message )
+        console.warn( prefix + message )
       break
       case 'error':
-        console.error( message )
+        console.error( prefix + message )
       break
-      default: console.log( message );
+      default: console.log( prefix + message );
     }
   }
 }
@@ -29,6 +29,9 @@ debug_log("DEBUG is TRUE. All debug_log messages will print.")
 
 const XML      = (new XMLSerializer());
 const PNG_SPEC = "data:image/png;base64,";
+
+// Check for 'missing.(png|jpg|jpeg)' in path
+const MISSING_IMAGE_REGEX = /(\/missing\.(png|jpe?g))/i;
 
 /*
 
@@ -72,6 +75,15 @@ var embed_on_click = function (selector) {
   });
 }
 
+var embed_immediately = function (selector) {
+  // Delegate to #embed_on_click, then click them all.
+  // ...So clever.
+  embed_on_click( selector );
+  $(selector).each ( function() {
+    $(this).trigger('click');
+  })
+}
+
 // var v = new Visual('#9')
 
 var getLocation = function() {
@@ -96,7 +108,7 @@ var getLikelyId = function (which) {
 
 
 var Visual = function (id, sessionstate, pathname, format, params) {
-  this.id           = /(\d+)/.exec(id)[0] // Digits
+  this.id           = String(id).replace('#', '') // Remove hash
   this.container    = $('#' + id)         // The div containing the image and eventually Flash
   this.weave_object = undefined           // The Flash object, starts out undefined
   this.sessionstate = sessionstate        // The JSON/XML representing the visualization
@@ -104,12 +116,10 @@ var Visual = function (id, sessionstate, pathname, format, params) {
   this.pathname     = (pathname) ? pathname : '/visualizations'
   this.format       = (format)   ? format   : 'json'
   this.params       = ((params) ? '?' + params : '')
+  this.needs_upload = undefined // Updated in check_needs_upload
 
   this.width  = this.container.innerWidth();
   this.height = this.container.innerHeight();
-
-  this.upload_png_url   = getProtocol() + '//' + getHost() + this.pathname + '/' + this.id + '/upload_image' + this.params
-  this.sessionstate_url = getProtocol() + '//' + getHost() + this.pathname + '/' + this.id + '/session_state.' + this.format + this.params
 
   var that = this;
 
@@ -118,10 +128,45 @@ var Visual = function (id, sessionstate, pathname, format, params) {
     that.container.on('click', function () {
       that.embed_swf();
     });
-
   });
+
+  this.check_needs_upload();
 }
 
+
+Visual.prototype.upload_png_url = function () {
+  return getProtocol() + '//' + getHost() + this.pathname + '/' + this.id + '/upload_image' + this.params
+}
+
+Visual.prototype.sessionstate_url = function () {
+  return getProtocol() + '//' + getHost() + this.pathname + '/' + this.id + '/session_state.' + this.format + this.params
+}
+
+
+Visual.prototype.check_needs_upload = function (callback) {
+  var src   = String( this.container[0]['src'] );
+  var match = MISSING_IMAGE_REGEX.exec(src)
+  
+  if (match) {
+    this.needs_upload = true;
+  }
+  return (callback) ? callback(this.needs_upload) : this.needs_upload
+}
+
+// TODO
+Visual.prototype.upload_if_necessary = function (wait_time, callback) {
+  // Default to waiting for 7 seconds after #weaveReady.
+  var wait_time = (wait_time) ? wait_time : 7000;
+
+  var that = this;
+  if (this.needs_upload) { 
+    debug_log('It needs to be uploaded. Waiting ' + (wait_time / 1000) + ' seconds.')
+    setTimeout( function () { that.upload_img() }, wait_time );
+  }
+  return (callback) ? callback('TODO') : 'TODO'
+}
+
+// TODO: Provide option to re-upload regardless of image presence
 
 // Return JSON sessionstate, regardless of whether it's stored as JSON
 Visual.prototype.to_json = function(callback) {
@@ -153,6 +198,8 @@ Visual.prototype.embed_swf = function (callback) {
     { id: that.id, name: that.id },   // Used by #getObjectById
     debug_log(that.id + ': Loading SWF') // callback
   )
+
+  $('.pre-weave').hide();
   return (callback) ? callback() : undefined
 }
 
@@ -160,18 +207,23 @@ Visual.prototype.embed_swf = function (callback) {
 Visual.prototype.preload_session_state = function (callback) {
   // If there is sessionstate, return it.
   // If there is not, get it and return it.
+  if (String(this.id) == 'new') {
+    debug_log('This is a new visualization: bailing out and returning.')
+    return (callback) ? callback(this.sessionstate) : this.sessionstate
+  }
+
   var that = this
   if (this.sessionstate === undefined || this.sessionstate === '') {
     $.ajax({
-      url:  that.sessionstate_url,
+      url:  that.sessionstate_url(),
       dataType: that.format,
       success: function (data) {
         that.sessionstate = data;
-        debug_log("Good news! I GETted the session state from " + that.sessionstate_url);
+        debug_log("Good news! I GETted the session state from " + that.sessionstate_url());
         return that.sessionstate;
       },
       error: function (error) {
-        console.error( "An error occurred when GETting " + that.sessionstate_url);
+        console.error( "An error occurred when GETting " + that.sessionstate_url());
         console.dir( error );
         return false;
       }
@@ -197,6 +249,8 @@ Visual.prototype.weave_ready = function (weave) {
 
     that.weave_object.setSessionState([], that.sessionstate);
   });
+
+  this.upload_if_necessary();
 }
 
 
@@ -236,14 +290,14 @@ Visual.prototype.upload_img = function() {
   var that = this;
   $.ajax({
     type: "POST",
-    url:  that.upload_png_url,
+    url:  that.upload_png_url(),
     data: { data: String(that.to_img()) },
     success: function (data) {
-      debug_log("Good news! I POSTed successfully to " + that.upload_png_url);
+      debug_log("Good news! I POSTed successfully to " + that.upload_png_url());
       return data
     },
     error: function (error) {
-      debug_log( "An error occurred when uploading to " + that.upload_png_url, 'error');
+      debug_log( "An error occurred when uploading to " + that.upload_png_url(), 'error');
       debug_log( error );
       return error
     }
@@ -254,4 +308,4 @@ Visual.prototype.upload_img = function() {
 
 
 debug_log('DC.weaveConfig contains:');
-debug_log(DC.weaveConfig);
+debug_log(DC.weaveConfig, 'dir');

@@ -6,8 +6,13 @@
 
 $(document).on 'ready', ->
 
+  console.log('ready')
+
+  form_selectors = "form.new_visualization, form.edit_visualization"
+  window.cancel_timeout = undefined
+
   # Client-side validations
-  $("#new_visualization, .edit_visualization").validate(
+  $(form_selectors).validate(
 
     rules:
       "visualization[title]":
@@ -66,17 +71,35 @@ $(document).on 'ready', ->
 
   # Before the form submits the AJAX request, get the Weave
   # sessionstate, then append it to the hidden sessionstate field.
-  $("#new_visualization, .edit_visualization").on 'ajax:before', (xhr, settings) ->
+  $(document).bind "ajax:before", form_selectors, (xhr, settings) ->
+    console.log('ajax:before')
     submit.addClass('disabled');
     submit.attr('value', 'Saving...')
-    weave_state = JSON.stringify( DC.weave.getSessionState([]) )
+    # TODO: DC.weave is no longer accessible, but a weave is ready.
+    # How to expose the new weave object without 
+    object_id = $('object').attr('id')
+    weave_state = JSON.stringify( Visuals[object_id].weave_object.getSessionState([]) )
     $('#visualization_sessionstate').val( weave_state )
 
 
-  # Handle success
-  $("#new_visualization, .edit_visualization").bind "ajaxSuccess", (event, xhr, settings) ->
-    flash.empty()
-    vis = xhr.responseJSON
+  # Handle success, adding a success flash and uploading an image
+  # from the session state.
+  $(document).bind "ajax:success", form_selectors, (event, xhr, settings) ->
+    # TODO: Upload image on successful update.
+    console.log 'ajax:success'
+    $('.alert-success p').remove()
+    vis = xhr
+
+    if (Visuals["new"])
+      Visuals["new"].id = vis.id         # Change the ID to match the visual
+      Visuals["new"].sessionstate = vis.sessionstate
+      Visuals[vis.id]   = Visuals["new"] # Duplicate it for reference
+
+    object = $('object').attr('id')
+    console.log object
+    console.log Visuals[object]
+    Visuals[object].upload_img()
+
     p   = $('<p>').appendTo(success)
     p.append("Saved visualization. You can keep editing, or <a href='/visualizations/" + vis.id + "'>view it here.</a>")
     flash.append(success)
@@ -85,12 +108,15 @@ $(document).on 'ready', ->
     submit.removeClass('disabled')
     submit.attr('value', 'Update')
 
-    setTimeout hide_flash, 15000
+    $('.alert-success').slideDown()
+    cancel_timeout = setTimeout hide_flash, 15000
     
 
   # Handle error messages on submit
-  $("#new_visualization, .edit_visualization").bind "ajaxError", (event, xhr, settings, exception) ->
-    flash.empty()                   # Clear out the flash
+  $(document).bind "ajax:error", form_selectors, (event, xhr, settings, exception) ->
+    console.log('ajax:error')
+    $('.alert-error ul').remove()   # Clear out the flash
+    $('.alert-error').slideDown()
     ul = $('<ul>').appendTo(alert)  # Add a list
     ul.append(err_intro)            # Introduce the errors
 
