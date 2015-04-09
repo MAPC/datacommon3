@@ -73,7 +73,7 @@ input#search {
   // Extra small and small are collapsed -- full size
   // Medium is shrunk
   @media (min-width: $screen-md) {
-    max-width: 90px;
+    max-width: 72px;
   }
   @media (min-width: 1030px) {
     max-width: 122px;
