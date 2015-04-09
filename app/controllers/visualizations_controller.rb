@@ -7,10 +7,10 @@ class VisualizationsController < ApplicationController
 
   has_scope :topic
   has_scope :data_source
-  
+  has_scope :institution
 
   def index
-    @visualizations = Visualization.all.page(params[:page])
+    @visualizations = apply_scopes(Visualization.all.page(params[:page]))
   end
 
 

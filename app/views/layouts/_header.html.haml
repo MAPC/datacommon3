@@ -52,7 +52,7 @@
 
       = form_tag '/search', method: :get, data: {role: 'search'}, class: "navbar-form navbar-left" do
         .input-group
-          = text_field_tag :search, params[:search], class: "typeahead form-control", placeholder: "Search for data"
+          = text_field_tag :search, params[:search], class: "typeahead form-control", placeholder: "Search for data and more"
           %span.input-group-btn
             %button.btn.btn-success
               %span.glyphicon.glyphicon-search
