@@ -11,16 +11,15 @@ feature 'Visitor signs up' do
     expect(ActionMailer::Base.deliveries.size).to eq(1)
   end
 
-  scenario 'with invalid email' do
+  scenario 'with invalid email', js: true do
     sign_up_with 'invalid_email@', 'password'
-    expect(page).to have_content('1 error')
-    expect(page).to have_content('must be a valid email')
+    expect(page).to have_content('enter a valid email')
     expect(page).to have_content('Sign up')
   end
 
-  scenario 'with blank password' do
+  scenario 'with blank password', js: true do
     sign_up_with 'valid@example.com', ''
-    expect(page).to have_content("can't be blank")
+    expect(page).to have_content("enter a pass")
     expect(page).to have_content('Sign up')
   end
 end

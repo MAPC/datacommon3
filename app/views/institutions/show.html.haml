@@ -9,7 +9,7 @@
         %h5.explanation.data-catalog          Data Catalog
         = image_tag 'explanations/data-catalog-sm.png', class: 'explanation-icon'
       %p
-        Browse, search, and download #{layer_count} spatial and tabular datasets from the 
+        Browse, search, and download over 1000 spatial and tabular datasets from the 
         = succeed '.' do
           = link_to 'Data Catalog', datasets_path
 
@@ -53,7 +53,8 @@
   .col-md-8.col-sm-12
     %h1 Featured Visualization
     -# = image_tag "https://unsplash.it/700/432?image=618"
-    = render partial: 'visualizations/feature', locals: { feature: Visualization.first }
+    - if Visualization.first
+      = render partial: 'visualizations/feature', locals: { feature: Visualization.first }
   .col-md-4.col-sm-12
     %h1 Visualizations by Topic
     .row

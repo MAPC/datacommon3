@@ -3,19 +3,24 @@
 
 .col-md-4.col-md-offset-4
   .form.user-form{role: 'form'}
+
     = form_for @user do |f|
       
       .form-group
-        = f.label          :first_name
-        = f.text_field     :first_name,            class: 'form-control'
+        = f.label       :first_name
+        = f.text_field  :first_name,            class: 'form-control'
 
       .form-group
-        = f.label          :last_name
-        = f.text_field     :last_name,             class: 'form-control'
+        = f.label       :last_name
+        = f.text_field  :last_name,             class: 'form-control'
 
       .form-group
-        = f.label          :email, 'Email address'
-        = f.text_field     :email,                 class: 'form-control'
+        = f.label       :username
+        = f.text_field  :username,              class: 'form-control'
+
+      .form-group
+        = f.label       :email, 'Email address'
+        = f.text_field  :email,                 class: 'form-control'
 
       .form-group
         = f.label          :password

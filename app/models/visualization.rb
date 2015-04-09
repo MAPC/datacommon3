@@ -81,7 +81,7 @@ class Visualization < ActiveRecord::Base
   end
 
   def years
-    year.split(',')
+    year.to_s.split(',')
   end
 
   def abstract
