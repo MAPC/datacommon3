@@ -1,61 +1,45 @@
-%div.footer
-  %hr
-  
-  %div.row-upper
-    %div.container
-      %div.row
-        %div.col-sm-3.col-sm-offset-0.col-xs-12.col-xs-offset-1.links
-          %h5 About the DataCommon
-          %ul
-            -# = render partial: 'pages/link', collection: about_pages, as: :page
-            %li
-              = link_to "https://www.facebook.com/MAPCMetroBoston" do
-                .social-icon= image_tag 'facebook_50.png',width: 30, alt: 'MAPC Facebook', target: "_blank"
-              = link_to "http://twitter.com/MAPCMetroBoston"  do
-                .social-icon= image_tag 'twitter_50.png', width: 30, alt: 'MAPC Twitter',  target: "_blank"
-              = link_to "https://www.flickr.com/photos/44747327@N04/"   do
-                .social-icon= image_tag 'flickr_50.png',  width: 30, alt: 'MAPC Flickr',   target: "_blank"
+
+.footer
+  .container
+    .row
+
+      .col-sm-4.col-xs-6
+        %h5 Data & Visualizations
+        %ul
+          %li= link_to 'Data Catalog',          datasets_path
+          %li= link_to 'Map Gallery',           static_maps_path
+          %li= link_to 'Visualization Gallery', visualizations_path 
+          %li= link_to 'Make a Visualization',  new_visualization_path
+    
+
+      .col-sm-4.col-xs-6
+        %h5 Profiles & Resources
+        %ul
+          %li= link_to 'Community Profiles', snapshots_path
+          %li= link_to 'Workshops',          '/workshops'
+          %li= link_to 'Blog',               'http://uncommondata.org'
+          %li= link_to 'Tutorial',           '/tutorial'
+
+      .col-sm-4.col-xs-6
+        %h5 Social
+        %ul
+          -# = render partial: 'pages/link', collection: about_pages, as: :page
+          %li.social-icon
+            = link_to "https://www.facebook.com/MAPCMetroBoston" do
+              = image_tag 'facebook_50.png', alt: 'MAPC Facebook', target: "_blank"
+          %li.social-icon
+            = link_to "http://twitter.com/MAPCMetroBoston" do
+              = image_tag 'twitter_50.png',  alt: 'MAPC Twitter',  target: "_blank"
+          %li.social-icon
+            = link_to "https://www.flickr.com/photos/44747327@N04/" do
+              = image_tag 'flickr_50.png',   alt: 'MAPC Flickr',   target: "_blank"
 
 
-        %div.col-sm-3.col-sm-offset-0.col-xs-12.col-xs-offset-1.links
-          %h5 Find Data
-          %ul
-            %li= link_to 'Map Gallery',           static_maps_path
-            %li= link_to 'Visualization Gallery', visualizations_path
-            %li= link_to 'Data Catalog',          datasets_path
-            %li= link_to 'Make a Visualization',  new_visualization_path
-      
-
-        %div.col-sm-3.col-sm-offset-0.col-xs-12.col-xs-offset-1.links
-          %h5 Snapshots & Profiles
-          %ul
-            %li= link_to 'Cities & Towns'
-            %li= link_to 'Subregions'
-
-
-        %div.col-sm-3.col-sm-offset-0.col-xs-12.col-xs-offset-1.links
-          %h5 Learning Community
-          %ul
-            -# = render partial: 'pages/link', collection: community_pages, as: :page
-
-          %h5 Resources
-          %ul
-            -# = render partial: 'pages/link', collection: resources_pages, as: :page
-
-  %hr
-  %div.row-lower
-    -# - @institution.branding.logos.each do |logo|
-      -# %div.col-xs-12{class: "col-sm-#{(12 / @institution.branding.logos.count)}"}
-        -# %span.helper
-        -# = image_tag logo['src'], alt: logo['alt'], class: 'aligner'
-
-  %div.row
-    %div.col-xs-12
-      %center
-        %p
-          %a{href: 'http://bit.ly/1pWTuru', target: '_blank'}
-            60 Temple Place Boston, MA 02111
-          %a{href: 'tel: 617-451-2770'}
-            617-451-2770
-          %a{href: 'mailto:info@datacommon.org'}
-            hello@datacommon.org
+    .page-header
+    .row.lower
+      .col-xs-12
+        %p.center
+          %a{href: 'http://mapc.org', target: '_blank'}       MAPC            
+          %a{href: 'http://bit.ly/1pWTuru', target: '_blank'} 60 Temple Place Boston, MA 02111            
+          %a{href: 'tel: 617-451-2770'}                       617-451-2770            
+          %a{href: 'mailto:info@datacommon.org'}              hello@datacommon.org            

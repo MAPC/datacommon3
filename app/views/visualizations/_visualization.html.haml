@@ -1,9 +1,8 @@
 .col-md-4.col-sm-6.col-xs-12.preview-1
   = link_to visualization do
-    .title
-      -# TODO: This nested class is a problem.
-      .preview-1{style: "background-image: url('#{visualization.image.url(:featured)}');"}
+    .preview-1{style: "background-image: url('#{visualization.image.url(:featured)}');"}
+      .title
         %h3= visualization.title
-        .abstract
-          = link_to visualization do
-            = truncate(visualization.abstract, length: 400) << "... Read More"
+      .abstract
+        = link_to visualization do
+          = truncate(visualization.abstract, length: 400) << "... Read More"

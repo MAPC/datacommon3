@@ -1,9 +1,8 @@
 .col-md-4.col-sm-6.col-xs-12.preview-1
   = link_to static_map.map.url do
-    .title
-      -# TODO: This nested class is a problem.
-      .preview-1{style: "background-image: url('#{static_map.map.url(:thumbnail)}');"}
+    .preview-1{style: "background-image: url('#{static_map.map.url(:thumbnail)}');"}
+      .title
         %h3= static_map.title
-        .abstract
-          = link_to static_map.map.url do
-            = truncate(static_map.abstract, length: 400) << "... Read More"
+      .abstract
+        = link_to static_map.map.url do
+          = truncate(static_map.abstract, length: 400) << "... Read More"
