@@ -21,6 +21,18 @@ $education: #46AD24;
   background-color: $dc-blue;
 }
 
+// Override Bootstrap margin
+
+.navbar {
+  margin-bottom: 0px !important; 
+}
+
+.navbar {
+  margin-bottom: 0px !important; 
+}
+
+// End override
+
 .navbar-nav > li > a {
   letter-spacing: 0.03em;
   color: #EEE !important;

@@ -1,18 +1,15 @@
 - if params[:page].nil? || params[:page] == 1
-  %h2 Discover and download data about the region.
-
-%hr
-
-%p.viewing
-  You are viewing
-  = succeed '.' do
-    = render partial: 'shared/select', object: 'topic', as: :object
-
-.page-header
   %h1 Data Catalog
   %h2.page-header Discover and download data about the region.
 - else
   %h2.page-header Data Catalog
+
+%hr
+
+%p.viewing
+  Topic:
+  = succeed '.' do
+    = render partial: 'shared/select', object: 'topic', as: :object
 
 #datasets
   = render partial: 'datasets/dataset', collection: @datasets.records

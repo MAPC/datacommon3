@@ -1,7 +1,7 @@
 module InstitutionsHelper
 
-  def recent_visualizations
-    Visualization.recent(4)
+  def recent_visualizations(count=4)
+    Visualization.recent(count)
   end
 
   def data_sources_list(visualization)

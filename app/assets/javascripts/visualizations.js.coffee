@@ -6,8 +6,6 @@
 
 $(document).on 'ready', ->
 
-  console.log('ready')
-
   form_selectors = "form.new_visualization, form.edit_visualization"
   window.cancel_timeout = undefined
 

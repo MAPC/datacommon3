@@ -40,6 +40,10 @@ module ApplicationHelper
     %w(a e i o u).include?(word[0].downcase) ? "an #{word}" : "a #{word}"
   end
 
+  def region_name_or(default='')
+    @institution.try(:short_name) || default
+  end
+
   
   def avatar_url(user)
     if user.avatar_url.present?
@@ -50,6 +54,14 @@ module ApplicationHelper
       gravatar_id = Digest::MD5.hexdigest(email)
       "http://gravatar.com/avatar/#{gravatar_id}.png?s=75"
     end
+  end
+
+  def layer_count
+    Dataset.count
+  end
+
+  def visualization_count
+    Visualization.count
   end
 
   private

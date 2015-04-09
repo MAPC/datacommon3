@@ -10,10 +10,12 @@
     = csrf_meta_tags
   %body
 
-    .row.featured
-      = yield :featured
-    
     #flash= render 'shared/flash'
+
+    - if content_for?(:featured)
+      .row.featured
+        = yield :featured
+    
     .container
       .row
         = render 'layouts/header'

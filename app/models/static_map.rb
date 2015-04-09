@@ -1,6 +1,8 @@
 class StaticMap < ActiveRecord::Base
   self.table_name = 'mbdc_calendar'
 
+  before_validation :update_legacy_fields
+
   has_and_belongs_to_many :data_sources,
     join_table: :mbdc_calendar_sources,
     foreign_key:             :calendar_id,
@@ -69,6 +71,13 @@ class StaticMap < ActiveRecord::Base
       field :issue_areas
     end
   end
+
+  private
+
+    def update_legacy_fields
+      self.pdf_page  = ""
+      self.thumbnail = ""
+    end
 
 
 end

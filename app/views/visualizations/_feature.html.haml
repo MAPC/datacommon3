@@ -1,16 +1,22 @@
--# %div
--#   %h3= link_to feature.title, feature
--#   %p
--#     by
--#     #{link_to feature.owner} | Year(s) #{feature.year}
--#   = image_tag feature.image.url, id: "vis-#{feature.id}", class: "feature"
--#   %p= data_sources_list feature
--#   %p= issue_areas_list  feature
+.feature
+  %h3= link_to feature.title, feature
+  = image_tag feature.image.url, id: "#{feature.id}", class: "visual feature"
+  %p
+    by
+    = link_to feature.owner, profile_path(feature.owner)
+    &bull;
+    = succeed ':' do
+      = "Year".pluralize(feature.years.length)
+    = feature.years.join(', ')
+    &bull;
+    = issue_areas_list  feature
+    &bull;
+    = data_sources_list feature
+    
 
--# :javascript
+:javascript
 
--#   $(document).on('ready', function () {
--#     console.log('ready');
--#     DC.synchEmbedWeaveOnClick("#vis-#{feature.id}", #{feature.sessionstate});
--#   });
--#   
+  $(document).on('ready', function () {
+    embed_on_click('.feature img');
+  });
+  

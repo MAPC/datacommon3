@@ -22,8 +22,8 @@
               %li= link_to 'My Profile', current_user
               %li= link_to 'Sign out', signout_path, method: 'delete'
         - else
-          %li= link_to 'Log in',  login_path,  id: 'btn-login'
           %li= link_to 'Sign up', signup_path, id: 'btn-signup', class: 'btn btn-primary'
+          %li= link_to 'Log in',  login_path,  id: 'btn-login'
 
       %ul.nav.navbar-nav
         %li= link_to 'Data', datasets_path      
@@ -46,8 +46,9 @@
             Resources
             %b.caret
           %ul.dropdown-menu
-            %li= link_to 'Workshops', '#'
+            %li= link_to 'Workshops', '/workshops'
             %li= link_to 'Blog',      'http://uncommondata.org/', target: '_blank'
+            %li= link_to 'Tutorials', '/tutorials'
 
       = form_tag '/search', method: :get, data: {role: 'search'}, class: "navbar-form navbar-left" do
         .input-group

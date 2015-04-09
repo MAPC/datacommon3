@@ -1,9 +1,9 @@
-.col-md-3.col-sm-6.col-xs-12.vis-preview
-  =link_to vis do
-    = image_tag vis.image.url(:gallery), alt: vis.title
-    - if vis.private?
+.col-md-3.col-sm-6.col-xs-12.visual.thumbnail
+  = link_to visual do
+    = image_tag visual.image.url(:gallery), alt: visual.title
+    - if visual.private?
       %span.badge Private
-    %p.vis-title= vis.title
+    %p.visual.title= visual.title
   %p.byline
     by
-    = link_to vis.owner, vis.owner
+    = link_to visual.owner, visual.owner

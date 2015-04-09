@@ -1,70 +1,66 @@
 - content_for :featured do
   %h2 Good data. Better region.
   %p
-    If you need data, visualizations, or maps about the Metro Boston region, you've come to the right place.
-  %p
-    This is placeholder content.
-  
+    If you need data, visualizations, or maps about the #{region_name_or('')} region, you've come to the right place.
 
-.row
-  .col-sm-3.col-xs-12.explanation
-    = link_to datasets_path do
-      %h5.explanation.data-catalog          Data Catalog
-      = image_tag 'explanations/data-catalog.png', class: 'explanation-icon'
-    %p
-      Download over 300 datasets, available in tabular and spatial formats, from the 
-      = succeed '.' do
-        = link_to 'Data Catalog', datasets_path
-      Search for data by topic, dataset, or keyword, and download for whatever geography you need.
+  .row.explanation
+    .col-lg-3.col-sm-6.col-xs-12.explanation
+      = link_to datasets_path do
+        %h5.explanation.data-catalog          Data Catalog
+        = image_tag 'explanations/data-catalog-sm.png', class: 'explanation-icon'
+      %p
+        Browse, search, and download #{layer_count} spatial and tabular datasets from the 
+        = succeed '.' do
+          = link_to 'Data Catalog', datasets_path
 
-  .col-sm-3.col-xs-12.explanation
-    = link_to municipalities_path do
-      %h5.explanation.community-snapshots   Community Snapshots
-      = image_tag 'explanations/community-snapshots.png', class: 'explanation-icon'
-    %p
-      Find topical data by municipality or subregion in 
-      = succeed '.' do
-        = link_to 'Community Snapshots', municipalities_path
-      Essentially a dashboard about housing, education, the arts, and more, tailored to your community.
+    .col-lg-3.col-sm-6.col-xs-12.explanation
+      = link_to municipalities_path do
+        %h5.explanation.community-snapshots   Community Snapshots
+        = image_tag 'explanations/community-snapshots-sm.png', class: 'explanation-icon'
+      %p
+        View dashboards on housing, education, the arts, and more, tailored to your town in 
+        = succeed '.' do
+          = link_to 'Community Profiles', snapshots_path
 
-  .col-sm-3.col-xs-12.explanation
-    = link_to visualizations_path do
-      %h5.explanation.visualization-gallery Visualization Gallery
-      = image_tag 'explanations/visualization-gallery.png', class: 'explanation-icon'
-    %p
-      Access hundreds of user-made maps, charts, tables and more in the 
-      = succeed '.' do
-        = link_to 'Visualization Gallery', visualizations_path
-      Explore these visualizations by topic area, dataset, or keyword, and learn how to make your own.
+    .col-lg-3.col-sm-6.col-xs-12.explanation
+      = link_to visualizations_path do
+        %h5.explanation.visualization-gallery Visualization Gallery
+        = image_tag 'explanations/visualization-gallery-sm.png', class: 'explanation-icon'
+      %p
+        Explore #{visualization_count} user-made maps, charts, and more in the 
+        = succeed ',' do
+          = link_to 'Gallery', visualizations_path
+        and learn how to
+        = succeed '.' do
+          - if signed_in?
+            = link_to 'make your own', new_visualization_path
+          - else
+            make your own
 
-  .col-sm-3.col-xs-12.explanation
-    = link_to static_maps_path do
-      %h5.explanation.map-gallery           Map Gallery
-      = image_tag 'explanations/map-gallery.png', class: 'explanation-icon'
-    %p
-      View mapping and data projects completed by regional planning agencies in the
-      = succeed '.' do
-        = link_to 'Map Gallery', static_maps_path
-      For beginner data users or regional planning enthusiests, this is a great way to learn more about work going on around the region.
+    .col-lg-3.col-sm-6.col-xs-12.explanation
+      = link_to static_maps_path do
+        %h5.explanation.map-gallery           Map Gallery
+        = image_tag 'explanations/map-gallery-sm.png', class: 'explanation-icon'
+      %p
+        View maps and data projects from around #{region_name_or('the region')} in the
+        = succeed '.' do
+          = link_to 'Map Gallery', static_maps_path
+        This is a great way to learn more about work going on around the region.
 
+%hr
 
-.row
+.row.the-row
   .col-md-8.col-sm-12
     %h1 Featured Visualization
-    = image_tag "https://unsplash.it/700/432?image=618"
-
-    -# = render partial: 'visualizations/feature', locals: { feature: @feature }
+    -# = image_tag "https://unsplash.it/700/432?image=618"
+    = render partial: 'visualizations/feature', locals: { feature: Visualization.first }
   .col-md-4.col-sm-12
-    %h1.center Visualiations by Topic
-    -# .list-group
-      -# = render partial: 'topics/topic',  collection: topics, locals: { path: 'visualizations' }
+    %h1 Visualizations by Topic
     .icon-center-group
-      = render partial: 'topics/square', collection: topics, as: :topic, locals: { path: 'visualizations' }
+      = render partial: 'topics/topic', collection: topics, as: :topic, locals: { path: 'visualizations' }
 
 .row
   .col-xs-12
     .page-header
     %h1 Recent Visualizations
-    - 4.times do
-      .spaced= image_tag "https://unsplash.it/200/115?image=618"  
-    -# = render partial: 'visualizations/thumbnail', collection: recent_visualizations, as: :vis
+    = render partial: 'visualizations/thumbnail', collection: recent_visualizations, as: :visual

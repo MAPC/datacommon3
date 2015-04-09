@@ -80,6 +80,10 @@ class Visualization < ActiveRecord::Base
     owner.name
   end
 
+  def years
+    year.split(',')
+  end
+
   def abstract
     read_attribute(:abstract).presence || "No abstract."
   end
@@ -87,6 +91,7 @@ class Visualization < ActiveRecord::Base
   def to_s
     title
   end
+
 
   alias_method :owner, :user
 
