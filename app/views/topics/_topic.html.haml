@@ -1,5 +1,5 @@
 - path_name = path.presence ? "#{path}_path" : 'visualizations_path'
 
 %a.list-group-item.topic{href: send(path_name, topic: topic.slug)}
-  .icon{class: "icon icon-#{topic.slug} #{topic.slug}"}
-  #{topic}
+  .icon{class: "icon-#{topic.slug} #{topic.slug}"}
+  %span= topic

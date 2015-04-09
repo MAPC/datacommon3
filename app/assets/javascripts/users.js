@@ -1,7 +1,6 @@
 $(document).on('ready', function () {
   
   $("#new_user").validate({
-    debug: true,
     rules: {
       "user[username]":   {
         required:  true,

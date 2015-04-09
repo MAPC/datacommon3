@@ -197,12 +197,24 @@ input.valid, textarea.valid, select.valid {
   }
 
 
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1200px;
+
+
 .featured {
 
   h2    { 
     font-size: 300%;
     background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 1);
+    padding: 0 60px;
+    @media (min-width: 418px) and (max-width: 555px) {
+      padding: 0 85px;
+    }
+    @media (max-width: $screen-md) {
+      margin-top: 0px;
+    }
   }
 
   p.top { 
@@ -210,6 +222,7 @@ input.valid, textarea.valid, select.valid {
 
     background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+    padding: 0 40px;
   }
 
   display: block;
@@ -350,9 +363,19 @@ div.col-md-7.col-md-offset-1.col-sm-12 {
 /*  -- list style */
 
 a.list-group-item {
+  margin-top: 1px;
   font-family: Rokkitt;
   font-size: 1.3em;
   text-align: left;
+  padding: 4px;
+  padding-bottom: 3px;
+  margin-bottom: 1px;
+
+  &.topic span {
+    display: inline-block;
+    position: relative;
+    top: -7px;
+  }
   
   border: none;
   border-radius: 30px;
@@ -362,8 +385,6 @@ a.list-group-item {
   &:last-child {
     border-radius: 30px;
   }
-
-  padding: 7px;
 
   .icon {
     margin-right: 10px;
@@ -399,12 +420,26 @@ a.topic.square {
 // VISUALIZATIONS, THUMBNAILS
 
 .visual.thumbnail {
-  border: none;
+  position:   relative;
   text-align: center;
-  img {
-    font-size:  15px;
-    width: auto;
-    height:     120px;
+
+  border: none;
+
+  .inner {
+    width: 100%;
+    height: 120px;
+    border: 1px solid #AAA;
+
+    &:hover { 
+      border-color: #555;
+    }
+
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size:    cover;
+    -o-background-size:      cover;
+    background-size:         cover;
   }
 }
 
@@ -531,16 +566,10 @@ Copyright (c) 2015 Daniel Eden
 }
 
 .preview-1 {
-  // max-width: 390px;
-  // max-height: 375px;
-  
+ 
   display:block;
   overflow: hidden;
   padding: 10px;
-  // opacity: 1;
-  // position: absolute;
-  // top: -5px;
-  // left: -15px
   width: auto;
   min-height: 325px;
   background-position: center;

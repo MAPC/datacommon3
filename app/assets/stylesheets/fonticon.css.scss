@@ -26,13 +26,13 @@
 
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
-  font-family: "topics" !important;
-  font-style: normal !important;
-  font-weight: normal !important;
-  font-variant: normal !important;
-  text-transform: none !important;
-  speak: none;
-  line-height: 1;
+  font-family:    "topics" !important;
+  font-style:     normal   !important;
+  font-weight:    normal   !important;
+  font-variant:   normal   !important;
+  text-transform: none     !important;
+  speak:          none;
+  line-height:    1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -41,11 +41,10 @@
   width:          40px;
   height:         40px;
   border-radius:  50%;
-  display:        inline-block;
+  // display:        inline-block;
   font-size:      1.4em;
   text-align:     center;
   padding-top:    2px;
-  // vertical-align: middle;
   line-height:    50px;
 }
 

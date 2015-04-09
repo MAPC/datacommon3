@@ -3,26 +3,14 @@
 %h2.page-header
   Explore materials developed by Regional Planning Commissions – the information you are looking for may already exist.
 
-%p.viewing
-  You are viewing
-  = render partial: 'shared/select', object: 'topic', as: :object
-  and
-  = succeed '.' do
-    = render partial: 'shared/select', object: 'data_source', as: :object
+#visuals
+  = render @maps
+  - if @maps.empty?
+    %p
+      There are no maps that match your selections. Maybe try another selection, or
+      = link_to 'create one yourself!', new_visualization_path
 
-= render @maps
-
-.row.center
-  .col-sm-12
-    = paginate @maps, window: 1, outer_window: 2
-
-- if @maps.empty?
-  %p
-    There are no maps that match your selections. Maybe try another selection, or
-    = link_to 'create a data visualization and map of your own.', new_visualization_path
-    Alternately, you can
-    = link_to "contact MAPC to request a map.", "mailto:ewallace@mapc.org?subject=Map Request"
-
+= paginate @maps, window: 1, outer_window: 1
 
 :javascript
   $('.chosen-select').on('change', function () {

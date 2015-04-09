@@ -1,6 +1,6 @@
 .col-md-3.col-sm-6.col-xs-12.visual.thumbnail
   = link_to visual do
-    = image_tag visual.image.url(:gallery), alt: visual.title
+    .inner{style: "background-image: url('#{visual.image.url(:featured)}');"}
     - if visual.private?
       %span.badge Private
     %p.visual.title= visual.title

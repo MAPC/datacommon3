@@ -6,7 +6,7 @@ module Features
       fill_in 'First name',    with: 'First'
       fill_in 'Last name',     with: 'Last'
       fill_in 'Email address', with: email
-      fill_in 'Username',      with: 'fast'
+      fill_in 'Username',      with: 'flastname'
       fill_in 'Password',      with: password
       fill_in 'Password confirmation', with: password
       click_button 'Sign up'
