@@ -248,80 +248,8 @@ $screen-lg: 1200px;
   // 601 603 617 670
 }
 
-.row.explanation {
-  position: relative;
-  top: 97px;
-  padding: 20px 35px 0;
-}
-
-.explanation { 
-  // opacity: 0.8;
-  &:hover { 
-    opacity: 1;
-  }
-  a { 
-    text-decoration: none !important;
-  }
-  p { 
-    text-align: justify;
-    padding-top: 12px;
-    color: #111111;
-    text-shadow: none;
-  }
-  h5 {
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 1.4em;
-    letter-spacing: 0.05em;
-    text-shadow: none;
-    color: white;
-    height: auto;
-    padding: 8px;
-    overflow: hidden;
-  }
-}
-
-img.explanation-icon {
-  display: block;
-  float: left;
-  margin: 0 15px 0 4px;
-  max-width: 155px;
-  max-height: 160px;
-}
-
-
-.data-catalog {
-  background-color: $demographics;
-}
-.community-snapshots {
-  background-color: $economy;
-}
-.visualization-gallery {
-  background-color: $education;
-}
-.map-gallery {
-  background-color: $public-safety;
-}
-
-
-
-.row.the-row {
-  margin-top: 80px;
-}
-
-
-.featured-text {
-  background:     rgba(0,0,0,0.5);
-  padding-top:    20px;
-  padding-bottom: 30px;
-}
-
-img.feature {
-  width:  100%;
-  height: auto;
-  padding-bottom: 10px;
-}
+@import "front/explanations";
+@import "front/featured";
 
 
 .vis-main {
@@ -340,82 +268,11 @@ img.feature {
   min-height: 40px;
 }
 
-// FEATURED VIZUALIZATION //
-div.col-xs-10.col-xs-offset-1 {
-  width: 1170px;
-  margin: 0px
-}
-
-div.col-md-7.col-md-offset-1.col-sm-12 {
-  margin: 0px;
-}
-
-// TOPIC LIST //
-
-.icon-center-group {
-  text-align: center;
-  margin:     0 auto;
-  display:    block;
-  // max-width: 95%;
-}
 
 
-/*  -- list style */
-
-a.list-group-item {
-  margin-top: 1px;
-  font-family: Rokkitt;
-  font-size: 1.3em;
-  text-align: left;
-  padding: 4px;
-  padding-bottom: 3px;
-  margin-bottom: 1px;
-
-  &.topic span {
-    display: inline-block;
-    position: relative;
-    top: -7px;
-  }
-  
-  border: none;
-  border-radius: 30px;
-  &:first-child {
-    border-radius: 30px;
-  }
-  &:last-child {
-    border-radius: 30px;
-  }
-
-  .icon {
-    margin-right: 10px;
-  }
-
-  div {
-    display: inline-block;
-    // padding-left: 5px;
-  }
-}
+@import "global/topics";
 
 
-/*  -- square style */
-
-div.topic.square {
-  display: block; 
-  width: 110px; 
-  height: 110px; 
-  float: left;
-}
-
-a.topic.square {
-  font-family: Rokkitt;
-  .icon {
-    margin: 0 auto;
-    padding-bottom: 40px;
-  }
-  text-align: center;
-  font-size: 1.3em;
-  line-height: 1;
-}
 
 // VISUALIZATIONS, THUMBNAILS
 
@@ -836,6 +693,7 @@ img.aligner {
   background-color: $dc-blue;
   margin-top: 20px;
   padding: 15px;
+  
   a {
     color: #EEE;
     &:hover {
@@ -843,6 +701,13 @@ img.aligner {
       text-decoration: none;
     }
   }
+
+  img.logo { 
+    opacity:     0.9;
+    max-width: 110px;
+    &:hover { opacity: 1; }
+  }
+
 }
 
 .footer .lower {

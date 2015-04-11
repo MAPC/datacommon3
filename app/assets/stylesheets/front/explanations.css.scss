@@ -1,0 +1,76 @@
+/*
+
+    Front page: Explanations
+    
+    - Containing row
+    - Icon sizes and colors
+    - Text explanations
+
+*/
+
+
+// need predefined colors
+@import "global/colors";
+
+
+.row.explanation {
+  position: relative;
+  top:      97px;
+
+  padding:  20px 35px 0;
+}
+
+.explanation { 
+  // opacity: 0.8;
+  
+  &:hover { opacity: 1; }
+  
+  a { 
+    // Prevent the headers from being underlined
+    text-decoration: none !important;
+  }
+
+  p { 
+    text-align:  left;  // Justiyfing looked weird
+    padding-top: 12px;
+    text-shadow: none;
+    color:    #111111;
+  }
+
+  h5 {
+    padding: 8px;
+    height: auto;
+    color: white;
+    
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.4em;
+
+    letter-spacing: 0.05em;
+
+    text-align: center;
+    text-shadow: none;
+    text-transform: uppercase;
+
+    overflow: hidden;
+  }
+}
+
+
+// Sizing and positioning the image
+img.explanation-icon {
+  display: block;
+  float:    left;
+  
+  max-width: 140px;
+  max-height: 92px;
+
+  margin: 0 15px 0 4px;
+}
+
+
+// Background colors match icons
+
+.data-catalog          { background-color: $demographics;  }
+.community-snapshots   { background-color: $economy;       }
+.visualization-gallery { background-color: $education;     }
+.map-gallery           { background-color: $public-safety; }

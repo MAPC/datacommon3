@@ -25,21 +25,22 @@
         %ul
           -# = render partial: 'pages/link', collection: about_pages, as: :page
           %li.social-icon
-            = link_to "https://www.facebook.com/MAPCMetroBoston" do
-              = image_tag 'facebook_50.png', alt: 'MAPC Facebook', target: "_blank"
+            = link_to "https://www.facebook.com/MAPCMetroBoston", target: "_blank" do
+              = image_tag 'facebook_50.png', alt: 'MAPC Facebook'
           %li.social-icon
-            = link_to "http://twitter.com/MAPCMetroBoston" do
-              = image_tag 'twitter_50.png',  alt: 'MAPC Twitter',  target: "_blank"
+            = link_to "http://twitter.com/MAPCMetroBoston", target: "_blank" do
+              = image_tag 'twitter_50.png',  alt: 'MAPC Twitter'
           %li.social-icon
-            = link_to "https://www.flickr.com/photos/44747327@N04/" do
-              = image_tag 'flickr_50.png',   alt: 'MAPC Flickr',   target: "_blank"
+            = link_to "https://www.flickr.com/photos/44747327@N04/", target: "_blank" do
+              = image_tag 'flickr_50.png',   alt: 'MAPC Flickr'
 
 
     .page-header
     .row.lower
       .col-xs-12
         %p.center
-          %a{href: 'http://mapc.org', target: '_blank'}       MAPC            
-          %a{href: 'http://bit.ly/1pWTuru', target: '_blank'} 60 Temple Place Boston, MA 02111            
-          %a{href: 'tel: 617-451-2770'}                       617-451-2770            
-          %a{href: 'mailto:info@datacommon.org'}              hello@datacommon.org            
+          = link_to 'http://mapc.org', target: '_blank' do
+            = image_tag 'logos/mapc.png', alt: 'MAPC Logo', class: 'logo'
+          = link_to '60 Temple Place Boston, MA 02111', 'http://bit.ly/1pWTuru', target: '_blank'
+          = link_to '617-451-2770', 'tel: 617-451-2770'
+          = link_to 'hello@datacommon.org', 'mailto:info@datacommon.org'

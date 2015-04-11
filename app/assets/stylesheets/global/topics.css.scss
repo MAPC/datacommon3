@@ -1,0 +1,80 @@
+/*
+
+    Global: Topics (Issue Areas)
+
+      CSS for topic partials and their containers
+
+    - List-style
+    - Square-style
+
+*/
+
+
+
+/*    List-style    */
+
+// List
+
+.icon-center-group {
+  display:    block;
+  margin:     0 auto;
+  text-align: center;
+}
+
+
+// List items
+
+a.list-group-item {
+  margin-top:     1px;
+  margin-bottom:  1px;
+
+  padding:        4px;
+  padding-bottom: 3px;
+
+  font-family: Rokkitt;
+  font-size:   1.3em;
+  text-align:  left;
+  
+  border:        none;
+  border-radius: 30px; // Rounded corners
+
+  // Override default that makes the first
+  //   and last children different.
+  &:first-child { border-radius: 30px; }
+  &:last-child  { border-radius: 30px; }
+
+  div   { display: inline-block; }
+  .icon { margin-right: 10px; }
+
+  &.topic span {
+    display:  inline-block;
+    position: relative;
+    top:      -7px;
+  }
+  
+}
+
+
+/*    Square-style    */
+
+// TODO: This doesn't yet work very well
+// and the container isn't defined.
+div.topic.square {
+  display: block;
+  float:   left;
+  
+  width:  110px; 
+  height: 110px; 
+  
+}
+
+a.topic.square {
+  font-family: Rokkitt;
+  .icon {
+    margin:       0 auto;
+    padding-bottom: 40px;
+  }
+  text-align: center;
+  font-size:   1.3em;
+  line-height: 1;
+}
