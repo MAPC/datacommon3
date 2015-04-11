@@ -29,23 +29,8 @@ module InstitutionScope
       # Return the id, regardless of whether given an
       # institution or its id.
       def id_for(institution_or_id)
-        return null_institution.id if institution_or_id.nil?
+        return Institution.null.id if institution_or_id.nil?
         institution_or_id.try(:id) || institution_or_id
-      end
-
-      # Memoize null_institution
-      def null_institution
-        @null_institution ||= build_null_institution
-      end
-
-      # Build the null_institution as a black hole mimic
-      # with id=NULL to make the query in the scope work.
-      def build_null_institution
-        Naught.build { |b|
-          b.black_hole
-          b.mimic Institution
-          def id ; "NULL" ; end
-        }.new
       end
     
   end

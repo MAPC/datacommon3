@@ -3,7 +3,6 @@ class Institution < ActiveRecord::Base
   has_one  :branding
 
   has_many :heros
-  # has_many :layers
   has_many :pages
   has_many :static_maps
   has_many :visualizations
@@ -15,10 +14,9 @@ class Institution < ActiveRecord::Base
   validates :short_name, presence: true
   validates :subdomain,  presence: true
   
-  # retina!
   has_attached_file :logo, styles: { favicon: ['16x16#',  :png],
-                                     header:  ['245x80>', :png] }
-                           # retina: { quality: 80 }
+                                     header:  ['160x52>', :png],
+                                     large:   ['245x80>', :png] }
 
   validates :logo_file_name, presence: true
   validates_attachment_content_type :logo, content_type: /\Aimage\/.*\Z/
@@ -34,6 +32,11 @@ class Institution < ActiveRecord::Base
 
   def featured_visualization
     visualizations.featured.first # was #sample not #first
+  end
+
+  def self.null
+    # Memoize null_institution
+    @null_institution ||= build_null_institution
   end
 
   # alias_attribute :muni_id, :region_id
@@ -81,6 +84,18 @@ class Institution < ActiveRecord::Base
       field :logo, :paperclip
     end
   end
+
+  private
+
+    # Build the null_institution as a black hole mimic
+    # with id=NULL to make the query in the scope work.
+    def self.build_null_institution
+      Naught.build { |b|
+        b.black_hole
+        b.mimic Institution
+        def id ; "NULL" ; end
+      }.new
+    end
 
   
 end

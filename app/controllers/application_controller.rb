@@ -9,16 +9,7 @@ class ApplicationController < ActionController::Base
   def load_institution
     subdomain = request.subdomain.split('.').first
     logger.debug "SUBDOMAIN: #{subdomain.inspect}"
-    @institution = Institution.find_by(subdomain: subdomain) || null_institution
-  end
-
-  # Memoize the null institution
-  def null_institution
-    @null_institution ||= Naught.build { |b| 
-      b.mimic Institution
-      b.black_hole
-      def id ; "NULL" ; end
-    }
+    @institution = Institution.find_by(subdomain: subdomain) || Institution.null
   end
 
   rescue_from CanCan::AccessDenied do |exception|
