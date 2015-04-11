@@ -1,5 +1,6 @@
 class DynamicVisualization < ActiveRecord::Base
   self.table_name = 'snapshots_visualization'
+  self.inheritance_column = nil # The :type column tried to find a STI subclass
 
   before_save :set_legacy_sessionstate
 
@@ -19,6 +20,7 @@ class DynamicVisualization < ActiveRecord::Base
   validates :year,        presence: true, length: { minimum: 4 }
   validates :session_state_file_name, presence: true
   validates :overviewmap, inclusion: { in: [true, false] }
+  validates :type, presence: true #, inclusion: { in: Geography.types } # can't effectively test validation
 
   has_attached_file :session_state
   validates_attachment_content_type :session_state, content_type: /\A.*\/xml\Z/

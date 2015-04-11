@@ -35,6 +35,10 @@ class Geography < ActiveRecord::Base
     name
   end
 
+  def self.types
+    self.pluck(:type).uniq
+  end
+
   private
 
     def get_query_json(q)

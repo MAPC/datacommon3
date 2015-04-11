@@ -4,6 +4,7 @@ FactoryGirl.define do
     title Faker::Commerce.product_name
     year  2009
     overviewmap  false
+    type 'municipality'
 
     session_state_file_name    { "#{title.parameterize}.xml" }
     session_state_content_type "application/xml"
@@ -15,6 +16,10 @@ FactoryGirl.define do
       session_state_content_type nil
       session_state_file_size    nil
       session_state_updated_at   nil
+    end
+
+    trait :subregion do
+      type 'subregion'
     end
   end
 

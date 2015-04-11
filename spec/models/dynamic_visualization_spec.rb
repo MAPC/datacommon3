@@ -24,6 +24,12 @@ describe DynamicVisualization do
     expect(build(:dynamic_visual, overviewmap: '')).to_not be_valid
   end
 
+  pending 'requires a type' do # it just doesn't want to relate
+    allow(Geography).to receive(:types).and_return(["municipality", "subregion"])
+    expect(build(:dynamic_visual, type: '')).to_not be_valid
+    expect(build(:dynamic_visual, type: 'slubregion')).to_not be_valid
+  end
+
   it 'requires at least a 4-digit year' do
     expect(build(:dynamic_visual, year: '')).to_not be_valid
     expect(build(:dynamic_visual, year: '09')).to_not be_valid

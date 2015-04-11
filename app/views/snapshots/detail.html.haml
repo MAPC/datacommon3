@@ -11,9 +11,12 @@
 
 .row
   - @snap.visuals.each do |visual|
-    .col-md-4.col-sm-6.col-xs-12
-      .snapshot{class: @snap.geography.type}
-        = render partial: 'visualizations/preview', object: visual, as: :visual, locals: { geography: @snap.geography }
+    - if @snap.type == 'municipality'
+      .col-md-4.col-sm-6.col-xs-12
+    - elsif @snap.type == 'subregion'
+      .col-xs-12
+        .snapshot{class: @snap.type}
+          = render partial: 'visualizations/preview', object: visual, as: :visual, locals: { geography: @snap.geography }
 
 :javascript
 
