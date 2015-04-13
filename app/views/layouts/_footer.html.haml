@@ -37,10 +37,12 @@
 
     .page-header
     .row.lower
-      .col-xs-12
-        %p.center
+      .col-sm-1.col-xs-12
+        .center
           = link_to 'http://mapc.org', target: '_blank' do
             = image_tag 'logos/mapc.png', alt: 'MAPC Logo', class: 'logo'
+      .col-sm-10.col-xs-12
+        %p.center
           = link_to '60 Temple Place Boston, MA 02111', 'http://bit.ly/1pWTuru', target: '_blank'
           = link_to '617-451-2770', 'tel: 617-451-2770'
           = link_to 'hello@datacommon.org', 'mailto:info@datacommon.org'

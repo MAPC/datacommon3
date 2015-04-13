@@ -556,22 +556,6 @@ ul.none {
 }
 
 
-// SNAPSHOTS
-
-/*
-.snapshot.municipality {
-  position: relative;
-  height: 350px;
-  margin-top: 50px;
-  padding: 0 0 40px 0;
-  text-align: center;
-}
-.snapshot.subregion {
-  width:  880px;
-  height: 460px;
-}
-*/
-
 ul.caption {
   list-style:     none;
   
@@ -591,21 +575,47 @@ p.sources {
 }
 
 .visual.preview {
-  width:  333px;
-  height: 255px;
-  // padding-bottom: -5px;
-}
 
-.visual.preview img {
-  display: block;
-  width:   inherit;
-  height:  inherit;
+  &.municipality {
+    min-width:  333px;
+    min-height: 255px;
+  }
+
+  &.subregion {
+    min-width:  880px;
+    min-height: 450px;
+  }
+
+  img, object {
+    display: block;
+    min-width:   inherit;
+    min-height:  inherit;
+    width:   inherit;
+    height:  inherit;
+  }
 }
 
 .snapshot > .topic.title {
-  // font-size: 1.3em;  // Doesn't really do anything.
-  margin:     30px 0 10px 0;
+  margin:  30px 0 10px 0;
 }
+
+
+
+// SNAPSHOTS
+
+/*
+.snapshot.municipality {
+  position: relative;
+  height: 350px;
+  margin-top: 50px;
+  padding: 0 0 40px 0;
+  text-align: center;
+}
+.snapshot.subregion {
+  width:  880px;
+  height: 460px;
+}
+*/
 
 // .snapshot-preview {
 //   margin: 20px 0px;
@@ -712,6 +722,11 @@ img.aligner {
 
 .footer .lower {
   margin-top: -8px;
+  p {
+    margin: 15px 0;
+
+    img { margin: 0px; }
+  }
 }
 
 .footer .social-icon {
