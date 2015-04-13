@@ -1,26 +1,23 @@
 %script{type: "text/javascript", src: "http://metrobostondatacommon.org/media/swfobject/swfobject.js"}
 
-%div.col-md-8.col-xs-12.visual
+.col-xs-12.visual.feature
   %h3= @visualization.title
-  %img.feature{id: "#{@visualization.id}", src: @visualization.image.url}
+  %img{id: "#{@visualization.id}", src: @visualization.image.url}
     %p.pre-weave
       %small Click to activate interactive visualization. (Flash required)
 
-%div.col-md-4.col-xs-12.vis-sidebar
-  %div.row
-    %div.col-md-12.col-sm-5.col-xs-12.vis-abstract
+.col-xs-12
+  .row
+    .col-sm-6.col-xs-12
       %p= @visualization.abstract
-    %div.col-md-12.col-sm-5.col-xs-12.vis-owner
+    .col-sm-6.col-xs-12
       %p
         by
         = link_to @visualization.owner, @visualization.owner
       %p= issue_areas_list  @visualization
       %p= data_sources_list @visualization
 
-  %hr
-
-  %div.row
-    %div.col-md-12
+    .col-sm-6.col-xs-12
       - if signed_in?
         - if current_user?(@visualization.owner)
           = link_to 'Edit', edit_visualization_path(@visualization), class: "btn btn-success"

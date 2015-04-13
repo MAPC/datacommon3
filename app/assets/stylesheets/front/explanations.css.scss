@@ -8,16 +8,17 @@
 
 */
 
-
-// need predefined colors
-@import "global/colors";
+@import "global/colors"; // Import predefined colors
 
 
 .row.explanation {
   position: relative;
   top:      97px;
-
   padding:  20px 35px 0;
+
+  @media (max-width: 400px) {
+    top: 17px;
+  }
 }
 
 .explanation { 

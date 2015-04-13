@@ -46,9 +46,11 @@
             Resources
             %b.caret
           %ul.dropdown-menu
-            %li= link_to 'Workshops', '/workshops'
-            %li= link_to 'Blog',      'http://uncommondata.org/', target: '_blank'
-            %li= link_to 'Tutorials', '/tutorials'
+            %li
+              = link_to 'http://www.eventbrite.com/o/mapc-610093971', target: '_blank' do
+                Workshops
+                %span.glyphicon.glyphicon-new-window
+              = link_to 'Blog', 'http://uncommondata.org/'
 
       = form_tag '/search', method: :get, data: {role: 'search'}, class: "navbar-form navbar-left" do
         .input-group

@@ -1,6 +1,6 @@
 .form.vis-form{role: 'form'}
   = form_for @visualization, remote: true, format: :json do |f|
-    .col-md-9.col-sm-12
+    .col-md-9.col-sm-12.feature
 
       - if params[:action] == 'new'
         #new
@@ -11,17 +11,35 @@
 
       .row
         .col-xs-12
-          %h4 Creating a Visualization
-        %ol
-          .col-sm-4.col-xs-12
-            %li Select from the "Tools" menu above to add a visualization type. Examples: Add Map; Add Bar Chart.
-          .col-sm-4.col-xs-12
-            %li
-              Modify the settings by clicking the gear icon in the top left corner. Load data and customize the display of the visualization. Visit the
-              %a{href: '/tutorals'} Tutorials page
-              for further guidance.
-          .col-sm-4.col-xs-12
-            %li Populate attributes on the right with Title, Abstract, Data Sources, etc. before clicking the "Create" button to save your visualization.
+          .panel-group#accordion{role: "tablist", aria: { multiselectable: "true" }}
+            .panel.panel-default
+              .panel-heading#headingOne{role:"tab"}
+                %h4.panel-title
+                  %a{ data: {toggle:"collapse", parent: "#accordion"}, href: "#collapseOne", aria: {expanded: "true", controls: "collapseOne"}}
+                    Visualization Help
+                    %small (click to open)
+              #collapseOne.panel-collapse.collapse{role: "tabpanel", aria: {labelledby: "headingOne"}}
+                .panel-body
+                  %p To get started creating a visualization: 
+                  %ol
+                    .col-sm-4.col-xs-12
+                      %li Select from the "Tools" menu above to add a visualization type. Examples: Add Map; Add Bar Chart.
+                    .col-sm-4.col-xs-12
+                      %li
+                        Modify the settings by clicking the gear icon in the top left corner. Load data and customize the display of the visualization. Visit the
+                        %a{href: '/tutorals'} Tutorials page
+                        for further guidance.
+                    .col-sm-4.col-xs-12
+                      %li Populate attributes on the right with Title, Abstract, Data Sources, etc. before clicking the "Create" button to save your visualization.
+                  .row
+                    .col-xs-12
+                      %p More resources:
+                      %ul
+                        %li= link_to 'Weave Training [PDF]',       'resources/weave-training-2014.pdf',        target: '_blank'
+                        %li= link_to 'Adding Your Own Data [PDF]', 'resources/add-your-own-data.pdf',          target: '_blank'
+                        %li= link_to 'Case Study Steps [PDF]',     'resources/case-study.pdf',                 target: '_blank'
+                        %li= link_to 'Data for Case Study [XLSX]', 'resources/çase-study.xls',                 target: '_blank'
+                        %li= link_to 'Instructional video',        'http://www.youtube.com/embed/Q8E10dy1hR4', target: '_blank'
 
     .col-md-3.col-sm-12
 
@@ -55,8 +73,8 @@
       .form-group
         = f.label      :institution_id
         %br
-        - if institutions_exist
-          = f.collection_select(:institution_id, Institution.all, :id, :short_name)
+        - if institutions_exist?
+          -# = f.collection_select(:institution_id, institutions, :id, :short_name)
         - else
           None
       

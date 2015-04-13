@@ -3,6 +3,7 @@
 -# TODO: DRY it up!
 
 
+- visual = topic.dynamic_visualizations.where(type: @geography.type).first || DynamicVisualization.first
 
 - if @geography.type == 'municipality'
   .col-md-4.col-sm-6.col-xs-12
@@ -12,8 +13,6 @@
           %h4
             = topic
             %span.small view all
-
-      - visual = topic.dynamic_visualizations.where(type: @geography.type).first || DynamicVisualization.first
       = render partial: 'visualizations/preview', object: visual, as: :visual, locals: { geography: @geography, type_class: @geography.type }
 
 - elsif @geography.type == 'subregion'
@@ -24,6 +23,4 @@
           %h4
             = topic
             %span.small view all
-
-      - visual = topic.dynamic_visualizations.where(type: @geography.type).first || DynamicVisualization.first
       = render partial: 'visualizations/preview', object: visual, as: :visual, locals: { geography: @geography, type_class: @geography.type }

@@ -48,8 +48,8 @@ class Visualization < ActiveRecord::Base
   end
 
   def self.featured
-    # TODO: Try: where(:featured)
-    self.where('featured IS NOT NULL').order(:featured)
+    # Default to most recent if there is no featured visualization
+    self.where('featured IS NOT NULL').order(:featured) || self.recent(1)
   end
 
   def self.showing # for use when showing details

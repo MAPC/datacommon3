@@ -1,3 +1,14 @@
+/*
+
+    Featured visualization
+
+      Visualization on the main page
+
+      Difficult to get right: tradeoff between a responsive image
+      and a properly-sized visualization.
+
+*/
+
 .row.the-row {
   margin-top: 80px;
 }
@@ -8,18 +19,16 @@
   padding-bottom: 30px;
 }
 
-img.feature {
-  width:  100%;
+.feature img {
+  width: 100%;
+  max-width: 910px;
   height: auto;
   padding-bottom: 10px;
 }
 
-// FEATURED VISUALIZATION //
-div.col-xs-10.col-xs-offset-1 {
-  width: 1170px;
-  margin: 0px
-}
-
-div.col-md-7.col-md-offset-1.col-sm-12 {
-  margin: 0px;
+.feature object {
+  width: 100%;
+  max-width: 910px;
+  height: 620px;
+  padding-bottom: 10px;
 }

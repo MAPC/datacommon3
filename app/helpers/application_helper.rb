@@ -1,7 +1,11 @@
 module ApplicationHelper
 
-  def institutions_exist
+  def institutions_exist?
     Institution.count > 0
+  end
+
+  def institutions
+    Institution.all
   end
 
   def topics

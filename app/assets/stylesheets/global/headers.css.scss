@@ -1,9 +1,7 @@
 /*  Global: Headers         */
 
-/* ( Global: DataCommon brand colors  TODO: This is already getting out of hand) */
 
-$dc-blue:                   #556C98;
-$dc-green:                  #7AC142; // formerly, #BDD431
+@import "global/colors";
 
 
 $dc-h1:   'Oswald',  sans-serif;  // TODO: May want to order

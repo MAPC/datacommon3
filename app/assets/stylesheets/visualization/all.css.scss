@@ -1,0 +1,89 @@
+/*
+
+    Visualizations
+
+      - Gallery / Thumbnails
+      - Featured
+      - New
+
+*/
+
+
+
+/*
+
+    Show page
+
+      visualizations/show
+
+*/
+
+.vis-main {
+  img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.vis-sidebar {
+  padding-top: 80px;
+}
+
+.vis-abstract {
+  display:   block;
+  min-height: 40px;
+}
+
+
+/*
+
+    Gallery / Thumbnails
+
+      visualizations/index
+
+*/
+
+.visual.thumbnail {
+  position:   relative;
+  text-align: center;
+
+  border: none;
+
+  .inner {
+    width: 100%;
+    height: 120px;
+    border: 1px solid #AAA;
+
+    &:hover { 
+      border-color: #555;
+    }
+
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size:    cover;
+    -o-background-size:      cover;
+    background-size:         cover;
+  }
+}
+
+.visual .title {
+  display: block;
+  max-width: 100%;
+  font-size: 1.1em;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+#new {
+  border: 1px solid #DDD;
+  border-top: none;
+  width:  100%;
+  height: 500px;
+}
+
+
+p.viewing {
+  margin-top:    10px;
+  margin-bottom: 40px;
+}

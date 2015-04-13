@@ -1,0 +1,70 @@
+/*
+
+    Style used for visualization and static map partials
+
+*/
+
+
+@import "contrib/animate";
+
+.preview-1 {
+ 
+  display:block;
+  overflow: hidden;
+  padding: 10px;
+  width: auto;
+  min-height: 325px;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size:    cover;
+  -o-background-size:      cover;
+  background-size:         cover;
+
+  opacity: 0.95;
+
+  h1, h2, h3 {
+    position: absolute;
+    top:   4px;
+    left: 28px;
+    color: #222;
+
+    background-color: #FFF;
+    padding: 5px;
+
+    -webkit-transition: opacity 0.25s;
+    -moz-transition:    opacity 0.25s;
+    -o-transition:      opacity 0.25s;
+    transition:         opacity 0.25s;
+  }
+
+  opacity: 0.9;
+  -webkit-transition: opacity 0.25s;
+  -moz-transition:    opacity 0.25s;
+  -o-transition:      opacity 0.25s;
+  transition:         opacity 0.25s;
+
+  &:hover {
+    opacity: 1;
+    .abstract { opacity: 1; }
+    h1, h2, h3 { 
+      color: #000;
+    }
+    
+  }
+
+  .abstract {
+    -webkit-transition: opacity 0.25s;
+    -moz-transition:    opacity 0.25s;
+    -o-transition:      opacity 0.25s;
+    transition:         opacity 0.25s;
+
+    display: block;
+    position: relative;
+    bottom: -232px;
+    padding: 7px;
+    
+    background: white;
+    opacity: 0;
+  }
+}

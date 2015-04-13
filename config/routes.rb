@@ -1,18 +1,9 @@
 Rails.application.routes.draw do
 
-  resources :snapshots, only: [:index, :show] do
-    member do
-      get  :session_state
-      post :upload_image
-    end
-    resources :topics,  only: [:show], on: :member, path: '', to: 'snapshots#detail'
-  end
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   # mount Resque::Server.new, at: '/resque'
   
-  get 'dynamic_visualizations/image'
-
   match '/search',  to: 'search#search',  via: :get
   match '/suggest', to: 'search#suggest', via: :get
 
@@ -26,6 +17,14 @@ Rails.application.routes.draw do
     match :download, to: 'datasets#download', on: :member, via: :get
   end
 
+  resources :snapshots, only: [:index, :show] do
+    member do
+      get  :session_state
+      post :upload_image
+    end
+    resources :topics,  only: [:show], on: :member, path: '', to: 'snapshots#detail'
+  end
+
   resources :visualizations, concerns: :paginatable do
     member do
       get  :duplicate
@@ -34,22 +33,7 @@ Rails.application.routes.draw do
     end
   end
   
-  resources :static_maps, only: [:index, :show], concerns: :paginatable,
-                          path: 'maps'
-
-  resources :municipalities, only: [:index, :show] do
-  #   resources :topics, on:    :member,        path: '',
-  #                      only: [:show], to:   'municipalities#topic'
-  #   get 'state/:vis_id', on: :member, to: 'municipalities#rendered_state'
-  #   post :image
-  end
-
-  resources :subregions,     only: [:index, :show] do
-  #   resources :topics, on:    :member, path: '',
-  #                      only: [:show],  to: 'subregions#topic'
-  #   get 'state/:vis_id', on: :member, to: 'subregions#rendered_state'
-  #   post :image
-  end
+  resources :static_maps, only: [:index, :show], concerns: :paginatable, path: 'maps'
 
   resources :users do
     get 'check_email',    on: :collection
@@ -67,10 +51,6 @@ Rails.application.routes.draw do
 
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
-  
-  # resources :page_topics, only: [:show], path: 'page_topics' do
-  #   resources :pages, only: [:show], path: 'page'
-  # end
 
   match '', to: 'institutions#show', constraints: {subdomain: /.+/}, via: [:get]
   root      to: 'institutions#show'

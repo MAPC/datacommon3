@@ -1,7 +1,7 @@
 - content_for :featured do
-  %h2 Good data. Better region.
+  %h2 Introducing the new#{region_name_or(' ')} DataCommon.
   %p.top
-    If you need data, visualizations, or maps about the #{region_name_or('')} region, you've come to the right place.
+    If you need data, visualizations, or maps about the #{region_name_or('')} region, you've come to the right place. It's not just a new look: we've added a searchable data catalog, a data API, full-site search, and more.
 
   .row.explanation
     .col-lg-3.col-sm-6.col-xs-12.explanation
@@ -14,7 +14,7 @@
           = link_to 'Data Catalog', datasets_path
 
     .col-lg-3.col-sm-6.col-xs-12.explanation
-      = link_to municipalities_path do
+      = link_to snapshots_path do
         %h5.explanation.community-snapshots   Community Profiles
         = image_tag 'explanations/community-snapshots-sm.png', class: 'explanation-icon'
       %p
@@ -50,18 +50,18 @@
 %hr
 
 .row.the-row
-  .col-md-8.col-sm-12
+  .col-xs-12
     %h1 Featured Visualization
-    -# = image_tag "https://unsplash.it/700/432?image=618"
-    - if Visualization.first
-      = render partial: 'visualizations/feature', locals: { feature: Visualization.first }
-  .col-md-4.col-sm-12
+    - if Visualization.featured.any?
+      = render partial: 'visualizations/feature', object: Visualization.featured.first
+  .col-xs-12
+    .page-header
     %h1 Visualizations by Topic
     .row
-      .col-md-12.col-sm-6.col-xs-12
+      .col-sm-6.col-xs-12
         .icon-center-group
           = render partial: 'topics/topic', collection: topics[0..5], as: :topic, locals: { path: 'visualizations' }
-      .col-md-12.col-sm-6.col-xs-12
+      .col-sm-6.col-xs-12
         .icon-center-group
           = render partial: 'topics/topic', collection: topics[6..11], as: :topic, locals: { path: 'visualizations' }
 
