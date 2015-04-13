@@ -1,9 +1,10 @@
+- type_class = type_class rescue 'municipality' # Hacky default
 -# The canonical _preview to be used to display any Weave visualization,
 -# normal or dynamic (snapshot). 
 
 %h5= visual.title
 
-.visual.preview
+.visual.preview{ class: type_class }
   = image_tag visual.preview(geography).url, id: "#{visual.id}"
 
 %ul.caption

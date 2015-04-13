@@ -12,7 +12,7 @@ describe IssueArea do
   end
 
   it "uses its given slug" do
-    expect(create(:topic).slug).to eq('the-public-health')
+    expect(create(:topic).slug).to eq('public-health')
   end
 
   it "generates a slug if given none" do

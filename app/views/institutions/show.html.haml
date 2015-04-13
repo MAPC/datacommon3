@@ -58,10 +58,10 @@
   .col-md-4.col-sm-12
     %h1 Visualizations by Topic
     .row
-      .col-md-12.col-sm-6.col-xs-6
+      .col-md-12.col-sm-6.col-xs-12
         .icon-center-group
           = render partial: 'topics/topic', collection: topics[0..5], as: :topic, locals: { path: 'visualizations' }
-      .col-md-12.col-sm-6.col-xs-6
+      .col-md-12.col-sm-6.col-xs-12
         .icon-center-group
           = render partial: 'topics/topic', collection: topics[6..11], as: :topic, locals: { path: 'visualizations' }
 

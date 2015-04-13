@@ -1,14 +1,29 @@
 -# Renders the topic title, the preview of the first dynamic visualization
 -# belonging to the topic, then the link to the topic detail page.
--# TODO: .col-md-4 may not meet the needs of .subregion
+-# TODO: DRY it up!
 
-.col-md-4.col-sm-6.col-xs-12
-  .snapshot{class: @geography.type}
-    .topic.title
-      = link_to snapshot_topic_path(@geography, topic) do
-        %h4
-          = topic
-          %span.small view all
 
-    - visual = topic.dynamic_visualizations.first || DynamicVisualization.first
-    = render partial: 'visualizations/preview', object: visual, as: :visual, locals: { geography: @geography }
+
+- if @geography.type == 'municipality'
+  .col-md-4.col-sm-6.col-xs-12
+    .snapshot{class: @geography.type}
+      .topic.title
+        = link_to snapshot_topic_path(@geography, topic) do
+          %h4
+            = topic
+            %span.small view all
+
+      - visual = topic.dynamic_visualizations.where(type: @geography.type).first || DynamicVisualization.first
+      = render partial: 'visualizations/preview', object: visual, as: :visual, locals: { geography: @geography, type_class: @geography.type }
+
+- elsif @geography.type == 'subregion'
+  .col-xs-12
+    .snapshot{class: @geography.type}
+      .topic.title
+        = link_to snapshot_topic_path(@geography, topic) do
+          %h4
+            = topic
+            %span.small view all
+
+      - visual = topic.dynamic_visualizations.where(type: @geography.type).first || DynamicVisualization.first
+      = render partial: 'visualizations/preview', object: visual, as: :visual, locals: { geography: @geography, type_class: @geography.type }

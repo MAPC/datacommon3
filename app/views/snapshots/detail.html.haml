@@ -1,7 +1,8 @@
-- @snap = @snapshot
+%h1= link_to "< #{@snapshot.geography}", snapshot_path(@snapshot.geography)
 
-%h1= link_to "< #{@snap.geography}", snapshot_path(@snap.geography)
-%h1= @snap.topic
+%h1= @snapshot.topic
+
+= @snapshot.inspect
 
 -#   Maybe a TODO
 -# Partials don't fully work because visualizations/preview is not
@@ -10,13 +11,15 @@
 -#      i.e. locals: { extra_header: topic } > gets rendered as a H4
 
 .row
-  - @snap.visuals.each do |visual|
-    - if @snap.type == 'municipality'
+  - @snapshot.visuals.each do |visual|
+  
+    -# Base div size on type
+    - if @snapshot.type == 'municipality'
       .col-md-4.col-sm-6.col-xs-12
-    - elsif @snap.type == 'subregion'
+        = render partial: 'visualizations/preview', object: visual, as: :visual, locals: { geography: @snapshot.geography, type_class: @snapshot.type }
+    - elsif @snapshot.type == 'subregion'
       .col-xs-12
-        .snapshot{class: @snap.type}
-          = render partial: 'visualizations/preview', object: visual, as: :visual, locals: { geography: @snap.geography }
+        = render partial: 'visualizations/preview', object: visual, as: :visual, locals: { geography: @snapshot.geography, type_class: @snapshot.type }
 
 :javascript
 
