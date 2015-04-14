@@ -40,13 +40,7 @@ Rails.application.configure do
   # Paperclip configuration
   Paperclip.options[:command_path] = "/usr/local/bin/convert"
   
-  if ENV['FILESYSTEM_STORAGE'].to_b
-    config.paperclip_defaults = {
-      storage: :filesystem,
-      url: "/system/:class/:attachment/:style/:filename",
-      path: "#{Rails.public_path}/system/:class/:attachment/:style/:filename",
-    }
-  else
+  if ENV['AMAZON_ASSET_HOST'].to_b
     config.action_controller.asset_host = "http://#{ENV.fetch('S3_BUCKET_NAME')}"
     config.paperclip_defaults = {
       storage: :s3,
@@ -59,6 +53,12 @@ Rails.application.configure do
         secret_access_key: ENV.fetch('AWS_SECRET_ACCESS_KEY')
       },
       s3_permissions: :public_read
+    }
+  else
+    config.paperclip_defaults = {
+      storage: :filesystem,
+      url: "/system/:class/:attachment/:style/:filename",
+      path: "#{Rails.public_path}/system/:class/:attachment/:style/:filename",
     }
   end
 

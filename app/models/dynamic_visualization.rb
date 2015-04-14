@@ -43,6 +43,7 @@ class DynamicVisualization < ActiveRecord::Base
 
   alias_method :state, :rendered_state
 
+  # TODO: What is this for, exactly?
   def sessionstate
     "/snapshots/visualizations/#{session_state_file_name}"
   end

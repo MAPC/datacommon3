@@ -1,6 +1,14 @@
 language: ruby
 rvm:
 - 2.1.5
+env:
+  - DB=postgresql
+before_script:
+  - bundle exec rake db:create RAILS_ENV=test
+script:
+  - bundle exec rake db:migrate
+  - bundle exec rake db:test:prepare
+  - bundle exec rake spec
 bundler_args: "--without production"
 notifications:
   slack:
