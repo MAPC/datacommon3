@@ -32,3 +32,4 @@ test: &test
   <<: *default
   database: dc3_test
   host:     localhost
+  schema_search_path: public
