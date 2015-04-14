@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
 
-
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  # mount Resque::Server.new, at: '/resque'
+  # mount ResqueWeb::Engine, at: '/resque'
   
   match '/search',  to: 'search#search',  via: :get
   match '/suggest', to: 'search#suggest', via: :get

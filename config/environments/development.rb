@@ -37,13 +37,29 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
-  # Paperclip configuration: attachments with Amazon S3 uploads
+  # Paperclip configuration
   Paperclip.options[:command_path] = "/usr/local/bin/convert"
   
-  config.paperclip_defaults = {
-    storage: :filesystem,
-    url: "/system/:class/:attachment/:style/:filename",
-    path: "#{Rails.public_path}/system/:class/:attachment/:style/:filename",
-  }
+  if ENV['FILESYSTEM_STORAGE'].to_b
+    config.paperclip_defaults = {
+      storage: :filesystem,
+      url: "/system/:class/:attachment/:style/:filename",
+      path: "#{Rails.public_path}/system/:class/:attachment/:style/:filename",
+    }
+  else
+    config.action_controller.asset_host = "http://#{ENV.fetch('S3_BUCKET_NAME')}"
+    config.paperclip_defaults = {
+      storage: :s3,
+      url:         ":s3_domain_url",
+      path:        "/:class/:attachment/:style/:filename",
+      s3_host_name: 's3-website-us-east-1.amazonaws.com',
+      s3_credentials: {
+        bucket:            ENV.fetch('S3_BUCKET_NAME'),
+        access_key_id:     ENV.fetch('AWS_ACCESS_KEY_ID'),
+        secret_access_key: ENV.fetch('AWS_SECRET_ACCESS_KEY')
+      },
+      s3_permissions: :public_read
+    }
+  end
 
 end

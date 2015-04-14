@@ -63,15 +63,7 @@ Rails.application.configure do
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.smtp_settings = {
-    address:               "smtp.mandrillapp.com",
-    port:                  25,   # ports 587 and 2525 are also supported with STARTTLS
-    enable_starttls_auto:  true, # detects and uses STARTTLS
-    user_name:             ENV.fetch('MANDRILL_USERNAME'),
-    password:              ENV.fetch('MANDRILL_PASSWORD'), # SMTP password is any valid API key
-    authentication:        'login', # Mandrill supports 'plain' or 'login'
-    domain:                ENV.fetch('MANDRILL_DOMAIN') { 'datacommon.org' } # your domain to identify your server when connecting
-  }
+  config.action_mailer.delivery_method = :smtp
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
@@ -94,9 +86,8 @@ Rails.application.configure do
 
   config.paperclip_defaults = {
     storage: :s3,
-    url:  ":s3_domain_url",
-    path: "/:class/:attachment/:style/:filename",
-    default_url: "http://metrobostondatacommon.org/site_media/weave_thumbnails/:id_featured.:extension",
+    url:         ":s3_domain_url",
+    path:        "/:class/:attachment/:style/:filename",
     s3_host_name: 's3-website-us-east-1.amazonaws.com',
     s3_credentials: {
       bucket:            ENV.fetch('S3_BUCKET_NAME'),

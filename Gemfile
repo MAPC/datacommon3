@@ -52,8 +52,9 @@ gem 'cancan'             # Authorize admin
 
 # Background Jobs
 gem 'redis'              # Dependency for Resque
-gem 'resque'             # Process long-running jobs in the background
-gem 'resque_mailer'      # Process email in the background
+# gem 'resque'             # Process long-running jobs in the background
+# gem 'resque_mailer'      # Process email in the background
+# gem 'resque-web', require: 'resque_web' # Web interface for Resque
 
 
 # Utilities

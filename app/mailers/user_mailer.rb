@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-  include Resque::Mailer
+  # include Resque::Mailer
   default from: "no-reply@datacommon.org"
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
