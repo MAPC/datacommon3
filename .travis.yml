@@ -2,7 +2,6 @@ language: ruby
 rvm:
 - 2.1.5
 env:
-  - DB=postgresql
   - DISPLAY=":99.0"
 before_script:
   - 'sh -e /etc/init.d/xvfb start'
