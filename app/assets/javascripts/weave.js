@@ -24,7 +24,7 @@ var debug_log = function (message, type) {
   }
 }
 
-const DEBUG = false;
+const DEBUG = true;
 debug_log("DEBUG is TRUE. All debug_log messages will print.")
 
 const XML      = (new XMLSerializer());
@@ -61,11 +61,49 @@ DC.weaveConfig = {
   }
 }
 
+/* 
+
+    Utility methods
+
+    TODO: Move into their own script / module?
+
+*/ 
+
+var getLocation = function() {
+  var parser = document.createElement('a');
+  parser.href = window.location;
+  return parser;
+}
+
+var getHost = function() {
+  return getLocation().host;
+}
+
+var getProtocol = function() {
+  return getLocation().protocol;
+}
+
+var getLikelyId = function (which) {
+  var path = getLocation().pathname.split('/'),
+     which = (which) ? which : 1;
+  return path[path.length - which];
+}
+
+
+/*
+
+    Visuals model
+
+      - stores Visual objects
+      - provides 'class methods' that embed
+
+*/
 
 // Visuals is sort of like the Visualization model, used for lookup.
-var Visuals = {}
+var Visuals = {};
 
-var embed_on_click = function (selector) {
+// These are sort of like class methods
+Visuals.embed_on_click = function (selector) {
   // Allow a selector to be passed in, but
   // default to '.visual' as the visualization selector
   selector = (selector) ? selector : '.visual';
@@ -75,36 +113,25 @@ var embed_on_click = function (selector) {
   });
 }
 
-var embed_immediately = function (selector) {
+Visuals.embed_immediately = function (selector) {
   // Delegate to #embed_on_click, then click them all.
   // ...So clever.
-  embed_on_click( selector );
+  Visuals.embed_on_click( selector );
   $(selector).each ( function() {
     $(this).trigger('click');
   })
 }
 
-// var v = new Visual('#9')
 
-var getLocation = function() {
-  var parser = document.createElement('a');
-  parser.href = window.location;
-  return parser
-}
 
-var getHost = function() {
-  return getLocation().host
-}
+/*
 
-var getProtocol = function() {
-  return getLocation().protocol
-}
+    Visual object
 
-var getLikelyId = function (which) {
-  var path = getLocation().pathname.split('/'),
-     which = (which) ? which : 1;
-  return path[path.length - which]
-}
+      - has everything to care for itself
+      - knows its DOM element, Weave object, session_state, image data, and more
+
+*/
 
 
 var Visual = function (id, sessionstate, pathname, format, params) {
@@ -123,17 +150,16 @@ var Visual = function (id, sessionstate, pathname, format, params) {
 
   var that = this;
 
+  // Preload session state and establish click handler
+  // to embed the Flash object
   this.preload_session_state( function(state) {  
-    // Embed flash on click
-    that.container.on('click', function () {
-      that.embed_swf();
-    });
+    that.container.on('click', function () { that.embed_swf(); });
   });
 
   this.check_needs_upload();
 }
 
-
+// TODO: Memoize these
 Visual.prototype.upload_png_url = function () {
   return getProtocol() + '//' + getHost() + this.pathname + '/' + this.id + '/upload_image' + this.params
 }
@@ -141,7 +167,6 @@ Visual.prototype.upload_png_url = function () {
 Visual.prototype.sessionstate_url = function () {
   return getProtocol() + '//' + getHost() + this.pathname + '/' + this.id + '/session_state.' + this.format + this.params
 }
-
 
 Visual.prototype.check_needs_upload = function (callback) {
   var src   = String( this.container[0]['src'] );
@@ -154,6 +179,7 @@ Visual.prototype.check_needs_upload = function (callback) {
 }
 
 // TODO
+// TODO: Provide option to re-upload regardless of image presence
 Visual.prototype.upload_if_necessary = function (wait_time, callback) {
   // Default to waiting for 7 seconds after #weaveReady.
   var wait_time = (wait_time) ? wait_time : 7000;
@@ -166,7 +192,6 @@ Visual.prototype.upload_if_necessary = function (wait_time, callback) {
   return (callback) ? callback('TODO') : 'TODO'
 }
 
-// TODO: Provide option to re-upload regardless of image presence
 
 // Return JSON sessionstate, regardless of whether it's stored as JSON
 Visual.prototype.to_json = function(callback) {

@@ -8,14 +8,8 @@
 
 */
 
-$screen-sm: 768px;
-$screen-md: 992px;
-$screen-lg: 1200px;
-
-// TODO: Duplicate variables. Not sure how to 
-// have them share across files.
-$dc-blue:   #556C98;
-$education: #46AD24;
+@import "global/sizes";
+@import "global/colors";
 
 #header {
   background-color: $dc-blue;

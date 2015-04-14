@@ -3,26 +3,29 @@
   .container
     .row
 
-      .col-sm-4.col-xs-6
-        %h5 Data & Visualizations
+      .col-sm-3.col-xs-6
+        %h5 Data
         %ul
           %li= link_to 'Data Catalog',          datasets_path
           %li= link_to 'Map Gallery',           static_maps_path
+
+      .col-sm-3.col-xs-6
+        %h5 Data
+        %ul
           %li= link_to 'Visualization Gallery', visualizations_path 
           %li= link_to 'Make a Visualization',  new_visualization_path
     
 
-      .col-sm-4.col-xs-6
+      .col-sm-3.col-xs-6
         %h5 Profiles & Resources
         %ul
           %li= link_to 'Community Profiles', snapshots_path
           %li= link_to 'Workshops',          'http://www.eventbrite.com/o/mapc-610093971', target: '_blank'
           %li= link_to 'Blog',               'http://uncommondata.org'
 
-      .col-sm-4.col-xs-12
+      .col-sm-3.col-xs-6
         %h5 Social
         %ul
-          -# = render partial: 'pages/link', collection: about_pages, as: :page
           %li.social-icon
             = link_to "https://www.facebook.com/MAPCMetroBoston", target: "_blank" do
               = image_tag 'facebook_50.png', alt: 'MAPC Facebook'
@@ -33,13 +36,12 @@
             = link_to "https://www.flickr.com/photos/44747327@N04/", target: "_blank" do
               = image_tag 'flickr_50.png',   alt: 'MAPC Flickr'
 
-      .col-xs-12
-        .row
-          - ['mapc-color', 'boston-indicators', 'cmrpc', 'montachusett-white'].each do |sponsor|
-            .col-md-3.col-sm-6.col-xs-12
-              .frame
-                %span.helper
-                = image_tag "logos/#{sponsor}.png", alt: "#{sponsor} logo", class: 'sponsor'
+    .row
+      - ['mapc-color', 'boston-indicators', 'cmrpc', 'montachusett-white'].each do |sponsor|
+        .col-md-3.col-sm-6.col-xs-12
+          .frame
+            %span.helper
+            = image_tag "logos/#{sponsor}.png", alt: "#{sponsor} logo", class: 'sponsor'
 
     .page-header
 

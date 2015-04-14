@@ -8,8 +8,8 @@
 
 */
 
-
-@import "global/colors"; // Import predefined colors
+@import "global/sizes";   // Import size variables
+@import "global/colors";  // Import predefined colors
 @import "global/headers"; // Import predefined header styles
 
 .footer .lower {
@@ -65,18 +65,21 @@
 .footer {
 
   .frame {
-    height:  80px;      /* equals max image height */
+    height:  65px;      /* equals max image height */
     width:  220px;
     // border: 1px solid red;
     white-space: nowrap;
 
-    text-align: center; margin: 1em 0;
-    display: block;
-    margin: 0 auto;
-  }
+    text-align: left;
+    margin: 1em 0;
 
-  .page-header {
-    // margin: 15px 0px 20px; // Override top margin
+
+    @media(max-width: $screen-sm) {
+      text-align: center; 
+      display:     block;
+      margin:     0 auto;
+    }
+    
   }
 
   .helper {
@@ -87,7 +90,7 @@
 
   img.sponsor {
     vertical-align: middle;
-    max-height: 80px;
+    max-height: 65px;
     max-width: 220px;
   }
 }
