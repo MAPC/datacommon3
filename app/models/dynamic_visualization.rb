@@ -28,11 +28,23 @@ class DynamicVisualization < ActiveRecord::Base
   alias_attribute :sources, :data_sources
   alias_attribute :unitid,  :unit_id
 
+  def self.default_scope
+    order(:title)
+  end
+
   def preview(geo, method=:slug)
-    @preview ||= OpenStruct.new(
-      path: preview_the(:path, geo, method=:slug),
-      url:  preview_the(:url,  geo, method=:slug)
-    )
+    potential_path = preview_the(:path, geo, method=:slug)
+    potential_url  = preview_the(:url,  geo, method=:slug)
+
+    path = potential_path.dup
+    url  = potential_url.dup
+
+    unless File.exist? path
+      path = path.gsub /[a-z\-]+\/\d+\.png$/i, 'missing.png'
+      url  = url.gsub  /[a-z\-]+\/\d+\.png$/i, 'missing.png'
+    end
+
+    @preview ||= OpenStruct.new( path: path, url: url, potential_path: potential_path, potential_url: potential_url )
   end
 
   # Render session state for an object (probably Geography) that has

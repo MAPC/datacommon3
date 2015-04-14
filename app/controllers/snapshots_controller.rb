@@ -36,14 +36,14 @@ class SnapshotsController < ApplicationController
     decoded_file = Base64.decode64 params[:data]
     
     # Uses the preview#path helper defined in the model.
-    filename = @visual.preview(object).path
+    filename = @visual.preview(object).potential_path
     make_directory_for filename
 
     # Write PNG data to the file
     File.open(filename, 'wb') { |f| f.write decoded_file }
     
     if File.exists? filename
-      render json: { message: "Successfully uploaded preview." }
+      render json: { message: "Successfully uploaded preview to #{filename}." }
     else
       render json: { message: "Did not successfully save.",
                      status: :unprocessable_entity }

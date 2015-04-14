@@ -21,6 +21,7 @@
 
     $('.visual img').each( function() {
       // Create a Visual from the DOM element
+      // and set the path and format for dynamic visualizations
       visual = new Visual( $(this).attr('id'), '', '/snapshots', 'xml', 'geography=' + getLikelyId() );
       Visuals[visual.id] = visual; // Add the new Visual to the 'model'
     });

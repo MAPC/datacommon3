@@ -123,7 +123,6 @@ Visuals.embed_immediately = function (selector) {
 }
 
 
-
 /*
 
     Visual object
@@ -174,22 +173,32 @@ Visual.prototype.check_needs_upload = function (callback) {
   
   if (match) {
     this.needs_upload = true;
+  } else {
+    this.needs_upload = false;
   }
   return (callback) ? callback(this.needs_upload) : this.needs_upload
 }
 
 // TODO
 // TODO: Provide option to re-upload regardless of image presence
-Visual.prototype.upload_if_necessary = function (wait_time, callback) {
+Visual.prototype.upload_if_necessary = function (force, wait_time, callback) {
+  // Do it anyway.
+  var force     = (force)     ? force     : false;
   // Default to waiting for 7 seconds after #weaveReady.
   var wait_time = (wait_time) ? wait_time : 7000;
 
   var that = this;
-  if (this.needs_upload) { 
-    debug_log('It needs to be uploaded. Waiting ' + (wait_time / 1000) + ' seconds.')
+  if (force || this.needs_upload) { 
     setTimeout( function () { that.upload_img() }, wait_time );
+    if (force) {
+      debug_log("Visual " + that.id + " is being force uploaded.")
+    } else {
+      debug_log("Visual " + that.id + " needs to be uploaded, and will be after " + (wait_time / 1000) + " seconds.")
+    }
+  } else {
+    debug_log("It does not need to be uploaded since this.needs_upload is " + that.needs_upload + "." )
   }
-  return (callback) ? callback('TODO') : 'TODO'
+  return (callback) ? callback(that) : that
 }
 
 
