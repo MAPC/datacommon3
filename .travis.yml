@@ -3,12 +3,12 @@ rvm:
 - 2.1.5
 env:
   - DB=postgresql
+  - RAILS_ENV=test
 before_script:
   - bundle exec rake db:create RAILS_ENV=test
 script:
   - bundle exec rake db:schema:load
-  - bundle exec rake db:migrate
-  - bundle exec rake db:test:prepare
+  - bundle exec rake db:migrate RAILS_ENV=test
   - bundle exec rake spec
 bundler_args: "--without production"
 notifications:
