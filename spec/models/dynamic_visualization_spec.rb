@@ -63,17 +63,27 @@ describe DynamicVisualization do
       expect(visual.preview(geo)).to respond_to(:url)
     end
 
-    specify '#path returns a modified version of Paperclip path' do
-      expect(visual.preview(geo).path).to eq(
-        "/Users/mapcuser/Projects/datacommon/public/system/dynamic_visualizations/images/north-winchendon/99.png"
-      )
+    context 'when the file does not exist' do
+
+      specify '#path returns a modified version of Paperclip path' do
+        expect(visual.preview(geo).potential_path).to eq(
+          "/Users/mapcuser/Projects/datacommon/public/system/dynamic_visualizations/images/north-winchendon/99.png"
+        )
+        expect(visual.preview(geo).path).to eq(
+          "/Users/mapcuser/Projects/datacommon/public/system/dynamic_visualizations/images/missing.png"
+        )
+      end
+
+      specify '#url returns a modified version of Paperclip url' do
+        expect(visual.preview(geo).potential_url).to eq(
+          "/system/dynamic_visualizations/images/north-winchendon/99.png"
+        )
+        expect(visual.preview(geo).url).to eq(
+          "/system/dynamic_visualizations/images/missing.png"
+        )
+      end
     end
 
-    specify '#url returns a modified version of Paperclip url' do
-      expect(visual.preview(geo).url).to eq(
-        "/system/dynamic_visualizations/images/north-winchendon/99.png"
-      )
-    end
   end
 
   describe '#state' do
