@@ -17,7 +17,7 @@ namespace :db do
 
     puts "Activating topics except Geographic Boundaries"
     IssueArea.unscoped.all.each {|t| t.update_attribute(:active, true) }
-    IssueArea.find(14).update_attribute(:active, false)
+    IssueArea.find(13).update_attribute(:active, false)
 
 
     puts "Setting visualizations that belong to CMRPC"
