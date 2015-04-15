@@ -66,11 +66,11 @@ namespace :db do
     puts "Updating static maps with images"
     StaticMap.find_each do |static_map|
       # Skip if it already has a filename
-      next if static_map.image_file_name.presence
+      next if static_map.map_file_name.presence
       
       static_map.map_file_name = static_map.pdf_page.partition('/').last
       begin
-        static_map.image_file_size = open(static_map.image.url) {|f| f.read }.size
+        static_map.map_file_size = open(static_map.map.url) {|f| f.read }.size
       rescue
         puts "Error: Couldn't find file for static_map #{static_map.id}"
         next
