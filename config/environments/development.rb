@@ -40,8 +40,12 @@ Rails.application.configure do
   # Paperclip configuration
   Paperclip.options[:command_path] = "/usr/local/bin/convert"
   
-  if ENV['S3_ATTACHMENT_STORAGE'].to_b
+  if ENV['AMAZON_ASSET_HOST'].to_b
     config.action_controller.asset_host = "http://#{ENV.fetch('S3_BUCKET_NAME')}"
+  end
+
+  if ENV['S3_ATTACHMENT_STORAGE'].to_b
+    
     config.paperclip_defaults = {
       storage: :s3,
       url:         ":s3_domain_url",
