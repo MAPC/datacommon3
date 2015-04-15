@@ -3,10 +3,29 @@ namespace :db do
 
   task convert: :environment do
 
-    # Set visualizations that belong to CMRPC
-    cmrpc_vis = [2660,2652,2639,2623,2526,2667,2673,2674,2675,66,2550,2527,2664,2666,2671,2672,2676,2663,2662,2646,2681,2677,2658,2678,2679,2680]
+    # Create institutions
+    Institution.create_or_update( id:         1,
+                                  short_name: 'Metro Boston',
+                                  long_name:  'Metropolitan Boston',
+                                  subdomain:  'metroboston' )
 
-    Visualization.unscoped.find(cmrpc_vis).each do |v|
+    Institution.create_or_update( id:         2,
+                                  short_name: 'Central Mass',
+                                  long_name:  'Cental Massachusetts',
+                                  subdomain:  'metroboston')
+
+    # Activate all topics except Geographic Boundaries
+    IssueArea.unscoped.all.each {|t| t.update_attribute(:active, true) }
+    IssueArea.find(14).update_attribute(:active, false)
+
+
+    # Set visualizations that belong to CMRPC
+    cmrpc_visuals = [
+      2660,2652,2639,2623,2526,2667,2673,2674,2675,66,2550,2527,2664,
+      2666,2671,2672,2676,2663,2662,2646,2681,2677,2658,2678,2679,2680
+    ]
+
+    Visualization.unscoped.find(cmrpc_visuals).each do |v|
       v.update_attributes institution_id: 2, permission: 'public'
     end
 
@@ -16,12 +35,12 @@ namespace :db do
     Visualization.unscoped.find(2673).update_attribute :featured, 1  # CMRPC
 
     # Update profiles and user profiles with CMRPC
-    profiles = Profile.where(organization: 'CMRPC')
-    profiles = profiles + Profile.where(organization: 'Central Massachusetts Regional Planning Commission')
+    # profiles = Profile.where(organization: 'CMRPC')
+    # profiles = profiles + Profile.where(organization: 'Central Massachusetts Regional Planning Commission')
 
-    profiles.each do |profile|
-      profile.user.visualizations.each {|v| v.update_attribute :institution_id, 2 }
-    end
+    # profiles.each do |profile|
+    #   profile.user.visualizations.each {|v| v.update_attribute :institution_id, 2 }
+    # end
 
     # user  = User.where(username: 'cjryan2006').profile
     # user2 = User.where(username: 'mfranz77').profile
