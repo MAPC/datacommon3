@@ -8,16 +8,16 @@
     %td= dataset.author.presence || "Unknown"
   %tr
     %td Publisher
-    %td= dataset.organization ? dataset.organization["title"] : "Unknown"
+    %td= dataset.organization ? dataset.organization["title"] : "Unspecified"
   %tr
     %td Dates Available
     %td= "TODO: dataset.spatial_coverage"
   %tr
     %td Spatial Coverage
     %td= "TODO: dataset.spatial_coverage"
-  %tr
-    %td Last Updated
-    %td= Date.parse(dataset.revision_timestamp).to_s(:monthyear)
+  -# %tr
+    -# %td Last Updated
+    -# %td= Date.parse(dataset.revision_timestamp).to_s(:monthyear)
   %tr
     %td Tags
     %td

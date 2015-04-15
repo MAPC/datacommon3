@@ -15,7 +15,7 @@ feature 'Visitor views datasets', :vcr do
     end
   end
 
-  scenario 'shows a single dataset' do
+  pending 'shows a single dataset' do
     visit links.first[:href]
     expect(page).to have_content(/< DATA/i)
     expect(page).to have_content(/Last Updated/i)

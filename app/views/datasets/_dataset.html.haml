@@ -1,4 +1,4 @@
-- org = dataset.organization.presence ? dataset.organization.fetch("title") : nil
+-# - org = dataset.organization.presence ? dataset.organization.fetch("title") : nil
 
 .row.dataset
   .col-sm-5.col-xs-12.col-sm-offset-1.col-xs-offset-0
@@ -6,14 +6,9 @@
       = link_to dataset.title, dataset_path(dataset.id, params)
   .col-sm-6.col-xs-12
     %ul.none
-      %li= "Last Updated: #{Date.parse(dataset.revision_timestamp).to_s(:monthyear)}"
+      -# %li= "Last Updated: #{Date.parse(dataset.revision_timestamp).to_s(:monthyear)}"
       %li= "Created: #{Date.parse(dataset.metadata_created).to_s(:monthyear)}"
-      -if org
-        %li= "Organization: #{org}"
+      -# -if org
+      -#   %li= "Organization: #{org}"
       %li
         %small= "#{dataset.resources.count} " << "resource".pluralize(dataset.resources.count)
-
--# dates
--# created
--# description
--# coverage

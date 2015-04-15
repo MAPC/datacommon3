@@ -6,12 +6,12 @@ class DatasetsController < ApplicationController
       rows = params[:per_page] || Dataset.per_page
       Dataset.find_by(tags: params[:topic], rows: rows)
     else
-      Dataset.page(params[:page])
+      Dataset.find_by(rows: 10)
     end
   end
 
   def show
-    @dataset = Dataset.find_by(id: params[:id])
+    @dataset = Dataset.find_by(id: params[:id]).records.first
   end
 
   def download

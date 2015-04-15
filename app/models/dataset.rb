@@ -32,7 +32,7 @@ class Dataset
 
   def self.find_by(options)
     records = CKAN::Package.find(options)
-    return records.first if options[:q].include?("id")
+    # return records.first if options[:q].include?("id")
 
     current_page = options.fetch(:page) { 1 }
     per_page     = options.fetch(:per_page) { DEFAULT_PER_PAGE }

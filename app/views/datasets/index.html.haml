@@ -7,9 +7,9 @@
 %hr
 
 %p.viewing
-  Topic:
-  = succeed '.' do
-    = render partial: 'shared/select', object: 'topic', as: :object
+  Select topic
+  %br
+  = render partial: 'shared/select', object: 'topic', as: :object
 
 #datasets
   = render partial: 'datasets/dataset', collection: @datasets.records
