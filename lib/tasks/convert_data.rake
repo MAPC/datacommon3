@@ -3,7 +3,7 @@ namespace :db do
 
   task convert: :environment do
 
-    # Create institutions
+    puts "Creating institutions"
     Institution.create_or_update( id:         1,
                                   short_name: 'Metro Boston',
                                   long_name:  'Metropolitan Boston',
@@ -14,12 +14,13 @@ namespace :db do
                                   long_name:  'Cental Massachusetts',
                                   subdomain:  'metroboston')
 
-    # Activate all topics except Geographic Boundaries
+
+    puts "Activating topics except Geographic Boundaries"
     IssueArea.unscoped.all.each {|t| t.update_attribute(:active, true) }
     IssueArea.find(14).update_attribute(:active, false)
 
 
-    # Set visualizations that belong to CMRPC
+    puts "Setting visualizations that belong to CMRPC"
     cmrpc_visuals = [
       2660,2652,2639,2623,2526,2667,2673,2674,2675,66,2550,2527,2664,
       2666,2671,2672,2676,2663,2662,2646,2681,2677,2658,2678,2679,2680
@@ -30,9 +31,65 @@ namespace :db do
     end
 
 
-    # Set featured visualizations
+    puts "Setting featured visualizations"
     Visualization.unscoped.find(2403).update_attribute :featured, 1  # MAPC
     Visualization.unscoped.find(2673).update_attribute :featured, 1  # CMRPC
+
+
+    puts "Updating visualizations with images"
+    Visualization.find_each do |visual|
+      # Skip if it already has a filename
+      next if visual.image_file_name.presence
+
+      visual.image_file_name    = "#{visual.id}.png"
+      visual.image_content_type = "image/png"
+      begin
+        visual.image_file_size    = open(visual.image.url) {|f| f.read }.size
+      rescue
+        puts "Error: Couldn't find file for visualization #{visual.id}"
+        next
+      end
+      visual.image_updated_at   = Time.now
+
+      if visual.save
+        visual
+      else
+        puts "Error saving #{visual.id}: #{visual.errors.full_messages.join(', ')}"
+      end
+    end
+
+
+    puts "Updating visualizations with missing images"
+    `CLASS=Visualization rake paperclip:refresh`
+
+
+    puts "Updating static maps with images"
+    StaticMap.find_each do |static_map|
+      # Skip if it already has a filename
+      next if static_map.image_file_name.presence
+      
+      static_map.map_file_name = static_map.pdf_page.partition('/').last
+      begin
+        static_map.image_file_size = open(static_map.image.url) {|f| f.read }.size
+      rescue
+        puts "Error: Couldn't find file for static_map #{static_map.id}"
+        next
+      end
+      static_map.map_content_type = 'application/pdf'
+      static_map.map_updated_at   = Time.now
+
+      if static_map.save
+        static_map
+      else
+        puts "Error saving #{static_map.id}: #{static_map.errors.full_messages.join(', ')}"
+      end
+    end
+
+
+    puts "Updating static maps with missing images"
+    `CLASS=StaticMap rake paperclip:refresh`
+
+
 
     # Update profiles and user profiles with CMRPC
     # profiles = Profile.where(organization: 'CMRPC')
