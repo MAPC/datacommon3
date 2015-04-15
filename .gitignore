@@ -32,3 +32,9 @@ assets_manifest.json
 # Ignore VCR fixtures. They keep regenerating, probably
 # due to a new_episodes strategy. Should fix this.
 /spec/fixtures/requests
+
+
+# Ignore the Dockerfile. If someone is developing and
+# commits, this should not be included, because dokku
+# and others will try to deploy with the Dockerfile.
+Dockerfile
