@@ -13,7 +13,6 @@
   overflow: hidden;
   padding: 10px;
   width: auto;
-  max-width: 257px;
   min-height: 325px;
   background-position: center;
   background-repeat: no-repeat;
@@ -29,6 +28,7 @@
     top:   4px;
     left: 28px;
     color: #222;
+    max-width: 257px;
 
     background-color: #FFF;
     padding: 5px;
