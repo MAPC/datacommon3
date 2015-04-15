@@ -15,7 +15,8 @@
       There are no visualizations that match your selections. Maybe try another selection, or
       = link_to 'create one yourself!', new_visualization_path
 
-= paginate @visualizations, window: 1, outer_window: 1
+.row.center
+  = paginate @visualizations, window: 1, outer_window: 1
 
 :javascript
   $('.chosen-select').on('change', function () {

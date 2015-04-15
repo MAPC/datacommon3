@@ -59,8 +59,8 @@ namespace :db do
     end
 
 
-    puts "Updating visualizations with missing images"
-    `CLASS=Visualization rake paperclip:refresh`
+    # puts "Updating visualizations with missing images"
+    # `CLASS=Visualization rake paperclip:refresh`
 
 
     puts "Updating static maps with images"
@@ -86,8 +86,8 @@ namespace :db do
     end
 
 
-    puts "Updating static maps with missing images"
-    `CLASS=StaticMap rake paperclip:refresh`
+    # puts "Updating static maps with missing images"
+    # `CLASS=StaticMap rake paperclip:refresh`
 
 
 
