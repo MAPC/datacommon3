@@ -51,10 +51,10 @@ namespace :db do
       end
       visual.image_updated_at   = Time.now
 
-      if visual.save
+      if visual.save(validate: false)
         visual
       else
-        puts "Error saving #{visual.id}: #{visual.errors.full_messages.join(', ')}"
+        puts "Error saving visualization #{visual.id}: #{visual.errors.full_messages.join(', ')}"
       end
     end
 
@@ -78,10 +78,10 @@ namespace :db do
       static_map.map_content_type = 'application/pdf'
       static_map.map_updated_at   = Time.now
 
-      if static_map.save
+      if static_map.save(validate: false)
         static_map
       else
-        puts "Error saving #{static_map.id}: #{static_map.errors.full_messages.join(', ')}"
+        puts "Error saving static map: #{static_map.id}: #{static_map.errors.full_messages.join(', ')}"
       end
     end
 
