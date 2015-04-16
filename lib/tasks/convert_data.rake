@@ -15,17 +15,34 @@ namespace :db do
                                   subdomain:  'metroboston')
 
 
-    puts "Activating topics except Geographic Boundaries"
-    IssueArea.unscoped.all.each {|t| t.update_attribute(:active, true) }
-    IssueArea.find(13).update_attribute(:active, false)
+    # puts "Activating topics except Geographic Boundaries"
+    # IssueArea.unscoped.all.each {|t| t.update_attribute(:active, true) }
+    # IssueArea.find(13).update_attribute(:active, false)
 
 
-    puts "Marking subregions as subregions"
-    Geography.find_each do |place|
-      type = place.regiontype_id == 5 ? 'subregion' : 'municipality'
-      place.type = type
+    # puts "Marking geographies as municipalities and subregions"
+    # Geography.find_each do |place|
+    #   type = place.regiontype_id == 5 ? 'subregion' : 'municipality'
+
+    #   place.type = type
+    #   place.save(validate: false)
+    # end
+
+
+
+    cmrpc_places = %w(
+      17 21 28 32 39 45 54 77 80 84 110 124 134 138 151 179 186 188 
+      202 212 215 216 222 226 228 241 257 271 278 280 287 290 303 
+      304 311 316 321 323 328 348 11 12 15 19 64 97 103 115 125 140 
+      147 153 162 234 235 255 270 282 294 299 332 343
+    )
+    
+    cmrpc_places.each do |id|
+      place = Geography.find_by(unitid: id.to_s)
+      place.institution_id = 2
       place.save(validate: false)
     end
+
 
 
     # puts "Making all visualizations private first"
