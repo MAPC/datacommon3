@@ -20,6 +20,14 @@ namespace :db do
     IssueArea.find(13).update_attribute(:active, false)
 
 
+    puts "Marking subregions as subregions"
+    Geography.find_each do |place|
+      type = place.regiontype_id == 5 ? 'subregion' : 'municipality'
+      place.type = type
+      place.save(validate: false)
+    end
+
+
     # puts "Making all visualizations private first"
     # Visualization.unscoped.find_each do |visual|
     #   next if visual.permission == "private"
@@ -72,7 +80,7 @@ namespace :db do
 
 
     puts "Updating visualizations with images"
-    Visualization.find_each do |visual|
+    Visualization.unscoped.find_each do |visual|
       # Skip if it already has a filename
       next if visual.image_file_name.presence
 
