@@ -25,5 +25,8 @@
 
     -# outside container for full width
     = render 'layouts/footer'
-    -# = debug(params) if Rails.env.development?
+    - if Rails.env.development?
+      = debug(params) 
+      = debug({subdomain: request.subdomain})
+      = debug(@institution)
 

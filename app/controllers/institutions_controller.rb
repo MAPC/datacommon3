@@ -1,5 +1,5 @@
 class InstitutionsController < ApplicationController
-  # before_filter :load_institution
+  before_filter :load_institution
 
   def show
     
