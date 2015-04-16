@@ -94,6 +94,7 @@ class Institution < ActiveRecord::Base
         b.black_hole
         b.mimic Institution
         def id ; "NULL" ; end
+        def presence ; nil ; end
       }.new
     end
 

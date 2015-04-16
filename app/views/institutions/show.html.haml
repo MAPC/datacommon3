@@ -52,8 +52,8 @@
 .row.the-row
   .col-xs-12
     %h1 Featured Visualization
-    - if Visualization.featured.any?
-      = render partial: 'visualizations/feature', object: Visualization.featured.first
+    - if featured_visualization # Shouldn't need this check.
+      = render partial: 'visualizations/feature', object: featured_visualization, as: :feature
   .col-xs-12
     .page-header
     %h1 Visualizations by Topic

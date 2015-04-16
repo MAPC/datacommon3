@@ -22,6 +22,18 @@ module InstitutionsHelper
     ("Topic".pluralize(links.length) << ": #{link_text}").html_safe
   end
 
+  def featured_visualization
+    # Demeter would be unimpressed
+    visual = @institution.visualizations.featured.first if @institution.presence
+    return visual if visual
+
+    if Visualization.featured.any?
+      Visualization.featured.first
+    else
+      Visualization.first
+    end
+  end
+
 
 
 end

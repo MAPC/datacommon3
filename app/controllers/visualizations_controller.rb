@@ -10,7 +10,9 @@ class VisualizationsController < ApplicationController
   has_scope :institution
 
   def index
-    @visualizations = apply_scopes(Visualization.all.page(params[:page]))
+    @visualizations = apply_scopes(
+      Visualization.institution(@institution)
+    ).page(params[:page])
   end
 
 
