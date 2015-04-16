@@ -20,6 +20,30 @@ namespace :db do
     IssueArea.find(13).update_attribute(:active, false)
 
 
+    puts "Making all visualizations private first"
+    Visualization.unscoped.find_each do |visual|
+      next if visual.permission == "private"
+      
+      visual.permission = "private"
+      visual.save(validate: false)
+    end
+
+
+    puts "Setting public visualizations to public"
+    Visualization.unscoped.find_each do |visual|
+      query = <<-ENDSQL
+        SELECT COUNT(*)
+        FROM core_genericobjectrolemapping
+          WHERE role_id = 7 AND object_id = #{visual.id}
+      ENDSQL
+      
+      result = ActiveRecord::Base.connection.execute(query)
+      count  = result.map {|r| r['count']}.first.to_i
+
+      visual.update_attribute(:permission, "public") if count == 2
+    end
+
+
     puts "Setting visualizations that belong to CMRPC"
     cmrpc_visuals = [
       2660,2652,2639,2623,2526,2667,2673,2674,2675,66,2550,2527,2664,
@@ -112,37 +136,5 @@ namespace :db do
     #   user.visualizations.each {|v| v.update_attribute :institution_id, 2 }
     # end
     
-
-    # Create static maps
-    # StaticMap.create([
-    # {
-    #   id: 111,
-    #   year: 2014,
-    #   title: "CMRPC Region: Functional Road Classification",
-    #   abstract: """Roadway functional classification map. MassDOT defines functional classification in the following three general categories:
-
-    #   Arterials: Arterials provide the highest level of mobility at the greatest vehicular speed for the longest uninterrupted distances and are not intended to provide access to specific locations. Arterials are further subdivided into Principal Arterials and Minor Arterials. Interstates are considered to be arterials but are given their own category.
-       
-    #   Collectors: Collectors provide some level of both mobility and access. They collect traffic from local roads and funnel it to arterials. In rural areas, collectors are further subdivided into Major Collectors and Minor Collectors.
-       
-    #   Local roads: Local roads provide access to abutting land with little or no emphasis on mobility. The term \"local road\" should not be confused with local jurisdiction. Most, though not all, functionally classified local roads are under city or town jurisdiction.
-       
-    #   This map does not include \"local roads\" for readability.""",
-    #   pdf_page: 'calendar/CMRPC_FC_Final.pdf',
-    #   thumbnail: 'calendar/road-map-thumb.png',
-    #   month: 9,
-    #   institution_id: 2
-    # },
-    # {
-    #   id: 112,
-    #   year: 2005,
-    #   title: "CMRPC Region Land Use Map",
-    #   abstract: "Using data from MassGIS, CMRPC developed a 2005 regional land use map showing land use categories including residential, commercial, open land, water, and others. This maps shows where concentrations of developed land are location in relation to undeveloped lands such as wetlands, forests as well as transportation facilities.",
-    #   pdf_page: 'calendar/CMRPC_2005LandUse_11x17.pdf',
-    #   thumbnail: 'calendar/land-use-thumb.png',
-    #   month: 1,
-    #   institution_id: 2
-    # }])
-
   end
 end
