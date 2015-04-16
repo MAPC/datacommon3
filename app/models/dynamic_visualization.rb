@@ -39,7 +39,13 @@ class DynamicVisualization < ActiveRecord::Base
     path = potential_path.dup
     url  = potential_url.dup
 
-    unless File.exist? path
+    begin
+      file = open(potential_url)
+    rescue
+      file = nil
+    end
+
+    unless file # if file does not exist
       path = path.gsub /[a-z\-]+\/\d+\.png$/i, 'missing.png'
       url  = url.gsub  /[a-z\-]+\/\d+\.png$/i, 'missing.png'
     end
@@ -101,9 +107,16 @@ class DynamicVisualization < ActiveRecord::Base
     # object: geography (municipality or subregion object)
     # method: method to send it in order to get the right file path
     def preview_the(symbol, object, method=:slug)
-      string = Rails.configuration.paperclip_defaults[symbol].dup
+      paperclip_defaults = Rails.configuration.paperclip_defaults.dup
+      string = paperclip_defaults[symbol].dup
+
+      if paperclip_defaults[:storage] == :s3
+        bucket  = paperclip_defaults[:s3_credentials][:bucket]
+        s3_host = paperclip_defaults[:s3_host_name]
+      end
 
       replacements = [
+        [/:s3_domain_url/, "http://#{bucket}.#{s3_host}#{paperclip_defaults[:path]}" ],
         [/:style/,      object.send(method)                 ],
         [/:class/,      self.class.name.underscore.pluralize],
         [/:attachment/, 'images'                            ],
@@ -117,7 +130,7 @@ class DynamicVisualization < ActiveRecord::Base
     end
 
     def render_erb(object)
-      template = File.read( self.session_state.path )
+      template = File.read( self.session_state.url )
       Erubis::Eruby.new(template).result(binding()).html_safe
     end
 

@@ -38,7 +38,7 @@ namespace :db do
     )
     
     cmrpc_places.each do |id|
-      place = Geography.find_by(unitid: id.to_s)
+      place = Geography.find_by(unitid: id)
       place.institution_id = 2
       place.save(validate: false)
     end

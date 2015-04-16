@@ -50,6 +50,8 @@ a.dropdown-toggle {
 .navbar-brand > img {
   position: relative;
   top: -15px;
+  max-height: 50px;
+  max-width: 215px;
 }
 
 #btn-signup {
