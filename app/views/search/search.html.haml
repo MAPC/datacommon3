@@ -1,21 +1,36 @@
 %h1 "#{params[:search]}"
 %h2.page-header Search Results
 
-%h3 Data
-= render @results.layers
-
-%br
-%br
+.row
 
 %h3 Visualizations
-= render @results.visualizations
+- if @results.visualizations.any?
+  = render @results.visualizations
+- else
+  No
+  = link_to 'visualizations', visualizations_path
+  matched your search.
 
-%br
-%br
+.row.page-header
 
 %h3 Maps
-= render @results.static_maps
+- if @results.static_maps.any?
+  = render @results.static_maps
+- else
+  No
+  = link_to 'maps', static_maps_path
+  matched your search.
+
+.row.page-header
+
+%h3 Data
+Coming soon.
+-# = render @results.datasets
 
 
+%br
+%br
+%br
 
--#= paginate @results
+
+-# = paginate @results

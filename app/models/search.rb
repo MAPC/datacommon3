@@ -3,7 +3,7 @@ class Search < ActiveRecord::Base
 
   attr_accessor :query
 
-  paginates_per 8
+  paginates_per 12
 
   belongs_to :searchable, polymorphic: true
 

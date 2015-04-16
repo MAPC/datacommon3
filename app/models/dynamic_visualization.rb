@@ -130,7 +130,7 @@ class DynamicVisualization < ActiveRecord::Base
     end
 
     def render_erb(object)
-      template = File.read( self.session_state.url )
+      template = open( self.session_state.url ) {|file| file.read}
       Erubis::Eruby.new(template).result(binding()).html_safe
     end
 

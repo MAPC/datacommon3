@@ -488,6 +488,55 @@ CREATE TABLE schema_migrations (
 
 
 --
+-- Name: weave_visualization; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE weave_visualization (
+    id integer NOT NULL,
+    title character varying(100),
+    abstract text,
+    owner_id integer NOT NULL,
+    last_modified timestamp without time zone NOT NULL,
+    sessionstate text NOT NULL,
+    year character varying(50),
+    original_id integer,
+    featured integer,
+    institution_id integer DEFAULT 1,
+    permission character varying(255) DEFAULT 'public'::character varying,
+    image_file_name character varying(255),
+    image_content_type character varying(255),
+    image_file_size integer,
+    image_updated_at timestamp without time zone
+);
+
+
+--
+-- Name: searches; Type: VIEW; Schema: public; Owner: -
+--
+
+CREATE VIEW searches AS
+ SELECT weave_visualization.id AS searchable_id,
+    'Visualization'::text AS searchable_type,
+    weave_visualization.title AS term
+   FROM weave_visualization
+UNION
+ SELECT weave_visualization.id AS searchable_id,
+    'Visualization'::text AS searchable_type,
+    weave_visualization.abstract AS term
+   FROM weave_visualization
+UNION
+ SELECT mbdc_calendar.id AS searchable_id,
+    'StaticMap'::text AS searchable_type,
+    mbdc_calendar.title AS term
+   FROM mbdc_calendar
+UNION
+ SELECT mbdc_calendar.id AS searchable_id,
+    'StaticMap'::text AS searchable_type,
+    mbdc_calendar.abstract AS term
+   FROM mbdc_calendar;
+
+
+--
 -- Name: snapshots_regionalunit; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -622,29 +671,6 @@ CREATE SEQUENCE snapshots_visualization_topics_id_seq
 --
 
 ALTER SEQUENCE snapshots_visualization_topics_id_seq OWNED BY snapshots_visualization_topics.id;
-
-
---
--- Name: weave_visualization; Type: TABLE; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE TABLE weave_visualization (
-    id integer NOT NULL,
-    title character varying(100),
-    abstract text,
-    owner_id integer NOT NULL,
-    last_modified timestamp without time zone NOT NULL,
-    sessionstate text NOT NULL,
-    year character varying(50),
-    original_id integer,
-    featured integer,
-    institution_id integer DEFAULT 1,
-    permission character varying(255) DEFAULT 'public'::character varying,
-    image_file_name character varying(255),
-    image_content_type character varying(255),
-    image_file_size integer,
-    image_updated_at timestamp without time zone
-);
 
 
 --
@@ -1077,6 +1103,34 @@ CREATE INDEX index_auth_user_on_remember_digest ON auth_user USING btree (rememb
 
 
 --
+-- Name: index_mbdc_calendar_on_abstract; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_mbdc_calendar_on_abstract ON mbdc_calendar USING gin (to_tsvector('english'::regconfig, abstract));
+
+
+--
+-- Name: index_mbdc_calendar_on_title; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_mbdc_calendar_on_title ON mbdc_calendar USING gin (to_tsvector('english'::regconfig, (title)::text));
+
+
+--
+-- Name: index_weave_visualization_on_abstract; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_weave_visualization_on_abstract ON weave_visualization USING gin (to_tsvector('english'::regconfig, abstract));
+
+
+--
+-- Name: index_weave_visualization_on_title; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_weave_visualization_on_title ON weave_visualization USING gin (to_tsvector('english'::regconfig, (title)::text));
+
+
+--
 -- Name: maps_contact_user_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1338,4 +1392,6 @@ INSERT INTO schema_migrations (version) VALUES ('20150318181627');
 INSERT INTO schema_migrations (version) VALUES ('20150411202652');
 
 INSERT INTO schema_migrations (version) VALUES ('20150415235639');
+
+INSERT INTO schema_migrations (version) VALUES ('20150416190830');
 
