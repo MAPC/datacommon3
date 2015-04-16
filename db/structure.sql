@@ -27,7 +27,7 @@ CREATE TABLE auth_user (
     email character varying(75) NOT NULL,
     password_digest character varying(128) NOT NULL,
     is_staff boolean DEFAULT false NOT NULL,
-    is_active boolean DEFAULT true NOT NULL,
+    is_active boolean DEFAULT false NOT NULL,
     is_superuser boolean DEFAULT false NOT NULL,
     last_login timestamp without time zone DEFAULT ('now'::text)::date NOT NULL,
     date_joined timestamp without time zone DEFAULT ('now'::text)::date NOT NULL,
@@ -979,14 +979,6 @@ ALTER TABLE ONLY snapshots_regionalunit
 
 
 --
--- Name: snapshots_visualization__visualization_id_7697a44685099f5a_uniq; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
---
-
-ALTER TABLE ONLY snapshots_visualization_source
-    ADD CONSTRAINT snapshots_visualization__visualization_id_7697a44685099f5a_uniq UNIQUE (visualization_id, datasource_id);
-
-
---
 -- Name: snapshots_visualization_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1175,20 +1167,6 @@ CREATE INDEX snapshots_visualization_regiontype_id ON snapshots_visualization US
 
 
 --
--- Name: snapshots_visualization_source_datasource_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX snapshots_visualization_source_datasource_id ON snapshots_visualization_source USING btree (datasource_id);
-
-
---
--- Name: snapshots_visualization_source_visualization_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX snapshots_visualization_source_visualization_id ON snapshots_visualization_source USING btree (visualization_id);
-
-
---
 -- Name: snapshots_visualization_topics_topic_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1266,18 +1244,10 @@ CREATE INDEX weave_visualization_topics_visualization_id ON weave_visualization_
 
 
 --
--- Name: visualization_id_refs_id_4779ee3461d3a108; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY snapshots_visualization_source
-    ADD CONSTRAINT visualization_id_refs_id_4779ee3461d3a108 FOREIGN KEY (visualization_id) REFERENCES snapshots_visualization(id) DEFERRABLE INITIALLY DEFERRED;
-
-
---
 -- PostgreSQL database dump complete
 --
 
-SET search_path TO datacommon,public;
+SET search_path TO public;
 
 INSERT INTO schema_migrations (version) VALUES ('20140901170947');
 
@@ -1336,4 +1306,6 @@ INSERT INTO schema_migrations (version) VALUES ('20150318160938');
 INSERT INTO schema_migrations (version) VALUES ('20150318181627');
 
 INSERT INTO schema_migrations (version) VALUES ('20150411202652');
+
+INSERT INTO schema_migrations (version) VALUES ('20150415235639');
 
