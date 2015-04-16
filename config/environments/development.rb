@@ -15,8 +15,8 @@ Rails.application.configure do
 
   # Care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.delivery_method = :test
-  config.action_mailer.default_url_options = { host: 'localhost:3000' }
+  config.action_mailer.delivery_method     = ( ENV.fetch('DEV_DELIVERY_METHOD') { :test } ).to_sym
+  config.action_mailer.default_url_options = { host: ENV.fetch('DEV_DEFAULT_MAIL_URL') { 'localhost:3000' } }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log

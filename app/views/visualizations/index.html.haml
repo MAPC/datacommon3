@@ -8,7 +8,7 @@
   = succeed '.' do
     = render partial: 'shared/select', object: 'data_source', as: :object
 
-#visuals
+.row#visuals
   = render @visualizations
   - if @visualizations.empty?
     %p

@@ -20,33 +20,33 @@ namespace :db do
     IssueArea.find(13).update_attribute(:active, false)
 
 
-    puts "Making all visualizations private first"
-    Visualization.unscoped.find_each do |visual|
-      next if visual.permission == "private"
+    # puts "Making all visualizations private first"
+    # Visualization.unscoped.find_each do |visual|
+    #   next if visual.permission == "private"
       
-      visual.permission = "private"
-      visual.save(validate: false)
-    end
+    #   visual.permission = "private"
+    #   visual.save(validate: false)
+    # end
 
 
-    puts "Setting public visualizations to public"
-    Visualization.unscoped.find_each do |visual|
-      query = <<-ENDSQL
-        SELECT COUNT(*)
-        FROM core_genericobjectrolemapping
-          WHERE role_id = 7 AND object_id = #{visual.id}
-      ENDSQL
+    # puts "Setting public visualizations to public"
+    # Visualization.unscoped.find_each do |visual|
+    #   query = <<-ENDSQL
+    #     SELECT COUNT(*)
+    #     FROM core_genericobjectrolemapping
+    #       WHERE role_id = 7 AND object_id = #{visual.id}
+    #   ENDSQL
       
-      result = ActiveRecord::Base.connection.execute(query)
-      count  = result.map {|r| r['count']}.first.to_i
+    #   result = ActiveRecord::Base.connection.execute(query)
+    #   count  = result.map {|r| r['count']}.first.to_i
 
-      visual.permission = "public" if count == 2
-      if visual.save(validate: false)
-        visual
-      else
-        puts "Error saving visual: #{visual.id}: #{visual.errors.full_messages.join(', ')}"
-      end
-    end
+    #   visual.permission = "public" if count == 2
+    #   if visual.save(validate: false)
+    #     visual
+    #   else
+    #     puts "Error saving visual: #{visual.id}: #{visual.errors.full_messages.join(', ')}"
+    #   end
+    # end
 
 
     puts "Setting visualizations that belong to CMRPC"
