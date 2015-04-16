@@ -40,7 +40,12 @@ namespace :db do
       result = ActiveRecord::Base.connection.execute(query)
       count  = result.map {|r| r['count']}.first.to_i
 
-      visual.update_attribute(:permission, "public") if count == 2
+      visual.permission = "public" if count == 2
+      if visual.save(validate: false)
+        visual
+      else
+        puts "Error saving visual: #{visual.id}: #{visual.errors.full_messages.join(', ')}"
+      end
     end
 
 
