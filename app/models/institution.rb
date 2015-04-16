@@ -1,14 +1,10 @@
 class Institution < ActiveRecord::Base
 
   has_one  :branding
-
   has_many :heros
-  has_many :pages
   has_many :static_maps
   has_many :visualizations
-
-  has_many :municipalities
-  has_many :subregions
+  has_many :geographies
 
   validates :long_name,  presence: true
   validates :short_name, presence: true
@@ -65,13 +61,9 @@ class Institution < ActiveRecord::Base
         formatted_value { bindings[:object].static_maps.count }
         column_width 75
       end
-      field :municipalities do
+      field :geographies do
         label "Munis"
-        formatted_value { bindings[:object].municipalities.count }
-        column_width 75
-      end
-      field :subregions do
-        formatted_value { bindings[:object].subregions.count }
+        formatted_value { bindings[:object].geographies.count }
         column_width 75
       end
     end

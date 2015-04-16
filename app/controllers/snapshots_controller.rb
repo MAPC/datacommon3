@@ -1,4 +1,5 @@
 class SnapshotsController < ApplicationController
+  before_filter :load_institution
 
   def index
   end

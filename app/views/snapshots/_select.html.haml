@@ -1,5 +1,5 @@
 .geography-selector
-  %h5 Select a community
+  %h5 Select a #{region_name_or('')} community
   = form_tag '', method: :get do
     = select_tag :slug, options_for_area(nil, selected), include_blank: true, id: 'area-select', class: 'chosen-select', data: { placeholder: "Choose a municipality or subregion" }
 
