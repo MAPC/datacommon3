@@ -28,5 +28,5 @@
     - if Rails.env.development?
       = debug(params) 
       = debug({subdomain: request.subdomain.split('.').first})
-      = debug(@institution)
+      = debug(@institution.inspect)
 
