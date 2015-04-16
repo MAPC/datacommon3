@@ -8,7 +8,6 @@ class StaticMapsController < ApplicationController
     @maps = apply_scopes(
       StaticMap.institution(@institution)
     ).page(params[:page])
-    # @maps = apply_scopes(StaticMap.page(params[:page]))
   end
 
   def show
