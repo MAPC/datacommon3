@@ -26,7 +26,7 @@ namespace :db do
       2666,2671,2672,2676,2663,2662,2646,2681,2677,2658,2678,2679,2680
     ]
 
-    Visualization.unscoped.find(cmrpc_vvisuals).each do |visual|
+    Visualization.unscoped.find(cmrpc_visuals).each do |visual|
       visual.institution_id = 2
       visual.permission     = 'public'
       if visual.save(validate: false)
