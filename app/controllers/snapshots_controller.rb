@@ -34,25 +34,55 @@ class SnapshotsController < ApplicationController
   def upload_image
     @visual      = DynamicVisualization.find_by id: params[:id]
     object       = Geography.find_by slug: params[:geography]
-    decoded_file = Base64.decode64 params[:data]
-    
-    # Uses the preview#path helper defined in the model.
-    filename = @visual.preview(object).potential_path
-    make_directory_for filename
+    decoded_file = Base64.decode64(params[:data]).force_encoding(Encoding::UTF_8)
+    s3 = AWS::S3.new
 
-    # Write PNG data to the file
-    File.open(filename, 'wb') { |f| f.write decoded_file }
-    
-    if File.exists? filename
-      render json: { message: "Successfully uploaded preview to #{filename}." }
-    else
-      render json: { message: "Did not successfully save.",
-                     status: :unprocessable_entity }
+
+    paperclip_defaults = Rails.configuration.paperclip_defaults
+    # If S3 storage, use the S3 uploader
+    if paperclip_defaults[:storage] == :s3
+      filename = @visual.preview(object).potential_path
+      bucket_name = paperclip_defaults[:s3_credentials][:bucket]
+      bucket      = s3.buckets[bucket_name]
+
+      tempfile = Tempfile.new('uuid', encoding: Encoding::UTF_8)
+      begin
+        tempfile.write(decoded_file)
+        tempfile.close
+        s3_object = bucket.objects[filename[1..-1]]
+        s3_object.write( file: File.open(tempfile), acl: :public_read )
+
+        render json: { message: "Successfully uploaded preview to #{filename}." }
+      rescue StandardError => e
+        render json: { message: "Did not successfully save S3 because #{e}.",
+                       status:  :unprocessable_entity       }
+      ensure
+        tempfile.unlink
+      end
+
+    else # use filesystem storage
+      # Uses the preview#path helper defined in the model.
+      filename = @visual.preview(object).potential_path
+      make_directory_for filename
+      # Write PNG data to the file
+      File.open(filename, 'wb') {|f| f.write decoded_file }
+      render json: json_for_file(filename)
     end
 
   end
 
   private
+
+    def json_for_file(filename)
+      if File.exists? filename
+        { message: "Successfully uploaded preview to #{filename}." }
+      else
+        { message: "Did not successfully save.",
+          status:  :unprocessable_entity       }
+      end
+    end
+
+
     def make_directory_for(filename)
       dirname = File.dirname(filename)
       FileUtils.mkdir_p(dirname) unless File.directory?(dirname)

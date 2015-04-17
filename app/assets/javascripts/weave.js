@@ -332,7 +332,7 @@ Visual.prototype.upload_img = function(callback) {
     },
     error: function (error) {
       debug_log( "An error occurred when uploading to " + that.upload_png_url(), 'error');
-      debug_log( error );
+      debug_log( error, 'dir' );
       return (callback) ? callback(error) : error
     }
   });
