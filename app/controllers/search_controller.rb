@@ -3,7 +3,8 @@ class SearchController < ApplicationController
 
   def search
     results  = Search.new(query: params[:search]).results
-    @results = SearchFacade.new(results)
+    @datasets = Dataset.find_by(tags: params[:search])
+    @results  = SearchFacade.new(results)
   end
 
   def suggest

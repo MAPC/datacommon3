@@ -1,14 +1,16 @@
--# - org = dataset.organization.presence ? dataset.organization.fetch("title") : nil
-
 .row.dataset
   .col-sm-5.col-xs-12.col-sm-offset-1.col-xs-offset-0
-    %h3.title
+    %h4.title.no-padding
       = link_to dataset.title, dataset_path(dataset.id, params)
-  .col-sm-6.col-xs-12
+    %p
+      = dataset.notes
+  .col-sm-6.col-xs-12.meta
     %ul.none
-      -# %li= "Last Updated: #{Date.parse(dataset.revision_timestamp).to_s(:monthyear)}"
-      %li= "Created: #{Date.parse(dataset.metadata_created).to_s(:monthyear)}"
-      -# -if org
-      -#   %li= "Organization: #{org}"
+      %li
+        - dataset.tags.each do |tag|
+          %span.badge= tag["display_name"]
+      %td
+        Updated
+        = Date.parse(dataset.metadata_modified).to_s(:monthyear)
       %li
         %small= "#{dataset.resources.count} " << "resource".pluralize(dataset.resources.count)

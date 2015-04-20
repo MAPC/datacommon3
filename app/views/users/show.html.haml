@@ -1,29 +1,25 @@
 .row.profile
   .col-md-1.col-sm-2.col-sm-offset-1.col-xs-3.col-xs-offset-0
-    -# = image_tag (@user.avatar_url), alt: @user.name
-  -# .col-md-3.col-sm-4.col-xs-8.info
-  -#   %h3=  @user.name
-  -#     - if current_user? @user
-  -#     = link_to 'Edit Profile', edit_profile_path(@user)
-  -#   - if @user.has_rich_data?
-  -#     %p=  mail_to @user.email
-  -#       %p=  @user.city
-  -#   - if @user.has_rich_data?
-  -#     .col-md-3.col-sm-4.col-xs-12.org
-  -#       %h5= @user.organization
-  -#       %p=  @user.position
-  -#       %p=  link_to @profile.website_url
-    
+    = image_tag (@user.avatar_url), alt: @user.name
+  .col-md-3.col-sm-4.col-xs-8.info
+    %h3= @user.name
+    -# - if current_user? @user
+      -# = link_to 'Edit Profile', edit_profile_path(@user)
+    %p=  mail_to @user.email
+    %p=  @user.try(:city)
+  .col-md-3.col-sm-4.col-xs-12.org
+    %h5= @user.try(:organization)
+    %p=  @user.try(:position)
+    -# %p=  link_to @profile.try(:website_url)
 
--# %h2.page-header #{@user.name}'s Visualizations
+%h2.page-header #{@user.name}'s Visualizations
 
--# - if @user.visualizations.empty?
--#   %p #{@user.fname} has not created any visualizations.
+- if @user.visualizations.any?
+  .row
+    = render partial: 'visualizations/thumbnail', collection: @user.visualizations, as: :visual
 
--# .row
--#   = render partial: 'visualizations/thumbnail', collection: @user.visualizations[0..3], as: :vis
--# .row
--#   = render partial: 'visualizations/thumbnail', collection: @user.visualizations[4..7], as: :vis
+- else
+  %p #{@user.fname} has not created any visualizations.
 
 -# .row.center
--#   = paginate @user.visualizations, window: 1, outer_window: 1
+  -# = paginate @user.visualizations, window: 1, outer_window: 1

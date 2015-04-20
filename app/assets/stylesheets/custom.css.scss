@@ -361,6 +361,10 @@ ul.chosen-results {
 
 // USER PROFILES
 
+.row.profile {
+  padding: 30px 0;
+}
+
 .profile {
   img { margin-top:    23px; }
 
@@ -420,6 +424,19 @@ img.aligner {
     &:hover { opacity: 1; }
   }
 
+}
+
+
+// Dataset
+
+//    Dataset partial
+
+div.meta {
+  padding-top: 10px;
+}
+
+.no-padding {
+  padding: 0 !important;
 }
 
 @import "global/footer";

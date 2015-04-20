@@ -1,17 +1,22 @@
 %h1 "#{params[:search]}"
 %h2.page-header Search Results
 
+
 .row
 
-%h3 Visualizations
-- if @results.visualizations.any?
-  = render @results.visualizations
+
+%h3 Data
+
+- if @datasets.records.any?
+  = render partial: 'datasets/dataset', collection: @datasets.records
 - else
   No
-  = link_to 'visualizations', visualizations_path
+  = link_to 'datasets', datasets_path
   matched your search.
 
+
 .row.page-header
+
 
 %h3 Maps
 - if @results.static_maps.any?
@@ -21,11 +26,17 @@
   = link_to 'maps', static_maps_path
   matched your search.
 
+
 .row.page-header
 
-%h3 Data
-Coming soon.
--# = render @results.datasets
+
+%h3 Visualizations
+- if @results.visualizations.any?
+  = render @results.visualizations
+- else
+  No
+  = link_to 'visualizations', visualizations_path
+  matched your search.
 
 
 %br

@@ -1,35 +1,24 @@
-%table.metadata
+%p= @dataset.notes
 
-  %tr
-    %td Category
-    %td= "TODO: dataset.category"
+%table.metadata
   %tr
     %td Creator
-    %td= dataset.author.presence || "Unknown"
+    %td= dataset.url.presence || "Unknown"
   %tr
     %td Publisher
     %td= dataset.organization ? dataset.organization["title"] : "Unspecified"
+  - dataset.extras.each do |extra|
+    %tr
+      %td= extra["key"]
+      %td= extra["value"]
   %tr
-    %td Dates Available
-    %td= "TODO: dataset.spatial_coverage"
-  %tr
-    %td Spatial Coverage
-    %td= "TODO: dataset.spatial_coverage"
-  -# %tr
-    -# %td Last Updated
-    -# %td= Date.parse(dataset.revision_timestamp).to_s(:monthyear)
+    %td Last Updated
+    %td= Date.parse(dataset.metadata_modified).to_s(:monthyear)
   %tr
     %td Tags
     %td
       - dataset.tags.each do |tag|
         %span.badge= tag["display_name"]
-  %tr
-    %td
-      Universe
-      %br
-      %small
-        %a{href: '#', data: {toggle: 'modal', target: '#universe'}} What is a 'universe'?
-    %td= "TODO: dataset.universe"
 
 #universe.modal.fade{role: 'dialog'}
   .modal-dialog
