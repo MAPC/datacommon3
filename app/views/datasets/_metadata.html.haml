@@ -31,19 +31,3 @@
           The universe describes the total number of units in the dataset of interest. For example, the universe for 'Population' is the total population, whereas the universe for 'Labor Force' is the population ages 16 and older, since 16 is the legal age for working in the U.S.
       .modal-footer
         %button.btn.btn-default{type: 'button', data: {dismiss: 'modal'}} Close window
-
--# .center
-
--#   .dropdown.btn-group
--#     %a.btn.btn-success.dropdown-toggle{href: '#', data: {toggle: "dropdown"}}
--#       %span.glyphicon.glyphicon-cloud-download
--#       Download Data and Metadata
--#       %span.caret
--#     %ul.dropdown-menu
--#       %li.dropdown-header Spatial
--#       - dataset.try(:spatial_extents).each do |extent|
--#         %li= link_to "#{extent}", download_dataset_path(dataset,try(: extent_id): extent.id)
--#   &nbsp;
--#   %small
--#     %a{href: '#', data: {toggle: 'modal', target: '#geographies'}}
--#       What are these geographies?
