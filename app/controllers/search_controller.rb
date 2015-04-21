@@ -3,7 +3,10 @@ class SearchController < ApplicationController
 
   def search
     results  = Search.new(query: params[:search]).results
-    @datasets = Dataset.find_by(tags: params[:search])
+    queryset = Dataset.find_by(q: params[:search].gsub(' ', '+'))
+    tagset   = Dataset.find_by(tags: params[:search].gsub(' ', '+'))
+    
+    @datasets = [queryset.records, tagset.records].flatten
     @results  = SearchFacade.new(results)
   end
 

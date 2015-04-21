@@ -7,12 +7,21 @@
 
 %h3 Data
 
-- if @datasets.records.any?
-  = render partial: 'datasets/dataset', collection: @datasets.records
+- if @datasets.any?
+  = render partial: 'datasets/dataset', collection: @datasets
 - else
   No
   = link_to 'datasets', datasets_path
   matched your search.
+
+  %p
+    = succeed '.' do
+      You may want to search for a tag, such as
+      = link_to search_path(search: 'demographics') do
+        %span.badge demographics
+      or
+      = link_to search_path(search: 'transportation') do
+        %span.badge transportation
 
 
 .row.page-header
