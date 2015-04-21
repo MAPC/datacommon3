@@ -34,7 +34,7 @@ gem 'coffee-rails',         '~> 4.0.0' # Use CoffeeScript for .js.coffee assets 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
-gem 'turbolinks',   '2.4.0' # Following links are faster.
+gem 'turbolinks',   '2.4.0' # Following links is faster.
 
 
 # Files
@@ -102,7 +102,7 @@ end
 
 
 group :production do
-  gem 'unicorn-rails'  # Use Unicorn as the app server
+  gem 'puma'           # Use a concurrent app server
   gem 'rails_12factor' # Serves static assets and logs to stdout
   gem 'airbrake'       # Reports application errors
 end
