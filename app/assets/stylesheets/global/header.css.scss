@@ -11,6 +11,10 @@
 @import "global/sizes";
 @import "global/colors";
 
+.navbar.navbar-default.navbar-fixed-top {
+  border: none;
+}
+
 #header {
   background-color: $dc-blue;
 }

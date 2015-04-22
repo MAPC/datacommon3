@@ -92,21 +92,23 @@ describe DynamicVisualization do
     # We'll stub the geography object like in the last example.
 
     let(:geo) { build_stubbed(Geography) }
+    # Stub the session state.
+    let(:file) {
+      file = <<-ERB
+        <tag>MUNI_ID,<%= object.unitid %></tag>
+        <tag>MUNI_ID,<%= object.unit_id %>,<%= object.subunit_ids %>,352</tag>
+      ERB
+    }
 
     before do
       geo.stub(:id)          {  12   }
       geo.stub(:unitid)      { "351" }
       geo.stub(:unit_id)     { "351" }
       geo.stub(:subunit_ids) { "25,252,121" }
-      # Stub the session state.
-      file = <<-ERB
-        <tag>MUNI_ID,<%= object.unitid %></tag>
-        <tag>MUNI_ID,<%= object.unit_id %>,<%= object.subunit_ids %>,352</tag>
-      ERB
-      allow(File).to receive(:read).and_return(file)
     end
 
     it 'returns a rendered state' do
+      allow(OpenURI).to receive(:open_uri).with(any_args).and_return(file)
       rendered = <<-ERB
         <tag>MUNI_ID,351</tag>
         <tag>MUNI_ID,351,25,252,121,352</tag>

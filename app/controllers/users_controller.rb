@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
   before_filter :load_institution
+  
   before_filter :logged_out, only: [:new]
   # before_filter :correct_user,   only: [:edit, :update]
   # before_filter :logged_in_user, only: [:edit, :update]
-
 
   def show
     @user = User.find_by(username: params[:id])

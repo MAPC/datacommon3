@@ -11,10 +11,12 @@ FactoryGirl.define do
 
     trait :active do
       is_active  true
+      activated_at 1.week.ago
     end
 
     trait :inactive do
       is_active  false
+      activated_at nil
     end
 
     trait :staff do

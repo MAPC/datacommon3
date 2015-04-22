@@ -22,7 +22,7 @@ describe User do
     expect(user.to_s).to eq(user.name)
     expect(user.name).to eq("#{user.first_name} #{user.last_name}")
     expect(user.fname).to eq("#{user.first_name}")
-    expect(user.activated?).to eq(user.is_active)
+    expect(user.activated?).to eq(user.activated_at.presence)
   end
 
   it 'treats edge case names with respect' do
@@ -31,7 +31,7 @@ describe User do
   end
 
   specify "#active? returns active state" do
-    expect(user.active?).to eq(user.is_active)
+    expect(user.active?).to eq(user.activated_at.presence)
   end
 
   it 'generates a Gravatar URL with default 75px' do

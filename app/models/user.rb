@@ -46,7 +46,11 @@ class User < ActiveRecord::Base
   end
 
   def active?
-    is_active
+    activated_at
+  end
+
+  def inactive?
+    !active?
   end
 
   def activated?

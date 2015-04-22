@@ -7,8 +7,8 @@
         %span.icon-bar
         %span.icon-bar
       = link_to root_path, class: 'navbar-brand' do
-        -# = image_tag "http://placehold.it/162x52"
-        = image_tag @institution.logo.url(:header), alt: "#{@institution} DataCommon"
+        - if @institution
+          = image_tag @institution.logo.url(:header), alt: "#{@institution} DataCommon"
 
     .collapse.navbar-collapse#main-header
       %ul.nav.navbar-nav.navbar-right
