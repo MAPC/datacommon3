@@ -86,6 +86,7 @@ class Institution < ActiveRecord::Base
         b.black_hole
         b.mimic Institution
         def id ; "NULL" ; end
+        def to_s ; "Null Institution" ; end
         def presence ; nil ; end
       }.new
     end

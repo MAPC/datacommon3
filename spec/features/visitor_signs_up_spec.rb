@@ -17,7 +17,7 @@ feature 'Visitor signs up' do
     expect(page).to have_content('Sign up')
   end
 
-  scenario '[with blank password', js: true do
+  scenario 'with blank password', js: true do
     sign_up_with 'valid@example.com', ''
     expect(page).to have_content("enter a pass")
     expect(page).to have_content('Sign up')

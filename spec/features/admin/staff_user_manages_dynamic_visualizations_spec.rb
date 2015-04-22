@@ -7,6 +7,7 @@ feature 'Staff can manage dynamic visualizations' do
   background do
     Institution.stub(:find_by)    { institution    }
     institution.stub(:short_name) { "Metro Boston" }
+    institution.stub(:logo) { Naught.build { |b| b.black_hole }.new }
 
     2.times { create(:dynamic_visual) }
     sign_in staff
@@ -15,6 +16,7 @@ feature 'Staff can manage dynamic visualizations' do
   end
 
   scenario 'staff can see the list of visualizations' do
+    visit '/admin/dynamic_visualization'
     %w( Title Year Topics Filename Updated ).each do |item|
       expect(page).to have_content(item)
     end

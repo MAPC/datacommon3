@@ -7,6 +7,7 @@ feature 'Staff can manage visualizations' do
   background do
     Institution.stub(:find_by) { institution }
     institution.stub(:short_name) { "Metro Boston" }
+    institution.stub(:logo) { Naught.build { |b| b.black_hole }.new }
 
     1.times { create(:visualization, institution_id: 1) }
     2.times { create(:visualization, institution_id: 2) }
@@ -16,7 +17,10 @@ feature 'Staff can manage visualizations' do
   end
 
   scenario 'staff can see the list of visualizations' do
-    %w( Title Abstract Owner Institution ).each {|item| expect(page).to have_content(item) }
+    visit '/admin/visualization'
+    %w( Title Abstract Owner Institution ).each {|item|
+      expect(page).to have_content(item)
+    }
     expect(page).to have_content('Metro Boston')
     expect(page).to have_selector('tbody tr', count: 1)
   end

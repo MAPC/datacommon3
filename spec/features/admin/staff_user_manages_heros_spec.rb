@@ -7,6 +7,7 @@ feature 'Staff can manage heros' do
   background do
     Institution.stub(:find_by) { institution }
     institution.stub(:short_name) { "Metro Boston" }
+    institution.stub(:logo) { Naught.build { |b| b.black_hole }.new }
 
     1.times { create(:hero, institution_id: 1) }
     2.times { create(:hero, institution_id: 2) }
@@ -16,6 +17,7 @@ feature 'Staff can manage heros' do
   end
 
   scenario 'staff can see the list of heros' do
+    visit '/admin/hero'
     %w( Title Order Active Institution ).each {|item| expect(page).to have_content(item) }
     expect(page).to have_content('Metro Boston')
     expect(page).to have_selector('tbody tr.hero_row', count: 1)

@@ -9,6 +9,8 @@
 */
 
 
+@import "global/colors";
+
 
 /*
 
@@ -75,11 +77,28 @@
   margin-bottom: 0;
 }
 
+/* 
+
+    New Weave Visualization
+
+*/
+
 #new {
-  border: 1px solid #DDD;
-  border-top: none;
-  width:  960px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 960px;
   height: 620px;
+  padding-bottom: 10px;
+  border: 1px solid #AAA;
+  border-top: none;
+ }
+
+// Visualization help
+
+#headingOne {
+  color: $technology
 }
 
 

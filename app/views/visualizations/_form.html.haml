@@ -1,15 +1,15 @@
 .form.vis-form{role: 'form'}
   = form_for @visualization, remote: true, format: :json do |f|
     
-    .col-sm-12.feature
+    .col-sm-12#new
       - if params[:action] == 'new'
         #new
       - else
-        %img.feature{id: "#{@visualization.id}", src: @visualization.image.url}
+        %img#new{id: "#{@visualization.id}", src: @visualization.image.url}
         %p.pre-weave
           %small Click to activate interactive visualization. (Flash required)
 
-      = render 'visualizations/help'
+    = render 'visualizations/help'
 
     = f.hidden_field :sessionstate
 

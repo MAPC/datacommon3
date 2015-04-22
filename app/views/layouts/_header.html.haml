@@ -7,7 +7,7 @@
         %span.icon-bar
         %span.icon-bar
       = link_to root_path, class: 'navbar-brand' do
-        - if @institution
+        - if @institution.presence
           = image_tag @institution.logo.url(:header), alt: "#{@institution} DataCommon"
 
     .collapse.navbar-collapse#main-header
