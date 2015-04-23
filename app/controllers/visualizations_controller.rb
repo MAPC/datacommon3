@@ -78,13 +78,18 @@ class VisualizationsController < ApplicationController
       title:          "#{template.title} (Copy)",
       owner_id:       current_user.id,
       original_id:    template.id,
-      institution_id: nil
+      institution_id: @institution.id
     )
 
-    if @visualization.save
+    # TODO: write a test for duplicating a visualization
+    # with no abstract.
+    if @visualization.save(validate: false)
       redirect_to edit_visualization_url(@visualization)
     else
       flash[:danger] = 'An unexpected error occurred when duplicating the visualization.'
+      if @visualization.errors.any?
+        flash[:danger] << "#{ @visualization.errors.full_messages.join(", ") }"
+      end
       redirect_to root_url
     end
   end
@@ -113,6 +118,7 @@ class VisualizationsController < ApplicationController
     @visualization.destroy
 
     flash[:success] = "You deleted the visualization \"#{@visualization}\"."
+    # TODO: Maybe profile_path(current_user)
     redirect_to current_user
   end
 
