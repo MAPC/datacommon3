@@ -5,7 +5,7 @@
       - if params[:action] == 'new'
         #new
       - else
-        %img#new{id: "#{@visualization.id}", src: @visualization.image.url}
+        %img{id: "#{@visualization.id}", src: @visualization.image.url}
         %p.pre-weave
           %small Click to activate interactive visualization. (Flash required)
 
