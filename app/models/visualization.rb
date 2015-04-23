@@ -1,5 +1,7 @@
 class Visualization < ActiveRecord::Base  
   self.table_name = 'weave_visualization'
+  self.primary_key = :id
+  
   PERMISSIONS = ['public', 'private']
 
   before_save :update_time

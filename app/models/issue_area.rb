@@ -1,5 +1,6 @@
 class IssueArea < ActiveRecord::Base
   self.table_name = 'mbdc_topic'
+  self.primary_key = :id
 
   before_save :use_or_create_slug
 

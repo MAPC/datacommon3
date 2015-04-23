@@ -1,5 +1,6 @@
 class DataSource < ActiveRecord::Base
   self.table_name = 'mbdc_datasource'
+  self.primary_key = :id
 
   HTTP_REGEX = /https?:\/\//
   before_save :validate_http

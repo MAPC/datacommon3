@@ -1,5 +1,6 @@
 class DynamicVisualization < ActiveRecord::Base
   self.table_name = 'snapshots_visualization'
+  self.primary_key = :id
   self.inheritance_column = nil # The :type column tried to find a STI subclass
 
   before_save :set_legacy_sessionstate

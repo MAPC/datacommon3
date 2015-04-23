@@ -1,5 +1,6 @@
 class StaticMap < ActiveRecord::Base
   self.table_name = 'mbdc_calendar'
+  self.primary_key = :id
 
   before_validation :update_legacy_fields
 

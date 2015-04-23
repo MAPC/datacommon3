@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   self.table_name  = 'auth_user'
-  self.primary_key = 'id'
+  self.primary_key = :id
   attr_accessor :remember_token, :password
 
   before_save :downcase_email

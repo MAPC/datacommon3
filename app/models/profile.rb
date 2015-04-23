@@ -1,5 +1,6 @@
 class Profile < ActiveRecord::Base
   self.table_name = 'maps_contact' # formerly 'users'
+  self.primary_key = :id
   
   belongs_to :user
 
