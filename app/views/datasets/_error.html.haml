@@ -1,0 +1,11 @@
+- if object.records.empty? && params[:topic].empty?
+  %p.center
+    It appears that our CKAN data storage is temporarily down.
+
+  %p.center
+    Please report this to
+    = link_to 'mcloyd@mapc.org', 'mailto:mcloyd@mapc.org'
+    and we will address the issue quickly.
+
+  - 3.times do
+    %br

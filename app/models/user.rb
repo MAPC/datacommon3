@@ -75,9 +75,9 @@ class User < ActiveRecord::Base
   end
 
 
-  def self.default_scope
-    limit 10
-  end
+  # def self.default_scope
+  #   limit 10
+  # end
 
 
   def password?

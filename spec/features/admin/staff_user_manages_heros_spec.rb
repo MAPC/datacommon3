@@ -12,15 +12,15 @@ feature 'Staff can manage heros' do
     1.times { create(:hero, institution_id: 1) }
     2.times { create(:hero, institution_id: 2) }
     sign_in staff
-
-    visit '/admin/hero'
   end
 
   scenario 'staff can see the list of heros' do
     visit '/admin/hero'
-    %w( Title Order Active Institution ).each {|item| expect(page).to have_content(item) }
-    expect(page).to have_content('Metro Boston')
     expect(page).to have_selector('tbody tr.hero_row', count: 1)
+    expect(page).to have_content('Metro Boston')
+    %w( Title Order Active Institution ).each {|item|
+      expect(page).to have_content(item)
+    }
   end
 
   scenario "staff can edit their own institution's heros" do
@@ -32,10 +32,8 @@ feature 'Staff can manage heros' do
     expect(page).to have_content("Details for Hero 'An edited title'")
   end
 
-
-  let!(:hero) { Hero.find_by(institution_id: 2) }
-
   scenario "staff cannot view or edit another institution's heros" do
+    hero = Hero.find_by(institution_id: 2)
     visit "/admin/hero/#{hero.id}"
     expect(page).to have_content("not authorized")
     visit "/admin/hero/#{hero.id}/edit"
@@ -43,6 +41,7 @@ feature 'Staff can manage heros' do
   end
 
   scenario "staff cannot destroy other's heros" do
+    hero = Hero.find_by(institution_id: 2)
     visit "/admin/hero/#{hero.id}/delete"
     expect(page).to have_content("not authorized")
   end

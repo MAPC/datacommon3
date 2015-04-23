@@ -13,6 +13,7 @@
 
 #datasets
   = render partial: 'datasets/dataset', collection: @datasets.records
+  = render partial: 'datasets/error',   object: @datasets, as: :object
 
 .row.center
   = paginate @datasets
