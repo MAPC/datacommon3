@@ -1,5 +1,7 @@
 class Institution < ActiveRecord::Base
 
+  self.primary_key = 'id'
+
   has_one  :branding
   has_many :heros
   has_many :static_maps
