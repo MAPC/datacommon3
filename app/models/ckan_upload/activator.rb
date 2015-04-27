@@ -1,3 +1,5 @@
+require 'capybara'
+
 module CKANUpload
   DEFAULT_BASE_URL = 'http://ckan.dev.mapc.org'
 

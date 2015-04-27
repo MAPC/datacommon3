@@ -1,6 +1,4 @@
-require 'rails_admin/config/fields/base'
-
-class InstitutionId < RailsAdmin::Config::Fields::Types::Base
+class InstitutionId < RailsAdmin::Config::Fields::Base
   def self.inherited(klass)
     super(klass)
   end
