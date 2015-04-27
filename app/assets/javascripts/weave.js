@@ -24,7 +24,7 @@ var debug_log = function (message, type) {
   }
 }
 
-const DEBUG = false;
+const DEBUG = true;
 debug_log("DEBUG is TRUE. All debug_log messages will print.")
 
 const XML      = (new XMLSerializer());

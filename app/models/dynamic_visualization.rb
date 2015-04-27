@@ -131,8 +131,16 @@ class DynamicVisualization < ActiveRecord::Base
     end
 
     def render_erb(object)
-      template = OpenURI.open_uri( self.session_state.url ) {|file| file.read}
+      template = template_for_environment
       Erubis::Eruby.new(template).result(binding()).html_safe
+    end
+
+    def template_for_environment
+      if Rails.env == 'production' || ENV['S3_ATTACHMENT_STORAGE'].to_b == true
+        template = OpenURI.open_uri( self.session_state.url ) {|file| file.read}
+      else
+        template = File.open(self.session_state.path) {|file| file.read}
+      end
     end
 
     def set_legacy_sessionstate

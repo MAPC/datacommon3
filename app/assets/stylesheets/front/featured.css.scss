@@ -19,6 +19,14 @@
   padding-bottom: 30px;
 }
 
+.show img, .show object {
+  width:      100%;
+  max-width:  960px;
+  max-height: 620px;
+  padding-bottom: 10px;
+}
+.show object { padding: 0; }
+
 .feature img {
    width: 100%;
    max-width: 640px;
