@@ -24,7 +24,7 @@ var debug_log = function (message, type) {
   }
 }
 
-const DEBUG = true;
+const DEBUG = false;
 debug_log("DEBUG is TRUE. All debug_log messages will print.")
 
 const XML      = (new XMLSerializer());
@@ -46,14 +46,14 @@ const MISSING_IMAGE_REGEX = /(\/missing\.(png|jpe?g))/i;
 var DC  = {};
 
 DC.weaveConfig = {
-  flashUrl:         "http://metrobostondatacommon.org/weave/weave.swf",
+  flashUrl:         "http://weaveboston.org/weave/weave.swf",
   expressInstaller: "expressInstall.swf",
   flashVersion:     "10.0.0",
   params: {
     quality:           "high",
     bgcolor:           "#FFFFFF",
     allowscriptaccess: "always",
-    base:              "http://metrobostondatacommon.org/weave/",
+    base:              "http://weaveboston.org/weave/",
     wmode:             "gpu"
   },
   flashvars: {
