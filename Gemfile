@@ -63,7 +63,6 @@ gem 'naught'               # Helps build null objects
 gem 'stamp', '0.6.0'       # Convenient timestamping
 gem 'wannabe_bool'         # To convert boolean-ish values to booleans
 gem 'capybara', '~> 2.2.1' # DSL for integration tests, crawling screens
-gem 'capybara-webkit'      # Webkit headless browsing
 
 # Server
 gem 'foreman', '0.75.0' # Manage the server and auxiliary processes
@@ -85,6 +84,7 @@ group :development, :test do
   gem 'launchy'                         # Enable save_and_open_page
   gem 'faker'                           # Generate fake data
   gem 'vcr',                   '~> 2.4' # Record API calls for tests
+  gem 'capybara-webkit'                 # Webkit headless browsing
 
   gem 'childprocess',          '~> 0.5' # Fix a version conflict
   gem 'webmock',            '~> 1.8.4', # Faking requests (supports VCR)
