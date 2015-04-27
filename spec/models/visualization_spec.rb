@@ -59,5 +59,14 @@ describe Visualization do
       expect(visual).to respond_to(:institution)
     end
   end
+
+  describe "orignal" do
+    it "is based off an original" do
+      original_visual = create(:visualization, title: "The O.V.")
+      visual.original_id = original_visual.id
+      visual.save
+      expect( visual.original ).to eq( original_visual )
+    end
+  end
 end
 

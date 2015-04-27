@@ -10,6 +10,9 @@
   .row
     .col-sm-6.col-xs-12
       %p= @visualization.abstract
+      - if @visualization.original.presence
+        = render partial: 'visualizations/original', object: @visualization.original
+          
     .col-sm-6.col-xs-12
       %p
         by

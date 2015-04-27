@@ -6,6 +6,8 @@ class Visualization < ActiveRecord::Base
 
   before_save :update_time
   before_validation :stringify_permissions
+
+  belongs_to :original, class_name: "Visualization", foreign_key: :original_id
   
   has_and_belongs_to_many :data_sources,
     join_table: :weave_visualization_datasources,
