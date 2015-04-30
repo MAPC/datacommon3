@@ -73,7 +73,7 @@ class Institution < ActiveRecord::Base
       field :long_name
       field :subdomain
       field :region_id
-      # field :retina_dimensions
+      field :id
       field :logo, :paperclip
     end
   end
