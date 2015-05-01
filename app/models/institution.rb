@@ -1,5 +1,5 @@
 class Institution < ActiveRecord::Base
-  self.primary_key = :id
+  self.primary_key = "id"
 
   has_one  :branding
   has_many :heros
@@ -73,7 +73,9 @@ class Institution < ActiveRecord::Base
       field :long_name
       field :subdomain
       field :region_id
-      field :id
+      field :id do
+        read_only true
+      end
       field :logo, :paperclip
     end
   end
