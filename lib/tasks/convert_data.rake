@@ -12,7 +12,7 @@ namespace :db do
     Institution.create_or_update( id:         2,
                                   short_name: 'Central Mass',
                                   long_name:  'Cental Massachusetts',
-                                  subdomain:  'metroboston')
+                                  subdomain:  'centralmass')
 
 
     # puts "Activating topics except Geographic Boundaries"
