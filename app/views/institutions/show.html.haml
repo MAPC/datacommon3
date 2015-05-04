@@ -1,8 +1,15 @@
 - content_for :featured do
-  %h2 Introducing the new #{region_name_or('')} DataCommon.
+  %h2 Welcome to the new #{region_name_or('')} DataCommon.
   %p.top
-    If you need data, visualizations, or maps about the #{region_name_or('')} region, you've come to the right place. It's not just a new look: we've added a searchable data catalog, a data API, full-site search, and more.
-
+    We've redesigned our interface and added a 
+    = link_to "Data Catalog", datasets_path
+    for easier data downloading. Join us for Data Day to learn more about using data to drive community change: 
+    = succeed ',' do
+      = link_to "in Worcester on May 21", "https://www.eventbrite.com/e/16618355950"
+    and in Boston on June 26
+    %br
+    Sign up for one or both!
+  
   .row.explanation
     .col-lg-3.col-sm-6.col-xs-12.explanation
       = link_to datasets_path do

@@ -8,7 +8,7 @@
         %span.icon-bar
       = link_to root_path, class: 'navbar-brand' do
         - if @institution.presence
-          = image_tag @institution.logo.url(:header), alt: "#{@institution} DataCommon"
+          = image_tag @institution.logo.url(:large), alt: "#{@institution} DataCommon"
 
     .collapse.navbar-collapse#main-header
       %ul.nav.navbar-nav.navbar-right
@@ -47,9 +47,10 @@
             %b.caret
           %ul.dropdown-menu
             %li
+              = link_to "Central Mass Data Day", "https://www.eventbrite.com/e/16618355950", target: '_blank'
               = link_to 'http://www.eventbrite.com/o/mapc-610093971', target: '_blank' do
-                Workshops
-                %span.glyphicon.glyphicon-new-window
+                MAPC Workshops
+                -# %span.glyphicon.glyphicon-new-window
               = link_to 'Blog', 'http://uncommondata.tumblr.com/'
 
       = form_tag '/search', method: :get, data: {role: 'search'}, class: "navbar-form navbar-left" do
