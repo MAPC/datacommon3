@@ -34,7 +34,7 @@ class SnapshotsController < ApplicationController
   def upload_image
     @visual      = DynamicVisualization.find_by id: params[:id]
     object       = Geography.find_by slug: params[:geography]
-    decoded_file = Base64.decode64(params[:data]).force_encoding(Encoding::UTF_8)
+    decoded_file = Base64.decode64(params[:data]).force_encoding(Encoding::ASCII_8BIT)
     s3 = AWS::S3.new
 
 
@@ -45,17 +45,16 @@ class SnapshotsController < ApplicationController
       bucket_name = paperclip_defaults[:s3_credentials][:bucket]
       bucket      = s3.buckets[bucket_name]
 
-      tempfile = Tempfile.new('uuid', encoding: Encoding::UTF_8)
+      tempfile = Tempfile.new('uuid', encoding: Encoding::ASCII_8BIT)
       begin
         tempfile.write(decoded_file)
         tempfile.close
         s3_object = bucket.objects[filename[1..-1]]
-        s3_object.write( file: File.open(tempfile), acl: :public_read )
+        s3_object.write( file: tempfile.path , acl: :public_read )
 
         render json: { message: "Successfully uploaded preview to #{filename}." }
       rescue StandardError => e
-        render json: { message: "Did not successfully save S3 because #{e}.",
-                       status:  :unprocessable_entity       }
+        render json: { message: "Did not successfully save S3 because #{e}." }, status: :unprocessable_entity
       ensure
         tempfile.unlink
       end
