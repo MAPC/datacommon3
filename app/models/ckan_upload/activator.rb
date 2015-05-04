@@ -1,7 +1,15 @@
 require 'capybara'
 
+# Set the following environment variables:
+#     CKAN_BASE_URL           - URL to CKAN instance, without http(s)://, i.e. ckan.mydomain.org
+#     CKAN_UPLOAD_USERNAME    - username to log into CKAN with
+#     CKAN_UPLOAD_PASSWORD    - password to log into CKAN with
+#     CKAN_RESOURCE_HOST      - database to layers being connected
+#     CKAN_DATAPROXY_USERNAME - user to database where layers are stored
+#     CKAN_DATAPROXY_PASSWORD - password to database where layers are stored
+
 module CKANUpload
-  DEFAULT_BASE_URL = 'http://ckan.dev.mapc.org'
+  DEFAULT_BASE_URL = "http://#{ ENV.fetch('CKAN_BASE_URL') }"
 
   class Activator
     include Capybara::DSL

@@ -9,7 +9,7 @@ module CKANUpload
       @extent = extent
       @fields = {
         :'Port'          => 5432,
-        :'Host'          => 'db.dev.mapc.org',
+        :'Host'          => ENV.fetch('CKAN_RESOURCE_HOST'),      # i.e.: db.stage.mydomain.org
         :'User'          => ENV.fetch('CKAN_DATAPROXY_USERNAME'),
         :'Password'      => ENV.fetch('CKAN_DATAPROXY_PASSWORD'),
         :'Database name' => 'geographic',
@@ -27,7 +27,7 @@ module CKANUpload
 
     def start_form
       puts "Starting resource form"
-      visit "http://ckan.dev.mapc.org/dataset/new_resource/#{ @layer.title.parameterize }"
+      visit "http://#{ ENV.fetch('CKAN_BASE_URL') }/dataset/new_resource/#{ @layer.title.parameterize }"
       puts "visited #{page.current_path}"
       begin
         click_button 'DataProxy'
