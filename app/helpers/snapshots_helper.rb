@@ -1,9 +1,10 @@
 module SnapshotsHelper
 
-  def snapshot_topics
-    IssueArea.all.reject{|t| 
-      %w(arts-culture land-use-zoning public-safety technology).include? t.slug
-    }
+  def snapshot_topics(type)
+    issue_areas = DynamicVisualization.where(type: type).map {|d|
+      d.issue_areas.map(&:slug)
+    }.flatten.uniq
+    IssueArea.where(slug: issue_areas)
   end
 
   def options_for_area(type, selected)

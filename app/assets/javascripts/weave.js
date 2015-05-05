@@ -185,7 +185,7 @@ Visual.prototype.upload_if_necessary = function (force, wait_time, callback) {
   // Do it anyway.
   var force     = (force)     ? force     : false;
   // Default to waiting for 7 seconds after #weaveReady.
-  var wait_time = (wait_time) ? wait_time : 7000;
+  var wait_time = (wait_time) ? wait_time : 10000;
 
   var that = this;
   if (force || this.needs_upload) { 
