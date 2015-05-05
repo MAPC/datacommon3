@@ -1,5 +1,3 @@
-require 'active_record/create_or_update'
-
 require 'open-uri'
 
 # Forces all file downloads to be sent to tempfile
