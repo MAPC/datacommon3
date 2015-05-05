@@ -22,6 +22,15 @@ class SnapshotsController < ApplicationController
   # /snapshots/:slug/:topic
   # /snapshots/boston/{economy|demographics}
   def detail
+    if ['cities-and-towns', 'subregions'].include? params[:snapshot_id]
+      flash[:info] =<<-EOS
+        We've moved things around a little!
+        This is the new home for snapshots
+        for cities, towns, and subregions.
+      EOS
+      redirect_to snapshots_path
+    end
+
     @snapshot = SnapshotFacade.new(
       geography: params[:snapshot_id],
       topic:     params[:id]
