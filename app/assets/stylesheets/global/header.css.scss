@@ -35,6 +35,11 @@
   letter-spacing: 0.03em;
   color: #EEE !important;
 
+  @media (min-width: 994px) and (max-width: 1044px) {
+    padding-left:  5px !important;
+    padding-right: 5px !important;
+  }
+
   &:hover {
     color: #FFF !important;
   }
@@ -71,10 +76,16 @@ a.dropdown-toggle {
 
 input#search {
   // Extra small and small are collapsed -- full size
-  // Medium is shrunk
+  
+  // Shrunk for screen-medium
   @media (min-width: $screen-md) {
     max-width: 72px;
+    .navbar-nav > li > a { 
+      padding-left:  3px;
+      padding-right: 3px;
+    }
   }
+  // 1082px to screen-large are moderate size
   @media (min-width: 1082px) {
     max-width: 110px;
   }
