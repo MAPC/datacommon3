@@ -7,7 +7,7 @@ class SnapshotsController < ApplicationController
   # /snapshots/:slug
   # /snapshots/{boston|cambridge}
   def show
-    if params[:id] == ('cities-and-towns' || 'subregions')
+    if ['cities-and-towns', 'subregions'].include? params[:id]
       flash[:info] =<<-EOS
         We've moved things around a little!
         This is the new home for snapshots
