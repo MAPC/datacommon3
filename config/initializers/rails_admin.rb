@@ -33,5 +33,5 @@ RailsAdmin.config do |config|
     # history_show
   end
 
-  config.excluded_models = %w( Ability Geometry Layer Search SpatialExtent )
+  config.included_models = ['User', 'StaticMap', 'Hero', 'Visualization', 'Geography', 'Institution', 'DynamicVisualization']
 end

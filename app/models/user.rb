@@ -137,6 +137,44 @@ class User < ActiveRecord::Base
   end
 
 
+  rails_admin do
+    list do
+      field :username
+      field :first_name
+      field :last_name
+      field :email
+      field :is_active
+      field :is_staff
+      field :is_superuser
+      field :date_joined
+    end
+    edit do
+      field :username
+      field :first_name
+      field :last_name
+      field :email
+      field :password
+      field :password_confirmation
+      field :is_staff
+      field :is_active
+      field :is_superuser
+      field :last_login do
+        read_only true
+      end
+      field :date_joined do
+        read_only true
+      end
+      field :activated_at do
+        read_only true
+      end
+      field :reset_sent_at do
+        read_only true
+      end
+      field :institution
+    end
+  end
+
+
   private
 
     def full_name_or_username
