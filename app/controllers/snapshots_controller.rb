@@ -7,6 +7,15 @@ class SnapshotsController < ApplicationController
   # /snapshots/:slug
   # /snapshots/{boston|cambridge}
   def show
+    if params[:id] == ('cities-and-towns' || 'subregions')
+      flash[:info] =<<-EOS
+        We've moved things around a little!
+        This is the new home for snapshots
+        for cities, towns, and subregions.
+      EOS
+      redirect_to snapshots_path
+    end
+
     @geography = Geography.find_by(slug: params[:id])
   end
 
