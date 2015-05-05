@@ -7,6 +7,10 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by(username: params[:id])
+    if @user.nil?
+      flash[:danger] = "No user with that username could be found."
+      redirect_to signup_url
+    end
   end
 
   def new
