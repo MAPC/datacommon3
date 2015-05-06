@@ -24,14 +24,14 @@ class SnapshotsController < ApplicationController
   def detail
     puts params[:snapshot_id].inspect
     if ["cities-and-towns", "subregions"].include? params[:snapshot_id]
-      puts "THE TRUTH"
       flash[:info] =<<-EOS
         We've moved things around a little!
         This is the new home for snapshots
         for cities, towns, and subregions.
       EOS
-      redirect_to snapshots_path
+      redirect_to snapshot_path params[:id]
     else
+      # Correct request
       @snapshot = SnapshotFacade.new(
         geography: params[:snapshot_id],
         topic:     params[:id]
