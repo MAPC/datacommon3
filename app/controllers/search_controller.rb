@@ -2,9 +2,10 @@ class SearchController < ApplicationController
   before_filter :load_institution
 
   def search
-    results  = Search.new(query: params[:search]).results
-    queryset = Dataset.find_by(q: params[:search].gsub(' ', '+'))
-    tagset   = Dataset.find_by(tags: params[:search].gsub(' ', '+'))
+    search_param = params.fetch(:search) { "" }
+    results  = Search.new(query: search_param).results
+    queryset = Dataset.find_by(q:    search_param.gsub(' ', '+'))
+    tagset   = Dataset.find_by(tags: search_param.gsub(' ', '+'))
     
     @datasets = [queryset.records, tagset.records].flatten
     @results  = SearchFacade.new(results)
