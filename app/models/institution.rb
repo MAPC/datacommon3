@@ -39,6 +39,9 @@ class Institution < ActiveRecord::Base
   # alias_attribute :muni_id, :region_id
 
   rails_admin do
+    object_label_method do
+      :short_name
+    end
     list do
       # scopes [nil]
       field :short_name do

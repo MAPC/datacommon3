@@ -125,7 +125,7 @@ class Visualization < ActiveRecord::Base
       field :data_sources
       field :issue_areas
       field :featured
-      field :institution_id
+      field :institution
       field :permission
       field :image, :paperclip
       field :sessionstate
