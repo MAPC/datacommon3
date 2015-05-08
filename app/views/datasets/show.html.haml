@@ -12,12 +12,12 @@
   .col-sm-6.col-xs-12
     %h4
       %span.glyphicon.glyphicon-cloud-download
-      Download
-    %table.metadata{style: "clear:both;"}
-      = render partial: 'datasets/resource', collection: @dataset.resources
-    %small
-      %a{href: '#', data: {toggle: 'modal', target: '#geographies'}}
-        What are these geographies?
+      Download (Coming Soon)
+    -# %table.metadata{style: "clear:both;"}
+    -#   = render partial: 'datasets/resource', collection: @dataset.resources
+    -# %small
+    -#   %a{href: '#', data: {toggle: 'modal', target: '#geographies'}}
+    -#     What are these geographies?
     -# #map.snapshot.map
 
 #geographies.modal.fade{role: 'dialog'}
