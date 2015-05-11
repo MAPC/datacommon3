@@ -147,6 +147,10 @@ class VisualizationsController < ApplicationController
       Is this your visualization? Please log in to edit it.
     EOE
 
+    VISUAL_NOT_FOUND = <<-EOE
+      Sorry! According to our records, no visualization with that ID exists.
+    EOE
+
 
     def signed_in_user
       unless signed_in?
@@ -158,9 +162,12 @@ class VisualizationsController < ApplicationController
 
 
     def correct_viewer
-      @visualization = Visualization.unscoped.find(params[:id])
+      @visualization = Visualization.unscoped.find_by(id: params[:id])
 
-      if @visualization.private? && !current_user?(@visualization.owner)
+      if @visualization.nil?
+        flash[:danger] = VISUAL_NOT_FOUND
+        redirect_to visualizations_url
+      elsif @visualization.private? && !current_user?(@visualization.owner)
         flash[:danger] = ONLY_OWNER_MAY_VIEW
         redirect_to visualizations_url
       end
@@ -168,11 +175,14 @@ class VisualizationsController < ApplicationController
 
 
     def correct_user
-      @visualization = Visualization.unscoped.find(params[:id])
-      
-      unless current_user?(@visualization.owner)
-        flash[:danger] = ONLY_OWNER_MAY_EDIT
+      @visualization = Visualization.unscoped.find_by(id: params[:id])
+
+      if @visualization.nil?
+        flash[:danger] = VISUAL_NOT_FOUND
+        redirect_to visualizations_url
+      elsif !current_user?(@visualization.owner)
         store_location
+        flash[:danger] = ONLY_OWNER_MAY_EDIT
         redirect_to login_url
       end
     end
