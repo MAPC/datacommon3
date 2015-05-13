@@ -2,13 +2,13 @@ require 'spec_helper'
 
 describe Dataset do
   
-  describe "Dataset#all" do
+  describe "#all" do
     it "returns all available datasets", vcr: true do
       expect(Dataset.all).to have_at_least(900).items
     end
   end
 
-  describe "Dataset#count" do
+  describe "#count" do
     it "is equal to #all#count", vcr: true do
       all_count  = Dataset.all.count
       just_count = Dataset.count
@@ -16,7 +16,7 @@ describe Dataset do
     end
   end
 
-  describe "Dataset#find_by" do
+  describe "#find_by" do
     pending "returns one object if searching by ID", vcr: true do
       expect(
         Dataset.find_by(id: "3dbae792-3443-4171-bb10-afb8759364c3")
@@ -33,7 +33,7 @@ describe Dataset do
   # I don't know how to get it to stop, so I've just
   # commented them out. The functionality is largely there.
   # TODO: Fix this.
-  describe "Dataset#page" do
+  describe "#page" do
     it "paginates results", vcr: true do
       expect(Dataset.page(1)).to have(10).items
     end
