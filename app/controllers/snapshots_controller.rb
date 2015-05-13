@@ -22,7 +22,6 @@ class SnapshotsController < ApplicationController
   # /snapshots/:slug/:topic
   # /snapshots/boston/{economy|demographics}
   def detail
-    puts params[:snapshot_id].inspect
     if ["cities-and-towns", "subregions"].include? params[:snapshot_id]
       flash[:info] =<<-EOS
         We've moved things around a little!

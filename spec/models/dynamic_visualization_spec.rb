@@ -92,14 +92,9 @@ describe DynamicVisualization do
     # We'll stub the geography object like in the last example.
 
     let(:geo) { build_stubbed(Geography) }
-    # Stub the session state.
-    let(:file) {
-      file = <<-ERB
-        <tag>MUNI_ID,<%= object.unitid %></tag>
-        <tag>MUNI_ID,<%= object.unit_id %>,<%= object.subunit_ids %>,352</tag>
-      ERB
-    }
 
+    # Give the stubbed geographies a few variables, to check for
+    # in the rendered session state below
     before do
       geo.stub(:id)          {  12   }
       geo.stub(:unitid)      { "351" }
@@ -108,12 +103,11 @@ describe DynamicVisualization do
     end
 
     it 'returns a rendered state' do
-      allow(OpenURI).to receive(:open_uri).with(any_args).and_return(file)
-      rendered = <<-ERB
-        <tag>MUNI_ID,351</tag>
-        <tag>MUNI_ID,351,25,252,121,352</tag>
-      ERB
-      expect(visual.state(geo)).to eq(rendered)
+      # Use fixture for path to XML file
+      allow(visual.session_state).to receive(:path).and_return("#{Rails.root}/spec/fixtures/files/session_state.xml.erb")
+      
+      rendered_session_state = "<tag>MUNI_ID,351</tag>\n<tag>MUNI_ID,351,25,252,121,352</tag>"
+      expect(visual.state(geo)).to eq(rendered_session_state)
     end
   end
 
