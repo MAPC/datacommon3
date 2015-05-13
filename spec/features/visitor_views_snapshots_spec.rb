@@ -6,12 +6,12 @@ feature 'Visitor views snapshots' do
   let!(:region) { create(:subregion) }
   let!(:topic)  { create(:topic) }
 
-  let!(:city_visual)   { create(:dynamic_visual, title: 'Muni visual', issue_area_ids: [topic.id], type: city.type) }
+  let!(:city_visual)   { create(:dynamic_visual, title: 'Muni visual',   issue_area_ids: [topic.id], type: city.type) }
   let!(:region_visual) { create(:dynamic_visual, title: 'Region visual', issue_area_ids: [topic.id], type: region.type) }
   
   before do
     # Prevent GeoJSON lookup
-    Geography.any_instance.stub(:to_geojson) { 'nope' }
+    Geography.any_instance.stub(:to_geojson) { '-' }
     DynamicVisualization.any_instance.stub(:preview) { 
       OpenStruct.new(path: '', url: '')
     }
@@ -27,10 +27,9 @@ feature 'Visitor views snapshots' do
   scenario 'views each page' do
     [city, region].each do |place|
       visit snapshot_path(place)
-      visuals = all ".visual.preview.#{place.type}"
-      expect(visuals).to_not be_empty
-      expect(page).to have_content(place.name)
-      expect(page).to have_content(topic.title)
+      expect( all ".visual.preview.#{place.type}" ).to_not be_empty
+      expect(page).to have_content( place.name  )
+      expect(page).to have_content( topic.title )
     end
   end
 

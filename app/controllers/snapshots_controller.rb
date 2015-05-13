@@ -13,7 +13,7 @@ class SnapshotsController < ApplicationController
         This is the new home for snapshots
         for cities, towns, and subregions.
       EOS
-      redirect_to snapshots_path
+      redirect_to snapshots_path, status: 301
     end
 
     @geography = Geography.find_by(slug: params[:id])
@@ -28,7 +28,7 @@ class SnapshotsController < ApplicationController
         This is the new home for snapshots
         for cities, towns, and subregions.
       EOS
-      redirect_to snapshot_path params[:id]
+      redirect_to snapshot_path params[:id], status: 301
     else
       # Correct request
       @snapshot = SnapshotFacade.new(
