@@ -65,7 +65,7 @@ Rails.application.configure do
   # config.action_mailer.raise_delivery_errors = false
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.default_url_options = { 
-    host: ENV.fetch('DEFAULT_MAIL_URL') { 'metroboston.datacommon.org' }
+    host: ENV.fetch('BASE_HOST_URL') { 'datacommon.org' } }
   }
 
 

@@ -32,7 +32,8 @@ class User < ActiveRecord::Base
   end
 
   def email_host
-    institution.presence ? institution.domain : 'metroboston.datacommon.org'
+    base_host = Rails.configuration.action_mailer.default_url_options[:host]
+    institution.presence ? institution.domain : "metroboston.base_host"
   end
 
   def full_name

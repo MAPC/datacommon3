@@ -28,7 +28,8 @@ class Institution < ActiveRecord::Base
   end
 
   def domain
-    "#{subdomain}.datacommon.org"
+    base_host = Rails.configuration.action_mailer.default_url_options[:host]
+    "#{ subdomain }.#{ base_host }"
   end
 
   def featured_visualization
