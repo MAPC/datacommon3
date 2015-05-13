@@ -12,8 +12,28 @@ describe SnapshotsController do
       get :index
       expect(response).to render_template("index")
     end
+  end
 
-    context "GET show: legacy paths" do
+  describe "GET show" do
+    it "responds successfully" do
+      get :show, { id: 'boston' }
+      expect(response).to be_success
+    end
+  end
+
+  describe "GET detail" do
+    it "responds successfully" do
+      topic = create :topic
+      geo   = create :geo
+
+      get :detail, { id: topic.slug, snapshot_id: geo.slug }
+      expect(response).to be_success
+    end
+  end
+
+  context "legacy" do
+
+    describe "GET show" do
       it "catches 'cities-and-towns' and 'subregions'" do
         ['cities-and-towns', 'subregions'].each do |param|
           get :show, { id: param }
@@ -22,7 +42,7 @@ describe SnapshotsController do
       end
     end
 
-    context "GET detail: legacy paths" do
+    describe "GET detail" do
       it "catches 'cities-and-towns' and 'subregions'" do
         ['cities-and-towns', 'subregions'].each do |param|
           get :detail, { id: 'boston', snapshot_id: param }
@@ -32,4 +52,5 @@ describe SnapshotsController do
     end
 
   end
+
 end
