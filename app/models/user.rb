@@ -31,6 +31,10 @@ class User < ActiveRecord::Base
     profile ? profile.name : full_name_or_username
   end
 
+  def email_host
+    institution.presence ? institution.domain : 'metroboston.datacommon.org'
+  end
+
   def full_name
     "#{first_name} #{last_name}"
   end

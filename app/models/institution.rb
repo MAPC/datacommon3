@@ -27,6 +27,10 @@ class Institution < ActiveRecord::Base
     camel_name
   end
 
+  def domain
+    "#{subdomain}.datacommon.org"
+  end
+
   def featured_visualization
     visualizations.featured.first # was #sample not #first
   end

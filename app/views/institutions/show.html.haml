@@ -57,18 +57,18 @@
 %hr
 
 .row.the-row
-  .col-xs-12
+  .col-xs-12.col-sm-12.col-md-8
     %h1 Featured Visualization
     - if featured_visualization # Shouldn't need this check.
       = render partial: 'visualizations/feature', object: featured_visualization, as: :feature
-  .col-xs-12
+  .col-xs-12.col-sm-12.col-md-4
     .page-header
     %h1 Visualizations by Topic
     .row
-      .col-sm-6.col-xs-12
+      .col-xs-12.col-sm-6.col-md-12
         .icon-center-group
           = render partial: 'topics/topic', collection: topics[0..5], as: :topic, locals: { path: 'visualizations' }
-      .col-sm-6.col-xs-12
+      .col-xs-12.col-sm-6.col-md-12
         .icon-center-group
           = render partial: 'topics/topic', collection: topics[6..11], as: :topic, locals: { path: 'visualizations' }
 
