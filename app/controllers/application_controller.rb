@@ -19,10 +19,6 @@ class ApplicationController < ActionController::Base
   end
 
   def default_institution
-    if Rails.env == "development"
-      Institution.find(1)
-    else
-      Institution.null
-    end
+    Institution.find_by(id: 1) || Institution.null
   end
 end

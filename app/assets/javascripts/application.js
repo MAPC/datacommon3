@@ -29,4 +29,8 @@ $(document).on('ready', function () {
     no_results_text:         'No results matched'
   });
 
+  $('.carousel').carousel({
+    interval: 2000
+  });
+
 });

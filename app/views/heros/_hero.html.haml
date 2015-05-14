@@ -1,14 +1,7 @@
--# - if hero == first
--#   .item.active
--#     %img{src: hero.image}
--#       .carousel-caption
--#         %h3=  hero.title
--#         %h4=  hero.subtitle
--#         %p=   hero.to_html.html_safe
--# - else
--#   .item
--#     %img{src: hero.image}
--#       .carousel-caption
--#         %h3=  hero.title
--#         %h4=  hero.subtitle
--#         %p=   hero.to_html.html_safe
+.hero
+  - active_class = (hero == @heros.first) ? 'active' : ''
+  .item{ class: active_class }
+    %img{alt: hero.content, src: hero.image.url}
+    .carousel-caption
+      %h3= hero.title
+      %p=  hero.content
