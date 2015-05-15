@@ -1,4 +1,5 @@
 class Hero < ActiveRecord::Base
+  self.primary_key = :id
   self.table_name = 'mbdc_hero'
 
   before_save :create_or_use_nav_titles
@@ -31,8 +32,8 @@ class Hero < ActiveRecord::Base
   end
 
   def content_markup_type_enum
-   [['html'],['markdown'],['raw']]
-end
+    [['html'],['markdown'],['raw']]
+  end
 
   def to_s
     title
