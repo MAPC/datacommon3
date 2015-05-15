@@ -76,15 +76,15 @@ class Hero < ActiveRecord::Base
         label "Sort order"
       end
       field :active
-      field :institution do
+      field :institution# do
         # visible false
         # Default to the user's institution if staff,
         # but allow any if the current user is an admin.
         # read_only true
-        default_value do
-          bindings[:view]._current_user.institution
-        end
-      end
+        # default_value do
+        #   bindings[:view]._current_user.institution
+        # end
+      # end
     end
   end
 
