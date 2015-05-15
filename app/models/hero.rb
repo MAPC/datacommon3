@@ -28,7 +28,7 @@ class Hero < ActiveRecord::Base
   end
 
   def to_html
-    _content_rendered.presence || self.content
+    (_content_rendered.presence || self.content).html_safe
   end
 
   def content_markup_type_enum
@@ -73,9 +73,10 @@ class Hero < ActiveRecord::Base
       end
       field :active
       field :institution do
-        visible false
+        # visible false
         # Default to the user's institution if staff,
         # but allow any if the current user is an admin.
+        read_only true
         default_value do
           bindings[:view]._current_user.institution_id
         end

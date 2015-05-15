@@ -19,6 +19,7 @@
 
 
 .carousel-inner {
+  height:     320px;
   max-height: 320px;
 }
 
@@ -32,6 +33,7 @@
 .carousel-caption {
   left: 20%;
   right: 20%;
+  padding-top: 0 !important;
   padding-bottom: 30px;
   position: absolute;
   top: 45px;
@@ -43,7 +45,6 @@
 
   @media (max-width: $screen-sm) {
     top: 0px;
-    padding-top: 0px;
     overflow-y: scroll;
   }
 }
