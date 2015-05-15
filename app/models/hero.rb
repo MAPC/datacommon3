@@ -30,6 +30,10 @@ class Hero < ActiveRecord::Base
     _content_rendered.presence || self.content
   end
 
+  def content_markup_type_enum
+   [['html'],['markdown'],['raw']]
+end
+
   def to_s
     title
   end

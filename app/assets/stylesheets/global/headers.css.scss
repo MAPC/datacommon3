@@ -2,18 +2,11 @@
 
 
 @import "global/colors";
-
-
-$dc-h1:   'Oswald',  sans-serif;  // TODO: May want to order
-$dc-h2:   'Roboto',  sans-serif;  // serif, sans-serif differently,
-$dc-h3:   'Oswald',  sans-serif;
-$dc-h4:   'Rokkitt', serif;
-$dc-h5:   'Oswald',  sans-serif;
-$dc-body: 'Roboto',  sans-serif;
+@import "global/fonts";
 
 
 h1, h2, h3, h4, h5, h6 {
-  color: $dc-blue
+  color: $dc-blue;
 }
 
 

@@ -385,7 +385,7 @@ CREATE TABLE mbdc_hero (
     image character varying(100),
     "order" integer,
     active boolean NOT NULL,
-    content_markup_type character varying(30) NOT NULL,
+    content_markup_type character varying(30) DEFAULT 'html'::character varying NOT NULL,
     _content_rendered text NOT NULL,
     institution_id integer DEFAULT 1,
     image_file_name character varying(255),
@@ -1364,4 +1364,6 @@ INSERT INTO schema_migrations (version) VALUES ('20150411202652');
 INSERT INTO schema_migrations (version) VALUES ('20150415235639');
 
 INSERT INTO schema_migrations (version) VALUES ('20150416190830');
+
+INSERT INTO schema_migrations (version) VALUES ('20150514204108');
 

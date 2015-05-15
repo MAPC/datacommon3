@@ -1,7 +1,7 @@
-.hero
-  - active_class = (hero == @heros.first) ? 'active' : ''
-  .item{ class: active_class }
-    %img{alt: hero.content, src: hero.image.url}
-    .carousel-caption
-      %h3= hero.title
-      %p=  hero.content
+- active_class = (hero == @heros.first) ? 'active' : ''
+.hero.item{ class: active_class }
+  %img{alt: hero.content, src: hero.image.url}
+  .carousel-caption
+    %h3= hero.title
+    %h4= hero.subtitle
+    %p=  hero.content.html_safe
