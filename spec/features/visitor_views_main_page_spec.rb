@@ -22,7 +22,7 @@ feature 'Visitor views main page' do
   end
 
   scenario 'has one .active hero' do
-    heros = all '#heros .hero .active'
+    heros = all '#heros .hero.active'
     expect(heros).to_not be_empty
     expect(heros).to have(1).item
   end
