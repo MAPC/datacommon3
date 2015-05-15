@@ -41,25 +41,22 @@ class Hero < ActiveRecord::Base
 
   rails_admin do
     list do
+      sort_by :active, :order
       scopes [nil, :active]
       field :title
       field :order
       field :active
-      field :institution_id do
-        formatted_value {
-          Institution.find_by(id: bindings[:object].institution_id).try(:short_name)
-        }
-      end
+      field :institution
     end
     edit do
       field :title
       field :subtitle
-      field :navtitle do
-        label "Link title"
-      end
-      field :navsubtitle do
-        label "Link subtitle"
-      end
+      # field :navtitle do
+      #   label "Link title"
+      # end
+      # field :navsubtitle do
+      #   label "Link subtitle"
+      # end
       field :content do
         label "Raw content"
       end
@@ -76,15 +73,7 @@ class Hero < ActiveRecord::Base
         label "Sort order"
       end
       field :active
-      field :institution# do
-        # visible false
-        # Default to the user's institution if staff,
-        # but allow any if the current user is an admin.
-        # read_only true
-        # default_value do
-        #   bindings[:view]._current_user.institution
-        # end
-      # end
+      field :institution
     end
   end
 

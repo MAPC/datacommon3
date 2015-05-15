@@ -34,7 +34,7 @@ class Institution < ActiveRecord::Base
   end
 
   def featured_visualization
-    visualizations.featured.first # was #sample not #first
+    visualizations.featured.first.presence || Visualization.first
   end
 
   def self.null

@@ -4,36 +4,22 @@ module InstitutionsHelper
     Visualization.recent(count)
   end
 
-  def data_sources_list(visualization)
-    links = visualization.data_sources.map do |ds| 
-      link_to ds.title, "/visualizations?data_source=#{ds.id}"
-    end
+  def object_list(type, visualization, options={})
+    value        = options.fetch(:value) { :id }
+    display_name = options.fetch(:display_name) { type.to_s.humanize.singularize }
+    links = visualization.send(type).map {|obj|
+      link_to obj.title, "/visualizations?#{ type.to_s.singularize }=#{obj.send(value)}"
+    }
     link_text = links.join(', ')
+    plural_display_name = display_name.pluralize(links.length)
+    "#{plural_display_name}: #{link_text}".html_safe
+  end
 
-    ("Data source".pluralize(links.length) << ": #{link_text}").html_safe
+  def data_sources_list(visualization)
+    object_list(:data_sources, visualization)
   end
 
   def issue_areas_list(visualization)
-    links = visualization.issue_areas.map do |ia|
-      link_to ia.title, "/visualizations?topic=#{ia.slug}"
-    end
-    link_text = links.join(', ')
-
-    ("Topic".pluralize(links.length) << ": #{link_text}").html_safe
+    object_list(:issue_areas, visualization, value: :slug, display_name: "Topic")
   end
-
-  def featured_visualization
-    # Demeter would be unimpressed
-    visual = @institution.visualizations.featured.first if @institution.presence
-    return visual if visual
-
-    if Visualization.featured.any?
-      Visualization.featured.first
-    else
-      Visualization.first
-    end
-  end
-
-
-
 end

@@ -11,7 +11,7 @@ class InstitutionsController < ApplicationController
     # @dashboard.datasets -> most recent datasets
     # @dashboard = InstitutionDashboard.new(Institution.find_by(id: id))
 
-    @heros   = Hero.active # @institution.heros.active
+    @heros   = @institution.heros.active
     @feature = [Naught.build {|b| b.black_hole}] # institution.featured_visualization
     
     if @feature.nil?

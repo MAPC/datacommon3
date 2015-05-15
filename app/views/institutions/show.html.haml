@@ -14,16 +14,6 @@
       / Next | Previous
       = render partial: 'heros/controls'
 
-    -# %h2 Welcome to the new #{region_name_or('')} DataCommon.
-    -# %p.top
-    -#   We've redesigned our interface and added a 
-    -#   = link_to "Data Catalog", datasets_path
-    -#   for easier data downloading. Join us for Data Day to learn more about using data to drive community change: 
-    -#   = succeed ',' do
-    -#     = link_to "in Worcester on May 21", "https://www.eventbrite.com/e/16618355950"
-    -#   and in Boston on June 26
-    -#   %br
-    -#   Sign up for one or both!
   
   .row.explanation
     .col-lg-3.col-sm-6.col-xs-12.explanation
@@ -74,8 +64,7 @@
 .row.the-row
   .col-xs-12.col-sm-12.col-md-8
     %h1 Featured Visualization
-    - if featured_visualization # Shouldn't need this check.
-      = render partial: 'visualizations/feature', object: featured_visualization, as: :feature
+    = render partial: 'visualizations/feature', object: @institution.featured_visualization, as: :feature
   .col-xs-12.col-sm-12.col-md-4
     .page-header
     %h1 Visualizations by Topic
