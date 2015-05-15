@@ -69,8 +69,9 @@ gem 'foreman', '0.75.0' # Manage the server and auxiliary processes
 
 
 group :development do
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+  gem 'spring'            # Keeps environment in background
+  gem 'better_errors'     # Clearer error messages
+  gem 'binding_of_caller' # Error message REPL & more
 end
 
 
