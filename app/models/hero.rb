@@ -67,7 +67,11 @@ class Hero < ActiveRecord::Base
         label "Content markup type"
         help "One of 'html' (default), 'markdown', or 'raw'."
       end
-      field :image, :paperclip
+      field :image, :paperclip do
+        default_value do
+          bindings[:object].image.url
+        end
+      end
       field :order do
         label "Sort order"
       end
@@ -76,9 +80,9 @@ class Hero < ActiveRecord::Base
         # visible false
         # Default to the user's institution if staff,
         # but allow any if the current user is an admin.
-        read_only true
+        # read_only true
         default_value do
-          bindings[:view]._current_user.institution_id
+          bindings[:view]._current_user.institution
         end
       end
     end
