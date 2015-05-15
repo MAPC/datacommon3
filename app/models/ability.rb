@@ -9,9 +9,10 @@ class Ability
       can :access, :rails_admin
       can :dashboard
 
-      can [:read, :create, :update], StaticMap,     institution_id: user.institution_id
       can [:read, :create, :update], Hero,          institution_id: user.institution_id
+      can [:read, :create, :update], Logo
       can [:read, :create, :update], Visualization, institution_id: user.institution_id
+      can [:read, :create, :update], StaticMap,     institution_id: user.institution_id
       
       can [:read, :update],          Geography,     institution_id: user.institution_id
       can [:read, :update],          Institution,               id: user.institution_id

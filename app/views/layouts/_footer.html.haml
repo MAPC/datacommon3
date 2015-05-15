@@ -37,11 +37,7 @@
               = image_tag 'flickr_50.png',   alt: 'MAPC Flickr'
 
     .row
-      - ['mapc-color', 'boston-foundation-white', 'cmrpc', 'montachusett-white'].each do |sponsor|
-        .col-md-3.col-sm-6.col-xs-12
-          .frame
-            %span.helper
-            = image_tag "logos/#{sponsor}.png", alt: "#{sponsor} logo", class: 'sponsor'
+      = render partial: 'institutions/logo', collection: @institution.logos
 
     .page-header
 

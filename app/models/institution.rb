@@ -6,6 +6,7 @@ class Institution < ActiveRecord::Base
   has_many :static_maps
   has_many :visualizations
   has_many :geographies
+  has_and_belongs_to_many :logos
 
   validates :long_name,  presence: true
   validates :short_name, presence: true
