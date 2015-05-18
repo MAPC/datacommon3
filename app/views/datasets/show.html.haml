@@ -17,7 +17,7 @@
       %tr
         %td Tabular
         %td Spatial
-        %td Metadata
+        -# %td Metadata
       - @dataset.resources.each do |resource|
         %tr
           %td
@@ -25,8 +25,8 @@
           %td
             - res = @spatial.resources.select{|r| r.name == resource.name }.first
             = link_to res.name, res.url if res
-          %td
-            &mdash;
+          -# %td
+          -#   &mdash;
     %small
       %a{href: '#', data: {toggle: 'modal', target: '#geographies'}}
         What are these geographies?

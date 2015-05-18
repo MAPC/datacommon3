@@ -8,18 +8,22 @@
   .col-md-3.col-sm-4.col-xs-12.org
     %h5= @user.try(:organization)
     %p=  @user.try(:position)
-    %p=  link_to @user.profile.try(:website_url)
+    -# TODO links to this page by default %p=  link_to @user.profile.try(:website_url)
     - if current_user? @user
       = link_to 'Edit Profile', edit_profile_path(@user), class: 'btn btn-large btn-primary'
 
-%h2.page-header #{@user.name}'s Visualizations
+.row
+  %h2.page-header #{@user.name}'s Visualizations
 
-- if @user.visualizations.any?
-  .row
-    = render partial: 'visualizations/thumbnail', collection: @user.visualizations, as: :visual
-
-- else
-  %p #{@user.fname} has not created any visualizations.
-
--# .row.center
-  -# = paginate @user.visualizations, window: 1, outer_window: 1
+  - if current_user? @user
+    - if @user.visualizations.any?
+      -# TODO FIX THIS
+      = render partial: 'visualizations/thumbnail', collection: Visualization.unscoped.where(owner: @user), as: :visual
+    - else
+      %p You have not created any visualizations.
+      = link_to 'Create one now.', new_visualization_path
+  - else
+    - if @user.visualizations.any?
+      = render partial: 'visualizations/thumbnail', collection: @user.visualizations, as: :visual
+    - else
+      %p #{@user.fname} has not created any visualizations.
