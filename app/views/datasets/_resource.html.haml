@@ -1,6 +1,0 @@
-%tr
-  %td.left
-    = link_to resource.name, "http://#{ ENV.fetch('CKAN_BASE_URL') {'#'} }/dataproxy/dump/#{resource.id}"
-  %td
-    %span.badge= resource.format
-

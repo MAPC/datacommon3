@@ -14,7 +14,19 @@
       %span.glyphicon.glyphicon-cloud-download
       Download
     %table.metadata{style: "clear:both;"}
-      = render partial: 'datasets/resource', collection: @dataset.resources
+      %tr
+        %td Tabular
+        %td Spatial
+        %td Metadata
+      - @dataset.resources.each do |resource|
+        %tr
+          %td
+            = link_to resource.name, "http://#{ ENV.fetch('CKAN_BASE_URL') {'#'} }/dataproxy/dump/#{resource.id}"
+          %td
+            - res = @spatial.resources.select{|r| r.name == resource.name }.first
+            = link_to res.name, res.url if res
+          %td
+            &mdash;
     %small
       %a{href: '#', data: {toggle: 'modal', target: '#geographies'}}
         What are these geographies?

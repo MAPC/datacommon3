@@ -12,6 +12,7 @@ class DatasetsController < ApplicationController
 
   def show
     @dataset = Dataset.find_by(id: params[:id]).records.first
+    @spatial = Dataset.find_by(tags: 'spatial', rows: 1).records.first
   end
 
   def download
