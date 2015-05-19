@@ -6,27 +6,32 @@
 .page-header
 
 .row
-  .col-sm-6.col-xs-12
+  .col-md-6.col-sm-12
     = render partial: 'datasets/metadata', object: @dataset, as: :dataset 
   
-  .col-sm-6.col-xs-12
-    %h4
-      %span.glyphicon.glyphicon-cloud-download
-      Download
-    %table.metadata{style: "clear:both;"}
-      %tr
-        %td Tabular
-        %td Spatial
-        -# %td Metadata
-      - @dataset.resources.each do |resource|
+  .col-md-6.col-sm-12
+    %table.metadata
+      %thead
+        %th{colspan: "3", style: 'text-align: center;'}
+          %h4
+            %span.glyphicon.glyphicon-cloud-download
+            Download
+      %tbody
         %tr
-          %td
-            = link_to resource.name, "http://#{ ENV.fetch('CKAN_BASE_URL') {'#'} }/dataproxy/dump/#{resource.id}"
-          %td
-            - res = @spatial.resources.select{|r| r.name == resource.name }.first
-            = link_to res.name, res.url if res
-          -# %td
-          -#   &mdash;
+          %th.center Tabular
+          %th.center Spatial
+          %th.center Metadata
+        - @dataset.resources.each do |resource|
+          %tr
+            %td
+              = link_to resource.name, "http://#{ ENV.fetch('CKAN_BASE_URL') {'#'} }/dataproxy/dump/#{resource.id}"
+            %td
+              -# #strip in case of extraneous spaces
+              - res = @spatial.resources.select{|r| r.name.strip == resource.name.strip }.first
+              = link_to res.name, res.url if res
+            %td
+              - met = @metadata.resources.select{|r| r.name.include? resource.name }.first
+              = link_to met.name.gsub('Metadata - ', ''), "http://#{ ENV.fetch('CKAN_BASE_URL') {'#'} }/dataproxy/dump/#{met.id}" if met
     %small
       %a{href: '#', data: {toggle: 'modal', target: '#geographies'}}
         What are these geographies?
@@ -39,7 +44,7 @@
         %button.close{type: 'button', data: {dismiss: 'modal'}} &times;
         %h3 Description of available geographies
       .modal-body
-        - @dataset.resources.each do |resource|
+        - @spatial.resources.each do |resource|
           %h5= resource.name
           %p=  resource.description
           %br

@@ -11,8 +11,10 @@ class DatasetsController < ApplicationController
   end
 
   def show
-    @dataset = Dataset.find_by(id: params[:id]).records.first
-    @spatial = Dataset.find_by(tags: 'spatial', rows: 1).records.first
+    @dataset  = Dataset.find_by(id: params[:id]).records.first
+    @spatial  = Dataset.find_by(tags: 'spatial', rows: 1).records.first
+    @metadata = OpenStruct.new(resources: @dataset.resources.select{|r| r.name.include? "Metadata"})
+    @dataset.resources.reject!{|r| r.name.include? "Metadata"}
   end
 
   def download
