@@ -27,9 +27,9 @@ module CKANUpload
       login = CKANUpload::Login.new.perform
       "Logged in as #{ENV['CKAN_UPLOAD_USERNAME']}."
       Layer.find_each do |layer|
-        "Starting layer #{layer.title}..."
         dataset = CKANUpload::DatasetUpload.new(layer)
-        dataset.perform unless dataset.exist?
+        # COMMENT OUT when doing metadata
+        dataset.perform # unless dataset.exist?
       end
     end
 

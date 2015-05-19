@@ -24,7 +24,13 @@ module CKANUpload
     end
 
     def perform
-      start_form ; fill_in_fields ; submit
+      # start_form
+      # puts "(DatasetUpload) DEBUG: Starting new dataset form on #{page.current_path}"
+      # fill_in_fields
+      # puts "(DatasetUpload) DEBUG: Filled in all fields."
+      # submit
+      # puts "(DatasetUpload) DEBUG: Clicked 'Next: Add Data'."
+      puts "(DatasetUpload) DEBUG: Creating resources for #{self.layer.title}."
       upload_resources
     end
 
@@ -35,29 +41,27 @@ module CKANUpload
 
     def start_form
       visit "#{CKANUpload::DEFAULT_BASE_URL}/dataset/new"
-      puts "visited /dataset/new"
     end
 
     def fill_in_fields
       @fields.each do |field_name, value|
         begin
           fill_in field_name.to_s, with: value
-          puts "filled in #{field_name} with #{value}"
+          puts "(DatasetUpload) DEBUG: Filled in #{field_name} with #{value}"
         rescue
-          puts "Could not fill in #{field_name} with #{value}"
+          puts "(DatasetUpload) DEBUG: Could not fill in #{field_name} with #{value}"
         end
       end
+    end
+
+    def submit
+      click_button 'Next: Add Data'
     end
 
     def upload_resources
       self.layer.spatial_extents.each do |extent|
         CKANUpload::ResourceUpload.new(layer, extent).perform
       end
-    end
-
-    def submit
-      click_button 'Next: Add Data'
-      puts "Submitted dataset."
     end
   end
 end
