@@ -69,7 +69,7 @@ class Hero < ActiveRecord::Base
         label "Sort order"
       end
       field :active
-      field :institution_id
+      field :institution
     end
   end
 
