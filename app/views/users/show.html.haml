@@ -27,4 +27,4 @@
     - if @user.visualizations.any?
       = render partial: 'visualizations/thumbnail', collection: @user.visualizations, as: :visual
     - else
-      %p #{@user.fname} has not created any visualizations.
+      %p #{@user.fname} has not created any public visualizations.
