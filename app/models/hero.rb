@@ -42,7 +42,7 @@ class Hero < ActiveRecord::Base
   rails_admin do
     list do
       sort_by :active, :order
-      scopes [nil, :active]
+      scopes [:active, nil]
       field :title
       field :order
       field :active
@@ -64,16 +64,12 @@ class Hero < ActiveRecord::Base
         label "Content markup type"
         help "One of 'html' (default), 'markdown', or 'raw'."
       end
-      field :image, :paperclip do
-        default_value do
-          bindings[:object].image.url
-        end
-      end
+      field :image, :paperclip
       field :order do
         label "Sort order"
       end
       field :active
-      field :institution
+      field :institution_id
     end
   end
 
