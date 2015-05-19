@@ -167,6 +167,52 @@ ALTER SEQUENCE institutions_id_seq OWNED BY institutions.id;
 
 
 --
+-- Name: institutions_logos; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE institutions_logos (
+    institution_id integer NOT NULL,
+    logo_id integer NOT NULL
+);
+
+
+--
+-- Name: logos; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE logos (
+    id integer NOT NULL,
+    alt_text character varying(255),
+    image_file_name character varying(255),
+    image_content_type character varying(255),
+    image_file_size integer,
+    image_updated_at timestamp without time zone,
+    sort_order integer,
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone
+);
+
+
+--
+-- Name: logos_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE logos_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: logos_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE logos_id_seq OWNED BY logos.id;
+
+
+--
 -- Name: maps_contact; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -385,7 +431,7 @@ CREATE TABLE mbdc_hero (
     image character varying(100),
     "order" integer,
     active boolean NOT NULL,
-    content_markup_type character varying(30) NOT NULL,
+    content_markup_type character varying(30) DEFAULT 'html'::character varying NOT NULL,
     _content_rendered text NOT NULL,
     institution_id integer DEFAULT 1,
     image_file_name character varying(255),
@@ -784,6 +830,13 @@ ALTER TABLE ONLY institutions ALTER COLUMN id SET DEFAULT nextval('institutions_
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
+ALTER TABLE ONLY logos ALTER COLUMN id SET DEFAULT nextval('logos_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
 ALTER TABLE ONLY maps_contact ALTER COLUMN id SET DEFAULT nextval('maps_contact_id_seq'::regclass);
 
 
@@ -925,6 +978,14 @@ ALTER TABLE ONLY institutions
 
 
 --
+-- Name: logos_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY logos
+    ADD CONSTRAINT logos_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: maps_contact_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1002,6 +1063,14 @@ ALTER TABLE ONLY pages
 
 ALTER TABLE ONLY snapshots_regionalunit
     ADD CONSTRAINT snapshots_regionalunit_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: snapshots_visualization__visualization_id_7697a44685099f5a_uniq; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY snapshots_visualization_source
+    ADD CONSTRAINT snapshots_visualization__visualization_id_7697a44685099f5a_uniq UNIQUE (visualization_id, datasource_id);
 
 
 --
@@ -1092,6 +1161,20 @@ CREATE INDEX index_auth_user_on_institution_id ON auth_user USING btree (institu
 --
 
 CREATE INDEX index_auth_user_on_remember_digest ON auth_user USING btree (remember_digest);
+
+
+--
+-- Name: index_institutions_logos_on_institution_id_and_logo_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_institutions_logos_on_institution_id_and_logo_id ON institutions_logos USING btree (institution_id, logo_id);
+
+
+--
+-- Name: index_institutions_logos_on_logo_id_and_institution_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_institutions_logos_on_logo_id_and_institution_id ON institutions_logos USING btree (logo_id, institution_id);
 
 
 --
@@ -1221,6 +1304,20 @@ CREATE INDEX snapshots_visualization_regiontype_id ON snapshots_visualization US
 
 
 --
+-- Name: snapshots_visualization_source_datasource_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX snapshots_visualization_source_datasource_id ON snapshots_visualization_source USING btree (datasource_id);
+
+
+--
+-- Name: snapshots_visualization_source_visualization_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX snapshots_visualization_source_visualization_id ON snapshots_visualization_source USING btree (visualization_id);
+
+
+--
 -- Name: snapshots_visualization_topics_topic_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1298,10 +1395,18 @@ CREATE INDEX weave_visualization_topics_visualization_id ON weave_visualization_
 
 
 --
+-- Name: visualization_id_refs_id_4779ee3461d3a108; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY snapshots_visualization_source
+    ADD CONSTRAINT visualization_id_refs_id_4779ee3461d3a108 FOREIGN KEY (visualization_id) REFERENCES snapshots_visualization(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
 -- PostgreSQL database dump complete
 --
 
-SET search_path TO public;
+SET search_path TO datacommon,public;
 
 INSERT INTO schema_migrations (version) VALUES ('20140901170947');
 
@@ -1364,4 +1469,10 @@ INSERT INTO schema_migrations (version) VALUES ('20150411202652');
 INSERT INTO schema_migrations (version) VALUES ('20150415235639');
 
 INSERT INTO schema_migrations (version) VALUES ('20150416190830');
+
+INSERT INTO schema_migrations (version) VALUES ('20150514204108');
+
+INSERT INTO schema_migrations (version) VALUES ('20150515145254');
+
+INSERT INTO schema_migrations (version) VALUES ('20150515150859');
 

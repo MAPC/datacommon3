@@ -6,6 +6,7 @@ class Institution < ActiveRecord::Base
   has_many :static_maps
   has_many :visualizations
   has_many :geographies
+  has_and_belongs_to_many :logos
 
   validates :long_name,  presence: true
   validates :short_name, presence: true
@@ -27,8 +28,13 @@ class Institution < ActiveRecord::Base
     camel_name
   end
 
+  def domain
+    base_host = Rails.configuration.action_mailer.default_url_options[:host]
+    "#{ subdomain }.#{ base_host }"
+  end
+
   def featured_visualization
-    visualizations.featured.first # was #sample not #first
+    visualizations.featured.first.presence || Visualization.first
   end
 
   def self.null

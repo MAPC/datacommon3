@@ -1,6 +1,6 @@
 FactoryGirl.define do
 
-  factory :geography do
+  factory :geography, aliases: [:geo] do
     name   Faker::Address.city
     unitid Faker::Number.number(2).to_s
     slug   { name.parameterize }

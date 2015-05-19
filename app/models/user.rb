@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
   before_save :downcase_email
   before_save :encrypt_password, if: Proc.new { |user| user.password? }
   before_create :create_activation_digest
+  after_create :create_default_profile
+  after_create :send_new_account_followup_email
   
   # before_save :set_timestamps,   if: Proc.new { |user| user.new_record?       }
   # before_save :set_default_permissions, if: Proc.new { |user| user.new_record? }
@@ -27,6 +29,15 @@ class User < ActiveRecord::Base
   
   def name
     profile ? profile.name : full_name_or_username
+  end
+
+  def email_host
+    base_host = Rails.configuration.action_mailer.default_url_options[:host]
+    institution.presence ? institution.domain : "metroboston.base_host"
+  end
+
+  def full_name
+    "#{first_name} #{last_name}"
   end
 
   def fname
@@ -132,9 +143,14 @@ class User < ActiveRecord::Base
     reset_sent_at < 2.hours.ago
   end
 
-  def new_account_followup_emails
+  def create_default_profile
+    self.create_profile(name: self.full_name, email: self.email) unless self.profile
+  end
+
+  def send_new_account_followup_email
     send_activation_email
   end
+
 
 
   rails_admin do
@@ -206,12 +222,9 @@ class User < ActiveRecord::Base
       UserMailer.password_reset(self.id).deliver
     end
 
-
-    
     # def create_remember_token
     #   self.remember_token = User.digest(User.new_token)
     # end
-
 
     def encrypt_password
       salt = Digest::SHA1.hexdigest(username)[0..4]
@@ -223,13 +236,11 @@ class User < ActiveRecord::Base
     #   date_joined = last_login = Time.now
     # end
 
-
     # def set_default_permissions
     #   is_active    = true
     #   is_staff     = false
     #   is_superuser = false
     # end
-
 
     def valid_email
       begin

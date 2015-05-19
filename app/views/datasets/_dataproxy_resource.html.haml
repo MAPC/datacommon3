@@ -1,0 +1,4 @@
+%li
+  = link_to resource.name, "http://#{ ENV.fetch('CKAN_BASE_URL') {'#'} }/dataproxy/dump/#{resource.id}"
+  %span.badge= resource.format
+

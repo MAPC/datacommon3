@@ -1,90 +1,191 @@
 /*
 
-
     Hero
 
-    - large image
+    - large image carousel
     - content
     - responsive text arrangement
-
 
 */
 
 @import "global/colors";
+@import "global/fonts";
 @import "global/sizes";
 
-.featured {
+.carousel {
+  margin-top: -25px;    // Bring flush with menu
+  margin-bottom: -95px; // TODO: This is a quick-fix compensation.
+}
 
-  h2    { 
-    font-size: 300%;
-    // background-color: rgba(0, 0, 0, 0.5);
-    // box-shadow: 0px 0px 25px rgba(0, 0, 0, 1);
-    padding: 0 50px;
-    padding-top: 65px;
 
-    @media (max-width: 417px) {
-      font-size: 250%;
-      margin-top: -50px !important;
-    }
-    @media (min-width: 418px) and (max-width: 555px) {
-      padding: 0 60px;
-    }
-    @media (max-width: $screen-md) {
-      margin-top: 0px;
-    }
-  }
+.carousel-inner {
+  height:     320px;
+  max-height: 320px;
+}
 
-  p.top { 
-    font-size: 120%;
-    max-width: 700px;
-    text-align: left;
-    position: relative;
-    margin: 0 auto;
-    display: block;
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width:     100%;
+  max-width: 100%;
+}
 
-    // background-color: rgba(0, 0, 0, 0.5);
-    // box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
-    padding: 0 40px;
-  }
 
-  display: block;
-  margin-top: -20px;
-  
-  color: #EEEEEE;
-  a { 
-    color: #EEEEEE;
-    &:hover, &:visited {
-      color: #FFFFFF;
-    }
-  }
+.carousel-caption {
+  left: 20%;
+  right: 20%;
+  padding-top: 0 !important;
+  padding-bottom: 30px;
+  position: absolute;
+  top: 10px;
 
-  .explanation {
-    a {
-      color: $dc-blue;
-      &:hover, &:visited {
-        color: $dc-blue;
-      }
-    }
-  }
-  text-align: center;
-  text-shadow: 3px 0px 0px #000000;
-  text-shadow: 1px 1px 1px #000000;
-  
-  max-height: 300px;
+  font-size:  1.05em;
+  text-align: left !important;
+  letter-spacing: 0.7px;
+  // color: #FFF !important;
 
   @media (max-width: $screen-sm) {
-    max-height: 375px;
+    top: 0px;
+    overflow-y: scroll;
   }
-  @media (max-width: $screen-md) {
-    max-height: 350px;
-  }
-
-  background-position: center;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size:    cover;
-  -o-background-size:      cover;
-  background-size:         cover;
-  background-image: image-url("heros/1.jpg");
-  // 601 603 617 670
 }
+
+.carousel-caption h3 {
+  font-size: 2.25em;
+}
+
+.carousel-caption h4 {
+  font-size: 1.75em;
+  padding-bottom: 10px;
+}
+
+
+// .hero .item {
+//   max-height: 320px;
+//   overflow-y: hidden;
+//   overflow-x: hidden;
+//   background: #777;
+// }
+
+// .hero .item > img {
+//   position:   relative;
+//   display:    block;
+//   width: 120%;
+//   min-height: 320px;
+//   min-width: 900px;
+//   max-width:  2100px;
+//   bottom: 500px;
+
+//   @media (max-width: 992px) {
+//     bottom: 0;
+//   }
+//   @media (max-width: 1500px) {
+//     bottom: 200px;
+//   }
+// }
+
+// .carousel-caption {
+//   text-align: left !important;
+//   color: #FFF !important;
+//   font-size: 1.05em;
+//   letter-spacing: 0.7px;
+//   top: -120px;
+
+//   margin-bottom: 10%;
+//   text-shadow: 0px 0px 4px #000 !important;
+//   height: 400px;
+//   @media (max-width: 700px) {
+//     overflow-y: scroll;
+//   }
+//   opacity: 1;
+//   p {
+//     font-family: $dc-body;
+//     font-weight: 400;
+//     font-size: 1.3em;
+//   }
+//   a {
+//     // text-shadow: none;
+//     color: #EEF;
+//     text-decoration: underline;
+//     &:hover {
+//       color: #FFF;
+//       text-decoration: none;
+//     }
+//   }
+// }
+
+// .featured {
+
+//   h2    { 
+//     font-size: 300%;
+//     // background-color: rgba(0, 0, 0, 0.5);
+//     // box-shadow: 0px 0px 25px rgba(0, 0, 0, 1);
+//     padding: 0 50px;
+//     padding-top: 65px;
+
+//     @media (max-width: 417px) {
+//       font-size: 250%;
+//       margin-top: -50px !important;
+//     }
+//     @media (min-width: 418px) and (max-width: 555px) {
+//       padding: 0 60px;
+//     }
+//     @media (max-width: $screen-md) {
+//       margin-top: 0px;
+//     }
+//   }
+
+//   p.top { 
+//     font-size: 120%;
+//     max-width: 700px;
+//     text-align: left;
+//     position: relative;
+//     margin: 0 auto;
+//     display: block;
+
+//     // background-color: rgba(0, 0, 0, 0.5);
+//     // box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+//     padding: 0 40px;
+//   }
+
+//   display: block;
+//   margin-top: -20px;
+  
+//   color: #EEEEEE;
+//   a { 
+//     color: #EEEEEE;
+//     &:hover, &:visited {
+//       color: #FFFFFF;
+//     }
+//   }
+
+//   .explanation {
+//     a {
+//       color: $dc-blue;
+//       &:hover, &:visited {
+//         color: $dc-blue;
+//       }
+//     }
+//   }
+//   text-align: center;
+//   text-shadow: 3px 0px 0px #000000;
+//   text-shadow: 1px 1px 1px #000000;
+  
+//   max-height: 300px;
+
+//   @media (max-width: $screen-sm) {
+//     max-height: 375px;
+//   }
+//   @media (max-width: $screen-md) {
+//     max-height: 350px;
+//   }
+
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   -webkit-background-size: cover;
+//   -moz-background-size:    cover;
+//   -o-background-size:      cover;
+//   background-size:         cover;
+//   background-image: image-url("heros/1.jpg");
+//   // 601 603 617 670
+// }
+

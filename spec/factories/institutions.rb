@@ -9,5 +9,4 @@ FactoryGirl.define do
     logo_file_size     1024
     logo_updated_at    Time.now
   end
-
 end

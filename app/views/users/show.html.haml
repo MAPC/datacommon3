@@ -3,23 +3,28 @@
     = image_tag (@user.avatar_url), alt: @user.name
   .col-md-3.col-sm-4.col-xs-8.info
     %h3= @user.name
-    -# - if current_user? @user
-      -# = link_to 'Edit Profile', edit_profile_path(@user)
     %p=  mail_to @user.email
     %p=  @user.try(:city)
   .col-md-3.col-sm-4.col-xs-12.org
     %h5= @user.try(:organization)
     %p=  @user.try(:position)
-    -# %p=  link_to @profile.try(:website_url)
+    -# TODO links to this page by default %p=  link_to @user.profile.try(:website_url)
+    - if current_user? @user
+      = link_to 'Edit Profile', edit_profile_path(@user), class: 'btn btn-large btn-primary'
 
-%h2.page-header #{@user.name}'s Visualizations
+.row
+  %h2.page-header #{@user.name}'s Visualizations
 
-- if @user.visualizations.any?
-  .row
-    = render partial: 'visualizations/thumbnail', collection: @user.visualizations, as: :visual
-
-- else
-  %p #{@user.fname} has not created any visualizations.
-
--# .row.center
-  -# = paginate @user.visualizations, window: 1, outer_window: 1
+  - if current_user? @user
+    -# TODO FIX THIS model call shouldn't be in view
+    - visualizations = Visualization.unscoped.where(owner: @user)
+    - if visualizations.any?
+      = render partial: 'visualizations/thumbnail', collection: visualizations, as: :visual
+    - else
+      %p You have not created any visualizations.
+      = link_to 'Create one now.', new_visualization_path
+  - else
+    - if @user.visualizations.any?
+      = render partial: 'visualizations/thumbnail', collection: @user.visualizations, as: :visual
+    - else
+      %p #{@user.fname} has not created any public visualizations.

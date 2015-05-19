@@ -1,9 +1,10 @@
 .col-md-3.col-sm-6.col-xs-12.visual.thumbnail
   = link_to visual do
     .inner{style: "background-image: url('#{visual.image.url(:featured)}');"}
-    - if visual.private?
-      %span.badge Private
-    %p.visual.title= visual.title
+    %p.visual.title
+      - if visual.private?
+        %span.badge Private
+      = visual.title
   %p.byline
     by
     = link_to visual.owner, visual.owner

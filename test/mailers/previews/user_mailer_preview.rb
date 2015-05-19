@@ -13,7 +13,7 @@ class UserMailerPreview < ActionMailer::Preview
   # http://localhost:3000/rails/mailers/user_mailer/password_reset
   def password_reset
     user = User.first
-    user.reset_token = User.new_token
+    user.update_attribute(:reset_token, 'this-is-a-sample-token')
     UserMailer.password_reset(user)
   end
 

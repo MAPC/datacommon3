@@ -1,4 +1,5 @@
 class Hero < ActiveRecord::Base
+  self.primary_key = :id
   self.table_name = 'mbdc_hero'
 
   before_save :create_or_use_nav_titles
@@ -27,7 +28,11 @@ class Hero < ActiveRecord::Base
   end
 
   def to_html
-    _content_rendered.presence || self.content
+    (_content_rendered.presence || self.content).html_safe
+  end
+
+  def content_markup_type_enum
+    [['html'],['markdown'],['raw']]
   end
 
   def to_s
@@ -36,25 +41,22 @@ class Hero < ActiveRecord::Base
 
   rails_admin do
     list do
-      scopes [nil, :active]
+      sort_by :active, :order
+      scopes [:active, nil]
       field :title
       field :order
       field :active
-      field :institution_id do
-        formatted_value {
-          Institution.find_by(id: bindings[:object].institution_id).try(:short_name)
-        }
-      end
+      field :institution
     end
     edit do
       field :title
       field :subtitle
-      field :navtitle do
-        label "Link title"
-      end
-      field :navsubtitle do
-        label "Link subtitle"
-      end
+      # field :navtitle do
+      #   label "Link title"
+      # end
+      # field :navsubtitle do
+      #   label "Link subtitle"
+      # end
       field :content do
         label "Raw content"
       end
@@ -67,14 +69,7 @@ class Hero < ActiveRecord::Base
         label "Sort order"
       end
       field :active
-      field :institution do
-        visible false
-        # Default to the user's institution if staff,
-        # but allow any if the current user is an admin.
-        default_value do
-          bindings[:view]._current_user.institution_id
-        end
-      end
+      field :institution
     end
   end
 

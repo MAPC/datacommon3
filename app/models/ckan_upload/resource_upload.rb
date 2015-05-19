@@ -17,50 +17,57 @@ module CKANUpload
         :'Name'          => "#{ @extent.title }",
         :'Description'   => "#{ @layer.descriptn } by #{ @extent.title }"
       }
+      # METADATA
+      @fields[:Name]  = "Metadata - " << @fields[:Name]
+      @fields[:Table] = @fields[:Table].gsub('tabular','metadata')
     end
 
     def perform
-      puts "Starting on a resource..."
-      puts page.current_path
-      start_form ; fill_in_fields ; submit
+      puts "INFO: Starting new resource #{@extent.title} (#{@layer.title})"
+      start_form
+      puts "(ResourceUpload) DEBUG: Filling in fields."
+      fill_in_fields
+      submit
     end
 
     def start_form
-      puts "Starting resource form"
-      visit "http://#{ ENV.fetch('CKAN_BASE_URL') }/dataset/new_resource/#{ @layer.title.parameterize }"
-      puts "visited #{page.current_path}"
+      visit new_resource_path
+      puts "(ResourceUpload) DEBUG: Starting new resource form on #{new_resource_path}"
       begin
         click_button 'DataProxy'
-        puts "clicked DataProxy"
+        puts "(ResourceUpload) DEBUG: Clicked DataProxy"
       rescue
         find(:xpath, "//a[@id='dataproxy-assist']").click
-        puts "found XPATH for DataProxy"
+        puts "(ResourceUpload) DEBUG: Clicked DataProxy (xpath method)"
       ensure
       end
     end
 
     def fill_in_fields
-      puts "filling in fields on #{page.current_path}"
       select 'PostgreSQL', from: 'Database type'
       @fields.each do |field_name, value|
         begin
           fill_in field_name.to_s, with: value
-          puts "filled in #{field_name} with #{value}"
+          puts "(ResourceUpload) DEBUG: filled in #{field_name} with #{value}"
         rescue
-          puts "Could not fill in #{field_name} with #{value}"
+          puts "(ResourceUpload) DEBUG: Could not fill in #{field_name} with #{value} on #{page.current_path}"
         end
       end
+      puts "(ResourceUpload) DEBUG: Filled in all fields."
     end
 
     def submit
-      puts "Submitting resource..."
       begin
-        click_button 'Next: Additional Info'
-        puts "clicked 'Next: Additional Info'"
-      rescue
         click_button 'Add'
-        puts "clicked 'Add'"
+        puts "(ResourceUpload) DEBUG: Clicked 'Add'"
+      rescue
+        click_button 'Next: Additional Info'
+        puts "(ResourceUpload) DEBUG: Clicked 'Next: Additional Info'"
       end
+    end
+
+    def new_resource_path
+      "http://#{ ENV.fetch('CKAN_BASE_URL') }/dataset/new_resource/#{ @layer.title.parameterize }"
     end
   end
 end

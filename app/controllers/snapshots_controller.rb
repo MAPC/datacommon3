@@ -1,5 +1,7 @@
 class SnapshotsController < ApplicationController
   before_filter :load_institution
+  before_filter :check_legacy_show_path,   only: [:show]
+  before_filter :check_legacy_detail_path, only: [:detail]
 
   def index
   end
@@ -7,36 +9,16 @@ class SnapshotsController < ApplicationController
   # /snapshots/:slug
   # /snapshots/{boston|cambridge}
   def show
-    if ["cities-and-towns", "subregions"].include? params[:id]
-      flash[:info] =<<-EOS
-        We've moved things around a little!
-        This is the new home for snapshots
-        for cities, towns, and subregions.
-      EOS
-      redirect_to snapshots_path
-    end
-
     @geography = Geography.find_by(slug: params[:id])
   end
 
   # /snapshots/:slug/:topic
   # /snapshots/boston/{economy|demographics}
   def detail
-    puts params[:snapshot_id].inspect
-    if ["cities-and-towns", "subregions"].include? params[:snapshot_id]
-      flash[:info] =<<-EOS
-        We've moved things around a little!
-        This is the new home for snapshots
-        for cities, towns, and subregions.
-      EOS
-      redirect_to snapshot_path params[:id]
-    else
-      # Correct request
-      @snapshot = SnapshotFacade.new(
-        geography: params[:snapshot_id],
-        topic:     params[:id]
-      )
-    end
+    @snapshot = SnapshotFacade.new(
+      geography: params[:snapshot_id],
+      topic:     params[:id]
+    )
   end
 
   def session_state
@@ -91,6 +73,26 @@ class SnapshotsController < ApplicationController
   end
 
   private
+
+    SNAPSHOT_MOVED = <<-EOS
+      We've moved things around a little!
+      This is the new home for snapshots
+      for cities, towns, and subregions.
+    EOS
+
+    def check_legacy_show_path
+      if ["cities-and-towns", "subregions"].include? params[:id]
+        flash[:info] = SNAPSHOT_MOVED
+        redirect_to snapshots_path, status: :moved_permanently
+      end
+    end
+
+    def check_legacy_detail_path
+      if ["cities-and-towns", "subregions"].include? params[:snapshot_id]
+        flash[:info] = SNAPSHOT_MOVED
+        redirect_to snapshot_path params[:id], status: :moved_permanently
+      end
+    end
 
     def json_for_file(filename)
       if File.exists? filename

@@ -33,5 +33,14 @@ RailsAdmin.config do |config|
     # history_show
   end
 
-  config.included_models = ['User', 'StaticMap', 'Hero', 'Visualization', 'Geography', 'Institution', 'DynamicVisualization']
+  config.included_models = [
+    'User',
+    'StaticMap',
+    'Logo',
+    'Hero',
+    'Visualization',
+    'Geography',
+    'Institution',
+    'DynamicVisualization'
+  ]
 end

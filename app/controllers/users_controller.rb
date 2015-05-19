@@ -20,14 +20,23 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
-      @user.new_account_followup_emails
-      @user.create_profile(name:  @user.first_name + " " + @user.last_name,
-                           email: @user.email)
       sign_in @user
       flash[:success] = "Welcome to the DataCommon!"
       redirect_to @user
     else
       render :new
+    end
+  end
+
+  def edit
+    @user = User.find_by(username: params[:id])
+  end
+
+  def update
+    @user = User.find_by(username: params[:id])
+    if @user.profile.update_attributes( profile_params )
+      flash[:success] = "Your profile was updated."
+      redirect_to @user
     end
   end
 
@@ -60,8 +69,6 @@ class UsersController < ApplicationController
     def check_params
       params.require(:user).permit(:email, :username)
     end
-
-
 
     def correct_user
       user = User.find_by(username: params[:id])

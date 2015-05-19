@@ -112,94 +112,11 @@ input.valid, textarea.valid, select.valid {
 }
 
 
-/*     HERO     */
-
-.carousel {
-  margin-top: -20px;
-  max-height: 475px;
-  font-family: 'Oswald', sans-serif;
-}
 
 .geography-selector {
   text-align: center;
   padding: 20px 0 30px 0;
 }
-
-// .carousel-inner > .item > img {
-//   max-width: none !important;
-// }
-
-.item {
-  max-height: 475px;
-  overflow-y: hidden;
-  overflow-x: hidden;
-  background: #777;
-}
-
-.item img {
-  position:   relative;
-  display:    block;
-  width: 120%;
-  min-height: 475px;
-  min-width: 900px;
-  max-width:  2100px;
-  bottom: 500px;
-
-  @media (max-width: 992px) {
-    bottom: 0;
-  }
-
-  @media (max-width: 1500px) {
-    bottom: 200px;
-  }
-
-  // -webkit-filter: blur(3px);
-  // -moz-filter:    blur(3px);
-  // -ms-filter:     blur(3px);
-  // -o-filter:      blur(3px);
-  // filter:         blur(3px);
-  opacity: 0.7;
-
-}
-
-.carousel-caption {
-  text-align: left !important;
-  color: #FFF !important;
-  font-size: 1.05em;
-  letter-spacing: 0.7px;
-  top: -120px;
-  margin-top:    10%;
-  margin-bottom: 10%;
-  text-shadow: 0px 0px 4px #000 !important;
-  height: 400px;
-  @media (max-width: 700px) {
-    overflow-y: scroll;
-  }
-  opacity: 1;
-  p {
-    font-family: $dc-body;
-    font-weight: 400;
-    font-size: 1.3em;
-  }
-  a {
-    // text-shadow: none;
-    color: #EEF;
-    text-decoration: underline;
-    &:hover {
-      color: #FFF;
-      text-decoration: none;
-    }
-  }
-}
-
-.carousel-caption h3 {
-    font-size: 2.5em;
-  }
-
-.carousel-caption h4 {
-    font-size: 2em;
-    padding-bottom: 10px;
-  }
 
 @import "front/hero";
 @import "front/explanations";
@@ -216,13 +133,13 @@ table.metadata {
 
   td {
     text-align: left;
-    padding: 5px 10px;
+    padding: 5px 26px;
     font-weight: 400;
-    font-size: 1.1em;
+    font-size: 1em;
   }
   td:first-child {
-    text-align: right;
-    font-size: 1em;
+    // text-align: right;
+    // font-size: 1em;
   }
   td.left {
     text-align: left;

@@ -76,4 +76,10 @@ describe Hero do
     end
   end
 
+  describe 'rendering' do
+    pending 'HTML'
+    pending 'Markdown'
+    pending 'Raw'
+  end
+
 end
