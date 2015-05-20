@@ -15,8 +15,8 @@
 
     .col-md-3.col-sm-6.col-xs-12
       .form-group
-        = f.label      :title
-        = f.text_field :title, class: 'form-control',    placeholder: "Your Visualization's Title"
+        = f.label      :title, "Title (required)"
+        = f.text_field :title, required: true, class: 'form-control',    placeholder: "Your Visualization's Title"
     
     .col-md-3.col-sm-6.col-xs-12
       .form-group
@@ -27,7 +27,7 @@
       .form-group
         = f.label      :institution_id
         %p.small
-          Visualizations belonging to one institution will appear sooner in the visualization gallery in that institution's DataCommon.
+          This visualization will be prioritized on the selected agency's DataCommon.
         - if institutions_exist?
           = select_tag 'visualization[institution_id]', options_for_select(Institution.all.map {|g| [g.short_name, g.id]}, @institution.id)
         - else
@@ -42,8 +42,8 @@
 
     .col-sm-6.col-xs-12
       .form-group
-        = f.label      :abstract
-        = f.text_area  :abstract, class: 'form-control', placeholder: "Summarize what you are trying to visualize.", rows: 5
+        = f.label      :abstract, "Abstract (required, minimum 70 characters)"
+        = f.text_area  :abstract, required: true, class: 'form-control', placeholder: "Summarize what you are trying to visualize.", rows: 5
       
     .col-sm-3.col-xs-6
       .form-group

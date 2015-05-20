@@ -12,3 +12,16 @@
   display: inline-block;
   margin: 0 35px;
 }
+
+/*
+
+Trying to get all labels before required elements
+to display some kind of content.
+
+*/
+
+label:before + input[required="required"] {
+  content: "*";
+  margin-left:  10px;
+  margin-right: 10px
+}
