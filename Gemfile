@@ -72,6 +72,7 @@ group :development do
   gem 'spring'            # Keeps environment in background
   gem 'better_errors'     # Clearer error messages
   gem 'binding_of_caller' # Error message REPL & more
+  gem 'rails-erd'         # Output data model diagrams
 end
 
 

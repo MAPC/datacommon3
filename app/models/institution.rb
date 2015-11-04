@@ -11,7 +11,7 @@ class Institution < ActiveRecord::Base
   validates :long_name,  presence: true
   validates :short_name, presence: true
   validates :subdomain,  presence: true
-  
+
   has_attached_file :logo, styles: { favicon: ['16x16#',  :png],
                                      header:  ['160x52>', :png],
                                      large:   ['245x80>', :png] }
@@ -19,7 +19,7 @@ class Institution < ActiveRecord::Base
   validates :logo_file_name, presence: true
   validates_attachment_content_type :logo, content_type: /\Aimage\/.*\Z/
 
-  
+
   def camel_name
     short_name.gsub(' ','') # Remove spaces
   end
@@ -103,5 +103,4 @@ class Institution < ActiveRecord::Base
       }.new
     end
 
-  
 end

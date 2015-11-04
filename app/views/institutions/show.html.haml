@@ -6,7 +6,7 @@
         - @heros.each_with_index do |hero, index|
           - active_class = (index == 0) ? 'active' : ''
           %li{"data-slide-to" => index.to_s, "data-target" => "#carousel-example-generic", class: active_class}
-      
+
       / Wrapper for slides
       .carousel-inner{:role => "listbox"}
         = render @heros # slides
@@ -14,14 +14,14 @@
       / Next | Previous
       = render partial: 'heros/controls'
 
-  
+
   .row.explanation
     .col-lg-3.col-sm-6.col-xs-12.explanation
       = link_to datasets_path do
         %h5.explanation.data-catalog          Data Catalog
         = image_tag 'explanations/data-catalog-sm.png', class: 'explanation-icon'
       %p
-        Browse, search, and download over 1000 spatial and tabular datasets from the 
+        Browse, search, and download over 1000 spatial and tabular datasets from the
         = succeed '.' do
           = link_to 'Data Catalog', datasets_path
 
@@ -30,7 +30,7 @@
         %h5.explanation.community-snapshots   Community Profiles
         = image_tag 'explanations/community-snapshots-sm.png', class: 'explanation-icon'
       %p
-        View dashboards on housing, education, the arts, and more, tailored to your town in 
+        View dashboards on housing, education, the arts, and more, tailored to your town in
         = succeed '.' do
           = link_to 'Community Profiles', snapshots_path
 
@@ -39,7 +39,7 @@
         %h5.explanation.visualization-gallery Visualization Gallery
         = image_tag 'explanations/visualization-gallery-sm.png', class: 'explanation-icon'
       %p
-        Explore #{visualization_count} user-made maps, charts, and more in the 
+        Explore #{visualization_count} user-made maps, charts, and more in the
         = succeed ',' do
           = link_to 'Gallery', visualizations_path
         and learn how to
@@ -62,9 +62,11 @@
 %hr
 
 .row.the-row
-  .col-xs-12.col-sm-12.col-md-8
-    %h1 Featured Visualization
-    = render partial: 'visualizations/feature', object: @institution.featured_visualization, as: :feature
+  - feature = @institution.featured_visualization
+  - if feature.present?
+    .col-xs-12.col-sm-12.col-md-8
+      %h1 Featured Visualization
+      = render partial: 'visualizations/feature', object: feature, as: :feature
   .col-xs-12.col-sm-12.col-md-4
     .page-header
     %h1 Visualizations by Topic
