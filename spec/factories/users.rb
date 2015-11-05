@@ -23,6 +23,7 @@ FactoryGirl.define do
       first_name "Steff"
       last_name  "Membre"
       is_staff    true
+      last_login  20.minutes.ago
     end
 
     trait :admin do
@@ -31,6 +32,7 @@ FactoryGirl.define do
       is_staff     true
       is_active    true
       is_superuser true
+      last_login   5.minutes.ago
     end
 
   end
