@@ -1,9 +1,10 @@
+/ TODO Figure out a class name better than 'the row'.
 .row.the-row
-  - feature = @institution.featured_visualization
+  - feature = @dashboard.feature
   - if feature.present?
     .col-xs-12.col-sm-12.col-md-8
       %h1 Featured Visualization
-      -# = render partial: 'visualizations/feature', object: feature, as: :feature
+      = render partial: 'visualizations/feature', object: feature, as: :feature
   .col-xs-12.col-sm-12.col-md-4
     .page-header
     %h1 Visualizations by Topic
