@@ -1,0 +1,16 @@
+- content_for :featured do
+  #heros
+    #carousel-example-generic.carousel.slide{"data-ride" => "carousel"}
+      / Indicators
+      %ol.carousel-indicators
+        - heros.each_with_index do |hero, index|
+          - active_class = (index == 0) ? 'active' : ''
+          %li{"data-slide-to" => index.to_s, "data-target" => "#carousel-example-generic", class: active_class}
+
+      / Wrapper for slides
+      .carousel-inner{:role => "listbox"}
+        / Slides
+        = render heros, locals: {first_id: heros.first.id}
+
+      / Next | Previous
+      = render partial: 'heros/controls'
