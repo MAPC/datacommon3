@@ -23,6 +23,7 @@ FactoryGirl.define do
       first_name "Steff"
       last_name  "Membre"
       is_staff    true
+      is_superuser false
       last_login  20.minutes.ago
     end
 
