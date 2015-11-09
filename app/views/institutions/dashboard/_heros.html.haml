@@ -10,7 +10,8 @@
       / Wrapper for slides
       .carousel-inner{:role => "listbox"}
         / Slides
-        = render heros, locals: {first_id: heros.first.id}
+        - if heros.any? # TODO: Nil Check smell
+          = render heros, locals: {first_id: heros.first.id}
 
       / Next | Previous
       = render partial: 'heros/controls'

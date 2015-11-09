@@ -1,14 +1,14 @@
-class Visualization < ActiveRecord::Base  
+class Visualization < ActiveRecord::Base
   self.table_name = 'weave_visualization'
   self.primary_key = :id
-  
+
   PERMISSIONS = ['public', 'private']
 
-  before_save :update_time
+  # before_save :update_time
   before_validation :stringify_permissions
 
   belongs_to :original, class_name: "Visualization", foreign_key: :original_id
-  
+
   has_and_belongs_to_many :data_sources,
     join_table: :weave_visualization_datasources,
     association_foreign_key: :datasource_id
@@ -61,7 +61,7 @@ class Visualization < ActiveRecord::Base
   end
 
   def self.recent(count=4)
-    self.order('last_modified DESC').limit(count)
+    self.order('updated_at DESC').limit(count)
   end
 
   def self.public
@@ -143,9 +143,9 @@ class Visualization < ActiveRecord::Base
       end
     end
 
-    def update_time
-      self.last_modified = Time.now
-    end
+    # def update_time
+    #   self.last_modified = Time.now
+    # end
 
     def stringify_permissions
       self.permission = self.permission.to_s

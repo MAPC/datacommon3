@@ -16,7 +16,7 @@ class Hero < ActiveRecord::Base
   has_attached_file :image, styles: { preview: ['500x375>', :png] }
   validates :image_file_name, presence: true
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
-  
+
   def self.active
     where(active: true).order(:order)
   end
