@@ -5,6 +5,7 @@ class Visualization < ActiveRecord::Base
   PERMISSIONS = ['public', 'private']
 
   # before_save :update_time
+  before_save :strip_trailing_whitespace
   before_validation :stringify_permissions
 
   belongs_to :original, class_name: "Visualization", foreign_key: :original_id
@@ -146,6 +147,12 @@ class Visualization < ActiveRecord::Base
     # def update_time
     #   self.last_modified = Time.now
     # end
+
+    def strip_trailing_whitespace
+      %w( title abstract year ).each {|attribute|
+        self.send(attribute).to_s.strip!
+      }
+    end
 
     def stringify_permissions
       self.permission = self.permission.to_s
