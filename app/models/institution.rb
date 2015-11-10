@@ -100,6 +100,8 @@ class Institution < ActiveRecord::Base
         def id ; "NULL" ; end
         def to_s ; "Null Institution" ; end
         def presence ; nil ; end
+        def heros ; OpenStruct.new(active: []) ; end
+        def featured_visualization ; nil ; end
       }.new
     end
 
