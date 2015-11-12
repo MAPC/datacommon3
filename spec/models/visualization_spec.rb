@@ -31,10 +31,11 @@ describe Visualization do
     }
   end
 
-  it "requires an institution" do
-    expect(build(:visual, institution_id: nil)).to be_valid
-    expect(build(:visual, institution_id: 3)).to_not be_valid
-  end
+  # What if it didn't?
+  # it "requires an institution" do
+  #   expect(build(:visual, institution_id: nil)).to be_valid
+  #   expect(build(:visual, institution_id: 3)).to_not be_valid
+  # end
 
   it "requires an owner" do
     expect(build(:visual, owner:    nil)).to_not be_valid

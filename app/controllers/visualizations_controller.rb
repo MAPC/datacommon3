@@ -83,9 +83,11 @@ class VisualizationsController < ApplicationController
       original_id:    template.id,
       institution_id: @institution.id
     )
+    @visualization.touch
 
     # TODO: write a test for duplicating a visualization
     # with no abstract.
+    # TODO: Throws errors around timestamps.
     if @visualization.save(validate: false)
       redirect_to edit_visualization_url(@visualization)
     else

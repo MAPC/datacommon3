@@ -67,15 +67,24 @@ feature 'User creates private visualization' do
 end
 
 feature 'User duplicates public visualization' do
+  subject(:user) { create(:user) }
+
+  background do
+    create(:topic,       title: 'Demographics')
+    create(:data_source, title: 'ACS')
+    sign_in user
+    visit '/visualizations/new'
+  end
+
   let(:visual) { create(:visualization, title: 'Base Title') }
   let(:new_title) { 'A Duplicate Title' }
 
-  pending 'from existing' do
+  scenario 'from existing and edit' do
     visit visualization_path(visual)
-    click_link 'Clone'
+    click_link 'Duplicate'
     expect(page).to have_content("Base Title (Copy)")
     fill_in 'Title', with: new_title
-    click_button 'Save'
+    click_button 'Update'
     visit visualizations_path
     expect(page).to have_content(new_title)
   end
@@ -83,6 +92,32 @@ end
 
 
 feature 'User duplicates private visualization' do
+  subject(:user) { create(:user) }
+
+  background do
+    create(:topic,       title: 'Demographics')
+    create(:data_source, title: 'ACS')
+    sign_in user
+    visit '/visualizations/new'
+  end
+
+  let(:visual) {
+    create(:visualization,
+      title: 'Private Title',
+      permission: 'private',
+      user: user)
+  }
+  let(:new_title) { 'A Newer Title' }
+
+  scenario 'from existing and edit' do
+    visit visualization_path(visual)
+    click_link 'Duplicate'
+    expect(page).to have_content("Private Title (Copy)")
+    fill_in 'Title', with: new_title
+    click_button 'Update'
+    visit visualizations_path
+    expect(page).to have_content(new_title)
+  end
 end
 
 
