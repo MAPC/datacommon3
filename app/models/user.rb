@@ -3,22 +3,22 @@ class User < ActiveRecord::Base
   self.primary_key = :id
   attr_accessor :remember_token, :password
 
-  before_save :downcase_email
-  before_save :encrypt_password, if: Proc.new { |user| user.password? }
+  before_save   :downcase_email
+  before_save   :encrypt_password, if: Proc.new { |user| user.password? }
+
   before_create :create_activation_digest
-  after_create :create_default_profile
-  after_create :send_new_account_followup_email
-  
-  # before_save :set_timestamps,   if: Proc.new { |user| user.new_record?       }
-  # before_save :set_default_permissions, if: Proc.new { |user| user.new_record? }
+
+  after_create  :create_default_profile
+  after_create  :send_new_account_followup_email
 
   has_one  :profile
   has_many :visualizations, foreign_key: :owner_id
   belongs_to :institution
 
   validates :username,   presence: true,
-            length:     { minimum: 5, maximum: 30 }, 
-            uniqueness: { case_sensitive: false, message: "Someone else has already taken that username." }
+              length:     { minimum: 5, maximum: 30 },
+              uniqueness: { case_sensitive: false, message: "Someone else has already taken that username." }
+  validate :valid_username
   validates :first_name, presence: true, length: { maximum: 30 }
   validates :last_name,  presence: true, length: { maximum: 30 }
   validates :email,      presence: true, length: { minimum: 5, maximum: 75 }, uniqueness: { case_sensitive: false }
@@ -26,14 +26,15 @@ class User < ActiveRecord::Base
 
   validates :password,   presence: true, length: { minimum: 5, maximum: 128 }
   validates_confirmation_of :password
-  
+
   def name
     profile ? profile.name : full_name_or_username
   end
 
   def email_host
     base_host = Rails.configuration.action_mailer.default_url_options[:host]
-    institution.presence ? institution.domain : "metroboston.base_host"
+    return base_host if Rails.env == 'development'
+    institution.presence ? institution.domain : "metroboston.#{base_host}"
   end
 
   def full_name
@@ -57,7 +58,7 @@ class User < ActiveRecord::Base
   end
 
   def active?
-    activated_at
+    activated_at.present?
   end
 
   def inactive?
@@ -190,6 +191,10 @@ class User < ActiveRecord::Base
     end
   end
 
+  def resend_activation_email
+    return false if active?
+    return true  if send_activation_email
+  end
 
   private
 
@@ -243,11 +248,16 @@ class User < ActiveRecord::Base
     # end
 
     def valid_email
-      begin
-        addr = Mail::Address.new(email)
-        throw StandardError if [addr.local, addr.domain].include?(nil)
-      rescue
-        errors.add(:email, "must be a valid email address")
+      addr = Mail::Address.new(email)
+      throw StandardError if [addr.local, addr.domain].include?(nil)
+    rescue
+      errors.add(:email, "must be a valid email address")
+    end
+
+    def valid_username
+      # Must match only word characters
+      if !username.to_s.match /^[\w]*$/
+        errors.add(:username, "can only contain letters, numbers, and underscores")
       end
     end
 

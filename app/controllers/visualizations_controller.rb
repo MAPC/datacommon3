@@ -28,7 +28,7 @@ class VisualizationsController < ApplicationController
   def upload_image
     @visual  = Visualization.find_by id: params[:id]
     decoded_file = Base64.decode64 params[:data]
-    
+
     begin
       file = Tempfile.new([@visual.id.to_s, ".png"])
       file.binmode
@@ -94,14 +94,14 @@ class VisualizationsController < ApplicationController
     end
   end
 
-  
+
   def edit
   end
 
 
   def update
     @visualization.update! editable_params
-    
+
     respond_to do |format|
       if @visualization.save
         format.json { render json: @visualization }
@@ -126,14 +126,10 @@ class VisualizationsController < ApplicationController
   private
 
     def editable_params
-      params.require(:visualization).permit(:title,
-                                            :year,
-                                            :abstract,
-                                            :institution_id,
-                                            :permission,
-                                            :sessionstate,
-                                            {issue_area_ids:  []},
-                                            {data_source_ids: []})
+      params.require(:visualization)
+            .permit(:title, :year, :abstract, :institution_id,
+                    :permission, :sessionstate, {issue_area_ids: []},
+                    {data_source_ids: []})
     end
 
 

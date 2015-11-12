@@ -1275,7 +1275,7 @@ CREATE INDEX weave_visualization_topics_visualization_id ON weave_visualization_
 -- PostgreSQL database dump complete
 --
 
-SET search_path TO public;
+SET search_path TO datacommon,public;
 
 INSERT INTO schema_migrations (version) VALUES ('20140901170947');
 

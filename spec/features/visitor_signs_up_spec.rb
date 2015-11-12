@@ -2,8 +2,6 @@ require 'spec_helper'
 
 feature 'Visitor signs up' do
 
-  before { ActionMailer::Base.deliveries.clear }
-
   scenario 'with valid email and password' do
     expect{
       sign_up_with 'valid@example.com', 'password'
@@ -12,6 +10,7 @@ feature 'Visitor signs up' do
     }.by(1)
     expect(page).to have_content('Sign out')
     expect(page).to have_content('First') # = First name of sample user
+    expect(page).to have_content('resend')
   end
 
   scenario 'with invalid email', js: true do

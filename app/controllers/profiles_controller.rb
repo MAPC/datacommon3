@@ -8,24 +8,23 @@ class ProfilesController < ApplicationController
 
   def update
     if @profile.update! profile_params
-      flash[:success] = "Your profile was updated!"
+      success "Your profile was updated!"
       redirect_to @profile.user
     end
+  rescue => e
+    ENV["airbrake.error_id"] = notify_airbrake(e) if Rails.env == 'production'
+    danger "An unexpected error occurred when we tried to update your profile."
+    redirect_to @profile.user
   end
 
   private
-
-    ONLY_OWNER_MAY_EDIT = <<-EOE
-      A user may only edit their own profile. If you were trying to
-      edit your own profile, please sign in first.
-    EOE
 
     def correct_editor
       user = User.find_by(username: params[:id])
       @profile = user.profile || Profile.find_or_create_by(id: params[:id])
 
       unless current_user?(user)
-        flash[:danger] = ONLY_OWNER_MAY_EDIT
+        danger :only_owner_may_edit
         store_location
         redirect_to login_url
       end
@@ -36,7 +35,7 @@ class ProfilesController < ApplicationController
       user = @profile.user
 
       unless current_user?(user)
-        flash[:danger] = ONLY_OWNER_MAY_EDIT
+        danger :only_owner_may_edit
         store_location
         redirect_to login_url
       end
@@ -44,9 +43,9 @@ class ProfilesController < ApplicationController
 
     def profile_params
       params.require(:profile).permit(:organization, :position,
-                                      :voice, :fax, :delivery, 
-                                      :city, :area, :zipcode, 
-                                      :country, :email, 
+                                      :voice, :fax, :delivery,
+                                      :city, :area, :zipcode,
+                                      :country, :email,
                                       :website_url)
     end
 

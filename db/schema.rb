@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150515150859) do
+ActiveRecord::Schema.define(version: 20151105172912) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,8 +26,8 @@ ActiveRecord::Schema.define(version: 20150515150859) do
     t.boolean  "is_staff",                      default: false, null: false
     t.boolean  "is_active",                     default: false, null: false
     t.boolean  "is_superuser",                  default: false, null: false
-    t.datetime "last_login",                                    null: false
-    t.datetime "date_joined",                                   null: false
+    t.datetime "last_login"
+    t.datetime "created_at",                                    null: false
     t.string   "remember_digest"
     t.string   "activation_digest"
     t.datetime "activated_at"
@@ -111,7 +111,7 @@ ActiveRecord::Schema.define(version: 20150515150859) do
     t.string   "website_url",     limit: 200
     t.boolean  "mapc_newsletter",             default: false, null: false
     t.boolean  "mbdc_newsletter",             default: false, null: false
-    t.datetime "last_modified",                               null: false
+    t.datetime "updated_at",                                  null: false
   end
 
   add_index "maps_contact", ["user_id"], name: "maps_contact_user_id", using: :btree
@@ -240,7 +240,7 @@ ActiveRecord::Schema.define(version: 20150515150859) do
     t.string   "title",              limit: 100
     t.text     "abstract"
     t.integer  "owner_id",                                          null: false
-    t.datetime "last_modified",                                     null: false
+    t.datetime "updated_at",                                        null: false
     t.text     "sessionstate",                                      null: false
     t.string   "year",               limit: 50
     t.integer  "original_id"
