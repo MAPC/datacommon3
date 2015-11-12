@@ -83,20 +83,20 @@ class VisualizationsController < ApplicationController
       original_id:    template.id,
       institution_id: @institution.id
     )
-    @visualization.touch
+    # TODO: Hacky fix. Why doesn't ActiveRecord recognize this timestamp?
+    @visualization.updated_at = Time.now
 
     # TODO: write a test for duplicating a visualization
     # with no abstract.
-    # TODO: Throws errors around timestamps.
-    if @visualization.save(validate: false)
-      redirect_to edit_visualization_url(@visualization)
-    else
-      flash[:danger] = 'An unexpected error occurred when duplicating the visualization.'
-      if @visualization.errors.any?
-        flash[:danger] << "#{ @visualization.errors.full_messages.join(", ") }"
-      end
-      redirect_to root_url
+    @visualization.save(validate: false)
+    redirect_to edit_visualization_url(@visualization)
+  rescue => e
+    trigger_airbrake(e)
+    danger "An unexpected error occurred when duplicating the visualization.\n#{e}"
+    if @visualization.errors.any?
+      flash[:danger] << "#{ @visualization.errors.full_messages.join(", ") }"
     end
+    redirect_to root_url
   end
 
 

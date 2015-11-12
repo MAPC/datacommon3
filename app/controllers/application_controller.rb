@@ -9,6 +9,7 @@ class ApplicationController < ActionController::Base
 
   include SessionsHelper
   include FlashHelper
+  include ErrorHelper
   # include SubdomainHelper
 
   def load_institution
