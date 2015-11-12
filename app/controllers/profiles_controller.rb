@@ -12,7 +12,7 @@ class ProfilesController < ApplicationController
       redirect_to @profile.user
     end
   rescue => e
-    ENV["airbrake.error_id"] = notify_airbrake(e) if Rails.env == 'production'
+    trigger_airbrake(e)
     danger "An unexpected error occurred when we tried to update your profile."
     redirect_to @profile.user
   end
