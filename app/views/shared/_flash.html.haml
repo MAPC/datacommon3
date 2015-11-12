@@ -1,4 +1,5 @@
 - if flash
+  - flash.delete :html_safe
   - flash.each do |key, value|
     %div{class: "alert alert-#{key}"}
       %a.removable.left
@@ -9,7 +10,7 @@
 
   $(document).on('ready', function () {
     $( document ).on('click', '.removable', function() {
-      
+
       if (window.cancel_timeout) {
         clearTimeout(window.cancel_timeout);
       }

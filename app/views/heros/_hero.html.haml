@@ -1,5 +1,8 @@
-- active_class = (hero == @heros.first) ? 'active' : ''
-.hero.item{ class: active_class }
+/ If this hero is the first one, set its class to 'active' so it
+/ is displayed when the carousel is initialized.
+- active = 'active' if (hero.id == locals[:first_id])
+
+.hero.item{class: active.to_s}
   %img{alt: hero.content, src: hero.image.url}
   .carousel-caption
     %h3= hero.title

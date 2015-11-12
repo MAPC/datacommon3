@@ -2,10 +2,11 @@ require 'spec_helper'
 require 'rails_admin'
 
 feature 'Staff can manage institutions' do
-  
+
   background do
     # create(:institution, id: 1, short_name: 'Metro Boston')
     # create(:institution, id: 2, short_name: 'Central Mass')
+    # TODO the staff creation is repetitive
     @staff = create(:user, :staff, institution_id: 1)
     sign_in @staff
     visit admin_dashboard_url

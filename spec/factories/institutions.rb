@@ -8,5 +8,11 @@ FactoryGirl.define do
     logo_content_type 'image/png'
     logo_file_size     1024
     logo_updated_at    Time.now
+
+    trait :other do
+      long_name "Central Massachusetts"
+      short_name "Central Mass"
+      subdomain "centralmass"
+    end
   end
 end

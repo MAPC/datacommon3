@@ -29,8 +29,8 @@ CREATE TABLE auth_user (
     is_staff boolean DEFAULT false NOT NULL,
     is_active boolean DEFAULT false NOT NULL,
     is_superuser boolean DEFAULT false NOT NULL,
-    last_login timestamp without time zone DEFAULT ('now'::text)::date NOT NULL,
-    date_joined timestamp without time zone DEFAULT ('now'::text)::date NOT NULL,
+    last_login timestamp without time zone,
+    created_at timestamp without time zone NOT NULL,
     remember_digest character varying(255),
     activation_digest character varying(255),
     activated_at timestamp without time zone,
@@ -233,7 +233,7 @@ CREATE TABLE maps_contact (
     website_url character varying(200),
     mapc_newsletter boolean DEFAULT false NOT NULL,
     mbdc_newsletter boolean DEFAULT false NOT NULL,
-    last_modified timestamp without time zone DEFAULT ('now'::text)::date NOT NULL
+    updated_at timestamp without time zone NOT NULL
 );
 
 
@@ -493,93 +493,12 @@ ALTER SEQUENCE mbdc_topic_id_seq OWNED BY mbdc_topic.id;
 
 
 --
--- Name: pages; Type: TABLE; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE TABLE pages (
-    id integer NOT NULL,
-    institution_id integer,
-    sort_order integer,
-    topic_id character varying(255),
-    slug character varying(255)
-);
-
-
---
--- Name: pages_id_seq; Type: SEQUENCE; Schema: public; Owner: -
---
-
-CREATE SEQUENCE pages_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
---
--- Name: pages_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE pages_id_seq OWNED BY pages.id;
-
-
---
 -- Name: schema_migrations; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE schema_migrations (
     version character varying(255) NOT NULL
 );
-
-
---
--- Name: weave_visualization; Type: TABLE; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE TABLE weave_visualization (
-    id integer NOT NULL,
-    title character varying(100),
-    abstract text,
-    owner_id integer NOT NULL,
-    last_modified timestamp without time zone NOT NULL,
-    sessionstate text NOT NULL,
-    year character varying(50),
-    original_id integer,
-    featured integer,
-    institution_id integer DEFAULT 1,
-    permission character varying(255) DEFAULT 'public'::character varying,
-    image_file_name character varying(255),
-    image_content_type character varying(255),
-    image_file_size integer,
-    image_updated_at timestamp without time zone
-);
-
-
---
--- Name: searches; Type: VIEW; Schema: public; Owner: -
---
-
-CREATE VIEW searches AS
- SELECT weave_visualization.id AS searchable_id,
-    'Visualization'::text AS searchable_type,
-    weave_visualization.title AS term
-   FROM weave_visualization
-UNION
- SELECT weave_visualization.id AS searchable_id,
-    'Visualization'::text AS searchable_type,
-    weave_visualization.abstract AS term
-   FROM weave_visualization
-UNION
- SELECT mbdc_calendar.id AS searchable_id,
-    'StaticMap'::text AS searchable_type,
-    mbdc_calendar.title AS term
-   FROM mbdc_calendar
-UNION
- SELECT mbdc_calendar.id AS searchable_id,
-    'StaticMap'::text AS searchable_type,
-    mbdc_calendar.abstract AS term
-   FROM mbdc_calendar;
 
 
 --
@@ -717,6 +636,29 @@ CREATE SEQUENCE snapshots_visualization_topics_id_seq
 --
 
 ALTER SEQUENCE snapshots_visualization_topics_id_seq OWNED BY snapshots_visualization_topics.id;
+
+
+--
+-- Name: weave_visualization; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE weave_visualization (
+    id integer NOT NULL,
+    title character varying(100),
+    abstract text,
+    owner_id integer NOT NULL,
+    updated_at timestamp without time zone NOT NULL,
+    sessionstate text NOT NULL,
+    year character varying(50),
+    original_id integer,
+    featured integer,
+    institution_id integer DEFAULT 1,
+    permission character varying(255) DEFAULT 'public'::character varying,
+    image_file_name character varying(255),
+    image_content_type character varying(255),
+    image_file_size integer,
+    image_updated_at timestamp without time zone
+);
 
 
 --
@@ -893,13 +835,6 @@ ALTER TABLE ONLY mbdc_topic ALTER COLUMN id SET DEFAULT nextval('mbdc_topic_id_s
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
-ALTER TABLE ONLY pages ALTER COLUMN id SET DEFAULT nextval('pages_id_seq'::regclass);
-
-
---
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
---
-
 ALTER TABLE ONLY snapshots_regionalunit ALTER COLUMN id SET DEFAULT nextval('snapshots_regionalunit_id_seq'::regclass);
 
 
@@ -1050,27 +985,11 @@ ALTER TABLE ONLY mbdc_topic
 
 
 --
--- Name: pages_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
---
-
-ALTER TABLE ONLY pages
-    ADD CONSTRAINT pages_pkey PRIMARY KEY (id);
-
-
---
 -- Name: snapshots_regionalunit_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY snapshots_regionalunit
     ADD CONSTRAINT snapshots_regionalunit_pkey PRIMARY KEY (id);
-
-
---
--- Name: snapshots_visualization__visualization_id_7697a44685099f5a_uniq; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
---
-
-ALTER TABLE ONLY snapshots_visualization_source
-    ADD CONSTRAINT snapshots_visualization__visualization_id_7697a44685099f5a_uniq UNIQUE (visualization_id, datasource_id);
 
 
 --
@@ -1178,34 +1097,6 @@ CREATE INDEX index_institutions_logos_on_logo_id_and_institution_id ON instituti
 
 
 --
--- Name: index_mbdc_calendar_on_abstract; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX index_mbdc_calendar_on_abstract ON mbdc_calendar USING gin (to_tsvector('english'::regconfig, abstract));
-
-
---
--- Name: index_mbdc_calendar_on_title; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX index_mbdc_calendar_on_title ON mbdc_calendar USING gin (to_tsvector('english'::regconfig, (title)::text));
-
-
---
--- Name: index_weave_visualization_on_abstract; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX index_weave_visualization_on_abstract ON weave_visualization USING gin (to_tsvector('english'::regconfig, abstract));
-
-
---
--- Name: index_weave_visualization_on_title; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX index_weave_visualization_on_title ON weave_visualization USING gin (to_tsvector('english'::regconfig, (title)::text));
-
-
---
 -- Name: maps_contact_user_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1304,20 +1195,6 @@ CREATE INDEX snapshots_visualization_regiontype_id ON snapshots_visualization US
 
 
 --
--- Name: snapshots_visualization_source_datasource_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX snapshots_visualization_source_datasource_id ON snapshots_visualization_source USING btree (datasource_id);
-
-
---
--- Name: snapshots_visualization_source_visualization_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX snapshots_visualization_source_visualization_id ON snapshots_visualization_source USING btree (visualization_id);
-
-
---
 -- Name: snapshots_visualization_topics_topic_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1395,14 +1272,6 @@ CREATE INDEX weave_visualization_topics_visualization_id ON weave_visualization_
 
 
 --
--- Name: visualization_id_refs_id_4779ee3461d3a108; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY snapshots_visualization_source
-    ADD CONSTRAINT visualization_id_refs_id_4779ee3461d3a108 FOREIGN KEY (visualization_id) REFERENCES snapshots_visualization(id) DEFERRABLE INITIALLY DEFERRED;
-
-
---
 -- PostgreSQL database dump complete
 --
 
@@ -1417,8 +1286,6 @@ INSERT INTO schema_migrations (version) VALUES ('20140901172655');
 INSERT INTO schema_migrations (version) VALUES ('20140901173645');
 
 INSERT INTO schema_migrations (version) VALUES ('20140901192441');
-
-INSERT INTO schema_migrations (version) VALUES ('20140901192800');
 
 INSERT INTO schema_migrations (version) VALUES ('20140901211355');
 
@@ -1475,4 +1342,8 @@ INSERT INTO schema_migrations (version) VALUES ('20150514204108');
 INSERT INTO schema_migrations (version) VALUES ('20150515145254');
 
 INSERT INTO schema_migrations (version) VALUES ('20150515150859');
+
+INSERT INTO schema_migrations (version) VALUES ('20151105172309');
+
+INSERT INTO schema_migrations (version) VALUES ('20151105172912');
 

@@ -3,7 +3,7 @@ require 'spec_helper'
 describe User do
 
   subject(:user) { build(:user) }
-  
+
   it "has a valid factory" do
     expect(user).to be_valid
   end
@@ -19,10 +19,12 @@ describe User do
   end
 
   it 'has helper methods' do
+    # These should be values from the factory, not just another
+    # method definition.
     expect(user.to_s).to eq(user.name)
     expect(user.name).to eq("#{user.first_name} #{user.last_name}")
     expect(user.fname).to eq("#{user.first_name}")
-    expect(user.activated?).to eq(user.activated_at.presence)
+    expect(user.activated?).to eq(user.activated_at.present?)
   end
 
   it 'treats edge case names with respect' do
@@ -31,21 +33,21 @@ describe User do
   end
 
   specify "#active? returns active state" do
-    expect(user.active?).to eq(user.activated_at.presence)
+    expect(user.active?).to eq(user.activated_at.present?)
   end
 
   it 'generates a Gravatar URL with default 75px' do
-    gravatar_id = Digest::MD5.hexdigest(user.email)  
+    gravatar_id = Digest::MD5.hexdigest(user.email)
     expect(user.avatar_url).to eq("http://gravatar.com/avatar/#{gravatar_id}.png?s=75")
   end
 
   it 'generates a Gravatar URL with a given size' do
-    gravatar_id = Digest::MD5.hexdigest(user.email)  
+    gravatar_id = Digest::MD5.hexdigest(user.email)
     expect(user.avatar_url(100)).to eq("http://gravatar.com/avatar/#{gravatar_id}.png?s=100")
   end
 
   describe 'validations' do
-    
+
     subject(:user) { build(:user, :inactive) }
 
     it 'requires a username' do
@@ -60,6 +62,12 @@ describe User do
       expect(user2).to be_valid
       user1.save!
       expect(user2).not_to be_valid
+    end
+
+    it 'rejects a username with special characters' do
+      expect(user).to be_valid
+      user.username = user.email
+      expect(user).to_not be_valid
     end
 
     it 'requires an valid email address' do
@@ -112,6 +120,34 @@ describe User do
   specify "#authenticated? returns false for a user with nil remember digest" do
     expect(user.authenticated?(:remember, '')).to be_false
     expect(user.authenticated?(:activation, '')).to be_false
+  end
+
+  it "knows its email host" do
+    Rails.configuration.action_mailer.default_url_options[:host] = "datacommon.org"
+    institution = create :institution
+    user = build :user
+    user.institution = institution
+    expect(user.email_host).to eq('metroboston.datacommon.org')
+  end
+
+  it "knows its email host when institution changes" do
+    Rails.configuration.action_mailer.default_url_options[:host] = "datacommon.org"
+    other_institution = create :institution, :other
+    user = build :user
+    user.institution = other_institution
+    expect(user.email_host).to eq('centralmass.datacommon.org')
+  end
+
+  it "resends activation emails" do
+    user = create :user, :inactive
+    expect {
+      user.resend_activation_email
+    }.to change{ ActionMailer::Base.deliveries.size }.by(1)
+  end
+
+  it "does not resend activation emails when already active" do
+    user = create :user, :active
+    expect(user.resend_activation_email).to be_false
   end
 
   # Mock profiles?

@@ -2,7 +2,7 @@ require 'spec_helper'
 
 feature 'User visits profile' do
   subject(:user) { create(:user, :active) }
-  
+
   background do
     sign_in user
     visit user_path(user)
@@ -26,19 +26,19 @@ feature 'User visits profile' do
        :Address                    => '60 Temple Place',
        :City                       => 'Boston, MA',
        :Zipcode                    => '02111',
-       :Country                    => 'USA',
        :'Email address'            => 'info@mapc.org',
        :'Your website URL'         => 'http://www.mapc.org/about-mapc/staff/' }
       info.each_pair do |field, value|
         fill_in field, with: value
       end
+      select 'Afghanistan', from: :Country
       click_button 'Update Profile'
       expect(page).to have_content(/updated/i)
       expect(page).to have_content('http://www.mapc.org/about-mapc/staff/')
     end
 
     scenario 'with invalid information' do
-
+      pending 'invalid information'
     end
   end
 end
