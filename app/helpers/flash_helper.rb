@@ -38,7 +38,12 @@ module FlashHelper
         already_activated: "It looks like your account is already activated. Please get in touch if you think this is an error.",
         resent_activation_email: "Sent! Check your email for the activation link.",
         unexpected_error: "An unexpected error occurred when we tried to send the email. If you try again and it still doesn't work, please get in touch with us for help.",
-        only_owner_may_edit: "You may only edit your own profile. If you were trying to edit your profile, please sign in first."
+        only_owner_may_edit: "You may only edit your own profile. If you were trying to edit your profile, please sign in first.",
+
+        visual_sign_in_first: "Please sign in before you create a visualization.",
+        visual_only_owner_may_view: "This visualization has been made private. Only its owner may view it.",
+        visual_only_owner_may_edit: "Is this your visualization? Please log in to edit it.",
+        visual_not_found: "Sorry! According to our records, no visualization with that ID exists."
       }
     end
 

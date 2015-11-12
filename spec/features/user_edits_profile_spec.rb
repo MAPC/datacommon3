@@ -34,7 +34,6 @@ feature 'User visits profile' do
       select 'Afghanistan', from: :Country
       click_button 'Update Profile'
       expect(page).to have_content(/updated/i)
-      # save_and_open_page
       expect(page).to have_content('http://www.mapc.org/about-mapc/staff/')
     end
 
