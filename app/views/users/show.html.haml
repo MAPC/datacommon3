@@ -4,11 +4,11 @@
   .col-md-3.col-sm-4.col-xs-8.info
     %h3= @user.name
     %p=  mail_to @user.email
-    %p=  @user.try(:city)
+    %p=  @user.profile.try(:city)
+    %p=  @user.profile.try(:country_name)
   .col-md-3.col-sm-4.col-xs-12.org
     %h5= @user.try(:organization)
     %p=  @user.try(:position)
-    -# TODO links to this page by default, shouldn't.
     %p=  link_to @user.profile.try(:website_url)
     - if current_user? @user
       = link_to 'Edit Profile', edit_profile_path(@user), class: 'btn btn-large btn-primary'
@@ -17,13 +17,15 @@
   %h2.page-header #{@user.name}'s Visualizations
 
   - if current_user? @user
-    -# TODO FIX THIS model call shouldn't be in view
-    - visualizations = Visualization.unscoped.where(owner: @user)
-    - if visualizations.any?
+    - if @user.own_visualizations.any?
       = render partial: 'visualizations/thumbnail', collection: visualizations, as: :visual
     - else
-      %p You have not created any visualizations.
-      = link_to 'Create one now.', new_visualization_path
+      %br
+      %br
+      %p.center
+        You have not created any visualizations.
+        = link_to 'Create one now.', new_visualization_path, class: 'btn btn-success'
+      %br
   - else
     - if @user.visualizations.any?
       = render partial: 'visualizations/thumbnail', collection: @user.visualizations, as: :visual

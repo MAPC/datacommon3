@@ -26,12 +26,12 @@ feature 'User visits profile' do
        :Address                    => '60 Temple Place',
        :City                       => 'Boston, MA',
        :Zipcode                    => '02111',
-       :Country                    => 'USA',
        :'Email address'            => 'info@mapc.org',
        :'Your website URL'         => 'http://www.mapc.org/about-mapc/staff/' }
       info.each_pair do |field, value|
         fill_in field, with: value
       end
+      select 'Afghanistan', from: :Country
       click_button 'Update Profile'
       expect(page).to have_content(/updated/i)
       # save_and_open_page

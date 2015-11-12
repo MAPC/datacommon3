@@ -27,6 +27,10 @@ class User < ActiveRecord::Base
   validates :password,   presence: true, length: { minimum: 5, maximum: 128 }
   validates_confirmation_of :password
 
+  def own_visualizations
+    Visualization.unscoped.where(owner: self)
+  end
+
   def name
     profile ? profile.name : full_name_or_username
   end
@@ -145,7 +149,13 @@ class User < ActiveRecord::Base
   end
 
   def create_default_profile
-    self.create_profile(name: self.full_name, email: self.email) unless self.profile
+    unless self.profile
+      self.create_profile(
+        name:  self.full_name,
+        email: self.email,
+        website_url: ""
+      )
+    end
   end
 
   def send_new_account_followup_email

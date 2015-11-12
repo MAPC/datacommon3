@@ -63,6 +63,7 @@ gem 'naught'               # Helps build null objects
 gem 'stamp', '0.6.0'       # Convenient timestamping
 gem 'wannabe_bool'         # To convert boolean-ish values to booleans
 gem 'capybara', '~> 2.2.1' # DSL for integration tests, crawling screens
+gem 'country_select'       # Quick country list
 
 # Server
 gem 'foreman', '0.75.0' # Manage the server and auxiliary processes
@@ -90,7 +91,7 @@ group :development, :test do
 
   gem 'childprocess',          '~> 0.5' # Fix a version conflict
   gem 'webmock',            '~> 1.8.4', # Faking requests (supports VCR)
-    require: false 
+    require: false
   gem 'minitest'                        # Unclear why we use this
 end
 

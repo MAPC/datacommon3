@@ -51,7 +51,6 @@ feature 'Inactive user signs in' do
     click_link 'resend'
     expect(page).to have_content(/check your email/i)
     # Default link should not be to profile
-    # TODO this text vvv
-    # expect(page).to_not have_content("/users/#{user.username}")
+    expect(page).to_not have_content("/users/#{user.username}")
   end
 end
