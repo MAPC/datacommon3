@@ -11,7 +11,8 @@ feature 'User creates public visualization' do
   end
 
   scenario 'valid' do
-    fill_in 'Title',        with: 'My Viz Title'
+    title = 'My Viz Title'
+    fill_in 'Title',        with: title
     fill_in 'Year(s)',      with: '2009'
     fill_in 'Abstract',     with: 'Abstract ' * 20
     select  'Demographics', from: 'Topics'
@@ -20,9 +21,11 @@ feature 'User creates public visualization' do
     expect {
       click_button 'Create'
     }.to change(Visualization, :count).by(1)
-    expect(page).to have_content('My Viz Title')
+    expect(page).to have_content(title)
     visit visualizations_path
-    expect(page).to have_content('My Viz Title')
+    expect(page).to have_content(title)
+    visit profile_path(user)
+    expect(page).to have_content(title)
   end
 
   scenario 'invalid' do

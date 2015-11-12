@@ -18,7 +18,7 @@
 
   - if current_user? @user
     - if @user.own_visualizations.any?
-      = render partial: 'visualizations/thumbnail', collection: visualizations, as: :visual
+      = render partial: 'visualizations/thumbnail', collection: @user.own_visualizations, as: :visual
     - else
       %br
       %br
