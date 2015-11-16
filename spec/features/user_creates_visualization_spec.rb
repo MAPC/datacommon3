@@ -116,7 +116,7 @@ feature 'User duplicates private visualization' do
     fill_in 'Title', with: new_title
     click_button 'Update'
     visit visualizations_path
-    expect(page).to have_content(new_title)
+    expect(page).to_not have_content(new_title)
   end
 end
 
