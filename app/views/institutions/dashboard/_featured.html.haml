@@ -1,0 +1,17 @@
+/ TODO Figure out a class name better than 'the row'.
+.row.the-row
+  - feature = @dashboard.feature
+  - if feature.present?
+    .col-xs-12.col-sm-12.col-md-8
+      %h1 Featured Visualization
+      = render partial: 'visualizations/feature', object: feature, as: :feature
+  .col-xs-12.col-sm-12.col-md-4
+    .page-header
+    %h1 Visualizations by Topic
+    .row
+      .col-xs-12.col-sm-6.col-md-12
+        .icon-center-group
+          = render partial: 'topics/topic', collection: topics[0..5], as: :topic, locals: { path: 'visualizations' }
+      .col-xs-12.col-sm-6.col-md-12
+        .icon-center-group
+          = render partial: 'topics/topic', collection: topics[6..11], as: :topic, locals: { path: 'visualizations' }

@@ -31,7 +31,7 @@
 
       .form-group
         = f.label      :country
-        = f.text_field :country,      class: 'form-control'
+        = f.country_select :country, { priority_countries: ["US"], selected: "US" }, { class: 'form-control' }
 
       .form-group
         = f.label      :email,        'Email address'

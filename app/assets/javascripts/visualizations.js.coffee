@@ -17,19 +17,19 @@ $(document).on 'ready', ->
         required:  true,
         minlength: 3,
         maxlength: 140
-    
+
       "visualization[abstract]":
         required:  true,
-        minlength: 70,
+        minlength: 14,
         maxlength: 560
 
       "visualization[permission]": # This doesn't really do anything.
-        required:  true  
-      
+        required:  true
+
       "visualization[sessionstate]":
         required: true,
         minlength: 100
-      
+
       "visualization[year]":
         required:  false,
         minlength: 4,
@@ -38,16 +38,16 @@ $(document).on 'ready', ->
       "visualization[issue_area_ids]": # Not enforcing, I think.
         required:  "select#visualization_issue_area_ids option:selected",
         minlength: 1
-    
+
       "visualization[data_sources]":   # Not enforcing, for sure.
         required:  "select#visualization_data_source_ids option:selected",
         minlength: 1
-    
+
       "visualization[institution_id]":
         required:  true
   )
 
-  # Load after the page is ready: 
+  # Load after the page is ready:
   # it's not ready to validate on document#ready. Maybe
   # this is caused by the form being set to remote: true.
   # setTimeout setup_validation, 1000
@@ -74,7 +74,7 @@ $(document).on 'ready', ->
     submit.addClass('disabled');
     submit.attr('value', 'Saving...')
     # TODO: DC.weave is no longer accessible, but a weave is ready.
-    # How to expose the new weave object without 
+    # How to expose the new weave object without
     object_id = $('object').attr('id')
     weave_state = JSON.stringify( Visuals[object_id].weave_object.getSessionState([]) )
     $('#visualization_sessionstate').val( weave_state )
@@ -111,7 +111,7 @@ $(document).on 'ready', ->
 
     $('.alert-success').slideDown()
     cancel_timeout = setTimeout hide_flash, 15000
-    
+
 
   # Handle error messages on submit
   $(document).bind "ajax:error", form_selectors, (event, xhr, settings, exception) ->

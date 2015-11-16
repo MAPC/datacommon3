@@ -1,9 +1,5 @@
 module InstitutionsHelper
 
-  def recent_visualizations(count=4)
-    Visualization.recent(count)
-  end
-
   def object_list(type, visualization, options={})
     value        = options.fetch(:value) { :id }
     display_name = options.fetch(:display_name) { type.to_s.humanize.singularize }

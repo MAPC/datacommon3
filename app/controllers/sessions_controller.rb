@@ -9,13 +9,13 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       sign_in user
       params[:session][:remember_me] == '1' ? remember(user) : forget(user)
-      
+
       if user.inactive?
-        message = "Welcome! We see you haven't activated your account yet. "
-        message += "Please check your email for the activation link."
-        flash[:warning] = message
+        flash[:html_safe] = true
+        flash[:success] = "Welcome!"
+        flash[:warning] = render_to_string(partial: "shared/activate_message", locals: {user: user})
       end
-      
+
       redirect_back_or user
     else
       flash.now[:danger] = "Incorrect username and/or password."

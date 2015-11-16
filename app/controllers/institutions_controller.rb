@@ -2,21 +2,11 @@ class InstitutionsController < ApplicationController
   before_filter :load_institution
 
   def show
-    
-    # TODO: 
-    # On the institution home (show) page, access
-    #
-    # @dashboard.news     -> news posts (mode: Hero)
-    # @dashboard.feature  -> featured visualization
-    # @dashboard.datasets -> most recent datasets
-    # @dashboard = InstitutionDashboard.new(Institution.find_by(id: id))
-
-    @heros   = @institution.heros.active
-    @feature = [Naught.build {|b| b.black_hole}] # institution.featured_visualization
-    
-    if @feature.nil?
-      @feature = [Naught.build {|b| b.black_hole}] # Visualization.where(institution_id: @institution.id).sample
-    end
+    @dashboard = OpenStruct.new
+    @dashboard.heros    = @institution.heros.active
+    @dashboard.feature  = @institution.featured_visualization
+    @dashboard.datasets = []
+    @dashboard.recent_visuals = @institution.visualizations.recent(4)
   end
 
 end

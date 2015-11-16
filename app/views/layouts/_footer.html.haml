@@ -12,9 +12,9 @@
       .col-sm-3.col-xs-6
         %h5 Visualizations
         %ul
-          %li= link_to 'Visualization Gallery', visualizations_path 
+          %li= link_to 'Visualization Gallery', visualizations_path
           %li= link_to 'Make a Visualization',  new_visualization_path
-    
+
 
       .col-sm-3.col-xs-6
         %h5 Profiles & Resources
@@ -52,4 +52,4 @@
           = link_to '617-451-2770', 'tel: 617-451-2770'
           = link_to 'hello@datacommon.org', 'mailto:hello@datacommon.org'
           %a{ href: '#', data: { toggle: 'modal', target: '#legal' } } Legal
-        = render partial: 'layouts/legal'
+        = render partial: 'layouts/legal' unless Rails.env == 'test'

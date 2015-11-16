@@ -19,16 +19,19 @@ class VisualizationsController < ApplicationController
   end
 
   def session_state
-    @visualization = Visualization.find_by(id: params[:id])
+    # TODO may be able to avoid this call altogether if
+    # sessionstate checks for correct_viewer and correct_user,
+    # which it should.
+    @visualization = Visualization.unscoped.find_by(id: params[:id])
     respond_to do |format|
       format.json { render json: @visualization.sessionstate }
     end
   end
 
   def upload_image
-    @visual  = Visualization.find_by id: params[:id]
+    @visual  = Visualization.unscoped.find_by id: params[:id]
     decoded_file = Base64.decode64 params[:data]
-    
+
     begin
       file = Tempfile.new([@visual.id.to_s, ".png"])
       file.binmode
@@ -42,8 +45,11 @@ class VisualizationsController < ApplicationController
       if @visual.save!
         render json: { message: "Successfully uploaded preview." }
       else
-        render json: { message: "#{@visual.errors.full_messages.join(", ")}",
-                       status: :unprocessable_entity }
+        render json: {
+          type:   "visualizations",
+          errors: "#{@visual.errors.full_messages.join(", ")}",
+          status: :unprocessable_entity
+        }
       end
     ensure
       file.unlink
@@ -72,7 +78,7 @@ class VisualizationsController < ApplicationController
 
 
   def duplicate
-    template = Visualization.find_by(id: params[:id])
+    template = Visualization.unscoped.find_by(id: params[:id])
     @visualization = template.dup
     @visualization.assign_attributes(
       title:          "#{template.title} (Copy)",
@@ -80,28 +86,30 @@ class VisualizationsController < ApplicationController
       original_id:    template.id,
       institution_id: @institution.id
     )
+    # TODO: Hacky fix. Why doesn't ActiveRecord recognize this timestamp?
+    @visualization.updated_at = Time.now
 
     # TODO: write a test for duplicating a visualization
     # with no abstract.
-    if @visualization.save(validate: false)
-      redirect_to edit_visualization_url(@visualization)
-    else
-      flash[:danger] = 'An unexpected error occurred when duplicating the visualization.'
-      if @visualization.errors.any?
-        flash[:danger] << "#{ @visualization.errors.full_messages.join(", ") }"
-      end
-      redirect_to root_url
+    @visualization.save(validate: false)
+    redirect_to edit_visualization_url(@visualization)
+  rescue => e
+    trigger_airbrake(e)
+    danger "An unexpected error occurred when duplicating the visualization.\n#{e}"
+    if @visualization.errors.any?
+      flash[:danger] << "#{ @visualization.errors.full_messages.join(", ") }"
     end
+    redirect_to root_url
   end
 
-  
+
   def edit
   end
 
 
   def update
     @visualization.update! editable_params
-    
+
     respond_to do |format|
       if @visualization.save
         format.json { render json: @visualization }
@@ -114,7 +122,7 @@ class VisualizationsController < ApplicationController
 
 
   def destroy
-    @visualization = Visualization.find(params[:id])
+    @visualization = Visualization.unscoped.find(params[:id])
     @visualization.destroy
 
     flash[:success] = "You deleted the visualization \"#{@visualization}\"."
@@ -126,35 +134,15 @@ class VisualizationsController < ApplicationController
   private
 
     def editable_params
-      params.require(:visualization).permit(:title,
-                                            :year,
-                                            :abstract,
-                                            :institution_id,
-                                            :permission,
-                                            :sessionstate,
-                                            {issue_area_ids:  []},
-                                            {data_source_ids: []})
+      params.require(:visualization)
+            .permit(:title, :year, :abstract, :institution_id,
+                    :permission, :sessionstate, {issue_area_ids: []},
+                    {data_source_ids: []})
     end
-
-
-    SIGN_IN_FIRST = "Please sign in before you create a visualization."
-
-    ONLY_OWNER_MAY_VIEW = <<-EOE
-      This visualization has been made private. Only its owner may view it.
-    EOE
-
-    ONLY_OWNER_MAY_EDIT = <<-EOE
-      Is this your visualization? Please log in to edit it.
-    EOE
-
-    VISUAL_NOT_FOUND = <<-EOE
-      Sorry! According to our records, no visualization with that ID exists.
-    EOE
-
 
     def signed_in_user
       unless signed_in?
-        flash[:warning] = SIGN_IN_FIRST
+        warning :visual_sign_in_first
         store_location
         redirect_to login_url
       end
@@ -165,10 +153,10 @@ class VisualizationsController < ApplicationController
       @visualization = Visualization.unscoped.find_by(id: params[:id])
 
       if @visualization.nil?
-        flash[:danger] = VISUAL_NOT_FOUND
+        danger :visual_not_found
         redirect_to visualizations_url
       elsif @visualization.private? && !current_user?(@visualization.owner)
-        flash[:danger] = ONLY_OWNER_MAY_VIEW
+        danger :visual_only_owner_may_view
         redirect_to visualizations_url
       end
     end
@@ -178,11 +166,11 @@ class VisualizationsController < ApplicationController
       @visualization = Visualization.unscoped.find_by(id: params[:id])
 
       if @visualization.nil?
-        flash[:danger] = VISUAL_NOT_FOUND
+        danger :visual_not_found
         redirect_to visualizations_url
       elsif !current_user?(@visualization.owner)
         store_location
-        flash[:danger] = ONLY_OWNER_MAY_EDIT
+        danger :visual_only_owner_may_edit
         redirect_to login_url
       end
     end

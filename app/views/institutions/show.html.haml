@@ -1,83 +1,12 @@
-- content_for :featured do
-  #heros
-    #carousel-example-generic.carousel.slide{"data-ride" => "carousel"}
-      / Indicators
-      %ol.carousel-indicators
-        - @heros.each_with_index do |hero, index|
-          - active_class = (index == 0) ? 'active' : ''
-          %li{"data-slide-to" => index.to_s, "data-target" => "#carousel-example-generic", class: active_class}
-      
-      / Wrapper for slides
-      .carousel-inner{:role => "listbox"}
-        = render @heros # slides
+/ Heros
+= render partial: 'institutions/dashboard/heros', object: @dashboard.heros, as: :heros
 
-      / Next | Previous
-      = render partial: 'heros/controls'
-
-  
-  .row.explanation
-    .col-lg-3.col-sm-6.col-xs-12.explanation
-      = link_to datasets_path do
-        %h5.explanation.data-catalog          Data Catalog
-        = image_tag 'explanations/data-catalog-sm.png', class: 'explanation-icon'
-      %p
-        Browse, search, and download over 1000 spatial and tabular datasets from the 
-        = succeed '.' do
-          = link_to 'Data Catalog', datasets_path
-
-    .col-lg-3.col-sm-6.col-xs-12.explanation
-      = link_to snapshots_path do
-        %h5.explanation.community-snapshots   Community Profiles
-        = image_tag 'explanations/community-snapshots-sm.png', class: 'explanation-icon'
-      %p
-        View dashboards on housing, education, the arts, and more, tailored to your town in 
-        = succeed '.' do
-          = link_to 'Community Profiles', snapshots_path
-
-    .col-lg-3.col-sm-6.col-xs-12.explanation
-      = link_to visualizations_path do
-        %h5.explanation.visualization-gallery Visualization Gallery
-        = image_tag 'explanations/visualization-gallery-sm.png', class: 'explanation-icon'
-      %p
-        Explore #{visualization_count} user-made maps, charts, and more in the 
-        = succeed ',' do
-          = link_to 'Gallery', visualizations_path
-        and learn how to
-        = succeed '.' do
-          - if signed_in?
-            = link_to 'make your own', new_visualization_path
-          - else
-            make your own
-
-    .col-lg-3.col-sm-6.col-xs-12.explanation
-      = link_to static_maps_path do
-        %h5.explanation.map-gallery           Map Gallery
-        = image_tag 'explanations/map-gallery-sm.png', class: 'explanation-icon'
-      %p
-        View maps and data projects from around #{region_name_or('the region')} in the
-        = succeed '.' do
-          = link_to 'Map Gallery', static_maps_path
-        This is a great way to learn more about work going on around the region.
-
+/ Site section explanations
+= render partial: 'institutions/dashboard/explanations'
 %hr
 
-.row.the-row
-  .col-xs-12.col-sm-12.col-md-8
-    %h1 Featured Visualization
-    = render partial: 'visualizations/feature', object: @institution.featured_visualization, as: :feature
-  .col-xs-12.col-sm-12.col-md-4
-    .page-header
-    %h1 Visualizations by Topic
-    .row
-      .col-xs-12.col-sm-6.col-md-12
-        .icon-center-group
-          = render partial: 'topics/topic', collection: topics[0..5], as: :topic, locals: { path: 'visualizations' }
-      .col-xs-12.col-sm-6.col-md-12
-        .icon-center-group
-          = render partial: 'topics/topic', collection: topics[6..11], as: :topic, locals: { path: 'visualizations' }
+/ Featured visualization
+= render partial: 'institutions/dashboard/featured'
 
-.row
-  .col-xs-12
-    .page-header
-    %h1 Recent Visualizations
-    = render partial: 'visualizations/thumbnail', collection: recent_visualizations, as: :visual
+/ Recent visualizations
+= render partial: 'institutions/dashboard/recent_visualizations'

@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_filter :load_institution
-  
+
   before_filter :logged_out, only: [:new]
   # before_filter :correct_user,   only: [:edit, :update]
   # before_filter :logged_in_user, only: [:edit, :update]
@@ -8,7 +8,8 @@ class UsersController < ApplicationController
   def show
     @user = User.find_by(username: params[:id])
     if @user.nil?
-      flash[:danger] = "No user with that username could be found."
+      # flash[:danger] = "No user with that username could be found."
+      danger :no_user
       redirect_to root_url
     end
   end
@@ -19,9 +20,11 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new user_params
+    @user.institution = @institution unless @institution.is_nil?
     if @user.save
       sign_in @user
-      flash[:success] = "Welcome to the DataCommon!"
+      success :welcome
+      flash[:warning] = render_to_string(partial: "shared/activate_message", locals: {user: @user})
       redirect_to @user
     else
       render :new
@@ -35,7 +38,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find_by(username: params[:id])
     if @user.profile.update_attributes( profile_params )
-      flash[:success] = "Your profile was updated."
+      success :profile_updated
       redirect_to @user
     end
   end
@@ -52,6 +55,21 @@ class UsersController < ApplicationController
     respond_to do |format|
       format.json { render json: !@user }
     end
+  end
+
+  def resend_activation_email
+    @user = User.find_by(username: params[:id])
+    if @user.activated?
+      warning :already_activated
+      redirect_back_or @user
+    end
+    if @user.resend_activation_email
+      success :resent_activation_email
+      redirect_back_or @user
+    end
+  rescue
+    warning :unexpected_error
+    redirect_back_or @user
   end
 
 
@@ -86,14 +104,14 @@ class UsersController < ApplicationController
     def logged_in_user
       unless logged_in?
         store_location
-        flash[:danger] = "Please sign in."
+        danger "Please sign in."
         redirect_to login_url
       end
     end
 
     def logged_out
       if logged_in?
-        flash[:danger] = "You are already logged in."
+        danger "You are already logged in."
         redirect_to current_user
       end
     end

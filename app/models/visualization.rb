@@ -1,14 +1,15 @@
-class Visualization < ActiveRecord::Base  
+class Visualization < ActiveRecord::Base
   self.table_name = 'weave_visualization'
   self.primary_key = :id
-  
+
   PERMISSIONS = ['public', 'private']
 
-  before_save :update_time
+  # before_save :update_time
+  before_save :strip_trailing_whitespace
   before_validation :stringify_permissions
 
   belongs_to :original, class_name: "Visualization", foreign_key: :original_id
-  
+
   has_and_belongs_to_many :data_sources,
     join_table: :weave_visualization_datasources,
     association_foreign_key: :datasource_id
@@ -32,16 +33,16 @@ class Visualization < ActiveRecord::Base
   include RandomScope
 
   validates :title,      presence: true, length: { minimum: 3,  maximum: 140 }
-  validates :abstract,   presence: true, length: { minimum: 70, maximum: 560 }
+  validates :abstract,   presence: true, length: { minimum: 14, maximum: 560 }
   validates :permission, presence: true, inclusion: { in: PERMISSIONS,
              message:   "Permission must be 'public' or 'private', but you assigned \"%{value}\"." }
   validates :sessionstate, presence: true, length: { minimum: 100 }
   validates :year,       allow_blank: true, length: { minimum: 4,  maximum: 50  }
 
-  validates :institution_id, allow_blank: true,
-    inclusion: { in: (Institution.pluck(:id).presence || [1,2]),
-    message: "must be one of #{(Institution.pluck(:id).presence || [1])}, but you assigned \"%{value}\"."
-  }
+  # validates :institution_id, allow_blank: true,
+  #   inclusion: { in: (Institution.pluck(:id)),
+  #   message: "must be one of #{(Institution.pluck(:id))}, but you assigned \"%{value}\"."
+  # }
 
   validates :user, presence: true
 
@@ -61,7 +62,7 @@ class Visualization < ActiveRecord::Base
   end
 
   def self.recent(count=4)
-    self.order('last_modified DESC').limit(count)
+    self.order('updated_at DESC').limit(count)
   end
 
   def self.public
@@ -143,8 +144,14 @@ class Visualization < ActiveRecord::Base
       end
     end
 
-    def update_time
-      self.last_modified = Time.now
+    # def update_time
+    #   self.last_modified = Time.now
+    # end
+
+    def strip_trailing_whitespace
+      %w( title abstract year ).each {|attribute|
+        self.send(attribute).to_s.strip!
+      }
     end
 
     def stringify_permissions

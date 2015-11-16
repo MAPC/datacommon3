@@ -1,0 +1,46 @@
+/ TODO Store this Section data somewhere and make this a partial.
+/ { path: 'datasets', title: 'Data Catalog', description: "Browse, search, and download over 1000 spatial and tabular datasets from the <a href='/datasets'>Data Catalog</a>.", image_path: 'explanations/data-catalog-sm.png' }
+
+.row.explanation
+  .col-lg-3.col-sm-6.col-xs-12.explanation
+    = link_to datasets_path do
+      %h5.explanation.data-catalog          Data Catalog
+      = image_tag 'explanations/data-catalog-sm.png', class: 'explanation-icon'
+    %p
+      Browse, search, and download over 1000 spatial and tabular datasets from the
+      = succeed '.' do
+        = link_to 'Data Catalog', datasets_path
+
+  .col-lg-3.col-sm-6.col-xs-12.explanation
+    = link_to snapshots_path do
+      %h5.explanation.community-snapshots   Community Profiles
+      = image_tag 'explanations/community-snapshots-sm.png', class: 'explanation-icon'
+    %p
+      View dashboards on housing, education, the arts, and more, tailored to your town in
+      = succeed '.' do
+        = link_to 'Community Profiles', snapshots_path
+
+  .col-lg-3.col-sm-6.col-xs-12.explanation
+    = link_to visualizations_path do
+      %h5.explanation.visualization-gallery Visualization Gallery
+      = image_tag 'explanations/visualization-gallery-sm.png', class: 'explanation-icon'
+    %p
+      Explore #{visualization_count} user-made maps, charts, and more in the
+      = succeed ',' do
+        = link_to 'Gallery', visualizations_path
+      and learn how to
+      = succeed '.' do
+        - if signed_in?
+          = link_to 'make your own', new_visualization_path
+        - else
+          make your own
+
+  .col-lg-3.col-sm-6.col-xs-12.explanation
+    = link_to static_maps_path do
+      %h5.explanation.map-gallery           Map Gallery
+      = image_tag 'explanations/map-gallery-sm.png', class: 'explanation-icon'
+    %p
+      View maps and data projects from around #{region_name_or('the region')} in the
+      = succeed '.' do
+        = link_to 'Map Gallery', static_maps_path
+      This is a great way to learn more about work going on around the region.
