@@ -45,8 +45,11 @@ class VisualizationsController < ApplicationController
       if @visual.save!
         render json: { message: "Successfully uploaded preview." }
       else
-        render json: { message: "#{@visual.errors.full_messages.join(", ")}",
-                       status: :unprocessable_entity }
+        render json: {
+          type:   "visualizations",
+          errors: "#{@visual.errors.full_messages.join(", ")}",
+          status: :unprocessable_entity
+        }
       end
     ensure
       file.unlink
