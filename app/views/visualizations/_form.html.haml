@@ -1,6 +1,6 @@
 .form.vis-form{role: 'form'}
   = form_for @visualization, remote: true, format: :json do |f|
-    
+
     .col-sm-12#new
       - if params[:action] == 'new'
         #new
@@ -17,12 +17,12 @@
       .form-group
         = f.label      :title
         = f.text_field :title, class: 'form-control',    placeholder: "Your Visualization's Title"
-    
+
     .col-md-3.col-sm-6.col-xs-12
       .form-group
         = f.label      :year, 'Year(s)'
         = f.text_field :year,  class: 'form-control',    placeholder: "Dates of interest, i.e. 2009 - 2011"
-    
+
     .col-md-3.col-sm-6.col-xs-6
       .form-group
         = f.label      :institution_id
@@ -34,23 +34,25 @@
           None
 
     .col-md-3.col-sm-6.col-xs-6
+      - selected_permission = @visualization.permission || 'public'
       .form-group
         = f.label      :permission, 'Public or Private?'
         %p.small
           Public visualizations are displayed in the gallery, and can be viewed and shared.
-        = select_tag('visualization[permission]', options_for_select([['Public','public'],['Private','private']], 'public'))
+
+        = select_tag('visualization[permission]', options_for_select([['Public','public'],['Private','private']], selected_permission))
 
     .col-sm-6.col-xs-12
       .form-group
         = f.label      :abstract
         = f.text_area  :abstract, class: 'form-control', placeholder: "Summarize what you are trying to visualize.", rows: 5
-      
+
     .col-sm-3.col-xs-6
       .form-group
         = f.label      :issue_area_ids, 'Topics'
         %p.small Hold down Control (PC) or Command (Mac) to select multiple topics.
         = f.collection_select :issue_area_ids,  IssueArea.all,  :id, :title, {}, {multiple: true, class: 'form-control'}
-    
+
     .col-sm-3.col-xs-6
       .form-group
         = f.label      :data_source_ids, 'Data Sources'
@@ -59,6 +61,6 @@
 
     .col-xs-12
       = f.submit button, class: 'btn btn-large btn-success'
-      
+
       - if params[:action] == "edit"
         = link_to 'Destroy', @visualization, method: :delete, class: "danger", data: { confirm: "Are you sure? You cannot undo deletion." }
