@@ -6,6 +6,7 @@ class InstitutionsController < ApplicationController
     @dashboard.heros    = @institution.heros.active
     @dashboard.feature  = @institution.featured_visualization
     @dashboard.datasets = []
+    @dashboard.recent_visuals = @institution.visualizations.recent(4)
   end
 
 end

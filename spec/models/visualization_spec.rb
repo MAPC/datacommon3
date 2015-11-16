@@ -19,7 +19,7 @@ describe Visualization do
 
   it "requires a verbose abstract" do
     expect(build(:visual, abstract: nil)).to_not be_valid
-    expect(build(:visual, abstract: "z"*69)).to_not be_valid
+    expect(build(:visual, abstract: "z"*13)).to_not be_valid
   end
 
   it "requires an permission" do

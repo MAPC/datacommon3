@@ -27,8 +27,9 @@ class User < ActiveRecord::Base
   validates :password,   presence: true, length: { minimum: 5, maximum: 128 }
   validates_confirmation_of :password
 
+  # Not tested
   def own_visualizations
-    Visualization.unscoped.where(owner: self)
+    Visualization.unscoped.where(owner: self).order('updated_at DESC')
   end
 
   def name

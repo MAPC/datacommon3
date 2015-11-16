@@ -19,8 +19,8 @@ class UsersController < ApplicationController
   end
 
   def create
-    # TODO Assign users to an institution?
     @user = User.new user_params
+    @user.institution = @institution unless @institution.is_nil?
     if @user.save
       sign_in @user
       success :welcome
@@ -57,7 +57,6 @@ class UsersController < ApplicationController
     end
   end
 
-  # TODO test this
   def resend_activation_email
     @user = User.find_by(username: params[:id])
     if @user.activated?
