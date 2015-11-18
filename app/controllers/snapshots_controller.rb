@@ -9,7 +9,12 @@ class SnapshotsController < ApplicationController
   # /snapshots/:slug
   # /snapshots/{boston|cambridge}
   def show
-    @geography = Geography.find_by(slug: params[:id])
+    slug = params[:id].downcase
+    @geography = Geography.find_by(slug: slug)
+    if @geography.nil?
+      danger "We don't have any municipality by that name. You may want to check your spelling and try again."
+      redirect_to snapshots_path
+    end
   end
 
   # /snapshots/:slug/:topic
@@ -34,6 +39,8 @@ class SnapshotsController < ApplicationController
 
 
   def upload_image
+    # TODO: Test this next line
+    # return false unless request.uri.include?( ENV.fetch('BASE_HOST_URL') )
     @visual      = DynamicVisualization.find_by id: params[:id]
     object       = Geography.find_by slug: params[:geography]
     decoded_file = Base64.decode64(params[:data]).force_encoding(Encoding::ASCII_8BIT)
@@ -108,6 +115,6 @@ class SnapshotsController < ApplicationController
       dirname = File.dirname(filename)
       FileUtils.mkdir_p(dirname) unless File.directory?(dirname)
     end
-  
+
 end
 
