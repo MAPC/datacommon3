@@ -150,6 +150,15 @@ describe User do
     expect(user.resend_activation_email).to be_false
   end
 
-  # Mock profiles?
+  it "displays the right name" do
+    user = create :user, first_name: "na", last_name: "me"
+    user.profile = nil
+    expect(user.name).to eq("na me")
+    user.create_profile
+    expect(user.name).to eq("na me")
+    user.profile.update_attribute :name, "Mert Clerd"
+    expect(user.name).to eq("Mert Clerd")
+  end
+
 
 end

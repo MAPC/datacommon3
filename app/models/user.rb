@@ -33,7 +33,11 @@ class User < ActiveRecord::Base
   end
 
   def name
-    profile ? profile.name : full_name_or_username
+    if profile && profile.name.presence
+      profile.name
+    else
+      full_name_or_username
+    end
   end
 
   def email_host
@@ -210,7 +214,7 @@ class User < ActiveRecord::Base
   private
 
     def full_name_or_username
-      "#{first_name} #{last_name}".presence || username
+      full_name.presence || username
     end
 
     def downcase_email
