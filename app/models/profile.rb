@@ -4,6 +4,8 @@ class Profile < ActiveRecord::Base
 
   belongs_to :user
 
+  before_save :ensure_http
+
   def name
     read_attribute(:name).to_s.titleize
   end
@@ -15,5 +17,21 @@ class Profile < ActiveRecord::Base
   def country_name
     ISO3166::Country[country].to_s
   end
+
+  def display_url
+    parsed = URI.parse(website_url)
+    parsed.fragment = parsed.scheme = nil
+    parsed.to_s.gsub /^\/\//, ''
+  rescue
+    # NO OP
+  end
+
+  private
+
+    def ensure_http
+      unless website_url =~ /^https?:\/\//
+        assign_attributes website_url: "http://#{website_url}"
+      end
+    end
 
 end
