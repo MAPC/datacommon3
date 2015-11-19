@@ -13,6 +13,18 @@ describe Profile do
     expect(profile.website_url).to eq("http://cloyd.io")
   end
 
+  it "ignores blank URLs" do
+    profile.website_url = ""
+    profile.save
+    expect(profile.website_url).to be_empty
+  end
+
+  it "ignores nil URLs" do
+    profile.website_url = nil
+    profile.save
+    expect(profile.website_url).to be_nil
+  end
+
   it "conforms ignores conformed URLS" do
     profile.website_url = "https://github.com/beechnut"
     profile.save

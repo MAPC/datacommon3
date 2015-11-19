@@ -29,8 +29,11 @@ class Profile < ActiveRecord::Base
   private
 
     def ensure_http
-      unless website_url =~ /^https?:\/\//
-        assign_attributes website_url: "http://#{website_url}"
+      # Smell: Nil checks
+      if website_url.presence
+        unless website_url =~ /^https?:\/\//
+          assign_attributes website_url: "http://#{website_url}"
+        end
       end
     end
 

@@ -34,7 +34,7 @@ feature 'User visits profile' do
       select 'Afghanistan', from: :Country
       click_button 'Update Profile'
       expect(page).to have_content(/updated/i)
-      expect(page).to have_content('http://www.mapc.org/about-mapc/staff/')
+      expect(page).to have_content('www.mapc.org/about-mapc/staff/')
     end
 
     scenario 'with invalid information' do
