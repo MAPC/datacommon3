@@ -58,6 +58,7 @@ gem 'redis'              # Dependency for Resque
 
 
 # Utilities
+gem 'httparty' # Outgoing webhooks
 gem 'bcrypt', '~> 3.1.7'   # Helps generate password, used in has_secure_password
 gem 'naught'               # Helps build null objects
 gem 'stamp', '0.6.0'       # Convenient timestamping
