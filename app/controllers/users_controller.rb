@@ -20,7 +20,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new user_params
-    @user.institution = @institution unless @institution.is_nil?
+    @user.institution = @institution.presence
     if @user.save
       sign_in @user
       success :welcome
