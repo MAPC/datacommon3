@@ -20,8 +20,9 @@ class ProfilesController < ApplicationController
   private
 
     def correct_editor
-      user = User.find_by(username: params[:id])
-      @profile = user.profile || Profile.find_or_create_by(id: params[:id])
+      username = params.fetch(:id) { raise }
+      user = User.find_by(username: username)
+      @profile = user.profile || user.create_profile
 
       unless current_user?(user)
         danger :only_owner_may_edit
@@ -31,8 +32,9 @@ class ProfilesController < ApplicationController
     end
 
     def correct_updater
-      @profile = Profile.find_by(id: params[:id])
-      user = @profile.user
+      username = params.fetch(:id) { raise }
+      user = User.find_by(username: username)
+      @profile = user.profile
 
       unless current_user?(user)
         danger :only_owner_may_edit

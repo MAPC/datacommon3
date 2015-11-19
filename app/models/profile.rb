@@ -5,15 +5,15 @@ class Profile < ActiveRecord::Base
   belongs_to :user
 
   def name
-    read_attribute(:name).titleize
+    read_attribute(:name).to_s.titleize
   end
 
   def fname
-    user.fname
+    user.fname.to_s
   end
 
   def country_name
-    ISO3166::Country[country]
+    ISO3166::Country[country].to_s
   end
 
 end
