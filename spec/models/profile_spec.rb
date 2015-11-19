@@ -19,4 +19,10 @@ describe Profile do
     expect(profile.website_url).to eq("https://github.com/beechnut")
   end
 
+  it "presents URLs nicely" do
+    profile.website_url = "http://www.mapc.org/about-mapc/staff/"
+    profile.save
+    expect(profile.display_url).to eq("www.mapc.org/about-mapc/staff/")
+  end
+
 end

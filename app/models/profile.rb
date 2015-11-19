@@ -18,6 +18,14 @@ class Profile < ActiveRecord::Base
     ISO3166::Country[country].to_s
   end
 
+  def display_url
+    parsed = URI.parse(website_url)
+    parsed.fragment = parsed.scheme = nil
+    parsed.to_s.gsub /^\/\//, ''
+  rescue
+    # NO OP
+  end
+
   private
 
     def ensure_http
