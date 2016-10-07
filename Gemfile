@@ -65,6 +65,7 @@ gem 'stamp', '0.6.0'       # Convenient timestamping
 gem 'wannabe_bool'         # To convert boolean-ish values to booleans
 gem 'capybara', '~> 2.2.1' # DSL for integration tests, crawling screens
 gem 'country_select'       # Quick country list
+gem 'mailgun_rails'        # Send email via API
 
 # Server
 gem 'foreman', '0.75.0' # Manage the server and auxiliary processes
