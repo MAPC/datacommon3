@@ -20,7 +20,7 @@ Rails.application.configure do
   # config.action_dispatch.rack_cache = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this).
-  config.serve_static_assets = ENV['SERVE_STATIC_ASSETS'].to_b
+  config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
@@ -42,7 +42,7 @@ Rails.application.configure do
   # config.force_ssl = true
 
   # Set to :debug to see everything in the log.
-  config.log_level = :debug
+  config.log_level = (ENV['LOG_LEVEL'] || 'debug').downcase.to_sym
 
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
@@ -63,11 +63,14 @@ Rails.application.configure do
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { 
-    host: ENV.fetch('BASE_HOST_URL') { 'datacommon.org' }
-  }
+  DEFAULT_HOST = ENV.fetch 'BASE_HOST_URL', 'datacommon.org'
+  Rails.application.default_url_options[:host] = DEFAULT_HOST
 
+  config.action_mailer.delivery_method = :mailgun
+  config.action_mailer.mailgun_settings = {
+    api_key:        ENV['MAILGUN_API_KEY'],
+    domain:         ENV['MAILGUN_DOMAIN']
+  }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
@@ -101,7 +104,3 @@ Rails.application.configure do
     s3_permissions: :public_read
   }
 end
-
-# TODO: Shouldn't need this with rails_12factor
-Rails.logger = Logger.new(STDOUT)
-Rails.logger.level = 0
