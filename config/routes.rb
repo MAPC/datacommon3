@@ -53,6 +53,6 @@ Rails.application.routes.draw do
   resources :password_resets,     only: [:new, :create, :edit, :update]
 
   match '', to: 'institutions#show', constraints: {subdomain: /.+/}, via: [:get]
-  root      to: 'institutions#show'
+  root      to: 'construction'
 
 end
