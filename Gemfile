@@ -20,6 +20,7 @@ gem 'ckan',                            # Read data from CKAN store
 # Views
 gem 'haml-rails',              '0.5.3' # HAML views
 gem 'kaminari',               '0.16.1' # Pagination
+gem 'high_voltage'
 
 # Styles
 gem 'sass-rails',              '4.0.3' # Use SCSS for stylesheets
