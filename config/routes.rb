@@ -48,11 +48,10 @@ Rails.application.routes.draw do
   post   'login'  => 'sessions#create'
   delete 'signout' => 'sessions#destroy'
 
-
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
 
-  match '', to: 'institutions#show', constraints: {subdomain: /.+/}, via: [:get]
+  match '', to: 'high_voltage/pages#show', id: 'construction', constraints: {subdomain: /.+/}, via: [:get]
   root      to: 'high_voltage/pages#show', id: 'construction'
 
 end
