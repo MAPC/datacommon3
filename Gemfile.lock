@@ -1,7 +1,7 @@
 GIT
   remote: git://github.com/MAPC/ckan_api.git
   revision: 72c7c2dc529fe5c8fa270c46205eda6d687c7a84
-  branch: develop
+  branch: master
   specs:
     ckan (0.0.3)
       addressable (~> 2.3)
@@ -540,9 +540,3 @@ DEPENDENCIES
   wannabe_bool
   webmock (~> 1.8.4)
   zip-zip
-
-RUBY VERSION
-   ruby 2.1.5p273
-
-BUNDLED WITH
-   1.15.1

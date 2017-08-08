@@ -15,7 +15,7 @@ gem 'lazy_columns',
 # CKAN Data Store
 gem 'ckan',                            # Read data from CKAN store
   github: 'MAPC/ckan_api',
-  branch: 'develop'
+  branch: 'master'
 
 # Views
 gem 'haml-rails',              '0.5.3' # HAML views
